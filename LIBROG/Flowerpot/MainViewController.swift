@@ -37,12 +37,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-//    func roundCorners(cornerRadius: CGFloat, maskedCorners: CACornerMask) {
-//        tableview.clipsToBounds = true
-//        tableview.layer.cornerRadius = cornerRadius
-//        tableview.layer.maskedCorners = CACornerMask(arrayLiteral: maskedCorners)
-//    }
-    
     //셀 세로 길이 조절
 //    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
 //        return 340
