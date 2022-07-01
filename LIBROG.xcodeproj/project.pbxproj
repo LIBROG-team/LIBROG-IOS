@@ -15,6 +15,7 @@
 		23C8B4B5286EF77900432141 /* RecentBookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23C8B4B3286EF77900432141 /* RecentBookTableViewCell.xib */; };
 		23C8B4B8286EF78600432141 /* RecentBookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C8B4B6286EF78600432141 /* RecentBookCollectionViewCell.swift */; };
 		23C8B4B9286EF78600432141 /* RecentBookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23C8B4B7286EF78600432141 /* RecentBookCollectionViewCell.xib */; };
+		23C8B4BB286EFF3900432141 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C8B4BA286EFF3900432141 /* CustomTabBarController.swift */; };
 		D0C2B04F286DC9BE00242E71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C2B04E286DC9BE00242E71 /* AppDelegate.swift */; };
 		D0C2B051286DC9BE00242E71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C2B050286DC9BE00242E71 /* SceneDelegate.swift */; };
 		D0C2B053286DC9BE00242E71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C2B052286DC9BE00242E71 /* ViewController.swift */; };
@@ -56,6 +57,7 @@
 		23C8B4B3286EF77900432141 /* RecentBookTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentBookTableViewCell.xib; sourceTree = "<group>"; };
 		23C8B4B6286EF78600432141 /* RecentBookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentBookCollectionViewCell.swift; sourceTree = "<group>"; };
 		23C8B4B7286EF78600432141 /* RecentBookCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentBookCollectionViewCell.xib; sourceTree = "<group>"; };
+		23C8B4BA286EFF3900432141 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		D0C2B04B286DC9BE00242E71 /* LIBROG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LIBROG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C2B04E286DC9BE00242E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0C2B050286DC9BE00242E71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			children = (
 				23C8B4A5286EF2F300432141 /* PaddingLabel.swift */,
 				D0C2B088286E1FD600242E71 /* UIViewExtension.swift */,
+				23C8B4BA286EFF3900432141 /* CustomTabBarController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 			files = (
 				D0C2B089286E1FD600242E71 /* UIViewExtension.swift in Sources */,
 				23C8B4B4286EF77900432141 /* RecentBookTableViewCell.swift in Sources */,
+				23C8B4BB286EFF3900432141 /* CustomTabBarController.swift in Sources */,
 				23C8B4A6286EF2F300432141 /* PaddingLabel.swift in Sources */,
 				23C8B4B0286EF76F00432141 /* MainFlowerTableViewCell.swift in Sources */,
 				D0C2B053286DC9BE00242E71 /* ViewController.swift in Sources */,

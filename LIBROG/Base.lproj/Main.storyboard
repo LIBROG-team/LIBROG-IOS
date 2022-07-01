@@ -11,7 +11,7 @@
         <!--Main-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainVC" id="BYZ-38-t0r" customClass="MainViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,7 +43,7 @@
         <!--Record-->
         <scene sceneID="jd6-b7-Nxg">
             <objects>
-                <viewController id="aCy-RX-OQ2" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecordVC" id="aCy-RX-OQ2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DhE-hs-hyu">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,13 +71,13 @@
         <!--Add-->
         <scene sceneID="Ln7-C9-Yvi">
             <objects>
-                <viewController id="Jut-jf-Ltw" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UploadVC" id="Jut-jf-Ltw" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NzV-mn-TWM">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYg-4M-dXi">
-                                <rect key="frame" x="171" y="407" width="48" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYg-4M-dXi">
+                                <rect key="frame" x="153.33333333333334" y="407" width="83.333333333333343" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -99,7 +99,7 @@
         <!--Flowerpot-->
         <scene sceneID="YaL-0I-ZgQ">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" id="3Lm-qh-l0c" customClass="FlowerPotViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FlowerPotVC" id="3Lm-qh-l0c" customClass="FlowerPotViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f6M-TM-4BZ">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -159,7 +159,7 @@
         <!--Profile-->
         <scene sceneID="Rr6-lM-LbO">
             <objects>
-                <viewController id="bzA-WM-ewK" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileVC" id="bzA-WM-ewK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NIu-TX-BwC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -184,10 +184,10 @@
             </objects>
             <point key="canvasLocation" x="1528" y="835"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Custom Tab Bar Controller-->
         <scene sceneID="DjB-4x-bpb">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Kfy-Kq-GWi" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Kfy-Kq-GWi" customClass="CustomTabBarController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="a7s-LA-odE">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
