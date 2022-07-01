@@ -35,11 +35,13 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "MainFlowerTableViewCell", for: indexPath) as? MainFlowerTableViewCell else {
                 return UITableViewCell()
             }
+            cell.selectionStyle = .none
             return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecentBookTableViewCell", for: indexPath) as? RecentBookTableViewCell else {
                 return UITableViewCell()
             }
+            cell.selectionStyle = .none
             return cell
         }
     }
@@ -52,7 +54,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             guard let flowerTableViewCell = cell as? MainFlowerTableViewCell else {
                 return
             }
-//            bestItemTableViewCell.setCollectionViewDataSourceDelegate(forRow: indexPath.row)
         } else {
             guard let recentBookTableViewCell = cell as? RecentBookTableViewCell else {
                 return
