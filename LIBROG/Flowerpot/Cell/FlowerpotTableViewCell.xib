@@ -25,45 +25,43 @@
                             <constraint firstAttribute="height" constant="163" id="z8W-20-XEs"/>
                         </constraints>
                     </imageView>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="4bF-bv-XpY">
-                        <rect key="frame" x="162" y="45" width="146" height="105"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="flowerName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEz-qY-pxX">
-                                <rect key="frame" x="0.0" y="0.0" width="91.5" height="19.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000.00.00 ~ 0000.00.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Loa-p5-BWW">
-                                <rect key="frame" x="0.0" y="32.5" width="146" height="14.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기록된 권수: 0권" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jy-eI-yXd">
-                                <rect key="frame" x="0.0" y="60" width="87" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가장 많이 읽은 장르: 고전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5Z-9K-WOE">
-                                <rect key="frame" x="0.0" y="89" width="131" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="Loa-p5-BWW" firstAttribute="top" secondItem="oEz-qY-pxX" secondAttribute="bottom" constant="13" id="wka-Hw-dik"/>
-                        </constraints>
-                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="flowerName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEz-qY-pxX">
+                        <rect key="frame" x="162" y="40" width="91.5" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000.00.00 ~ 0000.00.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Loa-p5-BWW">
+                        <rect key="frame" x="162" y="61.5" width="146" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기록된 권수: 0권" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jy-eI-yXd">
+                        <rect key="frame" x="162" y="107" width="87" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가장 많이 읽은 장르: 고전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5Z-9K-WOE">
+                        <rect key="frame" x="162" y="124" width="131" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="4bF-bv-XpY" firstAttribute="leading" secondItem="qvT-9W-Pdk" secondAttribute="trailing" constant="17" id="KNo-gg-LVf"/>
+                    <constraint firstItem="1jy-eI-yXd" firstAttribute="top" secondItem="Loa-p5-BWW" secondAttribute="bottom" constant="31" id="7Il-IC-ra9"/>
+                    <constraint firstItem="Loa-p5-BWW" firstAttribute="top" secondItem="oEz-qY-pxX" secondAttribute="bottom" constant="2" id="JA9-0v-Aaz"/>
+                    <constraint firstItem="Z5Z-9K-WOE" firstAttribute="leading" secondItem="1jy-eI-yXd" secondAttribute="leading" id="NgH-QA-kKj"/>
+                    <constraint firstItem="Z5Z-9K-WOE" firstAttribute="top" secondItem="1jy-eI-yXd" secondAttribute="bottom" constant="1" id="TFN-Jv-6Ha"/>
                     <constraint firstAttribute="bottom" secondItem="qvT-9W-Pdk" secondAttribute="bottom" constant="10" id="Wbg-An-Egv"/>
+                    <constraint firstItem="oEz-qY-pxX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="40" id="hQg-WB-28X"/>
                     <constraint firstItem="qvT-9W-Pdk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="iGq-mN-SuB"/>
-                    <constraint firstItem="4bF-bv-XpY" firstAttribute="centerY" secondItem="qvT-9W-Pdk" secondAttribute="centerY" id="iJm-7W-PqN"/>
+                    <constraint firstItem="oEz-qY-pxX" firstAttribute="leading" secondItem="qvT-9W-Pdk" secondAttribute="trailing" constant="17" id="pgn-QH-yS0"/>
+                    <constraint firstItem="Loa-p5-BWW" firstAttribute="leading" secondItem="oEz-qY-pxX" secondAttribute="leading" id="qHn-fR-PbY"/>
                     <constraint firstItem="qvT-9W-Pdk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="uDW-LO-SZu"/>
+                    <constraint firstItem="1jy-eI-yXd" firstAttribute="leading" secondItem="Loa-p5-BWW" secondAttribute="leading" id="xMo-dC-Rkj"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
