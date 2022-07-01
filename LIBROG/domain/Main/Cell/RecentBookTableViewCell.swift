@@ -23,7 +23,7 @@ class RecentBookTableViewCell: UITableViewCell {
         
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
-        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 18, bottom: 0, right: 0)
         flowLayout.minimumLineSpacing = 12.0
         
         recentBookCollectionView.collectionViewLayout = flowLayout
