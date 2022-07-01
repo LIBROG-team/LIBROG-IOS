@@ -7,8 +7,9 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class FlowerPotViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var mainTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,7 @@ class MainViewController: UIViewController {
 
 }
 
-extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+extension FlowerPotViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
