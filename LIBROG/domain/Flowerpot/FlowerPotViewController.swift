@@ -23,6 +23,7 @@ class FlowerPotViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    //스크롤바
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         tableView.flashScrollIndicators()
