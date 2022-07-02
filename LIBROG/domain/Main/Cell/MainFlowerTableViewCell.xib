@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="478" id="V27-pb-6uQ" customClass="MainFlowerTableViewCell" customModule="Librog" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="478" id="V27-pb-6uQ" customClass="MainFlowerTableViewCell" customModule="LIBROG" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="503" height="478"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V27-pb-6uQ" id="wW6-rG-JVa">
@@ -23,7 +23,8 @@
                         <attributedString key="attributedText">
                             <fragment content="독서 00일차">
                                 <attributes>
-                                    <font key="NSFont" size="33" name="AppleSDGothicNeo-Bold"/>
+                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <font key="NSFont" size="33" name="AppleSDGothicNeo-SemiBold"/>
                                 </attributes>
                             </fragment>
                         </attributedString>

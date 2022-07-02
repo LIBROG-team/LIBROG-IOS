@@ -72,7 +72,7 @@ extension MainViewController : UICollectionViewDelegate, UICollectionViewDataSou
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecentBookCollectionViewCell", for: indexPath) as? RecentBookCollectionViewCell else {
             return UICollectionViewCell()
         }
-        cell.roundCorners(cornerRadius: 50, maskedCorners: [.layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner])
+        cell.roundCornersDiffernt(topLeft: 5, topRight: 53, bottomLeft: 53, bottomRight: 53)
 //        let itemIdx = indexPath.item
 //        if let cellData = self.auctionNowArray {
 //            // if data exists

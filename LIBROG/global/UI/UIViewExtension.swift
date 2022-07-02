@@ -19,10 +19,21 @@ extension UIView {
             layer.masksToBounds = newValue > 0
         }
     }
-    // View의 특정 모서리만 radius값 주기
+    // View의 특정 모서리만 같은 radius값 주기 - 중복 불가능
     func roundCorners(cornerRadius: CGFloat, maskedCorners: CACornerMask) {
         clipsToBounds = true
         layer.cornerRadius = cornerRadius
         layer.maskedCorners = CACornerMask(arrayLiteral: maskedCorners)
+    }
+    // View의 모서리마다 다른 radius값 주기
+    func roundCornersDiffernt(topLeft: CGFloat = 0, topRight: CGFloat = 0, bottomLeft: CGFloat = 0, bottomRight: CGFloat = 0) {
+        let topLeftRadius = CGSize(width: topLeft, height: topLeft)
+        let topRightRadius = CGSize(width: topRight, height: topRight)
+        let bottomLeftRadius = CGSize(width: bottomLeft, height: bottomLeft)
+        let bottomRightRadius = CGSize(width: bottomRight, height: bottomRight)
+        let maskPath = UIBezierPath(shouldRoundRect: bounds, topLeftRadius: topLeftRadius, topRightRadius: topRightRadius, bottomLeftRadius: bottomLeftRadius, bottomRightRadius: bottomRightRadius)
+        let shape = CAShapeLayer()
+        shape.path = maskPath.cgPath
+        layer.mask = shape
     }
 }

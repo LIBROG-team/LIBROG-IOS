@@ -19,7 +19,7 @@ class RecentBookTableViewCell: UITableViewCell {
         let recentBookNib = UINib(nibName: "RecentBookCollectionViewCell", bundle: nil)
         recentBookCollectionView.register(recentBookNib, forCellWithReuseIdentifier: RecentBookCollectionViewCell.identifier)
         
-        recentBookLabel.roundCorners(cornerRadius: 10, maskedCorners: [.layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner])
+        recentBookLabel.roundCornersDiffernt(topLeft: 5, topRight: 15, bottomLeft: 15, bottomRight: 15)
         
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
