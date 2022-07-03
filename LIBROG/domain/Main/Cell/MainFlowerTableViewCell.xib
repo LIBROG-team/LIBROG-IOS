@@ -35,7 +35,8 @@
                         <attributedString key="attributedText">
                             <fragment content="꾸준히 실천하고 계시군요!">
                                 <attributes>
-                                    <font key="NSFont" size="20" name="AppleSDGothicNeo-Thin"/>
+                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <font key="NSFont" size="20" name="AppleSDGothicNeo-Regular"/>
                                 </attributes>
                             </fragment>
                         </attributedString>
@@ -55,26 +56,26 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZE-4U-iRU">
-                        <rect key="frame" x="208" y="425.5" width="87.5" height="22"/>
+                        <rect key="frame" x="205.5" y="425.5" width="92" height="22"/>
                         <attributedString key="attributedText">
                             <fragment content="flowerName">
                                 <attributes>
-                                    <font key="NSFont" size="18" name="AppleSDGothicNeo-Thin"/>
+                                    <font key="NSFont" size="18" name="AppleSDGothicNeo-Regular"/>
                                 </attributes>
                             </fragment>
                         </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HJ3-bV-dZU">
-                        <rect key="frame" x="325.5" y="173.5" width="70" height="70"/>
+                        <rect key="frame" x="326.5" y="173.5" width="69" height="69"/>
                         <color key="backgroundColor" name="LIBROGColor"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="70" id="2HY-al-i4Y"/>
-                            <constraint firstAttribute="height" constant="70" id="ymu-vI-XNC"/>
+                            <constraint firstAttribute="width" constant="69" id="2HY-al-i4Y"/>
+                            <constraint firstAttribute="height" constant="69" id="ymu-vI-XNC"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <real key="value" value="35"/>
+                                <real key="value" value="34.5"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </imageView>
