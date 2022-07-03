@@ -49,11 +49,12 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6d-JH-WeN">
-                        <rect key="frame" x="45.5" y="126" width="44" height="15"/>
+                        <rect key="frame" x="44.5" y="126" width="46.5" height="15"/>
                         <attributedString key="attributedText">
                             <fragment content="readDate">
                                 <attributes>
-                                    <font key="NSFont" size="12" name="AppleSDGothicNeo-Thin"/>
+                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <font key="NSFont" size="12" name="AppleSDGothicNeo-Regular"/>
                                 </attributes>
                             </fragment>
                         </attributedString>
