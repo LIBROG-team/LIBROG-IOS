@@ -30,7 +30,7 @@
                             <constraint firstItem="9Kx-rc-3HB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tm4-aI-vFX"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="홈" id="Tox-O5-ogH"/>
+                    <tabBarItem key="tabBarItem" title="홈" image="home" id="Tox-O5-ogH"/>
                     <navigationItem key="navigationItem" id="hZw-ke-3ne"/>
                     <connections>
                         <outlet property="MainTableView" destination="9Kx-rc-3HB" id="WrV-CJ-iu0"/>
@@ -62,7 +62,7 @@
                             <constraint firstItem="nYh-26-GCN" firstAttribute="centerY" secondItem="DhE-hs-hyu" secondAttribute="centerY" id="zJc-UW-gJe"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="독서기록" id="7Ss-ws-apw"/>
+                    <tabBarItem key="tabBarItem" title="독서기록" image="edit-1" id="7Ss-ws-apw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vxn-J2-U2O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -90,7 +90,7 @@
                             <constraint firstItem="kYg-4M-dXi" firstAttribute="centerY" secondItem="NzV-mn-TWM" secondAttribute="centerY" id="jMf-lC-djd"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="기록추가" id="2RD-yH-IPz"/>
+                    <tabBarItem key="tabBarItem" title="기록추가" image="plus-circle" id="2RD-yH-IPz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dCC-dk-WL9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -146,7 +146,7 @@
                             <constraint firstItem="9q1-h1-v16" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="o7K-yg-TJc" secondAttribute="trailing" symbolic="YES" id="wzM-hA-YdP"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="화분관리" id="x66-Gf-af7"/>
+                    <tabBarItem key="tabBarItem" title="화분관리" image="forest" id="x66-Gf-af7"/>
                     <connections>
                         <outlet property="mainTableView" destination="im2-3h-xBc" id="nhz-tF-BKW"/>
                         <outlet property="tableView" destination="im2-3h-xBc" id="r7r-Y9-0rF"/>
@@ -178,7 +178,7 @@
                             <constraint firstItem="cPy-ZK-7gG" firstAttribute="centerY" secondItem="NIu-TX-BwC" secondAttribute="centerY" id="ohg-NV-1bW"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="프로필" id="dpE-E6-uYb"/>
+                    <tabBarItem key="tabBarItem" title="프로필" image="circle-user" id="dpE-E6-uYb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wb2-4L-Qmj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -193,6 +193,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="3eZ-i0-W4q"/>
@@ -208,6 +209,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="circle-user" width="28" height="28"/>
+        <image name="edit-1" width="28" height="28"/>
+        <image name="forest" width="28" height="28"/>
+        <image name="home" width="28" height="28"/>
+        <image name="plus-circle" width="28" height="28"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
