@@ -46,8 +46,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0 {return 507}
-        else {return 247}
+        if indexPath.row == 0 {return 510}
+        else {return 216}
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
@@ -72,7 +72,7 @@ extension MainViewController : UICollectionViewDelegate, UICollectionViewDataSou
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecentBookCollectionViewCell", for: indexPath) as? RecentBookCollectionViewCell else {
             return UICollectionViewCell()
         }
-        cell.roundCorners(cornerRadius: 50, maskedCorners: [.layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner])
+        cell.roundCornersDiffernt(topLeft: 5, topRight: 53, bottomLeft: 53, bottomRight: 53)
 //        let itemIdx = indexPath.item
 //        if let cellData = self.auctionNowArray {
 //            // if data exists
@@ -82,7 +82,7 @@ extension MainViewController : UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 135, height: 170)
+        return CGSize(width: 125, height: 151)
     }
     // COLLECTIONVIEW SELECT
 //    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
