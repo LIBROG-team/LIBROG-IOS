@@ -51,7 +51,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            guard let flowerTableViewCell = cell as? MainFlowerTableViewCell else {
+            guard cell is MainFlowerTableViewCell else {
                 return
             }
         } else {

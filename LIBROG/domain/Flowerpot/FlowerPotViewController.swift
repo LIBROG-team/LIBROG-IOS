@@ -44,8 +44,7 @@ extension FlowerPotViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     //셀 세로 길이 조절
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 354
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 197
     }
-
 }
