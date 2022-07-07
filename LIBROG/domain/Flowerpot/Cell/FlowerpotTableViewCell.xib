@@ -29,25 +29,25 @@
                         <rect key="frame" x="145" y="25" width="190" height="139"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="flowerName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEz-qY-pxX">
-                                <rect key="frame" x="17" y="15" width="101.5" height="19.5"/>
+                                <rect key="frame" x="17" y="15" width="91.5" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000.00.00 ~ 0000.00.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Loa-p5-BWW">
-                                <rect key="frame" x="17" y="36.5" width="156" height="14.5"/>
+                                <rect key="frame" x="17" y="36.5" width="146" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기록된 권수: 0권" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jy-eI-yXd">
-                                <rect key="frame" x="17" y="87" width="97" height="16"/>
+                                <rect key="frame" x="17" y="87" width="87" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가장 많이 읽은 장르: 고전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5Z-9K-WOE">
-                                <rect key="frame" x="17" y="105" width="141" height="16"/>
+                                <rect key="frame" x="17" y="105" width="131" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -55,16 +55,12 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="1jy-eI-yXd" firstAttribute="top" secondItem="Loa-p5-BWW" secondAttribute="bottom" constant="36" id="0aM-H9-OD6"/>
-                            <constraint firstAttribute="trailing" secondItem="Loa-p5-BWW" secondAttribute="trailing" constant="17" id="6OK-Cr-8wx"/>
                             <constraint firstItem="oEz-qY-pxX" firstAttribute="top" secondItem="opr-n8-o8C" secondAttribute="top" constant="15" id="C2X-YE-BpQ"/>
                             <constraint firstItem="Z5Z-9K-WOE" firstAttribute="leading" secondItem="1jy-eI-yXd" secondAttribute="leading" id="CwC-Un-kW9"/>
                             <constraint firstItem="Loa-p5-BWW" firstAttribute="leading" secondItem="oEz-qY-pxX" secondAttribute="leading" id="RTK-at-fOp"/>
-                            <constraint firstAttribute="trailing" secondItem="oEz-qY-pxX" secondAttribute="trailing" constant="71.5" id="WLw-qK-7Jv"/>
                             <constraint firstItem="1jy-eI-yXd" firstAttribute="leading" secondItem="Loa-p5-BWW" secondAttribute="leading" id="WQW-Mz-UCv"/>
                             <constraint firstAttribute="bottom" secondItem="Z5Z-9K-WOE" secondAttribute="bottom" constant="18" id="Yc5-et-Lpk"/>
-                            <constraint firstAttribute="trailing" secondItem="Z5Z-9K-WOE" secondAttribute="trailing" constant="32" id="gdt-ry-Kea"/>
                             <constraint firstItem="Loa-p5-BWW" firstAttribute="top" secondItem="oEz-qY-pxX" secondAttribute="bottom" constant="2" id="glx-kB-rD8"/>
-                            <constraint firstAttribute="trailing" secondItem="1jy-eI-yXd" secondAttribute="trailing" constant="76" id="jBp-UR-Aau"/>
                         </constraints>
                     </view>
                 </subviews>

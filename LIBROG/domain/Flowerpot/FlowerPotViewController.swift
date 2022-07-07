@@ -19,7 +19,7 @@ class FlowerPotViewController: UIViewController {
         tableView.separatorStyle = .none
         let flowerpotNib = UINib(nibName: "FlowerpotTableViewCell", bundle: nil)
         tableView.register(flowerpotNib, forCellReuseIdentifier: "FlowerpotTableViewCell")
-        tableView.layer.cornerRadius = 15
+//        tableView.layer.cornerRadius = 15
         // Do any additional setup after loading the view.
     }
     

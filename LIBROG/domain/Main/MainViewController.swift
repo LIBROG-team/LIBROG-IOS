@@ -62,6 +62,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
 }
+
 extension MainViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 //        let count = auctionNowArray?.count ?? 0
