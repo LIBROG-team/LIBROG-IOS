@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Cosmos
 
 class UploadRecordViewController: UIViewController {
     @IBOutlet weak var uploadRecordTableView: UITableView!

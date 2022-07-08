@@ -116,9 +116,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hd3-d0-Kok">
-                                <rect key="frame" x="144.5" y="10" width="20" height="21"/>
+                                <rect key="frame" x="144.5" y="10" width="24" height="21"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="/ 5">
+                                    <fragment content=" / 5">
                                         <attributes>
                                             <color key="NSColor" red="0.47843140360000003" green="0.73725497719999999" blue="0.49803921579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <font key="NSFont" size="17" name="AppleSDGothicNeo-Bold"/>
@@ -128,14 +128,34 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m8g-Ps-e6w" customClass="CosmosView" customModule="Cosmos">
+                                <rect key="frame" x="60" y="46.5" width="216" height="21"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="VmH-rc-W9R"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="filled_star"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="empty_star"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                        <real key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="starMargin">
+                                        <real key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Hd3-d0-Kok" firstAttribute="leading" secondItem="0nE-R8-lGh" secondAttribute="trailing" id="23G-5p-HSh"/>
                             <constraint firstAttribute="height" constant="93" id="92J-DW-syB"/>
                             <constraint firstItem="0nE-R8-lGh" firstAttribute="leading" secondItem="Shk-OK-Ub8" secondAttribute="trailing" constant="7" id="DVu-3r-o3S"/>
+                            <constraint firstItem="m8g-Ps-e6w" firstAttribute="top" secondItem="Shk-OK-Ub8" secondAttribute="bottom" constant="16" id="Dtd-7p-5Ch"/>
                             <constraint firstItem="Shk-OK-Ub8" firstAttribute="top" secondItem="7Z0-Oj-zAj" secondAttribute="top" constant="10" id="L2V-4v-awM"/>
+                            <constraint firstItem="m8g-Ps-e6w" firstAttribute="leading" secondItem="7Z0-Oj-zAj" secondAttribute="leading" constant="60" id="RMw-2m-FcF"/>
                             <constraint firstItem="0nE-R8-lGh" firstAttribute="centerY" secondItem="Shk-OK-Ub8" secondAttribute="centerY" id="b4Y-TB-SLS"/>
+                            <constraint firstItem="m8g-Ps-e6w" firstAttribute="centerX" secondItem="7Z0-Oj-zAj" secondAttribute="centerX" id="jXT-UX-8kg"/>
                             <constraint firstItem="Shk-OK-Ub8" firstAttribute="leading" secondItem="7Z0-Oj-zAj" secondAttribute="leading" constant="15" id="mZ7-qN-KPh"/>
                             <constraint firstItem="Hd3-d0-Kok" firstAttribute="centerY" secondItem="0nE-R8-lGh" secondAttribute="centerY" id="tHo-di-NpX"/>
                         </constraints>
@@ -246,10 +266,15 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bookPointView" destination="m8g-Ps-e6w" id="XLg-NB-gL6"/>
+            </connections>
             <point key="canvasLocation" x="165.21739130434784" y="292.29910714285711"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="empty_star" width="22" height="21"/>
+        <image name="filled_star" width="24" height="24"/>
         <image name="logo_launchScreen_white" width="87" height="187"/>
         <namedColor name="backgroundColor">
             <color red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
