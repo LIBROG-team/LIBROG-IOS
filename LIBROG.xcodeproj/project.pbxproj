@@ -12,8 +12,6 @@
 		23C8B4AC286EF41400432141 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C8B4AB286EF41400432141 /* MainViewController.swift */; };
 		23C8B4B0286EF76F00432141 /* MainFlowerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C8B4AE286EF76F00432141 /* MainFlowerTableViewCell.swift */; };
 		23C8B4B1286EF76F00432141 /* MainFlowerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23C8B4AF286EF76F00432141 /* MainFlowerTableViewCell.xib */; };
-		23C8B4B4286EF77900432141 /* RecentBookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C8B4B2286EF77900432141 /* RecentBookTableViewCell.swift */; };
-		23C8B4B5286EF77900432141 /* RecentBookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23C8B4B3286EF77900432141 /* RecentBookTableViewCell.xib */; };
 		23C8B4B8286EF78600432141 /* RecentBookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C8B4B6286EF78600432141 /* RecentBookCollectionViewCell.swift */; };
 		23C8B4B9286EF78600432141 /* RecentBookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23C8B4B7286EF78600432141 /* RecentBookCollectionViewCell.xib */; };
 		23C8B4BB286EFF3900432141 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C8B4BA286EFF3900432141 /* CustomTabBarController.swift */; };
@@ -61,8 +59,6 @@
 		23C8B4AB286EF41400432141 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		23C8B4AE286EF76F00432141 /* MainFlowerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlowerTableViewCell.swift; sourceTree = "<group>"; };
 		23C8B4AF286EF76F00432141 /* MainFlowerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainFlowerTableViewCell.xib; sourceTree = "<group>"; };
-		23C8B4B2286EF77900432141 /* RecentBookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentBookTableViewCell.swift; sourceTree = "<group>"; };
-		23C8B4B3286EF77900432141 /* RecentBookTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentBookTableViewCell.xib; sourceTree = "<group>"; };
 		23C8B4B6286EF78600432141 /* RecentBookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentBookCollectionViewCell.swift; sourceTree = "<group>"; };
 		23C8B4B7286EF78600432141 /* RecentBookCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentBookCollectionViewCell.xib; sourceTree = "<group>"; };
 		23C8B4BA286EFF3900432141 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
@@ -159,9 +155,8 @@
 			children = (
 				23C8B4AE286EF76F00432141 /* MainFlowerTableViewCell.swift */,
 				23C8B4AF286EF76F00432141 /* MainFlowerTableViewCell.xib */,
-				23C8B4B2286EF77900432141 /* RecentBookTableViewCell.swift */,
-				23C8B4B7286EF78600432141 /* RecentBookCollectionViewCell.xib */,
 				23C8B4B6286EF78600432141 /* RecentBookCollectionViewCell.swift */,
+				23C8B4B7286EF78600432141 /* RecentBookCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -231,7 +226,6 @@
 		D0C2B081286DF22300242E71 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				23C8B4B3286EF77900432141 /* RecentBookTableViewCell.xib */,
 				D0C2B084286DF28800242E71 /* FlowerpotTableViewCell.swift */,
 				D0C2B085286DF28800242E71 /* FlowerpotTableViewCell.xib */,
 			);
@@ -375,7 +369,6 @@
 				D0C2B05B286DC9C000242E71 /* LaunchScreen.storyboard in Resources */,
 				23C8B4B1286EF76F00432141 /* MainFlowerTableViewCell.xib in Resources */,
 				D0DB05BF2876F6A10041CEEF /* ExistSearchTableViewCell.xib in Resources */,
-				23C8B4B5286EF77900432141 /* RecentBookTableViewCell.xib in Resources */,
 				D0C2B058286DC9C000242E71 /* Assets.xcassets in Resources */,
 				23C8B4B9286EF78600432141 /* RecentBookCollectionViewCell.xib in Resources */,
 				D0C2B056286DC9BE00242E71 /* Main.storyboard in Resources */,
@@ -407,7 +400,6 @@
 				D0DB05BE2876F6A10041CEEF /* ExistSearchTableViewCell.swift in Sources */,
 				D0DB05B32876BC330041CEEF /* UploadViewController.swift in Sources */,
 				D0DB05B72876CF380041CEEF /* NonexistSearchViewController.swift in Sources */,
-				23C8B4B4286EF77900432141 /* RecentBookTableViewCell.swift in Sources */,
 				23C8B4BB286EFF3900432141 /* CustomTabBarController.swift in Sources */,
 				23C8B4A6286EF2F300432141 /* PaddingLabel.swift in Sources */,
 				D0DB05C2287700650041CEEF /* Data.swift in Sources */,

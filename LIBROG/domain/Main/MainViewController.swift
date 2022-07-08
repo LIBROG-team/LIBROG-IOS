@@ -10,6 +10,8 @@ import UIKit
 class MainViewController: UIViewController {
 
     @IBOutlet weak var MainTableView: UITableView!
+    @IBOutlet weak var recentBookView: UIView!
+    @IBOutlet weak var recentBookCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,44 +23,47 @@ class MainViewController: UIViewController {
         
         let flowerNib = UINib(nibName: "MainFlowerTableViewCell", bundle: nil)
         MainTableView.register(flowerNib, forCellReuseIdentifier: "MainFlowerTableViewCell")
-        let recentNib = UINib(nibName: "RecentBookTableViewCell", bundle: nil)
-        MainTableView.register(recentNib, forCellReuseIdentifier: "RecentBookTableViewCell")
+        
+        // view 그림자가 왜 안 먹히지?
+        recentBookView.layer.shadowColor = UIColor.black.cgColor
+        recentBookView.layer.shadowOpacity = 0.5
+        recentBookView.layer.shadowRadius = 100
+        recentBookView.roundCorners(cornerRadius: 18, maskedCorners: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
+        recentBookView.layer.masksToBounds = true
+        
+        recentBookCollectionView.delegate = self
+        recentBookCollectionView.dataSource = self
+        
+        let recentBookNib = UINib(nibName: "RecentBookCollectionViewCell", bundle: nil)
+        recentBookCollectionView.register(recentBookNib, forCellWithReuseIdentifier: RecentBookCollectionViewCell.identifier)
+        
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.scrollDirection = .horizontal
+        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 29, bottom: 0, right: 0)
+        flowLayout.minimumLineSpacing = 9.0
+        
+        recentBookCollectionView.collectionViewLayout = flowLayout
+        recentBookCollectionView.reloadData()
     }
 }
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "MainFlowerTableViewCell", for: indexPath) as? MainFlowerTableViewCell else {
-                return UITableViewCell()
-            }
-            cell.selectionStyle = .none
-            return cell
-        } else {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecentBookTableViewCell", for: indexPath) as? RecentBookTableViewCell else {
-                return UITableViewCell()
-            }
-            cell.selectionStyle = .none
-            return cell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MainFlowerTableViewCell", for: indexPath) as? MainFlowerTableViewCell else {
+            return UITableViewCell()
         }
+        cell.selectionStyle = .none
+        return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0 {return 510}
-        else {return 216}
+        return 510
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-            guard cell is MainFlowerTableViewCell else {
-                return
-            }
-        } else {
-            guard let recentBookTableViewCell = cell as? RecentBookTableViewCell else {
-                return
-            }
-            recentBookTableViewCell.setCollectionViewDataSourceDelegate(dataSourceDelegate: self, forRow: indexPath.row)
+        guard cell is MainFlowerTableViewCell else {
+            return
         }
     }
 }
@@ -73,7 +78,7 @@ extension MainViewController : UICollectionViewDelegate, UICollectionViewDataSou
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecentBookCollectionViewCell", for: indexPath) as? RecentBookCollectionViewCell else {
             return UICollectionViewCell()
         }
-        cell.roundCornersDiffernt(topLeft: 5, topRight: 53, bottomLeft: 53, bottomRight: 53)
+        cell.roundCornersDiffernt(topLeft: 8, topRight: 17, bottomLeft: 17, bottomRight: 17)
 //        let itemIdx = indexPath.item
 //        if let cellData = self.auctionNowArray {
 //            // if data exists
@@ -83,7 +88,7 @@ extension MainViewController : UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 125, height: 151)
+        return CGSize(width: 193, height: 128)
     }
     // COLLECTIONVIEW SELECT
 //    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
