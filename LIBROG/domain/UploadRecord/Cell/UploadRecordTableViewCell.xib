@@ -180,27 +180,23 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXp-xq-K2m">
-                                <rect key="frame" x="15" y="43.5" width="305" height="17"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="인상 깊은 한 줄 쓰기">
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="AppleSDGothicNeo-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="인상 깊은 한 줄을 써주세요." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pBt-0C-PIG">
+                                <rect key="frame" x="15" y="43.5" width="305" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="6Ql-gE-mcj"/>
+                                </constraints>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="BXp-xq-K2m" firstAttribute="top" secondItem="gSR-8s-zyJ" secondAttribute="bottom" constant="13" id="7Ta-CL-Pwj"/>
                             <constraint firstItem="gSR-8s-zyJ" firstAttribute="leading" secondItem="s72-21-BgN" secondAttribute="leading" constant="15" id="8M0-j1-dop"/>
+                            <constraint firstItem="pBt-0C-PIG" firstAttribute="leading" secondItem="gSR-8s-zyJ" secondAttribute="leading" id="AGT-GT-Ov3"/>
                             <constraint firstAttribute="height" constant="93" id="BNT-5D-bG6"/>
-                            <constraint firstAttribute="trailing" secondItem="BXp-xq-K2m" secondAttribute="trailing" constant="16" id="SK3-LG-K3o"/>
-                            <constraint firstItem="BXp-xq-K2m" firstAttribute="leading" secondItem="gSR-8s-zyJ" secondAttribute="leading" id="bKf-ZM-PHf"/>
+                            <constraint firstItem="pBt-0C-PIG" firstAttribute="top" secondItem="gSR-8s-zyJ" secondAttribute="bottom" constant="13" id="fgd-Ov-Yqs"/>
                             <constraint firstItem="gSR-8s-zyJ" firstAttribute="top" secondItem="s72-21-BgN" secondAttribute="top" constant="10" id="sDE-uM-738"/>
+                            <constraint firstAttribute="trailing" secondItem="pBt-0C-PIG" secondAttribute="trailing" constant="16" id="zuN-nZ-Bgp"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
