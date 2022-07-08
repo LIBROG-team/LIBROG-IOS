@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kfy-Kq-GWi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mBS-05-6bw">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -369,6 +370,68 @@
             </objects>
             <point key="canvasLocation" x="-338.46153846153845" y="1539.8104265402842"/>
         </scene>
+        <!--Upload Record View Controller-->
+        <scene sceneID="a43-Ej-NIg">
+            <objects>
+                <viewController id="mBS-05-6bw" customClass="UploadRecordViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XUG-Xw-XBB">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ADl-c9-UyY">
+                                <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="기록 추가하기" id="gzE-Dd-4Eh"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gS5-f4-jfS">
+                                <rect key="frame" x="16" y="763" width="358" height="47"/>
+                                <color key="backgroundColor" name="LIBROGColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="3Tp-1k-gAn"/>
+                                </constraints>
+                                <color key="tintColor" name="LIBROGColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="checkmark" catalog="system" title="  완료">
+                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                    <color key="baseBackgroundColor" name="LIBROGColor"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="oli-fU-rPc">
+                                <rect key="frame" x="0.0" y="88" width="390" height="675"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1O0-uP-DyX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gS5-f4-jfS" firstAttribute="top" secondItem="oli-fU-rPc" secondAttribute="bottom" id="45h-sn-YWd"/>
+                            <constraint firstItem="1O0-uP-DyX" firstAttribute="trailing" secondItem="oli-fU-rPc" secondAttribute="trailing" id="8zp-Ap-krs"/>
+                            <constraint firstItem="ADl-c9-UyY" firstAttribute="top" secondItem="1O0-uP-DyX" secondAttribute="top" id="Dgn-4u-48I"/>
+                            <constraint firstItem="oli-fU-rPc" firstAttribute="top" secondItem="ADl-c9-UyY" secondAttribute="bottom" id="NxZ-aT-ClF"/>
+                            <constraint firstItem="oli-fU-rPc" firstAttribute="leading" secondItem="1O0-uP-DyX" secondAttribute="leading" id="OZj-2g-f5Q"/>
+                            <constraint firstItem="1O0-uP-DyX" firstAttribute="trailing" secondItem="gS5-f4-jfS" secondAttribute="trailing" constant="16" id="Y3K-Wm-29h"/>
+                            <constraint firstItem="ADl-c9-UyY" firstAttribute="trailing" secondItem="oli-fU-rPc" secondAttribute="trailing" id="ZCm-9F-MGw"/>
+                            <constraint firstItem="1O0-uP-DyX" firstAttribute="bottom" secondItem="gS5-f4-jfS" secondAttribute="bottom" id="e3h-LV-1PA"/>
+                            <constraint firstItem="gS5-f4-jfS" firstAttribute="leading" secondItem="1O0-uP-DyX" secondAttribute="leading" constant="16" id="gGG-ef-9n1"/>
+                            <constraint firstItem="ADl-c9-UyY" firstAttribute="leading" secondItem="oli-fU-rPc" secondAttribute="leading" id="spQ-xL-Z8L"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="completeButton" destination="gS5-f4-jfS" id="ro9-RU-9yT"/>
+                        <outlet property="uploadRecordTableView" destination="oli-fU-rPc" id="dnq-nW-X0l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AEa-8u-pTT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18" y="2245"/>
+        </scene>
         <!--기록추가-->
         <scene sceneID="z6W-n4-ayN">
             <objects>
@@ -431,12 +494,16 @@
         </designable>
     </designables>
     <resources>
+        <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="circle-user" width="28" height="28"/>
         <image name="edit" width="28" height="28"/>
         <image name="forest" width="28" height="28"/>
         <image name="home" width="28" height="28"/>
         <image name="logo22%" width="87" height="187"/>
         <image name="plus-circle" width="28" height="28"/>
+        <namedColor name="LIBROGColor">
+            <color red="0.39215686274509803" green="0.74509803921568629" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
