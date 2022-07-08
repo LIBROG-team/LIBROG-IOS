@@ -19,7 +19,7 @@ class FlowerPotViewController: UIViewController {
         tableView.separatorStyle = .none
         let flowerpotNib = UINib(nibName: "FlowerpotTableViewCell", bundle: nil)
         tableView.register(flowerpotNib, forCellReuseIdentifier: "FlowerpotTableViewCell")
-        tableView.layer.cornerRadius = 15
+//        tableView.layer.cornerRadius = 15
         // Do any additional setup after loading the view.
     }
     
@@ -44,8 +44,7 @@ extension FlowerPotViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     //셀 세로 길이 조절
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 354
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 197
     }
-
 }

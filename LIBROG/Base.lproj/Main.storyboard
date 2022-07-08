@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kfy-Kq-GWi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kfy-Kq-GWi">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -62,7 +62,7 @@
                             <constraint firstItem="nYh-26-GCN" firstAttribute="centerY" secondItem="DhE-hs-hyu" secondAttribute="centerY" id="zJc-UW-gJe"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="독서기록" image="edit-1" id="7Ss-ws-apw"/>
+                    <tabBarItem key="tabBarItem" title="독서기록" image="edit" id="7Ss-ws-apw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vxn-J2-U2O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -71,14 +71,41 @@
         <!--기록추가-->
         <scene sceneID="Ln7-C9-Yvi">
             <objects>
-                <viewController storyboardIdentifier="UploadVC" id="Jut-jf-Ltw" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UploadVC" id="Jut-jf-Ltw" customClass="UploadViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NzV-mn-TWM">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYg-4M-dXi">
-                                <rect key="frame" x="153.33333333333334" y="407" width="83.333333333333343" height="30"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기록 추가하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYg-4M-dXi">
+                                <rect key="frame" x="29" y="75" width="147.33333333333334" height="32.666666666666657"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" placeholder="책 검색하기" translatesAutoresizingMaskIntoConstraints="NO" id="20j-F0-SO3">
+                                <rect key="frame" x="9" y="112.66666666666669" width="372" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="372" id="Bnu-ob-ZdF"/>
+                                    <constraint firstAttribute="height" constant="55" id="psn-0m-Zcm"/>
+                                </constraints>
+                                <offsetWrapper key="searchTextPositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                                <offsetWrapper key="searchFieldBackgroundPositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo22%" translatesAutoresizingMaskIntoConstraints="NO" id="pGv-xL-uSz">
+                                <rect key="frame" x="151.66666666666666" y="344.66666666666669" width="87" height="187.00000000000006"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="87" id="Iak-aH-c8w"/>
+                                    <constraint firstAttribute="height" constant="187" id="U3Z-3a-26J"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="검색창에 책 제목을 입력해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBy-jK-5pJ">
+                                <rect key="frame" x="91.666666666666671" y="567.66666666666663" width="206.66666666666663" height="20"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -86,15 +113,24 @@
                         <viewLayoutGuide key="safeArea" id="7Hw-HI-t6W"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="kYg-4M-dXi" firstAttribute="centerX" secondItem="NzV-mn-TWM" secondAttribute="centerX" id="Rte-8b-4Ug"/>
-                            <constraint firstItem="kYg-4M-dXi" firstAttribute="centerY" secondItem="NzV-mn-TWM" secondAttribute="centerY" id="jMf-lC-djd"/>
+                            <constraint firstItem="kYg-4M-dXi" firstAttribute="leading" secondItem="7Hw-HI-t6W" secondAttribute="leading" constant="29" id="OHE-q1-ARM"/>
+                            <constraint firstItem="dBy-jK-5pJ" firstAttribute="top" secondItem="pGv-xL-uSz" secondAttribute="bottom" constant="36" id="R8q-Ax-gJe"/>
+                            <constraint firstItem="kYg-4M-dXi" firstAttribute="top" secondItem="NzV-mn-TWM" secondAttribute="top" constant="75" id="Uml-Ud-Dhh"/>
+                            <constraint firstItem="pGv-xL-uSz" firstAttribute="centerX" secondItem="NzV-mn-TWM" secondAttribute="centerX" id="c80-ej-6dc"/>
+                            <constraint firstItem="20j-F0-SO3" firstAttribute="centerX" secondItem="NzV-mn-TWM" secondAttribute="centerX" id="duB-ZV-3eO"/>
+                            <constraint firstItem="pGv-xL-uSz" firstAttribute="top" secondItem="20j-F0-SO3" secondAttribute="bottom" constant="177" id="ehc-v6-0oT"/>
+                            <constraint firstItem="20j-F0-SO3" firstAttribute="top" secondItem="kYg-4M-dXi" secondAttribute="bottom" constant="5" id="ilA-cn-7hE"/>
+                            <constraint firstItem="dBy-jK-5pJ" firstAttribute="centerX" secondItem="NzV-mn-TWM" secondAttribute="centerX" id="npz-T9-Vft"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="기록추가" image="plus-circle" id="2RD-yH-IPz"/>
+                    <connections>
+                        <outlet property="searchBar" destination="20j-F0-SO3" id="Kgm-2N-gyq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dCC-dk-WL9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18" y="835"/>
+            <point key="canvasLocation" x="16.923076923076923" y="834.59715639810418"/>
         </scene>
         <!--화분관리-->
         <scene sceneID="YaL-0I-ZgQ">
@@ -105,19 +141,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="화분 관리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1f-Kn-6pp">
-                                <rect key="frame" x="22" y="83" width="100" height="33"/>
+                                <rect key="frame" x="22" y="75" width="100" height="33"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총 0건" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7K-yg-TJc">
-                                <rect key="frame" x="22" y="121" width="53" height="24"/>
+                                <rect key="frame" x="22" y="113" width="53" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="im2-3h-xBc">
-                                <rect key="frame" x="16" y="167" width="358" height="594"/>
+                                <rect key="frame" x="16" y="159" width="358" height="602"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="YY4-FP-pV5">
@@ -136,7 +172,7 @@
                         <constraints>
                             <constraint firstItem="9q1-h1-v16" firstAttribute="trailing" secondItem="im2-3h-xBc" secondAttribute="trailing" constant="16" id="2FI-oR-v7Q"/>
                             <constraint firstItem="c1f-Kn-6pp" firstAttribute="leading" secondItem="o7K-yg-TJc" secondAttribute="leading" id="3hB-SI-llH"/>
-                            <constraint firstItem="c1f-Kn-6pp" firstAttribute="top" secondItem="9q1-h1-v16" secondAttribute="top" constant="39" id="BtS-g5-2yz"/>
+                            <constraint firstItem="c1f-Kn-6pp" firstAttribute="top" secondItem="f6M-TM-4BZ" secondAttribute="top" constant="75" id="BtS-g5-2yz"/>
                             <constraint firstItem="c1f-Kn-6pp" firstAttribute="leading" secondItem="9q1-h1-v16" secondAttribute="leading" constant="22" id="Phg-ks-zpe"/>
                             <constraint firstItem="o7K-yg-TJc" firstAttribute="top" secondItem="c1f-Kn-6pp" secondAttribute="bottom" constant="5" id="UNt-vN-LUz"/>
                             <constraint firstItem="9q1-h1-v16" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="c1f-Kn-6pp" secondAttribute="trailing" symbolic="YES" id="VCU-f0-VvY"/>
@@ -210,12 +246,130 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
         </scene>
+        <!--기록추가-->
+        <scene sceneID="aS3-cz-Qoo">
+            <objects>
+                <viewController storyboardIdentifier="ExistSearchVC" id="fR0-fP-WSm" customClass="ExistSearchViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9a3-1P-zG3">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기록 추가하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o12-o9-WG6">
+                                <rect key="frame" x="29" y="75" width="147.33333333333334" height="32.666666666666657"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" placeholder="책 검색하기" translatesAutoresizingMaskIntoConstraints="NO" id="t5K-me-zAF">
+                                <rect key="frame" x="9" y="112.66666666666669" width="372" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="7YH-Dk-6Kz"/>
+                                    <constraint firstAttribute="width" constant="372" id="sK7-31-Al0"/>
+                                </constraints>
+                                <offsetWrapper key="searchTextPositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                                <offsetWrapper key="searchFieldBackgroundPositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ynS-C2-vDQ">
+                                <rect key="frame" x="14" y="181.66666666666669" width="362" height="628.33333333333326"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gzS-Xd-Wzo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="o12-o9-WG6" firstAttribute="top" secondItem="9a3-1P-zG3" secondAttribute="top" constant="75" id="4uK-JH-Ujy"/>
+                            <constraint firstItem="gzS-Xd-Wzo" firstAttribute="bottom" secondItem="ynS-C2-vDQ" secondAttribute="bottom" id="B4Y-pJ-80U"/>
+                            <constraint firstItem="o12-o9-WG6" firstAttribute="leading" secondItem="gzS-Xd-Wzo" secondAttribute="leading" constant="29" id="HzV-4M-ZZ1"/>
+                            <constraint firstItem="ynS-C2-vDQ" firstAttribute="centerX" secondItem="9a3-1P-zG3" secondAttribute="centerX" id="JyJ-xe-n5j"/>
+                            <constraint firstItem="ynS-C2-vDQ" firstAttribute="leading" secondItem="gzS-Xd-Wzo" secondAttribute="leading" constant="14" id="OIj-ZT-fon"/>
+                            <constraint firstItem="t5K-me-zAF" firstAttribute="centerX" secondItem="9a3-1P-zG3" secondAttribute="centerX" id="Tj3-bw-q8C"/>
+                            <constraint firstItem="gzS-Xd-Wzo" firstAttribute="trailing" secondItem="ynS-C2-vDQ" secondAttribute="trailing" constant="14" id="mSj-v1-1QB"/>
+                            <constraint firstItem="ynS-C2-vDQ" firstAttribute="top" secondItem="t5K-me-zAF" secondAttribute="bottom" constant="14" id="rnu-ui-Wla"/>
+                            <constraint firstItem="t5K-me-zAF" firstAttribute="top" secondItem="o12-o9-WG6" secondAttribute="bottom" constant="5" id="tW6-8B-SGP"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="기록추가" image="plus-circle" id="f7a-TZ-frO"/>
+                    <connections>
+                        <outlet property="bookSearchBar" destination="t5K-me-zAF" id="Z5q-ot-cs3"/>
+                        <outlet property="resultTableView" destination="ynS-C2-vDQ" id="C06-ec-FPt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rOS-29-gGL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-338.46153846153845" y="1539.8104265402842"/>
+        </scene>
+        <!--기록추가-->
+        <scene sceneID="z6W-n4-ayN">
+            <objects>
+                <viewController storyboardIdentifier="NonexistSearchVC" id="5Gn-KK-mIQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wKY-Lq-zvi">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기록 추가하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vT-3B-6E5">
+                                <rect key="frame" x="29" y="75" width="147.33333333333334" height="32.666666666666657"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" placeholder="책 검색하기" translatesAutoresizingMaskIntoConstraints="NO" id="zVH-IM-04O">
+                                <rect key="frame" x="9" y="112.66666666666669" width="372" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="eGe-zJ-Nph"/>
+                                    <constraint firstAttribute="width" constant="372" id="rxF-HW-Np6"/>
+                                </constraints>
+                                <offsetWrapper key="searchTextPositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                                <offsetWrapper key="searchFieldBackgroundPositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="검색 결과가 없습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="378-nb-Wvb">
+                                <rect key="frame" x="126.66666666666669" y="386.66666666666669" width="137" height="20"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ddv-9L-RIk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="378-nb-Wvb" firstAttribute="top" secondItem="zVH-IM-04O" secondAttribute="bottom" constant="219" id="ACU-Ar-WR3"/>
+                            <constraint firstItem="0vT-3B-6E5" firstAttribute="leading" secondItem="ddv-9L-RIk" secondAttribute="leading" constant="29" id="F3F-wb-WIN"/>
+                            <constraint firstItem="378-nb-Wvb" firstAttribute="centerX" secondItem="wKY-Lq-zvi" secondAttribute="centerX" id="LcR-pn-Ztm"/>
+                            <constraint firstItem="zVH-IM-04O" firstAttribute="centerX" secondItem="wKY-Lq-zvi" secondAttribute="centerX" id="W8l-zE-ZtR"/>
+                            <constraint firstItem="0vT-3B-6E5" firstAttribute="top" secondItem="wKY-Lq-zvi" secondAttribute="top" constant="75" id="eNB-IE-I5y"/>
+                            <constraint firstItem="zVH-IM-04O" firstAttribute="top" secondItem="0vT-3B-6E5" secondAttribute="bottom" constant="5" id="trR-1h-jZK"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="기록추가" image="plus-circle" id="FPT-Tr-7KG"/>
+                    <connections>
+                        <outlet property="searchBar" destination="zVH-IM-04O" id="czG-qc-Zmm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WZT-aq-D1I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="426" y="1540"/>
+        </scene>
     </scenes>
     <resources>
         <image name="circle-user" width="28" height="28"/>
-        <image name="edit-1" width="28" height="28"/>
+        <image name="edit" width="28" height="28"/>
         <image name="forest" width="28" height="28"/>
         <image name="home" width="28" height="28"/>
+        <image name="logo22%" width="87" height="187"/>
         <image name="plus-circle" width="28" height="28"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

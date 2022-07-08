@@ -20,8 +20,7 @@ class FlowerpotTableViewCell: UITableViewCell {
         
         //imageViewFloewerpot border
         imageViewFlowerpot.clipsToBounds = true
-        imageViewFlowerpot.roundCorners(cornerRadius: 55, maskedCorners: [.layerMinXMaxYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner])
-//        imageViewFlowerpot.roundCorners(cornerRadius: 20, maskedCorners: [.layerMinXMinYCorner])
+        imageViewFlowerpot.roundCornersDiffernt(topLeft: 5, topRight: 55, bottomLeft: 55, bottomRight: 55)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -52,6 +52,13 @@ class CustomTabBarController: UITabBarController {
         menuButton.addTarget(self, action: #selector(menuButtonAction(sender:)), for: .touchUpInside)
         view.layoutIfNeeded()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        //custom tabbar tint
+        tabBar.barTintColor = UIColor(named: "LIBROGColor")
+    }
 
     // MARK: - Actions
 
