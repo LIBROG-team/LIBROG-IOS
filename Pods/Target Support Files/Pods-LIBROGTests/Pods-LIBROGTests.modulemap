@@ -1,0 +1,6 @@
+framework module Pods_LIBROGTests {
+  umbrella header "Pods-LIBROGTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
