@@ -11,10 +11,10 @@ import Cosmos
 class UploadRecordViewController: UIViewController {
     @IBOutlet weak var uploadRecordTableView: UITableView!
     @IBOutlet weak var completeButton: UIButton!
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         uploadRecordTableView.delegate = self
         uploadRecordTableView.dataSource = self
         

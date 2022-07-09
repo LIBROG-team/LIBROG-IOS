@@ -24,13 +24,15 @@ class MainViewController: UIViewController {
         let flowerNib = UINib(nibName: "MainFlowerTableViewCell", bundle: nil)
         MainTableView.register(flowerNib, forCellReuseIdentifier: "MainFlowerTableViewCell")
         
-        // view 그림자가 왜 안 먹히지?
-        recentBookView.layer.shadowColor = UIColor.black.cgColor
-        recentBookView.layer.shadowOpacity = 0.5
-        recentBookView.layer.shadowRadius = 100
+        // 최근 읽은 책 view 그림자
         recentBookView.roundCorners(cornerRadius: 18, maskedCorners: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
-        recentBookView.layer.masksToBounds = true
+        recentBookView.layer.masksToBounds = false
+        recentBookView.layer.shadowColor = UIColor.gray.cgColor
+        recentBookView.layer.shadowOffset = CGSize(width: 0, height: -5)
+        recentBookView.layer.shadowOpacity = 0.14
+        recentBookView.layer.shadowRadius = 30.0
         
+        // 최근 읽은 책 collectionView
         recentBookCollectionView.delegate = self
         recentBookCollectionView.dataSource = self
         
@@ -46,6 +48,7 @@ class MainViewController: UIViewController {
         recentBookCollectionView.reloadData()
     }
 }
+// MARK: - 메인페이지 tableView delegate
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -67,7 +70,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
 }
-
+// MARK: - 메인페이지의 '최근 읽은 책' collectionView delegate
 extension MainViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 //        let count = auctionNowArray?.count ?? 0
