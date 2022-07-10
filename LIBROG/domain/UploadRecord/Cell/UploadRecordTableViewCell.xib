@@ -266,7 +266,14 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="authorLabel" destination="XVE-1U-Mx8" id="ZWe-j8-bbX"/>
+                <outlet property="bookImageView" destination="quo-kq-W7z" id="mNo-0f-2bQ"/>
+                <outlet property="bookPointLabel" destination="0nE-R8-lGh" id="RJA-Go-7TE"/>
                 <outlet property="bookPointView" destination="m8g-Ps-e6w" id="XLg-NB-gL6"/>
+                <outlet property="bookReportTextView" destination="Coc-6b-XQG" id="Gna-sr-rrz"/>
+                <outlet property="bookTitleLabel" destination="g33-hk-yTd" id="R9Z-zn-zjO"/>
+                <outlet property="explanationLabel" destination="VjV-tR-mx8" id="fZL-ah-kWX"/>
+                <outlet property="impressiveLineTextField" destination="pBt-0C-PIG" id="a72-0Z-niX"/>
             </connections>
             <point key="canvasLocation" x="165.21739130434784" y="292.29910714285711"/>
         </tableViewCell>
