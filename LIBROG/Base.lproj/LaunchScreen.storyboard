@@ -23,40 +23,43 @@
                                     <constraint firstAttribute="width" constant="87" id="o8t-SJ-rSF"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9BZ-Bw-mgE">
-                                <rect key="frame" x="74" y="718" width="27" height="24"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Tip">
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="20" name="AppleSDGothicNeo-SemiBold"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXd-1O-81Q">
-                                <rect key="frame" x="110" y="720" width="205" height="20"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="화분을 누르면 물을 줄 수 있어요.">
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="16" name="AppleSDGothicNeo-SemiBold"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="4DC-n2-mc3">
+                                <rect key="frame" x="86.5" y="718" width="241" height="24"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9BZ-Bw-mgE">
+                                        <rect key="frame" x="0.0" y="0.0" width="27" height="24"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Tip">
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <font key="NSFont" size="20" name="AppleSDGothicNeo-SemiBold"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXd-1O-81Q">
+                                        <rect key="frame" x="36" y="0.0" width="205" height="24"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="화분을 누르면 물을 줄 수 있어요.">
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <font key="NSFont" size="16" name="AppleSDGothicNeo-SemiBold"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="LIBROGColor"/>
                         <constraints>
-                            <constraint firstItem="ZXd-1O-81Q" firstAttribute="leading" secondItem="9BZ-Bw-mgE" secondAttribute="trailing" constant="9" id="DAp-Ei-OAS"/>
+                            <constraint firstItem="4DC-n2-mc3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4un-3J-krg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4DC-n2-mc3" secondAttribute="bottom" constant="120" id="Afa-PL-S08"/>
                             <constraint firstItem="Bz4-01-IyN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="N1d-9N-OJK"/>
-                            <constraint firstItem="ZXd-1O-81Q" firstAttribute="centerY" secondItem="9BZ-Bw-mgE" secondAttribute="centerY" id="Oa8-2Z-stS"/>
                             <constraint firstItem="Bz4-01-IyN" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="RU3-EP-W5M"/>
-                            <constraint firstItem="9BZ-Bw-mgE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="74" id="TaK-ot-fIP"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9BZ-Bw-mgE" secondAttribute="bottom" constant="120" id="dhF-DS-DgD"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -68,7 +71,7 @@
     <resources>
         <image name="logo_launchScreen_white" width="87" height="187"/>
         <namedColor name="LIBROGColor">
-            <color red="0.39215686274509803" green="0.74509803921568629" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.3919999897480011" green="0.74500000476837158" blue="0.47099998593330383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
