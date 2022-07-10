@@ -10,7 +10,14 @@ import Cosmos
 
 class UplodaRecordTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var bookImageView: UIImageView!
+    @IBOutlet weak var bookTitleLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var explanationLabel: UILabel!
+    @IBOutlet weak var bookPointLabel: UILabel!
     @IBOutlet weak var bookPointView: CosmosView!
+    @IBOutlet weak var impressiveLineTextField: UITextField!
+    @IBOutlet weak var bookReportTextView: UITextView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
