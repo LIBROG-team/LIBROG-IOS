@@ -512,10 +512,10 @@
             </objects>
             <point key="canvasLocation" x="426" y="1540"/>
         </scene>
-        <!--View Controller-->
+        <!--Flower Pot Detail View Controller-->
         <scene sceneID="sjh-yb-aqN">
             <objects>
-                <viewController id="jOH-Za-eFC" sceneMemberID="viewController">
+                <viewController id="jOH-Za-eFC" customClass="FlowerPotDetailViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L3J-Pi-7nc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -715,9 +715,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IE0-cN-Wzi">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IE0-cN-Wzi">
                                 <rect key="frame" x="32" y="381.66666666666674" width="326" height="428.33333333333326"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ggD-VZ-fTj">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -771,6 +770,16 @@
                             <constraint firstItem="GYw-El-vYI" firstAttribute="leading" secondItem="lzU-7h-dWz" secondAttribute="trailing" constant="10" id="xyA-8t-R4u"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bookCountLabel" destination="xvN-SB-Yi5" id="Gzj-eG-dQ6"/>
+                        <outlet property="flowerPotEndDateLabel" destination="lCy-V5-I2P" id="V0a-8u-uHm"/>
+                        <outlet property="flowerPotImageView" destination="s7E-61-cDk" id="5iM-N2-i2I"/>
+                        <outlet property="flowerPotNameGrowthLabel" destination="dgQ-ly-L1g" id="OrG-aT-qaF"/>
+                        <outlet property="flowerPotNameLabel" destination="q9X-58-gwB" id="xRa-tA-O91"/>
+                        <outlet property="flowerPotStartDateLabel" destination="3WM-HG-ali" id="9cO-Fx-nIZ"/>
+                        <outlet property="growthPointLabel" destination="GYw-El-vYI" id="LaW-fh-Qjz"/>
+                        <outlet property="recordBookCollectionView" destination="IE0-cN-Wzi" id="s6L-1O-23l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eaw-pJ-sRZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
