@@ -8,6 +8,7 @@ target 'LIBROG' do
   # Pods for LIBROG
 	pod 'Cosmos', '~> 23.0'
 	pod 'Alamofire'
+	pod 'Tabman', '~> 2.9'
 
   target 'LIBROGTests' do
     inherit! :search_paths

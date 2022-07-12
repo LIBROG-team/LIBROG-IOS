@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jOH-Za-eFC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="beE-pV-0z9">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -286,6 +286,140 @@
             </objects>
             <point key="canvasLocation" x="1528" y="835"/>
         </scene>
+        <!--Add Flower Pot View Controller-->
+        <scene sceneID="ZbV-iz-DLW">
+            <objects>
+                <viewController id="beE-pV-0z9" customClass="AddFlowerPotViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aW3-b0-s28">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kZ8-wd-1Yn">
+                                <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="화분 추가" id="K3b-PA-eLW">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="swJ-yP-Xqq">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="pOn-Jc-7rO">
+                                                <rect key="frame" x="16.000000000000007" y="5" width="100.66666666666669" height="34.333333333333336"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="goBackButton" title=" 뒤로 가기">
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HJq-zC-Inz">
+                                <rect key="frame" x="0.0" y="88" width="390" height="722"/>
+                                <connections>
+                                    <segue destination="bl4-zO-pId" kind="embed" id="kq5-UJ-rVp"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4Js-Yj-BlV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4Js-Yj-BlV" firstAttribute="bottom" secondItem="HJq-zC-Inz" secondAttribute="bottom" id="QTe-tK-ChP"/>
+                            <constraint firstItem="4Js-Yj-BlV" firstAttribute="trailing" secondItem="HJq-zC-Inz" secondAttribute="trailing" id="Tte-pk-ULO"/>
+                            <constraint firstItem="kZ8-wd-1Yn" firstAttribute="top" secondItem="4Js-Yj-BlV" secondAttribute="top" id="W7l-8Y-HL6"/>
+                            <constraint firstItem="4Js-Yj-BlV" firstAttribute="bottom" secondItem="HJq-zC-Inz" secondAttribute="bottom" id="XMA-Kg-atD"/>
+                            <constraint firstItem="4Js-Yj-BlV" firstAttribute="trailing" secondItem="HJq-zC-Inz" secondAttribute="trailing" id="ezN-NG-SBM"/>
+                            <constraint firstItem="HJq-zC-Inz" firstAttribute="top" secondItem="kZ8-wd-1Yn" secondAttribute="bottom" id="fQT-4e-Co7"/>
+                            <constraint firstItem="HJq-zC-Inz" firstAttribute="top" secondItem="kZ8-wd-1Yn" secondAttribute="bottom" id="gIR-pS-gXH"/>
+                            <constraint firstItem="HJq-zC-Inz" firstAttribute="leading" secondItem="4Js-Yj-BlV" secondAttribute="leading" id="mdc-fh-kcF"/>
+                            <constraint firstItem="HJq-zC-Inz" firstAttribute="leading" secondItem="4Js-Yj-BlV" secondAttribute="leading" id="pdk-Pc-Vh1"/>
+                            <constraint firstAttribute="trailing" secondItem="kZ8-wd-1Yn" secondAttribute="trailing" id="urX-Sd-TZY"/>
+                            <constraint firstItem="kZ8-wd-1Yn" firstAttribute="leading" secondItem="4Js-Yj-BlV" secondAttribute="leading" id="xEJ-1l-910"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ewd-vL-xP1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2578" y="835"/>
+        </scene>
+        <!--Acheived Flower Pot View Controller-->
+        <scene sceneID="d9p-9C-Vrd">
+            <objects>
+                <viewController storyboardIdentifier="AcheivedFlowerpotVC" id="7t8-4U-9aw" customClass="AcheivedFlowerPotViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RjQ-Ko-Ovj">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mPl-b2-lds">
+                                <rect key="frame" x="0.0" y="44" width="390" height="1"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="iD0-eZ-24v"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ITg-t3-9Le">
+                                <rect key="frame" x="14" y="45" width="362" height="765"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FaO-c7-9g1"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mPl-b2-lds" firstAttribute="top" secondItem="FaO-c7-9g1" secondAttribute="top" id="OcA-Ch-iDU"/>
+                            <constraint firstItem="FaO-c7-9g1" firstAttribute="bottom" secondItem="ITg-t3-9Le" secondAttribute="bottom" id="R4R-Of-caR"/>
+                            <constraint firstItem="ITg-t3-9Le" firstAttribute="top" secondItem="mPl-b2-lds" secondAttribute="bottom" id="SvY-f1-Oj0"/>
+                            <constraint firstItem="FaO-c7-9g1" firstAttribute="trailing" secondItem="ITg-t3-9Le" secondAttribute="trailing" constant="14" id="ULA-Ss-PNN"/>
+                            <constraint firstItem="FaO-c7-9g1" firstAttribute="trailing" secondItem="mPl-b2-lds" secondAttribute="trailing" id="cEi-Hv-CUM"/>
+                            <constraint firstItem="ITg-t3-9Le" firstAttribute="leading" secondItem="FaO-c7-9g1" secondAttribute="leading" constant="14" id="tcN-Ik-1ZD"/>
+                            <constraint firstItem="mPl-b2-lds" firstAttribute="leading" secondItem="FaO-c7-9g1" secondAttribute="leading" id="z5W-wJ-U67"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="acheivedFlowerPotTableView" destination="ITg-t3-9Le" id="Okl-Ry-jUi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b0s-1L-foM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3286" y="835"/>
+        </scene>
+        <!--Not Achieved Flower Pot View Controller-->
+        <scene sceneID="bin-1M-9Mg">
+            <objects>
+                <viewController storyboardIdentifier="NotAcheivedFlowerpotVC" id="3Wd-8X-MCV" customClass="NotAchievedFlowerPotViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yf3-rU-Qvb">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Wsd-Xq-B0W">
+                                <rect key="frame" x="14" y="44" width="362" height="766"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vDF-nG-WJP">
+                                <rect key="frame" x="0.0" y="44" width="390" height="1"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="fhr-Xa-ubX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4s0-2l-sG9"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4s0-2l-sG9" firstAttribute="bottom" secondItem="Wsd-Xq-B0W" secondAttribute="bottom" id="8qy-hk-YO9"/>
+                            <constraint firstAttribute="trailing" secondItem="vDF-nG-WJP" secondAttribute="trailing" id="PBU-GI-8KL"/>
+                            <constraint firstItem="vDF-nG-WJP" firstAttribute="top" secondItem="4s0-2l-sG9" secondAttribute="top" id="lOy-Vt-yAL"/>
+                            <constraint firstItem="Wsd-Xq-B0W" firstAttribute="top" secondItem="4s0-2l-sG9" secondAttribute="top" id="rsl-pr-5cM"/>
+                            <constraint firstItem="vDF-nG-WJP" firstAttribute="leading" secondItem="yf3-rU-Qvb" secondAttribute="leading" id="spt-wg-cDb"/>
+                            <constraint firstItem="Wsd-Xq-B0W" firstAttribute="leading" secondItem="4s0-2l-sG9" secondAttribute="leading" constant="14" id="ujV-Ah-fZ6"/>
+                            <constraint firstItem="4s0-2l-sG9" firstAttribute="trailing" secondItem="Wsd-Xq-B0W" secondAttribute="trailing" constant="14" id="yRM-Rv-55m"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="notAcheivedFlowerPotTableView" destination="Wsd-Xq-B0W" id="tw7-ye-iku"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sha-qh-Mrw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3982" y="835"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="DjB-4x-bpb">
             <objects>
@@ -512,10 +646,10 @@
             </objects>
             <point key="canvasLocation" x="426" y="1540"/>
         </scene>
-        <!--View Controller-->
+        <!--Flower Pot Detail View Controller-->
         <scene sceneID="sjh-yb-aqN">
             <objects>
-                <viewController id="jOH-Za-eFC" sceneMemberID="viewController">
+                <viewController id="jOH-Za-eFC" customClass="FlowerPotDetailViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L3J-Pi-7nc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -715,9 +849,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IE0-cN-Wzi">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IE0-cN-Wzi">
                                 <rect key="frame" x="32" y="381.66666666666674" width="326" height="428.33333333333326"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ggD-VZ-fTj">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -771,10 +904,36 @@
                             <constraint firstItem="GYw-El-vYI" firstAttribute="leading" secondItem="lzU-7h-dWz" secondAttribute="trailing" constant="10" id="xyA-8t-R4u"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bookCountLabel" destination="xvN-SB-Yi5" id="Gzj-eG-dQ6"/>
+                        <outlet property="flowerPotEndDateLabel" destination="lCy-V5-I2P" id="V0a-8u-uHm"/>
+                        <outlet property="flowerPotImageView" destination="s7E-61-cDk" id="5iM-N2-i2I"/>
+                        <outlet property="flowerPotNameGrowthLabel" destination="dgQ-ly-L1g" id="OrG-aT-qaF"/>
+                        <outlet property="flowerPotNameLabel" destination="q9X-58-gwB" id="xRa-tA-O91"/>
+                        <outlet property="flowerPotStartDateLabel" destination="3WM-HG-ali" id="9cO-Fx-nIZ"/>
+                        <outlet property="growthPointLabel" destination="GYw-El-vYI" id="LaW-fh-Qjz"/>
+                        <outlet property="growthProgessView" destination="4LS-c8-bgu" id="OpX-4U-ZHE"/>
+                        <outlet property="recordBookCollectionView" destination="IE0-cN-Wzi" id="s6L-1O-23l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eaw-pJ-sRZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1275" y="1540"/>
+            <point key="canvasLocation" x="1273.8461538461538" y="1539.8104265402842"/>
+        </scene>
+        <!--Flower Pot Tab View Controller-->
+        <scene sceneID="g8X-At-pww">
+            <objects>
+                <viewController id="bl4-zO-pId" customClass="FlowerPotTabViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5De-ZP-fmK">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="722"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="19H-Em-Qx0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bMf-uG-sdp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2782" y="1533"/>
         </scene>
     </scenes>
     <designables>
@@ -797,6 +956,9 @@
         <namedColor name="backgroundColor">
             <color red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
