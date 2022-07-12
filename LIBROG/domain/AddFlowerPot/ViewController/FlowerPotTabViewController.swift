@@ -16,26 +16,26 @@ class FlowerPotTabViewController: TabmanViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let vc2 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "AcheivedFlowerpotVC")
-        let vc3 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "NotAcheivedFlowerpotVC")
+        let AcheivedFlowerpotVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "AcheivedFlowerpotVC")
+        let NotAcheivedFlowerpotVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "NotAcheivedFlowerpotVC")
             
-        viewControllers.append(vc2)
-        viewControllers.append(vc3)
+        viewControllers.append(AcheivedFlowerpotVC)
+        viewControllers.append(NotAcheivedFlowerpotVC)
         
         self.dataSource = self
 
         // 바 생성 + tabbar 에 관한 디자인처리를 여기서 하면 된다.
         let bar = TMBar.ButtonBar()
         bar.layout.transitionStyle = .snap // Customize
-        // tab 밑 bar 색깔 & 크기
-        bar.indicator.weight = .custom(value: 1)
-        bar.indicator.tintColor = .black
-        // tap center
-        bar.layout.alignment = .centerDistributed
-        // tap 사이 간격
-        bar.layout.interButtonSpacing = 114
+        // tab indicator 속성
         bar.indicator.tintColor = UIColor(named: "LIBROGColor")
         bar.indicator.overscrollBehavior = .bounce
+        bar.indicator.weight = .custom(value: 1)
+        // tap center
+        bar.layout.alignment = .centerDistributed
+        // tab 사이 간격
+        bar.layout.interButtonSpacing = 114
+        // tab 배경색
         bar.backgroundView.style = .flat(color: .white)
         // tap 선택 / 미선택
         bar.buttons.customize { (button) in

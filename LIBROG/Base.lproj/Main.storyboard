@@ -340,31 +340,81 @@
             </objects>
             <point key="canvasLocation" x="2578" y="835"/>
         </scene>
-        <!--Acheived Flowerpot-->
+        <!--Acheived Flower Pot View Controller-->
         <scene sceneID="d9p-9C-Vrd">
             <objects>
-                <viewController storyboardIdentifier="AcheivedFlowerpotVC" id="7t8-4U-9aw" customClass="AcheivedFlowerpot" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AcheivedFlowerpotVC" id="7t8-4U-9aw" customClass="AcheivedFlowerPotViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RjQ-Ko-Ovj">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mPl-b2-lds">
+                                <rect key="frame" x="0.0" y="44" width="390" height="1"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="iD0-eZ-24v"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ITg-t3-9Le">
+                                <rect key="frame" x="14" y="45" width="362" height="765"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="FaO-c7-9g1"/>
-                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mPl-b2-lds" firstAttribute="top" secondItem="FaO-c7-9g1" secondAttribute="top" id="OcA-Ch-iDU"/>
+                            <constraint firstItem="FaO-c7-9g1" firstAttribute="bottom" secondItem="ITg-t3-9Le" secondAttribute="bottom" id="R4R-Of-caR"/>
+                            <constraint firstItem="ITg-t3-9Le" firstAttribute="top" secondItem="mPl-b2-lds" secondAttribute="bottom" id="SvY-f1-Oj0"/>
+                            <constraint firstItem="FaO-c7-9g1" firstAttribute="trailing" secondItem="ITg-t3-9Le" secondAttribute="trailing" constant="14" id="ULA-Ss-PNN"/>
+                            <constraint firstItem="FaO-c7-9g1" firstAttribute="trailing" secondItem="mPl-b2-lds" secondAttribute="trailing" id="cEi-Hv-CUM"/>
+                            <constraint firstItem="ITg-t3-9Le" firstAttribute="leading" secondItem="FaO-c7-9g1" secondAttribute="leading" constant="14" id="tcN-Ik-1ZD"/>
+                            <constraint firstItem="mPl-b2-lds" firstAttribute="leading" secondItem="FaO-c7-9g1" secondAttribute="leading" id="z5W-wJ-U67"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="acheivedFlowerPotTableView" destination="ITg-t3-9Le" id="Okl-Ry-jUi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0s-1L-foM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3286" y="835"/>
         </scene>
-        <!--Not Acheived Flowerpot-->
+        <!--Not Achieved Flower Pot View Controller-->
         <scene sceneID="bin-1M-9Mg">
             <objects>
-                <viewController storyboardIdentifier="NotAcheivedFlowerpotVC" id="3Wd-8X-MCV" customClass="NotAcheivedFlowerpot" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NotAcheivedFlowerpotVC" id="3Wd-8X-MCV" customClass="NotAchievedFlowerPotViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yf3-rU-Qvb">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Wsd-Xq-B0W">
+                                <rect key="frame" x="14" y="44" width="362" height="766"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vDF-nG-WJP">
+                                <rect key="frame" x="0.0" y="44" width="390" height="1"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="fhr-Xa-ubX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="4s0-2l-sG9"/>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4s0-2l-sG9" firstAttribute="bottom" secondItem="Wsd-Xq-B0W" secondAttribute="bottom" id="8qy-hk-YO9"/>
+                            <constraint firstAttribute="trailing" secondItem="vDF-nG-WJP" secondAttribute="trailing" id="PBU-GI-8KL"/>
+                            <constraint firstItem="vDF-nG-WJP" firstAttribute="top" secondItem="4s0-2l-sG9" secondAttribute="top" id="lOy-Vt-yAL"/>
+                            <constraint firstItem="Wsd-Xq-B0W" firstAttribute="top" secondItem="4s0-2l-sG9" secondAttribute="top" id="rsl-pr-5cM"/>
+                            <constraint firstItem="vDF-nG-WJP" firstAttribute="leading" secondItem="yf3-rU-Qvb" secondAttribute="leading" id="spt-wg-cDb"/>
+                            <constraint firstItem="Wsd-Xq-B0W" firstAttribute="leading" secondItem="4s0-2l-sG9" secondAttribute="leading" constant="14" id="ujV-Ah-fZ6"/>
+                            <constraint firstItem="4s0-2l-sG9" firstAttribute="trailing" secondItem="Wsd-Xq-B0W" secondAttribute="trailing" constant="14" id="yRM-Rv-55m"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="notAcheivedFlowerPotTableView" destination="Wsd-Xq-B0W" id="tw7-ye-iku"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sha-qh-Mrw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -877,6 +927,7 @@
                     <view key="view" contentMode="scaleToFill" id="5De-ZP-fmK">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="722"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="19H-Em-Qx0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
@@ -905,14 +956,11 @@
         <namedColor name="backgroundColor">
             <color red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
