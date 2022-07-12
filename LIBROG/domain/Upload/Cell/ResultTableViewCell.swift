@@ -1,13 +1,13 @@
 //
-//  ExistSearchTableViewCell.swift
+//  ResultTableViewCell.swift
 //  LIBROG
 //
-//  Created by 최승희 on 2022/07/07.
+//  Created by 최승희 on 2022/07/12.
 //
 
 import UIKit
 
-class ExistSearchTableViewCell: UITableViewCell {
+class ResultTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
