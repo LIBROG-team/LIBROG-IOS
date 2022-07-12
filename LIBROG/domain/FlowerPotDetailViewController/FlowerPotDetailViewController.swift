@@ -15,6 +15,7 @@ class FlowerPotDetailViewController: UIViewController {
     @IBOutlet weak var bookCountLabel: UILabel!
     @IBOutlet weak var flowerPotNameGrowthLabel: UILabel!
     @IBOutlet weak var growthPointLabel: UILabel!
+    @IBOutlet weak var growthProgessView: UIProgressView!
     @IBOutlet weak var recordBookCollectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -34,6 +35,13 @@ class FlowerPotDetailViewController: UIViewController {
         
         recordBookCollectionView.collectionViewLayout = flowLayout
         recordBookCollectionView.reloadData()
+        
+        // 화분 성장치 progressView
+        var growth = 3600.0
+        growthPointLabel.text = String(Int(growth))
+        UIView.animate(withDuration: 2) {
+                    self.growthProgessView.setProgress(Float(growth * 0.0001), animated: true)
+        }
     }
 }
 // MARK: - 화분상세정보 페이지의 '화분에 기록된 책' collectionView delegate

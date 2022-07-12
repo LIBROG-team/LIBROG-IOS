@@ -778,12 +778,13 @@
                         <outlet property="flowerPotNameLabel" destination="q9X-58-gwB" id="xRa-tA-O91"/>
                         <outlet property="flowerPotStartDateLabel" destination="3WM-HG-ali" id="9cO-Fx-nIZ"/>
                         <outlet property="growthPointLabel" destination="GYw-El-vYI" id="LaW-fh-Qjz"/>
+                        <outlet property="growthProgessView" destination="4LS-c8-bgu" id="OpX-4U-ZHE"/>
                         <outlet property="recordBookCollectionView" destination="IE0-cN-Wzi" id="s6L-1O-23l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eaw-pJ-sRZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1275" y="1540"/>
+            <point key="canvasLocation" x="1273.8461538461538" y="1539.8104265402842"/>
         </scene>
     </scenes>
     <designables>
