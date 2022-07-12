@@ -9,6 +9,7 @@ import UIKit
 
 class UploadViewController: UITableViewController , UISearchControllerDelegate, UISearchResultsUpdating, UISearchBarDelegate{
     //create the search controller and result contoller
+    
     var dataArray = [Data]()
     var fileteredData = [Data]()
     
