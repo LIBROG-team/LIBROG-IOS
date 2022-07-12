@@ -32,6 +32,12 @@
 		87E40A5DB282123CDAA86316 /* Pods_LIBROGTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79984E8377ED4772E3A4730E /* Pods_LIBROGTests.framework */; };
 		9BE303E45EECD6C4F3471E37 /* Pods_LIBROG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C934BB6A1545DC5476C41F4 /* Pods_LIBROG.framework */; };
 		AD572B475873E8AA70C597EC /* Pods_LIBROG_LIBROGUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 401A4F3757D864A067683037 /* Pods_LIBROG_LIBROGUITests.framework */; };
+		D0738AF7287D958800A9D396 /* NoResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0738AF1287D958700A9D396 /* NoResultTableViewCell.swift */; };
+		D0738AF8287D958800A9D396 /* InputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0738AF2287D958800A9D396 /* InputTableViewCell.swift */; };
+		D0738AF9287D958800A9D396 /* NoResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0738AF3287D958800A9D396 /* NoResultTableViewCell.xib */; };
+		D0738AFA287D958800A9D396 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0738AF4287D958800A9D396 /* ResultTableViewCell.xib */; };
+		D0738AFB287D958800A9D396 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0738AF5287D958800A9D396 /* ResultTableViewCell.swift */; };
+		D0738AFC287D958800A9D396 /* InputTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0738AF6287D958800A9D396 /* InputTableViewCell.xib */; };
 		D0C2B04F286DC9BE00242E71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C2B04E286DC9BE00242E71 /* AppDelegate.swift */; };
 		D0C2B051286DC9BE00242E71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C2B050286DC9BE00242E71 /* SceneDelegate.swift */; };
 		D0C2B053286DC9BE00242E71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C2B052286DC9BE00242E71 /* ViewController.swift */; };
@@ -46,10 +52,6 @@
 		D0C2B087286DF28800242E71 /* FlowerpotTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0C2B085286DF28800242E71 /* FlowerpotTableViewCell.xib */; };
 		D0C2B089286E1FD600242E71 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C2B088286E1FD600242E71 /* UIViewExtension.swift */; };
 		D0DB05B32876BC330041CEEF /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB05B22876BC330041CEEF /* UploadViewController.swift */; };
-		D0DB05B52876CEDE0041CEEF /* ExistSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB05B42876CEDE0041CEEF /* ExistSearchViewController.swift */; };
-		D0DB05B72876CF380041CEEF /* NonexistSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB05B62876CF380041CEEF /* NonexistSearchViewController.swift */; };
-		D0DB05BE2876F6A10041CEEF /* ExistSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB05BC2876F6A10041CEEF /* ExistSearchTableViewCell.swift */; };
-		D0DB05BF2876F6A10041CEEF /* ExistSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0DB05BD2876F6A10041CEEF /* ExistSearchTableViewCell.xib */; };
 		D0DB05C2287700650041CEEF /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB05C1287700650041CEEF /* Data.swift */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +104,12 @@
 		79984E8377ED4772E3A4730E /* Pods_LIBROGTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LIBROGTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80874FB74B3F63648D20C05C /* Pods-LIBROG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LIBROG.debug.xcconfig"; path = "Target Support Files/Pods-LIBROG/Pods-LIBROG.debug.xcconfig"; sourceTree = "<group>"; };
 		C75FFB529E5A692083101F06 /* Pods-LIBROG-LIBROGUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LIBROG-LIBROGUITests.debug.xcconfig"; path = "Target Support Files/Pods-LIBROG-LIBROGUITests/Pods-LIBROG-LIBROGUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D0738AF1287D958700A9D396 /* NoResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoResultTableViewCell.swift; path = "../../../../../../../../../UMC_LIBROG 복사본/LIBROG-IOS/LIBROG/domain/Upload/Cell/NoResultTableViewCell.swift"; sourceTree = "<group>"; };
+		D0738AF2287D958800A9D396 /* InputTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InputTableViewCell.swift; path = "../../../../../../../../../UMC_LIBROG 복사본/LIBROG-IOS/LIBROG/domain/Upload/Cell/InputTableViewCell.swift"; sourceTree = "<group>"; };
+		D0738AF3287D958800A9D396 /* NoResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NoResultTableViewCell.xib; path = "../../../../../../../../../UMC_LIBROG 복사본/LIBROG-IOS/LIBROG/domain/Upload/Cell/NoResultTableViewCell.xib"; sourceTree = "<group>"; };
+		D0738AF4287D958800A9D396 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ResultTableViewCell.xib; path = "../../../../../../../../../UMC_LIBROG 복사본/LIBROG-IOS/LIBROG/domain/Upload/Cell/ResultTableViewCell.xib"; sourceTree = "<group>"; };
+		D0738AF5287D958800A9D396 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultTableViewCell.swift; path = "../../../../../../../../../UMC_LIBROG 복사본/LIBROG-IOS/LIBROG/domain/Upload/Cell/ResultTableViewCell.swift"; sourceTree = "<group>"; };
+		D0738AF6287D958800A9D396 /* InputTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InputTableViewCell.xib; path = "../../../../../../../../../UMC_LIBROG 복사본/LIBROG-IOS/LIBROG/domain/Upload/Cell/InputTableViewCell.xib"; sourceTree = "<group>"; };
 		D0C2B04B286DC9BE00242E71 /* LIBROG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LIBROG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C2B04E286DC9BE00242E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0C2B050286DC9BE00242E71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,10 +128,6 @@
 		D0C2B085286DF28800242E71 /* FlowerpotTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlowerpotTableViewCell.xib; sourceTree = "<group>"; };
 		D0C2B088286E1FD600242E71 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		D0DB05B22876BC330041CEEF /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
-		D0DB05B42876CEDE0041CEEF /* ExistSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExistSearchViewController.swift; sourceTree = "<group>"; };
-		D0DB05B62876CF380041CEEF /* NonexistSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonexistSearchViewController.swift; sourceTree = "<group>"; };
-		D0DB05BC2876F6A10041CEEF /* ExistSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExistSearchTableViewCell.swift; sourceTree = "<group>"; };
-		D0DB05BD2876F6A10041CEEF /* ExistSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExistSearchTableViewCell.xib; sourceTree = "<group>"; };
 		D0DB05C1287700650041CEEF /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -364,21 +368,23 @@
 			isa = PBXGroup;
 			children = (
 				D0DB05C02877004D0041CEEF /* Model */,
-				D0DB05B82876CF580041CEEF /* ExistSearchCell */,
+				D0DB05B82876CF580041CEEF /* Cell */,
 				D0DB05B22876BC330041CEEF /* UploadViewController.swift */,
-				D0DB05B42876CEDE0041CEEF /* ExistSearchViewController.swift */,
-				D0DB05B62876CF380041CEEF /* NonexistSearchViewController.swift */,
 			);
 			path = Upload;
 			sourceTree = "<group>";
 		};
-		D0DB05B82876CF580041CEEF /* ExistSearchCell */ = {
+		D0DB05B82876CF580041CEEF /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				D0DB05BC2876F6A10041CEEF /* ExistSearchTableViewCell.swift */,
-				D0DB05BD2876F6A10041CEEF /* ExistSearchTableViewCell.xib */,
+				D0738AF2287D958800A9D396 /* InputTableViewCell.swift */,
+				D0738AF6287D958800A9D396 /* InputTableViewCell.xib */,
+				D0738AF1287D958700A9D396 /* NoResultTableViewCell.swift */,
+				D0738AF3287D958800A9D396 /* NoResultTableViewCell.xib */,
+				D0738AF5287D958800A9D396 /* ResultTableViewCell.swift */,
+				D0738AF4287D958800A9D396 /* ResultTableViewCell.xib */,
 			);
-			path = ExistSearchCell;
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		D0DB05C02877004D0041CEEF /* Model */ = {
@@ -508,15 +514,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0738AF9287D958800A9D396 /* NoResultTableViewCell.xib in Resources */,
 				D0C2B087286DF28800242E71 /* FlowerpotTableViewCell.xib in Resources */,
+				D0738AFA287D958800A9D396 /* ResultTableViewCell.xib in Resources */,
 				D0C2B05B286DC9C000242E71 /* LaunchScreen.storyboard in Resources */,
 				23A5B861287D7F81005413A3 /* NotAcheivedFlowerPotTableViewCell.xib in Resources */,
 				23C8B4B1286EF76F00432141 /* MainFlowerTableViewCell.xib in Resources */,
 				23A5B85D287D7F73005413A3 /* AcheivedFlowerPotTableViewCell.xib in Resources */,
-				D0DB05BF2876F6A10041CEEF /* ExistSearchTableViewCell.xib in Resources */,
 				D0C2B058286DC9C000242E71 /* Assets.xcassets in Resources */,
 				23DFD3112878D9F4002AC8B0 /* UploadRecordTableViewCell.xib in Resources */,
 				23C8B4B9286EF78600432141 /* RecentBookCollectionViewCell.xib in Resources */,
+				D0738AFC287D958800A9D396 /* InputTableViewCell.xib in Resources */,
 				D0C2B056286DC9BE00242E71 /* Main.storyboard in Resources */,
 				230524C2287D5C370081933A /* FlowerPotDetailCollectionViewCell.xib in Resources */,
 			);
@@ -649,25 +657,25 @@
 				D0C2B089286E1FD600242E71 /* UIViewExtension.swift in Sources */,
 				23A5B860287D7F81005413A3 /* NotAcheivedFlowerPotTableViewCell.swift in Sources */,
 				23A5B857287D6B89005413A3 /* FlowerPotTabViewController.swift in Sources */,
-				D0DB05BE2876F6A10041CEEF /* ExistSearchTableViewCell.swift in Sources */,
 				230524BE287D5C060081933A /* FlowerPotDetailViewController.swift in Sources */,
 				D0DB05B32876BC330041CEEF /* UploadViewController.swift in Sources */,
-				D0DB05B72876CF380041CEEF /* NonexistSearchViewController.swift in Sources */,
 				23C8B4BB286EFF3900432141 /* CustomTabBarController.swift in Sources */,
 				23C8B4A6286EF2F300432141 /* PaddingLabel.swift in Sources */,
+				D0738AFB287D958800A9D396 /* ResultTableViewCell.swift in Sources */,
 				D0DB05C2287700650041CEEF /* Data.swift in Sources */,
 				23C8B4B0286EF76F00432141 /* MainFlowerTableViewCell.swift in Sources */,
 				D0C2B053286DC9BE00242E71 /* ViewController.swift in Sources */,
+				D0738AF7287D958800A9D396 /* NoResultTableViewCell.swift in Sources */,
 				23766E7E2870330D005EEA8E /* UIBezierPath.swift in Sources */,
 				23DFD3102878D9F4002AC8B0 /* UploadRecordTableViewCell.swift in Sources */,
 				23DFD30D2878D9B1002AC8B0 /* UploadRecordViewController.swift in Sources */,
 				D0C2B04F286DC9BE00242E71 /* AppDelegate.swift in Sources */,
 				23A5B863287D804C005413A3 /* AcheivedFlowerPotViewController.swift in Sources */,
-				D0DB05B52876CEDE0041CEEF /* ExistSearchViewController.swift in Sources */,
 				D0C2B051286DC9BE00242E71 /* SceneDelegate.swift in Sources */,
 				23C8B4B8286EF78600432141 /* RecentBookCollectionViewCell.swift in Sources */,
 				D0C2B086286DF28800242E71 /* FlowerpotTableViewCell.swift in Sources */,
 				23A5B865287D805A005413A3 /* NotAchievedFlowerPotViewController.swift in Sources */,
+				D0738AF8287D958800A9D396 /* InputTableViewCell.swift in Sources */,
 				D0C2B080286DEBD600242E71 /* FlowerPotViewController.swift in Sources */,
 				230524C1287D5C370081933A /* FlowerPotDetailCollectionViewCell.swift in Sources */,
 				23A5B85C287D7F73005413A3 /* AcheivedFlowerPotTableViewCell.swift in Sources */,
