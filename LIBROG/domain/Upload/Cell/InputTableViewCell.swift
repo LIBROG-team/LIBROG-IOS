@@ -8,7 +8,9 @@
 import UIKit
 
 class InputTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var imageviewLogo: UIImageView!
+    @IBOutlet weak var labelInput: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

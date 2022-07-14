@@ -41,6 +41,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="inputUILabel" destination="qZ1-QT-DiD" id="6BG-jE-79o"/>
+                <outlet property="logoUIImageView" destination="ckk-jZ-P1X" id="S4i-Oz-zYq"/>
+            </connections>
             <point key="canvasLocation" x="166.66666666666669" y="308.37053571428572"/>
         </tableViewCell>
     </objects>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kfy-Kq-GWi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kfy-Kq-GWi">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -134,7 +134,7 @@
             <objects>
                 <tableViewController id="5vA-jA-oAf" customClass="UploadViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="9iS-dV-9Ws">
-                        <rect key="frame" x="0.0" y="0.0" width="362" height="637"/>
+                        <rect key="frame" x="0.0" y="0.0" width="362" height="647.33333333333337"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -173,7 +173,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I31-uh-5CS">
-                                <rect key="frame" x="14" y="124" width="362" height="637"/>
+                                <rect key="frame" x="14" y="113.66666666666669" width="362" height="647.33333333333326"/>
                                 <connections>
                                     <segue destination="5vA-jA-oAf" kind="embed" id="OEC-fu-awo"/>
                                 </connections>
@@ -186,7 +186,7 @@
                             <constraint firstItem="7Hw-HI-t6W" firstAttribute="trailing" secondItem="I31-uh-5CS" secondAttribute="trailing" constant="14" id="O53-Bj-0AR"/>
                             <constraint firstItem="kYg-4M-dXi" firstAttribute="leading" secondItem="7Hw-HI-t6W" secondAttribute="leading" constant="29" id="OHE-q1-ARM"/>
                             <constraint firstItem="kYg-4M-dXi" firstAttribute="top" secondItem="NzV-mn-TWM" secondAttribute="top" constant="75" id="Uml-Ud-Dhh"/>
-                            <constraint firstItem="I31-uh-5CS" firstAttribute="top" secondItem="kYg-4M-dXi" secondAttribute="bottom" constant="16" id="VOu-4o-aT9"/>
+                            <constraint firstItem="I31-uh-5CS" firstAttribute="top" secondItem="kYg-4M-dXi" secondAttribute="bottom" constant="6" id="VOu-4o-aT9"/>
                             <constraint firstItem="I31-uh-5CS" firstAttribute="leading" secondItem="7Hw-HI-t6W" secondAttribute="leading" constant="14" id="kJU-He-0Iy"/>
                         </constraints>
                     </view>

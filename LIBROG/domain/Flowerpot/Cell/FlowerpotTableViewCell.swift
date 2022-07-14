@@ -12,7 +12,6 @@ class FlowerpotTableViewCell: UITableViewCell {
     @IBOutlet weak var labelFlowerName: UILabel!
     @IBOutlet weak var labelDate: UILabel!
     @IBOutlet weak var labelBookNum: UILabel!
-    @IBOutlet weak var labelGenre: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

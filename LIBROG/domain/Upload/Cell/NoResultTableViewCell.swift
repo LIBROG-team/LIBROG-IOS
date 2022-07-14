@@ -8,7 +8,8 @@
 import UIKit
 
 class NoResultTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var labelNoResult: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
