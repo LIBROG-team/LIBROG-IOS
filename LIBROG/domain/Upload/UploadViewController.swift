@@ -30,6 +30,27 @@ class UploadViewController: UITableViewController , UISearchControllerDelegate, 
         
         resultVC.tableView.delegate = self
         resultVC.tableView.dataSource = self
+        let inputNib = UINib(nibName: "InputTableViewCell", bundle: nil)
+        resultVC.tableView.register(inputNib, forCellReuseIdentifier: "InputTableViewCell")
+
+        //MARK: - searchBar custom
+        
+        //검색바 스크롤되지 않도록
+        searchController.navigationItem.hidesSearchBarWhenScrolling = true
+
+        let searBarImage = UIImage()
+        searchController.searchBar.backgroundImage = searBarImage
+        
+        //placeholder 커스텀
+        searchController.searchBar.placeholder = "책 검색하기"
+        let attributedString = NSMutableAttributedString(string: "책 검색하기", attributes: [
+                NSAttributedString.Key.font: UIFont(name: "Apple SD Gothic Neo", size: 16) as Any
+            ])
+        searchController.searchBar.searchTextField.attributedPlaceholder = attributedString
+        
+        //cancel button
+        searchController.automaticallyShowsCancelButton = false
+        
     }
 
     func updateSearchResults(for searchController: UISearchController) {
@@ -59,5 +80,16 @@ class UploadViewController: UITableViewController , UISearchControllerDelegate, 
         dataArray.append(Data(main: "Eleven", detail: .B))
         dataArray.append(Data(main: "Twelve", detail: .B))
     }
+    
+    // MARK: - SearchBarDelegate
+    private func dismissKeyboard() {
+        searchController.searchBar.resignFirstResponder()
+    }
 
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        dismissKeyboard()
+        
+        guard let searchTerm = searchController.searchBar.text,
+              searchTerm.isEmpty == false else { return }
+    }
 }

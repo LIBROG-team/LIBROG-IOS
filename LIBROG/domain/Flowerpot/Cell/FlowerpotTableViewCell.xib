@@ -46,20 +46,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가장 많이 읽은 장르: 고전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5Z-9K-WOE">
-                                <rect key="frame" x="17" y="105" width="131" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <constraints>
                             <constraint firstItem="1jy-eI-yXd" firstAttribute="top" secondItem="Loa-p5-BWW" secondAttribute="bottom" constant="36" id="0aM-H9-OD6"/>
                             <constraint firstItem="oEz-qY-pxX" firstAttribute="top" secondItem="opr-n8-o8C" secondAttribute="top" constant="15" id="C2X-YE-BpQ"/>
-                            <constraint firstItem="Z5Z-9K-WOE" firstAttribute="leading" secondItem="1jy-eI-yXd" secondAttribute="leading" id="CwC-Un-kW9"/>
                             <constraint firstItem="Loa-p5-BWW" firstAttribute="leading" secondItem="oEz-qY-pxX" secondAttribute="leading" id="RTK-at-fOp"/>
                             <constraint firstItem="1jy-eI-yXd" firstAttribute="leading" secondItem="Loa-p5-BWW" secondAttribute="leading" id="WQW-Mz-UCv"/>
-                            <constraint firstAttribute="bottom" secondItem="Z5Z-9K-WOE" secondAttribute="bottom" constant="18" id="Yc5-et-Lpk"/>
                             <constraint firstItem="Loa-p5-BWW" firstAttribute="top" secondItem="oEz-qY-pxX" secondAttribute="bottom" constant="2" id="glx-kB-rD8"/>
                         </constraints>
                     </view>
@@ -79,10 +71,8 @@
             <color key="backgroundColor" red="0.49411764705882355" green="0.70980392156862748" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="imageViewFlowerpot" destination="qvT-9W-Pdk" id="x96-oZ-9Zl"/>
-                <outlet property="labelBookNum" destination="Z5Z-9K-WOE" id="zsI-FO-la9"/>
                 <outlet property="labelDate" destination="Loa-p5-BWW" id="nzh-cW-9kD"/>
                 <outlet property="labelFlowerName" destination="oEz-qY-pxX" id="im4-V7-bUk"/>
-                <outlet property="labelGenre" destination="Z5Z-9K-WOE" id="IC9-ME-x8S"/>
             </connections>
             <point key="canvasLocation" x="152.89855072463769" y="199.21875"/>
         </tableViewCell>
