@@ -24,9 +24,24 @@ class UplodaRecordTableViewCell: UITableViewCell {
         
         // 별점 초기 설정
         bookPointView.rating = 4
-        
+        bookPointLabel.text = "4"
+        bookPointView.didTouchCosmos = didTouchCosmos
     }
 
+    func updateRating(_ requiredRating: Double?) {
+        var newRatingValue : Double = 0.0
+        
+        if let nonEmptyRequiredRating = requiredRating {
+            newRatingValue = nonEmptyRequiredRating
+        }
+        bookPointView.rating = newRatingValue
+        bookPointLabel.text = String(Int(newRatingValue))
+    }
+
+    func didTouchCosmos(_ rating: Double) {
+        updateRating(rating)
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
