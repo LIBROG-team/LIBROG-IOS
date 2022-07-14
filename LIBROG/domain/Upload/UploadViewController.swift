@@ -62,14 +62,28 @@ class UploadViewController: UITableViewController , UISearchControllerDelegate, 
     
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableView == resultVC.tableView ? fileteredData.count : dataArray.count
-        
+        return tableView == resultVC.tableView ? fileteredData.count : 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = (tableView == resultVC.tableView ? fileteredData[indexPath.row].main : dataArray[indexPath.row].main)
-        return cell
+        if(tableView == resultVC.tableView) {
+            let cell = UITableViewCell()
+//            guard let cell = tableView.dequeueReusableCell(withIdentifier: "InputTableViewCell", for: indexPath) as? InputTableViewCell else { return UITableViewCell() }
+            cell.textLabel?.text = fileteredData[indexPath.row].main
+            return cell
+        }
+        else {
+            let cell = UITableViewCell()
+            cell.textLabel?.text = "검색창에 책 제목을 입력해주세요."
+            cell.textLabel?.textAlignment = .center
+            cell.selectionStyle = .none
+            return cell
+        }
+    }
+    //셀 세로 길이 조절
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if(tableView == resultVC.tableView) {return 50}
+        else {return 550}
     }
     
     private func setData(){

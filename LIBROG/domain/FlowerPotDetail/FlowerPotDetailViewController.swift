@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import WebKit
 
 class FlowerPotDetailViewController: UIViewController {
     @IBOutlet weak var flowerPotImageView: UIImageView!
