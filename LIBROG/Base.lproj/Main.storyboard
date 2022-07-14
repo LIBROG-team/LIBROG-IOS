@@ -134,7 +134,7 @@
             <objects>
                 <tableViewController id="5vA-jA-oAf" customClass="UploadViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="9iS-dV-9Ws">
-                        <rect key="frame" x="0.0" y="0.0" width="362" height="637"/>
+                        <rect key="frame" x="0.0" y="0.0" width="362" height="637.33333333333337"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -173,7 +173,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I31-uh-5CS">
-                                <rect key="frame" x="14" y="124" width="362" height="637"/>
+                                <rect key="frame" x="14" y="123.66666666666669" width="362" height="637.33333333333326"/>
                                 <connections>
                                     <segue destination="5vA-jA-oAf" kind="embed" id="OEC-fu-awo"/>
                                 </connections>
@@ -302,15 +302,11 @@
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem title="화분 추가" id="K3b-PA-eLW">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="swJ-yP-Xqq">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="pOn-Jc-7rO">
-                                                <rect key="frame" x="16.000000000000007" y="5" width="100.66666666666669" height="34.333333333333336"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="goBackButton" title=" 뒤로 가기">
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
-                                            </button>
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="goBackButton" id="q3F-qN-AVR">
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="search" id="31r-PG-5g0">
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -462,15 +458,8 @@
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem title="기록 추가하기" id="gzE-Dd-4Eh">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="Ksn-fC-5sk">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="jBF-Ma-Bln">
-                                                <rect key="frame" x="16.000000000000007" y="5" width="100.66666666666669" height="34.333333333333336"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="goBackButton" title=" 뒤로 가기">
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
-                                            </button>
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="goBackButton" id="aHk-Co-Mtd">
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -532,6 +521,150 @@
             </objects>
             <point key="canvasLocation" x="18" y="2052"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="ykO-3e-11R">
+            <objects>
+                <viewController id="CaL-8j-IEi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XuT-Eh-upy">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mB6-6x-P63">
+                                <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem id="IBC-7g-tLm">
+                                        <barButtonItem key="leftBarButtonItem" image="goBackButton" id="QhR-Ee-kns">
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tpr-JO-2Pn">
+                                <rect key="frame" x="58.000000000000007" y="54" width="108.66666666666669" height="24"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="flowerName">
+                                        <attributes>
+                                            <font key="NSFont" size="20" name="AppleSDGothicNeo-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9v-nP-0Au">
+                                <rect key="frame" x="176.66666666666666" y="56.333333333333336" width="86.999999999999972" height="19.333333333333336"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="flowerName">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="16" name="AppleSDGothicNeo-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_launchScreen_white" translatesAutoresizingMaskIntoConstraints="NO" id="sdn-sp-aaz">
+                                <rect key="frame" x="62" y="155" width="266" height="266"/>
+                                <color key="backgroundColor" name="backgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="266" id="Kqp-tk-OhA"/>
+                                    <constraint firstAttribute="height" constant="266" id="TCs-EG-Erg"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="133"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="atg-33-tjS">
+                                <rect key="frame" x="144" y="452" width="102.33333333333331" height="19.333333333333314"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lng-MN-CcF">
+                                        <rect key="frame" x="0.0" y="0.0" width="71" height="19.333333333333332"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="회원등급 - ">
+                                                <attributes>
+                                                    <font key="NSFont" size="16" name="AppleSDGothicNeo-Regular"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWR-1p-Laz">
+                                        <rect key="frame" x="71" y="0.0" width="31.333333333333329" height="19.333333333333332"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="level">
+                                                <attributes>
+                                                    <font key="NSFont" size="16" name="AppleSDGothicNeo-Regular"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17u-8b-pql">
+                                <rect key="frame" x="40" y="563.33333333333337" width="310" height="95"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">해바라기는 국화가에 속하는 일년생 초본식물로, 노란색이 인상적인 꽃 입니다. 해바라기는 풍시지리에서 금전운을 상징한다고 합니다. 해를 따라서 꽃이 움직이기 때문인지, 해바라기는 ‘일편단심’이라는 꽃말을 가지고 있습니다. 테스트용 예시 텍스트 입니다. 양쪽 공백 40입니다.</string>
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="14" name="AppleSDGothicNeo-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="19" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUh-99-4tA">
+                                <rect key="frame" x="16" y="766" width="358" height="47"/>
+                                <color key="backgroundColor" name="LIBROGColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="vM3-nD-PFC"/>
+                                </constraints>
+                                <color key="tintColor" name="LIBROGColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="선택하기">
+                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                    <color key="baseBackgroundColor" name="LIBROGColor"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aAh-Ze-kRh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="v9v-nP-0Au" firstAttribute="leading" secondItem="Tpr-JO-2Pn" secondAttribute="trailing" constant="10" id="1ca-Z5-2zH"/>
+                            <constraint firstItem="Tpr-JO-2Pn" firstAttribute="centerY" secondItem="mB6-6x-P63" secondAttribute="centerY" id="5m3-Kc-mam"/>
+                            <constraint firstItem="17u-8b-pql" firstAttribute="leading" secondItem="aAh-Ze-kRh" secondAttribute="leading" constant="40" id="Aeo-jk-o99"/>
+                            <constraint firstItem="mB6-6x-P63" firstAttribute="trailing" secondItem="aAh-Ze-kRh" secondAttribute="trailing" id="Afh-i7-ydX"/>
+                            <constraint firstItem="atg-33-tjS" firstAttribute="centerX" secondItem="aAh-Ze-kRh" secondAttribute="centerX" id="CKj-W5-Hda"/>
+                            <constraint firstItem="v9v-nP-0Au" firstAttribute="centerY" secondItem="Tpr-JO-2Pn" secondAttribute="centerY" id="Egq-AG-689"/>
+                            <constraint firstAttribute="trailing" secondItem="17u-8b-pql" secondAttribute="trailing" constant="40" id="F7V-JG-116"/>
+                            <constraint firstItem="17u-8b-pql" firstAttribute="top" secondItem="atg-33-tjS" secondAttribute="bottom" constant="92" id="JQS-iE-MYe"/>
+                            <constraint firstAttribute="bottom" secondItem="RUh-99-4tA" secondAttribute="bottom" constant="31" id="U6n-nQ-8gh"/>
+                            <constraint firstItem="Tpr-JO-2Pn" firstAttribute="leading" secondItem="RUh-99-4tA" secondAttribute="leading" constant="42" id="Ud0-Un-Rtb"/>
+                            <constraint firstItem="atg-33-tjS" firstAttribute="top" secondItem="sdn-sp-aaz" secondAttribute="bottom" constant="31" id="di3-bi-67h"/>
+                            <constraint firstItem="sdn-sp-aaz" firstAttribute="top" secondItem="mB6-6x-P63" secondAttribute="bottom" constant="67" id="edW-l3-MsQ"/>
+                            <constraint firstItem="mB6-6x-P63" firstAttribute="leading" secondItem="aAh-Ze-kRh" secondAttribute="leading" id="ghe-M6-JdN"/>
+                            <constraint firstItem="mB6-6x-P63" firstAttribute="top" secondItem="aAh-Ze-kRh" secondAttribute="top" id="nr3-Rg-dpJ"/>
+                            <constraint firstItem="sdn-sp-aaz" firstAttribute="centerX" secondItem="aAh-Ze-kRh" secondAttribute="centerX" id="pp4-cM-3hl"/>
+                            <constraint firstAttribute="trailing" secondItem="RUh-99-4tA" secondAttribute="trailing" constant="16" id="qE6-XQ-bac"/>
+                            <constraint firstItem="RUh-99-4tA" firstAttribute="leading" secondItem="aAh-Ze-kRh" secondAttribute="leading" constant="16" id="uTp-dg-f81"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u0u-e0-rnH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2578" y="159"/>
+        </scene>
         <!--Flower Pot Detail View Controller-->
         <scene sceneID="sjh-yb-aqN">
             <objects>
@@ -545,21 +678,17 @@
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem title="화분 상세 정보" id="TYg-Tg-b1V">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="x4d-8X-CXu">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Q8F-fN-WjB">
-                                                <rect key="frame" x="16.000000000000007" y="5" width="100.66666666666669" height="34.333333333333336"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="goBackButton" title=" 뒤로 가기">
-                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </buttonConfiguration>
-                                            </button>
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="goBackButton" id="cYu-hr-fuD">
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="list" id="sVr-Cg-cIU">
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s7E-61-cDk">
-                                <rect key="frame" x="37" y="123" width="110" height="110"/>
+                                <rect key="frame" x="37" y="111" width="110" height="110"/>
                                 <color key="backgroundColor" name="backgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="mKg-RV-MBM"/>
@@ -572,7 +701,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9X-58-gwB">
-                                <rect key="frame" x="179" y="142" width="107" height="19.333333333333343"/>
+                                <rect key="frame" x="179" y="130" width="107" height="19.333333333333343"/>
                                 <attributedString key="attributedText">
                                     <fragment content="flowerPotName">
                                         <attributes>
@@ -583,7 +712,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3WM-HG-ali">
-                                <rect key="frame" x="179" y="165.33333333333334" width="67.666666666666686" height="15.666666666666657"/>
+                                <rect key="frame" x="179" y="153.33333333333334" width="67.666666666666686" height="15.666666666666657"/>
                                 <attributedString key="attributedText">
                                     <fragment content="2022.00.00">
                                         <attributes>
@@ -596,7 +725,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AsZ-YT-YKO">
-                                <rect key="frame" x="179" y="191" width="70.333333333333314" height="15.666666666666657"/>
+                                <rect key="frame" x="179" y="179" width="70.333333333333314" height="15.666666666666657"/>
                                 <attributedString key="attributedText">
                                     <fragment content="기록된 권 수: ">
                                         <attributes>
@@ -609,7 +738,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TbD-AL-9Sb">
-                                <rect key="frame" x="247.66666666666666" y="165.33333333333334" width="7" height="16"/>
+                                <rect key="frame" x="247.66666666666666" y="153.33333333333334" width="7" height="16"/>
                                 <attributedString key="attributedText">
                                     <fragment content="~">
                                         <attributes>
@@ -622,7 +751,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCy-V5-I2P">
-                                <rect key="frame" x="255.66666666666666" y="165.33333333333334" width="67.666666666666657" height="15.666666666666657"/>
+                                <rect key="frame" x="255.66666666666666" y="153.33333333333334" width="67.666666666666657" height="15.666666666666657"/>
                                 <attributedString key="attributedText">
                                     <fragment content="2022.00.00">
                                         <attributes>
@@ -635,7 +764,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvN-SB-Yi5">
-                                <rect key="frame" x="249.33333333333334" y="191" width="31.333333333333343" height="15.666666666666657"/>
+                                <rect key="frame" x="249.33333333333334" y="179" width="31.333333333333343" height="15.666666666666657"/>
                                 <attributedString key="attributedText">
                                     <fragment content="count">
                                         <attributes>
@@ -648,7 +777,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ny-CO-l4e">
-                                <rect key="frame" x="280.66666666666669" y="191" width="12" height="16"/>
+                                <rect key="frame" x="280.66666666666669" y="179" width="12" height="16"/>
                                 <attributedString key="attributedText">
                                     <fragment content="권">
                                         <attributes>
@@ -661,7 +790,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgQ-ly-L1g">
-                                <rect key="frame" x="32.000000000000007" y="258" width="93.666666666666686" height="17"/>
+                                <rect key="frame" x="32.000000000000007" y="246" width="93.666666666666686" height="17"/>
                                 <attributedString key="attributedText">
                                     <fragment content="flowerPotName">
                                         <attributes>
@@ -673,7 +802,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzU-7h-dWz">
-                                <rect key="frame" x="125.66666666666667" y="258" width="52.333333333333329" height="17"/>
+                                <rect key="frame" x="125.66666666666667" y="246" width="52.333333333333329" height="17"/>
                                 <attributedString key="attributedText">
                                     <fragment content="의 성장치">
                                         <attributes>
@@ -686,7 +815,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYw-El-vYI">
-                                <rect key="frame" x="188" y="256.33333333333331" width="40" height="20.333333333333314"/>
+                                <rect key="frame" x="188" y="244.33333333333334" width="40" height="20.333333333333343"/>
                                 <attributedString key="attributedText">
                                     <fragment content="point">
                                         <attributes>
@@ -699,7 +828,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DiA-vh-n65">
-                                <rect key="frame" x="228.00000000000003" y="256" width="65.333333333333343" height="21"/>
+                                <rect key="frame" x="228.00000000000003" y="244" width="65.333333333333343" height="21"/>
                                 <attributedString key="attributedText">
                                     <fragment content=" / 10000">
                                         <attributes>
@@ -712,18 +841,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4LS-c8-bgu">
-                                <rect key="frame" x="32" y="292.66666666666669" width="326" height="4"/>
+                                <rect key="frame" x="32" y="280.66666666666669" width="326" height="4"/>
                                 <color key="tintColor" name="LIBROGColor"/>
                             </progressView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bgj-CE-Q5m">
-                                <rect key="frame" x="14" y="324.66666666666669" width="362" height="1"/>
+                                <rect key="frame" x="14" y="312.66666666666669" width="362" height="1"/>
                                 <color key="backgroundColor" name="backgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="xY9-lY-Gep"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUz-O9-BcS">
-                                <rect key="frame" x="32" y="345.66666666666669" width="99" height="18"/>
+                                <rect key="frame" x="32" y="333.66666666666669" width="99" height="18"/>
                                 <attributedString key="attributedText">
                                     <fragment content="화분에 기록된 책">
                                         <attributes>
@@ -736,7 +865,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IE0-cN-Wzi">
-                                <rect key="frame" x="32" y="381.66666666666674" width="326" height="428.33333333333326"/>
+                                <rect key="frame" x="32" y="369.66666666666674" width="326" height="440.33333333333326"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ggD-VZ-fTj">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -754,7 +883,7 @@
                             <constraint firstItem="nNp-E9-Qxj" firstAttribute="trailing" secondItem="IE0-cN-Wzi" secondAttribute="trailing" constant="32" id="4Rp-uO-d7m"/>
                             <constraint firstItem="GYw-El-vYI" firstAttribute="centerY" secondItem="lzU-7h-dWz" secondAttribute="centerY" id="8RN-by-rR7"/>
                             <constraint firstItem="IE0-cN-Wzi" firstAttribute="leading" secondItem="nNp-E9-Qxj" secondAttribute="leading" constant="32" id="FWn-6v-Yg5"/>
-                            <constraint firstItem="q9X-58-gwB" firstAttribute="top" secondItem="e37-fS-QkV" secondAttribute="bottom" constant="54" id="GUD-cq-yTE"/>
+                            <constraint firstItem="q9X-58-gwB" firstAttribute="top" secondItem="e37-fS-QkV" secondAttribute="bottom" constant="42" id="GUD-cq-yTE"/>
                             <constraint firstItem="TbD-AL-9Sb" firstAttribute="centerY" secondItem="3WM-HG-ali" secondAttribute="centerY" id="Hhc-Bv-udY"/>
                             <constraint firstItem="xvN-SB-Yi5" firstAttribute="centerY" secondItem="AsZ-YT-YKO" secondAttribute="centerY" id="K1s-Wp-DKJ"/>
                             <constraint firstItem="nNp-E9-Qxj" firstAttribute="trailing" secondItem="Bgj-CE-Q5m" secondAttribute="trailing" constant="14" id="KPB-by-QbP"/>
@@ -766,7 +895,7 @@
                             <constraint firstItem="AsZ-YT-YKO" firstAttribute="leading" secondItem="3WM-HG-ali" secondAttribute="leading" id="WF4-bQ-yL0"/>
                             <constraint firstItem="dgQ-ly-L1g" firstAttribute="leading" secondItem="nNp-E9-Qxj" secondAttribute="leading" constant="32" id="XuD-72-rnf"/>
                             <constraint firstItem="lCy-V5-I2P" firstAttribute="leading" secondItem="TbD-AL-9Sb" secondAttribute="trailing" constant="1" id="Y98-Ca-P3I"/>
-                            <constraint firstItem="s7E-61-cDk" firstAttribute="top" secondItem="e37-fS-QkV" secondAttribute="bottom" constant="35" id="adY-f9-dcr"/>
+                            <constraint firstItem="s7E-61-cDk" firstAttribute="top" secondItem="e37-fS-QkV" secondAttribute="bottom" constant="23" id="adY-f9-dcr"/>
                             <constraint firstItem="DiA-vh-n65" firstAttribute="leading" secondItem="GYw-El-vYI" secondAttribute="trailing" id="bFg-JZ-OTK"/>
                             <constraint firstItem="nNp-E9-Qxj" firstAttribute="bottom" secondItem="IE0-cN-Wzi" secondAttribute="bottom" id="dxi-Ri-0Ap"/>
                             <constraint firstItem="dgQ-ly-L1g" firstAttribute="top" secondItem="s7E-61-cDk" secondAttribute="bottom" constant="25" id="eOI-T0-0Q1"/>
@@ -834,7 +963,10 @@
         <image name="forest" width="28" height="28"/>
         <image name="goBackButton" width="9" height="17"/>
         <image name="home" width="28" height="28"/>
+        <image name="list" width="17" height="16"/>
+        <image name="logo_launchScreen_white" width="87" height="187"/>
         <image name="plus-circle" width="28" height="28"/>
+        <image name="search" width="19" height="19"/>
         <namedColor name="LIBROGColor">
             <color red="0.3919999897480011" green="0.74500000476837158" blue="0.47099998593330383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
