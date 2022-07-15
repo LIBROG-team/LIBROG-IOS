@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kfy-Kq-GWi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="beE-pV-0z9">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -393,7 +393,15 @@
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem title="화분 추가" id="K3b-PA-eLW">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" image="goBackButton" id="4Xu-Vz-sCS"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="goBackButton" id="4Xu-Vz-sCS">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="search" id="ncP-Ed-jzS">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="searchButtonDidTap:" destination="beE-pV-0z9" id="eKf-6N-b4O"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -425,10 +433,10 @@
             </objects>
             <point key="canvasLocation" x="2578" y="835"/>
         </scene>
-        <!--Acheived Flower Pot View Controller-->
+        <!--View Controller-->
         <scene sceneID="d9p-9C-Vrd">
             <objects>
-                <viewController storyboardIdentifier="AcheivedFlowerpotVC" id="7t8-4U-9aw" customClass="AcheivedFlowerPotViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7t8-4U-9aw" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RjQ-Ko-Ovj">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -457,18 +465,15 @@
                             <constraint firstItem="mPl-b2-lds" firstAttribute="leading" secondItem="FaO-c7-9g1" secondAttribute="leading" id="z5W-wJ-U67"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="acheivedFlowerPotTableView" destination="ITg-t3-9Le" id="Okl-Ry-jUi"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0s-1L-foM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3286" y="835"/>
         </scene>
-        <!--Not Achieved Flower Pot View Controller-->
+        <!--View Controller-->
         <scene sceneID="bin-1M-9Mg">
             <objects>
-                <viewController storyboardIdentifier="NotAcheivedFlowerpotVC" id="3Wd-8X-MCV" customClass="NotAchievedFlowerPotViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3Wd-8X-MCV" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yf3-rU-Qvb">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -497,9 +502,6 @@
                             <constraint firstItem="4s0-2l-sG9" firstAttribute="trailing" secondItem="Wsd-Xq-B0W" secondAttribute="trailing" constant="14" id="yRM-Rv-55m"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="notAcheivedFlowerPotTableView" destination="Wsd-Xq-B0W" id="tw7-ye-iku"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sha-qh-Mrw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -544,7 +546,9 @@
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem title="기록 추가하기" id="gzE-Dd-4Eh">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" image="goBackButton" id="MKh-gA-biV"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="goBackButton" id="MKh-gA-biV">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -618,7 +622,9 @@
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem title="화분 상세 정보" id="TYg-Tg-b1V">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" image="goBackButton" id="Gln-lg-ZDq"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="goBackButton" id="Gln-lg-ZDq">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -885,6 +891,62 @@
             </objects>
             <point key="canvasLocation" x="2578" y="1503"/>
         </scene>
+        <!--Acheived Flower Pot View Controller-->
+        <scene sceneID="zMd-BD-xMl">
+            <objects>
+                <tableViewController storyboardIdentifier="AcheivedFlowerpotVC" id="oq9-Fg-hmm" customClass="AcheivedFlowerPotViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="LuA-I0-5D9">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="fMm-T5-7Qi">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fMm-T5-7Qi" id="Frw-e0-EUx">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="oq9-Fg-hmm" id="645-5S-kNn"/>
+                            <outlet property="delegate" destination="oq9-Fg-hmm" id="nVx-6x-bIA"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ihu-aE-yHO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3285" y="1523"/>
+        </scene>
+        <!--Not Achieved Flower Pot View Controller-->
+        <scene sceneID="HdO-iW-0C3">
+            <objects>
+                <tableViewController storyboardIdentifier="NotAcheivedFlowerpotVC" id="Hw1-fV-b9L" customClass="NotAchievedFlowerPotViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="udR-45-GBo">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="pdk-Z0-A1H">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pdk-Z0-A1H" id="8S4-dt-hfv">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Hw1-fV-b9L" id="asg-rx-2Yu"/>
+                            <outlet property="delegate" destination="Hw1-fV-b9L" id="sPg-EA-fqY"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9yJ-KL-pDm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3982" y="1523"/>
+        </scene>
     </scenes>
     <designables>
         <designable name="abF-wa-X8H">
@@ -902,6 +964,7 @@
         <image name="goBackButton" width="9" height="17"/>
         <image name="home" width="28" height="28"/>
         <image name="plus-circle" width="28" height="28"/>
+        <image name="search" width="19" height="19"/>
         <namedColor name="LIBROGColor">
             <color red="0.3919999897480011" green="0.74500000476837158" blue="0.47099998593330383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
