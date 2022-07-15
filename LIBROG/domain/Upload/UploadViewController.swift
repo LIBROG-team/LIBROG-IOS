@@ -76,6 +76,8 @@ class UploadViewController: UITableViewController , UISearchControllerDelegate, 
             let cell = UITableViewCell()
             cell.textLabel?.text = "검색창에 책 제목을 입력해주세요."
             cell.textLabel?.textAlignment = .center
+//            cell.imageView?.image = UIImage(named: "logo22%")
+//            cell.imageView?.frame = CGRect(x: 100, y: 300, width: 30, height: 30)
             cell.selectionStyle = .none
             return cell
         }

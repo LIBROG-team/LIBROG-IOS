@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kfy-Kq-GWi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="USM-f0-ooh">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -18,74 +18,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9Kx-rc-3HB">
-                                <rect key="frame" x="0.0" y="44" width="390" height="527"/>
+                                <rect key="frame" x="0.0" y="44" width="390" height="717"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yE-fN-ese">
-                                <rect key="frame" x="0.0" y="571" width="390" height="190"/>
-                                <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5XO-Lk-DdP">
-                                        <rect key="frame" x="0.0" y="33" width="390" height="157"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="stQ-K0-5Dl">
-                                            <size key="itemSize" width="128" height="128"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells/>
-                                    </collectionView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9k-yd-4HT" customClass="PaddingLabel" customModule="LIBROG" customModuleProvider="target">
-                                        <rect key="frame" x="29" y="15" width="73" height="18"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="최근 읽은 책">
-                                                <attributes>
-                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                    <font key="NSFont" size="15" name="AppleSDGothicNeo-SemiBold"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="topInset">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="m9k-yd-4HT" firstAttribute="leading" secondItem="5yE-fN-ese" secondAttribute="leading" constant="29" id="05P-9H-Mgr"/>
-                                    <constraint firstItem="m9k-yd-4HT" firstAttribute="top" secondItem="5yE-fN-ese" secondAttribute="top" constant="15" id="J9t-hR-ZPi"/>
-                                    <constraint firstAttribute="height" constant="190" id="NJ9-Jp-Nem"/>
-                                    <constraint firstAttribute="trailing" secondItem="5XO-Lk-DdP" secondAttribute="trailing" id="UTs-fl-O8M"/>
-                                    <constraint firstItem="5XO-Lk-DdP" firstAttribute="leading" secondItem="5yE-fN-ese" secondAttribute="leading" id="jpO-Fm-oll"/>
-                                    <constraint firstAttribute="bottom" secondItem="5XO-Lk-DdP" secondAttribute="bottom" id="qs1-Fo-OVg"/>
-                                    <constraint firstItem="5XO-Lk-DdP" firstAttribute="top" secondItem="m9k-yd-4HT" secondAttribute="bottom" id="tnl-Vs-KTt"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="5yE-fN-ese" firstAttribute="top" secondItem="9Kx-rc-3HB" secondAttribute="bottom" id="S5t-ce-IxH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5yE-fN-ese" secondAttribute="trailing" id="XAl-hl-rzc"/>
-                            <constraint firstItem="5yE-fN-ese" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XFp-jl-6hJ"/>
                             <constraint firstItem="9Kx-rc-3HB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Xsm-no-thM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Kx-rc-3HB" secondAttribute="trailing" id="cyZ-Ah-qqL"/>
-                            <constraint firstItem="5yE-fN-ese" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dO2-Zl-TQI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9Kx-rc-3HB" secondAttribute="bottom" id="ogk-Ua-evB"/>
                             <constraint firstItem="9Kx-rc-3HB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tm4-aI-vFX"/>
                         </constraints>
                     </view>
@@ -93,13 +35,142 @@
                     <navigationItem key="navigationItem" id="hZw-ke-3ne"/>
                     <connections>
                         <outlet property="MainTableView" destination="9Kx-rc-3HB" id="WrV-CJ-iu0"/>
-                        <outlet property="recentBookCollectionView" destination="5XO-Lk-DdP" id="Z5t-wl-1ha"/>
-                        <outlet property="recentBookView" destination="5yE-fN-ese" id="opf-TB-ccG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1465" y="835"/>
+        </scene>
+        <!--Main Bottom View Controller-->
+        <scene sceneID="F9E-NI-d8n">
+            <objects>
+                <viewController storyboardIdentifier="MainBottomVC" id="USM-f0-ooh" customClass="MainBottomViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gAM-T6-n0P">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abF-wa-X8H" customClass="PaddingLabel" customModule="LIBROG" customModuleProvider="target">
+                                <rect key="frame" x="29" y="60" width="73" height="18"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="최근 읽은 책">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="15" name="AppleSDGothicNeo-SemiBold"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DOL-Xz-qTY">
+                                <rect key="frame" x="0.0" y="95" width="390" height="138"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="138" id="PQL-x5-OEK"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KvK-Ku-LWQ">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oD6-DN-54q" customClass="PaddingLabel" customModule="LIBROG" customModuleProvider="target">
+                                <rect key="frame" x="29" y="277" width="69" height="18"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="오늘의 추천">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="15" name="AppleSDGothicNeo-SemiBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="j0w-gT-LsZ">
+                                <rect key="frame" x="0.0" y="312" width="390" height="171"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="171" id="yoU-p5-bT4"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="a64-fH-YNK">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dn6-Vy-vXm">
+                                <rect key="frame" x="29" y="527" width="332" height="86"/>
+                                <color key="backgroundColor" name="backgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="5Ka-1W-W6c"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="otQ-vG-x7s"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dn6-Vy-vXm" firstAttribute="leading" secondItem="oD6-DN-54q" secondAttribute="leading" id="7yj-gM-bCF"/>
+                            <constraint firstItem="otQ-vG-x7s" firstAttribute="trailing" secondItem="dn6-Vy-vXm" secondAttribute="trailing" constant="29" id="DEU-1b-0T1"/>
+                            <constraint firstItem="oD6-DN-54q" firstAttribute="leading" secondItem="abF-wa-X8H" secondAttribute="leading" id="Nkh-Ze-Vne"/>
+                            <constraint firstItem="DOL-Xz-qTY" firstAttribute="top" secondItem="abF-wa-X8H" secondAttribute="bottom" constant="17" id="PZb-Ap-bRF"/>
+                            <constraint firstItem="oD6-DN-54q" firstAttribute="top" secondItem="DOL-Xz-qTY" secondAttribute="bottom" constant="44" id="TdG-nK-vmT"/>
+                            <constraint firstItem="j0w-gT-LsZ" firstAttribute="leading" secondItem="otQ-vG-x7s" secondAttribute="leading" id="WYY-4K-Zbb"/>
+                            <constraint firstItem="j0w-gT-LsZ" firstAttribute="trailing" secondItem="otQ-vG-x7s" secondAttribute="trailing" id="Wwm-q2-fMB"/>
+                            <constraint firstItem="j0w-gT-LsZ" firstAttribute="top" secondItem="oD6-DN-54q" secondAttribute="bottom" constant="17" id="XuJ-uL-hrk"/>
+                            <constraint firstItem="otQ-vG-x7s" firstAttribute="trailing" secondItem="DOL-Xz-qTY" secondAttribute="trailing" id="dMx-8u-ocU"/>
+                            <constraint firstItem="DOL-Xz-qTY" firstAttribute="leading" secondItem="otQ-vG-x7s" secondAttribute="leading" id="ee7-ZC-Bes"/>
+                            <constraint firstItem="dn6-Vy-vXm" firstAttribute="top" secondItem="j0w-gT-LsZ" secondAttribute="bottom" constant="44" id="hJf-1O-NTO"/>
+                            <constraint firstItem="abF-wa-X8H" firstAttribute="leading" secondItem="otQ-vG-x7s" secondAttribute="leading" constant="29" id="vWn-if-LG8"/>
+                            <constraint firstItem="abF-wa-X8H" firstAttribute="top" secondItem="otQ-vG-x7s" secondAttribute="top" constant="16" id="wUs-uz-juR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomBannerView" destination="dn6-Vy-vXm" id="TWq-nz-TNg"/>
+                        <outlet property="recentBookCollectionView" destination="DOL-Xz-qTY" id="Mc1-sB-F3W"/>
+                        <outlet property="todaySuggestCollectionView" destination="j0w-gT-LsZ" id="Cb5-HI-bvh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="83X-We-FMv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1466" y="1516"/>
         </scene>
         <!--독서기록-->
         <scene sceneID="jd6-b7-Nxg">
@@ -796,8 +867,11 @@
         </scene>
     </scenes>
     <designables>
-        <designable name="m9k-yd-4HT">
+        <designable name="abF-wa-X8H">
             <size key="intrinsicContentSize" width="73" height="18"/>
+        </designable>
+        <designable name="oD6-DN-54q">
+            <size key="intrinsicContentSize" width="69" height="18"/>
         </designable>
     </designables>
     <resources>
