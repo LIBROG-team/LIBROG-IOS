@@ -50,6 +50,7 @@ class AcheivedFlowerPotViewController: UITableViewController , UISearchControlle
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if(tableView == resultVC.tableView) {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "AcheivedFlowerPotTableViewCell", for: indexPath) as? AcheivedFlowerPotTableViewCell else { return UITableViewCell() }
+            cell.flowerPotNameLabel.text = fileteredData[indexPath.row].flowerPotName
             return cell
         }
         else {

@@ -48,6 +48,7 @@ class NotAchievedFlowerPotViewController: UITableViewController , UISearchContro
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if(tableView == resultVC.tableView) {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "NotAcheivedFlowerPotTableViewCell", for: indexPath) as? NotAcheivedFlowerPotTableViewCell else { return UITableViewCell() }
+            cell.flowerPotNameLabel.text = fileteredData[indexPath.row].flowerPotName
             return cell
         }
         else {
