@@ -13,7 +13,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var MainTableView: UITableView!
     
     var fpc: FloatingPanelController!
-    var contentsVC: MainBottomViewController! // 띄울 VC
+    var mainBottomVC: MainBottomViewController! // 띄울 VC
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,25 +26,16 @@ class MainViewController: UIViewController {
         
         let flowerNib = UINib(nibName: "MainFlowerTableViewCell", bundle: nil)
         MainTableView.register(flowerNib, forCellReuseIdentifier: "MainFlowerTableViewCell")
-        
-//        // 최근 읽은 책 view 그림자
-//        recentBookView.roundCorners(cornerRadius: 18, maskedCorners: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
-//        recentBookView.layer.masksToBounds = false
-//        recentBookView.layer.shadowColor = UIColor.gray.cgColor
-//        recentBookView.layer.shadowOffset = CGSize(width: 0, height: -5)
-//        recentBookView.layer.shadowOpacity = 0.14
-//        recentBookView.layer.shadowRadius = 30.0
     }
     
     private func setupView() {
-        contentsVC = storyboard?.instantiateViewController(identifier: "MainBottomVC", creator: { (coder) -> MainBottomViewController? in
+        mainBottomVC = storyboard?.instantiateViewController(identifier: "MainBottomVC", creator: { (coder) -> MainBottomViewController? in
             return MainBottomViewController(coder: coder)
         })
         fpc = FloatingPanelController()
         fpc.changePanelStyle() // panel 스타일 변경 (대신 bar UI가 사라지므로 따로 넣어주어야함)
         fpc.delegate = self
-        fpc.set(contentViewController: contentsVC) // floating panel에 삽입할 것
-//        fpc.track(scrollView: contentsVC.tbl)
+        fpc.set(contentViewController: mainBottomVC) // floating panel에 삽입할 것
         fpc.addPanel(toParent: self) // fpc를 관리하는 UIViewController
         fpc.layout = MyFloatingPanelLayout()
         fpc.invalidateLayout() // if needed
@@ -85,7 +76,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 //        }
 //    }
 //}
-
+// MARK: - FloatingPanelController extension
 extension FloatingPanelController {
     func changePanelStyle() {
         let appearance = SurfaceAppearance()
@@ -102,9 +93,9 @@ extension FloatingPanelController {
 
         surfaceView.grabberHandle.isHidden = true
         surfaceView.appearance = appearance
-
     }
 }
+// MARK: - FloatingPanel delegate
 extension MainViewController: FloatingPanelControllerDelegate {
     func floatingPanelDidChangePosition(_ fpc: FloatingPanelController) {
         if fpc.state == .full {
@@ -114,6 +105,7 @@ extension MainViewController: FloatingPanelControllerDelegate {
         }
     }
 }
+// MARK: - Set floatingPanel state position
 class MyFloatingPanelLayout: FloatingPanelLayout {
 
     var position: FloatingPanelPosition {
