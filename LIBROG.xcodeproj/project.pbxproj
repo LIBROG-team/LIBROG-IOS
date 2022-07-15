@@ -53,6 +53,9 @@
 		D0C2B089286E1FD600242E71 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C2B088286E1FD600242E71 /* UIViewExtension.swift */; };
 		D0DB05B32876BC330041CEEF /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB05B22876BC330041CEEF /* UploadViewController.swift */; };
 		D0DB05C2287700650041CEEF /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB05C1287700650041CEEF /* Data.swift */; };
+		D0FEE533287FF81E005533FD /* ReadingRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FEE532287FF81E005533FD /* ReadingRecordViewController.swift */; };
+		D0FEE536287FFDA1005533FD /* ReadingRecordCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FEE534287FFDA1005533FD /* ReadingRecordCollectionViewCell.swift */; };
+		D0FEE537287FFDA1005533FD /* ReadingRecordCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0FEE535287FFDA1005533FD /* ReadingRecordCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +132,9 @@
 		D0C2B088286E1FD600242E71 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		D0DB05B22876BC330041CEEF /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		D0DB05C1287700650041CEEF /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		D0FEE532287FF81E005533FD /* ReadingRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingRecordViewController.swift; sourceTree = "<group>"; };
+		D0FEE534287FFDA1005533FD /* ReadingRecordCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingRecordCollectionViewCell.swift; sourceTree = "<group>"; };
+		D0FEE535287FFDA1005533FD /* ReadingRecordCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReadingRecordCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +217,7 @@
 		23C8B4A7286EF39000432141 /* domain */ = {
 			isa = PBXGroup;
 			children = (
+				D0FEE528287FF6DF005533FD /* ReadingRecord */,
 				230524BB287D5BEE0081933A /* FlowerPotDetail */,
 				230524C3287D64820081933A /* AddFlowerPot */,
 				23DFD30B2878D98D002AC8B0 /* UploadRecord */,
@@ -395,6 +402,24 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D0FEE528287FF6DF005533FD /* ReadingRecord */ = {
+			isa = PBXGroup;
+			children = (
+				D0FEE52D287FF774005533FD /* Cell */,
+				D0FEE532287FF81E005533FD /* ReadingRecordViewController.swift */,
+			);
+			path = ReadingRecord;
+			sourceTree = "<group>";
+		};
+		D0FEE52D287FF774005533FD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D0FEE534287FFDA1005533FD /* ReadingRecordCollectionViewCell.swift */,
+				D0FEE535287FFDA1005533FD /* ReadingRecordCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		E76887DEF1096ADA5257CEDE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -517,6 +542,7 @@
 				D0C2B087286DF28800242E71 /* FlowerpotTableViewCell.xib in Resources */,
 				D0C2B05B286DC9C000242E71 /* LaunchScreen.storyboard in Resources */,
 				23A5B861287D7F81005413A3 /* NotAcheivedFlowerPotTableViewCell.xib in Resources */,
+				D0FEE537287FFDA1005533FD /* ReadingRecordCollectionViewCell.xib in Resources */,
 				23C8B4B1286EF76F00432141 /* MainFlowerTableViewCell.xib in Resources */,
 				23A5B85D287D7F73005413A3 /* AcheivedFlowerPotTableViewCell.xib in Resources */,
 				D0C2B058286DC9C000242E71 /* Assets.xcassets in Resources */,
@@ -654,6 +680,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0FEE533287FF81E005533FD /* ReadingRecordViewController.swift in Sources */,
 				D0C2B089286E1FD600242E71 /* UIViewExtension.swift in Sources */,
 				23A5B860287D7F81005413A3 /* NotAcheivedFlowerPotTableViewCell.swift in Sources */,
 				23A5B86E287D9D5D005413A3 /* ResultTableViewCell.swift in Sources */,
@@ -678,6 +705,7 @@
 				23A5B865287D805A005413A3 /* NotAchievedFlowerPotViewController.swift in Sources */,
 				D0C2B080286DEBD600242E71 /* FlowerPotViewController.swift in Sources */,
 				230524C1287D5C370081933A /* FlowerPotDetailCollectionViewCell.swift in Sources */,
+				D0FEE536287FFDA1005533FD /* ReadingRecordCollectionViewCell.swift in Sources */,
 				23A5B85C287D7F73005413A3 /* AcheivedFlowerPotTableViewCell.swift in Sources */,
 				23A5B855287D6754005413A3 /* AddFlowerPotViewController.swift in Sources */,
 				23C8B4AC286EF41400432141 /* MainViewController.swift in Sources */,
