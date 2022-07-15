@@ -9,6 +9,7 @@ import UIKit
 
 class NotAcheivedFlowerPotTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var flowerPotNameLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

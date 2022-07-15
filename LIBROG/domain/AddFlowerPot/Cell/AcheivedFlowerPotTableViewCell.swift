@@ -8,7 +8,10 @@
 import UIKit
 
 class AcheivedFlowerPotTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var flowerPotImageView: UIImageView!
+    @IBOutlet weak var flowerPotNameLabel: UILabel!
+    @IBOutlet weak var flowerPotDateLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
