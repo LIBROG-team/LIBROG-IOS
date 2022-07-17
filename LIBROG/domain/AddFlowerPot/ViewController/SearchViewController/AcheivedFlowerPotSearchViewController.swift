@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AcheivedFlowerPotViewController: UITableViewController , UISearchControllerDelegate, UISearchResultsUpdating, UISearchBarDelegate {
+class AcheivedFlowerPotSearchViewController: UITableViewController , UISearchControllerDelegate, UISearchResultsUpdating, UISearchBarDelegate {
     
     var dataArray = [FlowerPotData]()
     var fileteredData = [FlowerPotData]()

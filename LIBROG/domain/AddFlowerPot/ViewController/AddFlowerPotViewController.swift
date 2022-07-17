@@ -16,6 +16,10 @@ class AddFlowerPotViewController: TabmanViewController {
 
         }
     @IBAction func searchButtonDidTap(_ sender: UIBarButtonItem) {
-        
+        guard let flowerpotSearchViewController = self.storyboard?
+                            .instantiateViewController(withIdentifier: "AddFlowerPotSearchVC")
+                            as? AddFlowerPotSearchViewController else {return}
+        flowerpotSearchViewController.modalPresentationStyle = .fullScreen
+        self.present(flowerpotSearchViewController, animated: true, completion: nil)
     }
 }
