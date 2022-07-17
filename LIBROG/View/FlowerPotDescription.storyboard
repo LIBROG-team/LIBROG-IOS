@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Flower Pot Description View Controller-->
+        <scene sceneID="Hl2-86-AoS">
+            <objects>
+                <viewController id="5Pz-cK-ZQq" customClass="FlowerPotDescriptionViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eId-eY-Egb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pTG-fM-WSR">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="화분 추가" id="KCt-1s-Ww5">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="goBackButton" id="Xd1-ej-tJX">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTI-Kz-0Wo">
+                                <rect key="frame" x="16" y="815" width="382" height="47"/>
+                                <color key="backgroundColor" name="LIBROGColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="amx-uH-gvy"/>
+                                </constraints>
+                                <color key="tintColor" name="LIBROGColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="선택하기">
+                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                    <color key="baseBackgroundColor" name="LIBROGColor"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8h1-vS-gZe">
+                                <rect key="frame" x="0.0" y="88" width="414" height="727"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oFj-tk-yfp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pTG-fM-WSR" firstAttribute="leading" secondItem="oFj-tk-yfp" secondAttribute="leading" id="AlK-Eb-OIW"/>
+                            <constraint firstItem="oFj-tk-yfp" firstAttribute="trailing" secondItem="8h1-vS-gZe" secondAttribute="trailing" id="ETO-pj-PdD"/>
+                            <constraint firstItem="lTI-Kz-0Wo" firstAttribute="bottom" secondItem="oFj-tk-yfp" secondAttribute="bottom" id="FgA-bR-HKg"/>
+                            <constraint firstItem="8h1-vS-gZe" firstAttribute="leading" secondItem="oFj-tk-yfp" secondAttribute="leading" id="a2B-tS-T8a"/>
+                            <constraint firstItem="lTI-Kz-0Wo" firstAttribute="top" secondItem="8h1-vS-gZe" secondAttribute="bottom" id="cZL-aq-pKv"/>
+                            <constraint firstItem="pTG-fM-WSR" firstAttribute="top" secondItem="oFj-tk-yfp" secondAttribute="top" id="deb-Vh-ugV"/>
+                            <constraint firstItem="oFj-tk-yfp" firstAttribute="trailing" secondItem="lTI-Kz-0Wo" secondAttribute="trailing" constant="16" id="fAJ-pY-4mC"/>
+                            <constraint firstItem="lTI-Kz-0Wo" firstAttribute="leading" secondItem="oFj-tk-yfp" secondAttribute="leading" constant="16" id="kX6-zx-5bW"/>
+                            <constraint firstItem="8h1-vS-gZe" firstAttribute="top" secondItem="pTG-fM-WSR" secondAttribute="bottom" id="lPp-cE-kiv"/>
+                            <constraint firstAttribute="trailing" secondItem="pTG-fM-WSR" secondAttribute="trailing" id="zkR-0z-hk2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="flowerPotDetailTableView" destination="8h1-vS-gZe" id="Oqb-mk-ktL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JxL-gd-akD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="771" y="2200"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="goBackButton" width="9" height="17"/>
+        <namedColor name="LIBROGColor">
+            <color red="0.3919999897480011" green="0.74500000476837158" blue="0.47099998593330383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

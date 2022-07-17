@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Way-RF-7zM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Flower Pot View Controller-->
+        <scene sceneID="quY-86-M6v">
+            <objects>
+                <viewController id="Way-RF-7zM" customClass="AddFlowerPotViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0N7-MY-Ajk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fcq-OG-F38">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="화분 추가" id="e6R-iS-bPA">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="goBackButton" id="4Dg-vk-yls">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="search" id="9xE-xj-oFk">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="searchButtonDidTap:" destination="Way-RF-7zM" id="VrS-mD-7rO"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ip6-Wy-AhL">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <connections>
+                                    <segue destination="j4f-sq-18z" kind="embed" id="XKK-fQ-xUc"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1UF-XT-q4y"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ip6-Wy-AhL" firstAttribute="top" secondItem="fcq-OG-F38" secondAttribute="bottom" id="Ah8-Pa-1eT"/>
+                            <constraint firstItem="ip6-Wy-AhL" firstAttribute="leading" secondItem="1UF-XT-q4y" secondAttribute="leading" id="EMS-hu-KsM"/>
+                            <constraint firstItem="ip6-Wy-AhL" firstAttribute="top" secondItem="fcq-OG-F38" secondAttribute="bottom" id="NBA-KN-Ic4"/>
+                            <constraint firstItem="1UF-XT-q4y" firstAttribute="trailing" secondItem="ip6-Wy-AhL" secondAttribute="trailing" id="Tj7-Wk-Ehs"/>
+                            <constraint firstItem="ip6-Wy-AhL" firstAttribute="leading" secondItem="1UF-XT-q4y" secondAttribute="leading" id="TqA-sz-vbf"/>
+                            <constraint firstItem="1UF-XT-q4y" firstAttribute="trailing" secondItem="ip6-Wy-AhL" secondAttribute="trailing" id="Zvg-pk-RAd"/>
+                            <constraint firstItem="1UF-XT-q4y" firstAttribute="bottom" secondItem="ip6-Wy-AhL" secondAttribute="bottom" id="dh0-vb-w7Z"/>
+                            <constraint firstItem="fcq-OG-F38" firstAttribute="leading" secondItem="1UF-XT-q4y" secondAttribute="leading" id="lHq-Ci-DRI"/>
+                            <constraint firstItem="1UF-XT-q4y" firstAttribute="bottom" secondItem="ip6-Wy-AhL" secondAttribute="bottom" id="rm3-u0-vKX"/>
+                            <constraint firstAttribute="trailing" secondItem="fcq-OG-F38" secondAttribute="trailing" id="ytd-na-968"/>
+                            <constraint firstItem="fcq-OG-F38" firstAttribute="top" secondItem="1UF-XT-q4y" secondAttribute="top" id="zAI-18-a90"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pkw-KF-vxO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2578" y="835"/>
+        </scene>
+        <!--Flower Pot Tab View Controller-->
+        <scene sceneID="ibw-Qr-HEE">
+            <objects>
+                <viewController id="j4f-sq-18z" customClass="FlowerPotTabViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iAA-BH-ctb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="h9u-Dy-Non"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aEV-tn-57R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3299" y="835"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="goBackButton" width="9" height="17"/>
+        <image name="search" width="19" height="19"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

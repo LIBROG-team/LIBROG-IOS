@@ -32,6 +32,17 @@
 		23A5B871287D9D5D005413A3 /* NoResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23A5B86B287D9D5D005413A3 /* NoResultTableViewCell.xib */; };
 		23A5B872287D9D5D005413A3 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23A5B86C287D9D5D005413A3 /* ResultTableViewCell.xib */; };
 		23A5B873287D9D5D005413A3 /* InputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A5B86D287D9D5D005413A3 /* InputTableViewCell.swift */; };
+		23ADA90B288467850066D15A /* MainPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23ADA90A288467850066D15A /* MainPage.storyboard */; };
+		23ADA90D288468D50066D15A /* BookRecord.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23ADA90C288468D50066D15A /* BookRecord.storyboard */; };
+		23ADA90F2884693D0066D15A /* SelectBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23ADA90E2884693D0066D15A /* SelectBook.storyboard */; };
+		23ADA9112884698F0066D15A /* UploadRecord.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23ADA9102884698F0066D15A /* UploadRecord.storyboard */; };
+		23ADA913288469E90066D15A /* FlowerPot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23ADA912288469E90066D15A /* FlowerPot.storyboard */; };
+		23ADA91528846A2A0066D15A /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23ADA91428846A2A0066D15A /* Profile.storyboard */; };
+		23ADA91728846A870066D15A /* UserFlowerPotDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23ADA91628846A870066D15A /* UserFlowerPotDetail.storyboard */; };
+		23ADA91928846AB10066D15A /* FlowerPotDescription.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23ADA91828846AB10066D15A /* FlowerPotDescription.storyboard */; };
+		23ADA91B28846ACE0066D15A /* AddFlowerPot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23ADA91A28846ACE0066D15A /* AddFlowerPot.storyboard */; };
+		23ADA91D28846B240066D15A /* AcheivedFlowerPot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23ADA91C28846B240066D15A /* AcheivedFlowerPot.storyboard */; };
+		23ADA91F28846B440066D15A /* NotAcheivedFlowerPot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23ADA91E28846B440066D15A /* NotAcheivedFlowerPot.storyboard */; };
 		23C8B4A6286EF2F300432141 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C8B4A5286EF2F300432141 /* PaddingLabel.swift */; };
 		23C8B4AC286EF41400432141 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C8B4AB286EF41400432141 /* MainViewController.swift */; };
 		23C8B4B0286EF76F00432141 /* MainFlowerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C8B4AE286EF76F00432141 /* MainFlowerTableViewCell.swift */; };
@@ -106,6 +117,17 @@
 		23A5B86B287D9D5D005413A3 /* NoResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoResultTableViewCell.xib; sourceTree = "<group>"; };
 		23A5B86C287D9D5D005413A3 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
 		23A5B86D287D9D5D005413A3 /* InputTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTableViewCell.swift; sourceTree = "<group>"; };
+		23ADA90A288467850066D15A /* MainPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainPage.storyboard; sourceTree = "<group>"; };
+		23ADA90C288468D50066D15A /* BookRecord.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookRecord.storyboard; sourceTree = "<group>"; };
+		23ADA90E2884693D0066D15A /* SelectBook.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectBook.storyboard; sourceTree = "<group>"; };
+		23ADA9102884698F0066D15A /* UploadRecord.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UploadRecord.storyboard; sourceTree = "<group>"; };
+		23ADA912288469E90066D15A /* FlowerPot.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FlowerPot.storyboard; sourceTree = "<group>"; };
+		23ADA91428846A2A0066D15A /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		23ADA91628846A870066D15A /* UserFlowerPotDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserFlowerPotDetail.storyboard; sourceTree = "<group>"; };
+		23ADA91828846AB10066D15A /* FlowerPotDescription.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FlowerPotDescription.storyboard; sourceTree = "<group>"; };
+		23ADA91A28846ACE0066D15A /* AddFlowerPot.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddFlowerPot.storyboard; sourceTree = "<group>"; };
+		23ADA91C28846B240066D15A /* AcheivedFlowerPot.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AcheivedFlowerPot.storyboard; sourceTree = "<group>"; };
+		23ADA91E28846B440066D15A /* NotAcheivedFlowerPot.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotAcheivedFlowerPot.storyboard; sourceTree = "<group>"; };
 		23C8B4A5286EF2F300432141 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		23C8B4AB286EF41400432141 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		23C8B4AE286EF76F00432141 /* MainFlowerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlowerTableViewCell.swift; sourceTree = "<group>"; };
@@ -249,6 +271,24 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		23ADA909288467680066D15A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				23ADA90A288467850066D15A /* MainPage.storyboard */,
+				23ADA90C288468D50066D15A /* BookRecord.storyboard */,
+				23ADA90E2884693D0066D15A /* SelectBook.storyboard */,
+				23ADA9102884698F0066D15A /* UploadRecord.storyboard */,
+				23ADA912288469E90066D15A /* FlowerPot.storyboard */,
+				23ADA91428846A2A0066D15A /* Profile.storyboard */,
+				23ADA91628846A870066D15A /* UserFlowerPotDetail.storyboard */,
+				23ADA91828846AB10066D15A /* FlowerPotDescription.storyboard */,
+				23ADA91A28846ACE0066D15A /* AddFlowerPot.storyboard */,
+				23ADA91C28846B240066D15A /* AcheivedFlowerPot.storyboard */,
+				23ADA91E28846B440066D15A /* NotAcheivedFlowerPot.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		23C8B4A7286EF39000432141 /* domain */ = {
 			isa = PBXGroup;
 			children = (
@@ -361,6 +401,7 @@
 		D0C2B04D286DC9BE00242E71 /* LIBROG */ = {
 			isa = PBXGroup;
 			children = (
+				23ADA909288467680066D15A /* View */,
 				23C8B4A8286EF39900432141 /* global */,
 				23C8B4A7286EF39000432141 /* domain */,
 				D0C2B04E286DC9BE00242E71 /* AppDelegate.swift */,
@@ -560,7 +601,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0C2B087286DF28800242E71 /* FlowerpotTableViewCell.xib in Resources */,
+				23ADA91B28846ACE0066D15A /* AddFlowerPot.storyboard in Resources */,
+				23ADA913288469E90066D15A /* FlowerPot.storyboard in Resources */,
 				238DE01D28819AF0007901E6 /* TodaySuggestCollectionViewCell.xib in Resources */,
+				23ADA91728846A870066D15A /* UserFlowerPotDetail.storyboard in Resources */,
 				D0C2B05B286DC9C000242E71 /* LaunchScreen.storyboard in Resources */,
 				23A5B861287D7F81005413A3 /* NotAcheivedFlowerPotTableViewCell.xib in Resources */,
 				23C8B4B1286EF76F00432141 /* MainFlowerTableViewCell.xib in Resources */,
@@ -569,10 +613,18 @@
 				23A5B86F287D9D5D005413A3 /* InputTableViewCell.xib in Resources */,
 				2355234C2881C48A00EDE3E1 /* FlowerPotDescriptionTableViewCell.xib in Resources */,
 				23A5B871287D9D5D005413A3 /* NoResultTableViewCell.xib in Resources */,
+				23ADA90D288468D50066D15A /* BookRecord.storyboard in Resources */,
+				23ADA91528846A2A0066D15A /* Profile.storyboard in Resources */,
+				23ADA90F2884693D0066D15A /* SelectBook.storyboard in Resources */,
 				23A5B872287D9D5D005413A3 /* ResultTableViewCell.xib in Resources */,
+				23ADA91928846AB10066D15A /* FlowerPotDescription.storyboard in Resources */,
+				23ADA91F28846B440066D15A /* NotAcheivedFlowerPot.storyboard in Resources */,
 				23DFD3112878D9F4002AC8B0 /* UploadRecordTableViewCell.xib in Resources */,
+				23ADA90B288467850066D15A /* MainPage.storyboard in Resources */,
 				23C8B4B9286EF78600432141 /* RecentBookCollectionViewCell.xib in Resources */,
 				D0C2B056286DC9BE00242E71 /* Main.storyboard in Resources */,
+				23ADA91D28846B240066D15A /* AcheivedFlowerPot.storyboard in Resources */,
+				23ADA9112884698F0066D15A /* UploadRecord.storyboard in Resources */,
 				230524C2287D5C370081933A /* FlowerPotDetailCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -915,7 +967,6 @@
 				INFOPLIST_FILE = LIBROG/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -945,7 +996,6 @@
 				INFOPLIST_FILE = LIBROG/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
