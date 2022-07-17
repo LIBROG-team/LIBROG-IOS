@@ -83,6 +83,12 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="flowerPotDateLabel" destination="1RW-0q-19J" id="nzW-gM-2Av"/>
+                <outlet property="flowerPotImageView" destination="TYT-V7-Ts6" id="Oex-P0-5FQ"/>
+                <outlet property="flowerPotNameLabel" destination="2gc-jI-6OZ" id="vBz-YL-MPa"/>
+                <outlet property="flowerTypeLabel" destination="ujE-m2-Ddb" id="U9v-Fi-oS0"/>
+            </connections>
             <point key="canvasLocation" x="215.94202898550725" y="97.767857142857139"/>
         </tableViewCell>
     </objects>

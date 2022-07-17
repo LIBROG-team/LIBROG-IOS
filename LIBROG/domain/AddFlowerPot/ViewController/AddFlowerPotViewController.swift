@@ -10,10 +10,12 @@ import Tabman
 import Pageboy
 
 class AddFlowerPotViewController: TabmanViewController {
-    private var viewControllers: Array<UIViewController> = []
 
         override func viewDidLoad() {
             super.viewDidLoad()
 
         }
+    @IBAction func searchButtonDidTap(_ sender: UIBarButtonItem) {
+        
+    }
 }

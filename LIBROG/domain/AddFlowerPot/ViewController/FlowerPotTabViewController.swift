@@ -16,9 +16,9 @@ class FlowerPotTabViewController: TabmanViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let AcheivedFlowerpotVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "AcheivedFlowerpotVC")
-        let NotAcheivedFlowerpotVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "NotAcheivedFlowerpotVC")
-            
+        let AcheivedFlowerpotVC = UIStoryboard(name: "AcheivedFlowerPot", bundle: nil).instantiateViewController(identifier: "AcheivedFlowerpotVC")
+        let NotAcheivedFlowerpotVC = UIStoryboard(name: "NotAcheivedFlowerPot", bundle: nil).instantiateViewController(identifier: "NotAcheivedFlowerpotVC")
+
         viewControllers.append(AcheivedFlowerpotVC)
         viewControllers.append(NotAcheivedFlowerpotVC)
         
