@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Achieved Flower Pot View Controller-->
         <scene sceneID="OVy-q6-eYD">
             <objects>
-                <viewController id="wLs-iZ-eVM" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AcheivedFlowerpotVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wLs-iZ-eVM" customClass="AchievedFlowerPotViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tbX-yO-sDX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,15 +40,18 @@
                             <constraint firstItem="NB4-tB-uoW" firstAttribute="trailing" secondItem="pc7-2U-yDt" secondAttribute="trailing" constant="14" id="pOQ-iU-afi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="acheivedFlowerPotTableView" destination="pc7-2U-yDt" id="AkQ-mG-cy1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HRI-AU-N7N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3286" y="835"/>
         </scene>
-        <!--Acheived Flower Pot View Controller-->
+        <!--Acheived Flower Pot Search View Controller-->
         <scene sceneID="5D0-O8-bVX">
             <objects>
-                <tableViewController storyboardIdentifier="AcheivedFlowerpotVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="V0S-kq-4ad" customClass="AcheivedFlowerPotViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="AcheivedFlowerpotSearchVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="V0S-kq-4ad" customClass="AcheivedFlowerPotSearchViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="CsX-md-5gM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

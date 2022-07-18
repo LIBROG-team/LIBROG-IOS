@@ -15,6 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         sleep(2)
+        
+        UserDefaults.standard.set("e9e63756ebc5c4ceeac89815995e2fd8", forKey: "KAKAO_REST_API_KEY")
+        UserDefaults.standard.set("http://dev.librog.shop:3000/", forKey: "url")
+        UserDefaults.standard.set("", forKey: "accessToken")
+        UserDefaults.standard.set("", forKey: "refreshToken")
+        UserDefaults.standard.set(1, forKey: "userId")  // 임시로 userID를 1로 설정
+        
         return true
     }
 

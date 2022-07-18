@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2C511EE63C6E7D5843B971D1E441119E"
-               BuildableName = "Algorithms.framework"
-               BlueprintName = "SwiftAlgorithms"
+               BlueprintIdentifier = "E8022D22FAA6690B5E1C379C1BCE1491"
+               BuildableName = "Kingfisher.framework"
+               BlueprintName = "Kingfisher"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

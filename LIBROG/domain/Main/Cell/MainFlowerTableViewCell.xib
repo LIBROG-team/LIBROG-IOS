@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -42,9 +41,9 @@
                         </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LV9-kH-CYh">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LV9-kH-CYh">
                         <rect key="frame" x="129.5" y="164.5" width="244" height="244"/>
-                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="244" id="DOg-yH-Ite"/>
                             <constraint firstAttribute="height" constant="244" id="rRJ-fQ-a6w"/>
@@ -97,16 +96,17 @@
             <connections>
                 <outlet property="bookDateLabel" destination="YBu-kX-5hC" id="Oka-ho-tby"/>
                 <outlet property="flowerImageView" destination="LV9-kH-CYh" id="u7K-JF-lHM"/>
+                <outlet property="flowerNameLabel" destination="HZE-4U-iRU" id="zoq-wb-YR7"/>
             </connections>
             <point key="canvasLocation" x="208" y="233"/>
         </tableViewCell>
     </objects>
     <resources>
         <namedColor name="LIBROGColor">
-            <color red="0.49411764705882355" green="0.70980392156862748" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.3919999897480011" green="0.74500000476837158" blue="0.47099998593330383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <namedColor name="backgroundColor">
+            <color red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

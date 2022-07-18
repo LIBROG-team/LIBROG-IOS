@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="29D-0J-3w4">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,26 +12,134 @@
         <!--프로필-->
         <scene sceneID="1Y1-rD-uha">
             <objects>
-                <viewController storyboardIdentifier="ProfileVC" id="29D-0J-3w4" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="29D-0J-3w4" customClass="ProfileViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wm9-mZ-xE9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHK-oT-R3B">
-                                <rect key="frame" x="169" y="433" width="76" height="30"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXs-xX-R4d">
+                                <rect key="frame" x="29" y="81" width="71" height="33"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="프로필">
+                                        <attributes>
+                                            <font key="NSFont" size="27" name="AppleSDGothicNeo-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYD-Ij-CIA">
+                                <rect key="frame" x="330" y="77.5" width="52" height="40"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="setting">
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="settingButtonDidTap:" destination="29D-0J-3w4" eventType="touchUpInside" id="ij8-K3-kRQ"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cuv-Rt-p23">
+                                <rect key="frame" x="0.0" y="132.5" width="414" height="1"/>
+                                <color key="backgroundColor" systemColor="separatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="wtn-VZ-1mv"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MZu-Vs-X69">
+                                <rect key="frame" x="34" y="158.5" width="78" height="78"/>
+                                <color key="backgroundColor" name="LIBROGColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="1iu-g0-1o9"/>
+                                    <constraint firstAttribute="width" constant="78" id="RPg-cL-9KR"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="39"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6z-oc-NTe">
+                                <rect key="frame" x="154" y="166.5" width="73.5" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="userName">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="AppleSDGothicNeo-SemiBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDf-kb-aWR">
+                                <rect key="frame" x="154" y="192.5" width="49.5" height="14.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="About Me">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="12" name="AppleSDGothicNeo-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YBT-ug-Apd">
+                                <rect key="frame" x="14" y="261.5" width="386" height="1"/>
+                                <color key="backgroundColor" systemColor="separatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="G0M-3d-Bep"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="c6N-Za-gZv">
+                                <rect key="frame" x="0.0" y="262.5" width="414" height="369"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="369" id="NXi-bo-NOD"/>
+                                </constraints>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b5c-s0-FSL">
+                                <rect key="frame" x="14" y="631.5" width="386" height="1"/>
+                                <color key="backgroundColor" systemColor="separatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="y1a-sJ-fGA"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="emr-ug-j5C"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="rHK-oT-R3B" firstAttribute="centerX" secondItem="wm9-mZ-xE9" secondAttribute="centerX" id="BeK-0K-CFc"/>
-                            <constraint firstItem="rHK-oT-R3B" firstAttribute="centerY" secondItem="wm9-mZ-xE9" secondAttribute="centerY" id="IOF-fm-oYH"/>
+                            <constraint firstItem="y6z-oc-NTe" firstAttribute="leading" secondItem="MZu-Vs-X69" secondAttribute="trailing" constant="42" id="6Nx-Kb-iPm"/>
+                            <constraint firstItem="YBT-ug-Apd" firstAttribute="leading" secondItem="wm9-mZ-xE9" secondAttribute="leading" constant="14" id="74D-22-gGt"/>
+                            <constraint firstItem="b5c-s0-FSL" firstAttribute="top" secondItem="c6N-Za-gZv" secondAttribute="bottom" id="9v0-NR-wn0"/>
+                            <constraint firstItem="OXs-xX-R4d" firstAttribute="top" secondItem="emr-ug-j5C" secondAttribute="top" constant="37" id="Ga4-aG-UWK"/>
+                            <constraint firstItem="OXs-xX-R4d" firstAttribute="leading" secondItem="emr-ug-j5C" secondAttribute="leading" constant="29" id="HZj-l8-7mS"/>
+                            <constraint firstItem="GDf-kb-aWR" firstAttribute="top" secondItem="y6z-oc-NTe" secondAttribute="bottom" constant="5" id="LEw-mC-WXB"/>
+                            <constraint firstItem="y6z-oc-NTe" firstAttribute="top" secondItem="cuv-Rt-p23" secondAttribute="bottom" constant="33" id="Mtj-RU-26e"/>
+                            <constraint firstItem="emr-ug-j5C" firstAttribute="trailing" secondItem="c6N-Za-gZv" secondAttribute="trailing" id="RVO-d1-1Oh"/>
+                            <constraint firstItem="cuv-Rt-p23" firstAttribute="leading" secondItem="emr-ug-j5C" secondAttribute="leading" id="SHg-uO-j2g"/>
+                            <constraint firstItem="c6N-Za-gZv" firstAttribute="top" secondItem="YBT-ug-Apd" secondAttribute="bottom" id="SmL-zy-EeM"/>
+                            <constraint firstItem="rYD-Ij-CIA" firstAttribute="centerY" secondItem="OXs-xX-R4d" secondAttribute="centerY" id="Tyl-BS-jXa"/>
+                            <constraint firstItem="YBT-ug-Apd" firstAttribute="top" secondItem="MZu-Vs-X69" secondAttribute="bottom" constant="25" id="VtB-iq-ptE"/>
+                            <constraint firstItem="emr-ug-j5C" firstAttribute="trailing" secondItem="rYD-Ij-CIA" secondAttribute="trailing" constant="31.870000000000001" id="ZRW-7d-IfP"/>
+                            <constraint firstItem="emr-ug-j5C" firstAttribute="trailing" secondItem="cuv-Rt-p23" secondAttribute="trailing" id="ewt-Cb-Ydj"/>
+                            <constraint firstItem="MZu-Vs-X69" firstAttribute="top" secondItem="cuv-Rt-p23" secondAttribute="bottom" constant="25" id="fYO-bo-JiS"/>
+                            <constraint firstItem="GDf-kb-aWR" firstAttribute="leading" secondItem="y6z-oc-NTe" secondAttribute="leading" id="mvp-CT-AvL"/>
+                            <constraint firstAttribute="trailing" secondItem="b5c-s0-FSL" secondAttribute="trailing" constant="14" id="oix-i1-vZ3"/>
+                            <constraint firstItem="cuv-Rt-p23" firstAttribute="top" secondItem="rYD-Ij-CIA" secondAttribute="bottom" constant="15" id="tOx-AI-TUQ"/>
+                            <constraint firstItem="b5c-s0-FSL" firstAttribute="leading" secondItem="wm9-mZ-xE9" secondAttribute="leading" constant="14" id="tjp-uH-A0v"/>
+                            <constraint firstAttribute="trailing" secondItem="YBT-ug-Apd" secondAttribute="trailing" constant="14" id="u43-Em-RdK"/>
+                            <constraint firstItem="c6N-Za-gZv" firstAttribute="leading" secondItem="emr-ug-j5C" secondAttribute="leading" id="vng-F1-iQg"/>
+                            <constraint firstItem="MZu-Vs-X69" firstAttribute="leading" secondItem="emr-ug-j5C" secondAttribute="leading" constant="34" id="z1o-96-UZb"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="프로필" image="circle-user" id="bmA-AF-8bt"/>
+                    <connections>
+                        <outlet property="aboutMeLabel" destination="GDf-kb-aWR" id="mqC-14-4tI"/>
+                        <outlet property="profileImageView" destination="MZu-Vs-X69" id="Ru7-qJ-sNr"/>
+                        <outlet property="profileTableView" destination="c6N-Za-gZv" id="wxW-8z-Pg0"/>
+                        <outlet property="userNameLabel" destination="y6z-oc-NTe" id="dcn-pF-Usz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HTM-TJ-aEU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -39,6 +148,16 @@
     </scenes>
     <resources>
         <image name="circle-user" width="28" height="28"/>
+        <image name="setting" width="28" height="26"/>
+        <namedColor name="LIBROGColor">
+            <color red="0.3919999897480011" green="0.74500000476837158" blue="0.47099998593330383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

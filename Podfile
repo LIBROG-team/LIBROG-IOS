@@ -10,6 +10,7 @@ target 'LIBROG' do
 	pod 'Alamofire'
 	pod 'Tabman', '~> 2.9'
 	pod 'FloatingPanel'
+	pod 'Kingfisher'
 
   target 'LIBROGTests' do
     inherit! :search_paths
