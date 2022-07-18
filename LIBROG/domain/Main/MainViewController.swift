@@ -15,6 +15,7 @@ class MainViewController: UIViewController {
     var fpc: FloatingPanelController!
     var mainBottomVC: MainBottomViewController! // 띄울 VC
     
+    var flowerpotData: FlowerpotData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,8 @@ class MainViewController: UIViewController {
         let flowerNib = UINib(nibName: "MainFlowerTableViewCell", bundle: nil)
         MainTableView.register(flowerNib, forCellReuseIdentifier: "MainFlowerTableViewCell")
         
-        MainPageDataManager().mainPageFlowerpotDataManager(1, self)
+        let userId = UserDefaults.standard.integer(forKey: "userId")
+        MainPageDataManager().mainPageFlowerpotDataManager(userId, self)
     }
     
     private func setupView() {
@@ -55,6 +57,11 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         cell.selectionStyle = .none
+        if let cellData = self.flowerpotData {
+            // if data exists
+            cell.setUpData(cellData)
+            print("FFF ", cellData)
+        }
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -68,9 +75,9 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension MainViewController {
-    func userFlowerPotSuccessAPI(_ result : FlowerpotModel) {
-//        self.auctionNowArray = result.data
-//        HomeTableView.reloadData()
+    func userFlowerPotSuccessAPI(_ result : FlowerpotData) {
+        self.flowerpotData = result
+        MainTableView.reloadData()
     }
 }
 // MARK: - FloatingPanelController extension
