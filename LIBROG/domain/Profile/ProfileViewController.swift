@@ -26,9 +26,10 @@ class ProfileViewController: UIViewController {
         profileTableView.register(menuNib, forCellReuseIdentifier: "ProfileTableViewCell")
     }
     
-
     @IBAction func settingButtonDidTap(_ sender: UIButton) {
-        
+        let settingVC = UIStoryboard(name: "Setting", bundle: nil).instantiateViewController(identifier: "SettingVC")
+        settingVC.modalPresentationStyle = .fullScreen
+        self.present(settingVC, animated: true, completion: nil)
     }
 }
 

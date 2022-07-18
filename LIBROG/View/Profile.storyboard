@@ -12,7 +12,7 @@
         <!--프로필-->
         <scene sceneID="1Y1-rD-uha">
             <objects>
-                <viewController storyboardIdentifier="ProfileVC" id="29D-0J-3w4" customClass="ProfileViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="29D-0J-3w4" customClass="ProfileViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wm9-mZ-xE9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
