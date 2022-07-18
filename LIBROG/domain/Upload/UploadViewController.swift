@@ -10,6 +10,7 @@ import UIKit
 class UploadViewController: UITableViewController {
     
     var dataArray = [Data]()
+    var searchWord = ""
     var pageNum = 1
     
     var searchController = UISearchController()
@@ -44,6 +45,7 @@ class UploadViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 ////            guard let cell = tableView.dequeueReusableCell(withIdentifier: "InputTableViewCell", for: indexPath) as? InputTableViewCell else { return UITableViewCell() }
         let cell = UITableViewCell()
+        // 더보기 버튼 Custom
         if indexPath.row == dataArray.count {
             cell.textLabel?.text = "더보기"
             cell.textLabel?.textAlignment = .center
@@ -62,6 +64,15 @@ class UploadViewController: UITableViewController {
         if indexPath.row == dataArray.count {return 47}
         else {return 100}
     }
+    //클릭한 셀의 이벤트 처리
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // MARK: 더보기 버튼 클릭
+        if indexPath.row == dataArray.count {
+            pageNum = pageNum + 1
+            SearchBookManager().searchBookManager(searchWord, pageNum, self)
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
 // MARK: - SearchBarDelegate & SearchBar Custom
@@ -78,7 +89,9 @@ extension UploadViewController: UISearchControllerDelegate, UISearchResultsUpdat
     //MARK: 입력값이 바뀔 때마다
     func updateSearchResults(for searchController: UISearchController) {
         dataArray.removeAll()
-        SearchBookManager().searchBookManager(searchController.searchBar.searchTextField.text ?? " ", self)
+        pageNum = 1
+        searchWord = searchController.searchBar.searchTextField.text ?? " "
+        SearchBookManager().searchBookManager(searchWord, 1, self)
         resultVC.tableView.reloadData()
     }
     //MARK: searchBar custom
