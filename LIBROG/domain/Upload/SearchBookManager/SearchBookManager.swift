@@ -11,7 +11,7 @@ import Kingfisher
 
 class SearchBookManager {
     let header = HeaderMAnager().getHeader()
-    func searchBookManager(_ word: String) {
+    func searchBookManager(_ word: String, _ viewcontroller: UploadViewController) {
         AF.request("https://dapi.kakao.com/v3/search/book?target=title&query=\(word)",
                    method: .get,
                    parameters: nil,
@@ -21,8 +21,9 @@ class SearchBookManager {
                 
             switch response.result {
             case .success(let result):
-                print("DEBUG: ", result)
-//                viewcontroller.userFlowerPotSuccessAPI(result.result[1])
+                var book = result.documents
+                print("DEBUG: ", book)
+                viewcontroller.kakaoSearchBookSuccessAPI(book)
             case .failure(let error):
                 print(error.localizedDescription)
             }
