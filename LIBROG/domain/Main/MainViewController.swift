@@ -60,7 +60,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         if let cellData = self.flowerpotData {
             // if data exists
             cell.setUpData(cellData)
-            print("FFF ", cellData)
         }
         return cell
     }
