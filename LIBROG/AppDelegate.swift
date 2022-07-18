@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         sleep(2)
         
+        UserDefaults.standard.set("http://dev.librog.shop:3000/", forKey: "url")
         UserDefaults.standard.set("", forKey: "accessToken")
         UserDefaults.standard.set("", forKey: "refreshToken")
         UserDefaults.standard.set(1, forKey: "userId")  // 임시로 userID를 1로 설정

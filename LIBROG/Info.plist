@@ -19,7 +19,7 @@
 		<dict>
 			<key>NSIncludesSubDomains</key>
 			<true/>
-			<key>www.librog.shop</key>
+			<key>dev.librog.shop</key>
 			<dict>
 				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
 				<true/>

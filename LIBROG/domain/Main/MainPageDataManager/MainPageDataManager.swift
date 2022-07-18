@@ -11,8 +11,10 @@ import Kingfisher
 import UIKit
 
 class MainPageDataManager{
+    let url = UserDefaults.standard.string(forKey: "url")
+    
     func mainPageFlowerpotDataManager(_ userIdx: Int, _ viewcontroller : MainViewController) {
-        AF.request("http://www.librog.shop:3000/flowerpots/\(userIdx)",
+        AF.request(url! + "flowerpots/\(userIdx)",
                    method: .get,
                    parameters: nil)
             .validate()
