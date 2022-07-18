@@ -11,7 +11,7 @@ class UploadViewController: UITableViewController , UISearchControllerDelegate, 
     //create the search controller and result contoller
     
     var dataArray = [Data]()
-    var fileteredData = [Data]()
+    var filteredData = [Data]()
     
     var searchController = UISearchController()
     var resultVC = UITableViewController()
@@ -51,33 +51,34 @@ class UploadViewController: UITableViewController , UISearchControllerDelegate, 
         //cancel button
         searchController.automaticallyShowsCancelButton = false
         
+        
+        SearchBookManager().searchBookManager("why")
     }
 
     func updateSearchResults(for searchController: UISearchController) {
-        fileteredData = dataArray.filter({ (data:Data) -> Bool in
+        filteredData = dataArray.filter({ (data:Data) -> Bool in
             return data.main.lowercased().contains(searchController.searchBar.text!.lowercased())
         })
+//        print("입력: ", searchController.searchBar.searchTextField.text)
         resultVC.tableView.reloadData()
     }
     
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableView == resultVC.tableView ? fileteredData.count : 1
+        return tableView == resultVC.tableView ? filteredData.count : 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if(tableView == resultVC.tableView) {
             let cell = UITableViewCell()
 //            guard let cell = tableView.dequeueReusableCell(withIdentifier: "InputTableViewCell", for: indexPath) as? InputTableViewCell else { return UITableViewCell() }
-            cell.textLabel?.text = fileteredData[indexPath.row].main
+            cell.textLabel?.text = filteredData[indexPath.row].main
             return cell
         }
         else {
             let cell = UITableViewCell()
             cell.textLabel?.text = "검색창에 책 제목을 입력해주세요."
             cell.textLabel?.textAlignment = .center
-//            cell.imageView?.image = UIImage(named: "logo22%")
-//            cell.imageView?.frame = CGRect(x: 100, y: 300, width: 30, height: 30)
             cell.selectionStyle = .none
             return cell
         }
