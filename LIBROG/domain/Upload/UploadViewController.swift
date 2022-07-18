@@ -10,6 +10,7 @@ import UIKit
 class UploadViewController: UITableViewController {
     
     var dataArray = [Data]()
+    var pageNum = 1
     
     var searchController = UISearchController()
     var resultVC = UITableViewController()
@@ -36,18 +37,30 @@ class UploadViewController: UITableViewController {
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataArray.count
+        if dataArray.count == 0 {return 0}
+        else {return dataArray.count + 1}
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 ////            guard let cell = tableView.dequeueReusableCell(withIdentifier: "InputTableViewCell", for: indexPath) as? InputTableViewCell else { return UITableViewCell() }
         let cell = UITableViewCell()
-        cell.textLabel?.text = dataArray[indexPath.row].main
+        if indexPath.row == dataArray.count {
+            cell.textLabel?.text = "더보기"
+            cell.textLabel?.textAlignment = .center
+            cell.textLabel?.textColor = UIColor(named: "LIBROGColor")
+            cell.textLabel?.font = .boldSystemFont(ofSize: 15)
+            cell.layer.borderWidth = 1.5
+            cell.layer.borderColor = UIColor(named: "LIBROGColor")?.cgColor
+            cell.layer.cornerRadius = 10
+        } else {
+            cell.textLabel?.text = dataArray[indexPath.row].main
+        }
         return cell
     }
     //셀 세로 길이 조절
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        if indexPath.row == dataArray.count {return 47}
+        else {return 100}
     }
 }
 
