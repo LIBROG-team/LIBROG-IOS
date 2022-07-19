@@ -65,8 +65,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="화분관리" image="forest" id="Sny-4X-q91"/>
                     <connections>
-                        <outlet property="mainTableView" destination="PSz-DZ-t59" id="pfY-fI-mYF"/>
-                        <outlet property="tableView" destination="PSz-DZ-t59" id="KRQ-vA-Ecl"/>
+                        <outlet property="flowerpotCountLabel" destination="rZh-JG-6R1" id="KBZ-Gi-fOb"/>
+                        <outlet property="flowerpotTableView" destination="PSz-DZ-t59" id="KRQ-vA-Ecl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ITS-HZ-qH9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
