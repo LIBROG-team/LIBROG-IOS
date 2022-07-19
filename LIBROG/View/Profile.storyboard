@@ -30,9 +30,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYD-Ij-CIA">
-                                <rect key="frame" x="330" y="77.5" width="52" height="40"/>
+                                <rect key="frame" x="328" y="75.5" width="54" height="44"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="setting">
+                                <buttonConfiguration key="configuration" style="plain" image="GearSix">
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -40,14 +40,14 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cuv-Rt-p23">
-                                <rect key="frame" x="0.0" y="132.5" width="414" height="1"/>
+                                <rect key="frame" x="0.0" y="134.5" width="414" height="1"/>
                                 <color key="backgroundColor" systemColor="separatorColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="wtn-VZ-1mv"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MZu-Vs-X69">
-                                <rect key="frame" x="34" y="158.5" width="78" height="78"/>
+                                <rect key="frame" x="34" y="160.5" width="78" height="78"/>
                                 <color key="backgroundColor" name="LIBROGColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="78" id="1iu-g0-1o9"/>
@@ -60,7 +60,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6z-oc-NTe">
-                                <rect key="frame" x="154" y="166.5" width="73.5" height="21"/>
+                                <rect key="frame" x="154" y="168.5" width="73.5" height="21"/>
                                 <attributedString key="attributedText">
                                     <fragment content="userName">
                                         <attributes>
@@ -72,7 +72,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDf-kb-aWR">
-                                <rect key="frame" x="154" y="192.5" width="49.5" height="14.5"/>
+                                <rect key="frame" x="154" y="194.5" width="49.5" height="14.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="About Me">
                                         <attributes>
@@ -85,21 +85,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YBT-ug-Apd">
-                                <rect key="frame" x="14" y="261.5" width="386" height="1"/>
+                                <rect key="frame" x="14" y="263.5" width="386" height="1"/>
                                 <color key="backgroundColor" systemColor="separatorColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="G0M-3d-Bep"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="c6N-Za-gZv">
-                                <rect key="frame" x="0.0" y="262.5" width="414" height="369"/>
+                                <rect key="frame" x="0.0" y="264.5" width="414" height="369"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="369" id="NXi-bo-NOD"/>
                                 </constraints>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b5c-s0-FSL">
-                                <rect key="frame" x="14" y="631.5" width="386" height="1"/>
+                                <rect key="frame" x="14" y="633.5" width="386" height="1"/>
                                 <color key="backgroundColor" systemColor="separatorColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="y1a-sJ-fGA"/>
@@ -147,8 +147,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="GearSix" width="30" height="30"/>
         <image name="circle-user" width="28" height="28"/>
-        <image name="setting" width="28" height="26"/>
         <namedColor name="LIBROGColor">
             <color red="0.3919999897480011" green="0.74500000476837158" blue="0.47099998593330383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
