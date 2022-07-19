@@ -41,7 +41,7 @@
 		23A5B872287D9D5D005413A3 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23A5B86C287D9D5D005413A3 /* ResultTableViewCell.xib */; };
 		23A5B873287D9D5D005413A3 /* InputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A5B86D287D9D5D005413A3 /* InputTableViewCell.swift */; };
 		23ADA90B288467850066D15A /* MainPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23ADA90A288467850066D15A /* MainPage.storyboard */; };
-		23ADA90D288468D50066D15A /* BookRecord.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23ADA90C288468D50066D15A /* BookRecord.storyboard */; };
+		23ADA90D288468D50066D15A /* ReadingRecord.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23ADA90C288468D50066D15A /* ReadingRecord.storyboard */; };
 		23ADA90F2884693D0066D15A /* SelectBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23ADA90E2884693D0066D15A /* SelectBook.storyboard */; };
 		23ADA9112884698F0066D15A /* UploadRecord.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23ADA9102884698F0066D15A /* UploadRecord.storyboard */; };
 		23ADA913288469E90066D15A /* FlowerPot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23ADA912288469E90066D15A /* FlowerPot.storyboard */; };
@@ -83,9 +83,9 @@
 		D0C2B086286DF28800242E71 /* FlowerpotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C2B084286DF28800242E71 /* FlowerpotTableViewCell.swift */; };
 		D0C2B087286DF28800242E71 /* FlowerpotTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0C2B085286DF28800242E71 /* FlowerpotTableViewCell.xib */; };
 		D0C2B089286E1FD600242E71 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C2B088286E1FD600242E71 /* UIViewExtension.swift */; };
-		D0CF2B5D2885C83C00F78104 /* BookRecordCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CF2B5B2885C83C00F78104 /* BookRecordCollectionViewCell.swift */; };
-		D0CF2B5E2885C83C00F78104 /* BookRecordCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0CF2B5C2885C83C00F78104 /* BookRecordCollectionViewCell.xib */; };
-		D0CF2B602885C99C00F78104 /* BookRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CF2B5F2885C99C00F78104 /* BookRecordViewController.swift */; };
+		D0CF2B5D2885C83C00F78104 /* ReadingRecordCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CF2B5B2885C83C00F78104 /* ReadingRecordCollectionViewCell.swift */; };
+		D0CF2B5E2885C83C00F78104 /* ReadingRecordCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0CF2B5C2885C83C00F78104 /* ReadingRecordCollectionViewCell.xib */; };
+		D0CF2B602885C99C00F78104 /* ReadingRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CF2B5F2885C99C00F78104 /* ReadingRecordViewController.swift */; };
 		D0DB05B32876BC330041CEEF /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB05B22876BC330041CEEF /* UploadViewController.swift */; };
 		D0DB05C2287700650041CEEF /* BookData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB05C1287700650041CEEF /* BookData.swift */; };
 /* End PBXBuildFile section */
@@ -143,7 +143,7 @@
 		23A5B86C287D9D5D005413A3 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
 		23A5B86D287D9D5D005413A3 /* InputTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTableViewCell.swift; sourceTree = "<group>"; };
 		23ADA90A288467850066D15A /* MainPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainPage.storyboard; sourceTree = "<group>"; };
-		23ADA90C288468D50066D15A /* BookRecord.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookRecord.storyboard; sourceTree = "<group>"; };
+		23ADA90C288468D50066D15A /* ReadingRecord.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReadingRecord.storyboard; sourceTree = "<group>"; };
 		23ADA90E2884693D0066D15A /* SelectBook.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectBook.storyboard; sourceTree = "<group>"; };
 		23ADA9102884698F0066D15A /* UploadRecord.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UploadRecord.storyboard; sourceTree = "<group>"; };
 		23ADA912288469E90066D15A /* FlowerPot.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FlowerPot.storyboard; sourceTree = "<group>"; };
@@ -194,9 +194,9 @@
 		D0C2B084286DF28800242E71 /* FlowerpotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerpotTableViewCell.swift; sourceTree = "<group>"; };
 		D0C2B085286DF28800242E71 /* FlowerpotTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlowerpotTableViewCell.xib; sourceTree = "<group>"; };
 		D0C2B088286E1FD600242E71 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
-		D0CF2B5B2885C83C00F78104 /* BookRecordCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRecordCollectionViewCell.swift; sourceTree = "<group>"; };
-		D0CF2B5C2885C83C00F78104 /* BookRecordCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookRecordCollectionViewCell.xib; sourceTree = "<group>"; };
-		D0CF2B5F2885C99C00F78104 /* BookRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRecordViewController.swift; sourceTree = "<group>"; };
+		D0CF2B5B2885C83C00F78104 /* ReadingRecordCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingRecordCollectionViewCell.swift; sourceTree = "<group>"; };
+		D0CF2B5C2885C83C00F78104 /* ReadingRecordCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReadingRecordCollectionViewCell.xib; sourceTree = "<group>"; };
+		D0CF2B5F2885C99C00F78104 /* ReadingRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingRecordViewController.swift; sourceTree = "<group>"; };
 		D0DB05B22876BC330041CEEF /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		D0DB05C1287700650041CEEF /* BookData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -346,7 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				23ADA90A288467850066D15A /* MainPage.storyboard */,
-				23ADA90C288468D50066D15A /* BookRecord.storyboard */,
+				23ADA90C288468D50066D15A /* ReadingRecord.storyboard */,
 				23ADA90E2884693D0066D15A /* SelectBook.storyboard */,
 				23ADA9102884698F0066D15A /* UploadRecord.storyboard */,
 				23ADA912288469E90066D15A /* FlowerPot.storyboard */,
@@ -550,7 +550,7 @@
 			isa = PBXGroup;
 			children = (
 				D0CF2B582885C80300F78104 /* Cell */,
-				D0CF2B5F2885C99C00F78104 /* BookRecordViewController.swift */,
+				D0CF2B5F2885C99C00F78104 /* ReadingRecordViewController.swift */,
 			);
 			path = BookRecord;
 			sourceTree = "<group>";
@@ -558,8 +558,8 @@
 		D0CF2B582885C80300F78104 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				D0CF2B5B2885C83C00F78104 /* BookRecordCollectionViewCell.swift */,
-				D0CF2B5C2885C83C00F78104 /* BookRecordCollectionViewCell.xib */,
+				D0CF2B5B2885C83C00F78104 /* ReadingRecordCollectionViewCell.swift */,
+				D0CF2B5C2885C83C00F78104 /* ReadingRecordCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -728,7 +728,7 @@
 				23A5B86F287D9D5D005413A3 /* InputTableViewCell.xib in Resources */,
 				2355234C2881C48A00EDE3E1 /* FlowerPotDescriptionTableViewCell.xib in Resources */,
 				23A5B871287D9D5D005413A3 /* NoResultTableViewCell.xib in Resources */,
-				23ADA90D288468D50066D15A /* BookRecord.storyboard in Resources */,
+				23ADA90D288468D50066D15A /* ReadingRecord.storyboard in Resources */,
 				237ECCE82885693F000D9A71 /* ProfileTableViewCell.xib in Resources */,
 				23ADA91528846A2A0066D15A /* Profile.storyboard in Resources */,
 				23ADA90F2884693D0066D15A /* SelectBook.storyboard in Resources */,
@@ -737,7 +737,7 @@
 				23ADA91F28846B440066D15A /* NotAcheivedFlowerPot.storyboard in Resources */,
 				23DFD3112878D9F4002AC8B0 /* UploadRecordTableViewCell.xib in Resources */,
 				23ADA90B288467850066D15A /* MainPage.storyboard in Resources */,
-				D0CF2B5E2885C83C00F78104 /* BookRecordCollectionViewCell.xib in Resources */,
+				D0CF2B5E2885C83C00F78104 /* ReadingRecordCollectionViewCell.xib in Resources */,
 				23C8B4B9286EF78600432141 /* RecentBookCollectionViewCell.xib in Resources */,
 				237ECCEA28857544000D9A71 /* Setting.storyboard in Resources */,
 				D0C2B056286DC9BE00242E71 /* Main.storyboard in Resources */,
@@ -904,7 +904,7 @@
 				2339DA06288591D600A3DBC4 /* SearchBookManager.swift in Sources */,
 				23ADA9242884790C0066D15A /* NotAchievedFlowerPotViewController.swift in Sources */,
 				23ADA92D288481080066D15A /* MainPageDataManager.swift in Sources */,
-				D0CF2B5D2885C83C00F78104 /* BookRecordCollectionViewCell.swift in Sources */,
+				D0CF2B5D2885C83C00F78104 /* ReadingRecordCollectionViewCell.swift in Sources */,
 				D0C2B086286DF28800242E71 /* FlowerpotTableViewCell.swift in Sources */,
 				235523442881B89200EDE3E1 /* FlowerPotData.swift in Sources */,
 				23ADA92B28847FC80066D15A /* FlowerpotModel.swift in Sources */,
@@ -915,7 +915,7 @@
 				23A5B855287D6754005413A3 /* AddFlowerPotViewController.swift in Sources */,
 				237ECCE0288556EE000D9A71 /* ProfileViewController.swift in Sources */,
 				238DE01F28819C00007901E6 /* MainBottomViewController.swift in Sources */,
-				D0CF2B602885C99C00F78104 /* BookRecordViewController.swift in Sources */,
+				D0CF2B602885C99C00F78104 /* ReadingRecordViewController.swift in Sources */,
 				23C8B4AC286EF41400432141 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
