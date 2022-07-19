@@ -48,6 +48,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="scrollToTop" title=""/>
+                                <connections>
+                                    <action selector="scrollToTop_button:" destination="Q1e-Dl-AV5" eventType="touchUpInside" id="ldk-X7-3rz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRb-Jv-rYW">
                                 <rect key="frame" x="291" y="127.5" width="103" height="30"/>
@@ -80,11 +83,27 @@
                     <connections>
                         <outlet property="ScrollToTopButton" destination="qrV-d5-NVh" id="xDa-tq-vi9"/>
                         <outlet property="readingRecordCollectionView" destination="8rM-4A-slX" id="Ubr-uj-w9K"/>
+                        <outlet property="sortingButton" destination="nRb-Jv-rYW" id="Pix-xU-DHY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sRs-sE-34g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-720.28985507246387" y="834.375"/>
+        </scene>
+        <!--Reading Record Bottom View Controller-->
+        <scene sceneID="Co4-Un-DFM">
+            <objects>
+                <viewController storyboardIdentifier="ReadingRecordBottomVC" id="BMk-hn-h5e" customClass="ReadingRecordBottomViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6nw-qK-InT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="iWD-eV-2si"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="56M-Ku-nqx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="83" y="834"/>
         </scene>
     </scenes>
     <resources>
