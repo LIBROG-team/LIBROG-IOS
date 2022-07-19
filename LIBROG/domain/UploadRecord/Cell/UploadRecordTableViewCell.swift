@@ -28,6 +28,17 @@ class UplodaRecordTableViewCell: UITableViewCell {
         bookPointView.didTouchCosmos = didTouchCosmos
     }
 
+    func setBookData(_ bookData: BookData) {
+        bookTitleLabel.text = bookData.bookTitle
+        authorLabel.text = bookData.author[0]
+        explanationLabel.text = bookData.bookDescription
+        let thumbnailURL = bookData.thumbnailURL
+        
+        if let url = URL(string: thumbnailURL) {
+            bookImageView.kf.setImage(with: url, placeholder: UIImage(named: "logo22%"))
+        }
+    }
+    
     func updateRating(_ requiredRating: Double?) {
         var newRatingValue : Double = 0.0
         
