@@ -11,7 +11,7 @@ class ReadingRecordBottomViewController: UIViewController {
     
     // MARK: - Properties
     // 바텀 시트 높이
-    let bottomHeight: CGFloat = 359
+    let bottomHeight: CGFloat = 197
     
     // bottomSheet가 view의 상단에서 떨어진 거리
     private var bottomSheetViewTopConstraint: NSLayoutConstraint!
@@ -19,7 +19,7 @@ class ReadingRecordBottomViewController: UIViewController {
     // 기존 화면을 흐려지게 만들기 위한 뷰
     private let dimmedBackView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+        view.backgroundColor = UIColor(red: 0.25, green: 0.25, blue: 0.25, alpha: 1)
         return view
     }()
     
@@ -28,7 +28,7 @@ class ReadingRecordBottomViewController: UIViewController {
         let view = UIView()
         view.backgroundColor = .white
         
-        view.layer.cornerRadius = 27
+        view.layer.cornerRadius = 8
         view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         view.clipsToBounds = true
         
@@ -38,8 +38,8 @@ class ReadingRecordBottomViewController: UIViewController {
     // dismiss Indicator View UI 구성 부분
     private let dismissIndicatorView: UIView = {
         let view = UIView()
-        view.backgroundColor = .systemGray2
-        view.layer.cornerRadius = 3
+        view.backgroundColor = UIColor(red: 0.92, green: 0.92, blue: 0.92, alpha: 1)
+        view.layer.cornerRadius = 2
         
         return view
     }()
@@ -104,9 +104,9 @@ class ReadingRecordBottomViewController: UIViewController {
         
         dismissIndicatorView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            dismissIndicatorView.widthAnchor.constraint(equalToConstant: 102),
-            dismissIndicatorView.heightAnchor.constraint(equalToConstant: 7),
-            dismissIndicatorView.topAnchor.constraint(equalTo: bottomSheetView.topAnchor, constant: 12),
+            dismissIndicatorView.widthAnchor.constraint(equalToConstant: 50),
+            dismissIndicatorView.heightAnchor.constraint(equalToConstant: 3),
+            dismissIndicatorView.topAnchor.constraint(equalTo: bottomSheetView.topAnchor, constant: 8),
             dismissIndicatorView.centerXAnchor.constraint(equalTo: bottomSheetView.centerXAnchor)
         ])
         
@@ -120,7 +120,7 @@ class ReadingRecordBottomViewController: UIViewController {
         bottomSheetViewTopConstraint.constant = (safeAreaHeight + bottomPadding) - bottomHeight
         
         UIView.animate(withDuration: 0.25, delay: 0, options: .curveEaseIn, animations: {
-            self.dimmedBackView.alpha = 0.5
+            self.dimmedBackView.alpha = 0.54
             self.view.layoutIfNeeded()
         }, completion: nil)
     }
