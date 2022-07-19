@@ -11,6 +11,8 @@ class FlowerPotDescriptionViewController: UIViewController {
 
     @IBOutlet weak var flowerPotDetailTableView: UITableView!
     
+    var flowerpotID: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,7 +25,10 @@ class FlowerPotDescriptionViewController: UIViewController {
         let flowerPotNib = UINib(nibName: "FlowerPotDescriptionTableViewCell", bundle: nil)
         flowerPotDetailTableView.register(flowerPotNib, forCellReuseIdentifier: "FlowerPotDescriptionTableViewCell")
     }
-
+    @IBAction func goBackButtonDidTap(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
 // MARK: - 화분 상세 페이지 tableView delegate
 extension FlowerPotDescriptionViewController: UITableViewDelegate, UITableViewDataSource {

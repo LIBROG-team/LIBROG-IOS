@@ -12,7 +12,7 @@
         <!--Flower Pot Description View Controller-->
         <scene sceneID="Hl2-86-AoS">
             <objects>
-                <viewController id="5Pz-cK-ZQq" customClass="FlowerPotDescriptionViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FlowerPotDescriptionVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5Pz-cK-ZQq" customClass="FlowerPotDescriptionViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eId-eY-Egb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,8 +22,11 @@
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem title="화분 추가" id="KCt-1s-Ww5">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" image="goBackButton" id="Xd1-ej-tJX">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrow-right" id="Xd1-ej-tJX">
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="goBackButtonDidTap:" destination="5Pz-cK-ZQq" id="p07-Yd-tL9"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -76,7 +79,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="goBackButton" width="9" height="17"/>
+        <image name="arrow-right" width="21" height="21"/>
         <namedColor name="LIBROGColor">
             <color red="0.3919999897480011" green="0.74500000476837158" blue="0.47099998593330383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
