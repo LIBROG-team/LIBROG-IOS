@@ -11,6 +11,8 @@ import Cosmos
 class UploadRecordViewController: UIViewController {
     @IBOutlet weak var uploadRecordTableView: UITableView!
     @IBOutlet weak var completeButton: UIButton!
+    
+    var bookData: BookData!
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +25,9 @@ class UploadRecordViewController: UIViewController {
         let uploadRecordNib = UINib(nibName: "UploadRecordTableViewCell", bundle: nil)
         uploadRecordTableView.register(uploadRecordNib, forCellReuseIdentifier: "UploadRecordTableViewCell")
     }
+    @IBAction func goBackButtonDidTap(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 extension UploadRecordViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -33,6 +38,7 @@ extension UploadRecordViewController: UITableViewDelegate, UITableViewDataSource
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "UploadRecordTableViewCell", for: indexPath) as? UplodaRecordTableViewCell else {
             return UITableViewCell()
         }
+        cell.setBookData(self.bookData)
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

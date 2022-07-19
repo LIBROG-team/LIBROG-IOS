@@ -30,7 +30,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g33-hk-yTd">
-                                <rect key="frame" x="109" y="19" width="68.5" height="21"/>
+                                <rect key="frame" x="109" y="19" width="207" height="21"/>
                                 <attributedString key="attributedText">
                                     <fragment content="bookTitle">
                                         <attributes>
@@ -42,7 +42,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVE-1U-Mx8">
-                                <rect key="frame" x="109" y="41" width="71.5" height="17"/>
+                                <rect key="frame" x="109" y="45" width="207" height="17"/>
                                 <attributedString key="attributedText">
                                     <fragment content="bookAuthor">
                                         <attributes>
@@ -55,7 +55,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VjV-tR-mx8">
-                                <rect key="frame" x="109" y="63" width="84.5" height="14.5"/>
+                                <rect key="frame" x="109" y="72" width="207" height="14.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="bookExplanation">
                                         <attributes>
@@ -76,9 +76,12 @@
                             <constraint firstItem="g33-hk-yTd" firstAttribute="leading" secondItem="quo-kq-W7z" secondAttribute="trailing" constant="16" id="9k9-Gl-gLg"/>
                             <constraint firstItem="quo-kq-W7z" firstAttribute="leading" secondItem="6c5-ge-8qK" secondAttribute="leading" constant="16" id="CnG-no-swK"/>
                             <constraint firstItem="VjV-tR-mx8" firstAttribute="leading" secondItem="XVE-1U-Mx8" secondAttribute="leading" id="D99-0e-5pA"/>
-                            <constraint firstItem="XVE-1U-Mx8" firstAttribute="top" secondItem="g33-hk-yTd" secondAttribute="bottom" constant="1" id="f9l-81-t2Y"/>
-                            <constraint firstItem="VjV-tR-mx8" firstAttribute="top" secondItem="XVE-1U-Mx8" secondAttribute="bottom" constant="5" id="fAC-yi-yUI"/>
+                            <constraint firstAttribute="trailing" secondItem="VjV-tR-mx8" secondAttribute="trailing" constant="20" id="PzL-DE-BcA"/>
+                            <constraint firstItem="XVE-1U-Mx8" firstAttribute="top" secondItem="g33-hk-yTd" secondAttribute="bottom" constant="5" id="f9l-81-t2Y"/>
+                            <constraint firstItem="VjV-tR-mx8" firstAttribute="top" secondItem="XVE-1U-Mx8" secondAttribute="bottom" constant="10" id="fAC-yi-yUI"/>
                             <constraint firstItem="quo-kq-W7z" firstAttribute="top" secondItem="6c5-ge-8qK" secondAttribute="top" constant="13" id="hfk-Ex-TBn"/>
+                            <constraint firstAttribute="trailing" secondItem="XVE-1U-Mx8" secondAttribute="trailing" constant="20" id="nrA-Ve-XKg"/>
+                            <constraint firstAttribute="trailing" secondItem="g33-hk-yTd" secondAttribute="trailing" constant="20" id="rEb-fs-nrA"/>
                             <constraint firstItem="g33-hk-yTd" firstAttribute="top" secondItem="6c5-ge-8qK" secondAttribute="top" constant="19" id="wBg-IS-Hix"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
