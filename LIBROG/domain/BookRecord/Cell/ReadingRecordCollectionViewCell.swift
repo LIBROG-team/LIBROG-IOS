@@ -7,7 +7,9 @@
 
 import UIKit
 
-class BookRecordCollectionViewCell: UICollectionViewCell {
+class ReadingRecordCollectionViewCell: UICollectionViewCell {
+    static let identifier = "ReadingRecordCollectionViewCell"
+    
     @IBOutlet weak var imageBook: UIImageView!
     
     override func awakeFromNib() {
