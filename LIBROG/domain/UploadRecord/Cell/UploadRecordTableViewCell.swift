@@ -31,7 +31,7 @@ class UplodaRecordTableViewCell: UITableViewCell {
     func setBookData(_ bookData: BookData) {
         bookTitleLabel.text = bookData.bookTitle
         authorLabel.text = bookData.author[0]
-        explanationLabel.text = bookData.bookDescription
+        explanationLabel.text = bookData.contents
         let thumbnailURL = bookData.thumbnailURL
         
         if let url = URL(string: thumbnailURL) {

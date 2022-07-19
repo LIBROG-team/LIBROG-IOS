@@ -24,6 +24,8 @@
 				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
 				<true/>
 			</dict>
+			<key>dev.siejwkaodj.shop/</key>
+			<string></string>
 		</dict>
 	</dict>
 	<key>UIApplicationSceneManifest</key>
