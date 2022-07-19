@@ -49,7 +49,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="scrollToTop" title=""/>
                                 <connections>
-                                    <action selector="scrollToTop_button:" destination="Q1e-Dl-AV5" eventType="touchUpInside" id="ldk-X7-3rz"/>
+                                    <action selector="scrollToTop_button:" destination="Q1e-Dl-AV5" eventType="touchUpInside" id="xwh-iB-g50"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRb-Jv-rYW">
@@ -59,6 +59,9 @@
                                 <buttonConfiguration key="configuration" style="plain" image="arrow-down" title="최근 기록순" imagePadding="5" titleAlignment="leading">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="sorting_button:" destination="Q1e-Dl-AV5" eventType="touchUpInside" id="qsS-xi-ijc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nZQ-BQ-QC3"/>
@@ -81,9 +84,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="독서기록" image="edit" id="RMF-CG-JYE"/>
                     <connections>
-                        <outlet property="ScrollToTopButton" destination="qrV-d5-NVh" id="xDa-tq-vi9"/>
                         <outlet property="readingRecordCollectionView" destination="8rM-4A-slX" id="Ubr-uj-w9K"/>
-                        <outlet property="sortingButton" destination="nRb-Jv-rYW" id="Pix-xU-DHY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sRs-sE-34g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -93,7 +94,7 @@
         <!--Reading Record Bottom View Controller-->
         <scene sceneID="Co4-Un-DFM">
             <objects>
-                <viewController storyboardIdentifier="ReadingRecordBottomVC" id="BMk-hn-h5e" customClass="ReadingRecordBottomViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReadingRecordBottomVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BMk-hn-h5e" customClass="ReadingRecordBottomViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6nw-qK-InT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

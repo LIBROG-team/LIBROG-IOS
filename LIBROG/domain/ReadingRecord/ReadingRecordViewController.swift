@@ -6,14 +6,17 @@
 //
 
 import UIKit
-import WebKit
 
 class ReadingRecordViewController: UIViewController {
     @IBOutlet weak var readingRecordCollectionView: UICollectionView!
-    @IBOutlet weak var scrollToTopButton: UIButton!
-    @IBOutlet weak var sortingButton: UIButton!
     @IBAction func scrollToTop_button(_ sender: Any) {
         readingRecordCollectionView.scrollToItem(at: IndexPath(item: -1, section: 0), at: .init(rawValue: 0), animated: true)
+
+    }
+    @IBAction func sorting_button(_ sender: Any) {
+        let bottomSheetVC = ReadingRecordBottomViewController()
+        bottomSheetVC.modalPresentationStyle = .overFullScreen
+        self.present(bottomSheetVC, animated: false, completion: nil)
 
     }
     
