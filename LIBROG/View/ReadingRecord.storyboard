@@ -30,7 +30,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8rM-4A-slX">
-                                <rect key="frame" x="29" y="164.5" width="356" height="697.5"/>
+                                <rect key="frame" x="29" y="163.5" width="356" height="698.5"/>
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5h7-gq-uwN">
                                     <size key="itemSize" width="128" height="128"/>
@@ -49,22 +49,25 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="scrollToTop" title=""/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRb-Jv-rYW">
-                                <rect key="frame" x="290" y="125" width="89" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRb-Jv-rYW">
+                                <rect key="frame" x="291" y="127.5" width="103" height="30"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="최근 기록순"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow-down" title="최근 기록순" imagePadding="5" titleAlignment="leading">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
+                                </buttonConfiguration>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nZQ-BQ-QC3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="8rM-4A-slX" firstAttribute="top" secondItem="uBM-rO-Qch" secondAttribute="bottom" constant="43" id="1Zm-qv-rJ1"/>
+                            <constraint firstItem="8rM-4A-slX" firstAttribute="top" secondItem="nRb-Jv-rYW" secondAttribute="bottom" constant="6" id="1Zm-qv-rJ1"/>
                             <constraint firstItem="uBM-rO-Qch" firstAttribute="leading" secondItem="nZQ-BQ-QC3" secondAttribute="leading" id="6gx-3A-PO5"/>
                             <constraint firstItem="nZQ-BQ-QC3" firstAttribute="trailing" secondItem="uBM-rO-Qch" secondAttribute="trailing" id="CHC-C5-q2C"/>
                             <constraint firstItem="qrV-d5-NVh" firstAttribute="centerX" secondItem="xdl-ub-kzW" secondAttribute="centerX" id="FHf-se-KIt"/>
                             <constraint firstItem="uBM-rO-Qch" firstAttribute="top" secondItem="CG6-wQ-7S5" secondAttribute="bottom" constant="15" id="GYi-Nd-MO4"/>
+                            <constraint firstItem="nRb-Jv-rYW" firstAttribute="top" secondItem="uBM-rO-Qch" secondAttribute="bottom" constant="6" id="OO4-4R-i0p"/>
+                            <constraint firstItem="nZQ-BQ-QC3" firstAttribute="trailing" secondItem="nRb-Jv-rYW" secondAttribute="trailing" constant="20" id="Uzt-WH-00s"/>
                             <constraint firstItem="nZQ-BQ-QC3" firstAttribute="trailing" secondItem="8rM-4A-slX" secondAttribute="trailing" constant="29" id="VnO-op-9yf"/>
                             <constraint firstItem="CG6-wQ-7S5" firstAttribute="top" secondItem="xdl-ub-kzW" secondAttribute="top" constant="73" id="cXE-FV-8s4"/>
                             <constraint firstItem="CG6-wQ-7S5" firstAttribute="leading" secondItem="nZQ-BQ-QC3" secondAttribute="leading" constant="29" id="dxk-YU-fpJ"/>
@@ -85,6 +88,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow-down" width="14" height="8"/>
         <image name="edit" width="28" height="28"/>
         <image name="scrollToTop" width="38" height="38"/>
         <systemColor name="systemBackgroundColor">
