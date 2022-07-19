@@ -11,13 +11,13 @@ class BookData{
     var bookTitle: String
     var thumbnailURL: String
     var author: [String]
-    var bookDescription: String
+    var contents: String
     
     
-    init(bookTitle: String, thumbnailURL: String, author: [String], var bookDescription: String) {
+    init(bookTitle: String, thumbnailURL: String, author: [String], contents: String) {
         self.bookTitle = bookTitle
         self.thumbnailURL = thumbnailURL
         self.author = author
-        self.bookDescription = bookDescription
+        self.contents = contents
     }
 }

@@ -19,7 +19,7 @@ class FlowerpotTableViewCell: UITableViewCell {
         
         //imageViewFloewerpot border
         imageViewFlowerpot.clipsToBounds = true
-        imageViewFlowerpot.roundCornersDiffernt(topLeft: 5, topRight: 55, bottomLeft: 55, bottomRight: 55)
+        imageViewFlowerpot.roundCornersDiffernt(topLeft: 10, topRight: 40, bottomLeft: 40, bottomRight: 40)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -32,9 +32,9 @@ class FlowerpotTableViewCell: UITableViewCell {
         // 테이블 뷰 셀 사이의 간격
         super.layoutSubviews()
         
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8))
-        contentView.backgroundColor = .white
-        contentView.layer.cornerRadius = 15
+//        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8))
+//        contentView.backgroundColor = .white
+//        contentView.layer.cornerRadius = 15
     }
     
 }
