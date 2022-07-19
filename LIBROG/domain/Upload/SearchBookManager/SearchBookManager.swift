@@ -11,8 +11,8 @@ import Kingfisher
 
 class SearchBookManager {
     let header = HeaderMAnager().getHeader()
-    func searchBookManager(_ word: String, _ viewcontroller: UploadViewController) {
-        AF.request("https://dapi.kakao.com/v3/search/book?target=title&query=\(word)",
+    func searchBookManager(_ word: String, _ page: Int, _ viewcontroller: UploadViewController) {
+        AF.request("https://dapi.kakao.com/v3/search/book?target=title&query=\(word)&page=\(page)",
                    method: .get,
                    parameters: nil,
                    headers: header)
