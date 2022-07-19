@@ -19,7 +19,7 @@
         <!--RecordVC-->
         <scene sceneID="HQR-do-Cox">
             <objects>
-                <viewControllerPlaceholder storyboardName="BookRecord" referencedIdentifier="RecordVC" id="cJb-Jw-JIT" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="ReadingRecord" referencedIdentifier="RecordVC" id="cJb-Jw-JIT" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="hpE-2v-r6q"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uYe-bW-5pW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
