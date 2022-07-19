@@ -87,7 +87,7 @@
 		D0CF2B5E2885C83C00F78104 /* BookRecordCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0CF2B5C2885C83C00F78104 /* BookRecordCollectionViewCell.xib */; };
 		D0CF2B602885C99C00F78104 /* BookRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CF2B5F2885C99C00F78104 /* BookRecordViewController.swift */; };
 		D0DB05B32876BC330041CEEF /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB05B22876BC330041CEEF /* UploadViewController.swift */; };
-		D0DB05C2287700650041CEEF /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB05C1287700650041CEEF /* Data.swift */; };
+		D0DB05C2287700650041CEEF /* BookData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB05C1287700650041CEEF /* BookData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -198,7 +198,7 @@
 		D0CF2B5C2885C83C00F78104 /* BookRecordCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookRecordCollectionViewCell.xib; sourceTree = "<group>"; };
 		D0CF2B5F2885C99C00F78104 /* BookRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRecordViewController.swift; sourceTree = "<group>"; };
 		D0DB05B22876BC330041CEEF /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
-		D0DB05C1287700650041CEEF /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		D0DB05C1287700650041CEEF /* BookData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -591,7 +591,7 @@
 		D0DB05C02877004D0041CEEF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D0DB05C1287700650041CEEF /* Data.swift */,
+				D0DB05C1287700650041CEEF /* BookData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -883,7 +883,7 @@
 				23C8B4BB286EFF3900432141 /* CustomTabBarController.swift in Sources */,
 				23C8B4A6286EF2F300432141 /* PaddingLabel.swift in Sources */,
 				23A5B873287D9D5D005413A3 /* InputTableViewCell.swift in Sources */,
-				D0DB05C2287700650041CEEF /* Data.swift in Sources */,
+				D0DB05C2287700650041CEEF /* BookData.swift in Sources */,
 				2355234B2881C48A00EDE3E1 /* FlowerPotDescriptionTableViewCell.swift in Sources */,
 				23C8B4B0286EF76F00432141 /* MainFlowerTableViewCell.swift in Sources */,
 				23ADA92628847A8D0066D15A /* AddFlowerPotSearchViewController.swift in Sources */,

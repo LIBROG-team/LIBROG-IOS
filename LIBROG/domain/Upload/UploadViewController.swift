@@ -9,7 +9,7 @@ import UIKit
 
 class UploadViewController: UITableViewController {
     
-    var dataArray = [Data]()
+    var dataArray = [BookData]()
     var searchWord = ""
     var pageNum = 1
     
@@ -21,6 +21,7 @@ class UploadViewController: UITableViewController {
         
         searchController = UISearchController(searchResultsController: resultVC)
         tableView.tableHeaderView = searchController.searchBar
+        tableView.tableHeaderView?.backgroundColor = .white
         
         self.definesPresentationContext = true
         searchController.searchResultsUpdater = self
@@ -55,7 +56,9 @@ class UploadViewController: UITableViewController {
             cell.layer.borderColor = UIColor(named: "LIBROGColor")?.cgColor
             cell.layer.cornerRadius = 10
         } else {
-            cell.textLabel?.text = dataArray[indexPath.row].main
+            cell.textLabel?.text = dataArray[indexPath.row].bookTitle
+//            cell.textLabel?.text = dataArray[indexPath.row].author[0]
+//            cell.textLabel?.text = dataArray[indexPath.row].bookDescription
         }
         return cell
     }
@@ -64,12 +67,16 @@ class UploadViewController: UITableViewController {
         if indexPath.row == dataArray.count {return 47}
         else {return 100}
     }
-    //클릭한 셀의 이벤트 처리
+    //클릭 이벤트 처리
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // MARK: 더보기 버튼 클릭
         if indexPath.row == dataArray.count {
             pageNum = pageNum + 1
             SearchBookManager().searchBookManager(searchWord, pageNum, self)
+        }
+        // MARK: 셀 클릭
+        else {
+            
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -118,7 +125,7 @@ extension UploadViewController: UISearchControllerDelegate, UISearchResultsUpdat
 extension UploadViewController {
     func kakaoSearchBookSuccessAPI(_ result : [BookDetailModel]) {
         for book in result {
-            dataArray.append(Data(main: book.title!, detail: .A))
+            dataArray.append(BookData(bookTitle: book.title!, thumbnailURL: book.thumbnail!, author: book.authors, var: book.contents!))
         }
         resultVC.tableView.reloadData()
     }
