@@ -30,7 +30,7 @@
                         <rect key="frame" x="136" y="25" width="258" height="104"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Lz8-uT-hfI">
-                                <rect key="frame" x="61" y="23" width="175" height="58.5"/>
+                                <rect key="frame" x="61" y="23" width="187" height="58.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEz-qY-pxX">
                                         <rect key="frame" x="0.0" y="0.0" width="83.5" height="19.5"/>
@@ -70,7 +70,7 @@
                             </stackView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Lz8-uT-hfI" secondAttribute="trailing" constant="22" id="9Q8-DE-YvE"/>
+                            <constraint firstAttribute="trailing" secondItem="Lz8-uT-hfI" secondAttribute="trailing" constant="10" id="9Q8-DE-YvE"/>
                             <constraint firstItem="Lz8-uT-hfI" firstAttribute="leading" secondItem="opr-n8-o8C" secondAttribute="leading" constant="61" id="FhR-mX-JgM"/>
                             <constraint firstItem="Lz8-uT-hfI" firstAttribute="centerY" secondItem="opr-n8-o8C" secondAttribute="centerY" id="mmp-cf-49O"/>
                         </constraints>
@@ -89,6 +89,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="imageViewFlowerpot" destination="qvT-9W-Pdk" id="x96-oZ-9Zl"/>
+                <outlet property="labelBookNum" destination="1jy-eI-yXd" id="hzv-M4-D1k"/>
                 <outlet property="labelDate" destination="Loa-p5-BWW" id="nzh-cW-9kD"/>
                 <outlet property="labelFlowerName" destination="oEz-qY-pxX" id="im4-V7-bUk"/>
             </connections>
