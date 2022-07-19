@@ -38,10 +38,19 @@ extension FlowerPotViewController: UITableViewDelegate, UITableViewDataSource {
         cell.flowerpotData = flowerpotArray[indexPath.item]
         return cell
     }
-    
     //셀 세로 길이 조절
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 130
+    }
+    //클릭 이벤트 처리
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let flowerpotDescriptionVC = UIStoryboard(name: "FlowerPotDescription", bundle: nil).instantiateViewController(identifier: "FlowerPotDescriptionVC") as? FlowerPotDescriptionViewController else {return}
+        // 화분 ID 넘기기
+        flowerpotDescriptionVC.flowerpotID = flowerpotArray[indexPath.item].flowerPotIdx
+        flowerpotDescriptionVC.modalPresentationStyle = .fullScreen
+        self.present(flowerpotDescriptionVC, animated: true, completion: nil)
+
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 // MARK: - 유저의 화분 정보 가져오기 API success
