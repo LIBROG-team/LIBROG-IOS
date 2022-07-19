@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "logo_launchScreen_white.png",
+      "filename" : "logo_launchScreen_white.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
