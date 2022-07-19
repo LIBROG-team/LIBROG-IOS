@@ -76,7 +76,11 @@ class UploadViewController: UITableViewController {
         }
         // MARK: 셀 클릭
         else {
-            
+            guard let uploadRecordVC = UIStoryboard(name: "UploadRecord", bundle: nil).instantiateViewController(identifier: "UploadRecordVC") as? UploadRecordViewController else {return}
+            let selectedBookData = dataArray[indexPath.item]
+            uploadRecordVC.bookData = selectedBookData
+            uploadRecordVC.modalPresentationStyle = .fullScreen
+            self.present(uploadRecordVC, animated: true, completion: nil)
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }

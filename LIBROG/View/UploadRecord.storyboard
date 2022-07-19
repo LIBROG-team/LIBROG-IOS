@@ -12,7 +12,7 @@
         <!--Upload Record View Controller-->
         <scene sceneID="iOw-VS-mIw">
             <objects>
-                <viewController storyboardIdentifier="UploadRecordVC" id="FW9-op-2TC" customClass="UploadRecordViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UploadRecordVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FW9-op-2TC" customClass="UploadRecordViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8eF-Dh-ZaY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
