@@ -25,6 +25,9 @@ class UploadRecordViewController: UIViewController {
         let uploadRecordNib = UINib(nibName: "UploadRecordTableViewCell", bundle: nil)
         uploadRecordTableView.register(uploadRecordNib, forCellReuseIdentifier: "UploadRecordTableViewCell")
     }
+    @IBAction func goBackButtonDidTap(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 extension UploadRecordViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

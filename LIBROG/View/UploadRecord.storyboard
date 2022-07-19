@@ -22,8 +22,11 @@
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem title="기록 추가하기" id="erZ-iE-u7G">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" image="goBackButton" id="kpU-JZ-QOv">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrow-right" id="kpU-JZ-QOv">
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="goBackButtonDidTap:" destination="FW9-op-2TC" id="Qy6-sw-J7U"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -87,8 +90,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow-right" width="21" height="21"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
-        <image name="goBackButton" width="9" height="17"/>
         <namedColor name="LIBROGColor">
             <color red="0.3919999897480011" green="0.74500000476837158" blue="0.47099998593330383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
