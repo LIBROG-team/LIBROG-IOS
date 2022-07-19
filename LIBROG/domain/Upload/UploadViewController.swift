@@ -129,7 +129,7 @@ extension UploadViewController: UISearchControllerDelegate, UISearchResultsUpdat
 extension UploadViewController {
     func kakaoSearchBookSuccessAPI(_ result : [BookDetailModel]) {
         for book in result {
-            dataArray.append(BookData(bookTitle: book.title!, thumbnailURL: book.thumbnail!, author: book.authors, var: book.contents!))
+            dataArray.append(BookData(bookTitle: book.title!, thumbnailURL: book.thumbnail!, author: book.authors, contents: book.contents!))
         }
         resultVC.tableView.reloadData()
     }
