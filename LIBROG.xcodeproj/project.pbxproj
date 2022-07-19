@@ -71,6 +71,7 @@
 		87E40A5DB282123CDAA86316 /* Pods_LIBROGTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79984E8377ED4772E3A4730E /* Pods_LIBROGTests.framework */; };
 		9BE303E45EECD6C4F3471E37 /* Pods_LIBROG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C934BB6A1545DC5476C41F4 /* Pods_LIBROG.framework */; };
 		AD572B475873E8AA70C597EC /* Pods_LIBROG_LIBROGUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 401A4F3757D864A067683037 /* Pods_LIBROG_LIBROGUITests.framework */; };
+		D096410B2886B40800E5989C /* ReadingRecordBottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096410A2886B40800E5989C /* ReadingRecordBottomViewController.swift */; };
 		D0C2B04F286DC9BE00242E71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C2B04E286DC9BE00242E71 /* AppDelegate.swift */; };
 		D0C2B051286DC9BE00242E71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C2B050286DC9BE00242E71 /* SceneDelegate.swift */; };
 		D0C2B053286DC9BE00242E71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C2B052286DC9BE00242E71 /* ViewController.swift */; };
@@ -179,6 +180,7 @@
 		79984E8377ED4772E3A4730E /* Pods_LIBROGTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LIBROGTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80874FB74B3F63648D20C05C /* Pods-LIBROG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LIBROG.debug.xcconfig"; path = "Target Support Files/Pods-LIBROG/Pods-LIBROG.debug.xcconfig"; sourceTree = "<group>"; };
 		C75FFB529E5A692083101F06 /* Pods-LIBROG-LIBROGUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LIBROG-LIBROGUITests.debug.xcconfig"; path = "Target Support Files/Pods-LIBROG-LIBROGUITests/Pods-LIBROG-LIBROGUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D096410A2886B40800E5989C /* ReadingRecordBottomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingRecordBottomViewController.swift; sourceTree = "<group>"; };
 		D0C2B04B286DC9BE00242E71 /* LIBROG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LIBROG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C2B04E286DC9BE00242E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0C2B050286DC9BE00242E71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -394,7 +396,7 @@
 		23C8B4A7286EF39000432141 /* domain */ = {
 			isa = PBXGroup;
 			children = (
-				D0CF2B572885C7F500F78104 /* BookRecord */,
+				D0CF2B572885C7F500F78104 /* ReadingRecord */,
 				237ECCDE288556E1000D9A71 /* Profile */,
 				235523452881C45600EDE3E1 /* FlowerPotDescription */,
 				230524BB287D5BEE0081933A /* FlowerPotDetail */,
@@ -557,13 +559,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		D0CF2B572885C7F500F78104 /* BookRecord */ = {
+		D0CF2B572885C7F500F78104 /* ReadingRecord */ = {
 			isa = PBXGroup;
 			children = (
 				D0CF2B582885C80300F78104 /* Cell */,
 				D0CF2B5F2885C99C00F78104 /* ReadingRecordViewController.swift */,
+				D096410A2886B40800E5989C /* ReadingRecordBottomViewController.swift */,
 			);
-			path = BookRecord;
+			path = ReadingRecord;
 			sourceTree = "<group>";
 		};
 		D0CF2B582885C80300F78104 /* Cell */ = {
@@ -904,6 +907,7 @@
 				238DE01C28819AF0007901E6 /* TodaySuggestCollectionViewCell.swift in Sources */,
 				23766E7E2870330D005EEA8E /* UIBezierPath.swift in Sources */,
 				23DFD3102878D9F4002AC8B0 /* UploadRecordTableViewCell.swift in Sources */,
+				D096410B2886B40800E5989C /* ReadingRecordBottomViewController.swift in Sources */,
 				23DFD30D2878D9B1002AC8B0 /* UploadRecordViewController.swift in Sources */,
 				23ADA922288478FD0066D15A /* AchievedFlowerPotViewController.swift in Sources */,
 				D0C2B04F286DC9BE00242E71 /* AppDelegate.swift in Sources */,
