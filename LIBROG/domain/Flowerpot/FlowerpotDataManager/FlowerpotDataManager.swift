@@ -11,8 +11,8 @@ import Kingfisher
 
 class FlowerpotDataManager {
     let url = UserDefaults.standard.string(forKey: "url")
-    
     let userId = UserDefaults.standard.integer(forKey: "userId")
+    
     func flowerpotDataManager(_ viewcontroller : FlowerPotViewController) {
         AF.request(url! + "flowerpots/\(userId)",
                    method: .get,

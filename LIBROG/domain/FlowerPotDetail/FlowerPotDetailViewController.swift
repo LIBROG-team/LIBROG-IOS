@@ -27,6 +27,8 @@ class FlowerPotDetailViewController: UIViewController {
     var flowerpotReadCount: Int?
     var flowerpotExp: Int?
     
+    var bookRecordArray: [FlowerpotBookRecordData]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,6 +48,7 @@ class FlowerPotDetailViewController: UIViewController {
         recordBookCollectionView.reloadData()
         
         setFlowerpotData()
+        FlowerpotBookRecordDataManager().getFlowerpotBookRecord(flowerpotID!, self)
     }
     @IBAction func goBackButtonDidTap(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
@@ -72,19 +75,19 @@ class FlowerPotDetailViewController: UIViewController {
 // MARK: - 화분상세정보 페이지의 '화분에 기록된 책' collectionView delegate
 extension FlowerPotDetailViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        let count = auctionNowArray?.count ?? 0
-        return 10
+        let count = bookRecordArray?.count ?? 0
+        return count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FlowerPotDetailCollectionViewCell", for: indexPath) as? FlowerPotDetailCollectionViewCell else {
             return UICollectionViewCell()
         }
-//        let itemIdx = indexPath.item
-//        if let cellData = self.auctionNowArray {
-//            // if data exists
-//            cell.setUpData(cellData[itemIdx])
-//        }
+        let itemIdx = indexPath.item
+        if let book = self.bookRecordArray {
+            // if data exists
+            cell.setBookImg(book[itemIdx].imgUrl!)
+        }
         return cell
     }
     
@@ -107,4 +110,11 @@ extension FlowerPotDetailViewController : UICollectionViewDelegate, UICollection
 //            UIManager().showToast(message: "로그인 후 이용 가능합니다.", viewController: self)
 //        }
 //    }
+}
+// MARK: - 유저의 화분에 기록된 책 정보 가져오기 API success
+extension FlowerPotDetailViewController {
+    func userFlowepotBookRecordSuccessAPI(_ result : [FlowerpotBookRecordData]) {
+        self.bookRecordArray = result
+        recordBookCollectionView.reloadData()
+    }
 }

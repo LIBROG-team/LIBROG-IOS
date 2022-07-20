@@ -11,6 +11,8 @@
 		230524C1287D5C370081933A /* FlowerPotDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230524BF287D5C370081933A /* FlowerPotDetailCollectionViewCell.swift */; };
 		230524C2287D5C370081933A /* FlowerPotDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 230524C0287D5C370081933A /* FlowerPotDetailCollectionViewCell.xib */; };
 		23091F832886B69E008EC8D2 /* FlowerpotDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23091F822886B69E008EC8D2 /* FlowerpotDataManager.swift */; };
+		232973622887F86600954AA0 /* FlowerpotBookRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232973612887F86600954AA0 /* FlowerpotBookRecordModel.swift */; };
+		232973642887F8FF00954AA0 /* FlowerpotBookRecordDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232973632887F8FF00954AA0 /* FlowerpotBookRecordDataManager.swift */; };
 		2339DA06288591D600A3DBC4 /* SearchBookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339DA05288591D600A3DBC4 /* SearchBookManager.swift */; };
 		2339DA08288592B100A3DBC4 /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339DA07288592B100A3DBC4 /* BookModel.swift */; };
 		2339DA0A2885948500A3DBC4 /* HeaderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339DA092885948500A3DBC4 /* HeaderManager.swift */; };
@@ -115,6 +117,8 @@
 		230524BF287D5C370081933A /* FlowerPotDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerPotDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		230524C0287D5C370081933A /* FlowerPotDetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlowerPotDetailCollectionViewCell.xib; sourceTree = "<group>"; };
 		23091F822886B69E008EC8D2 /* FlowerpotDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerpotDataManager.swift; sourceTree = "<group>"; };
+		232973612887F86600954AA0 /* FlowerpotBookRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerpotBookRecordModel.swift; sourceTree = "<group>"; };
+		232973632887F8FF00954AA0 /* FlowerpotBookRecordDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerpotBookRecordDataManager.swift; sourceTree = "<group>"; };
 		2339DA05288591D600A3DBC4 /* SearchBookManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBookManager.swift; sourceTree = "<group>"; };
 		2339DA07288592B100A3DBC4 /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 		2339DA092885948500A3DBC4 /* HeaderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderManager.swift; sourceTree = "<group>"; };
@@ -236,6 +240,7 @@
 		230524BB287D5BEE0081933A /* FlowerPotDetail */ = {
 			isa = PBXGroup;
 			children = (
+				232973602887F83300954AA0 /* FlowerPotDetailDataManager */,
 				230524BC287D5BF90081933A /* Cell */,
 				230524BD287D5C060081933A /* FlowerPotDetailViewController.swift */,
 			);
@@ -267,6 +272,15 @@
 				23091F822886B69E008EC8D2 /* FlowerpotDataManager.swift */,
 			);
 			path = FlowerpotDataManager;
+			sourceTree = "<group>";
+		};
+		232973602887F83300954AA0 /* FlowerPotDetailDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				232973612887F86600954AA0 /* FlowerpotBookRecordModel.swift */,
+				232973632887F8FF00954AA0 /* FlowerpotBookRecordDataManager.swift */,
+			);
+			path = FlowerPotDetailDataManager;
 			sourceTree = "<group>";
 		};
 		2339DA04288591BE00A3DBC4 /* SearchBookManager */ = {
@@ -912,8 +926,10 @@
 				23ADA922288478FD0066D15A /* AchievedFlowerPotViewController.swift in Sources */,
 				D0C2B04F286DC9BE00242E71 /* AppDelegate.swift in Sources */,
 				23A5B863287D804C005413A3 /* AcheivedFlowerPotSearchViewController.swift in Sources */,
+				232973622887F86600954AA0 /* FlowerpotBookRecordModel.swift in Sources */,
 				2339DA0A2885948500A3DBC4 /* HeaderManager.swift in Sources */,
 				237ECCE328856454000D9A71 /* DateFormatter.swift in Sources */,
+				232973642887F8FF00954AA0 /* FlowerpotBookRecordDataManager.swift in Sources */,
 				D0C2B051286DC9BE00242E71 /* SceneDelegate.swift in Sources */,
 				23C8B4B8286EF78600432141 /* RecentBookCollectionViewCell.swift in Sources */,
 				2339DA06288591D600A3DBC4 /* SearchBookManager.swift in Sources */,
