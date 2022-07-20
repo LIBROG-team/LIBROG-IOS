@@ -11,7 +11,7 @@ class FlowerPotViewController: UIViewController {
     @IBOutlet weak var flowerpotTableView: UITableView!
     @IBOutlet weak var flowerpotCountLabel: UILabel!
     
-    var flowerpotArray : [FlowerpotData] = []
+    var flowerpotArray : [FlowerpotData]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,19 +23,24 @@ class FlowerPotViewController: UIViewController {
         flowerpotTableView.register(flowerpotNib, forCellReuseIdentifier: "FlowerpotTableViewCell")
         
         FlowerpotDataManager().flowerpotDataManager(self)
-        flowerpotCountLabel.text = "총 " + String(flowerpotArray.count) + "권"
+        
     }
 }
 // MARK: - 화분 관리 페이지 tableView delegate
 extension FlowerPotViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return flowerpotArray.count
+        let count = flowerpotArray?.count ?? 0
+        return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "FlowerpotTableViewCell", for: indexPath) as? FlowerpotTableViewCell else { return UITableViewCell()
         }
-        cell.flowerpotData = flowerpotArray[indexPath.item]
+        let itemIdx = indexPath.item
+        if let cellData = self.flowerpotArray {
+            // if data exists
+            cell.setFlowerpotData(cellData[itemIdx])
+        }
         return cell
     }
     //셀 세로 길이 조절
@@ -57,6 +62,7 @@ extension FlowerPotViewController: UITableViewDelegate, UITableViewDataSource {
 extension FlowerPotViewController {
     func userFlowerPotSuccessAPI(_ result : [FlowerpotData]) {
         self.flowerpotArray = result
+        flowerpotCountLabel.text = "총 " + String(flowerpotArray.count) + "권"
         flowerpotTableView.reloadData()
     }
 }

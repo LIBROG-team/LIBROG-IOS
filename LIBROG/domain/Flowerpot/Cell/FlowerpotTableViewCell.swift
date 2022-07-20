@@ -13,8 +13,6 @@ class FlowerpotTableViewCell: UITableViewCell {
     @IBOutlet weak var labelDate: UILabel!
     @IBOutlet weak var labelBookNum: UILabel!
     
-    var flowerpotData: FlowerpotData!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,8 +20,6 @@ class FlowerpotTableViewCell: UITableViewCell {
         //imageViewFloewerpot border
         imageViewFlowerpot.clipsToBounds = true
         imageViewFlowerpot.roundCornersDiffernt(topLeft: 10, topRight: 40, bottomLeft: 40, bottomRight: 40)
-        
-        setFlowerpotData()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -36,15 +32,15 @@ class FlowerpotTableViewCell: UITableViewCell {
         // 테이블 뷰 셀 사이의 간격
         super.layoutSubviews()
     }
-    func setFlowerpotData() {
-        labelFlowerName.text = self.flowerpotData.name
-        let startDate = self.flowerpotData.startDate!
-        let lastDate = self.flowerpotData.lastDate!
-        labelDate.text = startDate + "~" + lastDate
-        labelBookNum.text = "기록된 권수: " + String(self.flowerpotData.recordCount!)
+    func setFlowerpotData(_ data: FlowerpotData) {
+        labelFlowerName.text = data.name!
+        let startDate = data.startDate!.split(separator: "T")[0]
+        let lastDate = data.lastDate!.split(separator: "T")[0]
+        labelDate.text = startDate + " ~ " + lastDate
+        labelBookNum.text = "기록된 권수: " + String(data.recordCount!) + "권"
         
         // 화분 이미지 출력
-        if let url = URL(string: self.flowerpotData.flowerImgUrl!) {
+        if let url = URL(string: data.flowerImgUrl!) {
             imageViewFlowerpot.kf.setImage(with: url, placeholder: UIImage(named: "logo22%"))
         }
     }

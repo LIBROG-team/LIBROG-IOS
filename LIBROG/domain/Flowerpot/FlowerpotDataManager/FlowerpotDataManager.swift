@@ -22,7 +22,7 @@ class FlowerpotDataManager {
                 
             switch response.result {
             case .success(let result):
-                print("DEBUG: ", result.result)
+//                print("DEBUG: ", result.result)
                 viewcontroller.userFlowerPotSuccessAPI(result.result)
             case .failure(let error):
                 print(error.localizedDescription)
