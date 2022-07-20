@@ -6,18 +6,24 @@
 //
 
 import UIKit
+import MaterialComponents.MaterialBottomSheet
 
 class ReadingRecordViewController: UIViewController {
     @IBOutlet weak var readingRecordCollectionView: UICollectionView!
     @IBAction func scrollToTop_button(_ sender: Any) {
         readingRecordCollectionView.scrollToItem(at: IndexPath(item: -1, section: 0), at: .init(rawValue: 0), animated: true)
-
     }
     @IBAction func sorting_button(_ sender: Any) {
-        let bottomSheetVC = ReadingRecordBottomViewController()
-        bottomSheetVC.modalPresentationStyle = .overFullScreen
-        self.present(bottomSheetVC, animated: false, completion: nil)
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ReadingRecordBottomVC") as! ReadingRecordBottomViewController
+        let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: vc)
+        self.present(bottomSheet, animated: true, completion: nil)
 
+        // 아래로 드래그해도 안닫히게 하기
+        bottomSheet.dismissOnDraggingDownSheet = false
+        // 높이
+        bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = 197
+        // 뒤에 배경 컬러
+        bottomSheet.scrimColor = UIColor(red: 0.25, green: 0.25, blue: 0.25, alpha: 0.54)
     }
     
     override func viewDidLoad() {
@@ -40,7 +46,7 @@ class ReadingRecordViewController: UIViewController {
     }
 
 }
-
+// MARK: -  독서기록 CollectionView delegate
 extension ReadingRecordViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 30
@@ -56,5 +62,16 @@ extension ReadingRecordViewController : UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 94, height: 140)
+    }
+}
+// MARK: -  독서기록 정렬필터 선택 후 MDCBottomSheet delegate
+extension ReadingRecordViewController: MDCBottomSheetControllerDelegate {
+    func bottomSheetControllerDidDismissBottomSheet(_ controller: MDCBottomSheetController) {
+        print("바트 시트 닫힘")
+    }
+    
+    func bottomSheetControllerDidChangeYOffset(_ controller: MDCBottomSheetController, yOffset: CGFloat) {
+        // 바텀 시트 위치
+        print(yOffset)
     }
 }
