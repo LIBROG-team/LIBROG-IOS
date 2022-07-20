@@ -83,6 +83,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="독서기록" image="edit" id="RMF-CG-JYE"/>
                     <connections>
+                        <outlet property="filterButton" destination="nRb-Jv-rYW" id="SlR-HQ-l9G"/>
                         <outlet property="readingRecordCollectionView" destination="8rM-4A-slX" id="Ubr-uj-w9K"/>
                     </connections>
                 </viewController>
