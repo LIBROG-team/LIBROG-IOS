@@ -49,11 +49,18 @@ extension FlowerPotViewController: UITableViewDelegate, UITableViewDataSource {
     }
     //클릭 이벤트 처리
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let flowerpotDescriptionVC = UIStoryboard(name: "FlowerPotDescription", bundle: nil).instantiateViewController(identifier: "FlowerPotDescriptionVC") as? FlowerPotDescriptionViewController else {return}
+        guard let userFlowerPotDetailVC = UIStoryboard(name: "UserFlowerPotDetail", bundle: nil).instantiateViewController(identifier: "UserFlowerPotDetailVC") as? FlowerPotDetailViewController else {return}
         // 화분 ID 넘기기
-        flowerpotDescriptionVC.flowerpotID = flowerpotArray[indexPath.item].flowerPotIdx
-        flowerpotDescriptionVC.modalPresentationStyle = .fullScreen
-        self.present(flowerpotDescriptionVC, animated: true, completion: nil)
+        userFlowerPotDetailVC.flowerpotID = flowerpotArray[indexPath.item].flowerPotIdx
+        userFlowerPotDetailVC.flowerpotName = flowerpotArray[indexPath.item].name
+        userFlowerPotDetailVC.flowerpotImgUrl = flowerpotArray[indexPath.item].flowerImgUrl
+        userFlowerPotDetailVC.flowerpotStartDate = flowerpotArray[indexPath.item].startDate
+        userFlowerPotDetailVC.flowerpotLastDate = flowerpotArray[indexPath.item].lastDate
+        userFlowerPotDetailVC.flowerpotReadCount = flowerpotArray[indexPath.item].recordCount
+        userFlowerPotDetailVC.flowerpotExp = flowerpotArray[indexPath.item].exp
+ 
+        userFlowerPotDetailVC.modalPresentationStyle = .fullScreen
+        self.present(userFlowerPotDetailVC, animated: true, completion: nil)
 
         tableView.deselectRow(at: indexPath, animated: true)
     }

@@ -19,6 +19,14 @@ class FlowerPotDetailViewController: UIViewController {
     @IBOutlet weak var growthProgessView: UIProgressView!
     @IBOutlet weak var recordBookCollectionView: UICollectionView!
     
+    var flowerpotID: Int?
+    var flowerpotName: String?
+    var flowerpotImgUrl: String?
+    var flowerpotStartDate: String?
+    var flowerpotLastDate: String?
+    var flowerpotReadCount: Int?
+    var flowerpotExp: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,11 +45,27 @@ class FlowerPotDetailViewController: UIViewController {
         recordBookCollectionView.collectionViewLayout = flowLayout
         recordBookCollectionView.reloadData()
         
+        setFlowerpotData()
+    }
+    @IBAction func goBackButtonDidTap(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    func setFlowerpotData() {
+        flowerPotNameLabel.text = self.flowerpotName!
+        flowerPotStartDateLabel.text = String(self.flowerpotStartDate!.split(separator: "T")[0])
+        flowerPotEndDateLabel.text = String(self.flowerpotLastDate!.split(separator: "T")[0])
+        bookCountLabel.text = String(self.flowerpotReadCount!)
+        
+        growthPointLabel.text = String(self.flowerpotExp!)
         // 화분 성장치 progressView
-        var growth = 3600.0
+        let growth = Double(self.flowerpotExp!)
         growthPointLabel.text = String(Int(growth))
         UIView.animate(withDuration: 2) {
                     self.growthProgessView.setProgress(Float(growth * 0.0001), animated: true)
+        }
+        // 화분 이미지 출력
+        if let url = URL(string: self.flowerpotImgUrl!) {
+            flowerPotImageView.kf.setImage(with: url, placeholder: UIImage(named: "logo22%"))
         }
     }
 }
