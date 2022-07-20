@@ -16,5 +16,9 @@ class ReadingRecordCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    func setBookImg(_ imgURL: String) {
+        if let url = URL(string: imgURL) {
+            imageBook.kf.setImage(with: url, placeholder: UIImage(named: "logo_launchScreen_white"))
+        }
+    }
 }

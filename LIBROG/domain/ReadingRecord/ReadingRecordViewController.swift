@@ -13,6 +13,7 @@ class ReadingRecordViewController: UIViewController {
     
     @IBOutlet weak var filterButton: UIButton!
     let filterArray = ["최근 기록 순", "별점 높은 순", "제목 순"]
+    var bookArray: [ReadingRecordData]!
     
     @IBAction func scrollToTop_button(_ sender: Any) {
         readingRecordCollectionView.scrollToItem(at: IndexPath(item: -1, section: 0), at: .init(rawValue: 0), animated: true)
@@ -48,19 +49,27 @@ class ReadingRecordViewController: UIViewController {
         
         readingRecordCollectionView.collectionViewLayout = flowLayout
         readingRecordCollectionView.reloadData()
+        
+        ReadingRecordDataManager().readingRecordDataManager(self)
     }
 
 }
 // MARK: -  독서기록 CollectionView delegate
 extension ReadingRecordViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        let count = bookArray?.count ?? 0
+        return count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell =
                 collectionView.dequeueReusableCell(withReuseIdentifier: "ReadingRecordCollectionViewCell", for: indexPath) as? ReadingRecordCollectionViewCell else {
             return UICollectionViewCell()
+        }
+        let itemIdx = indexPath.item
+        if let book = self.bookArray {
+            // if data exists
+            cell.setBookImg(book[itemIdx].imgUrl!)
         }
         return cell
     }
@@ -105,3 +114,10 @@ extension ReadingRecordViewController: UITableViewDelegate, UITableViewDataSourc
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
+extension ReadingRecordViewController {
+    func userReadingRecordSuccessAPI(_ result: [ReadingRecordData]) {
+        self.bookArray = result
+        readingRecordCollectionView.reloadData()
+    }
+}
+

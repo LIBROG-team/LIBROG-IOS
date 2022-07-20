@@ -70,6 +70,8 @@
 		23DFD30D2878D9B1002AC8B0 /* UploadRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFD30C2878D9B1002AC8B0 /* UploadRecordViewController.swift */; };
 		23DFD3102878D9F4002AC8B0 /* UploadRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFD30E2878D9F4002AC8B0 /* UploadRecordTableViewCell.swift */; };
 		23DFD3112878D9F4002AC8B0 /* UploadRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23DFD30F2878D9F4002AC8B0 /* UploadRecordTableViewCell.xib */; };
+		23F6107A288812C700575D81 /* ReadingRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F61079288812C700575D81 /* ReadingRecordModel.swift */; };
+		23F6107C2888134C00575D81 /* ReadingRecordDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F6107B2888134C00575D81 /* ReadingRecordDataManager.swift */; };
 		87E40A5DB282123CDAA86316 /* Pods_LIBROGTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79984E8377ED4772E3A4730E /* Pods_LIBROGTests.framework */; };
 		9BE303E45EECD6C4F3471E37 /* Pods_LIBROG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C934BB6A1545DC5476C41F4 /* Pods_LIBROG.framework */; };
 		AD572B475873E8AA70C597EC /* Pods_LIBROG_LIBROGUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 401A4F3757D864A067683037 /* Pods_LIBROG_LIBROGUITests.framework */; };
@@ -176,6 +178,8 @@
 		23DFD30C2878D9B1002AC8B0 /* UploadRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRecordViewController.swift; sourceTree = "<group>"; };
 		23DFD30E2878D9F4002AC8B0 /* UploadRecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRecordTableViewCell.swift; sourceTree = "<group>"; };
 		23DFD30F2878D9F4002AC8B0 /* UploadRecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UploadRecordTableViewCell.xib; sourceTree = "<group>"; };
+		23F61079288812C700575D81 /* ReadingRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingRecordModel.swift; sourceTree = "<group>"; };
+		23F6107B2888134C00575D81 /* ReadingRecordDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingRecordDataManager.swift; sourceTree = "<group>"; };
 		30E9B833FD716CCDAAB95015 /* Pods-LIBROGTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LIBROGTests.debug.xcconfig"; path = "Target Support Files/Pods-LIBROGTests/Pods-LIBROGTests.debug.xcconfig"; sourceTree = "<group>"; };
 		401A4F3757D864A067683037 /* Pods_LIBROG_LIBROGUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LIBROG_LIBROGUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4213D3509CD3CBE5B946C6E3 /* Pods-LIBROG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LIBROG.release.xcconfig"; path = "Target Support Files/Pods-LIBROG/Pods-LIBROG.release.xcconfig"; sourceTree = "<group>"; };
@@ -485,6 +489,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		23F61078288812B700575D81 /* ReadingRecordDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				23F61079288812C700575D81 /* ReadingRecordModel.swift */,
+				23F6107B2888134C00575D81 /* ReadingRecordDataManager.swift */,
+			);
+			path = ReadingRecordDataManager;
+			sourceTree = "<group>";
+		};
 		329CFF90FF7C282BE262C8CF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -576,6 +589,7 @@
 		D0CF2B572885C7F500F78104 /* ReadingRecord */ = {
 			isa = PBXGroup;
 			children = (
+				23F61078288812B700575D81 /* ReadingRecordDataManager */,
 				D0CF2B582885C80300F78104 /* Cell */,
 				D0CF2B5F2885C99C00F78104 /* ReadingRecordViewController.swift */,
 				D096410A2886B40800E5989C /* ReadingRecordBottomViewController.swift */,
@@ -899,8 +913,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23F6107A288812C700575D81 /* ReadingRecordModel.swift in Sources */,
 				D0C2B089286E1FD600242E71 /* UIViewExtension.swift in Sources */,
 				23A5B860287D7F81005413A3 /* NotAcheivedFlowerPotTableViewCell.swift in Sources */,
+				23F6107C2888134C00575D81 /* ReadingRecordDataManager.swift in Sources */,
 				23A5B86E287D9D5D005413A3 /* ResultTableViewCell.swift in Sources */,
 				23A5B857287D6B89005413A3 /* FlowerPotTabViewController.swift in Sources */,
 				2339DA08288592B100A3DBC4 /* BookModel.swift in Sources */,
