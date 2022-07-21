@@ -16,7 +16,7 @@ class UplodaRecordTableViewCell: UITableViewCell {
     @IBOutlet weak var explanationLabel: UILabel!
     @IBOutlet weak var bookPointLabel: UILabel!
     @IBOutlet weak var bookPointView: CosmosView!
-    @IBOutlet weak var impressiveLineTextField: UITextField!
+    @IBOutlet weak var quoteTextField: UITextField!
     @IBOutlet weak var bookReportTextView: UITextView!
     
     override func awakeFromNib() {

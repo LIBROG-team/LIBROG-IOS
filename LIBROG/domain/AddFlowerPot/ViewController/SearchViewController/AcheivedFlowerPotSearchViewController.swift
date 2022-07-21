@@ -9,8 +9,7 @@ import UIKit
 
 class AcheivedFlowerPotSearchViewController: UITableViewController , UISearchControllerDelegate, UISearchResultsUpdating, UISearchBarDelegate {
     
-    var dataArray = [FlowerPotData]()
-    var fileteredData = [FlowerPotData]()
+//    var dataArray = [FlowerPotData]()
     
     var searchController = UISearchController()
     var resultVC = UITableViewController()
@@ -36,21 +35,22 @@ class AcheivedFlowerPotSearchViewController: UITableViewController , UISearchCon
         
     }
     func updateSearchResults(for searchController: UISearchController) {
-        fileteredData = dataArray.filter({ (data:FlowerPotData) -> Bool in
-            return data.flowerPotName.lowercased().contains(searchController.searchBar.text!.lowercased())
-        })
+//        fileteredData = dataArray.filter({ (data:FlowerPotData) -> Bool in
+//            return data.flowerPotName.lowercased().contains(searchController.searchBar.text!.lowercased())
+//        })
         resultVC.tableView.reloadData()
     }
     
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableView == resultVC.tableView ? fileteredData.count : 1
+        return 3
+//        return tableView == resultVC.tableView ? fileteredData.count : 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if(tableView == resultVC.tableView) {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "AcheivedFlowerPotTableViewCell", for: indexPath) as? AcheivedFlowerPotTableViewCell else { return UITableViewCell() }
-            cell.flowerPotNameLabel.text = fileteredData[indexPath.row].flowerPotName
+//            cell.flowerPotNameLabel.text = fileteredData[indexPath.row].flowerPotName
             return cell
         }
         else {
@@ -69,12 +69,12 @@ class AcheivedFlowerPotSearchViewController: UITableViewController , UISearchCon
     }
     
     private func setData(){
-        dataArray.append(FlowerPotData(flowerPotName: "One"))
-        dataArray.append(FlowerPotData(flowerPotName: "Two"))
-        dataArray.append(FlowerPotData(flowerPotName: "Three"))
-        dataArray.append(FlowerPotData(flowerPotName: "Ten"))
-        dataArray.append(FlowerPotData(flowerPotName: "Eleven"))
-        dataArray.append(FlowerPotData(flowerPotName: "Twelve"))
+//        dataArray.append(FlowerPotData(flowerPotName: "One"))
+//        dataArray.append(FlowerPotData(flowerPotName: "Two"))
+//        dataArray.append(FlowerPotData(flowerPotName: "Three"))
+//        dataArray.append(FlowerPotData(flowerPotName: "Ten"))
+//        dataArray.append(FlowerPotData(flowerPotName: "Eleven"))
+//        dataArray.append(FlowerPotData(flowerPotName: "Twelve"))
     }
     
     // MARK: - SearchBarDelegate
