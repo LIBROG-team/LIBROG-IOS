@@ -24,10 +24,20 @@
                                     <action selector="kakaoLoginButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="erV-Th-siI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eId-12-dNf">
+                                <rect key="frame" x="151" y="532.5" width="112.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Kakao Logout"/>
+                                <connections>
+                                    <action selector="kakaoLogoutButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3hd-8o-bIQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="eId-12-dNf" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="AaI-Di-2DO"/>
+                            <constraint firstItem="eId-12-dNf" firstAttribute="top" secondItem="dWS-SZ-fnJ" secondAttribute="bottom" constant="50" id="cS7-te-Jjm"/>
                             <constraint firstItem="dWS-SZ-fnJ" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="fXn-cz-564"/>
                             <constraint firstItem="dWS-SZ-fnJ" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="mWV-0E-XRu"/>
                         </constraints>

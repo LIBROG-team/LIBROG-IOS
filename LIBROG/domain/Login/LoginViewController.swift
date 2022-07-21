@@ -20,32 +20,44 @@ class LoginViewController: UIViewController {
     
     @IBAction func kakaoLoginButtonDidTap(_ sender: UIButton) {
         // 카카오톡 설치 여부 확인
-//        if (UserApi.isKakaoTalkLoginAvailable()) {
-//            UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
-//                if let error = error {
-//                    print(error)
-//                }
-//                else {
-//                    print("loginWithKakaoTalk() success.")
-//
-//                    //do something
-//                    _ = oauthToken
-//                }
-//            }
-//        }
-        // MARK: 카카오톡 로그인 - 웹으로 이동
-        UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
-           if let error = error {
-             print(error)
-           }
-           else {
-            print("loginWithKakaoAccount() success.")
-            
-            //do something
-            _ = oauthToken
-               let accessToken = oauthToken?.accessToken
-               self.setUserInfo()
-           }
+        if (UserApi.isKakaoTalkLoginAvailable()) {
+            UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
+                if let error = error {
+                    print(error)
+                }
+                else {
+                    print("loginWithKakaoTalk() success.")
+
+                    //do something
+                    _ = oauthToken
+                }
+            }
+        }
+        else {
+            // MARK: 카카오톡 로그인 - 웹으로 이동
+            UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
+               if let error = error {
+                 print(error)
+               }
+               else {
+                print("loginWithKakaoAccount() success.")
+                
+                //do something
+                _ = oauthToken
+                   let accessToken = oauthToken?.accessToken
+                   self.setUserInfo()
+               }
+            }
+        }
+    }
+    @IBAction func kakaoLogoutButtonDidTap(_ sender: UIButton) {
+        UserApi.shared.logout {(error) in
+            if let error = error {
+                print(error)
+            }
+            else {
+                print("logout() success.")
+            }
         }
     }
     func setUserInfo() {
