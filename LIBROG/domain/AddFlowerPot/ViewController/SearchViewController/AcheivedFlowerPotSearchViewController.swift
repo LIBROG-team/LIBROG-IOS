@@ -57,8 +57,8 @@ class AcheivedFlowerPotSearchViewController: UITableViewController , UISearchCon
         }
         else {
             let cell = UITableViewCell()
-            cell.textLabel?.text = "화분 제목을 입력해주세요."
-            cell.textLabel?.tintColor = UIColor.gray
+            cell.textLabel?.text = "검색창에 화분 이름을 입력해주세요"
+            cell.textLabel?.textColor = UIColor.gray
             cell.textLabel?.textAlignment = .center
             cell.selectionStyle = .none
             return cell
