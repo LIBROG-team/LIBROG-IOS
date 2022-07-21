@@ -117,8 +117,8 @@ extension UploadViewController: UISearchControllerDelegate, UISearchResultsUpdat
         //검색바 스크롤되지 않도록
         searchController.navigationItem.hidesSearchBarWhenScrolling = true
 
-        let searBarImage = UIImage()
-        searchController.searchBar.backgroundImage = searBarImage
+        let searchBarImage = UIImage()
+        searchController.searchBar.backgroundImage = searchBarImage
         
         //placeholder 커스텀
         searchController.searchBar.placeholder = "책 검색하기"
