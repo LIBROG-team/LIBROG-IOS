@@ -22,4 +22,7 @@ class AddFlowerPotViewController: TabmanViewController {
         flowerpotSearchViewController.modalPresentationStyle = .fullScreen
         self.present(flowerpotSearchViewController, animated: true, completion: nil)
     }
+    @IBAction func goBackButtonDidTap(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }

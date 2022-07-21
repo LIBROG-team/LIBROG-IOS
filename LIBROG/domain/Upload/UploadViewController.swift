@@ -36,15 +36,15 @@ class UploadViewController: UITableViewController {
         
         searchBarCustom(searchController)
     }
-
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if dataArray.count == 0 {return 0}
+        else if dataArray.count < 20 {return dataArray.count}
         else {return dataArray.count + 1}
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-////            guard let cell = tableView.dequeueReusableCell(withIdentifier: "InputTableViewCell", for: indexPath) as? InputTableViewCell else { return UITableViewCell() }
+//            guard let cell = tableView.dequeueReusableCell(withIdentifier: "InputTableViewCell", for: indexPath) as? InputTableViewCell else { return UITableViewCell() }
         let cell = UITableViewCell()
         // 더보기 버튼 Custom
         if indexPath.row == dataArray.count {
@@ -57,15 +57,22 @@ class UploadViewController: UITableViewController {
             cell.layer.cornerRadius = 10
         } else {
             cell.textLabel?.text = dataArray[indexPath.row].bookTitle
-//            cell.textLabel?.text = dataArray[indexPath.row].author[0]
-//            cell.textLabel?.text = dataArray[indexPath.row].bookDescription
+            cell.backgroundColor = UIColor(named: "backgroundColor")
+            if (indexPath.row == 0) {
+                cell.layer.cornerRadius = 15
+                cell.layer.maskedCorners = CACornerMask(arrayLiteral: .layerMinXMinYCorner, .layerMaxXMinYCorner)
+
+            } else if (indexPath.row == dataArray.count-1) {
+                cell.layer.cornerRadius = 15
+                cell.layer.maskedCorners = CACornerMask(arrayLiteral: .layerMinXMaxYCorner, .layerMaxXMaxYCorner)
+            }
         }
         return cell
     }
     //셀 세로 길이 조절
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == dataArray.count {return 47}
-        else {return 100}
+        else {return 120}
     }
     //클릭 이벤트 처리
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -110,8 +117,8 @@ extension UploadViewController: UISearchControllerDelegate, UISearchResultsUpdat
         //검색바 스크롤되지 않도록
         searchController.navigationItem.hidesSearchBarWhenScrolling = true
 
-        let searBarImage = UIImage()
-        searchController.searchBar.backgroundImage = searBarImage
+        let searchBarImage = UIImage()
+        searchController.searchBar.backgroundImage = searchBarImage
         
         //placeholder 커스텀
         searchController.searchBar.placeholder = "책 검색하기"
