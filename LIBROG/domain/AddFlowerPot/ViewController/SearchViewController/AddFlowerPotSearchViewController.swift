@@ -15,6 +15,9 @@ class AddFlowerPotSearchViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func goBackButtonDidTap(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation
