@@ -39,6 +39,7 @@ class UploadViewController: UITableViewController {
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if dataArray.count == 0 {return 0}
+        else if dataArray.count < 20 {return dataArray.count}
         else {return dataArray.count + 1}
     }
     
@@ -65,8 +66,6 @@ class UploadViewController: UITableViewController {
                 cell.layer.cornerRadius = 15
                 cell.layer.maskedCorners = CACornerMask(arrayLiteral: .layerMinXMaxYCorner, .layerMaxXMaxYCorner)
             }
-//            cell.textLabel?.text = dataArray[indexPath.row].author[0]
-//            cell.textLabel?.text = dataArray[indexPath.row].bookDescription
         }
         return cell
     }
