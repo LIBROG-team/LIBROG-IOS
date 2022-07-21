@@ -11,8 +11,8 @@ import Kingfisher
 
 class FlowerpotDataManager {
     let url = UserDefaults.standard.string(forKey: "url")
-    
     let userId = UserDefaults.standard.integer(forKey: "userId")
+    
     func flowerpotDataManager(_ viewcontroller : FlowerPotViewController) {
         AF.request(url! + "flowerpots/\(userId)",
                    method: .get,
@@ -22,7 +22,7 @@ class FlowerpotDataManager {
                 
             switch response.result {
             case .success(let result):
-                print("DEBUG: ", result.result)
+//                print("DEBUG: ", result.result)
                 viewcontroller.userFlowerPotSuccessAPI(result.result)
             case .failure(let error):
                 print(error.localizedDescription)

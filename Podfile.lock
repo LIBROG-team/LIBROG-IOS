@@ -3,6 +3,35 @@ PODS:
   - Cosmos (23.0.0)
   - FloatingPanel (2.5.3)
   - Kingfisher (7.2.2)
+  - MaterialComponents/Availability (124.2.0)
+  - MaterialComponents/BottomSheet (124.2.0):
+    - MaterialComponents/Elevation
+    - MaterialComponents/private/KeyboardWatcher
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/ShapeLibrary
+    - MaterialComponents/Shapes
+  - MaterialComponents/Elevation (124.2.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/private/Application (124.2.0)
+  - MaterialComponents/private/Color (124.2.0):
+    - MaterialComponents/Availability
+  - MaterialComponents/private/KeyboardWatcher (124.2.0):
+    - MaterialComponents/private/Application
+  - MaterialComponents/private/Math (124.2.0)
+  - MaterialComponents/ShadowElevations (124.2.0)
+  - MaterialComponents/ShadowLayer (124.2.0):
+    - MaterialComponents/ShadowElevations
+  - MaterialComponents/ShapeLibrary (124.2.0):
+    - MaterialComponents/private/Math
+    - MaterialComponents/Shapes
+  - MaterialComponents/Shapes (124.2.0):
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowLayer
   - Pageboy (3.6.2)
   - Tabman (2.12.0):
     - Pageboy (~> 3.6.0)
@@ -12,6 +41,7 @@ DEPENDENCIES:
   - Cosmos (~> 23.0)
   - FloatingPanel
   - Kingfisher
+  - MaterialComponents/BottomSheet
   - Tabman (~> 2.9)
 
 SPEC REPOS:
@@ -20,6 +50,7 @@ SPEC REPOS:
     - Cosmos
     - FloatingPanel
     - Kingfisher
+    - MaterialComponents
     - Pageboy
     - Tabman
 
@@ -28,9 +59,10 @@ SPEC CHECKSUMS:
   Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
   FloatingPanel: 3cee815e9ded75b632543fa73ab655a1ef941452
   Kingfisher: 184d4d1a8c36666e663caf8e08abe87898595c53
+  MaterialComponents: 1a9b2d9d45b1601ae544de85089adc4c464306d4
   Pageboy: cf121b9dd48c63f3f281b2a9ec93d02e0f23879b
   Tabman: 447a50447ed2869c39ab3b1a779327e43e067c4e
 
-PODFILE CHECKSUM: 264749ad180289e79734c08b1ed445a94b430e77
+PODFILE CHECKSUM: b9cf3c00c1fc1079788d960e7f2a141724921993
 
 COCOAPODS: 1.11.3

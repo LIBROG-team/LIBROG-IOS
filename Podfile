@@ -11,6 +11,7 @@ target 'LIBROG' do
 	pod 'Tabman', '~> 2.9'
 	pod 'FloatingPanel'
 	pod 'Kingfisher'
+	pod 'MaterialComponents/BottomSheet'
 
   target 'LIBROGTests' do
     inherit! :search_paths
