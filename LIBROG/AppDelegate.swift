@@ -7,6 +7,7 @@
 
 import UIKit
 import KakaoSDKAuth
+import KakaoSDKCommon
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,6 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UserDefaults.standard.set("", forKey: "accessToken")
         UserDefaults.standard.set("", forKey: "refreshToken")
         UserDefaults.standard.set(1, forKey: "userId")  // 임시로 userID를 1로 설정
+        
+        KakaoSDK.initSDK(appKey: "61775cb2c32cd4a6566c35d7b463cb8f")
         
         return true
     }
