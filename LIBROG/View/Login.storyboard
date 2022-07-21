@@ -15,8 +15,22 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWS-SZ-fnJ">
+                                <rect key="frame" x="103.5" y="423.5" width="207" height="59"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="kakao_login_medium_narrow"/>
+                                <connections>
+                                    <action selector="kakaoLoginButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="erV-Th-siI"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dWS-SZ-fnJ" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="fXn-cz-564"/>
+                            <constraint firstItem="dWS-SZ-fnJ" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="mWV-0E-XRu"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -25,6 +39,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="kakao_login_medium_narrow" width="183" height="45"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
