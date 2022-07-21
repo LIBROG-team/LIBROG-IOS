@@ -8,8 +8,8 @@
 import UIKit
 
 class NotAchievedFlowerPotSearchViewController: UITableViewController , UISearchControllerDelegate, UISearchResultsUpdating, UISearchBarDelegate {
-    var dataArray = [FlowerPotData]()
-    var fileteredData = [FlowerPotData]()
+//    var dataArray = [FlowerPotData]()
+//    var fileteredData = [FlowerPotData]()
     
     var searchController = UISearchController()
     var resultVC = UITableViewController()
@@ -34,21 +34,22 @@ class NotAchievedFlowerPotSearchViewController: UITableViewController , UISearch
         resultVC.tableView.register(notAcheivedNib, forCellReuseIdentifier: "NotAcheivedFlowerPotTableViewCell")
     }
     func updateSearchResults(for searchController: UISearchController) {
-        fileteredData = dataArray.filter({ (data:FlowerPotData) -> Bool in
-            return data.flowerPotName.lowercased().contains(searchController.searchBar.text!.lowercased())
-        })
+//        fileteredData = dataArray.filter({ (data:FlowerPotData) -> Bool in
+//            return data.flowerPotName.lowercased().contains(searchController.searchBar.text!.lowercased())
+//        })
         resultVC.tableView.reloadData()
     }
     
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableView == resultVC.tableView ? fileteredData.count : 1
+        return 3
+//        return tableView == resultVC.tableView ? fileteredData.count : 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if(tableView == resultVC.tableView) {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "NotAcheivedFlowerPotTableViewCell", for: indexPath) as? NotAcheivedFlowerPotTableViewCell else { return UITableViewCell() }
-            cell.flowerPotNameLabel.text = fileteredData[indexPath.row].flowerPotName
+//            cell.flowerPotNameLabel.text = fileteredData[indexPath.row].flowerPotName
             return cell
         }
         else {
@@ -67,12 +68,12 @@ class NotAchievedFlowerPotSearchViewController: UITableViewController , UISearch
     }
     
     private func setData(){
-        dataArray.append(FlowerPotData(flowerPotName: "Thirty"))
-        dataArray.append(FlowerPotData(flowerPotName: "Forty"))
-        dataArray.append(FlowerPotData(flowerPotName: "Fifty"))
-        dataArray.append(FlowerPotData(flowerPotName: "Sixty"))
-        dataArray.append(FlowerPotData(flowerPotName: "Eighty"))
-        dataArray.append(FlowerPotData(flowerPotName: "Hundred"))
+//        dataArray.append(FlowerPotData(flowerPotName: "Thirty"))
+//        dataArray.append(FlowerPotData(flowerPotName: "Forty"))
+//        dataArray.append(FlowerPotData(flowerPotName: "Fifty"))
+//        dataArray.append(FlowerPotData(flowerPotName: "Sixty"))
+//        dataArray.append(FlowerPotData(flowerPotName: "Eighty"))
+//        dataArray.append(FlowerPotData(flowerPotName: "Hundred"))
     }
     
     // MARK: - SearchBarDelegate
