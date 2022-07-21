@@ -12,6 +12,7 @@ target 'LIBROG' do
 	pod 'FloatingPanel'
 	pod 'Kingfisher'
 	pod 'MaterialComponents/BottomSheet'
+	pod 'SnapKit', '~> 5.6.0'
 
   target 'LIBROGTests' do
     inherit! :search_paths

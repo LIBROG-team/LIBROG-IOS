@@ -7,6 +7,7 @@
 
 import UIKit
 import MaterialComponents.MaterialBottomSheet
+import SnapKit
 
 class ReadingRecordViewController: UIViewController {
     @IBOutlet weak var readingRecordCollectionView: UICollectionView!
@@ -96,6 +97,11 @@ extension ReadingRecordViewController: UITableViewDelegate, UITableViewDataSourc
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
+        //상단 간격 조절
+        tableView.contentInsetAdjustmentBehavior = .never
+        cell.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(10)
+        }
         cell.textLabel?.font = UIFont(name: "Apple SD Gothic Neo", size: 14)
         if indexPath.row == 0 { cell.textLabel?.text = filterArray[0] }
         else if indexPath.row == 1 { cell.textLabel?.text = filterArray[1] }

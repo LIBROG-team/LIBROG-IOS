@@ -706,7 +706,7 @@
 		9925C474D3584985A819FD80DC1D2952 /* MDCSheetContainerViewDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MDCSheetContainerViewDelegate.h; path = components/BottomSheet/src/private/MDCSheetContainerViewDelegate.h; sourceTree = "<group>"; };
 		9A83CC35D5155B91452B6BB551B30356 /* DiskStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskStorage.swift; path = Sources/Cache/DiskStorage.swift; sourceTree = "<group>"; };
 		9D2BCCA5A77F0684C60293B78F1D3A89 /* PageboyViewControllerDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageboyViewControllerDataSource.swift; path = Sources/Pageboy/Protocols/PageboyViewControllerDataSource.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9FA72307499B84A4BF98DB61BFB029AA /* PassthroughView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PassthroughView.swift; path = Sources/PassthroughView.swift; sourceTree = "<group>"; };
 		A0A8527E849E6BACB962E7B924785180 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
 		A13F4D999BEE5DCB2A6C4B56478F4313 /* TMBarViewScrollHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TMBarViewScrollHandler.swift; path = Sources/Tabman/Bar/BarView/TMBarViewScrollHandler.swift; sourceTree = "<group>"; };
@@ -817,7 +817,7 @@
 		E0A4C85B5C54C474D77DFB5ECFF34FFE /* UIColor+MaterialDynamic.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+MaterialDynamic.m"; path = "components/private/Color/src/UIColor+MaterialDynamic.m"; sourceTree = "<group>"; };
 		E113F8340FEA137E14F7C5F2FB3E3955 /* MaterialComponents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MaterialComponents.debug.xcconfig; sourceTree = "<group>"; };
 		E247F43E89B2A22A27F1711A4EB21E33 /* HTTPMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPMethod.swift; path = Source/HTTPMethod.swift; sourceTree = "<group>"; };
-		E2CA60D4944EF0E45E130F38154EF9CF /* Pods-LIBROG */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-LIBROG"; path = Pods_LIBROG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2CA60D4944EF0E45E130F38154EF9CF /* Pods_LIBROG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LIBROG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E349E8C99EB897FAF5C8AA59D4ED94BF /* RetryStrategy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RetryStrategy.swift; path = Sources/Networking/RetryStrategy.swift; sourceTree = "<group>"; };
 		E3CDF8EC7E8D8A7CDFF4EFB9B8299325 /* TMHorizontalBarLayout+Separator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TMHorizontalBarLayout+Separator.swift"; path = "Sources/Tabman/Bar/BarLayout/Types/TMHorizontalBarLayout+Separator.swift"; sourceTree = "<group>"; };
 		E49A0BFE8EA2886CE5AC3081186FEEC2 /* TMBarBackgroundView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TMBarBackgroundView.swift; path = Sources/Tabman/Bar/BarBackgroundView/TMBarBackgroundView.swift; sourceTree = "<group>"; };
@@ -1029,7 +1029,6 @@
 				E6BE2E35332D6222C63871D772796F13 /* WKInterfaceImage+Kingfisher.swift */,
 				EB84BC6B470F8FDD59FE796393EAE102 /* Support Files */,
 			);
-			name = Kingfisher;
 			path = Kingfisher;
 			sourceTree = "<group>";
 		};
@@ -1061,7 +1060,6 @@
 				2CF5DE5640634192E3095388238467F6 /* Shapes */,
 				07EA00912EE43C1EB57ECE5C15B381B5 /* Support Files */,
 			);
-			name = MaterialComponents;
 			path = MaterialComponents;
 			sourceTree = "<group>";
 		};
@@ -1122,7 +1120,6 @@
 				E4FF16AEA2BCC0643706C674E034F7B1 /* StarLayer.swift */,
 				9D02DBD57C4DA9741103AD98674AFFE4 /* Support Files */,
 			);
-			name = Cosmos;
 			path = Cosmos;
 			sourceTree = "<group>";
 		};
@@ -1205,7 +1202,6 @@
 				F501A1195B3BD1A2F2B7D31A7B1D8CA2 /* Validation.swift */,
 				3BCF88FBDEC556A999A0DED37EB8FE01 /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -1218,7 +1214,7 @@
 				C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher */,
 				A34157B3708EDB7D17422B3D92F591D2 /* MaterialComponents */,
 				23D5CD291D18F2187712FE6F84B6F1C6 /* Pageboy */,
-				E2CA60D4944EF0E45E130F38154EF9CF /* Pods-LIBROG */,
+				E2CA60D4944EF0E45E130F38154EF9CF /* Pods_LIBROG.framework */,
 				39892677995B2ECAF1C60323F6F186A3 /* Pods-LIBROG-LIBROGUITests */,
 				72D3D95558EFBA9CAC652C709476285E /* Pods-LIBROGTests */,
 				4D4799138F8AC5FFF2497DCB60AF4CBB /* Tabman */,
@@ -1257,7 +1253,6 @@
 				6AD0FD5154BE821FAAB03C3BF3D748AE /* WeakContainer.swift */,
 				0BA7607BFB03FC6CC93B5655E843977B /* Support Files */,
 			);
-			name = Pageboy;
 			path = Pageboy;
 			sourceTree = "<group>";
 		};
@@ -1476,7 +1471,6 @@
 				BA6511834ED3D24229718500629CFBBF /* Transitioning.swift */,
 				7538FE24D4E5321279FBD1FFF8EE33F4 /* Support Files */,
 			);
-			name = FloatingPanel;
 			path = FloatingPanel;
 			sourceTree = "<group>";
 		};
@@ -1553,7 +1547,6 @@
 				5AD1A7A3AF897DB1CD77EB219E73D2D7 /* WeakContainer.swift */,
 				00188AA8CFF96ED1881C19B9A3992FD5 /* Support Files */,
 			);
-			name = Tabman;
 			path = Tabman;
 			sourceTree = "<group>";
 		};
@@ -1896,7 +1889,7 @@
 			);
 			name = "Pods-LIBROG";
 			productName = Pods_LIBROG;
-			productReference = E2CA60D4944EF0E45E130F38154EF9CF /* Pods-LIBROG */;
+			productReference = E2CA60D4944EF0E45E130F38154EF9CF /* Pods_LIBROG.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B4723B5744013DF08BE3A5FEAA286944 /* MaterialComponents */ = {
