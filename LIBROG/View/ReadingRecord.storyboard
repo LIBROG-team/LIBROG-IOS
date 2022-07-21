@@ -52,11 +52,30 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRb-Jv-rYW">
-                                <rect key="frame" x="291" y="127.5" width="103" height="30"/>
+                                <rect key="frame" x="287.5" y="127.5" width="106.5" height="30"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="arrow-down" title="최근 기록순" imagePadding="5" titleAlignment="leading">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow-down" imagePadding="5" titleAlignment="leading">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="최근">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="13" name=".AppleSDGothicNeoI-Regular"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content=" ">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" metaFont="system"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="기록 순">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="13" name=".AppleSDGothicNeoI-Regular"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="sorting_button:" destination="Q1e-Dl-AV5" eventType="touchUpInside" id="qsS-xi-ijc"/>

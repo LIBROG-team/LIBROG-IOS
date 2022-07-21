@@ -12,6 +12,20 @@
 				<string>com.googleusercontent.apps.221537301769-312uam9bnlhk82hb0gr7n5sore92vblv</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>kakao</string>
+				<string>61775cb2c32cd4a6566c35d7b463cb8f</string>
+			</array>
+		</dict>
+	</array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>kakaokompassauth</string>
+		<string>kakaolink</string>
 	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>

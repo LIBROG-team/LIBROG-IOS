@@ -12,6 +12,9 @@ target 'LIBROG' do
 	pod 'FloatingPanel'
 	pod 'Kingfisher'
 	pod 'MaterialComponents/BottomSheet'
+	pod 'KakaoSDKCommon'
+	pod 'KakaoSDKAuth'
+	pod 'KakaoSDKUser'
 
   target 'LIBROGTests' do
     inherit! :search_paths
