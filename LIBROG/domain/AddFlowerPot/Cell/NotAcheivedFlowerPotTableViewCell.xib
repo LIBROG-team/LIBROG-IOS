@@ -240,6 +240,7 @@
             <viewLayoutGuide key="safeArea" id="0ji-ar-Lk1"/>
             <connections>
                 <outlet property="flowerPotNameLabel" destination="YBg-f1-5Si" id="QrK-Lr-JLY"/>
+                <outlet property="flowerPotRequestLabel" destination="7EJ-Hc-IXw" id="xxK-Np-u0f"/>
             </connections>
             <point key="canvasLocation" x="215.94202898550725" y="97.767857142857139"/>
         </tableViewCell>
