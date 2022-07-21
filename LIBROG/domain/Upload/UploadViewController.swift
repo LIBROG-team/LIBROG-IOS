@@ -35,6 +35,7 @@ class UploadViewController: UITableViewController {
         resultVC.tableView.register(inputNib, forCellReuseIdentifier: "InputTableViewCell")
         
         searchBarCustom(searchController)
+        tableView.backgroundColor = UIColor(named: "backgroundColor")
     }
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
