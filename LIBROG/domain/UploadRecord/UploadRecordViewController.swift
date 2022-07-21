@@ -13,6 +13,7 @@ class UploadRecordViewController: UIViewController {
     @IBOutlet weak var completeButton: UIButton!
     
     var bookData: BookData!
+    var quote: String!
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +26,13 @@ class UploadRecordViewController: UIViewController {
         let uploadRecordNib = UINib(nibName: "UploadRecordTableViewCell", bundle: nil)
         uploadRecordTableView.register(uploadRecordNib, forCellReuseIdentifier: "UploadRecordTableViewCell")
     }
+    // MARK: - Actions
     @IBAction func goBackButtonDidTap(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
+    }
+    @objc func quoteTextEditingChanged(_ sender: UITextField) {
+        let text = sender.text ?? ""
+        self.quote = text
     }
 }
 extension UploadRecordViewController: UITableViewDelegate, UITableViewDataSource {
@@ -39,6 +45,7 @@ extension UploadRecordViewController: UITableViewDelegate, UITableViewDataSource
             return UITableViewCell()
         }
         cell.setBookData(self.bookData)
+        cell.quoteTextField.addTarget(self, action: #selector(quoteTextEditingChanged(_:)), for: .editingChanged)
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

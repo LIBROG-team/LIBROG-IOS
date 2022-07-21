@@ -22,8 +22,24 @@ class AddFlowerpotDataManager {
                 
             switch response.result {
             case .success(let result):
-                print("DEBUG: ", result.result)
+//                print("DEBUG: ", result.result)
                 viewcontroller.addFlowerpotAchievedSuccessAPI(result.result)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    func addNotAchievedFlowerpotDataManager(_ viewcontroller: NotAchievedFlowerPotViewController) {
+        AF.request(url! + "flowerpots/\(userId!)/unacqUserflowerlist",
+                   method: .get,
+                   parameters: nil)
+            .validate()
+            .responseDecodable(of: AddFlowerpotModel.self) { response in
+                
+            switch response.result {
+            case .success(let result):
+//                print("DEBUG: ", result.result)
+                viewcontroller.addFlowerpotNotAchievedSuccessAPI(result.result)
             case .failure(let error):
                 print(error.localizedDescription)
             }

@@ -8,8 +8,10 @@
 import UIKit
 
 class NotAcheivedFlowerPotTableViewCell: UITableViewCell {
-
     @IBOutlet weak var flowerPotNameLabel: UILabel!
+    @IBOutlet weak var flowerPotRequestLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +22,7 @@ class NotAcheivedFlowerPotTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+    func setNotAchievedFlowerpotData(_ cellData: AddFlowerpotData) {
+        flowerPotNameLabel.text = cellData.name!
+    }
 }
