@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2303F22F2889A9CD00544AF6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2303F22E2889A9CD00544AF6 /* Login.storyboard */; };
+		2303F2322889A9EB00544AF6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2303F2312889A9EB00544AF6 /* LoginViewController.swift */; };
 		230524BE287D5C060081933A /* FlowerPotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230524BD287D5C060081933A /* FlowerPotDetailViewController.swift */; };
 		230524C1287D5C370081933A /* FlowerPotDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230524BF287D5C370081933A /* FlowerPotDetailCollectionViewCell.swift */; };
 		230524C2287D5C370081933A /* FlowerPotDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 230524C0287D5C370081933A /* FlowerPotDetailCollectionViewCell.xib */; };
@@ -119,6 +121,8 @@
 
 /* Begin PBXFileReference section */
 		083D44444B965A5BDD386009 /* Pods-LIBROGTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LIBROGTests.release.xcconfig"; path = "Target Support Files/Pods-LIBROGTests/Pods-LIBROGTests.release.xcconfig"; sourceTree = "<group>"; };
+		2303F22E2889A9CD00544AF6 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		2303F2312889A9EB00544AF6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		230524BD287D5C060081933A /* FlowerPotDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerPotDetailViewController.swift; sourceTree = "<group>"; };
 		230524BF287D5C370081933A /* FlowerPotDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerPotDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		230524C0287D5C370081933A /* FlowerPotDetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlowerPotDetailCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -249,6 +253,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2303F2302889A9D300544AF6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2303F2312889A9EB00544AF6 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		230524BB287D5BEE0081933A /* FlowerPotDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -407,6 +419,7 @@
 				23ADA91C28846B240066D15A /* AcheivedFlowerPot.storyboard */,
 				23ADA91E28846B440066D15A /* NotAcheivedFlowerPot.storyboard */,
 				237ECCE928857544000D9A71 /* Setting.storyboard */,
+				2303F22E2889A9CD00544AF6 /* Login.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -434,6 +447,7 @@
 		23C8B4A7286EF39000432141 /* domain */ = {
 			isa = PBXGroup;
 			children = (
+				2303F2302889A9D300544AF6 /* Login */,
 				D0CF2B572885C7F500F78104 /* ReadingRecord */,
 				237ECCDE288556E1000D9A71 /* Profile */,
 				235523452881C45600EDE3E1 /* FlowerPotDescription */,
@@ -785,6 +799,7 @@
 				D0C2B05B286DC9C000242E71 /* LaunchScreen.storyboard in Resources */,
 				23A5B861287D7F81005413A3 /* NotAcheivedFlowerPotTableViewCell.xib in Resources */,
 				23C8B4B1286EF76F00432141 /* MainFlowerTableViewCell.xib in Resources */,
+				2303F22F2889A9CD00544AF6 /* Login.storyboard in Resources */,
 				23A5B85D287D7F73005413A3 /* AcheivedFlowerPotTableViewCell.xib in Resources */,
 				D0C2B058286DC9C000242E71 /* Assets.xcassets in Resources */,
 				23A5B86F287D9D5D005413A3 /* InputTableViewCell.xib in Resources */,
@@ -975,6 +990,7 @@
 				23091F832886B69E008EC8D2 /* FlowerpotDataManager.swift in Sources */,
 				23ADA9242884790C0066D15A /* NotAchievedFlowerPotViewController.swift in Sources */,
 				23ADA92D288481080066D15A /* MainPageDataManager.swift in Sources */,
+				2303F2322889A9EB00544AF6 /* LoginViewController.swift in Sources */,
 				D0CF2B5D2885C83C00F78104 /* ReadingRecordCollectionViewCell.swift in Sources */,
 				D0C2B086286DF28800242E71 /* FlowerpotTableViewCell.swift in Sources */,
 				231B8D4A288936F6006F44A3 /* FlowerpotDescriptionDataManager.swift in Sources */,

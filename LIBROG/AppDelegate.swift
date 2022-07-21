@@ -6,11 +6,19 @@
 //
 
 import UIKit
+import KakaoSDKAuth
+import KakaoSDKCommon
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+            if (AuthApi.isKakaoTalkLoginUrl(url)) {
+                return AuthController.handleOpenUrl(url: url)
+            }
 
+            return false
+        }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -21,6 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UserDefaults.standard.set("", forKey: "accessToken")
         UserDefaults.standard.set("", forKey: "refreshToken")
         UserDefaults.standard.set(1, forKey: "userId")  // 임시로 userID를 1로 설정
+        
+        KakaoSDK.initSDK(appKey: "61775cb2c32cd4a6566c35d7b463cb8f")
         
         return true
     }
