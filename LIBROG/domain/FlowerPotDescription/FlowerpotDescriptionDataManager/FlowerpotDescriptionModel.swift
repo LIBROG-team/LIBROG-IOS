@@ -1,24 +1,20 @@
 //
-//  AddFlowerpotModel.swift
+//  FlowerpotDescriptionModel.swift
 //  LIBROG
 //
 //  Created by gomin on 2022/07/21.
 //
 
-import Foundation
-
-struct AddFlowerpotModel : Decodable {
+struct FlowerpotDescriptionModel: Decodable {
     let isSuccess: Bool?
     let code: Int?
     let message: String?
-    let result: [AddFlowerpotData]
+    let result: [FlowerpotDescriptionData]
 }
-struct AddFlowerpotData: Decodable {
+struct FlowerpotDescriptionData : Decodable {
     let flowerDataIdx: Int?
     let name: String?
     let engName: String?
-    let type: String?
-    let bloomingPeriod: String?
     let content: String?
     let flowerImgUrl: String?
 }

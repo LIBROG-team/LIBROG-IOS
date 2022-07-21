@@ -8,7 +8,11 @@
 import UIKit
 
 class FlowerPotDescriptionTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var flowerNameLabel: UILabel!
+    @IBOutlet weak var flowerNameEnglishLabel: UILabel!
+    @IBOutlet weak var flowerImageView: UIImageView!
+    @IBOutlet weak var flowerDescriptionLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,5 +23,12 @@ class FlowerPotDescriptionTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+    func setFlowerpotData(_ data: FlowerpotDescriptionData) {
+        flowerNameLabel.text = data.name!
+        flowerNameEnglishLabel.text = data.engName!
+        flowerDescriptionLabel.text = data.content!
+        if let url = URL(string: data.flowerImgUrl!) {
+            flowerImageView.kf.setImage(with: url, placeholder: UIImage(named: "logo_launchScreen_white"))
+        }
+    }
 }
