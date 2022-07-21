@@ -47,10 +47,15 @@ extension AchievedFlowerPotViewController: UITableViewDelegate, UITableViewDataS
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 95
     }
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        guard cell is MainFlowerTableViewCell else {
-            return
-        }
+    //클릭 이벤트 처리
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let flowerPotDescriptionVC = UIStoryboard(name: "FlowerPotDescription", bundle: nil).instantiateViewController(identifier: "FlowerPotDescriptionVC") as? FlowerPotDescriptionViewController else {return}
+//        let selectedBookData = dataArray[indexPath.item]
+//        uploadRecordVC.bookData = selectedBookData
+        flowerPotDescriptionVC.modalPresentationStyle = .fullScreen
+        self.present(flowerPotDescriptionVC, animated: true, completion: nil)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 // MARK: - 유저의 획득한 화분 조회 API

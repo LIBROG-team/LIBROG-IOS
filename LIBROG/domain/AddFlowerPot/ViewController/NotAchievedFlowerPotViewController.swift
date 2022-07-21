@@ -40,6 +40,7 @@ extension NotAchievedFlowerPotViewController: UITableViewDelegate, UITableViewDa
             // if data exists
             cell.setNotAchievedFlowerpotData(flowerpot[itemIdx])
         }
+        cell.selectionStyle = .none
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
