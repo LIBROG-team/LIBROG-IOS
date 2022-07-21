@@ -43,14 +43,16 @@ extension FlowerPotDescriptionViewController: UITableViewDelegate, UITableViewDa
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "FlowerPotDescriptionTableViewCell", for: indexPath) as? FlowerPotDescriptionTableViewCell else {
             return UITableViewCell()
         }
-        
+        if let data = self.flowerpotData {
+            cell.setFlowerpotData(data)
+        }
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return view.frame.height
     }
 }
-// MARK: - 유저의 화분에 기록된 책 정보 가져오기 API success
+// MARK: - 화분 상세 정보 조회 API success
 extension FlowerPotDescriptionViewController {
     func flowerpotDescriptionSuccessAPI(_ result : FlowerpotDescriptionData) {
         self.flowerpotData = result

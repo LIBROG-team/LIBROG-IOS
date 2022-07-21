@@ -56,7 +56,7 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4E-7j-oDj">
-                        <rect key="frame" x="60" y="432.5" width="233" height="128.5"/>
+                        <rect key="frame" x="40" y="432.5" width="273" height="110.5"/>
                         <attributedString key="attributedText">
                             <fragment>
                                 <string key="content">해바라기는 국화가에 속하는 일년생 초본식물로, 노란색이 인상적인 꽃 입니다. 해바라기는 풍시지리에서 금전운을 상징한다고 합니다. 해를 따라서 꽃이 움직이기 때문인지, 해바라기는 ‘일편단심’이라는 꽃말을 가지고 있습니다. 테스트용 예시 텍스트 입니다. 양쪽 공백 40입니다.</string>
@@ -72,7 +72,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="c4E-7j-oDj" firstAttribute="top" secondItem="uD4-zF-xKo" secondAttribute="bottom" constant="45" id="98q-s7-6SP"/>
-                    <constraint firstItem="c4E-7j-oDj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="40" id="JCy-jA-VXg"/>
+                    <constraint firstItem="c4E-7j-oDj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="JCy-jA-VXg"/>
                     <constraint firstItem="am4-7k-3EW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="36" id="OS0-bc-jSZ"/>
                     <constraint firstItem="uD4-zF-xKo" firstAttribute="top" secondItem="9dm-D1-CcY" secondAttribute="bottom" constant="36" id="SVC-G2-Du2"/>
                     <constraint firstItem="9dm-D1-CcY" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="ce0-sR-McF"/>
@@ -80,7 +80,7 @@
                     <constraint firstItem="am4-7k-3EW" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="gOz-T1-OLV"/>
                     <constraint firstItem="uD4-zF-xKo" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="pwT-cw-Euz"/>
                     <constraint firstItem="c4E-7j-oDj" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="tz2-ed-PVn"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="c4E-7j-oDj" secondAttribute="trailing" constant="40" id="veF-Yc-caF"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="c4E-7j-oDj" secondAttribute="trailing" constant="20" id="veF-Yc-caF"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

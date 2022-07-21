@@ -14,7 +14,7 @@ struct AddFlowerpotModel : Decodable {
     let result: [AddFlowerpotData]
 }
 struct AddFlowerpotData: Decodable {
-    let idx: Int?
+    let flowerDataIdx: Int?
     let name: String?
     let engName: String?
     let type: String?
