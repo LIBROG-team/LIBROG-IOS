@@ -108,9 +108,22 @@ extension ReadingRecordViewController: UITableViewDelegate, UITableViewDataSourc
     }
     //클릭 이벤트 처리
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 { filterButton.setTitle(filterArray[0], for: .normal)}
-        else if indexPath.row == 1 {filterButton.setTitle(filterArray[1], for: .normal) }
-        else if indexPath.row == 2 {filterButton.setTitle(filterArray[2], for: .normal)}
+        // 버튼 config 추가
+        var config = UIButton.Configuration.plain()
+        var attText = AttributedString.init(filterArray[0])
+        
+        if indexPath.row == 0 { attText = AttributedString.init(filterArray[0])}
+        else if indexPath.row == 1 {attText = AttributedString.init(filterArray[1]) }
+        else if indexPath.row == 2 {attText = AttributedString.init(filterArray[2])}
+        
+        // config font & image 설정
+        attText.font = UIFont.systemFont(ofSize: 13.0, weight: .regular)
+        config.attributedTitle = attText
+        config.image = UIImage.init(named: "arrow-down")
+        config.imagePlacement = .leading
+        config.imagePadding = 5
+        filterButton.configuration = config
+        
         self.dismiss(animated: true, completion: nil)
         tableView.deselectRow(at: indexPath, animated: true)
     }
