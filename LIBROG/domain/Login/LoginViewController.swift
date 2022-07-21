@@ -43,7 +43,22 @@ class LoginViewController: UIViewController {
             
             //do something
             _ = oauthToken
+               let accessToken = oauthToken?.accessToken
+               self.setUserInfo()
            }
+        }
+    }
+    func setUserInfo() {
+        //사용자 관리 api 호출
+        UserApi.shared.me() {(user, error) in
+            if let error = error {
+                print(error)
+            }
+            else {
+                print("me() success.")
+        //do something
+                _ = user
+            }
         }
     }
 }
