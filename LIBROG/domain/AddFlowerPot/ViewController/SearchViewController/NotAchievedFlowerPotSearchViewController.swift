@@ -32,6 +32,7 @@ class NotAchievedFlowerPotSearchViewController: UITableViewController , UISearch
 
         let notAcheivedNib = UINib(nibName: "NotAcheivedFlowerPotTableViewCell", bundle: nil)
         resultVC.tableView.register(notAcheivedNib, forCellReuseIdentifier: "NotAcheivedFlowerPotTableViewCell")
+        searchBarCustom(searchController)
     }
     func updateSearchResults(for searchController: UISearchController) {
 //        fileteredData = dataArray.filter({ (data:FlowerPotData) -> Bool in
@@ -86,6 +87,25 @@ class NotAchievedFlowerPotSearchViewController: UITableViewController , UISearch
         
         guard let searchTerm = searchController.searchBar.text,
               searchTerm.isEmpty == false else { return }
+    }
+    
+    //MARK: searchBar custom
+    func searchBarCustom(_ searchController: UISearchController) {
+        //검색바 스크롤되지 않도록
+        searchController.navigationItem.hidesSearchBarWhenScrolling = true
+
+        let searchBarImage = UIImage()
+        searchController.searchBar.backgroundImage = searchBarImage
+        searchController.searchBar.setImage(UIImage(named: "search-green"), for: .search, state: .normal)
+        
+        //placeholder 커스텀
+        let attributedString = NSMutableAttributedString(string: "화분 검색하기", attributes: [
+                NSAttributedString.Key.font: UIFont(name: "Apple SD Gothic Neo", size: 15) as Any
+            ])
+        searchController.searchBar.searchTextField.attributedPlaceholder = attributedString
+        
+        //cancel button
+        searchController.automaticallyShowsCancelButton = false
     }
 }
 // MARK: - 화분추가 '미획득 화분'탭 tableView delegate

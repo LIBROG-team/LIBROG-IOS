@@ -34,6 +34,7 @@ class AcheivedFlowerPotSearchViewController: UITableViewController , UISearchCon
         resultVC.tableView.register(acheivedNib, forCellReuseIdentifier: "AcheivedFlowerPotTableViewCell")
         
         SwipeRecognizer().swipeRecognizer(self)
+        searchBarCustom(searchController)
     }
     func updateSearchResults(for searchController: UISearchController) {
 //        fileteredData = dataArray.filter({ (data:FlowerPotData) -> Bool in
@@ -88,5 +89,25 @@ class AcheivedFlowerPotSearchViewController: UITableViewController , UISearchCon
         
         guard let searchTerm = searchController.searchBar.text,
               searchTerm.isEmpty == false else { return }
+    }
+    
+    //MARK: searchBar custom
+    func searchBarCustom(_ searchController: UISearchController) {
+        //검색바 스크롤되지 않도록
+        searchController.navigationItem.hidesSearchBarWhenScrolling = true
+
+        let searchBarImage = UIImage()
+        searchController.searchBar.backgroundImage = searchBarImage
+        searchController.searchBar.setImage(UIImage(named: "search-green"), for: .search, state: .normal)
+
+        
+        //placeholder 커스텀
+        let attributedString = NSMutableAttributedString(string: "화분 검색하기", attributes: [
+                NSAttributedString.Key.font: UIFont(name: "Apple SD Gothic Neo", size: 15) as Any
+            ])
+        searchController.searchBar.searchTextField.attributedPlaceholder = attributedString
+        
+        //cancel button
+        searchController.automaticallyShowsCancelButton = false
     }
 }
