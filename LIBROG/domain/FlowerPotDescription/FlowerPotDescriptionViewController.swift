@@ -12,6 +12,7 @@ class FlowerPotDescriptionViewController: UIViewController {
     @IBOutlet weak var flowerPotDetailTableView: UITableView!
     
     var flowerpotID: Int?
+    var flowerpotData: FlowerpotDescriptionData!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,8 @@ class FlowerPotDescriptionViewController: UIViewController {
         
         let flowerPotNib = UINib(nibName: "FlowerPotDescriptionTableViewCell", bundle: nil)
         flowerPotDetailTableView.register(flowerPotNib, forCellReuseIdentifier: "FlowerPotDescriptionTableViewCell")
+        
+        FlowerpotDescriptionDataManager().getFlowerpotDescriptionDataManager(self.flowerpotID!, self)
     }
     @IBAction func goBackButtonDidTap(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
@@ -40,9 +43,17 @@ extension FlowerPotDescriptionViewController: UITableViewDelegate, UITableViewDa
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "FlowerPotDescriptionTableViewCell", for: indexPath) as? FlowerPotDescriptionTableViewCell else {
             return UITableViewCell()
         }
+        
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return view.frame.height
+    }
+}
+// MARK: - 유저의 화분에 기록된 책 정보 가져오기 API success
+extension FlowerPotDescriptionViewController {
+    func flowerpotDescriptionSuccessAPI(_ result : FlowerpotDescriptionData) {
+        self.flowerpotData = result
+        flowerPotDetailTableView.reloadData()
     }
 }
