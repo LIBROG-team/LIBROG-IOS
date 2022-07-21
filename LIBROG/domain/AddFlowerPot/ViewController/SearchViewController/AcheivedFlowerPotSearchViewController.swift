@@ -33,6 +33,7 @@ class AcheivedFlowerPotSearchViewController: UITableViewController , UISearchCon
         let acheivedNib = UINib(nibName: "AcheivedFlowerPotTableViewCell", bundle: nil)
         resultVC.tableView.register(acheivedNib, forCellReuseIdentifier: "AcheivedFlowerPotTableViewCell")
         
+        SwipeRecognizer().swipeRecognizer(self)
     }
     func updateSearchResults(for searchController: UISearchController) {
 //        fileteredData = dataArray.filter({ (data:FlowerPotData) -> Bool in

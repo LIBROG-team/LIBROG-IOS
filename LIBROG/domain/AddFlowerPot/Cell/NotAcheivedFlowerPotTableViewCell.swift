@@ -11,7 +11,6 @@ class NotAcheivedFlowerPotTableViewCell: UITableViewCell {
     @IBOutlet weak var flowerPotNameLabel: UILabel!
     @IBOutlet weak var flowerPotRequestLabel: UILabel!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

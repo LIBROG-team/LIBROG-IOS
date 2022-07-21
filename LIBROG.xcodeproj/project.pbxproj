@@ -13,6 +13,7 @@
 		23091F832886B69E008EC8D2 /* FlowerpotDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23091F822886B69E008EC8D2 /* FlowerpotDataManager.swift */; };
 		231B8D4228891787006F44A3 /* AddFlowerpotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B8D4128891787006F44A3 /* AddFlowerpotModel.swift */; };
 		231B8D442889189D006F44A3 /* AddFlowerpotDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B8D432889189D006F44A3 /* AddFlowerpotDataManager.swift */; };
+		231B8D462889221A006F44A3 /* SwipeRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B8D452889221A006F44A3 /* SwipeRecognizer.swift */; };
 		232973622887F86600954AA0 /* FlowerpotBookRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232973612887F86600954AA0 /* FlowerpotBookRecordModel.swift */; };
 		232973642887F8FF00954AA0 /* FlowerpotBookRecordDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232973632887F8FF00954AA0 /* FlowerpotBookRecordDataManager.swift */; };
 		2339DA06288591D600A3DBC4 /* SearchBookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339DA05288591D600A3DBC4 /* SearchBookManager.swift */; };
@@ -122,6 +123,7 @@
 		23091F822886B69E008EC8D2 /* FlowerpotDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerpotDataManager.swift; sourceTree = "<group>"; };
 		231B8D4128891787006F44A3 /* AddFlowerpotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFlowerpotModel.swift; sourceTree = "<group>"; };
 		231B8D432889189D006F44A3 /* AddFlowerpotDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFlowerpotDataManager.swift; sourceTree = "<group>"; };
+		231B8D452889221A006F44A3 /* SwipeRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeRecognizer.swift; sourceTree = "<group>"; };
 		232973612887F86600954AA0 /* FlowerpotBookRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerpotBookRecordModel.swift; sourceTree = "<group>"; };
 		232973632887F8FF00954AA0 /* FlowerpotBookRecordDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerpotBookRecordDataManager.swift; sourceTree = "<group>"; };
 		2339DA05288591D600A3DBC4 /* SearchBookManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBookManager.swift; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 			children = (
 				237ECCE228856454000D9A71 /* DateFormatter.swift */,
 				2339DA092885948500A3DBC4 /* HeaderManager.swift */,
+				231B8D452889221A006F44A3 /* SwipeRecognizer.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -966,6 +969,7 @@
 				23A5B85C287D7F73005413A3 /* AcheivedFlowerPotTableViewCell.swift in Sources */,
 				23A5B855287D6754005413A3 /* AddFlowerPotViewController.swift in Sources */,
 				237ECCE0288556EE000D9A71 /* ProfileViewController.swift in Sources */,
+				231B8D462889221A006F44A3 /* SwipeRecognizer.swift in Sources */,
 				238DE01F28819C00007901E6 /* MainBottomViewController.swift in Sources */,
 				D0CF2B602885C99C00F78104 /* ReadingRecordViewController.swift in Sources */,
 				23C8B4AC286EF41400432141 /* MainViewController.swift in Sources */,
