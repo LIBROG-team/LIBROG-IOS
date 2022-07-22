@@ -6,11 +6,11 @@
 //
 
 struct BookModel: Decodable {
-//    let meta: [metaModel]
     let documents: [BookDetailModel]
+    let meta: MetaModel
 }
 
-struct metaModel: Decodable {
+struct MetaModel: Decodable {
     let is_end: Bool?
     let pageable_count: Int?
     let total_count: Int?
