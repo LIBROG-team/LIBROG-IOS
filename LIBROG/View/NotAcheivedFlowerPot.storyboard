@@ -64,6 +64,13 @@
                                 <rect key="frame" x="0.0" y="95" width="414" height="767"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7IH-eb-HFa">
+                                <rect key="frame" x="0.0" y="44" width="414" height="1"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="ijx-C3-dEM"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wY5-EH-iUq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -73,7 +80,10 @@
                             <constraint firstItem="wY5-EH-iUq" firstAttribute="trailing" secondItem="7rk-fY-qXo" secondAttribute="trailing" id="5ow-uU-qaZ"/>
                             <constraint firstItem="7rk-fY-qXo" firstAttribute="top" secondItem="wY5-EH-iUq" secondAttribute="top" id="ImE-ee-y5S"/>
                             <constraint firstItem="wY5-EH-iUq" firstAttribute="bottom" secondItem="vtr-tG-5Gz" secondAttribute="bottom" id="LKk-yv-yRv"/>
+                            <constraint firstItem="7IH-eb-HFa" firstAttribute="top" secondItem="7rk-fY-qXo" secondAttribute="top" id="Zj2-qV-bYw"/>
+                            <constraint firstItem="7IH-eb-HFa" firstAttribute="leading" secondItem="XMI-gX-AWC" secondAttribute="leading" id="ggT-hs-y0x"/>
                             <constraint firstItem="wY5-EH-iUq" firstAttribute="trailing" secondItem="vtr-tG-5Gz" secondAttribute="trailing" id="lGo-E9-tqr"/>
+                            <constraint firstAttribute="trailing" secondItem="7IH-eb-HFa" secondAttribute="trailing" id="tAQ-sW-KOl"/>
                             <constraint firstItem="vtr-tG-5Gz" firstAttribute="top" secondItem="7rk-fY-qXo" secondAttribute="bottom" id="xze-Dy-oRf"/>
                         </constraints>
                     </view>
@@ -84,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fzs-zw-hWi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5458" y="834"/>
+            <point key="canvasLocation" x="4722" y="834"/>
         </scene>
     </scenes>
     <resources>

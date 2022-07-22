@@ -64,17 +64,27 @@
                                 <rect key="frame" x="0.0" y="95" width="414" height="767"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DdR-19-yaI">
+                                <rect key="frame" x="0.0" y="44" width="414" height="1"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="cxf-KH-nof"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8jp-2H-iqN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="3MU-d2-Nqh" firstAttribute="leading" secondItem="8jp-2H-iqN" secondAttribute="leading" id="ILk-BI-HMK"/>
+                            <constraint firstItem="DdR-19-yaI" firstAttribute="top" secondItem="3MU-d2-Nqh" secondAttribute="top" id="SlR-ai-7im"/>
                             <constraint firstItem="8jp-2H-iqN" firstAttribute="trailing" secondItem="ahx-9F-XSr" secondAttribute="trailing" id="YYo-XD-d7U"/>
                             <constraint firstItem="3MU-d2-Nqh" firstAttribute="trailing" secondItem="8jp-2H-iqN" secondAttribute="trailing" id="aHd-Gw-6K8"/>
                             <constraint firstItem="ahx-9F-XSr" firstAttribute="leading" secondItem="8jp-2H-iqN" secondAttribute="leading" id="ej2-UR-Ur1"/>
+                            <constraint firstAttribute="trailing" secondItem="DdR-19-yaI" secondAttribute="trailing" id="f1w-af-DVh"/>
                             <constraint firstItem="3MU-d2-Nqh" firstAttribute="top" secondItem="8jp-2H-iqN" secondAttribute="top" id="fz9-Dz-pji"/>
                             <constraint firstItem="ahx-9F-XSr" firstAttribute="top" secondItem="3MU-d2-Nqh" secondAttribute="bottom" id="pvr-Ud-9uZ"/>
                             <constraint firstItem="8jp-2H-iqN" firstAttribute="bottom" secondItem="ahx-9F-XSr" secondAttribute="bottom" id="rt7-Zc-aAe"/>
+                            <constraint firstItem="DdR-19-yaI" firstAttribute="leading" secondItem="OPR-Xp-Vld" secondAttribute="leading" id="zVG-84-Euo"/>
                         </constraints>
                     </view>
                     <connections>
@@ -84,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oaq-XR-XTc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4755" y="834"/>
+            <point key="canvasLocation" x="4049" y="834"/>
         </scene>
     </scenes>
     <resources>

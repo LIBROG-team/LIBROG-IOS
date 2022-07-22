@@ -22,6 +22,8 @@ class NotAchievedFlowerPotSearchViewController: UIViewController {
 
         let notAchievedNib = UINib(nibName: "NotAcheivedFlowerPotTableViewCell", bundle: nil)
         notAchievedTableView.register(notAchievedNib, forCellReuseIdentifier: "NotAcheivedFlowerPotTableViewCell")
+        
+        searchBarCustom()
     }
 }
 // MARK: - Table view data source
@@ -65,5 +67,19 @@ extension NotAchievedFlowerPotSearchViewController: UISearchBarDelegate {
         guard let searchTerm = searchBar.text, searchTerm.isEmpty == false else { return }
         print("--> 검색어: \(searchTerm)")
     }
-    
+    //MARK: searchBar custom
+    func searchBarCustom() {
+        let searchBarImage = UIImage()
+        searchBar.backgroundImage = searchBarImage
+        searchBar.setImage(UIImage(named: "search-green"), for: .search, state: .normal)
+
+        //placeholder 커스텀
+        let attributedString = NSMutableAttributedString(string: "화분 검색하기", attributes: [
+                NSAttributedString.Key.font: UIFont(name: "Apple SD Gothic Neo", size: 15) as Any
+            ])
+        searchBar.searchTextField.attributedPlaceholder = attributedString
+        
+        //cancel button
+        searchBar.showsCancelButton = false
+    }
 }
