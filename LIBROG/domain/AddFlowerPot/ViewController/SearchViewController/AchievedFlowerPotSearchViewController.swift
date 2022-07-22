@@ -1,5 +1,5 @@
 //
-//  NotAchievedFlowerpotSearchViewController2.swift
+//  AchievedFlowerPotViewController2.swift
 //  LIBROG
 //
 //  Created by gomin on 2022/07/22.
@@ -7,9 +7,10 @@
 
 import UIKit
 
-class NotAchievedFlowerPotSearchViewController: UIViewController {
+class AchievedFlowerPotSearchViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var notAchievedTableView: UITableView!
+    @IBOutlet weak var achievedTableView: UITableView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,15 +18,17 @@ class NotAchievedFlowerPotSearchViewController: UIViewController {
         self.definesPresentationContext = true
         searchBar.delegate = self
         
-        notAchievedTableView.delegate = self
-        notAchievedTableView.dataSource = self
+        achievedTableView.delegate = self
+        achievedTableView.dataSource = self
 
-        let notAchievedNib = UINib(nibName: "NotAcheivedFlowerPotTableViewCell", bundle: nil)
-        notAchievedTableView.register(notAchievedNib, forCellReuseIdentifier: "NotAcheivedFlowerPotTableViewCell")
+        let acheivedNib = UINib(nibName: "AcheivedFlowerPotTableViewCell", bundle: nil)
+        achievedTableView.register(acheivedNib, forCellReuseIdentifier: "AcheivedFlowerPotTableViewCell")
+        
+        SwipeRecognizer().swipeRecognizer(self)
     }
 }
 // MARK: - Table view data source
-extension NotAchievedFlowerPotSearchViewController: UITableViewDelegate, UITableViewDataSource {
+extension AchievedFlowerPotSearchViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
@@ -33,8 +36,8 @@ extension NotAchievedFlowerPotSearchViewController: UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if(tableView == notAchievedTableView) {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "NotAcheivedFlowerPotTableViewCell", for: indexPath) as? NotAcheivedFlowerPotTableViewCell else { return UITableViewCell() }
+        if(tableView == achievedTableView) {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "AcheivedFlowerPotTableViewCell", for: indexPath) as? AcheivedFlowerPotTableViewCell else { return UITableViewCell() }
 //            cell.flowerPotNameLabel.text = fileteredData[indexPath.row].flowerPotName
             return cell
         }
@@ -49,12 +52,12 @@ extension NotAchievedFlowerPotSearchViewController: UITableViewDelegate, UITable
     }
     //셀 세로 길이 조절
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if(tableView == notAchievedTableView) {return 91}
+        if(tableView == achievedTableView) {return 91}
         else {return view.frame.height}
     }
 }
 // MARK: - SearchBarDelegate
-extension NotAchievedFlowerPotSearchViewController: UISearchBarDelegate {
+extension AchievedFlowerPotSearchViewController: UISearchBarDelegate {
     private func dismissKeyboard() {
         searchBar.resignFirstResponder()
     }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -48,33 +48,43 @@
             </objects>
             <point key="canvasLocation" x="3286" y="835"/>
         </scene>
-        <!--Acheived Flower Pot Search View Controller-->
-        <scene sceneID="5D0-O8-bVX">
+        <!--Achieved Flower Pot Search View Controller-->
+        <scene sceneID="1UJ-kC-t9x">
             <objects>
-                <tableViewController storyboardIdentifier="AcheivedFlowerpotSearchVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="V0S-kq-4ad" customClass="AcheivedFlowerPotSearchViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="CsX-md-5gM">
+                <viewController storyboardIdentifier="AcheivedFlowerpotSearchVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2jb-OW-2Vf" customClass="AchievedFlowerPotSearchViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OPR-Xp-Vld">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="3MU-d2-Nqh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ahx-9F-XSr">
+                                <rect key="frame" x="0.0" y="95" width="414" height="767"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8jp-2H-iqN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="tDd-1D-0Je">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tDd-1D-0Je" id="x8s-J3-TtO">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="V0S-kq-4ad" id="Khh-CH-Bll"/>
-                            <outlet property="delegate" destination="V0S-kq-4ad" id="ZRL-R3-7wI"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EZ2-nL-BS7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="3MU-d2-Nqh" firstAttribute="leading" secondItem="8jp-2H-iqN" secondAttribute="leading" id="ILk-BI-HMK"/>
+                            <constraint firstItem="8jp-2H-iqN" firstAttribute="trailing" secondItem="ahx-9F-XSr" secondAttribute="trailing" id="YYo-XD-d7U"/>
+                            <constraint firstItem="3MU-d2-Nqh" firstAttribute="trailing" secondItem="8jp-2H-iqN" secondAttribute="trailing" id="aHd-Gw-6K8"/>
+                            <constraint firstItem="ahx-9F-XSr" firstAttribute="leading" secondItem="8jp-2H-iqN" secondAttribute="leading" id="ej2-UR-Ur1"/>
+                            <constraint firstItem="3MU-d2-Nqh" firstAttribute="top" secondItem="8jp-2H-iqN" secondAttribute="top" id="fz9-Dz-pji"/>
+                            <constraint firstItem="ahx-9F-XSr" firstAttribute="top" secondItem="3MU-d2-Nqh" secondAttribute="bottom" id="pvr-Ud-9uZ"/>
+                            <constraint firstItem="8jp-2H-iqN" firstAttribute="bottom" secondItem="ahx-9F-XSr" secondAttribute="bottom" id="rt7-Zc-aAe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="achievedTableView" destination="ahx-9F-XSr" id="xHc-JK-TN1"/>
+                        <outlet property="searchBar" destination="3MU-d2-Nqh" id="743-fz-X7L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oaq-XR-XTc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3999" y="834"/>
+            <point key="canvasLocation" x="4755" y="834"/>
         </scene>
     </scenes>
     <resources>
