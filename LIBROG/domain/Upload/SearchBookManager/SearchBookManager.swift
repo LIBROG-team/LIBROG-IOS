@@ -22,9 +22,8 @@ class SearchBookManager {
                 
             switch response.result {
             case .success(let result):
-                var book = result.documents
 //                print("DEBUG: ", book)
-                viewcontroller.kakaoSearchBookSuccessAPI(book)
+                viewcontroller.kakaoSearchBookSuccessAPI(result)
             case .failure(let error):
                 print(error.localizedDescription)
             }

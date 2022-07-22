@@ -12,6 +12,7 @@ class UploadViewController: UITableViewController {
     var dataArray: [BookData] = []
     var searchWord = ""
     var pageNum = 1
+    var searchCount = 0
     
     var searchController = UISearchController()
     var resultVC = UITableViewController()
@@ -36,8 +37,8 @@ class UploadViewController: UITableViewController {
     }
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if dataArray.count == 0 {return 1}
-        else if dataArray.count < 20 {return dataArray.count}
+        if self.searchCount == 0 {return 1}
+        else if self.searchCount <= 20 {return dataArray.count}
         else {return dataArray.count + 1}
     }
     
@@ -149,10 +150,12 @@ extension UploadViewController: UISearchControllerDelegate, UISearchResultsUpdat
 
 // MARK: - 검색 성공 시
 extension UploadViewController {
-    func kakaoSearchBookSuccessAPI(_ result : [BookDetailModel]) {
-        for book in result {
+    func kakaoSearchBookSuccessAPI(_ result : BookModel) {
+        let bookData = result.documents
+        for book in bookData {
             dataArray.append(BookData(bookTitle: book.title!, thumbnailURL: book.thumbnail!, author: book.authors, contents: book.contents!))
         }
+        self.searchCount = result.meta.pageable_count!
         resultVC.tableView.reloadData()
     }
 }
