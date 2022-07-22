@@ -57,11 +57,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="7rk-fY-qXo">
-                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                                <rect key="frame" x="15" y="54" width="384" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vtr-tG-5Gz">
-                                <rect key="frame" x="0.0" y="95" width="414" height="767"/>
+                                <rect key="frame" x="15" y="105" width="384" height="757"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7IH-eb-HFa">
@@ -75,14 +75,14 @@
                         <viewLayoutGuide key="safeArea" id="wY5-EH-iUq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="7rk-fY-qXo" firstAttribute="leading" secondItem="XMI-gX-AWC" secondAttribute="leading" id="01d-aa-TV5"/>
-                            <constraint firstItem="vtr-tG-5Gz" firstAttribute="leading" secondItem="wY5-EH-iUq" secondAttribute="leading" id="0gg-Cr-Ogm"/>
-                            <constraint firstItem="wY5-EH-iUq" firstAttribute="trailing" secondItem="7rk-fY-qXo" secondAttribute="trailing" id="5ow-uU-qaZ"/>
-                            <constraint firstItem="7rk-fY-qXo" firstAttribute="top" secondItem="wY5-EH-iUq" secondAttribute="top" id="ImE-ee-y5S"/>
+                            <constraint firstItem="7rk-fY-qXo" firstAttribute="leading" secondItem="XMI-gX-AWC" secondAttribute="leading" constant="15" id="01d-aa-TV5"/>
+                            <constraint firstItem="vtr-tG-5Gz" firstAttribute="trailing" secondItem="7rk-fY-qXo" secondAttribute="trailing" id="3ML-MU-wNV"/>
+                            <constraint firstItem="wY5-EH-iUq" firstAttribute="trailing" secondItem="7rk-fY-qXo" secondAttribute="trailing" constant="15" id="5ow-uU-qaZ"/>
+                            <constraint firstItem="7rk-fY-qXo" firstAttribute="top" secondItem="wY5-EH-iUq" secondAttribute="top" constant="10" id="ImE-ee-y5S"/>
+                            <constraint firstItem="vtr-tG-5Gz" firstAttribute="leading" secondItem="7rk-fY-qXo" secondAttribute="leading" id="J7Z-tI-erY"/>
                             <constraint firstItem="wY5-EH-iUq" firstAttribute="bottom" secondItem="vtr-tG-5Gz" secondAttribute="bottom" id="LKk-yv-yRv"/>
-                            <constraint firstItem="7IH-eb-HFa" firstAttribute="top" secondItem="7rk-fY-qXo" secondAttribute="top" id="Zj2-qV-bYw"/>
                             <constraint firstItem="7IH-eb-HFa" firstAttribute="leading" secondItem="XMI-gX-AWC" secondAttribute="leading" id="ggT-hs-y0x"/>
-                            <constraint firstItem="wY5-EH-iUq" firstAttribute="trailing" secondItem="vtr-tG-5Gz" secondAttribute="trailing" id="lGo-E9-tqr"/>
+                            <constraint firstItem="7IH-eb-HFa" firstAttribute="top" secondItem="wY5-EH-iUq" secondAttribute="top" id="hoN-Fm-LHT"/>
                             <constraint firstAttribute="trailing" secondItem="7IH-eb-HFa" secondAttribute="trailing" id="tAQ-sW-KOl"/>
                             <constraint firstItem="vtr-tG-5Gz" firstAttribute="top" secondItem="7rk-fY-qXo" secondAttribute="bottom" id="xze-Dy-oRf"/>
                         </constraints>
