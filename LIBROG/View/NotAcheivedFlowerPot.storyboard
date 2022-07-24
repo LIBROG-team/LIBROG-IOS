@@ -49,32 +49,52 @@
             <point key="canvasLocation" x="3982" y="835"/>
         </scene>
         <!--Not Achieved Flower Pot Search View Controller-->
-        <scene sceneID="VeR-Gk-wQA">
+        <scene sceneID="Vnl-Yn-iWv">
             <objects>
-                <tableViewController storyboardIdentifier="NotAcheivedFlowerpotSearchVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ijO-4H-TsH" customClass="NotAchievedFlowerPotSearchViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Vaw-yl-wWt">
+                <viewController storyboardIdentifier="NotAcheivedFlowerpotSearchVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ypd-Kb-wky" customClass="NotAchievedFlowerPotSearchViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XMI-gX-AWC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="7rk-fY-qXo">
+                                <rect key="frame" x="15" y="54" width="384" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vtr-tG-5Gz">
+                                <rect key="frame" x="15" y="105" width="384" height="757"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7IH-eb-HFa">
+                                <rect key="frame" x="0.0" y="44" width="414" height="1"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="ijx-C3-dEM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wY5-EH-iUq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="iV0-eq-9lq">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iV0-eq-9lq" id="5uK-bm-159">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="ijO-4H-TsH" id="ENv-iN-lBm"/>
-                            <outlet property="delegate" destination="ijO-4H-TsH" id="aoL-cS-DmW"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oWJ-BQ-2mD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="7rk-fY-qXo" firstAttribute="leading" secondItem="XMI-gX-AWC" secondAttribute="leading" constant="15" id="01d-aa-TV5"/>
+                            <constraint firstItem="vtr-tG-5Gz" firstAttribute="trailing" secondItem="7rk-fY-qXo" secondAttribute="trailing" id="3ML-MU-wNV"/>
+                            <constraint firstItem="wY5-EH-iUq" firstAttribute="trailing" secondItem="7rk-fY-qXo" secondAttribute="trailing" constant="15" id="5ow-uU-qaZ"/>
+                            <constraint firstItem="7rk-fY-qXo" firstAttribute="top" secondItem="wY5-EH-iUq" secondAttribute="top" constant="10" id="ImE-ee-y5S"/>
+                            <constraint firstItem="vtr-tG-5Gz" firstAttribute="leading" secondItem="7rk-fY-qXo" secondAttribute="leading" id="J7Z-tI-erY"/>
+                            <constraint firstItem="wY5-EH-iUq" firstAttribute="bottom" secondItem="vtr-tG-5Gz" secondAttribute="bottom" id="LKk-yv-yRv"/>
+                            <constraint firstItem="7IH-eb-HFa" firstAttribute="leading" secondItem="XMI-gX-AWC" secondAttribute="leading" id="ggT-hs-y0x"/>
+                            <constraint firstItem="7IH-eb-HFa" firstAttribute="top" secondItem="wY5-EH-iUq" secondAttribute="top" id="hoN-Fm-LHT"/>
+                            <constraint firstAttribute="trailing" secondItem="7IH-eb-HFa" secondAttribute="trailing" id="tAQ-sW-KOl"/>
+                            <constraint firstItem="vtr-tG-5Gz" firstAttribute="top" secondItem="7rk-fY-qXo" secondAttribute="bottom" id="xze-Dy-oRf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="notAchievedTableView" destination="vtr-tG-5Gz" id="nVe-GO-q7c"/>
+                        <outlet property="searchBar" destination="7rk-fY-qXo" id="kHG-w3-VhG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fzs-zw-hWi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4712" y="835"/>
+            <point key="canvasLocation" x="4722" y="834"/>
         </scene>
     </scenes>
     <resources>

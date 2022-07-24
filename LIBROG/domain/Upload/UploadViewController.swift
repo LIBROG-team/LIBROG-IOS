@@ -9,9 +9,10 @@ import UIKit
 
 class UploadViewController: UITableViewController {
     
-    var dataArray = [BookData]()
+    var dataArray: [BookData] = []
     var searchWord = ""
     var pageNum = 1
+    var searchCount = 0
     
     var searchController = UISearchController()
     var resultVC = UITableViewController()
@@ -31,24 +32,34 @@ class UploadViewController: UITableViewController {
         resultVC.tableView.delegate = self
         resultVC.tableView.dataSource = self
         
-        let inputNib = UINib(nibName: "InputTableViewCell", bundle: nil)
-        resultVC.tableView.register(inputNib, forCellReuseIdentifier: "InputTableViewCell")
-        
         searchBarCustom(searchController)
-        tableView.backgroundColor = UIColor(named: "backgroundColor")
+//        tableView.backgroundColor = UIColor(named: "backgroundColor")
     }
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if dataArray.count == 0 {return 0}
-        else if dataArray.count < 20 {return dataArray.count}
+        if self.searchCount == 0 {return 1}
+        else if self.searchCount <= 20 {return dataArray.count}
         else {return dataArray.count + 1}
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //            guard let cell = tableView.dequeueReusableCell(withIdentifier: "InputTableViewCell", for: indexPath) as? InputTableViewCell else { return UITableViewCell() }
-        let cell = UITableViewCell()
+        if dataArray.count == 0 {
+            let cell = UITableViewCell()
+            if searchController.searchBar.searchTextField.text == "" {
+//                cell.imageView?.image = UIImage(named: "logo22%")
+                cell.textLabel?.text = "검색창에 책 제목을 입력해주세요."
+            } else {
+                cell.textLabel?.text = "검색 결과가 없습니다."
+            }
+            cell.textLabel?.textColor = UIColor.gray
+            cell.textLabel?.textAlignment = .center
+            cell.selectionStyle = .none
+            return cell
+        }
         // 더보기 버튼 Custom
         if indexPath.row == dataArray.count {
+            let cell = UITableViewCell()
             cell.textLabel?.text = "더보기"
             cell.textLabel?.textAlignment = .center
             cell.textLabel?.textColor = UIColor(named: "LIBROGColor")
@@ -56,7 +67,9 @@ class UploadViewController: UITableViewController {
             cell.layer.borderWidth = 1.5
             cell.layer.borderColor = UIColor(named: "LIBROGColor")?.cgColor
             cell.layer.cornerRadius = 10
+            return cell
         } else {
+            let cell = UITableViewCell()
             cell.textLabel?.text = dataArray[indexPath.row].bookTitle
             cell.backgroundColor = UIColor(named: "backgroundColor")
             if (indexPath.row == 0) {
@@ -67,11 +80,13 @@ class UploadViewController: UITableViewController {
                 cell.layer.cornerRadius = 15
                 cell.layer.maskedCorners = CACornerMask(arrayLiteral: .layerMinXMaxYCorner, .layerMaxXMaxYCorner)
             }
+            return cell
         }
-        return cell
+        
     }
     //셀 세로 길이 조절
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if dataArray.count == 0 {return resultVC.tableView.frame.height}
         if indexPath.row == dataArray.count {return 47}
         else {return 120}
     }
@@ -109,7 +124,7 @@ extension UploadViewController: UISearchControllerDelegate, UISearchResultsUpdat
     func updateSearchResults(for searchController: UISearchController) {
         dataArray.removeAll()
         pageNum = 1
-        searchWord = searchController.searchBar.searchTextField.text ?? " "
+        searchWord = searchController.searchBar.searchTextField.text ?? ""
         SearchBookManager().searchBookManager(searchWord, 1, self)
         resultVC.tableView.reloadData()
     }
@@ -135,10 +150,12 @@ extension UploadViewController: UISearchControllerDelegate, UISearchResultsUpdat
 
 // MARK: - 검색 성공 시
 extension UploadViewController {
-    func kakaoSearchBookSuccessAPI(_ result : [BookDetailModel]) {
-        for book in result {
+    func kakaoSearchBookSuccessAPI(_ result : BookModel) {
+        let bookData = result.documents
+        for book in bookData {
             dataArray.append(BookData(bookTitle: book.title!, thumbnailURL: book.thumbnail!, author: book.authors, contents: book.contents!))
         }
+        self.searchCount = result.meta.pageable_count!
         resultVC.tableView.reloadData()
     }
 }
