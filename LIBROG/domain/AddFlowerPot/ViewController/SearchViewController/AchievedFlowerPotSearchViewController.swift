@@ -1,5 +1,5 @@
 //
-//  NotAchievedFlowerpotSearchViewController2.swift
+//  AchievedFlowerPotViewController2.swift
 //  LIBROG
 //
 //  Created by gomin on 2022/07/22.
@@ -7,9 +7,9 @@
 
 import UIKit
 
-class NotAchievedFlowerPotSearchViewController: UIViewController {
+class AchievedFlowerPotSearchViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var notAchievedTableView: UITableView!
+    @IBOutlet weak var achievedTableView: UITableView!
     var dataArray: [AddFlowerpotData] = []
     
     override func viewDidLoad() {
@@ -18,18 +18,18 @@ class NotAchievedFlowerPotSearchViewController: UIViewController {
         self.definesPresentationContext = true
         searchBar.delegate = self
         
-        notAchievedTableView.delegate = self
-        notAchievedTableView.dataSource = self
+        achievedTableView.delegate = self
+        achievedTableView.dataSource = self
 
-        let notAchievedNib = UINib(nibName: "NotAcheivedFlowerPotTableViewCell", bundle: nil)
-        notAchievedTableView.register(notAchievedNib, forCellReuseIdentifier: "NotAcheivedFlowerPotTableViewCell")
+        let acheivedNib = UINib(nibName: "AcheivedFlowerPotTableViewCell", bundle: nil)
+        achievedTableView.register(acheivedNib, forCellReuseIdentifier: "AcheivedFlowerPotTableViewCell")
         
+        SwipeRecognizer().swipeRecognizer(self)
         searchBarCustom()
     }
 }
 // MARK: - Table view data source
-extension NotAchievedFlowerPotSearchViewController: UITableViewDelegate, UITableViewDataSource {
-
+extension AchievedFlowerPotSearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let count = dataArray.count
         if count == 0 {return 1}
@@ -61,12 +61,12 @@ extension NotAchievedFlowerPotSearchViewController: UITableViewDelegate, UITable
     }
     //셀 세로 길이 조절
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if dataArray.count == 0 {return notAchievedTableView.frame.height}
+        if dataArray.count == 0 {return achievedTableView.frame.height}
         else {return 91}
     }
 }
 // MARK: - SearchBarDelegate
-extension NotAchievedFlowerPotSearchViewController: UISearchBarDelegate {
+extension AchievedFlowerPotSearchViewController: UISearchBarDelegate {
     private func dismissKeyboard() {
         searchBar.resignFirstResponder()
     }
@@ -76,7 +76,7 @@ extension NotAchievedFlowerPotSearchViewController: UISearchBarDelegate {
         
         guard let searchTerm = searchBar.text, searchTerm.isEmpty == false else { return }
         print("--> 검색어: \(searchTerm)")
-        notAchievedTableView.reloadData()
+        achievedTableView.reloadData()
     }
     //MARK: searchBar custom
     func searchBarCustom() {
