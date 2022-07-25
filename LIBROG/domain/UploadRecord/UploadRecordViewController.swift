@@ -7,13 +7,21 @@
 
 import UIKit
 import Cosmos
+import SwiftUI
 
 class UploadRecordViewController: UIViewController {
     @IBOutlet weak var uploadRecordTableView: UITableView!
     @IBOutlet weak var completeButton: UIButton!
     
+    let userId = UserDefaults.standard.string(forKey: "userId")
     var bookData: BookData!
+//    var bookTitle: String!
+//    var author: [String]!
+//    var publisher: String!
+//    var publishedDate: String!
+    var starRating: Int!
     var quote: String!
+    var content: String!
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +33,9 @@ class UploadRecordViewController: UIViewController {
         
         let uploadRecordNib = UINib(nibName: "UploadRecordTableViewCell", bundle: nil)
         uploadRecordTableView.register(uploadRecordNib, forCellReuseIdentifier: "UploadRecordTableViewCell")
+        
+        //bookData 정의하기
+        
     }
     // MARK: - Actions
     @IBAction func goBackButtonDidTap(_ sender: UIBarButtonItem) {
