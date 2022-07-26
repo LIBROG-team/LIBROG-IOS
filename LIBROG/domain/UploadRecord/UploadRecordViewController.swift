@@ -35,9 +35,6 @@ class UploadRecordViewController: UIViewController {
         
         let uploadRecordNib = UINib(nibName: "UploadRecordTableViewCell", bundle: nil)
         uploadRecordTableView.register(uploadRecordNib, forCellReuseIdentifier: "UploadRecordTableViewCell")
-        
-        //bookData 정의하기
-        
     }
     // MARK: - Actions
     @IBAction func goBackButtonDidTap(_ sender: UIBarButtonItem) {
@@ -46,11 +43,6 @@ class UploadRecordViewController: UIViewController {
     @IBAction func completeButtonDidTap(_ sender: Any) {
         isCompleteButtonTap = true
         uploadRecordTableView.reloadData()
-        
-        // 첫화면으로 전환
-        guard let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TabBarController") as? UITabBarController else {return}
-       tabBarController.modalPresentationStyle = .fullScreen
-       self.view.window?.windowScene?.keyWindow?.rootViewController = tabBarController
     }
     @objc func quoteTextEditingChanged(_ sender: UITextField) {
         let text = sender.text ?? ""
@@ -69,7 +61,7 @@ extension UploadRecordViewController: UITableViewDelegate, UITableViewDataSource
         cell.setBookData(self.bookData)
         if isCompleteButtonTap == true {
             cell.postRecord(self.bookData)
-            isCompleteButtonTap = false
+            goMain()
         }
         cell.quoteTextField.addTarget(self, action: #selector(quoteTextEditingChanged(_:)), for: .editingChanged)
         return cell
@@ -81,5 +73,13 @@ extension UploadRecordViewController: UITableViewDelegate, UITableViewDataSource
         guard cell is MainFlowerTableViewCell else {
             return
         }
+    }
+}
+extension UploadRecordViewController {
+    func goMain() {
+        // 첫화면으로 전환
+        guard let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TabBarController") as? UITabBarController else {return}
+        tabBarController.modalPresentationStyle = .fullScreen
+        self.view.window?.windowScene?.keyWindow?.rootViewController = tabBarController
     }
 }

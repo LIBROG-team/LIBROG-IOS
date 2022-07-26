@@ -70,8 +70,9 @@ extension UploadRecordTableViewCell {
         // flowerpot id 임시, author 임시 (배열로 수정해야함)
         let uploadRecordInput = UploadRecordInput(bookName: bookData.bookTitle, author: "", publisher: bookData.publisher, publishedDate: bookData.publishedDate, userIdx: userId, flowerPotIdx: 1, starRating: starRating, quote: quote, content: content)
         UploadRecordDataManager().uploadRecordDataManager(uploadRecordInput, self)
+        print("POST")
     }
     func uploadRecordSuccessAPI(_ result: UploadRecordModel) {
-        print(result)
+        print("POST SUCCESS: ", result)
     }
 }
