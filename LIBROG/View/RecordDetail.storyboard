@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Record Detail View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="RecordDetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="RecordDetailViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Cp-Tx-iix">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="책 제목" id="htf-fZ-fO3">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrow-right" id="o0F-56-DIS">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="goBackButtonDidTap:" destination="Y6W-OH-hqX" id="qFl-PL-lHZ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="pencil" catalog="system" id="Tru-RZ-umb">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lHH-EC-pPd">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4Cp-Tx-iix" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="3GB-6z-Ie0"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="4Cp-Tx-iix" secondAttribute="trailing" id="7XH-3m-2VJ"/>
+                            <constraint firstItem="4Cp-Tx-iix" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="D3k-Nv-jcE"/>
+                            <constraint firstItem="lHH-EC-pPd" firstAttribute="top" secondItem="4Cp-Tx-iix" secondAttribute="bottom" id="SgC-xE-0hZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="lHH-EC-pPd" secondAttribute="bottom" id="Yx7-g2-KF6"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="lHH-EC-pPd" secondAttribute="trailing" id="rWW-MD-j75"/>
+                            <constraint firstItem="lHH-EC-pPd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="uEa-DA-kTq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="recordDetailNB" destination="4Cp-Tx-iix" id="S4F-y8-uXD"/>
+                        <outlet property="recordDetailTableView" destination="lHH-EC-pPd" id="fhr-sg-NhY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="96" y="81"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Aq8-w3-Cfy">
+            <objects>
+                <viewController id="38b-Ua-tRB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8OT-8b-JsN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zUm-VA-cic">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="기록 수정하기" id="dmz-wf-ltT">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrow-right" id="mlS-xB-CUG">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FCn-3b-gS5">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cfL-QN-uvw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cfL-QN-uvw" firstAttribute="trailing" secondItem="zUm-VA-cic" secondAttribute="trailing" id="7iB-1b-ZSY"/>
+                            <constraint firstItem="zUm-VA-cic" firstAttribute="top" secondItem="cfL-QN-uvw" secondAttribute="top" id="D2U-6i-88K"/>
+                            <constraint firstItem="cfL-QN-uvw" firstAttribute="bottom" secondItem="FCn-3b-gS5" secondAttribute="bottom" id="HlQ-5e-aIi"/>
+                            <constraint firstItem="FCn-3b-gS5" firstAttribute="leading" secondItem="cfL-QN-uvw" secondAttribute="leading" id="ad9-iJ-uNr"/>
+                            <constraint firstItem="cfL-QN-uvw" firstAttribute="trailing" secondItem="FCn-3b-gS5" secondAttribute="trailing" id="q24-nn-gnd"/>
+                            <constraint firstItem="zUm-VA-cic" firstAttribute="leading" secondItem="8OT-8b-JsN" secondAttribute="leading" id="yPm-bt-28A"/>
+                            <constraint firstItem="FCn-3b-gS5" firstAttribute="top" secondItem="zUm-VA-cic" secondAttribute="bottom" id="yyh-39-byS"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wBw-9Z-tFD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="838" y="80"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow-right" width="21" height="21"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
