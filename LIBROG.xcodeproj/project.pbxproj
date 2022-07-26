@@ -84,6 +84,8 @@
 		87E40A5DB282123CDAA86316 /* Pods_LIBROGTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79984E8377ED4772E3A4730E /* Pods_LIBROGTests.framework */; };
 		9BE303E45EECD6C4F3471E37 /* Pods_LIBROG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C934BB6A1545DC5476C41F4 /* Pods_LIBROG.framework */; };
 		AD572B475873E8AA70C597EC /* Pods_LIBROG_LIBROGUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 401A4F3757D864A067683037 /* Pods_LIBROG_LIBROGUITests.framework */; };
+		D061104B288FF09500F96B65 /* StatisticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D061104A288FF09500F96B65 /* StatisticModel.swift */; };
+		D061104D288FF1ED00F96B65 /* StatisticDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D061104C288FF1ED00F96B65 /* StatisticDataManager.swift */; };
 		D096410B2886B40800E5989C /* ReadingRecordBottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096410A2886B40800E5989C /* ReadingRecordBottomViewController.swift */; };
 		D0C2B04F286DC9BE00242E71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C2B04E286DC9BE00242E71 /* AppDelegate.swift */; };
 		D0C2B051286DC9BE00242E71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C2B050286DC9BE00242E71 /* SceneDelegate.swift */; };
@@ -206,6 +208,8 @@
 		79984E8377ED4772E3A4730E /* Pods_LIBROGTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LIBROGTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80874FB74B3F63648D20C05C /* Pods-LIBROG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LIBROG.debug.xcconfig"; path = "Target Support Files/Pods-LIBROG/Pods-LIBROG.debug.xcconfig"; sourceTree = "<group>"; };
 		C75FFB529E5A692083101F06 /* Pods-LIBROG-LIBROGUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LIBROG-LIBROGUITests.debug.xcconfig"; path = "Target Support Files/Pods-LIBROG-LIBROGUITests/Pods-LIBROG-LIBROGUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D061104A288FF09500F96B65 /* StatisticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticModel.swift; sourceTree = "<group>"; };
+		D061104C288FF1ED00F96B65 /* StatisticDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticDataManager.swift; sourceTree = "<group>"; };
 		D096410A2886B40800E5989C /* ReadingRecordBottomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingRecordBottomViewController.swift; sourceTree = "<group>"; };
 		D0C2B04B286DC9BE00242E71 /* LIBROG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LIBROG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C2B04E286DC9BE00242E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -362,6 +366,7 @@
 		237ECCDE288556E1000D9A71 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				D0611049288FF04F00F96B65 /* ProfileDataManager */,
 				237ECCE42885692E000D9A71 /* Cell */,
 				237ECCDF288556EE000D9A71 /* ProfileViewController.swift */,
 			);
@@ -560,6 +565,15 @@
 				083D44444B965A5BDD386009 /* Pods-LIBROGTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D0611049288FF04F00F96B65 /* ProfileDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				D061104A288FF09500F96B65 /* StatisticModel.swift */,
+				D061104C288FF1ED00F96B65 /* StatisticDataManager.swift */,
+			);
+			path = ProfileDataManager;
 			sourceTree = "<group>";
 		};
 		D0C2B042286DC9BE00242E71 = {
@@ -1003,6 +1017,7 @@
 				237ECCE328856454000D9A71 /* DateFormatter.swift in Sources */,
 				232973642887F8FF00954AA0 /* FlowerpotBookRecordDataManager.swift in Sources */,
 				D0C2B051286DC9BE00242E71 /* SceneDelegate.swift in Sources */,
+				D061104B288FF09500F96B65 /* StatisticModel.swift in Sources */,
 				23C8B4B8286EF78600432141 /* RecentBookCollectionViewCell.swift in Sources */,
 				2339DA06288591D600A3DBC4 /* SearchBookManager.swift in Sources */,
 				23091F832886B69E008EC8D2 /* FlowerpotDataManager.swift in Sources */,
@@ -1018,6 +1033,7 @@
 				230524C1287D5C370081933A /* FlowerPotDetailCollectionViewCell.swift in Sources */,
 				23A5B85C287D7F73005413A3 /* AcheivedFlowerPotTableViewCell.swift in Sources */,
 				23A5B855287D6754005413A3 /* AddFlowerPotViewController.swift in Sources */,
+				D061104D288FF1ED00F96B65 /* StatisticDataManager.swift in Sources */,
 				23CC78DB288FCEDE0064DA7E /* UploadRecordDataManager.swift in Sources */,
 				237ECCE0288556EE000D9A71 /* ProfileViewController.swift in Sources */,
 				231B8D462889221A006F44A3 /* SwipeRecognizer.swift in Sources */,
