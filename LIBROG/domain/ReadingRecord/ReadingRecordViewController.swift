@@ -52,6 +52,9 @@ class ReadingRecordViewController: UIViewController {
         
         ReadingRecordDataManager().readingRecordDataManager(self)
     }
+    override func viewDidAppear(_ animated: Bool) {
+        readingRecordCollectionView.reloadData()
+    }
 
 }
 // MARK: -  독서기록 CollectionView delegate
