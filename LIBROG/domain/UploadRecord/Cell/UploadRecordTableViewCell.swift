@@ -23,8 +23,8 @@ class UplodaRecordTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         // 별점 초기 설정
-        bookPointView.rating = 4
-        bookPointLabel.text = "4"
+        bookPointView.rating = 5
+        bookPointLabel.text = "5"
         bookPointView.didTouchCosmos = didTouchCosmos
     }
 
