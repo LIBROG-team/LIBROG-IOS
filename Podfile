@@ -15,14 +15,6 @@ target 'LIBROG' do
 	pod 'KakaoSDKCommon'
 	pod 'KakaoSDKAuth'
 	pod 'KakaoSDKUser'
-
-  target 'LIBROGTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'LIBROGUITests' do
-    # Pods for testing
-  end
+	pod 'SnapKit', '~> 5.6.0'
 
 end

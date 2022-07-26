@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class UploadViewController: UITableViewController {
     
@@ -45,11 +46,9 @@ class UploadViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //            guard let cell = tableView.dequeueReusableCell(withIdentifier: "InputTableViewCell", for: indexPath) as? InputTableViewCell else { return UITableViewCell() }
         if dataArray.count == 0 {
+            setEmptyView()  //Empty View
             let cell = UITableViewCell()
-            if searchController.searchBar.searchTextField.text == "" {
-//                cell.imageView?.image = UIImage(named: "logo22%")
-                cell.textLabel?.text = "검색창에 책 제목을 입력해주세요."
-            } else {
+            if searchController.searchBar.searchTextField.text != "" {
                 cell.textLabel?.text = "검색 결과가 없습니다."
             }
             cell.textLabel?.textColor = UIColor.gray
@@ -73,9 +72,12 @@ class UploadViewController: UITableViewController {
             cell.textLabel?.text = dataArray[indexPath.row].bookTitle
             cell.backgroundColor = UIColor(named: "backgroundColor")
             if (indexPath.row == 0) {
-                cell.layer.cornerRadius = 15
-                cell.layer.maskedCorners = CACornerMask(arrayLiteral: .layerMinXMinYCorner, .layerMaxXMinYCorner)
-
+                if (dataArray.count == 1) {
+                    cell.layer.cornerRadius = 15
+                } else {
+                    cell.layer.cornerRadius = 15
+                    cell.layer.maskedCorners = CACornerMask(arrayLiteral: .layerMinXMinYCorner, .layerMaxXMinYCorner)
+                }
             } else if (indexPath.row == dataArray.count-1) {
                 cell.layer.cornerRadius = 15
                 cell.layer.maskedCorners = CACornerMask(arrayLiteral: .layerMinXMaxYCorner, .layerMaxXMaxYCorner)
@@ -163,5 +165,42 @@ extension UploadViewController {
         }
         self.searchCount = result.meta.pageable_count!
         resultVC.tableView.reloadData()
+    }
+}
+
+extension UploadViewController {
+    func setEmptyView() {
+        let messageLabel = UILabel()
+        messageLabel.font = UIFont(name: "Apple SD Gothic Neo", size: 14)
+        messageLabel.textColor = .darkGray
+        messageLabel.textAlignment = .center
+        messageLabel.text = "검색창에 책 제목을 입력해주세요"
+        messageLabel.sizeToFit()
+        
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "logo22%")
+        imageView.contentMode = .scaleAspectFit
+        
+        let backgroudView = UIView(frame: CGRect(x: 0, y: 0, width: self.tableView.bounds.width, height: self.tableView.bounds.height))
+        backgroudView.addSubview(messageLabel)
+        backgroudView.addSubview(imageView)
+        
+        imageView.snp.makeConstraints { make in
+            make.leading.equalToSuperview().inset(113.0)
+            make.trailing.equalToSuperview().inset(97.0)
+            make.top.equalToSuperview().inset(219.0)
+            make.bottom.equalTo(messageLabel.snp.top).offset(-25.0)
+        }
+        imageView.setContentHuggingPriority(.defaultHigh, for: .vertical)
+        
+        
+        messageLabel.snp.makeConstraints { make in
+            make.bottom.equalToSuperview().inset(198.0).priority(.low)
+            make.centerX.equalToSuperview()
+        }
+        
+        
+        self.tableView.backgroundView = backgroudView
+
     }
 }
