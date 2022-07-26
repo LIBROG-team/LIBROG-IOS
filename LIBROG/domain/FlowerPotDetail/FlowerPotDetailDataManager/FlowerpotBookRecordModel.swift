@@ -9,7 +9,7 @@ struct FlowerpotBookRecordModel: Decodable {
     let isSuccess: Bool?
     let code: Int?
     let message: String?
-    let result: [FlowerpotBookRecordData]
+    let result: [ReadingRecordData]
 }
 
 struct FlowerpotBookRecordData: Decodable {

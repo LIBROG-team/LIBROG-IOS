@@ -27,7 +27,7 @@ class FlowerPotDetailViewController: UIViewController {
     var flowerpotReadCount: Int?
     var flowerpotExp: Int?
     
-    var bookRecordArray: [FlowerpotBookRecordData]!
+    var bookRecordArray: [ReadingRecordData]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,26 +94,17 @@ extension FlowerPotDetailViewController : UICollectionViewDelegate, UICollection
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 92, height: 136)
     }
-    // COLLECTIONVIEW SELECT
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        if UIManager().isLogin() {
-//            let itemIdx = indexPath.item
-//            getItemId(itemIdx)
-//
-//            guard let itemDetailViewController = self.storyboard?
-//                    .instantiateViewController(withIdentifier: "ItemDetailVC")
-//                    as? ItemDetailViewController else {return}
-//            itemDetailViewController.itemId = self.cellItemId  //itemId
-//            itemDetailViewController.modalPresentationStyle = .fullScreen
-//            self.present(itemDetailViewController, animated: true, completion: nil)
-//        } else {
-//            UIManager().showToast(message: "로그인 후 이용 가능합니다.", viewController: self)
-//        }
-//    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let recordDetailVC = UIStoryboard(name: "RecordDetail", bundle: nil).instantiateViewController(identifier: "RecordDetailVC") as? RecordDetailViewController else {return}
+        let selectedBookData = bookRecordArray[indexPath.item]
+        recordDetailVC.recordData = selectedBookData
+        recordDetailVC.modalPresentationStyle = .fullScreen
+        self.present(recordDetailVC, animated: true, completion: nil)
+    }
 }
 // MARK: - 유저의 화분에 기록된 책 정보 가져오기 API success
 extension FlowerPotDetailViewController {
-    func userFlowepotBookRecordSuccessAPI(_ result : [FlowerpotBookRecordData]) {
+    func userFlowepotBookRecordSuccessAPI(_ result : [ReadingRecordData]) {
         self.bookRecordArray = result
         recordBookCollectionView.reloadData()
     }

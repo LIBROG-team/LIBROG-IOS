@@ -15,10 +15,6 @@ class UploadRecordViewController: UIViewController {
     
     let userId = UserDefaults.standard.string(forKey: "userId")
     var bookData: BookData!
-//    var bookTitle: String!
-//    var author: [String]!
-//    var publisher: String!
-//    var publishedDate: String!
     var starRating: Int!
     var quote: String!
     var content: String!
@@ -44,10 +40,6 @@ class UploadRecordViewController: UIViewController {
         isCompleteButtonTap = true
         uploadRecordTableView.reloadData()
     }
-    @objc func quoteTextEditingChanged(_ sender: UITextField) {
-        let text = sender.text ?? ""
-        self.quote = text
-    }
 }
 extension UploadRecordViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -63,7 +55,6 @@ extension UploadRecordViewController: UITableViewDelegate, UITableViewDataSource
             cell.postRecord(self.bookData)
             goMain()
         }
-        cell.quoteTextField.addTarget(self, action: #selector(quoteTextEditingChanged(_:)), for: .editingChanged)
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
