@@ -95,6 +95,7 @@ extension ReadingRecordViewController: UITableViewDelegate, UITableViewDataSourc
         return 3
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        tableView.contentInsetAdjustmentBehavior = .never
         let cell = UITableViewCell()
         cell.textLabel?.font = UIFont(name: "Apple SD Gothic Neo", size: 14)
         if indexPath.row == 0 { cell.textLabel?.text = filterArray[0] }
