@@ -73,6 +73,9 @@
 		23C8B4B8286EF78600432141 /* RecentBookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C8B4B6286EF78600432141 /* RecentBookCollectionViewCell.swift */; };
 		23C8B4B9286EF78600432141 /* RecentBookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23C8B4B7286EF78600432141 /* RecentBookCollectionViewCell.xib */; };
 		23C8B4BB286EFF3900432141 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C8B4BA286EFF3900432141 /* CustomTabBarController.swift */; };
+		23CC78D7288FCDAE0064DA7E /* UploadRecordInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CC78D6288FCDAE0064DA7E /* UploadRecordInput.swift */; };
+		23CC78D9288FCE370064DA7E /* UploadRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CC78D8288FCE370064DA7E /* UploadRecordModel.swift */; };
+		23CC78DB288FCEDE0064DA7E /* UploadRecordDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CC78DA288FCEDE0064DA7E /* UploadRecordDataManager.swift */; };
 		23DFD30D2878D9B1002AC8B0 /* UploadRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFD30C2878D9B1002AC8B0 /* UploadRecordViewController.swift */; };
 		23DFD3102878D9F4002AC8B0 /* UploadRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFD30E2878D9F4002AC8B0 /* UploadRecordTableViewCell.swift */; };
 		23DFD3112878D9F4002AC8B0 /* UploadRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23DFD30F2878D9F4002AC8B0 /* UploadRecordTableViewCell.xib */; };
@@ -187,6 +190,9 @@
 		23C8B4B6286EF78600432141 /* RecentBookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentBookCollectionViewCell.swift; sourceTree = "<group>"; };
 		23C8B4B7286EF78600432141 /* RecentBookCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentBookCollectionViewCell.xib; sourceTree = "<group>"; };
 		23C8B4BA286EFF3900432141 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		23CC78D6288FCDAE0064DA7E /* UploadRecordInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRecordInput.swift; sourceTree = "<group>"; };
+		23CC78D8288FCE370064DA7E /* UploadRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRecordModel.swift; sourceTree = "<group>"; };
+		23CC78DA288FCEDE0064DA7E /* UploadRecordDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRecordDataManager.swift; sourceTree = "<group>"; };
 		23DFD30C2878D9B1002AC8B0 /* UploadRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRecordViewController.swift; sourceTree = "<group>"; };
 		23DFD30E2878D9F4002AC8B0 /* UploadRecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRecordTableViewCell.swift; sourceTree = "<group>"; };
 		23DFD30F2878D9F4002AC8B0 /* UploadRecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UploadRecordTableViewCell.xib; sourceTree = "<group>"; };
@@ -505,9 +511,20 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		23CC78D5288FCD9B0064DA7E /* UploadRecordDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				23CC78D6288FCDAE0064DA7E /* UploadRecordInput.swift */,
+				23CC78D8288FCE370064DA7E /* UploadRecordModel.swift */,
+				23CC78DA288FCEDE0064DA7E /* UploadRecordDataManager.swift */,
+			);
+			path = UploadRecordDataManager;
+			sourceTree = "<group>";
+		};
 		23DFD30B2878D98D002AC8B0 /* UploadRecord */ = {
 			isa = PBXGroup;
 			children = (
+				23CC78D5288FCD9B0064DA7E /* UploadRecordDataManager */,
 				23DFD3122878D9F7002AC8B0 /* Cell */,
 				23DFD30C2878D9B1002AC8B0 /* UploadRecordViewController.swift */,
 			);
@@ -992,6 +1009,7 @@
 				23ADA9242884790C0066D15A /* NotAchievedFlowerPotViewController.swift in Sources */,
 				23ADA92D288481080066D15A /* MainPageDataManager.swift in Sources */,
 				2303F2322889A9EB00544AF6 /* LoginViewController.swift in Sources */,
+				23CC78D9288FCE370064DA7E /* UploadRecordModel.swift in Sources */,
 				D0CF2B5D2885C83C00F78104 /* ReadingRecordCollectionViewCell.swift in Sources */,
 				D0C2B086286DF28800242E71 /* FlowerpotTableViewCell.swift in Sources */,
 				231B8D4A288936F6006F44A3 /* FlowerpotDescriptionDataManager.swift in Sources */,
@@ -1000,9 +1018,11 @@
 				230524C1287D5C370081933A /* FlowerPotDetailCollectionViewCell.swift in Sources */,
 				23A5B85C287D7F73005413A3 /* AcheivedFlowerPotTableViewCell.swift in Sources */,
 				23A5B855287D6754005413A3 /* AddFlowerPotViewController.swift in Sources */,
+				23CC78DB288FCEDE0064DA7E /* UploadRecordDataManager.swift in Sources */,
 				237ECCE0288556EE000D9A71 /* ProfileViewController.swift in Sources */,
 				231B8D462889221A006F44A3 /* SwipeRecognizer.swift in Sources */,
 				238DE01F28819C00007901E6 /* MainBottomViewController.swift in Sources */,
+				23CC78D7288FCDAE0064DA7E /* UploadRecordInput.swift in Sources */,
 				D0CF2B602885C99C00F78104 /* ReadingRecordViewController.swift in Sources */,
 				23C8B4AC286EF41400432141 /* MainViewController.swift in Sources */,
 			);

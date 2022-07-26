@@ -22,6 +22,8 @@ class UploadRecordViewController: UIViewController {
     var starRating: Int!
     var quote: String!
     var content: String!
+    
+    var isCompleteButtonTap = false
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,13 +35,14 @@ class UploadRecordViewController: UIViewController {
         
         let uploadRecordNib = UINib(nibName: "UploadRecordTableViewCell", bundle: nil)
         uploadRecordTableView.register(uploadRecordNib, forCellReuseIdentifier: "UploadRecordTableViewCell")
-        
-        //bookData 정의하기
-        
     }
     // MARK: - Actions
     @IBAction func goBackButtonDidTap(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
+    }
+    @IBAction func completeButtonDidTap(_ sender: Any) {
+        isCompleteButtonTap = true
+        uploadRecordTableView.reloadData()
     }
     @objc func quoteTextEditingChanged(_ sender: UITextField) {
         let text = sender.text ?? ""
@@ -52,10 +55,14 @@ extension UploadRecordViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "UploadRecordTableViewCell", for: indexPath) as? UplodaRecordTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "UploadRecordTableViewCell", for: indexPath) as? UploadRecordTableViewCell else {
             return UITableViewCell()
         }
         cell.setBookData(self.bookData)
+        if isCompleteButtonTap == true {
+            cell.postRecord(self.bookData)
+            goMain()
+        }
         cell.quoteTextField.addTarget(self, action: #selector(quoteTextEditingChanged(_:)), for: .editingChanged)
         return cell
     }
@@ -66,5 +73,13 @@ extension UploadRecordViewController: UITableViewDelegate, UITableViewDataSource
         guard cell is MainFlowerTableViewCell else {
             return
         }
+    }
+}
+extension UploadRecordViewController {
+    func goMain() {
+        // 첫화면으로 전환
+        guard let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TabBarController") as? UITabBarController else {return}
+        tabBarController.modalPresentationStyle = .fullScreen
+        self.view.window?.windowScene?.keyWindow?.rootViewController = tabBarController
     }
 }

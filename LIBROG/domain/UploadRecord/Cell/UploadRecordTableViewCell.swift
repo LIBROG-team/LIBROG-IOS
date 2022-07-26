@@ -8,7 +8,7 @@
 import UIKit
 import Cosmos
 
-class UplodaRecordTableViewCell: UITableViewCell {
+class UploadRecordTableViewCell: UITableViewCell {
 
     @IBOutlet weak var bookImageView: UIImageView!
     @IBOutlet weak var bookTitleLabel: UILabel!
@@ -23,8 +23,8 @@ class UplodaRecordTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         // 별점 초기 설정
-        bookPointView.rating = 4
-        bookPointLabel.text = "4"
+        bookPointView.rating = 5
+        bookPointLabel.text = "5"
         bookPointView.didTouchCosmos = didTouchCosmos
     }
 
@@ -59,4 +59,20 @@ class UplodaRecordTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+}
+extension UploadRecordTableViewCell {
+    func postRecord(_ bookData: BookData) {
+        let userId = UserDefaults.standard.integer(forKey: "userId")
+        let starRating = Int(self.bookPointView.rating)
+        let quote = quoteTextField.text!
+        let content = bookReportTextView.text!
+        
+        // flowerpot id 임시, author 임시 (배열로 수정해야함)
+        let uploadRecordInput = UploadRecordInput(bookName: bookData.bookTitle, author: "", publisher: bookData.publisher, publishedDate: bookData.publishedDate, userIdx: userId, flowerPotIdx: 1, starRating: starRating, quote: quote, content: content)
+        UploadRecordDataManager().uploadRecordDataManager(uploadRecordInput, self)
+        print("POST")
+    }
+    func uploadRecordSuccessAPI(_ result: UploadRecordModel) {
+        print("POST SUCCESS: ", result)
+    }
 }
