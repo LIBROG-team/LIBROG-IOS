@@ -150,10 +150,10 @@ extension UploadViewController: UISearchControllerDelegate, UISearchResultsUpdat
 
 // MARK: - 검색 성공 시
 extension UploadViewController {
-    func kakaoSearchBookSuccessAPI(_ result : BookModel) {
+    func kakaoSearchBookSuccessAPI(_ result : KakaoBookModel) {
         let bookData = result.documents
         for book in bookData {
-            dataArray.append(BookData(bookTitle: book.title!, thumbnailURL: book.thumbnail!, author: book.authors, contents: book.contents!))
+            dataArray.append(BookData(bookTitle: book.title!, thumbnailURL: book.thumbnail!, author: book.authors, introduction: book.contents!, publisher: book.publisher!, publishedDate: book.datetime!))
         }
         self.searchCount = result.meta.pageable_count!
         resultVC.tableView.reloadData()

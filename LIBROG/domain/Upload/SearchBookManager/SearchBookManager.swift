@@ -18,7 +18,7 @@ class SearchBookManager {
 
         AF.request(url, method: .get, parameters: nil, headers: header)
             .validate()
-            .responseDecodable(of: BookModel.self) { response in
+            .responseDecodable(of: KakaoBookModel.self) { response in
                 
             switch response.result {
             case .success(let result):
