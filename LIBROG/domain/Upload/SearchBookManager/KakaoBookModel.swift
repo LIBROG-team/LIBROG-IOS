@@ -5,8 +5,8 @@
 //  Created by gomin on 2022/07/18.
 //
 
-struct BookModel: Decodable {
-    let documents: [BookDetailModel]
+struct KakaoBookModel: Decodable {
+    let documents: [KakaoBookDetailModel]
     let meta: MetaModel
 }
 
@@ -16,7 +16,7 @@ struct MetaModel: Decodable {
     let total_count: Int?
 }
 
-struct BookDetailModel: Decodable {
+struct KakaoBookDetailModel: Decodable {
     let authors: [String]
     let contents: String?
     let datetime: String?
