@@ -29,6 +29,9 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Item" image="pencil" catalog="system" id="Tru-RZ-umb">
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="goModifyButtonDidTap:" destination="Y6W-OH-hqX" id="UZR-WN-nd5"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -59,10 +62,10 @@
             </objects>
             <point key="canvasLocation" x="96" y="81"/>
         </scene>
-        <!--View Controller-->
+        <!--Modify Record View Controller-->
         <scene sceneID="Aq8-w3-Cfy">
             <objects>
-                <viewController id="38b-Ua-tRB" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ModifyRecordVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="38b-Ua-tRB" customClass="ModifyRecordViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8OT-8b-JsN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,6 +77,9 @@
                                     <navigationItem title="기록 수정하기" id="dmz-wf-ltT">
                                         <barButtonItem key="leftBarButtonItem" title="Item" image="arrow-right" id="mlS-xB-CUG">
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="goBackButtonDidTap:" destination="38b-Ua-tRB" id="ESK-pA-NDi"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -95,6 +101,9 @@
                             <constraint firstItem="FCn-3b-gS5" firstAttribute="top" secondItem="zUm-VA-cic" secondAttribute="bottom" id="yyh-39-byS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="modifyRecordTableView" destination="FCn-3b-gS5" id="Pgp-dn-wUd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wBw-9Z-tFD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
