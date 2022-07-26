@@ -46,6 +46,11 @@ class UploadRecordViewController: UIViewController {
     @IBAction func completeButtonDidTap(_ sender: Any) {
         isCompleteButtonTap = true
         uploadRecordTableView.reloadData()
+        
+        // 첫화면으로 전환
+        guard let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TabBarController") as? UITabBarController else {return}
+       tabBarController.modalPresentationStyle = .fullScreen
+       self.view.window?.windowScene?.keyWindow?.rootViewController = tabBarController
     }
     @objc func quoteTextEditingChanged(_ sender: UITextField) {
         let text = sender.text ?? ""
