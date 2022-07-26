@@ -41,6 +41,9 @@ class UploadRecordViewController: UIViewController {
     @IBAction func goBackButtonDidTap(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
+    @IBAction func completeButtonDidTap(_ sender: Any) {
+        
+    }
     @objc func quoteTextEditingChanged(_ sender: UITextField) {
         let text = sender.text ?? ""
         self.quote = text
