@@ -28,6 +28,7 @@ class RecordDetailViewController: UIViewController {
     @IBAction func goBackButtonDidTap(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
+    //
     @IBAction func goModifyButtonDidTap(_ sender: UIBarButtonItem) {
         guard let modifyVC = UIStoryboard(name: "RecordDetail", bundle: nil).instantiateViewController(identifier: "ModifyRecordVC") as? ModifyRecordViewController else {return}
         modifyVC.recordData = self.recordData
