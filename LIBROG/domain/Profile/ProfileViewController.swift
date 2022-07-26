@@ -14,6 +14,12 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var aboutMeLabel: UILabel!
     @IBOutlet weak var profileTableView: UITableView!
     
+    var flowerPotCount = 0
+    var readingBookCount = 0
+    var starRatingCount = 0
+    var quoteCount = 0
+    var bookReportCount = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,6 +30,8 @@ class ProfileViewController: UIViewController {
         
         let menuNib = UINib(nibName: "ProfileTableViewCell", bundle: nil)
         profileTableView.register(menuNib, forCellReuseIdentifier: "ProfileTableViewCell")
+        
+        StatisticDataManager().statisticDataManager(self)
     }
     
     @IBAction func settingButtonDidTap(_ sender: UIButton) {
@@ -44,15 +52,26 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         cell.selectionStyle = .none
-        if indexPath.row == 0 { cell.setProfileMenu("Leaf", "화분", 01, "개") }
-        else if indexPath.row == 1 { cell.setProfileMenu("BookBookmark", "읽은 책", 02, "권") }
-        else if indexPath.row == 2 { cell.setProfileMenu("Star", "별점", 03, "개") }
-        else if indexPath.row == 3 { cell.setProfileMenu("PencilSimpleLine", "한 줄 기록", 04, "개") }
-        else if indexPath.row == 4 { cell.setProfileMenu("NotePencil", "독서록", 05, "개") }
+        if indexPath.row == 0 { cell.setProfileMenu("Leaf", "화분", self.flowerPotCount, "개") }
+        else if indexPath.row == 1 { cell.setProfileMenu("BookBookmark", "읽은 책", self.readingBookCount, "권") }
+        else if indexPath.row == 2 { cell.setProfileMenu("Star", "별점", self.starRatingCount, "개") }
+        else if indexPath.row == 3 { cell.setProfileMenu("PencilSimpleLine", "한 줄 기록", self.quoteCount, "개") }
+        else if indexPath.row == 4 { cell.setProfileMenu("NotePencil", "독서록", self.bookReportCount, "개") }
         
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 72
+    }
+}
+
+extension ProfileViewController {
+    func statisticSuccessAPI(_ result: StatisticResultModel) {
+        self.flowerPotCount = result.flowerCnt!
+        self.readingBookCount = result.readingCnt!
+        self.starRatingCount = result.starRatingCnt!
+        self.quoteCount = result.quoteCnt!
+        self.bookReportCount = result.contentCnt!
+        profileTableView.reloadData()
     }
 }
