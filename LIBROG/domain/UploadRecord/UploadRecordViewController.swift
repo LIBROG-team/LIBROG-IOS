@@ -42,7 +42,7 @@ class UploadRecordViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func completeButtonDidTap(_ sender: Any) {
-        
+        uploadRecordTableView.reloadData()
     }
     @objc func quoteTextEditingChanged(_ sender: UITextField) {
         let text = sender.text ?? ""
@@ -55,10 +55,11 @@ extension UploadRecordViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "UploadRecordTableViewCell", for: indexPath) as? UplodaRecordTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "UploadRecordTableViewCell", for: indexPath) as? UploadRecordTableViewCell else {
             return UITableViewCell()
         }
         cell.setBookData(self.bookData)
+        cell.postRecord(self.bookData)
         cell.quoteTextField.addTarget(self, action: #selector(quoteTextEditingChanged(_:)), for: .editingChanged)
         return cell
     }

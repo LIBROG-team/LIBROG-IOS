@@ -9,7 +9,7 @@ struct UploadRecordModel: Decodable {
     let isSuccess: Bool?
     let code: Int?
     let message: String?
-    let result: [UploadRecordResultModel]
+    let result: UploadRecordResultModel
 }
 struct UploadRecordResultModel : Decodable {
     let createdRecordId: Int?
