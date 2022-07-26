@@ -22,6 +22,8 @@ class UploadRecordViewController: UIViewController {
     var starRating: Int!
     var quote: String!
     var content: String!
+    
+    var isCompleteButtonTap = false
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +44,7 @@ class UploadRecordViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func completeButtonDidTap(_ sender: Any) {
+        isCompleteButtonTap = true
         uploadRecordTableView.reloadData()
     }
     @objc func quoteTextEditingChanged(_ sender: UITextField) {
@@ -59,7 +62,10 @@ extension UploadRecordViewController: UITableViewDelegate, UITableViewDataSource
             return UITableViewCell()
         }
         cell.setBookData(self.bookData)
-        cell.postRecord(self.bookData)
+        if isCompleteButtonTap == true {
+            cell.postRecord(self.bookData)
+            isCompleteButtonTap = false
+        }
         cell.quoteTextField.addTarget(self, action: #selector(quoteTextEditingChanged(_:)), for: .editingChanged)
         return cell
     }

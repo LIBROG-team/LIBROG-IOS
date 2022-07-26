@@ -63,7 +63,7 @@ class UploadRecordTableViewCell: UITableViewCell {
 extension UploadRecordTableViewCell {
     func postRecord(_ bookData: BookData) {
         let userId = UserDefaults.standard.integer(forKey: "userId")
-        let starRating = Int(bookPointView.rating)
+        let starRating = Int(self.bookPointView.rating)
         let quote = quoteTextField.text!
         let content = bookReportTextView.text!
         
