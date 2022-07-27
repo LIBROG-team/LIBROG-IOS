@@ -69,7 +69,6 @@ extension UploadRecordTableViewCell {
         
         let uploadRecordInput = UploadRecordInput(bookName: bookData.bookTitle, authorArr: bookData.author, publisher: bookData.publisher, publishedDate: bookData.publishedDate, bookInstruction: bookData.introduction, bookImgUrl: bookData.thumbnailURL, userIdx: userId, starRating: starRating, quote: quote, content: content)
         UploadRecordDataManager().uploadRecordDataManager(uploadRecordInput, self)
-        print("POST")
     }
     func uploadRecordSuccessAPI(_ result: UploadRecordModel) {
         print("POST SUCCESS: ", result)

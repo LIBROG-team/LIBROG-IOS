@@ -11,10 +11,10 @@ import Kingfisher
 
 class ReadingRecordDataManager {
     let url = UserDefaults.standard.string(forKey: "url")
-    let userId = UserDefaults.standard.string(forKey: "userId")
+    let userId = UserDefaults.standard.integer(forKey: "userId")
     
     func readingRecordDataManager(_ viewcontroller: ReadingRecordViewController) {
-        AF.request(url! + "records/user/\(userId!)",
+        AF.request(url! + "records/user/\(userId)",
                    method: .get,
                    parameters: nil)
             .validate()
