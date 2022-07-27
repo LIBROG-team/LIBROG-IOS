@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
 
         guard let text = self.loginTitleLabel.text else { return }
         let attributeString = NSMutableAttributedString(string: text)
-        attributeString.addAttribute(.foregroundColor, value: UIColor(named: "LIBROGColor"), range: (text as NSString).range(of: "리브로그"))
+        attributeString.addAttribute(.foregroundColor, value: UIColor(named: "LIBROGColor")!, range: (text as NSString).range(of: "리브로그"))
         self.loginTitleLabel.attributedText = attributeString
     }
     
@@ -31,7 +31,9 @@ class LoginViewController: UIViewController {
     }
 }
 extension LoginViewController {
-    func loginSuccessAPI() {
+    func loginSuccessAPI(_ result: KakaoLoginResultModel) {
+        guard let userId = result.idx else {return}
+        UserDefaults.standard.set(userId, forKey: "userId")
         self.goMain()
     }
     func goMain() {

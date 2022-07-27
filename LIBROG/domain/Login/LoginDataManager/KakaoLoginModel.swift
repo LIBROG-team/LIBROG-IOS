@@ -13,6 +13,7 @@ struct KakaoLoginModel: Decodable {
 }
 struct KakaoLoginResultModel: Decodable {
     let message: String?
+    let idx: Int?
     let eamil: String?
     let name: String?
     let profileImgUrl: String?
