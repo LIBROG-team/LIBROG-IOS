@@ -12,65 +12,21 @@ import KakaoSDKCommon
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var loginTitleLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        guard let text = self.loginTitleLabel.text else { return }
+        let attributeString = NSMutableAttributedString(string: text)
+        attributeString.addAttribute(.foregroundColor, value: UIColor(named: "LIBROGColor"), range: (text as NSString).range(of: "리브로그"))
+        self.loginTitleLabel.attributedText = attributeString
     }
     
     @IBAction func kakaoLoginButtonDidTap(_ sender: UIButton) {
-        // 카카오톡 설치 여부 확인
-        if (UserApi.isKakaoTalkLoginAvailable()) {
-            UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
-                if let error = error {
-                    print(error)
-                }
-                else {
-                    print("loginWithKakaoTalk() success.")
-
-                    //do something
-                    _ = oauthToken
-                }
-            }
-        }
-        else {
-            // MARK: 카카오톡 로그인 - 웹으로 이동
-            UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
-               if let error = error {
-                 print(error)
-               }
-               else {
-                print("loginWithKakaoAccount() success.")
-                
-                //do something
-                _ = oauthToken
-                   let accessToken = oauthToken?.accessToken
-                   self.setUserInfo()
-               }
-            }
-        }
+        KakaoLoginManager().kakaoLogin(self)
     }
     @IBAction func kakaoLogoutButtonDidTap(_ sender: UIButton) {
-        UserApi.shared.logout {(error) in
-            if let error = error {
-                print(error)
-            }
-            else {
-                print("logout() success.")
-            }
-        }
-    }
-    func setUserInfo() {
-        //사용자 관리 api 호출
-        UserApi.shared.me() {(user, error) in
-            if let error = error {
-                print(error)
-            }
-            else {
-                print("me() success.")
-        //do something
-                _ = user
-            }
-        }
+        KakaoLoginManager().kakaoLogout()
     }
 }
