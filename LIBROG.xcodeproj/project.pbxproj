@@ -30,6 +30,7 @@
 		234036002891992000C9AB4D /* ModifyRecordInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234035FF2891992000C9AB4D /* ModifyRecordInput.swift */; };
 		234036022891992800C9AB4D /* ModifyRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234036012891992800C9AB4D /* ModifyRecordModel.swift */; };
 		234036042891993500C9AB4D /* ModifyRecordDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234036032891993500C9AB4D /* ModifyRecordDataManager.swift */; };
+		234036062891AD3D00C9AB4D /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 234036052891AD3D00C9AB4D /* Register.storyboard */; };
 		234AB650288A633D009FBB59 /* AchievedFlowerPotSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AB64F288A633D009FBB59 /* AchievedFlowerPotSearchViewController.swift */; };
 		234AB652288A6A36009FBB59 /* NotAchievedFlowerPotSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AB651288A6A36009FBB59 /* NotAchievedFlowerPotSearchViewController.swift */; };
 		235523472881C47200EDE3E1 /* FlowerPotDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235523462881C47200EDE3E1 /* FlowerPotDescriptionViewController.swift */; };
@@ -157,6 +158,7 @@
 		234035FF2891992000C9AB4D /* ModifyRecordInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyRecordInput.swift; sourceTree = "<group>"; };
 		234036012891992800C9AB4D /* ModifyRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyRecordModel.swift; sourceTree = "<group>"; };
 		234036032891993500C9AB4D /* ModifyRecordDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyRecordDataManager.swift; sourceTree = "<group>"; };
+		234036052891AD3D00C9AB4D /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		234AB64F288A633D009FBB59 /* AchievedFlowerPotSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievedFlowerPotSearchViewController.swift; sourceTree = "<group>"; };
 		234AB651288A6A36009FBB59 /* NotAchievedFlowerPotSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotAchievedFlowerPotSearchViewController.swift; sourceTree = "<group>"; };
 		235523462881C47200EDE3E1 /* FlowerPotDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerPotDescriptionViewController.swift; sourceTree = "<group>"; };
@@ -511,6 +513,7 @@
 				237ECCE928857544000D9A71 /* Setting.storyboard */,
 				2303F22E2889A9CD00544AF6 /* Login.storyboard */,
 				23AB709C288FFAD700503366 /* RecordDetail.storyboard */,
+				234036052891AD3D00C9AB4D /* Register.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -905,6 +908,7 @@
 				D0CF2B5E2885C83C00F78104 /* ReadingRecordCollectionViewCell.xib in Resources */,
 				23C8B4B9286EF78600432141 /* RecentBookCollectionViewCell.xib in Resources */,
 				237ECCEA28857544000D9A71 /* Setting.storyboard in Resources */,
+				234036062891AD3D00C9AB4D /* Register.storyboard in Resources */,
 				D0C2B056286DC9BE00242E71 /* Main.storyboard in Resources */,
 				23ADA91D28846B240066D15A /* AcheivedFlowerPot.storyboard in Resources */,
 				23ADA9112884698F0066D15A /* UploadRecord.storyboard in Resources */,

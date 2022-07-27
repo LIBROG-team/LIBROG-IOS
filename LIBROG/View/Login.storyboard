@@ -25,7 +25,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27H-uF-r3U">
-                                <rect key="frame" x="45" y="192" width="263" height="58"/>
+                                <rect key="frame" x="45" y="197" width="263" height="58"/>
                                 <attributedString key="attributedText">
                                     <fragment content="더 편리한 전자 책 리브로그에 오신 것을 환영합니다.">
                                         <attributes>
@@ -38,7 +38,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdj-Bh-eYk">
-                                <rect key="frame" x="45" y="315" width="39" height="18"/>
+                                <rect key="frame" x="45" y="320" width="39" height="18"/>
                                 <attributedString key="attributedText">
                                     <fragment content="이메일">
                                         <attributes>
@@ -51,12 +51,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="이메일을 입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zaa-gh-agz">
-                                <rect key="frame" x="45" y="347" width="324" height="18.5"/>
+                                <rect key="frame" x="45" y="352" width="324" height="18.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvR-75-lbc">
-                                <rect key="frame" x="45" y="391.5" width="52" height="18"/>
+                                <rect key="frame" x="45" y="396.5" width="52" height="18"/>
                                 <attributedString key="attributedText">
                                     <fragment content="비밀번호">
                                         <attributes>
@@ -79,53 +79,145 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ip-Eo-c2k">
-                                <rect key="frame" x="45" y="370.5" width="324" height="1"/>
+                                <rect key="frame" x="45" y="375.5" width="324" height="1"/>
                                 <color key="backgroundColor" name="LIBROGColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="aiM-ZH-VwR"/>
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호를 입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1se-SK-NAw">
-                                <rect key="frame" x="45" y="423.5" width="324" height="18.5"/>
+                                <rect key="frame" x="45" y="428.5" width="324" height="18.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tXU-YG-rj4">
-                                <rect key="frame" x="45" y="447" width="324" height="1"/>
+                                <rect key="frame" x="45" y="452" width="324" height="1"/>
                                 <color key="backgroundColor" name="LIBROGColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="WIZ-bT-2Fq"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lhe-1W-anJ">
+                                <rect key="frame" x="45" y="500" width="324" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="xCH-mP-DCn"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="로그인">
+                                            <attributes>
+                                                <font key="NSFont" size="15" name="AppleSDGothicNeo-SemiBold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuq-oA-dFi">
+                                <rect key="frame" x="169.5" y="558" width="75" height="28"/>
+                                <color key="tintColor" name="Nomal"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="이메일 찾기">
+                                            <attributes>
+                                                <font key="NSFont" size="11" name="AppleSDGothicNeo-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" name="Nomal"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8H-YK-TrN">
+                                <rect key="frame" x="75.5" y="558" width="63" height="28"/>
+                                <color key="tintColor" name="Nomal"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="회원가입">
+                                            <attributes>
+                                                <font key="NSFont" size="11" name="AppleSDGothicNeo-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" name="Nomal"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aM6-7K-GsS">
+                                <rect key="frame" x="275.5" y="558" width="84" height="28"/>
+                                <color key="tintColor" name="Nomal"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="비밀번호 찾기">
+                                            <attributes>
+                                                <color key="NSColor" red="0.48538726151769396" green="0.5180269815799684" blue="0.55652667388989907" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="11" name="AppleSDGothicNeo-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" name="Nomal"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9f-wT-8s5">
+                                <rect key="frame" x="150.5" y="563.5" width="4" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" name="LIBROGColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afa-MY-PFq">
+                                <rect key="frame" x="259.5" y="563.5" width="4" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" name="LIBROGColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="8Ip-Eo-c2k" firstAttribute="leading" secondItem="zaa-gh-agz" secondAttribute="leading" id="0qw-eQ-B3n"/>
+                            <constraint firstItem="Lhe-1W-anJ" firstAttribute="top" secondItem="tXU-YG-rj4" secondAttribute="bottom" constant="47" id="3EE-ez-KtF"/>
                             <constraint firstItem="1se-SK-NAw" firstAttribute="leading" secondItem="pvR-75-lbc" secondAttribute="leading" id="4CQ-Zx-KED"/>
                             <constraint firstItem="tXU-YG-rj4" firstAttribute="trailing" secondItem="1se-SK-NAw" secondAttribute="trailing" id="8Y8-Ts-DFq"/>
+                            <constraint firstItem="U8H-YK-TrN" firstAttribute="centerY" secondItem="zuq-oA-dFi" secondAttribute="centerY" id="8sq-Xh-Trv"/>
                             <constraint firstItem="zaa-gh-agz" firstAttribute="top" secondItem="rdj-Bh-eYk" secondAttribute="bottom" constant="14" id="DF8-lZ-IZR"/>
+                            <constraint firstItem="Afa-MY-PFq" firstAttribute="centerY" secondItem="zuq-oA-dFi" secondAttribute="centerY" id="HtE-9Q-qns"/>
                             <constraint firstItem="tXU-YG-rj4" firstAttribute="top" secondItem="1se-SK-NAw" secondAttribute="bottom" constant="5" id="LYh-d7-fJg"/>
+                            <constraint firstItem="aM6-7K-GsS" firstAttribute="centerY" secondItem="zuq-oA-dFi" secondAttribute="centerY" id="N1f-C4-lGB"/>
                             <constraint firstItem="tXU-YG-rj4" firstAttribute="leading" secondItem="1se-SK-NAw" secondAttribute="leading" id="OS5-qu-vBL"/>
+                            <constraint firstItem="zuq-oA-dFi" firstAttribute="centerX" secondItem="Lhe-1W-anJ" secondAttribute="centerX" id="PjP-T5-IpJ"/>
                             <constraint firstItem="UPf-er-QED" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="78" id="QVU-9Y-mhd"/>
+                            <constraint firstItem="zuq-oA-dFi" firstAttribute="leading" secondItem="Y9f-wT-8s5" secondAttribute="trailing" constant="15" id="QdJ-3L-buv"/>
                             <constraint firstItem="27H-uF-r3U" firstAttribute="leading" secondItem="UPf-er-QED" secondAttribute="leading" id="TBY-YE-Idb"/>
+                            <constraint firstItem="Lhe-1W-anJ" firstAttribute="leading" secondItem="1se-SK-NAw" secondAttribute="leading" id="WYb-mN-vZZ"/>
+                            <constraint firstItem="Y9f-wT-8s5" firstAttribute="centerY" secondItem="zuq-oA-dFi" secondAttribute="centerY" id="Xg1-6K-KcZ"/>
                             <constraint firstItem="pvR-75-lbc" firstAttribute="top" secondItem="zaa-gh-agz" secondAttribute="bottom" constant="26" id="YBF-xa-5fd"/>
                             <constraint firstItem="rdj-Bh-eYk" firstAttribute="leading" secondItem="27H-uF-r3U" secondAttribute="leading" id="Zc4-So-d1f"/>
                             <constraint firstItem="8Ip-Eo-c2k" firstAttribute="trailing" secondItem="zaa-gh-agz" secondAttribute="trailing" id="bm7-dx-l26"/>
+                            <constraint firstItem="zuq-oA-dFi" firstAttribute="top" secondItem="Lhe-1W-anJ" secondAttribute="bottom" constant="18" id="c4f-cY-gWi"/>
                             <constraint firstItem="8Ip-Eo-c2k" firstAttribute="top" secondItem="zaa-gh-agz" secondAttribute="bottom" constant="5" id="dFB-Ps-l4r"/>
                             <constraint firstItem="UPf-er-QED" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="45" id="eo7-zI-uEn"/>
                             <constraint firstItem="1se-SK-NAw" firstAttribute="trailing" secondItem="zaa-gh-agz" secondAttribute="trailing" id="goN-b6-VXp"/>
                             <constraint firstItem="gsj-CH-lTC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="60" id="iCD-gq-lZC"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="gsj-CH-lTC" secondAttribute="bottom" constant="60" id="ktO-aM-XOL"/>
+                            <constraint firstItem="zuq-oA-dFi" firstAttribute="leading" secondItem="U8H-YK-TrN" secondAttribute="trailing" constant="31" id="lM8-Ag-XIc"/>
+                            <constraint firstItem="aM6-7K-GsS" firstAttribute="leading" secondItem="zuq-oA-dFi" secondAttribute="trailing" constant="31" id="lWR-k7-9pc"/>
                             <constraint firstItem="pvR-75-lbc" firstAttribute="leading" secondItem="zaa-gh-agz" secondAttribute="leading" id="pHI-Sk-aGO"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zaa-gh-agz" secondAttribute="trailing" constant="45" id="qO0-4l-tBG"/>
-                            <constraint firstItem="27H-uF-r3U" firstAttribute="top" secondItem="UPf-er-QED" secondAttribute="bottom" constant="12" id="s7y-7L-gOJ"/>
+                            <constraint firstItem="27H-uF-r3U" firstAttribute="top" secondItem="UPf-er-QED" secondAttribute="bottom" constant="17" id="s7y-7L-gOJ"/>
                             <constraint firstItem="1se-SK-NAw" firstAttribute="top" secondItem="pvR-75-lbc" secondAttribute="bottom" constant="14" id="sly-am-pg6"/>
+                            <constraint firstItem="Lhe-1W-anJ" firstAttribute="trailing" secondItem="1se-SK-NAw" secondAttribute="trailing" id="wYD-4l-uK4"/>
                             <constraint firstItem="zaa-gh-agz" firstAttribute="leading" secondItem="rdj-Bh-eYk" secondAttribute="leading" id="wqM-eU-BbW"/>
                             <constraint firstItem="rdj-Bh-eYk" firstAttribute="top" secondItem="27H-uF-r3U" secondAttribute="bottom" constant="65" id="yTw-ee-g5G"/>
+                            <constraint firstItem="Afa-MY-PFq" firstAttribute="leading" secondItem="zuq-oA-dFi" secondAttribute="trailing" constant="15" id="zFj-TS-8eh"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loginButton" destination="Lhe-1W-anJ" id="Ksp-GI-e0g"/>
                         <outlet property="loginTitleLabel" destination="27H-uF-r3U" id="BTE-BD-9pb"/>
                     </connections>
                 </viewController>
@@ -139,6 +231,9 @@
         <image name="logo_green" width="27" height="58"/>
         <namedColor name="LIBROGColor">
             <color red="0.3919999897480011" green="0.74500000476837158" blue="0.47099998593330383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Nomal">
+            <color red="0.53700000047683716" green="0.53700000047683716" blue="0.53700000047683716" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
