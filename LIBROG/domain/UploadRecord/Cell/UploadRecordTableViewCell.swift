@@ -67,8 +67,7 @@ extension UploadRecordTableViewCell {
         let quote = quoteTextField.text!
         let content = bookReportTextView.text!
         
-        // flowerpot id 임시, author 임시 (배열로 수정해야함)
-        let uploadRecordInput = UploadRecordInput(bookName: bookData.bookTitle, author: "", publisher: bookData.publisher, publishedDate: bookData.publishedDate, userIdx: userId, flowerPotIdx: 1, starRating: starRating, quote: quote, content: content)
+        let uploadRecordInput = UploadRecordInput(bookName: bookData.bookTitle, authorArr: bookData.author, publisher: bookData.publisher, publishedDate: bookData.publishedDate, bookInstruction: bookData.introduction, bookImgUrl: bookData.thumbnailURL, userIdx: userId, starRating: starRating, quote: quote, content: content)
         UploadRecordDataManager().uploadRecordDataManager(uploadRecordInput, self)
         print("POST")
     }
