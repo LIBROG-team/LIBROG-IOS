@@ -25,8 +25,22 @@ class LoginViewController: UIViewController {
     
     @IBAction func kakaoLoginButtonDidTap(_ sender: UIButton) {
         KakaoLoginManager().kakaoLogin(self)
+        let accessToken = UserDefaults.standard.string(forKey: "accessToken")
+        let kakaoLoginInput = KakaoLoginInput(accessToken: accessToken)
+        LoginDataManager().kakaoLoginDataManager(kakaoLoginInput, self)
     }
     @IBAction func kakaoLogoutButtonDidTap(_ sender: UIButton) {
         KakaoLoginManager().kakaoLogout()
+    }
+}
+extension LoginViewController {
+    func loginSuccessAPI() {
+        self.goMain()
+    }
+    func goMain() {
+        // 첫화면으로 전환
+        guard let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TabBarController") as? UITabBarController else {return}
+        tabBarController.modalPresentationStyle = .fullScreen
+        self.view.window?.windowScene?.keyWindow?.rootViewController = tabBarController
     }
 }

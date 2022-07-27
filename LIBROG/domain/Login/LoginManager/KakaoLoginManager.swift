@@ -24,6 +24,12 @@ class KakaoLoginManager {
 
                     //do something
                     _ = oauthToken
+                    let accessToken = oauthToken?.accessToken
+                    let refreshToken = oauthToken?.refreshToken
+                    UserDefaults.standard.set(accessToken, forKey: "accessToken")
+                    UserDefaults.standard.set(refreshToken, forKey: "refreshToken")
+                    
+                    self.setKakaoUserInfo()
                 }
             }
         }
