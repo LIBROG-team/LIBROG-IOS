@@ -29,7 +29,7 @@ class KakaoLoginManager {
                     UserDefaults.standard.set(accessToken, forKey: "accessToken")
                     UserDefaults.standard.set(refreshToken, forKey: "refreshToken")
                     
-                    self.setKakaoUserInfo()
+                    self.setKakaoUserInfo(viewcontroller)
                 }
             }
         }
@@ -49,12 +49,12 @@ class KakaoLoginManager {
                    UserDefaults.standard.set(accessToken, forKey: "accessToken")
                    UserDefaults.standard.set(refreshToken, forKey: "refreshToken")
                    
-                   self.setKakaoUserInfo()
+                   self.setKakaoUserInfo(viewcontroller)
                }
             }
         }
     }
-    func setKakaoUserInfo() {
+    func setKakaoUserInfo(_ viewcontroller: LoginViewController) {
         //사용자 관리 api 호출
         UserApi.shared.me() {(user, error) in
             if let error = error {print(error)}
@@ -62,8 +62,16 @@ class KakaoLoginManager {
                 print("me() success.")
                 //do something
                 _ = user
+                
+                self.sendToServer(viewcontroller)
             }
         }
+    }
+    // MARK: 리브로그 서버로 accessToken 보내기
+    func sendToServer(_ viewcontroller: LoginViewController) {
+        let accessToken = UserDefaults.standard.string(forKey: "accessToken")
+        let kakaoLoginInput = KakaoLoginInput(accessToken: accessToken)
+        LoginDataManager().kakaoLoginDataManager(kakaoLoginInput, viewcontroller)
     }
     // MARK: 카카오 로그아웃
     func kakaoLogout() {

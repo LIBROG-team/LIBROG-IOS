@@ -25,9 +25,6 @@ class LoginViewController: UIViewController {
     
     @IBAction func kakaoLoginButtonDidTap(_ sender: UIButton) {
         KakaoLoginManager().kakaoLogin(self)
-        let accessToken = UserDefaults.standard.string(forKey: "accessToken")
-        let kakaoLoginInput = KakaoLoginInput(accessToken: accessToken)
-        LoginDataManager().kakaoLoginDataManager(kakaoLoginInput, self)
     }
     @IBAction func kakaoLogoutButtonDidTap(_ sender: UIButton) {
         KakaoLoginManager().kakaoLogout()
