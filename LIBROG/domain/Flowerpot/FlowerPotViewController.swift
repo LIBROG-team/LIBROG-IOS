@@ -25,6 +25,12 @@ class FlowerPotViewController: UIViewController {
         FlowerpotDataManager().flowerpotDataManager(self)
         
     }
+    @IBAction func goToAddFlowerpotDidTap(_ sender: UIButton) {
+        guard let addFlowerpotVC = UIStoryboard(name: "AddFlowerPot", bundle: nil).instantiateViewController(identifier: "AddFlowerPotVC") as? AddFlowerPotViewController else {return}
+ 
+        addFlowerpotVC.modalPresentationStyle = .fullScreen
+        self.present(addFlowerpotVC, animated: true, completion: nil)
+    }
 }
 // MARK: - 화분 관리 페이지 tableView delegate
 extension FlowerPotViewController: UITableViewDelegate, UITableViewDataSource {
