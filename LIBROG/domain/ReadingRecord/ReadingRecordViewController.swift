@@ -26,7 +26,7 @@ class ReadingRecordViewController: UIViewController {
 
         // 아래로 드래그해도 안닫히게 하기
         bottomSheet.dismissOnDraggingDownSheet = false
-        // 높이
+        // 높이 
         bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = 197
         // 뒤에 배경 컬러
         bottomSheet.scrimColor = UIColor(red: 0.25, green: 0.25, blue: 0.25, alpha: 0.54)
