@@ -24,7 +24,7 @@ class RegisterProfileViewController: UIViewController {
         // 아래로 드래그해도 안닫히게 하기
         bottomSheet.dismissOnDraggingDownSheet = false
         // 높이
-        bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = 197
+        bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = 177
         // 뒤에 배경 컬러
         bottomSheet.scrimColor = UIColor(red: 0.25, green: 0.25, blue: 0.25, alpha: 0.54)
     }
@@ -60,7 +60,7 @@ extension RegisterProfileViewController: MDCBottomSheetControllerDelegate {
     }
 }
 
-// MARK: - 독서기록 정렬 메뉴 Table view data source
+// MARK: - 이미지 종류 메뉴 Table view data source
 extension RegisterProfileViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
@@ -80,21 +80,24 @@ extension RegisterProfileViewController: UITableViewDelegate, UITableViewDataSou
     }
     //클릭 이벤트 처리
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // 버튼 config 추가
-        var config = UIButton.Configuration.plain()
-        var attText = AttributedString.init(selectArray[0])
-        
-        if indexPath.row == 0 { attText = AttributedString.init(selectArray[0])}
-        else if indexPath.row == 1 {attText = AttributedString.init(selectArray[1]) }
-        else if indexPath.row == 2 {attText = AttributedString.init(selectArray[2])}
-        
-        // config font & image 설정
-        attText.font = UIFont.systemFont(ofSize: 13.0, weight: .regular)
-        config.attributedTitle = attText
-        config.image = UIImage.init(named: "arrow-down")
-        config.imagePlacement = .leading
-        config.imagePadding = 5
-        cameraButton.configuration = config
+        if indexPath.row == 0 {
+            
+        }
+        else if indexPath.row == 1 {
+//            let librogVC = storyboard?.instantiateViewController(withIdentifier: "RegisterProfileLibrogBottomVC") as! RegisterProfileLibrogBottomViewController
+//            let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: librogVC)
+//            self.present(bottomSheet, animated: true, completion: nil)
+//
+//            // 아래로 드래그해도 안닫히게 하기
+//            bottomSheet.dismissOnDraggingDownSheet = false
+//            // 높이
+//            bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = 348
+//            // 뒤에 배경 컬러
+//            bottomSheet.scrimColor = UIColor(red: 0.25, green: 0.25, blue: 0.25, alpha: 0.54)
+        }
+        else if indexPath.row == 2 {
+            
+        }
         
         self.dismiss(animated: true, completion: nil)
         tableView.deselectRow(at: indexPath, animated: true)

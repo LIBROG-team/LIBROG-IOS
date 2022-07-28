@@ -100,6 +100,7 @@
 		23F6107A288812C700575D81 /* ReadingRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F61079288812C700575D81 /* ReadingRecordModel.swift */; };
 		23F6107C2888134C00575D81 /* ReadingRecordDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F6107B2888134C00575D81 /* ReadingRecordDataManager.swift */; };
 		9BE303E45EECD6C4F3471E37 /* Pods_LIBROG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C934BB6A1545DC5476C41F4 /* Pods_LIBROG.framework */; };
+		D047CB992892EF7C004652A3 /* RegisterProfileLibrogBottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047CB982892EF7C004652A3 /* RegisterProfileLibrogBottomViewController.swift */; };
 		D061104B288FF09500F96B65 /* StatisticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D061104A288FF09500F96B65 /* StatisticModel.swift */; };
 		D061104D288FF1ED00F96B65 /* StatisticDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D061104C288FF1ED00F96B65 /* StatisticDataManager.swift */; };
 		D07E7EB3289273140077287A /* RegisterProfileBottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07E7EB2289273140077287A /* RegisterProfileBottomViewController.swift */; };
@@ -237,6 +238,7 @@
 		4213D3509CD3CBE5B946C6E3 /* Pods-LIBROG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LIBROG.release.xcconfig"; path = "Target Support Files/Pods-LIBROG/Pods-LIBROG.release.xcconfig"; sourceTree = "<group>"; };
 		6C934BB6A1545DC5476C41F4 /* Pods_LIBROG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LIBROG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80874FB74B3F63648D20C05C /* Pods-LIBROG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LIBROG.debug.xcconfig"; path = "Target Support Files/Pods-LIBROG/Pods-LIBROG.debug.xcconfig"; sourceTree = "<group>"; };
+		D047CB982892EF7C004652A3 /* RegisterProfileLibrogBottomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProfileLibrogBottomViewController.swift; sourceTree = "<group>"; };
 		D061104A288FF09500F96B65 /* StatisticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticModel.swift; sourceTree = "<group>"; };
 		D061104C288FF1ED00F96B65 /* StatisticDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticDataManager.swift; sourceTree = "<group>"; };
 		D07E7EB2289273140077287A /* RegisterProfileBottomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProfileBottomViewController.swift; sourceTree = "<group>"; };
@@ -428,7 +430,7 @@
 				23776E1C2892644800351F3A /* RegisterTermViewController.swift */,
 				23776E1828925FFF00351F3A /* RegisterViewController.swift */,
 				23776E1A2892610E00351F3A /* RegisterProfileViewController.swift */,
-				D07E7EB2289273140077287A /* RegisterProfileBottomViewController.swift */,
+				D047CB972892EF40004652A3 /* RegisterBottomVC */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -673,6 +675,15 @@
 				4213D3509CD3CBE5B946C6E3 /* Pods-LIBROG.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D047CB972892EF40004652A3 /* RegisterBottomVC */ = {
+			isa = PBXGroup;
+			children = (
+				D07E7EB2289273140077287A /* RegisterProfileBottomViewController.swift */,
+				D047CB982892EF7C004652A3 /* RegisterProfileLibrogBottomViewController.swift */,
+			);
+			path = RegisterBottomVC;
 			sourceTree = "<group>";
 		};
 		D0611049288FF04F00F96B65 /* ProfileDataManager */ = {
@@ -1033,6 +1044,7 @@
 				230524BE287D5C060081933A /* FlowerPotDetailViewController.swift in Sources */,
 				234036002891992000C9AB4D /* ModifyRecordInput.swift in Sources */,
 				23A5B870287D9D5D005413A3 /* NoResultTableViewCell.swift in Sources */,
+				D047CB992892EF7C004652A3 /* RegisterProfileLibrogBottomViewController.swift in Sources */,
 				D0DB05B32876BC330041CEEF /* UploadViewController.swift in Sources */,
 				23ADA92828847B830066D15A /* FlowerPotSearchTabViewController.swift in Sources */,
 				23C8B4BB286EFF3900432141 /* CustomTabBarController.swift in Sources */,
