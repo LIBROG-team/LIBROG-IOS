@@ -15,6 +15,16 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginTitleLabel: UILabel!
     @IBOutlet weak var loginButton: UIButton!
     
+    @IBOutlet weak var emailUnderlineView: UIView!
+    @IBOutlet weak var passwordUnderlineView: UIView!
+    @IBOutlet weak var emailWarningLabel: UILabel!
+    @IBOutlet weak var pwWarningLabel: UILabel!
+    
+    var email: String!
+    var password: String!
+    var isValidEmail: Bool = false
+    var isValidPw: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,20 +38,47 @@ class LoginViewController: UIViewController {
         loginButton.layer.borderWidth = 1
         loginButton.layer.cornerRadius = 20
         loginButton.tintColor = UIColor(named: "LIBROGColor")
+        
+        emailWarningLabel.isHidden = true
+        pwWarningLabel.isHidden = true
+        isValidTf()
+    }
+    func isValidTf() {
+        self.loginButton.isEnabled = (self.isValidEmail && self.isValidPw) ? true : false
     }
     
+    //MARK: Actions
     @IBAction func kakaoLoginButtonDidTap(_ sender: UIButton) {
         KakaoLoginManager().kakaoLogin(self)
-    }
-    @IBAction func kakaoLogoutButtonDidTap(_ sender: UIButton) {
-        KakaoLoginManager().kakaoLogout()
     }
     @IBAction func goRegisterDidTap(_ sender: UIButton) {
         guard let registerTermVC = UIStoryboard(name: "Register", bundle: nil).instantiateViewController(identifier: "RegisterTermVC") as? RegisterTermViewController else {return}
         registerTermVC.modalPresentationStyle = .fullScreen
         self.present(registerTermVC, animated: true, completion: nil)
     }
+    @IBAction func emailTextFieldEditingChanged(_ sender: UITextField) {
+        let text = sender.text ?? ""
+        self.email = text
+        // 이메일 형식에 알맞게 & 30자 미만
+        self.isValidEmail = (text.checkEmail(str: text)) && (text.count < 30)
+        emailWarningLabel.isHidden = self.isValidEmail ? true : false
+        emailWarningLabel.text = self.isValidEmail ? "" : "이메일 형식이 유효하지 않습니다. (30자 미만)"
+        emailUnderlineView.backgroundColor = self.isValidEmail ? UIColor(named: "LIBROGColor") : .red
+        isValidTf()
+    }
+    @IBAction func pwTextFieldEditingChanged(_ sender: UITextField) {
+        let text = sender.text ?? ""
+        self.password = text
+        // 이메일 형식에 알맞게 & 30자 미만
+        self.isValidPw = (text.count >= 8) && (text.count <= 20)
+        pwWarningLabel.isHidden = self.isValidPw ? true : false
+        pwWarningLabel.text = self.isValidPw ? "" : "비밀번호는 8~20자리를 입력해주세요."
+        passwordUnderlineView.backgroundColor = self.isValidPw ? UIColor(named: "LIBROGColor") : .red
+        isValidTf()
+    }
+    
 }
+//MARK: - login success API
 extension LoginViewController {
     func loginSuccessAPI(_ result: KakaoLoginResultModel) {
         guard let userId = result.idx else {return}
@@ -53,5 +90,11 @@ extension LoginViewController {
         guard let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TabBarController") as? UITabBarController else {return}
         tabBarController.modalPresentationStyle = .fullScreen
         self.view.window?.windowScene?.keyWindow?.rootViewController = tabBarController
+    }
+}
+extension String {
+    func checkEmail(str: String) -> Bool {
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
+        return  NSPredicate(format: "SELF MATCHES %@", emailRegex).evaluate(with: str)
     }
 }
