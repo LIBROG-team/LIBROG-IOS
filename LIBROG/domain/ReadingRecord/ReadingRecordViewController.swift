@@ -70,7 +70,7 @@ extension ReadingRecordViewController : UICollectionViewDelegate, UICollectionVi
             return UICollectionViewCell()
         }
         let itemIdx = indexPath.item
-        if let url = self.bookArray[itemIdx].imgUrl {
+        if let url = self.bookArray[itemIdx].bookImgUrl {
             // if data exists
             cell.setBookImg(url)
         }
