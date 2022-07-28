@@ -1,24 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="120" id="KGk-i7-Jjw" customClass="ResultTableViewCell" customModule="LIBROG" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="362" height="120"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="137" id="KGk-i7-Jjw" customClass="ResultTableViewCell" customModule="LIBROG" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="385" height="137"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="362" height="120"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="385" height="137"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_launchScreen_white" translatesAutoresizingMaskIntoConstraints="NO" id="Bhi-Mt-tJP">
+                        <rect key="frame" x="22" y="15" width="77" height="111"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="111" id="dur-Ss-DHL"/>
+                            <constraint firstAttribute="width" constant="77" id="mPd-nU-Q6c"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKh-Fb-JAW">
+                        <rect key="frame" x="125" y="15" width="240" height="20.5"/>
+                        <attributedString key="attributedText">
+                            <fragment content="bookTitle">
+                                <attributes>
+                                    <font key="NSFont" size="17" name="AppleSDGothicNeo-SemiBold"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="njF-Dh-Xmu">
+                        <rect key="frame" x="125" y="40.5" width="240" height="17"/>
+                        <attributedString key="attributedText">
+                            <fragment content="bookAuthor">
+                                <attributes>
+                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <font key="NSFont" size="14" name="AppleSDGothicNeo-SemiBold"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVx-85-Txj">
+                        <rect key="frame" x="125" y="67.5" width="220" height="14.5"/>
+                        <attributedString key="attributedText">
+                            <fragment content="bookExplanation">
+                                <attributes>
+                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <font key="NSFont" size="12" name="AppleSDGothicNeo-Regular"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
                 <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="UKh-Fb-JAW" secondAttribute="trailing" constant="20" id="0MP-02-kzF"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="WVx-85-Txj" secondAttribute="trailing" constant="20" id="F2u-i3-NkF"/>
+                    <constraint firstItem="WVx-85-Txj" firstAttribute="leading" secondItem="njF-Dh-Xmu" secondAttribute="leading" id="Kfu-ws-azx"/>
+                    <constraint firstAttribute="bottom" secondItem="Bhi-Mt-tJP" secondAttribute="bottom" constant="14" id="MmN-Q0-Ckw"/>
+                    <constraint firstItem="UKh-Fb-JAW" firstAttribute="top" secondItem="Bhi-Mt-tJP" secondAttribute="top" id="Txo-Tl-Y4R"/>
+                    <constraint firstItem="Bhi-Mt-tJP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="ac6-za-ibd"/>
+                    <constraint firstItem="njF-Dh-Xmu" firstAttribute="leading" secondItem="UKh-Fb-JAW" secondAttribute="leading" id="fFL-d1-xqt"/>
+                    <constraint firstItem="njF-Dh-Xmu" firstAttribute="top" secondItem="UKh-Fb-JAW" secondAttribute="bottom" constant="5" id="j5c-X0-XCS"/>
+                    <constraint firstItem="UKh-Fb-JAW" firstAttribute="leading" secondItem="Bhi-Mt-tJP" secondAttribute="trailing" constant="26" id="jEY-Oo-hSJ"/>
+                    <constraint firstAttribute="trailing" secondItem="njF-Dh-Xmu" secondAttribute="trailing" constant="20" id="p7d-SO-vRx"/>
+                    <constraint firstItem="Bhi-Mt-tJP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="22" id="qEi-Zg-Ieq"/>
+                    <constraint firstItem="WVx-85-Txj" firstAttribute="top" secondItem="njF-Dh-Xmu" secondAttribute="bottom" constant="10" id="xpm-jS-xA6"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="168.11594202898553" y="155.35714285714286"/>
+            <connections>
+                <outlet property="authorLabel" destination="njF-Dh-Xmu" id="tgp-l5-wDB"/>
+                <outlet property="bookExplanationLabel" destination="WVx-85-Txj" id="VGc-dW-5mF"/>
+                <outlet property="bookImageView" destination="Bhi-Mt-tJP" id="XOd-8I-vFD"/>
+                <outlet property="bookTitleLabel" destination="UKh-Fb-JAW" id="1uQ-rb-2OK"/>
+            </connections>
+            <point key="canvasLocation" x="215.21739130434784" y="162.38839285714286"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="logo_launchScreen_white" width="87" height="187"/>
+        <namedColor name="backgroundColor">
+            <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
