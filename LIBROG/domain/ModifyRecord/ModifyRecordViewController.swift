@@ -9,7 +9,9 @@ import UIKit
 
 class ModifyRecordViewController: UIViewController {
     @IBOutlet weak var modifyRecordTableView: UITableView!
+    
     var recordData: ReadingRecordData!
+    var isCompleteButtonTap = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,10 @@ class ModifyRecordViewController: UIViewController {
     @IBAction func goBackButtonDidTap(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
+    @IBAction func modifyButtonDidTap(_ sender: UIButton) {
+        isCompleteButtonTap = true
+        modifyRecordTableView.reloadData()
+    }
 }
 extension ModifyRecordViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,9 +42,21 @@ extension ModifyRecordViewController: UITableViewDelegate, UITableViewDataSource
             return UITableViewCell()
         }
         cell.setRecordData(self.recordData)
+        if isCompleteButtonTap == true {
+            cell.postRecord(self.recordData)
+            goMain()
+        }
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 667
+    }
+}
+extension ModifyRecordViewController {
+    func goMain() {
+        // 첫화면으로 전환
+        guard let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TabBarController") as? UITabBarController else {return}
+        tabBarController.modalPresentationStyle = .fullScreen
+        self.view.window?.windowScene?.keyWindow?.rootViewController = tabBarController
     }
 }

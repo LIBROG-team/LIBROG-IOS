@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -84,8 +85,29 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FCn-3b-gS5">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bup-Y9-AVd">
+                                <rect key="frame" x="16" y="815" width="382" height="47"/>
+                                <color key="backgroundColor" name="LIBROGColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="sFz-8r-4sF"/>
+                                </constraints>
+                                <color key="tintColor" name="LIBROGColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="checkmark" catalog="system" title="  수정">
+                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                    <color key="baseBackgroundColor" name="LIBROGColor"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="modifyButtonDidTap:" destination="38b-Ua-tRB" eventType="touchUpInside" id="xcZ-r1-IEi"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8KX-h6-IIj">
+                                <rect key="frame" x="0.0" y="88" width="414" height="727"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -93,16 +115,19 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="cfL-QN-uvw" firstAttribute="trailing" secondItem="zUm-VA-cic" secondAttribute="trailing" id="7iB-1b-ZSY"/>
+                            <constraint firstAttribute="trailing" secondItem="Bup-Y9-AVd" secondAttribute="trailing" constant="16" id="Cny-b1-cuY"/>
                             <constraint firstItem="zUm-VA-cic" firstAttribute="top" secondItem="cfL-QN-uvw" secondAttribute="top" id="D2U-6i-88K"/>
-                            <constraint firstItem="cfL-QN-uvw" firstAttribute="bottom" secondItem="FCn-3b-gS5" secondAttribute="bottom" id="HlQ-5e-aIi"/>
-                            <constraint firstItem="FCn-3b-gS5" firstAttribute="leading" secondItem="cfL-QN-uvw" secondAttribute="leading" id="ad9-iJ-uNr"/>
-                            <constraint firstItem="cfL-QN-uvw" firstAttribute="trailing" secondItem="FCn-3b-gS5" secondAttribute="trailing" id="q24-nn-gnd"/>
+                            <constraint firstItem="Bup-Y9-AVd" firstAttribute="top" secondItem="8KX-h6-IIj" secondAttribute="bottom" id="QIp-5c-4ic"/>
+                            <constraint firstItem="8KX-h6-IIj" firstAttribute="top" secondItem="zUm-VA-cic" secondAttribute="bottom" id="Tju-qc-cag"/>
+                            <constraint firstItem="8KX-h6-IIj" firstAttribute="leading" secondItem="cfL-QN-uvw" secondAttribute="leading" id="WGf-0h-3Qw"/>
+                            <constraint firstItem="cfL-QN-uvw" firstAttribute="trailing" secondItem="8KX-h6-IIj" secondAttribute="trailing" id="XE4-W3-Djr"/>
+                            <constraint firstItem="cfL-QN-uvw" firstAttribute="bottom" secondItem="Bup-Y9-AVd" secondAttribute="bottom" id="Zz9-4V-fKV"/>
+                            <constraint firstItem="Bup-Y9-AVd" firstAttribute="leading" secondItem="8OT-8b-JsN" secondAttribute="leading" constant="16" id="ocw-GB-Q4M"/>
                             <constraint firstItem="zUm-VA-cic" firstAttribute="leading" secondItem="8OT-8b-JsN" secondAttribute="leading" id="yPm-bt-28A"/>
-                            <constraint firstItem="FCn-3b-gS5" firstAttribute="top" secondItem="zUm-VA-cic" secondAttribute="bottom" id="yyh-39-byS"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="modifyRecordTableView" destination="FCn-3b-gS5" id="Pgp-dn-wUd"/>
+                        <outlet property="modifyRecordTableView" destination="8KX-h6-IIj" id="7hk-UU-yow"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wBw-9Z-tFD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -112,7 +137,11 @@
     </scenes>
     <resources>
         <image name="arrow-right" width="21" height="21"/>
+        <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
+        <namedColor name="LIBROGColor">
+            <color red="0.3919999897480011" green="0.74500000476837158" blue="0.47099998593330383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

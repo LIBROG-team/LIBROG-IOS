@@ -7,11 +7,12 @@
 
 struct UploadRecordInput: Encodable {
     let bookName: String?
-    let author: String? //author 배열로 바꿔야함
+    let authorArr: [String]
     let publisher: String?
     let publishedDate: String?
+    let bookInstruction: String?
+    let bookImgUrl: String?
     let userIdx: Int?
-    let flowerPotIdx: Int?
     let starRating: Int?
     let quote: String?
     let content: String?

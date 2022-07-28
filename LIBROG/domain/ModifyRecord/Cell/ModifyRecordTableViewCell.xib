@@ -190,6 +190,9 @@
                                 </constraints>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="quoteEditingChanged:" destination="kSb-z6-Xm8" eventType="editingChanged" id="rIm-vO-Okg"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

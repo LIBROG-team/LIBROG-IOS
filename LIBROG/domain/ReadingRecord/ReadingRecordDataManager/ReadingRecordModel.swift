@@ -15,11 +15,11 @@ struct ReadingRecordData: Decodable {
     let idx:  Int?
     let bookIdx: Int?
     let flowerPotIdx: Int?
-    let userIdx: Int?
+//    let userIdx: Int?
     let date: String?
     let starRating: Int?
     let content: String?
     let quote: String?
     let status: String?
-    let imgUrl: String?
+    let bookImgUrl: String?
 }

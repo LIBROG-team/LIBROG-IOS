@@ -55,6 +55,7 @@ class FlowerPotDetailViewController: UIViewController {
     }
     func setFlowerpotData() {
         flowerPotNameLabel.text = self.flowerpotName!
+        flowerPotNameGrowthLabel.text = self.flowerpotName!
         flowerPotStartDateLabel.text = String(self.flowerpotStartDate!.split(separator: "T")[0])
         flowerPotEndDateLabel.text = String(self.flowerpotLastDate!.split(separator: "T")[0])
         bookCountLabel.text = String(self.flowerpotReadCount!)
@@ -84,7 +85,7 @@ extension FlowerPotDetailViewController : UICollectionViewDelegate, UICollection
             return UICollectionViewCell()
         }
         let itemIdx = indexPath.item
-        if let url = self.bookRecordArray[itemIdx].imgUrl {
+        if let url = self.bookRecordArray[itemIdx].bookImgUrl {
             // if data exists
             cell.setBookImg(url)
         }
