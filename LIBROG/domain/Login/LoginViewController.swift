@@ -36,6 +36,11 @@ class LoginViewController: UIViewController {
     @IBAction func kakaoLogoutButtonDidTap(_ sender: UIButton) {
         KakaoLoginManager().kakaoLogout()
     }
+    @IBAction func goRegisterDidTap(_ sender: UIButton) {
+        guard let registerTermVC = UIStoryboard(name: "Register", bundle: nil).instantiateViewController(identifier: "RegisterTermVC") as? RegisterTermViewController else {return}
+        registerTermVC.modalPresentationStyle = .fullScreen
+        self.present(registerTermVC, animated: true, completion: nil)
+    }
 }
 extension LoginViewController {
     func loginSuccessAPI(_ result: KakaoLoginResultModel) {

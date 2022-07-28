@@ -27,7 +27,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27H-uF-r3U">
                                 <rect key="frame" x="45" y="197" width="263" height="58"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="더 편리한 전자 책 리브로그에 오신 것을 환영합니다.">
+                                    <fragment content="색다른 독서 기록의 시작, 리브로그에 오신 것을 환영합니다.">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="20" name="AppleSDGothicNeo-SemiBold"/>
@@ -145,6 +145,9 @@
                                     </attributedString>
                                     <color key="baseForegroundColor" name="Nomal"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="goRegisterDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="XVA-Oe-UwX"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9f-wT-8s5">
                                 <rect key="frame" x="150.5" y="563.5" width="4" height="17"/>
