@@ -16,9 +16,7 @@ struct AddFlowerpotModel : Decodable {
 struct AddFlowerpotData: Decodable {
     let flowerDataIdx: Int?
     let name: String?
-    let engName: String?
     let type: String?
     let bloomingPeriod: String?
-    let content: String?
     let flowerImgUrl: String?
 }

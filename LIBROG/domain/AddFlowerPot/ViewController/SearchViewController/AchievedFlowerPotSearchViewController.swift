@@ -10,7 +10,7 @@ import UIKit
 class AchievedFlowerPotSearchViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var achievedTableView: UITableView!
-    var dataArray: [AddFlowerpotData] = []
+    var achievedFlowerpotArray: [AddFlowerpotData]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,13 +31,14 @@ class AchievedFlowerPotSearchViewController: UIViewController {
 // MARK: - Table view data source
 extension AchievedFlowerPotSearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let count = dataArray.count
+        let count = achievedFlowerpotArray?.count ?? 0
         if count == 0 {return 1}
         else {return count}
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if dataArray.count == 0 {
+        let count = achievedFlowerpotArray?.count ?? 0
+        if count == 0 {
             if searchBar.text == "" {
                 let cell = UITableViewCell()
                 cell.textLabel?.text = "검색창에 화분 이름을 입력해주세요"
@@ -55,13 +56,18 @@ extension AchievedFlowerPotSearchViewController: UITableViewDelegate, UITableVie
             }
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "AcheivedFlowerPotTableViewCell", for: indexPath) as? AcheivedFlowerPotTableViewCell else { return UITableViewCell() }
-//            cell.flowerPotNameLabel.text = fileteredData[indexPath.row].flowerPotName
+            let itemIdx = indexPath.item
+            if let flowerpot = self.achievedFlowerpotArray {
+                // if data exists
+                cell.setAchievedFlowerpotData(flowerpot[itemIdx])
+            }
             return cell
         }
     }
     //셀 세로 길이 조절
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if dataArray.count == 0 {return achievedTableView.frame.height}
+        let count = achievedFlowerpotArray?.count ?? 0
+        if count == 0 {return achievedTableView.frame.height}
         else {return 91}
     }
 }
@@ -75,7 +81,8 @@ extension AchievedFlowerPotSearchViewController: UISearchBarDelegate {
         dismissKeyboard()
         
         guard let searchTerm = searchBar.text, searchTerm.isEmpty == false else { return }
-        print("--> 검색어: \(searchTerm)")
+//        print("--> 검색어: \(searchTerm)")
+        SearchDataManager().searchFlowerpotDataManager(searchTerm, self)
         achievedTableView.reloadData()
     }
     //MARK: searchBar custom
@@ -92,5 +99,16 @@ extension AchievedFlowerPotSearchViewController: UISearchBarDelegate {
         
         //cancel button
         searchBar.showsCancelButton = false
+    }
+}
+//MARK: - 검색 success API
+extension AchievedFlowerPotSearchViewController {
+    func searchSuccessAPI(_ result: [AddFlowerpotData]) {
+        self.achievedFlowerpotArray = result
+        achievedTableView.reloadData()
+    }
+    func searchFailAPI() {
+        self.achievedFlowerpotArray = []
+        achievedTableView.reloadData()
     }
 }
