@@ -34,7 +34,9 @@ class UploadViewController: UITableViewController {
         resultVC.tableView.dataSource = self
         
         searchBarCustom(searchController)
-//        tableView.backgroundColor = UIColor(named: "backgroundColor")
+
+        let kakaoBookNib = UINib(nibName: "ResultTableViewCell", bundle: nil)
+        resultVC.tableView.register(kakaoBookNib, forCellReuseIdentifier: "ResultTableViewCell")
     }
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -44,7 +46,6 @@ class UploadViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//            guard let cell = tableView.dequeueReusableCell(withIdentifier: "InputTableViewCell", for: indexPath) as? InputTableViewCell else { return UITableViewCell() }
         if dataArray.count == 0 {
             setEmptyView()  //Empty View
             let cell = UITableViewCell()
@@ -68,8 +69,8 @@ class UploadViewController: UITableViewController {
             cell.layer.cornerRadius = 10
             return cell
         } else {
-            let cell = UITableViewCell()
-            cell.textLabel?.text = dataArray[indexPath.row].bookTitle
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ResultTableViewCell", for: indexPath) as? ResultTableViewCell else { return UITableViewCell() }
+            cell.kakaoBookData(dataArray[indexPath.row])
             cell.backgroundColor = UIColor(named: "backgroundColor")
             if (indexPath.row == 0) {
                 if (dataArray.count == 1) {
