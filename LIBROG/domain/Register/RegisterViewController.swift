@@ -10,6 +10,9 @@ import UIKit
 class RegisterViewController: UIViewController {
 
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var nicknameTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +30,19 @@ class RegisterViewController: UIViewController {
         guard let registerProfileVC = UIStoryboard(name: "Register", bundle: nil).instantiateViewController(identifier: "RegisterProfileVC") as? RegisterProfileViewController else {return}
         registerProfileVC.modalPresentationStyle = .fullScreen
         self.present(registerProfileVC, animated: true, completion: nil)
+        
+        let email = emailTextField.text!
+        let password = passwordTextField.text!
+        let nickname = nicknameTextField.text!
+        
+        let registerInput = RegisterInput(email: email, password: password, name: nickname)
+        RegisterDataManager().registerDataManager(registerInput, self)
     }
     
+}
+
+extension RegisterViewController {
+    func RegisterSuccessAPI(_ result: RegisterModel) {
+        
+    }
 }

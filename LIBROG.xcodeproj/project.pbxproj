@@ -103,6 +103,9 @@
 		D061104B288FF09500F96B65 /* StatisticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D061104A288FF09500F96B65 /* StatisticModel.swift */; };
 		D061104D288FF1ED00F96B65 /* StatisticDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D061104C288FF1ED00F96B65 /* StatisticDataManager.swift */; };
 		D07E7EB3289273140077287A /* RegisterProfileBottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07E7EB2289273140077287A /* RegisterProfileBottomViewController.swift */; };
+		D07E7EBC289279150077287A /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07E7EBB289279150077287A /* RegisterModel.swift */; };
+		D07E7EBE289279250077287A /* RegisterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07E7EBD289279250077287A /* RegisterInput.swift */; };
+		D07E7EC028927AC70077287A /* RegisterDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07E7EBF28927AC70077287A /* RegisterDataManager.swift */; };
 		D096410B2886B40800E5989C /* ReadingRecordBottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096410A2886B40800E5989C /* ReadingRecordBottomViewController.swift */; };
 		D0C2B04F286DC9BE00242E71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C2B04E286DC9BE00242E71 /* AppDelegate.swift */; };
 		D0C2B051286DC9BE00242E71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C2B050286DC9BE00242E71 /* SceneDelegate.swift */; };
@@ -237,6 +240,9 @@
 		D061104A288FF09500F96B65 /* StatisticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticModel.swift; sourceTree = "<group>"; };
 		D061104C288FF1ED00F96B65 /* StatisticDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticDataManager.swift; sourceTree = "<group>"; };
 		D07E7EB2289273140077287A /* RegisterProfileBottomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProfileBottomViewController.swift; sourceTree = "<group>"; };
+		D07E7EBB289279150077287A /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
+		D07E7EBD289279250077287A /* RegisterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInput.swift; sourceTree = "<group>"; };
+		D07E7EBF28927AC70077287A /* RegisterDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterDataManager.swift; sourceTree = "<group>"; };
 		D096410A2886B40800E5989C /* ReadingRecordBottomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingRecordBottomViewController.swift; sourceTree = "<group>"; };
 		D0C2B04B286DC9BE00242E71 /* LIBROG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LIBROG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C2B04E286DC9BE00242E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -418,9 +424,10 @@
 		23776E1728925FDD00351F3A /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				D07E7EBA289278E30077287A /* RegisterDataManager */,
+				23776E1C2892644800351F3A /* RegisterTermViewController.swift */,
 				23776E1828925FFF00351F3A /* RegisterViewController.swift */,
 				23776E1A2892610E00351F3A /* RegisterProfileViewController.swift */,
-				23776E1C2892644800351F3A /* RegisterTermViewController.swift */,
 				D07E7EB2289273140077287A /* RegisterProfileBottomViewController.swift */,
 			);
 			path = Register;
@@ -675,6 +682,16 @@
 				D061104C288FF1ED00F96B65 /* StatisticDataManager.swift */,
 			);
 			path = ProfileDataManager;
+			sourceTree = "<group>";
+		};
+		D07E7EBA289278E30077287A /* RegisterDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				D07E7EBD289279250077287A /* RegisterInput.swift */,
+				D07E7EBB289279150077287A /* RegisterModel.swift */,
+				D07E7EBF28927AC70077287A /* RegisterDataManager.swift */,
+			);
+			path = RegisterDataManager;
 			sourceTree = "<group>";
 		};
 		D0C2B042286DC9BE00242E71 = {
@@ -1061,12 +1078,15 @@
 				D0CF2B5D2885C83C00F78104 /* ReadingRecordCollectionViewCell.swift in Sources */,
 				D0C2B086286DF28800242E71 /* FlowerpotTableViewCell.swift in Sources */,
 				231B8D4A288936F6006F44A3 /* FlowerpotDescriptionDataManager.swift in Sources */,
+				D07E7EC028927AC70077287A /* RegisterDataManager.swift in Sources */,
 				23ADA92B28847FC80066D15A /* FlowerpotModel.swift in Sources */,
 				D0C2B080286DEBD600242E71 /* FlowerPotViewController.swift in Sources */,
 				D07E7EB3289273140077287A /* RegisterProfileBottomViewController.swift in Sources */,
 				2305E773289159A000A9B6D5 /* KakaoLoginManager.swift in Sources */,
+				D07E7EBE289279250077287A /* RegisterInput.swift in Sources */,
 				230524C1287D5C370081933A /* FlowerPotDetailCollectionViewCell.swift in Sources */,
 				23A5B85C287D7F73005413A3 /* AcheivedFlowerPotTableViewCell.swift in Sources */,
+				D07E7EBC289279150077287A /* RegisterModel.swift in Sources */,
 				23A5B855287D6754005413A3 /* AddFlowerPotViewController.swift in Sources */,
 				D061104D288FF1ED00F96B65 /* StatisticDataManager.swift in Sources */,
 				23CC78DB288FCEDE0064DA7E /* UploadRecordDataManager.swift in Sources */,
