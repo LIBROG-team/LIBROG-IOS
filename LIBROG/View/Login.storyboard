@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -182,7 +182,7 @@
                                 </buttonConfiguration>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJm-ZI-hcH">
-                                <rect key="frame" x="75" y="658" width="264" height="14"/>
+                                <rect key="frame" x="87.5" y="658" width="239.5" height="14"/>
                                 <attributedString key="attributedText">
                                     <fragment content="SNS 계정을 연동하여 간편하게 로그인 할 수 있어요">
                                         <attributes>
@@ -201,7 +201,6 @@
                             <constraint firstItem="8Ip-Eo-c2k" firstAttribute="leading" secondItem="zaa-gh-agz" secondAttribute="leading" id="0qw-eQ-B3n"/>
                             <constraint firstItem="Lhe-1W-anJ" firstAttribute="top" secondItem="tXU-YG-rj4" secondAttribute="bottom" constant="47" id="3EE-ez-KtF"/>
                             <constraint firstItem="1se-SK-NAw" firstAttribute="leading" secondItem="pvR-75-lbc" secondAttribute="leading" id="4CQ-Zx-KED"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="UJm-ZI-hcH" secondAttribute="trailing" constant="75" id="6fs-iu-ifo"/>
                             <constraint firstItem="gsj-CH-lTC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="85" id="7Zd-40-MUx"/>
                             <constraint firstItem="tXU-YG-rj4" firstAttribute="trailing" secondItem="1se-SK-NAw" secondAttribute="trailing" id="8Y8-Ts-DFq"/>
                             <constraint firstItem="U8H-YK-TrN" firstAttribute="centerY" secondItem="zuq-oA-dFi" secondAttribute="centerY" id="8sq-Xh-Trv"/>
@@ -235,7 +234,6 @@
                             <constraint firstItem="Lhe-1W-anJ" firstAttribute="trailing" secondItem="1se-SK-NAw" secondAttribute="trailing" id="wYD-4l-uK4"/>
                             <constraint firstItem="zaa-gh-agz" firstAttribute="leading" secondItem="rdj-Bh-eYk" secondAttribute="leading" id="wqM-eU-BbW"/>
                             <constraint firstItem="rdj-Bh-eYk" firstAttribute="top" secondItem="27H-uF-r3U" secondAttribute="bottom" constant="65" id="yTw-ee-g5G"/>
-                            <constraint firstItem="UJm-ZI-hcH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="75" id="ysk-Cw-1Tc"/>
                             <constraint firstItem="Afa-MY-PFq" firstAttribute="leading" secondItem="zuq-oA-dFi" secondAttribute="trailing" constant="15" id="zFj-TS-8eh"/>
                         </constraints>
                     </view>
