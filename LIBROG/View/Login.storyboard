@@ -69,7 +69,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsj-CH-lTC">
-                                <rect key="frame" x="85" y="694" width="40" height="40"/>
+                                <rect key="frame" x="85" y="696" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="3aU-Bc-xZ1"/>
                                     <constraint firstAttribute="width" constant="40" id="saa-pE-joT"/>
@@ -107,7 +107,7 @@
                                     <constraint firstAttribute="height" constant="40" id="xCH-mP-DCn"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
+                                <buttonConfiguration key="configuration" style="plain" titleAlignment="center">
                                     <attributedString key="attributedTitle">
                                         <fragment content="로그인">
                                             <attributes>
@@ -116,17 +116,18 @@
                                             </attributes>
                                         </fragment>
                                     </attributedString>
+                                    <color key="baseForegroundColor" red="0.4941176471" green="0.70980392160000005" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuq-oA-dFi">
-                                <rect key="frame" x="169.5" y="558" width="75" height="28"/>
+                                <rect key="frame" x="165" y="558" width="84" height="30"/>
                                 <color key="tintColor" name="Nomal"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
                                         <fragment content="이메일 찾기">
                                             <attributes>
-                                                <font key="NSFont" size="11" name="AppleSDGothicNeo-Regular"/>
+                                                <font key="NSFont" size="13" name="AppleSDGothicNeo-Regular"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -135,14 +136,14 @@
                                 </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8H-YK-TrN">
-                                <rect key="frame" x="75.5" y="558" width="63" height="28"/>
+                                <rect key="frame" x="88" y="558" width="69" height="30"/>
                                 <color key="tintColor" name="Nomal"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
                                         <fragment content="회원가입">
                                             <attributes>
-                                                <font key="NSFont" size="11" name="AppleSDGothicNeo-Regular"/>
+                                                <font key="NSFont" size="13" name="AppleSDGothicNeo-Regular"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -154,26 +155,26 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9f-wT-8s5">
-                                <rect key="frame" x="150.5" y="563.5" width="4" height="17"/>
+                                <rect key="frame" x="159" y="564.5" width="4" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" name="LIBROGColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afa-MY-PFq">
-                                <rect key="frame" x="259.5" y="563.5" width="4" height="17"/>
+                                <rect key="frame" x="251" y="564.5" width="4" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" name="LIBROGColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxf-Dt-5iu">
-                                <rect key="frame" x="275.5" y="558" width="84" height="28"/>
+                                <rect key="frame" x="257" y="558" width="95" height="30"/>
                                 <color key="tintColor" name="Nomal"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
                                         <fragment content="비밀번호 찾기">
                                             <attributes>
-                                                <font key="NSFont" size="11" name="AppleSDGothicNeo-Regular"/>
+                                                <font key="NSFont" size="13" name="AppleSDGothicNeo-Regular"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -182,7 +183,7 @@
                                 </buttonConfiguration>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJm-ZI-hcH">
-                                <rect key="frame" x="87.5" y="658" width="239.5" height="14"/>
+                                <rect key="frame" x="87.5" y="660" width="239.5" height="14"/>
                                 <attributedString key="attributedText">
                                     <fragment content="SNS 계정을 연동하여 간편하게 로그인 할 수 있어요">
                                         <attributes>
@@ -212,7 +213,7 @@
                             <constraint firstItem="tXU-YG-rj4" firstAttribute="leading" secondItem="1se-SK-NAw" secondAttribute="leading" id="OS5-qu-vBL"/>
                             <constraint firstItem="zuq-oA-dFi" firstAttribute="centerX" secondItem="Lhe-1W-anJ" secondAttribute="centerX" id="PjP-T5-IpJ"/>
                             <constraint firstItem="UPf-er-QED" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="78" id="QVU-9Y-mhd"/>
-                            <constraint firstItem="zuq-oA-dFi" firstAttribute="leading" secondItem="Y9f-wT-8s5" secondAttribute="trailing" constant="15" id="QdJ-3L-buv"/>
+                            <constraint firstItem="zuq-oA-dFi" firstAttribute="leading" secondItem="Y9f-wT-8s5" secondAttribute="trailing" constant="2" id="QdJ-3L-buv"/>
                             <constraint firstItem="27H-uF-r3U" firstAttribute="leading" secondItem="UPf-er-QED" secondAttribute="leading" id="TBY-YE-Idb"/>
                             <constraint firstItem="Lhe-1W-anJ" firstAttribute="leading" secondItem="1se-SK-NAw" secondAttribute="leading" id="WYb-mN-vZZ"/>
                             <constraint firstItem="Y9f-wT-8s5" firstAttribute="centerY" secondItem="zuq-oA-dFi" secondAttribute="centerY" id="Xg1-6K-KcZ"/>
@@ -224,8 +225,8 @@
                             <constraint firstItem="UJm-ZI-hcH" firstAttribute="top" secondItem="zuq-oA-dFi" secondAttribute="bottom" constant="72" id="eRy-yw-oXZ"/>
                             <constraint firstItem="UPf-er-QED" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="45" id="eo7-zI-uEn"/>
                             <constraint firstItem="1se-SK-NAw" firstAttribute="trailing" secondItem="zaa-gh-agz" secondAttribute="trailing" id="goN-b6-VXp"/>
-                            <constraint firstItem="zuq-oA-dFi" firstAttribute="leading" secondItem="U8H-YK-TrN" secondAttribute="trailing" constant="31" id="lM8-Ag-XIc"/>
-                            <constraint firstItem="nxf-Dt-5iu" firstAttribute="leading" secondItem="zuq-oA-dFi" secondAttribute="trailing" constant="31" id="lxZ-CI-Zlo"/>
+                            <constraint firstItem="Y9f-wT-8s5" firstAttribute="leading" secondItem="U8H-YK-TrN" secondAttribute="trailing" constant="2" id="lM8-Ag-XIc"/>
+                            <constraint firstItem="nxf-Dt-5iu" firstAttribute="leading" secondItem="Afa-MY-PFq" secondAttribute="trailing" constant="2" id="lxZ-CI-Zlo"/>
                             <constraint firstItem="pvR-75-lbc" firstAttribute="leading" secondItem="zaa-gh-agz" secondAttribute="leading" id="pHI-Sk-aGO"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zaa-gh-agz" secondAttribute="trailing" constant="45" id="qO0-4l-tBG"/>
                             <constraint firstItem="27H-uF-r3U" firstAttribute="top" secondItem="UPf-er-QED" secondAttribute="bottom" constant="17" id="s7y-7L-gOJ"/>
@@ -234,7 +235,7 @@
                             <constraint firstItem="Lhe-1W-anJ" firstAttribute="trailing" secondItem="1se-SK-NAw" secondAttribute="trailing" id="wYD-4l-uK4"/>
                             <constraint firstItem="zaa-gh-agz" firstAttribute="leading" secondItem="rdj-Bh-eYk" secondAttribute="leading" id="wqM-eU-BbW"/>
                             <constraint firstItem="rdj-Bh-eYk" firstAttribute="top" secondItem="27H-uF-r3U" secondAttribute="bottom" constant="65" id="yTw-ee-g5G"/>
-                            <constraint firstItem="Afa-MY-PFq" firstAttribute="leading" secondItem="zuq-oA-dFi" secondAttribute="trailing" constant="15" id="zFj-TS-8eh"/>
+                            <constraint firstItem="Afa-MY-PFq" firstAttribute="leading" secondItem="zuq-oA-dFi" secondAttribute="trailing" constant="2" id="zFj-TS-8eh"/>
                         </constraints>
                     </view>
                     <connections>
@@ -244,7 +245,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="109" y="67"/>
+            <point key="canvasLocation" x="108.69565217391305" y="66.964285714285708"/>
         </scene>
     </scenes>
     <resources>
