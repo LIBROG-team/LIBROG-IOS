@@ -31,13 +31,13 @@ class RecordDetailTableViewCell: UITableViewCell {
     func setRecordData(_ recordData: ReadingRecordData) {
         guard let quote = recordData.quote else {return}
         guard let content = recordData.content else {return}
-//        bookTitleLabel.text = ""
-//        authorLabel.text = String(bookData.author.joined(separator: " ") )
-//        bookExplanationLabel.text = bookData.introduction
-//        let thumbnailURL = bookData.thumbnailURL
-//        if let url = URL(string: thumbnailURL) {
-//            bookImgView.kf.setImage(with: url, placeholder: UIImage(named: "logo22%"))
-//        }
+        bookTitleLabel.text = ""
+//        authorLabel.text = String(recordData..joined(separator: " ") )
+        bookExplanationLabel.text = recordData.content!
+        guard let thumbnailURL = recordData.bookImgUrl else {return}
+        if let url = URL(string: thumbnailURL) {
+            bookImgView.kf.setImage(with: url, placeholder: UIImage(named: "logo22%"))
+        }
         starRatingLabel.text = String(recordData.starRating!)
         starRatingView.rating = Double(recordData.starRating!)
         
