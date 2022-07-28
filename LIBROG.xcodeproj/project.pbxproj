@@ -37,6 +37,9 @@
 		2355234B2881C48A00EDE3E1 /* FlowerPotDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235523492881C48A00EDE3E1 /* FlowerPotDescriptionTableViewCell.swift */; };
 		2355234C2881C48A00EDE3E1 /* FlowerPotDescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2355234A2881C48A00EDE3E1 /* FlowerPotDescriptionTableViewCell.xib */; };
 		23766E7E2870330D005EEA8E /* UIBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23766E7D2870330D005EEA8E /* UIBezierPath.swift */; };
+		23776E1928925FFF00351F3A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23776E1828925FFF00351F3A /* RegisterViewController.swift */; };
+		23776E1B2892610E00351F3A /* RegisterProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23776E1A2892610E00351F3A /* RegisterProfileViewController.swift */; };
+		23776E1D2892644800351F3A /* RegisterTermViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23776E1C2892644800351F3A /* RegisterTermViewController.swift */; };
 		237ECCE0288556EE000D9A71 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237ECCDF288556EE000D9A71 /* ProfileViewController.swift */; };
 		237ECCE328856454000D9A71 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237ECCE228856454000D9A71 /* DateFormatter.swift */; };
 		237ECCE72885693F000D9A71 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237ECCE52885693F000D9A71 /* ProfileTableViewCell.swift */; };
@@ -165,6 +168,9 @@
 		235523492881C48A00EDE3E1 /* FlowerPotDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerPotDescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		2355234A2881C48A00EDE3E1 /* FlowerPotDescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlowerPotDescriptionTableViewCell.xib; sourceTree = "<group>"; };
 		23766E7D2870330D005EEA8E /* UIBezierPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBezierPath.swift; sourceTree = "<group>"; };
+		23776E1828925FFF00351F3A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		23776E1A2892610E00351F3A /* RegisterProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProfileViewController.swift; sourceTree = "<group>"; };
+		23776E1C2892644800351F3A /* RegisterTermViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTermViewController.swift; sourceTree = "<group>"; };
 		237ECCDF288556EE000D9A71 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		237ECCE228856454000D9A71 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		237ECCE52885693F000D9A71 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
@@ -407,6 +413,16 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		23776E1728925FDD00351F3A /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				23776E1828925FFF00351F3A /* RegisterViewController.swift */,
+				23776E1A2892610E00351F3A /* RegisterProfileViewController.swift */,
+				23776E1C2892644800351F3A /* RegisterTermViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
 		237ECCDE288556E1000D9A71 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -541,6 +557,7 @@
 		23C8B4A7286EF39000432141 /* domain */ = {
 			isa = PBXGroup;
 			children = (
+				23776E1728925FDD00351F3A /* Register */,
 				23AB70AB289009BB00503366 /* ModifyRecord */,
 				23AB709E288FFAE100503366 /* RecordDetail */,
 				2303F2302889A9D300544AF6 /* Login */,
@@ -981,6 +998,7 @@
 			files = (
 				23AB70A0288FFAF000503366 /* RecordDetailViewController.swift in Sources */,
 				23F6107A288812C700575D81 /* ReadingRecordModel.swift in Sources */,
+				23776E1D2892644800351F3A /* RegisterTermViewController.swift in Sources */,
 				231B8D4C28893701006F44A3 /* FlowerpotDescriptionModel.swift in Sources */,
 				D0C2B089286E1FD600242E71 /* UIViewExtension.swift in Sources */,
 				23AB70B128900A9A00503366 /* ModifyRecordTableViewCell.swift in Sources */,
@@ -990,6 +1008,7 @@
 				23A5B857287D6B89005413A3 /* FlowerPotTabViewController.swift in Sources */,
 				2339DA08288592B100A3DBC4 /* KakaoBookModel.swift in Sources */,
 				2305E77828915FF700A9B6D5 /* KakaoLoginInput.swift in Sources */,
+				23776E1B2892610E00351F3A /* RegisterProfileViewController.swift in Sources */,
 				2305E77A2891600100A9B6D5 /* KakaoLoginModel.swift in Sources */,
 				230524BE287D5C060081933A /* FlowerPotDetailViewController.swift in Sources */,
 				234036002891992000C9AB4D /* ModifyRecordInput.swift in Sources */,
@@ -1032,6 +1051,7 @@
 				23091F832886B69E008EC8D2 /* FlowerpotDataManager.swift in Sources */,
 				23ADA9242884790C0066D15A /* NotAchievedFlowerPotViewController.swift in Sources */,
 				23ADA92D288481080066D15A /* MainPageDataManager.swift in Sources */,
+				23776E1928925FFF00351F3A /* RegisterViewController.swift in Sources */,
 				2303F2322889A9EB00544AF6 /* LoginViewController.swift in Sources */,
 				23CC78D9288FCE370064DA7E /* UploadRecordModel.swift in Sources */,
 				23AB70A4288FFDBD00503366 /* RecordDetailTableViewCell.swift in Sources */,

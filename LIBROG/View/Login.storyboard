@@ -27,7 +27,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27H-uF-r3U">
                                 <rect key="frame" x="45" y="197" width="263" height="58"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="더 편리한 전자 책 리브로그에 오신 것을 환영합니다.">
+                                    <fragment content="색다른 독서 기록의 시작, 리브로그에 오신 것을 환영합니다.">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="20" name="AppleSDGothicNeo-SemiBold"/>
@@ -69,9 +69,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsj-CH-lTC">
-                                <rect key="frame" x="60" y="771" width="45.5" height="31"/>
+                                <rect key="frame" x="85" y="694" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3aU-Bc-xZ1"/>
+                                    <constraint firstAttribute="width" constant="40" id="saa-pE-joT"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="k.square.fill" catalog="system">
+                                <buttonConfiguration key="configuration" style="plain" image="kakaoLoginButton">
                                     <color key="baseForegroundColor" systemColor="systemYellowColor"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -145,6 +149,9 @@
                                     </attributedString>
                                     <color key="baseForegroundColor" name="Nomal"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="goRegisterDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="XVA-Oe-UwX"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9f-wT-8s5">
                                 <rect key="frame" x="150.5" y="563.5" width="4" height="17"/>
@@ -174,6 +181,19 @@
                                     <color key="baseForegroundColor" name="Nomal"/>
                                 </buttonConfiguration>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJm-ZI-hcH">
+                                <rect key="frame" x="75" y="658" width="264" height="14"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="SNS 계정을 연동하여 간편하게 로그인 할 수 있어요">
+                                        <attributes>
+                                            <color key="NSColor" red="0.31305239898989901" green="0.31305239898989901" blue="0.31305239898989901" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="12" name="AppleSDGothicNeo-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -181,8 +201,11 @@
                             <constraint firstItem="8Ip-Eo-c2k" firstAttribute="leading" secondItem="zaa-gh-agz" secondAttribute="leading" id="0qw-eQ-B3n"/>
                             <constraint firstItem="Lhe-1W-anJ" firstAttribute="top" secondItem="tXU-YG-rj4" secondAttribute="bottom" constant="47" id="3EE-ez-KtF"/>
                             <constraint firstItem="1se-SK-NAw" firstAttribute="leading" secondItem="pvR-75-lbc" secondAttribute="leading" id="4CQ-Zx-KED"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="UJm-ZI-hcH" secondAttribute="trailing" constant="75" id="6fs-iu-ifo"/>
+                            <constraint firstItem="gsj-CH-lTC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="85" id="7Zd-40-MUx"/>
                             <constraint firstItem="tXU-YG-rj4" firstAttribute="trailing" secondItem="1se-SK-NAw" secondAttribute="trailing" id="8Y8-Ts-DFq"/>
                             <constraint firstItem="U8H-YK-TrN" firstAttribute="centerY" secondItem="zuq-oA-dFi" secondAttribute="centerY" id="8sq-Xh-Trv"/>
+                            <constraint firstItem="gsj-CH-lTC" firstAttribute="top" secondItem="UJm-ZI-hcH" secondAttribute="bottom" constant="22" id="9tg-xh-oLk"/>
                             <constraint firstItem="zaa-gh-agz" firstAttribute="top" secondItem="rdj-Bh-eYk" secondAttribute="bottom" constant="14" id="DF8-lZ-IZR"/>
                             <constraint firstItem="nxf-Dt-5iu" firstAttribute="centerY" secondItem="zuq-oA-dFi" secondAttribute="centerY" id="GRD-yi-E8S"/>
                             <constraint firstItem="Afa-MY-PFq" firstAttribute="centerY" secondItem="zuq-oA-dFi" secondAttribute="centerY" id="HtE-9Q-qns"/>
@@ -199,19 +222,20 @@
                             <constraint firstItem="8Ip-Eo-c2k" firstAttribute="trailing" secondItem="zaa-gh-agz" secondAttribute="trailing" id="bm7-dx-l26"/>
                             <constraint firstItem="zuq-oA-dFi" firstAttribute="top" secondItem="Lhe-1W-anJ" secondAttribute="bottom" constant="18" id="c4f-cY-gWi"/>
                             <constraint firstItem="8Ip-Eo-c2k" firstAttribute="top" secondItem="zaa-gh-agz" secondAttribute="bottom" constant="5" id="dFB-Ps-l4r"/>
+                            <constraint firstItem="UJm-ZI-hcH" firstAttribute="top" secondItem="zuq-oA-dFi" secondAttribute="bottom" constant="72" id="eRy-yw-oXZ"/>
                             <constraint firstItem="UPf-er-QED" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="45" id="eo7-zI-uEn"/>
                             <constraint firstItem="1se-SK-NAw" firstAttribute="trailing" secondItem="zaa-gh-agz" secondAttribute="trailing" id="goN-b6-VXp"/>
-                            <constraint firstItem="gsj-CH-lTC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="60" id="iCD-gq-lZC"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="gsj-CH-lTC" secondAttribute="bottom" constant="60" id="ktO-aM-XOL"/>
                             <constraint firstItem="zuq-oA-dFi" firstAttribute="leading" secondItem="U8H-YK-TrN" secondAttribute="trailing" constant="31" id="lM8-Ag-XIc"/>
                             <constraint firstItem="nxf-Dt-5iu" firstAttribute="leading" secondItem="zuq-oA-dFi" secondAttribute="trailing" constant="31" id="lxZ-CI-Zlo"/>
                             <constraint firstItem="pvR-75-lbc" firstAttribute="leading" secondItem="zaa-gh-agz" secondAttribute="leading" id="pHI-Sk-aGO"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zaa-gh-agz" secondAttribute="trailing" constant="45" id="qO0-4l-tBG"/>
                             <constraint firstItem="27H-uF-r3U" firstAttribute="top" secondItem="UPf-er-QED" secondAttribute="bottom" constant="17" id="s7y-7L-gOJ"/>
                             <constraint firstItem="1se-SK-NAw" firstAttribute="top" secondItem="pvR-75-lbc" secondAttribute="bottom" constant="14" id="sly-am-pg6"/>
+                            <constraint firstItem="UJm-ZI-hcH" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="tKT-29-AkG"/>
                             <constraint firstItem="Lhe-1W-anJ" firstAttribute="trailing" secondItem="1se-SK-NAw" secondAttribute="trailing" id="wYD-4l-uK4"/>
                             <constraint firstItem="zaa-gh-agz" firstAttribute="leading" secondItem="rdj-Bh-eYk" secondAttribute="leading" id="wqM-eU-BbW"/>
                             <constraint firstItem="rdj-Bh-eYk" firstAttribute="top" secondItem="27H-uF-r3U" secondAttribute="bottom" constant="65" id="yTw-ee-g5G"/>
+                            <constraint firstItem="UJm-ZI-hcH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="75" id="ysk-Cw-1Tc"/>
                             <constraint firstItem="Afa-MY-PFq" firstAttribute="leading" secondItem="zuq-oA-dFi" secondAttribute="trailing" constant="15" id="zFj-TS-8eh"/>
                         </constraints>
                     </view>
@@ -226,7 +250,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="k.square.fill" catalog="system" width="128" height="114"/>
+        <image name="kakaoLoginButton" width="40" height="40"/>
         <image name="logo_green" width="27" height="58"/>
         <namedColor name="LIBROGColor">
             <color red="0.3919999897480011" green="0.74500000476837158" blue="0.47099998593330383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
