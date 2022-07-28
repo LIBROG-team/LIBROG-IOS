@@ -25,4 +25,7 @@ class RegisterTermViewController: UIViewController {
         self.present(registerVC, animated: true, completion: nil)
     }
     
+    @IBAction func goBackButtonDidTap(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }

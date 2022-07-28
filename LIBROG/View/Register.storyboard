@@ -354,7 +354,7 @@
                                         <barButtonItem key="leftBarButtonItem" title="Item" image="arrow-right" id="nGd-h5-erR">
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
-                                                <action selector="goBackButtonDidTap:" destination="5QD-OW-9A4" id="8hI-l2-y93"/>
+                                                <action selector="goBackButtonDidTap:" destination="5QD-OW-9A4" id="TvO-c5-xSi"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
