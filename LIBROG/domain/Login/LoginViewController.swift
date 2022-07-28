@@ -12,65 +12,41 @@ import KakaoSDKCommon
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var loginTitleLabel: UILabel!
+    @IBOutlet weak var loginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // '더 편한 전자책 리브로그에 오신 것을 환영합니다'
+        guard let text = self.loginTitleLabel.text else { return }
+        let attributeString = NSMutableAttributedString(string: text)
+        attributeString.addAttribute(.foregroundColor, value: UIColor(named: "LIBROGColor")!, range: (text as NSString).range(of: "리브로그"))
+        self.loginTitleLabel.attributedText = attributeString
+        // 로그인 버튼 Custom
+        loginButton.layer.borderColor = UIColor(named: "LIBROGColor")?.cgColor
+        loginButton.layer.borderWidth = 1
+        loginButton.layer.cornerRadius = 20
+        loginButton.tintColor = UIColor(named: "LIBROGColor")
     }
     
     @IBAction func kakaoLoginButtonDidTap(_ sender: UIButton) {
-        // 카카오톡 설치 여부 확인
-        if (UserApi.isKakaoTalkLoginAvailable()) {
-            UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
-                if let error = error {
-                    print(error)
-                }
-                else {
-                    print("loginWithKakaoTalk() success.")
-
-                    //do something
-                    _ = oauthToken
-                }
-            }
-        }
-        else {
-            // MARK: 카카오톡 로그인 - 웹으로 이동
-            UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
-               if let error = error {
-                 print(error)
-               }
-               else {
-                print("loginWithKakaoAccount() success.")
-                
-                //do something
-                _ = oauthToken
-                   let accessToken = oauthToken?.accessToken
-                   self.setUserInfo()
-               }
-            }
-        }
+        KakaoLoginManager().kakaoLogin(self)
     }
     @IBAction func kakaoLogoutButtonDidTap(_ sender: UIButton) {
-        UserApi.shared.logout {(error) in
-            if let error = error {
-                print(error)
-            }
-            else {
-                print("logout() success.")
-            }
-        }
+        KakaoLoginManager().kakaoLogout()
     }
-    func setUserInfo() {
-        //사용자 관리 api 호출
-        UserApi.shared.me() {(user, error) in
-            if let error = error {
-                print(error)
-            }
-            else {
-                print("me() success.")
-        //do something
-                _ = user
-            }
-        }
+}
+extension LoginViewController {
+    func loginSuccessAPI(_ result: KakaoLoginResultModel) {
+        guard let userId = result.idx else {return}
+        UserDefaults.standard.set(userId, forKey: "userId")
+        self.goMain()
+    }
+    func goMain() {
+        // 첫화면으로 전환
+        guard let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TabBarController") as? UITabBarController else {return}
+        tabBarController.modalPresentationStyle = .fullScreen
+        self.view.window?.windowScene?.keyWindow?.rootViewController = tabBarController
     }
 }

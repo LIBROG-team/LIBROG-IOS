@@ -18,9 +18,15 @@ class ModifyRecordTableViewCell: UITableViewCell {
     @IBOutlet weak var quoteTextField: UITextField!
     @IBOutlet weak var reportTextView: UITextView!
     
+    var starRating: Int!
+    var quote: String!
+    var content: String!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        reportTextView.delegate = self
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -43,5 +49,30 @@ class ModifyRecordTableViewCell: UITableViewCell {
         
         quoteTextField.text = quote
         reportTextView.text = content
+    }
+    
+    @IBAction func quoteEditingChanged(_ sender: UITextField) {
+        self.quote = sender.text!
+    }
+}
+// MARK: - 독후감 TextView delegate
+extension ModifyRecordTableViewCell: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        self.content = textView.text!
+    }
+    func textViewDidEndEditing(_ textView: UITextView) {
+        self.content = textView.text!
+    }
+}
+//MARK: - 수정 버튼 클릭 func & success API
+extension ModifyRecordTableViewCell {
+    func postRecord(_ recordData: ReadingRecordData) {
+        let idx = recordData.idx!
+        let starRating = Int(self.starRatingView.rating)
+        let modifyRecordInput = ModifyRecordInput(idx: idx, starRating: starRating, quote: self.quote, content: self.content)
+        ModifyRecordDataManager().modifyRecordDataManager(modifyRecordInput, self)
+    }
+    func modifyRecordSuccessAPI(_ result: ModifyRecordModel) {
+        print("MODIFY SUCCESS: ", result)
     }
 }

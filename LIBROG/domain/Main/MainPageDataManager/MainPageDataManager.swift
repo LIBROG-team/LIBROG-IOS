@@ -23,7 +23,7 @@ class MainPageDataManager{
             switch response.result {
             case .success(let result):
 //                print("DEBUG: ", result.result[1])
-                viewcontroller.userFlowerPotSuccessAPI(result.result[1])
+                viewcontroller.userFlowerPotSuccessAPI(result.result)
             case .failure(let error):
                 print(error.localizedDescription)
             }
