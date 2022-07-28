@@ -42,7 +42,7 @@
                         </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_launchScreen_white" translatesAutoresizingMaskIntoConstraints="NO" id="uD4-zF-xKo">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_launchScreen_white" translatesAutoresizingMaskIntoConstraints="NO" id="uD4-zF-xKo">
                         <rect key="frame" x="41" y="116.5" width="271" height="271"/>
                         <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
