@@ -12,14 +12,11 @@ struct ReadingRecordModel: Decodable {
     let result: [ReadingRecordData]
 }
 struct ReadingRecordData: Decodable {
-    let idx:  Int?
+    let readingRecordIdx:  Int?
     let bookIdx: Int?
     let flowerPotIdx: Int?
-//    let userIdx: Int?
     let date: String?
     let starRating: Int?
-    let content: String?
-    let quote: String?
     let status: String?
     let bookImgUrl: String?
 }

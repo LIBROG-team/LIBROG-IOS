@@ -35,8 +35,8 @@ class ModifyRecordTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     func setRecordData(_ recordData: ReadingRecordData) {
-        guard let quote = recordData.quote else {return}
-        guard let content = recordData.content else {return}
+//        guard let quote = recordData.quote else {return}
+//        guard let content = recordData.content else {return}
 //        bookTitleLabel.text = ""
 //        authorLabel.text = String(bookData.author.joined(separator: " ") )
 //        bookExplanationLabel.text = bookData.introduction
@@ -67,7 +67,7 @@ extension ModifyRecordTableViewCell: UITextViewDelegate {
 //MARK: - 수정 버튼 클릭 func & success API
 extension ModifyRecordTableViewCell {
     func postRecord(_ recordData: ReadingRecordData) {
-        let idx = recordData.idx!
+        let idx = recordData.bookIdx!
         let starRating = Int(self.starRatingView.rating)
         let modifyRecordInput = ModifyRecordInput(idx: idx, starRating: starRating, quote: self.quote, content: self.content)
         ModifyRecordDataManager().modifyRecordDataManager(modifyRecordInput, self)
