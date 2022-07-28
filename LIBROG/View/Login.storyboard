@@ -146,23 +146,6 @@
                                     <color key="baseForegroundColor" name="Nomal"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aM6-7K-GsS">
-                                <rect key="frame" x="275.5" y="558" width="84" height="28"/>
-                                <color key="tintColor" name="Nomal"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="비밀번호 찾기">
-                                            <attributes>
-                                                <color key="NSColor" red="0.48538726151769396" green="0.5180269815799684" blue="0.55652667388989907" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <font key="NSFont" size="11" name="AppleSDGothicNeo-Regular"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseForegroundColor" name="Nomal"/>
-                                </buttonConfiguration>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9f-wT-8s5">
                                 <rect key="frame" x="150.5" y="563.5" width="4" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -175,6 +158,22 @@
                                 <color key="textColor" name="LIBROGColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxf-Dt-5iu">
+                                <rect key="frame" x="275.5" y="558" width="84" height="28"/>
+                                <color key="tintColor" name="Nomal"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="비밀번호 찾기">
+                                            <attributes>
+                                                <font key="NSFont" size="11" name="AppleSDGothicNeo-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" name="Nomal"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -185,9 +184,9 @@
                             <constraint firstItem="tXU-YG-rj4" firstAttribute="trailing" secondItem="1se-SK-NAw" secondAttribute="trailing" id="8Y8-Ts-DFq"/>
                             <constraint firstItem="U8H-YK-TrN" firstAttribute="centerY" secondItem="zuq-oA-dFi" secondAttribute="centerY" id="8sq-Xh-Trv"/>
                             <constraint firstItem="zaa-gh-agz" firstAttribute="top" secondItem="rdj-Bh-eYk" secondAttribute="bottom" constant="14" id="DF8-lZ-IZR"/>
+                            <constraint firstItem="nxf-Dt-5iu" firstAttribute="centerY" secondItem="zuq-oA-dFi" secondAttribute="centerY" id="GRD-yi-E8S"/>
                             <constraint firstItem="Afa-MY-PFq" firstAttribute="centerY" secondItem="zuq-oA-dFi" secondAttribute="centerY" id="HtE-9Q-qns"/>
                             <constraint firstItem="tXU-YG-rj4" firstAttribute="top" secondItem="1se-SK-NAw" secondAttribute="bottom" constant="5" id="LYh-d7-fJg"/>
-                            <constraint firstItem="aM6-7K-GsS" firstAttribute="centerY" secondItem="zuq-oA-dFi" secondAttribute="centerY" id="N1f-C4-lGB"/>
                             <constraint firstItem="tXU-YG-rj4" firstAttribute="leading" secondItem="1se-SK-NAw" secondAttribute="leading" id="OS5-qu-vBL"/>
                             <constraint firstItem="zuq-oA-dFi" firstAttribute="centerX" secondItem="Lhe-1W-anJ" secondAttribute="centerX" id="PjP-T5-IpJ"/>
                             <constraint firstItem="UPf-er-QED" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="78" id="QVU-9Y-mhd"/>
@@ -205,7 +204,7 @@
                             <constraint firstItem="gsj-CH-lTC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="60" id="iCD-gq-lZC"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="gsj-CH-lTC" secondAttribute="bottom" constant="60" id="ktO-aM-XOL"/>
                             <constraint firstItem="zuq-oA-dFi" firstAttribute="leading" secondItem="U8H-YK-TrN" secondAttribute="trailing" constant="31" id="lM8-Ag-XIc"/>
-                            <constraint firstItem="aM6-7K-GsS" firstAttribute="leading" secondItem="zuq-oA-dFi" secondAttribute="trailing" constant="31" id="lWR-k7-9pc"/>
+                            <constraint firstItem="nxf-Dt-5iu" firstAttribute="leading" secondItem="zuq-oA-dFi" secondAttribute="trailing" constant="31" id="lxZ-CI-Zlo"/>
                             <constraint firstItem="pvR-75-lbc" firstAttribute="leading" secondItem="zaa-gh-agz" secondAttribute="leading" id="pHI-Sk-aGO"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zaa-gh-agz" secondAttribute="trailing" constant="45" id="qO0-4l-tBG"/>
                             <constraint firstItem="27H-uF-r3U" firstAttribute="top" secondItem="UPf-er-QED" secondAttribute="bottom" constant="17" id="s7y-7L-gOJ"/>
