@@ -30,7 +30,7 @@ class RecordDetailTableViewCell: UITableViewCell {
     }
     func setRecordData(_ recordData: RecordDetailResultModel) {
         guard let title = recordData.name else {return}
-        guard let author = recordData.author else {return}
+        let author = recordData.author
         guard let instruction = recordData.bookInstruction else {return}
         guard let start = recordData.starRating else {return}
         guard let quote = recordData.quote else {return}
@@ -38,8 +38,7 @@ class RecordDetailTableViewCell: UITableViewCell {
         guard let thumbnailURL = recordData.bookImgUrl else {return}
         
         bookTitleLabel.text = title
-//        authorLabel.text = String(recordData..joined(separator: " ") )
-        authorLabel.text = author
+        authorLabel.text = String(author.joined(separator: " ") )
         bookExplanationLabel.text = instruction
         starRatingLabel.text = String(recordData.starRating!)
         starRatingView.rating = Double(recordData.starRating!)
