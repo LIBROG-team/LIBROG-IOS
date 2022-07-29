@@ -29,11 +29,10 @@ class RecordDetailTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     func setRecordData(_ recordData: ReadingRecordData) {
-        guard let quote = recordData.quote else {return}
-        guard let content = recordData.content else {return}
+        
         bookTitleLabel.text = ""
 //        authorLabel.text = String(recordData..joined(separator: " ") )
-        bookExplanationLabel.text = recordData.content!
+//        bookExplanationLabel.text = recordData.content!
         guard let thumbnailURL = recordData.bookImgUrl else {return}
         if let url = URL(string: thumbnailURL) {
             bookImgView.kf.setImage(with: url, placeholder: UIImage(named: "logo22%"))
@@ -41,7 +40,7 @@ class RecordDetailTableViewCell: UITableViewCell {
         starRatingLabel.text = String(recordData.starRating!)
         starRatingView.rating = Double(recordData.starRating!)
         
-        quoteLabel.text = quote
-        reportTextView.text = content
+//        quoteLabel.text = quote
+//        reportTextView.text = content
     }
 }
