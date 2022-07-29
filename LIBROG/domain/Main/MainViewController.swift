@@ -72,8 +72,9 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
 }
-// MARK: - 유저의 화분 정보 가져오기 API success
+// MARK: - API success
 extension MainViewController {
+    //MARK: 유저의 화분 정보 가져오기 API success
     func userFlowerPotSuccessAPI(_ result : [FlowerpotData]) {
         if result.count != 0 {self.flowerpotData = result[0]}
         MainTableView.reloadData()

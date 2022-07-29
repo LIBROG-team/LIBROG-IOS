@@ -82,12 +82,18 @@
                     <real key="value" value="0.0"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="authorLabel" destination="sZg-Wc-7Jq" id="viC-TR-GpK"/>
+                <outlet property="bookImageView" destination="03I-ep-8wC" id="0oZ-if-c3h"/>
+                <outlet property="bookTitleLabel" destination="yM8-jL-trC" id="U46-O1-8Xh"/>
+                <outlet property="dateLabel" destination="b6d-JH-WeN" id="mLA-9x-aPL"/>
+            </connections>
             <point key="canvasLocation" x="5.0724637681159424" y="107.8125"/>
         </collectionViewCell>
     </objects>
     <resources>
         <namedColor name="LIBROGColor">
-            <color red="0.39215686274509803" green="0.74509803921568629" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.3919999897480011" green="0.74500000476837158" blue="0.47099998593330383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
