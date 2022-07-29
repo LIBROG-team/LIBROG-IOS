@@ -34,21 +34,26 @@ class ModifyRecordTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func setRecordData(_ recordData: ReadingRecordData) {
-//        guard let quote = recordData.quote else {return}
-//        guard let content = recordData.content else {return}
-//        bookTitleLabel.text = ""
-//        authorLabel.text = String(bookData.author.joined(separator: " ") )
-//        bookExplanationLabel.text = bookData.introduction
-//        let thumbnailURL = bookData.thumbnailURL
-//        if let url = URL(string: thumbnailURL) {
-//            bookImgView.kf.setImage(with: url, placeholder: UIImage(named: "logo22%"))
-//        }
+    func setRecordData(_ recordData: RecordDetailResultModel) {
+        guard let title = recordData.name else {return}
+        guard let author = recordData.author else {return}
+        guard let instruction = recordData.bookInstruction else {return}
+        guard let start = recordData.starRating else {return}
+        guard let quote = recordData.quote else {return}
+        guard let content = recordData.content else {return}
+        guard let thumbnailURL = recordData.bookImgUrl else {return}
+        
+        bookTitleLabel.text = title
+//        authorLabel.text = String(recordData..joined(separator: " ") )
+        authorLabel.text = author
+        bookExplanationLabel.text = instruction
         starRatingLabel.text = String(recordData.starRating!)
         starRatingView.rating = Double(recordData.starRating!)
-        
         quoteTextField.text = quote
         reportTextView.text = content
+        if let url = URL(string: thumbnailURL) {
+            bookImgView.kf.setImage(with: url, placeholder: UIImage(named: "logo22%"))
+        }
     }
     
     @IBAction func quoteEditingChanged(_ sender: UITextField) {
@@ -66,8 +71,8 @@ extension ModifyRecordTableViewCell: UITextViewDelegate {
 }
 //MARK: - 수정 버튼 클릭 func & success API
 extension ModifyRecordTableViewCell {
-    func postRecord(_ recordData: ReadingRecordData) {
-        let idx = recordData.bookIdx!
+    func postRecord(_ recordData: RecordDetailResultModel) {
+        let idx = recordData.readingRecordIdx!
         let starRating = Int(self.starRatingView.rating)
         let modifyRecordInput = ModifyRecordInput(idx: idx, starRating: starRating, quote: self.quote, content: self.content)
         ModifyRecordDataManager().modifyRecordDataManager(modifyRecordInput, self)

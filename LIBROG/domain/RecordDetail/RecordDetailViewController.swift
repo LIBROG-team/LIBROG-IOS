@@ -11,7 +11,8 @@ class RecordDetailViewController: UIViewController {
     @IBOutlet weak var recordDetailNB: UINavigationBar!
     @IBOutlet weak var recordDetailTableView: UITableView!
     
-    var recordData: ReadingRecordData!
+    var recordIdx: Int!
+    var recordData: RecordDetailResultModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,7 @@ class RecordDetailViewController: UIViewController {
     @IBAction func goBackButtonDidTap(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
-    //
+    // 수정하러 가는 버튼
     @IBAction func goModifyButtonDidTap(_ sender: UIBarButtonItem) {
         guard let modifyVC = UIStoryboard(name: "RecordDetail", bundle: nil).instantiateViewController(identifier: "ModifyRecordVC") as? ModifyRecordViewController else {return}
         modifyVC.recordData = self.recordData
@@ -50,5 +51,12 @@ extension RecordDetailViewController: UITableViewDelegate, UITableViewDataSource
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 667
+    }
+}
+// MARK: - 독서 상세 기록 조회 api
+extension RecordDetailViewController {
+    func recordDetailSuccessAPI(_ result: RecordDetailResultModel) {
+        self.recordData = result
+        recordDetailTableView.reloadData()
     }
 }
