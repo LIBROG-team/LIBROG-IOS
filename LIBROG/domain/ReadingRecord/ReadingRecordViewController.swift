@@ -82,8 +82,8 @@ extension ReadingRecordViewController : UICollectionViewDelegate, UICollectionVi
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let recordDetailVC = UIStoryboard(name: "RecordDetail", bundle: nil).instantiateViewController(identifier: "RecordDetailVC") as? RecordDetailViewController else {return}
-        let selectedBookData = bookArray[indexPath.item]
-        recordDetailVC.recordData = selectedBookData
+        let recordIdx = bookArray[indexPath.item].readingRecordIdx
+        recordDetailVC.recordIdx = recordIdx
         recordDetailVC.modalPresentationStyle = .fullScreen
         self.present(recordDetailVC, animated: true, completion: nil)
     }

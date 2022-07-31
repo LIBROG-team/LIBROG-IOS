@@ -97,8 +97,8 @@ extension FlowerPotDetailViewController : UICollectionViewDelegate, UICollection
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let recordDetailVC = UIStoryboard(name: "RecordDetail", bundle: nil).instantiateViewController(identifier: "RecordDetailVC") as? RecordDetailViewController else {return}
-        let selectedBookData = bookRecordArray[indexPath.item]
-        recordDetailVC.recordData = selectedBookData
+        let recordId = bookRecordArray[indexPath.item].readingRecordIdx
+        recordDetailVC.recordIdx = recordId
         recordDetailVC.modalPresentationStyle = .fullScreen
         self.present(recordDetailVC, animated: true, completion: nil)
     }
