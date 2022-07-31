@@ -74,5 +74,6 @@ extension MainBottomViewController : UICollectionViewDelegate, UICollectionViewD
 extension MainBottomViewController {
     func recentBookSuccessAPI(_ result: [RecentBookModel]) {
         self.recentBookArray = result
+        recentBookCollectionView.reloadData()
     }
 }

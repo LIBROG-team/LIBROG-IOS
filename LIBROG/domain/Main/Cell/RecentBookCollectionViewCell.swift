@@ -25,7 +25,7 @@ class RecentBookCollectionViewCell: UICollectionViewCell {
         guard let bookImg = bookData.bookImgUrl else {return}
         
         bookTitleLabel.text = title
-        authorLabel.text = String(author.joined(separator: " ") )
+//        authorLabel.text = String(author.joined(separator: " ") )
         dateLabel.text = String(date.split(separator: "T")[0])
         // 최근 읽은 책 이미지 출력
         if let url = URL(string: bookImg) {
