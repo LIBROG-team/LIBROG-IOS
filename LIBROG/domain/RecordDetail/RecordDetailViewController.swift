@@ -24,6 +24,8 @@ class RecordDetailViewController: UIViewController {
         
         let recordDetailNib = UINib(nibName: "RecordDetailTableViewCell", bundle: nil)
         recordDetailTableView.register(recordDetailNib, forCellReuseIdentifier: "RecordDetailTableViewCell")
+        
+        RecordDetailDataManager().recordDetailDataManager(self.recordIdx, self)
     }
 
     @IBAction func goBackButtonDidTap(_ sender: UIBarButtonItem) {
@@ -46,7 +48,9 @@ extension RecordDetailViewController: UITableViewDelegate, UITableViewDataSource
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecordDetailTableViewCell", for: indexPath) as? RecordDetailTableViewCell else {
             return UITableViewCell()
         }
-        cell.setRecordData(self.recordData)
+        if let data = self.recordData {
+            cell.setRecordData(data)
+        }
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

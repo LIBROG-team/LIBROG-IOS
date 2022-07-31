@@ -36,9 +36,9 @@ class ModifyRecordTableViewCell: UITableViewCell {
     }
     func setRecordData(_ recordData: RecordDetailResultModel) {
         guard let title = recordData.name else {return}
-        let author = recordData.author
+        guard let author = recordData.author else {return}
         guard let instruction = recordData.bookInstruction else {return}
-        guard let start = recordData.starRating else {return}
+        guard let star = recordData.starRating else {return}
         guard let quote = recordData.quote else {return}
         guard let content = recordData.content else {return}
         guard let thumbnailURL = recordData.bookImgUrl else {return}
@@ -46,8 +46,8 @@ class ModifyRecordTableViewCell: UITableViewCell {
         bookTitleLabel.text = title
         authorLabel.text = String(author.joined(separator: " ") )
         bookExplanationLabel.text = instruction
-        starRatingLabel.text = String(recordData.starRating!)
-        starRatingView.rating = Double(recordData.starRating!)
+        starRatingLabel.text = String(star)
+        starRatingView.rating = Double(star)
         quoteTextField.text = quote
         reportTextView.text = content
         if let url = URL(string: thumbnailURL) {
