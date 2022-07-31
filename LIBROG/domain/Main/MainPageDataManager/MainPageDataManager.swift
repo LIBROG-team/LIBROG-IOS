@@ -39,7 +39,7 @@ class MainPageDataManager{
                 
             switch response.result {
             case .success(let result):
-//                print("DEBUG: ", result.result[1])
+//                print("DEBUG: ", result)
                 viewcontroller.recentBookSuccessAPI(result)
             case .failure(let error):
                 print(error.localizedDescription)

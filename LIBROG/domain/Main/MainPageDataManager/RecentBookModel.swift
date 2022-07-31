@@ -9,7 +9,7 @@ struct RecentBookModel: Decodable {
     let userIdx: Int?
     let readingRecordIdx: Int?
     let bookName: String?
-    let author: [String]
+    let author: [String]?
     let publishedDate: String?
     let bookImgUrl: String?
     let recordedDate: String?

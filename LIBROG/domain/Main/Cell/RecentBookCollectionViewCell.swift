@@ -20,7 +20,7 @@ class RecentBookCollectionViewCell: UICollectionViewCell {
     }
     func setRecentBookData(_ bookData: RecentBookModel) {
         guard let title = bookData.bookName else {return}
-        let author = bookData.author
+        guard let author = bookData.author else {return}
         guard let date = bookData.recordedDate else {return}
         guard let bookImg = bookData.bookImgUrl else {return}
         

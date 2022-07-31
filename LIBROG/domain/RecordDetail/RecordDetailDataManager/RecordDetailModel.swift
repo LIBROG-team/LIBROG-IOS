@@ -17,7 +17,7 @@ struct RecordDetailResultModel: Decodable {
     let readingRecordIdx: Int?
     let bookImgUrl: String?
     let name: String?
-    let author: [String]
+    let author: [String]?
     let bookInstruction: String?
     let starRating: Int?
     let quote: String?
