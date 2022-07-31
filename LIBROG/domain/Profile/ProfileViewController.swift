@@ -25,11 +25,16 @@ class ProfileViewController: UIViewController {
 
         profileTableView.delegate = self
         profileTableView.dataSource = self
-        
         profileTableView.separatorStyle = .none
         
-        let menuNib = UINib(nibName: "ProfileTableViewCell", bundle: nil)
-        profileTableView.register(menuNib, forCellReuseIdentifier: "ProfileTableViewCell")
+        let introNib = UINib(nibName: "ProfileIntroTableViewCell", bundle: nil)
+        profileTableView.register(introNib, forCellReuseIdentifier: "ProfileIntroTableViewCell")
+        let statisticNib = UINib(nibName: "ProfileStatisticTableViewCell", bundle: nil)
+        profileTableView.register(statisticNib, forCellReuseIdentifier: "ProfileStatisticTableViewCell")
+        let flowerpotNib = UINib(nibName: "ProfileFlowerpotTableViewCell", bundle: nil)
+        profileTableView.register(flowerpotNib, forCellReuseIdentifier: "ProfileFlowerpotTableViewCell")
+        let logoutNib = UINib(nibName: "LogoutTableViewCell", bundle: nil)
+        profileTableView.register(logoutNib, forCellReuseIdentifier: "LogoutTableViewCell")
         
         StatisticDataManager().statisticDataManager(self)
     }
@@ -44,24 +49,50 @@ class ProfileViewController: UIViewController {
 // MARK: - 프로필 페이지 tableView delegate
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 8
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileTableViewCell", for: indexPath) as? ProfileTableViewCell else {
-            return UITableViewCell()
+        if indexPath.row == 0 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileIntroTableViewCell", for: indexPath) as? ProfileIntroTableViewCell else {
+                return UITableViewCell()
+            }
+            cell.selectionStyle = .none
+            return cell
         }
-        cell.selectionStyle = .none
-        if indexPath.row == 0 { cell.setProfileMenu("Leaf", "화분", self.flowerPotCount, "개") }
-        else if indexPath.row == 1 { cell.setProfileMenu("BookBookmark", "읽은 책", self.readingBookCount, "권") }
-        else if indexPath.row == 2 { cell.setProfileMenu("Star", "별점", self.starRatingCount, "개") }
-        else if indexPath.row == 3 { cell.setProfileMenu("PencilSimpleLine", "한 줄 기록", self.quoteCount, "개") }
-        else if indexPath.row == 4 { cell.setProfileMenu("NotePencil", "독서록", self.bookReportCount, "개") }
-        
-        return cell
+        else if indexPath.row == 1 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileFlowerpotTableViewCell", for: indexPath) as? ProfileFlowerpotTableViewCell else {
+                return UITableViewCell()
+            }
+            cell.selectionStyle = .none
+            return cell
+        }
+        else if indexPath.row == 7 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "LogoutTableViewCell", for: indexPath) as? LogoutTableViewCell else {
+                return UITableViewCell()
+            }
+            cell.selectionStyle = .none
+            return cell
+        }
+        else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileStatisticTableViewCell", for: indexPath) as? ProfileStatisticTableViewCell else {
+                return UITableViewCell()
+            }
+            cell.selectionStyle = .none
+            if indexPath.row == 2 {cell.setProfileMenu("Leaf", "화분", self.flowerPotCount, "개")}
+            else if indexPath.row == 3 { cell.setProfileMenu("BookBookmark", "읽은 책", self.readingBookCount, "권") }
+            else if indexPath.row == 4 { cell.setProfileMenu("Star", "별점", self.starRatingCount, "개") }
+            else if indexPath.row == 5 { cell.setProfileMenu("PencilSimpleLine", "한 줄 기록", self.quoteCount, "개") }
+            else if indexPath.row == 6 { cell.setProfileMenu("NotePencil", "독서록", self.bookReportCount, "개") }
+            
+            return cell
+        }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 72
+        if indexPath.row == 0 {return 128}
+        else if indexPath.row == 1 {return 120}
+        else if indexPath.row == 7 {return 80}
+        else {return 72}
     }
 }
 
