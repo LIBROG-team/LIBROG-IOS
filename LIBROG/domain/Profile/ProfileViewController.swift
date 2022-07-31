@@ -20,6 +20,8 @@ class ProfileViewController: UIViewController {
     var quoteCount = 0
     var bookReportCount = 0
     
+    var introData: IntroModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,7 +38,9 @@ class ProfileViewController: UIViewController {
         let logoutNib = UINib(nibName: "LogoutTableViewCell", bundle: nil)
         profileTableView.register(logoutNib, forCellReuseIdentifier: "LogoutTableViewCell")
         
-        StatisticDataManager().statisticDataManager(self)
+        //MARK: call api
+        ProfileDataManager().statisticDataManager(self)
+        ProfileDataManager().introDataManager(self)
     }
     
     @IBAction func settingButtonDidTap(_ sender: UIButton) {
@@ -53,13 +57,18 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // intro
         if indexPath.row == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileIntroTableViewCell", for: indexPath) as? ProfileIntroTableViewCell else {
                 return UITableViewCell()
             }
+            if let profileData = self.introData {
+                cell.setUpIntro(profileData)
+            }
             cell.selectionStyle = .none
             return cell
         }
+        // 식물도감
         else if indexPath.row == 1 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileFlowerpotTableViewCell", for: indexPath) as? ProfileFlowerpotTableViewCell else {
                 return UITableViewCell()
@@ -67,6 +76,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             cell.selectionStyle = .none
             return cell
         }
+        // logout
         else if indexPath.row == 7 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "LogoutTableViewCell", for: indexPath) as? LogoutTableViewCell else {
                 return UITableViewCell()
@@ -74,6 +84,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             cell.selectionStyle = .none
             return cell
         }
+        // user statistic
         else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileStatisticTableViewCell", for: indexPath) as? ProfileStatisticTableViewCell else {
                 return UITableViewCell()
@@ -95,8 +106,12 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         else {return 72}
     }
 }
-
+// MARK: - api success
 extension ProfileViewController {
+    func introSuccessAPI(_ result: IntroModel) {
+        self.introData = result
+        profileTableView.reloadData()
+    }
     func statisticSuccessAPI(_ result: StatisticResultModel) {
         self.flowerPotCount = result.flowerCnt!
         self.readingBookCount = result.readingCnt!
