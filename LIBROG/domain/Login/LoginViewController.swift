@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
         attributeString.addAttribute(.foregroundColor, value: UIColor(named: "LIBROGColor")!, range: (text as NSString).range(of: "리브로그"))
         self.loginTitleLabel.attributedText = attributeString
         // 로그인 버튼 Custom
-        loginButton.layer.borderColor = UIColor(named: "LIBROGColor")?.cgColor
+        loginButton.layer.borderColor = UIColor.lightGray.cgColor
         loginButton.layer.borderWidth = 1
         loginButton.layer.cornerRadius = 20
         loginButton.tintColor = UIColor(named: "LIBROGColor")
@@ -45,6 +45,7 @@ class LoginViewController: UIViewController {
     }
     func isValidTf() {
         self.loginButton.isEnabled = (self.isValidEmail && self.isValidPw) ? true : false
+        self.loginButton.layer.borderColor = (self.isValidEmail && self.isValidPw) ? UIColor(named: "LIBROGColor")?.cgColor : UIColor.lightGray.cgColor
     }
     
     //MARK: Actions

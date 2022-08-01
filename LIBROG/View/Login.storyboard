@@ -71,20 +71,35 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsj-CH-lTC">
-                                <rect key="frame" x="85" y="690.5" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="3aU-Bc-xZ1"/>
-                                    <constraint firstAttribute="width" constant="40" id="saa-pE-joT"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="kakaoLoginButton">
-                                    <color key="baseForegroundColor" systemColor="systemYellowColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="kakaoLoginButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="uf2-7X-6rj"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="11z-ao-Dsm">
+                                <rect key="frame" x="156.5" y="691" width="101" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsj-CH-lTC">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="3aU-Bc-xZ1"/>
+                                            <constraint firstAttribute="width" constant="40" id="saa-pE-joT"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="kakaoLoginButton"/>
+                                        <connections>
+                                            <action selector="kakaoLoginButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="uf2-7X-6rj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0M-gI-gnV">
+                                        <rect key="frame" x="61" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="60f-YF-Hz0"/>
+                                            <constraint firstAttribute="width" constant="40" id="X3q-5R-uLJ"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="appleid_button"/>
+                                        <connections>
+                                            <action selector="kakaoLoginButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="l18-aO-qZX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ip-Eo-c2k">
                                 <rect key="frame" x="45" y="357.5" width="324" height="1"/>
                                 <color key="backgroundColor" name="LIBROGColor"/>
@@ -141,7 +156,7 @@
                                 </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8H-YK-TrN">
-                                <rect key="frame" x="88" y="552.5" width="69" height="30"/>
+                                <rect key="frame" x="88.5" y="552.5" width="69" height="30"/>
                                 <color key="tintColor" name="Nomal"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
@@ -160,19 +175,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9f-wT-8s5">
-                                <rect key="frame" x="159" y="559" width="4" height="17"/>
+                                <rect key="frame" x="159.5" y="559" width="3.5" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" name="LIBROGColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afa-MY-PFq">
-                                <rect key="frame" x="251" y="559" width="4" height="17"/>
+                                <rect key="frame" x="251" y="559" width="3.5" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" name="LIBROGColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxf-Dt-5iu">
-                                <rect key="frame" x="257" y="552.5" width="95" height="30"/>
+                                <rect key="frame" x="256.5" y="552.5" width="95" height="30"/>
                                 <color key="tintColor" name="Nomal"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
@@ -188,7 +203,7 @@
                                 </buttonConfiguration>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJm-ZI-hcH">
-                                <rect key="frame" x="87.5" y="654.5" width="239.5" height="14"/>
+                                <rect key="frame" x="87.5" y="654.5" width="239.5" height="14.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="SNS 계정을 연동하여 간편하게 로그인 할 수 있어요">
                                         <attributes>
@@ -221,12 +236,12 @@
                             <constraint firstItem="1se-SK-NAw" firstAttribute="leading" secondItem="pvR-75-lbc" secondAttribute="leading" id="4CQ-Zx-KED"/>
                             <constraint firstItem="dVo-4A-958" firstAttribute="top" secondItem="tXU-YG-rj4" secondAttribute="bottom" constant="3" id="69R-Ip-m81"/>
                             <constraint firstItem="Vcq-fK-E1r" firstAttribute="leading" secondItem="zaa-gh-agz" secondAttribute="leading" id="6eB-QJ-lCk"/>
-                            <constraint firstItem="gsj-CH-lTC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="85" id="7Zd-40-MUx"/>
                             <constraint firstItem="tXU-YG-rj4" firstAttribute="trailing" secondItem="1se-SK-NAw" secondAttribute="trailing" id="8Y8-Ts-DFq"/>
                             <constraint firstItem="U8H-YK-TrN" firstAttribute="centerY" secondItem="zuq-oA-dFi" secondAttribute="centerY" id="8sq-Xh-Trv"/>
-                            <constraint firstItem="gsj-CH-lTC" firstAttribute="top" secondItem="UJm-ZI-hcH" secondAttribute="bottom" constant="22" id="9tg-xh-oLk"/>
                             <constraint firstItem="dVo-4A-958" firstAttribute="leading" secondItem="1se-SK-NAw" secondAttribute="leading" id="A2C-4o-Lja"/>
+                            <constraint firstItem="11z-ao-Dsm" firstAttribute="top" secondItem="UJm-ZI-hcH" secondAttribute="bottom" constant="22" id="Ac7-JI-VXz"/>
                             <constraint firstItem="zaa-gh-agz" firstAttribute="top" secondItem="rdj-Bh-eYk" secondAttribute="bottom" constant="14" id="DF8-lZ-IZR"/>
+                            <constraint firstItem="11z-ao-Dsm" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="DiP-KK-opg"/>
                             <constraint firstItem="nxf-Dt-5iu" firstAttribute="centerY" secondItem="zuq-oA-dFi" secondAttribute="centerY" id="GRD-yi-E8S"/>
                             <constraint firstItem="Afa-MY-PFq" firstAttribute="centerY" secondItem="zuq-oA-dFi" secondAttribute="centerY" id="HtE-9Q-qns"/>
                             <constraint firstItem="tXU-YG-rj4" firstAttribute="top" secondItem="1se-SK-NAw" secondAttribute="bottom" constant="5" id="LYh-d7-fJg"/>
@@ -274,6 +289,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="appleid_button" width="40" height="40"/>
         <image name="kakaoLoginButton" width="40" height="40"/>
         <image name="logo_green" width="27" height="58"/>
         <namedColor name="LIBROGColor">
@@ -287,9 +303,6 @@
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
