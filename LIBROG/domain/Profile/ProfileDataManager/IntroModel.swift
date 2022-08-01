@@ -7,6 +7,8 @@
 
 struct IntroModel: Decodable {
     let idx: Int?
+    let profileImgUrl: String?
     let name: String?
     let introduction: String?
+    let type: String?
 }

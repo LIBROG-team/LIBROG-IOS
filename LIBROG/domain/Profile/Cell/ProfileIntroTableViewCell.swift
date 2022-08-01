@@ -26,8 +26,12 @@ class ProfileIntroTableViewCell: UITableViewCell {
     func setUpIntro(_ result: IntroModel) {
         let name = result.name
         let intro = result.introduction
+        let profileURL = result.profileImgUrl!
         
         userNameLabel.text = name
         introductionLabel.text = intro
+        if let url = URL(string: profileURL) {
+            profileImageView.kf.setImage(with: url, placeholder: UIImage(named: "logo_green"))
+        }
     }
 }

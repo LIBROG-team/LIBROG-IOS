@@ -15,16 +15,16 @@ class ProfileDataManager {
     
     // MARK: 유저 정보 조회
     func introDataManager(_ viewcontroller: ProfileViewController) {
-        AF.request(url! + "users/introduce/\(userId)",
+        AF.request(url! + "users/profile/\(userId)",
                    method: .get,
                    parameters: nil)
             .validate()
-            .responseDecodable(of: [IntroModel].self) { response in
+            .responseDecodable(of: IntroModel.self) { response in
                 
             switch response.result {
             case .success(let result):
-//                print("DEBUG: ", result)
-                viewcontroller.introSuccessAPI(result[0])
+                print("DEBUG: ", result)
+                viewcontroller.introSuccessAPI(result)
             case .failure(let error):
                 print(error.localizedDescription)
             }
