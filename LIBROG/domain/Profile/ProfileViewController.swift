@@ -75,6 +75,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileFlowerpotTableViewCell", for: indexPath) as? ProfileFlowerpotTableViewCell else {
                 return UITableViewCell()
             }
+            cell.flowerpotButton.addTarget(self, action: #selector(goFlowerpotPage), for: .touchUpInside)
             cell.selectionStyle = .none
             return cell
         }
@@ -118,6 +119,12 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         else if indexPath.row == 2 {return 152}
         else if indexPath.row == 8 {return 80}
         else {return 72}
+    }
+    // 식물도감 페이지로 이동하는 함수
+    @objc func goFlowerpotPage() {
+        guard let flowerpotVC = UIStoryboard(name: "FlowerPot", bundle: nil).instantiateViewController(identifier: "FlowerPotVC") as? FlowerPotViewController else {return}
+        flowerpotVC.modalPresentationStyle = .fullScreen
+        self.present(flowerpotVC, animated: true, completion: nil)
     }
 }
 // MARK: - api success
