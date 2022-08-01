@@ -16,5 +16,6 @@ target 'LIBROG' do
 	pod 'KakaoSDKAuth'
 	pod 'KakaoSDKUser'
 	pod 'SnapKit', '~> 5.6.0'
+	pod 'DLRadioButton', '~> 1.4'
 
 end

@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -425,7 +426,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfy-1f-iFN">
-                                <rect key="frame" x="34" y="141" width="74.5" height="24"/>
+                                <rect key="frame" x="34" y="122" width="74.5" height="24"/>
                                 <attributedString key="attributedText">
                                     <fragment content="약관 동의">
                                         <attributes>
@@ -437,22 +438,158 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wab-BW-J6v">
+                                <rect key="frame" x="34" y="156" width="346" height="18"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="아래 약관에 동의하신 후 [다음]을 눌러주세요.">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="15" name="AppleSDGothicNeo-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="10" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8D5-hm-baw" customClass="DLRadioButton">
+                                <rect key="frame" x="20" y="219" width="186.5" height="32"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="  개인정보처리 및 취급 동의">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="15" name="AppleSDGothicNeo-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                        <color key="value" systemColor="labelColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected">
+                                        <imageReference key="value" image="checkmark.circle.fill" catalog="system" symbolScale="small"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="privacyRadioButtonDidTap:" destination="5QD-OW-9A4" eventType="touchUpInside" id="2ZX-8I-1f6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" * 필수 동의 내용에 동의하지 않으시면 서비스 이용이 불가합니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWj-c7-X3z">
+                                <rect key="frame" x="34" y="202" width="284" height="14"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(필수)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0l-1u-hHz">
+                                <rect key="frame" x="200.5" y="226" width="37" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" name="LIBROGColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ceJ-Dl-wWC">
+                                <rect key="frame" x="34" y="251" width="346" height="156"/>
+                                <color key="backgroundColor" name="backgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="156" id="nlA-2H-pmi"/>
+                                </constraints>
+                                <mutableString key="text">소리다.이것은 그와 이것을 방황하여도, 같지 싶이 어디 우리는 것이다. 그들의 그것은 충분히 청춘의 무엇을 속에서 눈에 그리하였는가? 힘차게 무엇을 거선의 목숨이 창공에 운다. 이상의 설레는 피고, 들어 보배를 뼈 불어 그들은 위하여서. 고행을 아니한 그들은 우리는 얼마나 무엇을 있는 때문이다. 만물은 우리의 가지에 피어나는 얼마나 전인 말이다. 꽃 위하여 평화스러운 풀이 인간에 부패뿐이다. 광야에서 귀는 못할 스며들어 바이며, 우리의 풀밭에 새가 일월과 쓸쓸하랴? 같이, 두기 우리 아름답고 것이다. 같이, 원대하고, 현저하게 것이다. 풍부하게 있는 위하여 커다란 피다.소리다.이것은 그와 이것을 방황하여도, 같지 싶이 어디 우리는 것이다. 그들의 그것은 충분히 청춘의 무엇을 속에서 눈에 그리하였는가? 힘차게 무엇을 거선의 목숨이 창공에 운다. 이상의 설레는 피고, 들어 보배를 뼈 불어 그들은 위하여서. 고행을 아니한 그들은 우리는 얼마나 무엇을 있는 때문이다. 만물은 우리의 가지에 피어나는 얼마나 전인 말이다. 꽃 위하여 평화스러운 풀이 인간에 부패뿐이다. 광야에서 귀는 못할 스며들어 바이며, 우리의 풀밭에 새가 일월과 쓸쓸하랴? 같이, 두기 우리 아름답고 것이다. 같이, 원대하고, 현저하게 것이다. 풍부하게 있는 위하여 커다란 피다.</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfq-Gm-pXW" customClass="DLRadioButton">
+                                <rect key="frame" x="20" y="437" width="131" height="32"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="  서비스 이용 동의">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="15" name="AppleSDGothicNeo-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                        <color key="value" systemColor="labelColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected">
+                                        <imageReference key="value" image="checkmark.circle.fill" catalog="system" symbolScale="small"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="serviceRadioButtonDidTap:" destination="5QD-OW-9A4" eventType="touchUpInside" id="hFZ-V1-X7T"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(필수)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stl-yQ-jhP">
+                                <rect key="frame" x="145" y="444" width="37" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" name="LIBROGColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="71e-xG-3Fn">
+                                <rect key="frame" x="34" y="469" width="346" height="156"/>
+                                <color key="backgroundColor" name="backgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="156" id="VCE-H4-eUP"/>
+                                </constraints>
+                                <mutableString key="text">소리다.이것은 그와 이것을 방황하여도, 같지 싶이 어디 우리는 것이다. 그들의 그것은 충분히 청춘의 무엇을 속에서 눈에 그리하였는가? 힘차게 무엇을 거선의 목숨이 창공에 운다. 이상의 설레는 피고, 들어 보배를 뼈 불어 그들은 위하여서. 고행을 아니한 그들은 우리는 얼마나 무엇을 있는 때문이다. 만물은 우리의 가지에 피어나는 얼마나 전인 말이다. 꽃 위하여 평화스러운 풀이 인간에 부패뿐이다. 광야에서 귀는 못할 스며들어 바이며, 우리의 풀밭에 새가 일월과 쓸쓸하랴? 같이, 두기 우리 아름답고 것이다. 같이, 원대하고, 현저하게 것이다. 풍부하게 있는 위하여 커다란 피다.소리다.이것은 그와 이것을 방황하여도, 같지 싶이 어디 우리는 것이다. 그들의 그것은 충분히 청춘의 무엇을 속에서 눈에 그리하였는가? 힘차게 무엇을 거선의 목숨이 창공에 운다. 이상의 설레는 피고, 들어 보배를 뼈 불어 그들은 위하여서. 고행을 아니한 그들은 우리는 얼마나 무엇을 있는 때문이다. 만물은 우리의 가지에 피어나는 얼마나 전인 말이다. 꽃 위하여 평화스러운 풀이 인간에 부패뿐이다. 광야에서 귀는 못할 스며들어 바이며, 우리의 풀밭에 새가 일월과 쓸쓸하랴? 같이, 두기 우리 아름답고 것이다. 같이, 원대하고, 현저하게 것이다. 풍부하게 있는 위하여 커다란 피다.</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="k4D-oy-7Qc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="stl-yQ-jhP" firstAttribute="leading" secondItem="cfq-Gm-pXW" secondAttribute="trailing" constant="-6" id="7Te-DM-6te"/>
                             <constraint firstItem="PGk-of-gnr" firstAttribute="top" secondItem="k4D-oy-7Qc" secondAttribute="top" id="CJY-eO-hdI"/>
-                            <constraint firstItem="rfy-1f-iFN" firstAttribute="top" secondItem="PGk-of-gnr" secondAttribute="bottom" constant="53" id="EIi-zC-kal"/>
+                            <constraint firstItem="wab-BW-J6v" firstAttribute="leading" secondItem="rfy-1f-iFN" secondAttribute="leading" id="CnU-r0-bN1"/>
+                            <constraint firstItem="k4D-oy-7Qc" firstAttribute="trailing" secondItem="wab-BW-J6v" secondAttribute="trailing" constant="34" id="Ct1-J9-XTQ"/>
+                            <constraint firstItem="rfy-1f-iFN" firstAttribute="top" secondItem="PGk-of-gnr" secondAttribute="bottom" constant="34" id="EIi-zC-kal"/>
+                            <constraint firstItem="71e-xG-3Fn" firstAttribute="top" secondItem="cfq-Gm-pXW" secondAttribute="bottom" id="GMD-5Y-rEG"/>
+                            <constraint firstItem="hWj-c7-X3z" firstAttribute="leading" secondItem="wab-BW-J6v" secondAttribute="leading" id="GsR-3S-eeB"/>
+                            <constraint firstItem="ceJ-Dl-wWC" firstAttribute="top" secondItem="8D5-hm-baw" secondAttribute="bottom" id="LLg-9t-Dk2"/>
+                            <constraint firstItem="8D5-hm-baw" firstAttribute="top" secondItem="hWj-c7-X3z" secondAttribute="bottom" constant="3" id="PRb-2b-bUs"/>
+                            <constraint firstItem="8D5-hm-baw" firstAttribute="top" secondItem="wab-BW-J6v" secondAttribute="bottom" constant="45" id="QT6-LT-psR"/>
+                            <constraint firstItem="8D5-hm-baw" firstAttribute="leading" secondItem="k4D-oy-7Qc" secondAttribute="leading" constant="20" id="Rz4-4b-c4o"/>
+                            <constraint firstItem="G0l-1u-hHz" firstAttribute="leading" secondItem="8D5-hm-baw" secondAttribute="trailing" constant="-6" id="Sul-pe-ebn"/>
+                            <constraint firstItem="cfq-Gm-pXW" firstAttribute="top" secondItem="ceJ-Dl-wWC" secondAttribute="bottom" constant="30" id="UVX-52-wgg"/>
                             <constraint firstItem="k4D-oy-7Qc" firstAttribute="trailing" secondItem="PGk-of-gnr" secondAttribute="trailing" id="UqC-QC-eIA"/>
+                            <constraint firstItem="71e-xG-3Fn" firstAttribute="trailing" secondItem="ceJ-Dl-wWC" secondAttribute="trailing" id="Wvb-Ob-7d9"/>
+                            <constraint firstItem="71e-xG-3Fn" firstAttribute="leading" secondItem="ceJ-Dl-wWC" secondAttribute="leading" id="Xkq-zO-XfD"/>
+                            <constraint firstItem="G0l-1u-hHz" firstAttribute="centerY" secondItem="8D5-hm-baw" secondAttribute="centerY" id="YNH-bY-OvF"/>
                             <constraint firstItem="ljn-hl-C8l" firstAttribute="leading" secondItem="k4D-oy-7Qc" secondAttribute="leading" constant="45" id="YWk-k9-rnD"/>
                             <constraint firstItem="PGk-of-gnr" firstAttribute="leading" secondItem="G1a-RD-Sq7" secondAttribute="leading" id="aLv-Vc-7Lz"/>
+                            <constraint firstItem="ceJ-Dl-wWC" firstAttribute="leading" secondItem="wab-BW-J6v" secondAttribute="leading" id="cHd-qy-9qY"/>
                             <constraint firstAttribute="trailing" secondItem="ljn-hl-C8l" secondAttribute="trailing" constant="45" id="cV2-8b-5pU"/>
+                            <constraint firstItem="cfq-Gm-pXW" firstAttribute="leading" secondItem="8D5-hm-baw" secondAttribute="leading" id="fDO-Jn-MNb"/>
+                            <constraint firstItem="wab-BW-J6v" firstAttribute="top" secondItem="rfy-1f-iFN" secondAttribute="bottom" constant="10" id="flG-al-M9u"/>
                             <constraint firstItem="rfy-1f-iFN" firstAttribute="leading" secondItem="k4D-oy-7Qc" secondAttribute="leading" constant="34" id="ggc-9x-csr"/>
+                            <constraint firstItem="stl-yQ-jhP" firstAttribute="centerY" secondItem="cfq-Gm-pXW" secondAttribute="centerY" id="ran-xR-g4d"/>
                             <constraint firstItem="k4D-oy-7Qc" firstAttribute="bottom" secondItem="ljn-hl-C8l" secondAttribute="bottom" constant="58" id="wJV-zb-g4l"/>
+                            <constraint firstItem="k4D-oy-7Qc" firstAttribute="trailing" secondItem="ceJ-Dl-wWC" secondAttribute="trailing" constant="34" id="xPh-o1-evi"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="goNextButton" destination="ljn-hl-C8l" id="mSU-v9-kPS"/>
+                        <outlet property="privacyRadioButton" destination="8D5-hm-baw" id="dDV-zS-P7F"/>
+                        <outlet property="privacyTermTextView" destination="ceJ-Dl-wWC" id="xbk-rD-kJt"/>
+                        <outlet property="serviceRadioButton" destination="cfq-Gm-pXW" id="Q7x-PP-rVO"/>
+                        <outlet property="serviceTextView" destination="71e-xG-3Fn" id="Bfw-vG-E7W"/>
+                        <outlet property="warningLabel" destination="hWj-c7-X3z" id="vOs-xs-wpo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JRz-Jl-Iqk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -463,14 +600,24 @@
     <resources>
         <image name="arrow-right" width="21" height="21"/>
         <image name="camera-button" width="36" height="36"/>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="LIBROGColor">
             <color red="0.3919999897480011" green="0.74500000476837158" blue="0.47099998593330383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="LightGreen">
             <color red="0.81176470588235294" green="0.92156862745098034" blue="0.83529411764705885" alpha="0.41999998688697815" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="backgroundColor">
+            <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
