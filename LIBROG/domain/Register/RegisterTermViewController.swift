@@ -56,9 +56,11 @@ class RegisterTermViewController: UIViewController {
         if privacyRadioButton.isSelected && serviceRadioButton.isSelected {
             goNextButton.layer.borderColor = UIColor(named: "LIBROGColor")?.cgColor
             goNextButton.tintColor = UIColor(named: "LIBROGColor")
+            warningLabel.isHidden = true
         } else {
             goNextButton.layer.borderColor = UIColor.lightGray.cgColor
             goNextButton.tintColor = UIColor.lightGray
+            warningLabel.isHidden = false
         }
     }
 }

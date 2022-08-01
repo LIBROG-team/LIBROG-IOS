@@ -490,7 +490,7 @@
                                 <color key="textColor" name="LIBROGColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ceJ-Dl-wWC">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceJ-Dl-wWC">
                                 <rect key="frame" x="34" y="251" width="346" height="156"/>
                                 <color key="backgroundColor" name="backgroundColor"/>
                                 <constraints>
@@ -534,7 +534,7 @@
                                 <color key="textColor" name="LIBROGColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="71e-xG-3Fn">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71e-xG-3Fn">
                                 <rect key="frame" x="34" y="469" width="346" height="156"/>
                                 <color key="backgroundColor" name="backgroundColor"/>
                                 <constraints>
