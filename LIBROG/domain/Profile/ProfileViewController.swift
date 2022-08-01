@@ -44,11 +44,34 @@ class ProfileViewController: UIViewController {
         ProfileDataManager().statisticDataManager(self)
         ProfileDataManager().introDataManager(self)
     }
-    
+    //MARK: Actions
+    // 환경설정 페이지로 이동
     @IBAction func settingButtonDidTap(_ sender: UIButton) {
         let settingVC = UIStoryboard(name: "Setting", bundle: nil).instantiateViewController(identifier: "SettingVC")
         settingVC.modalPresentationStyle = .fullScreen
         self.present(settingVC, animated: true, completion: nil)
+    }
+    // 식물도감 페이지로 이동
+    @objc func goFlowerpotPage() {
+        guard let flowerpotVC = UIStoryboard(name: "FlowerPot", bundle: nil).instantiateViewController(identifier: "FlowerPotVC") as? FlowerPotViewController else {return}
+        flowerpotVC.modalPresentationStyle = .fullScreen
+        self.present(flowerpotVC, animated: true, completion: nil)
+    }
+    // 로그아웃
+    @objc func logout() {
+        if let userData = self.introData {
+            if userData.type == "kakao" {KakaoLoginManager().kakaoLogout()}
+            else if userData.type == "apple" {}
+            else {}
+        }
+        // 앱 내 user data 삭제
+        UserDefaults.standard.set("", forKey: "accessToken")
+        UserDefaults.standard.set("", forKey: "refreshToken")
+        UserDefaults.standard.set(-1, forKey: "userId")
+        // 로그인 페이지로 전환
+        guard let loginVC = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(identifier: "LoginVC") as? LoginViewController else {return}
+        loginVC.modalPresentationStyle = .fullScreen
+        self.view.window?.windowScene?.keyWindow?.rootViewController = loginVC
     }
 }
 
@@ -95,6 +118,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "LogoutTableViewCell", for: indexPath) as? LogoutTableViewCell else {
                 return UITableViewCell()
             }
+            cell.logoutButton.addTarget(self, action: #selector(logout), for: .touchUpInside)
             cell.selectionStyle = .none
             return cell
         }
@@ -120,12 +144,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         else if indexPath.row == 8 {return 80}
         else {return 72}
     }
-    // 식물도감 페이지로 이동하는 함수
-    @objc func goFlowerpotPage() {
-        guard let flowerpotVC = UIStoryboard(name: "FlowerPot", bundle: nil).instantiateViewController(identifier: "FlowerPotVC") as? FlowerPotViewController else {return}
-        flowerpotVC.modalPresentationStyle = .fullScreen
-        self.present(flowerpotVC, animated: true, completion: nil)
-    }
+    
 }
 // MARK: - api success
 extension ProfileViewController {
