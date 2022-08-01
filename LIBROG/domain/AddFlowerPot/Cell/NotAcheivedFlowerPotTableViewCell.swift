@@ -21,7 +21,8 @@ class NotAcheivedFlowerPotTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func setNotAchievedFlowerpotData(_ cellData: AddFlowerpotData) {
+    func setNotAchievedFlowerpotData(_ cellData: NotAchievedSearchFlowerpotData) {
         flowerPotNameLabel.text = cellData.name!
+        flowerPotRequestLabel.text = cellData.condition!
     }
 }
