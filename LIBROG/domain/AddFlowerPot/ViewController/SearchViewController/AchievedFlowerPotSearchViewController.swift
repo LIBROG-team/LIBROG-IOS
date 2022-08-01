@@ -82,7 +82,7 @@ extension AchievedFlowerPotSearchViewController: UISearchBarDelegate {
         
         guard let searchTerm = searchBar.text, searchTerm.isEmpty == false else { return }
 //        print("--> 검색어: \(searchTerm)")
-        SearchDataManager().searchFlowerpotDataManager(searchTerm, self)
+        SearchDataManager().searchAchievedFlowerpotDataManager(searchTerm, self)
         achievedTableView.reloadData()
     }
     //MARK: searchBar custom

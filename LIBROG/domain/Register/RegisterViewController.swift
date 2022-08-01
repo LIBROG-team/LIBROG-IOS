@@ -27,10 +27,6 @@ class RegisterViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func goNextButtonDidTap(_ sender: UIButton) {
-        guard let registerProfileVC = UIStoryboard(name: "Register", bundle: nil).instantiateViewController(identifier: "RegisterProfileVC") as? RegisterProfileViewController else {return}
-        registerProfileVC.modalPresentationStyle = .fullScreen
-        self.present(registerProfileVC, animated: true, completion: nil)
-        
         let email = emailTextField.text!
         let password = passwordTextField.text!
         let nickname = nicknameTextField.text!
@@ -38,11 +34,14 @@ class RegisterViewController: UIViewController {
         let registerInput = RegisterInput(email: email, password: password, name: nickname)
         RegisterDataManager().registerDataManager(registerInput, self)
     }
-    
 }
 
 extension RegisterViewController {
     func RegisterSuccessAPI(_ result: RegisterModel) {
-        
+        if result.isSuccess! {
+            guard let registerProfileVC = UIStoryboard(name: "Register", bundle: nil).instantiateViewController(identifier: "RegisterProfileVC") as? RegisterProfileViewController else {return}
+            registerProfileVC.modalPresentationStyle = .fullScreen
+            self.present(registerProfileVC, animated: true, completion: nil)
+        }
     }
 }

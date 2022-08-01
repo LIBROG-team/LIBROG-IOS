@@ -29,7 +29,7 @@ class RecentBookCollectionViewCell: UICollectionViewCell {
         dateLabel.text = String(date.split(separator: "T")[0])
         // 최근 읽은 책 이미지 출력
         if let url = URL(string: bookImg) {
-            bookImageView.kf.setImage(with: url, placeholder: UIImage(named: "logo22%"))
+            bookImageView.kf.setImage(with: url, placeholder: UIImage(named: "logo_launchScreen_white"))
         }
     }
 }

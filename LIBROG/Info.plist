@@ -40,6 +40,11 @@
 			</dict>
 			<key>dev.siejwkaodj.shop/</key>
 			<string></string>
+			<key>k.kakaocdn.net</key>
+			<dict>
+				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
 		</dict>
 	</dict>
 	<key>UIApplicationSceneManifest</key>
