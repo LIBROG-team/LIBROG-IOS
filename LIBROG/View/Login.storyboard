@@ -138,6 +138,9 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="appLoginButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="cRg-QQ-ppv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuq-oA-dFi">
                                 <rect key="frame" x="165" y="552.5" width="84" height="30"/>

@@ -52,6 +52,10 @@ class LoginViewController: UIViewController {
     @IBAction func kakaoLoginButtonDidTap(_ sender: UIButton) {
         KakaoLoginManager().kakaoLogin(self)
     }
+    @IBAction func appLoginButtonDidTap(_ sender: UIButton) {
+        let appLoginInput = AppLoginInput(email: self.email, password: self.password)
+        LoginDataManager().appLoginDataManager(appLoginInput, self)
+    }
     @IBAction func goRegisterDidTap(_ sender: UIButton) {
         guard let registerTermVC = UIStoryboard(name: "Register", bundle: nil).instantiateViewController(identifier: "RegisterTermVC") as? RegisterTermViewController else {return}
         registerTermVC.modalPresentationStyle = .fullScreen
@@ -84,6 +88,11 @@ extension LoginViewController {
     func loginSuccessAPI(_ result: KakaoLoginResultModel) {
         guard let userId = result.idx else {return}
         UserDefaults.standard.set(userId, forKey: "userId")
+        self.goMain()
+    }
+    func loginSuccessAPI(_ result: AppLoginModel) {
+        guard let accessToken = result.result.jwt else {return}
+        UserDefaults.standard.set(accessToken, forKey: "accessToken")
         self.goMain()
     }
     func goMain() {
