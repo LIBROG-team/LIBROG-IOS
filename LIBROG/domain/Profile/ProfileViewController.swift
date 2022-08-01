@@ -83,6 +83,9 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileLoginTypeTableViewCell", for: indexPath) as? ProfileLoginTypeTableViewCell else {
                 return UITableViewCell()
             }
+            if let loginType = self.introData {
+                cell.setLoginType(loginType)
+            }
             cell.selectionStyle = .none
             return cell
         }
