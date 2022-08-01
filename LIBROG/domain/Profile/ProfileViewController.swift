@@ -37,6 +37,8 @@ class ProfileViewController: UIViewController {
         profileTableView.register(flowerpotNib, forCellReuseIdentifier: "ProfileFlowerpotTableViewCell")
         let logoutNib = UINib(nibName: "LogoutTableViewCell", bundle: nil)
         profileTableView.register(logoutNib, forCellReuseIdentifier: "LogoutTableViewCell")
+        let loginTypeNib = UINib(nibName: "ProfileLoginTypeTableViewCell", bundle: nil)
+        profileTableView.register(loginTypeNib, forCellReuseIdentifier: "ProfileLoginTypeTableViewCell")
         
         //MARK: call api
         ProfileDataManager().statisticDataManager(self)
@@ -53,7 +55,7 @@ class ProfileViewController: UIViewController {
 // MARK: - 프로필 페이지 tableView delegate
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 8
+        return 9
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -76,8 +78,16 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             cell.selectionStyle = .none
             return cell
         }
+        // social login type
+        else if indexPath.row == 2 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileLoginTypeTableViewCell", for: indexPath) as? ProfileLoginTypeTableViewCell else {
+                return UITableViewCell()
+            }
+            cell.selectionStyle = .none
+            return cell
+        }
         // logout
-        else if indexPath.row == 7 {
+        else if indexPath.row == 8 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "LogoutTableViewCell", for: indexPath) as? LogoutTableViewCell else {
                 return UITableViewCell()
             }
@@ -90,11 +100,11 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
                 return UITableViewCell()
             }
             cell.selectionStyle = .none
-            if indexPath.row == 2 {cell.setProfileMenu("Leaf", "화분", self.flowerPotCount, "개")}
-            else if indexPath.row == 3 { cell.setProfileMenu("BookBookmark", "읽은 책", self.readingBookCount, "권") }
-            else if indexPath.row == 4 { cell.setProfileMenu("Star", "별점", self.starRatingCount, "개") }
-            else if indexPath.row == 5 { cell.setProfileMenu("PencilSimpleLine", "한 줄 기록", self.quoteCount, "개") }
-            else if indexPath.row == 6 { cell.setProfileMenu("NotePencil", "독서록", self.bookReportCount, "개") }
+            if indexPath.row == 3 {cell.setProfileMenu("Leaf", "화분", self.flowerPotCount, "개")}
+            else if indexPath.row == 4 { cell.setProfileMenu("BookBookmark", "읽은 책", self.readingBookCount, "권") }
+            else if indexPath.row == 5 { cell.setProfileMenu("Star", "별점", self.starRatingCount, "개") }
+            else if indexPath.row == 6 { cell.setProfileMenu("PencilSimpleLine", "한 줄 기록", self.quoteCount, "개") }
+            else if indexPath.row == 7 { cell.setProfileMenu("NotePencil", "독서록", self.bookReportCount, "개") }
             
             return cell
         }
@@ -102,7 +112,8 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {return 128}
         else if indexPath.row == 1 {return 120}
-        else if indexPath.row == 7 {return 80}
+        else if indexPath.row == 2 {return 152}
+        else if indexPath.row == 8 {return 80}
         else {return 72}
     }
 }

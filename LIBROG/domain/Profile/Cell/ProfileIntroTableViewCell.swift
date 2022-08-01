@@ -24,8 +24,8 @@ class ProfileIntroTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     func setUpIntro(_ result: IntroModel) {
-        guard let name = result.name else {return}
-        guard let intro = result.introduction else {return}
+        let name = result.name
+        let intro = result.introduction
         
         userNameLabel.text = name
         introductionLabel.text = intro

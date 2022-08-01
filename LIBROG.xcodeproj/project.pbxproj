@@ -49,6 +49,8 @@
 		23776E1928925FFF00351F3A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23776E1828925FFF00351F3A /* RegisterViewController.swift */; };
 		23776E1B2892610E00351F3A /* RegisterProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23776E1A2892610E00351F3A /* RegisterProfileViewController.swift */; };
 		23776E1D2892644800351F3A /* RegisterTermViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23776E1C2892644800351F3A /* RegisterTermViewController.swift */; };
+		2379DEE72897A29800F946DD /* ProfileLoginTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2379DEE52897A29800F946DD /* ProfileLoginTypeTableViewCell.swift */; };
+		2379DEE82897A29800F946DD /* ProfileLoginTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2379DEE62897A29800F946DD /* ProfileLoginTypeTableViewCell.xib */; };
 		237ECCE0288556EE000D9A71 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237ECCDF288556EE000D9A71 /* ProfileViewController.swift */; };
 		237ECCE328856454000D9A71 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237ECCE228856454000D9A71 /* DateFormatter.swift */; };
 		237ECCEA28857544000D9A71 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 237ECCE928857544000D9A71 /* Setting.storyboard */; };
@@ -196,6 +198,8 @@
 		23776E1828925FFF00351F3A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		23776E1A2892610E00351F3A /* RegisterProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProfileViewController.swift; sourceTree = "<group>"; };
 		23776E1C2892644800351F3A /* RegisterTermViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTermViewController.swift; sourceTree = "<group>"; };
+		2379DEE52897A29800F946DD /* ProfileLoginTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLoginTypeTableViewCell.swift; sourceTree = "<group>"; };
+		2379DEE62897A29800F946DD /* ProfileLoginTypeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileLoginTypeTableViewCell.xib; sourceTree = "<group>"; };
 		237ECCDF288556EE000D9A71 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		237ECCE228856454000D9A71 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		237ECCE928857544000D9A71 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
@@ -489,6 +493,8 @@
 				23458ADE2896E8B00003A669 /* ProfileFlowerpotTableViewCell.xib */,
 				23458AE12896F16D0003A669 /* LogoutTableViewCell.swift */,
 				23458AE22896F16D0003A669 /* LogoutTableViewCell.xib */,
+				2379DEE52897A29800F946DD /* ProfileLoginTypeTableViewCell.swift */,
+				2379DEE62897A29800F946DD /* ProfileLoginTypeTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -989,6 +995,7 @@
 				23ADA90D288468D50066D15A /* ReadingRecord.storyboard in Resources */,
 				23ADA91528846A2A0066D15A /* Profile.storyboard in Resources */,
 				23ADA90F2884693D0066D15A /* SelectBook.storyboard in Resources */,
+				2379DEE82897A29800F946DD /* ProfileLoginTypeTableViewCell.xib in Resources */,
 				23A5B872287D9D5D005413A3 /* ResultTableViewCell.xib in Resources */,
 				23ADA91928846AB10066D15A /* FlowerPotDescription.storyboard in Resources */,
 				23458AD62896E0C30003A669 /* ProfileIntroTableViewCell.xib in Resources */,
@@ -1112,6 +1119,7 @@
 				238DE01C28819AF0007901E6 /* TodaySuggestCollectionViewCell.swift in Sources */,
 				23766E7E2870330D005EEA8E /* UIBezierPath.swift in Sources */,
 				23DFD3102878D9F4002AC8B0 /* UploadRecordTableViewCell.swift in Sources */,
+				2379DEE72897A29800F946DD /* ProfileLoginTypeTableViewCell.swift in Sources */,
 				D096410B2886B40800E5989C /* ReadingRecordBottomViewController.swift in Sources */,
 				23DFD30D2878D9B1002AC8B0 /* UploadRecordViewController.swift in Sources */,
 				23ADA922288478FD0066D15A /* AchievedFlowerPotViewController.swift in Sources */,

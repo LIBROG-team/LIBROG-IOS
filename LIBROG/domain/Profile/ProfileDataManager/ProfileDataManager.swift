@@ -19,12 +19,12 @@ class ProfileDataManager {
                    method: .get,
                    parameters: nil)
             .validate()
-            .responseDecodable(of: IntroModel.self) { response in
+            .responseDecodable(of: [IntroModel].self) { response in
                 
             switch response.result {
             case .success(let result):
-                print("DEBUG: ", result)
-                viewcontroller.introSuccessAPI(result)
+//                print("DEBUG: ", result)
+                viewcontroller.introSuccessAPI(result[0])
             case .failure(let error):
                 print(error.localizedDescription)
             }
@@ -40,7 +40,7 @@ class ProfileDataManager {
                 
             switch response.result {
             case .success(let result):
-                print("DEBUG: ", result)
+//                print("DEBUG: ", result)
                 viewcontroller.statisticSuccessAPI(result.result)
             case .failure(let error):
                 print(error.localizedDescription)

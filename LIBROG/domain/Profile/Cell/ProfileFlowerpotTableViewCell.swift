@@ -16,7 +16,7 @@ class ProfileFlowerpotTableViewCell: UITableViewCell {
         // 버튼 Custom
         flowerpotButton.layer.borderColor = UIColor(named: "LIBROGColor")?.cgColor
         flowerpotButton.layer.borderWidth = 1
-        flowerpotButton.layer.cornerRadius = 20
+        flowerpotButton.layer.cornerRadius = 10
         flowerpotButton.tintColor = UIColor(named: "LIBROGColor")
     }
 
