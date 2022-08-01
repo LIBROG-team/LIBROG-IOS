@@ -10,7 +10,7 @@ import UIKit
 class NotAchievedFlowerPotViewController: UIViewController {
     @IBOutlet weak var notAcheivedFlowerPotTableView: UITableView!
     
-    var notAchievedFlowerpotArray: [AddFlowerpotData]!
+    var notAchievedFlowerpotArray: [NotAchievedSearchFlowerpotData]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +54,7 @@ extension NotAchievedFlowerPotViewController: UITableViewDelegate, UITableViewDa
 }
 // MARK: - 유저의 미획득 화분 조회 API
 extension NotAchievedFlowerPotViewController {
-    func addFlowerpotNotAchievedSuccessAPI(_ result: [AddFlowerpotData]) {
+    func addFlowerpotNotAchievedSuccessAPI(_ result: [NotAchievedSearchFlowerpotData]) {
         self.notAchievedFlowerpotArray = result
         notAcheivedFlowerPotTableView.reloadData()
     }

@@ -9,10 +9,28 @@ import Foundation
 import Alamofire
 import Kingfisher
 
-class StatisticDataManager {
+class ProfileDataManager {
     let url = UserDefaults.standard.string(forKey: "url")
     let userId = UserDefaults.standard.integer(forKey: "userId")
     
+    // MARK: 유저 정보 조회
+    func introDataManager(_ viewcontroller: ProfileViewController) {
+        AF.request(url! + "users/profile/\(userId)",
+                   method: .get,
+                   parameters: nil)
+            .validate()
+            .responseDecodable(of: IntroModel.self) { response in
+                
+            switch response.result {
+            case .success(let result):
+                print("DEBUG: ", result)
+                viewcontroller.introSuccessAPI(result)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    // MARK: 유저의 독서 통계 조회
     func statisticDataManager(_ viewcontroller: ProfileViewController) {
         AF.request(url! + "records/statistics/\(userId)",
                    method: .get,
@@ -22,7 +40,7 @@ class StatisticDataManager {
                 
             switch response.result {
             case .success(let result):
-                print("DEBUG: ", result)
+//                print("DEBUG: ", result)
                 viewcontroller.statisticSuccessAPI(result.result)
             case .failure(let error):
                 print(error.localizedDescription)

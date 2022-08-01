@@ -20,3 +20,16 @@ struct AddFlowerpotData: Decodable {
     let bloomingPeriod: String?
     let flowerImgUrl: String?
 }
+struct NotAchievedSearchFlowerpotModel : Decodable {
+    let isSuccess: Bool?
+    let code: Int?
+    let message: String?
+    let result: [NotAchievedSearchFlowerpotData]
+}
+struct NotAchievedSearchFlowerpotData: Decodable {
+    let flowerDataIdx: Int?
+    let name: String?
+    let type: String?
+    let bloomingPeriod: String?
+    let condition: String?
+}

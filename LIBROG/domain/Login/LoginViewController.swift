@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
         attributeString.addAttribute(.foregroundColor, value: UIColor(named: "LIBROGColor")!, range: (text as NSString).range(of: "리브로그"))
         self.loginTitleLabel.attributedText = attributeString
         // 로그인 버튼 Custom
-        loginButton.layer.borderColor = UIColor(named: "LIBROGColor")?.cgColor
+        loginButton.layer.borderColor = UIColor.lightGray.cgColor
         loginButton.layer.borderWidth = 1
         loginButton.layer.cornerRadius = 20
         loginButton.tintColor = UIColor(named: "LIBROGColor")
@@ -45,11 +45,16 @@ class LoginViewController: UIViewController {
     }
     func isValidTf() {
         self.loginButton.isEnabled = (self.isValidEmail && self.isValidPw) ? true : false
+        self.loginButton.layer.borderColor = (self.isValidEmail && self.isValidPw) ? UIColor(named: "LIBROGColor")?.cgColor : UIColor.lightGray.cgColor
     }
     
     //MARK: Actions
     @IBAction func kakaoLoginButtonDidTap(_ sender: UIButton) {
         KakaoLoginManager().kakaoLogin(self)
+    }
+    @IBAction func appLoginButtonDidTap(_ sender: UIButton) {
+        let appLoginInput = AppLoginInput(email: self.email, password: self.password)
+        LoginDataManager().appLoginDataManager(appLoginInput, self)
     }
     @IBAction func goRegisterDidTap(_ sender: UIButton) {
         guard let registerTermVC = UIStoryboard(name: "Register", bundle: nil).instantiateViewController(identifier: "RegisterTermVC") as? RegisterTermViewController else {return}
@@ -83,6 +88,11 @@ extension LoginViewController {
     func loginSuccessAPI(_ result: KakaoLoginResultModel) {
         guard let userId = result.idx else {return}
         UserDefaults.standard.set(userId, forKey: "userId")
+        self.goMain()
+    }
+    func loginSuccessAPI(_ result: AppLoginModel) {
+        guard let accessToken = result.result.jwt else {return}
+        UserDefaults.standard.set(accessToken, forKey: "accessToken")
         self.goMain()
     }
     func goMain() {

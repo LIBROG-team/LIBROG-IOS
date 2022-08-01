@@ -25,6 +25,11 @@
                             <constraint firstAttribute="width" constant="106" id="Dhe-gS-d6J"/>
                             <constraint firstAttribute="height" constant="106" id="z8W-20-XEs"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="40"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="opr-n8-o8C">
                         <rect key="frame" x="136" y="25" width="258" height="104"/>

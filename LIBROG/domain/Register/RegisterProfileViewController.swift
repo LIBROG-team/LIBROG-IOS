@@ -13,8 +13,24 @@ class RegisterProfileViewController: UIViewController {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var cameraButton: UIButton!
-    let selectArray = ["앨범에서 사진/동영상 선택", "리브로그 프로필로 설정", "기본 이미지로 변경"]
+    @IBOutlet weak var profileImageView: UIImageView!
     
+    let selectArray = ["앨범에서 사진/동영상 선택", "리브로그 프로필로 설정", "기본 이미지로 변경"]
+    // 앨범 선택 image picker
+    let imagePickerController = UIImagePickerController()
+    var selectedPhoto: UIImage!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // 리브로그 시작하기 버튼 Custom
+        registerButton.layer.borderColor = UIColor(named: "LIBROGColor")?.cgColor
+        registerButton.layer.borderWidth = 1
+        registerButton.layer.cornerRadius = 20
+        registerButton.tintColor = UIColor(named: "LIBROGColor")
+        
+        imagePickerController.delegate = self
+    }
     @IBAction func cameraDidTapButton(_ sender: UIButton) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "RegisterProfileBottomVC") as! RegisterProfileBottomViewController
         let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: vc)
@@ -28,18 +44,6 @@ class RegisterProfileViewController: UIViewController {
         // 뒤에 배경 컬러
         bottomSheet.scrimColor = UIColor(red: 0.25, green: 0.25, blue: 0.25, alpha: 0.54)
     }
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // 리브로그 시작하기 버튼 Custom
-        registerButton.layer.borderColor = UIColor(named: "LIBROGColor")?.cgColor
-        registerButton.layer.borderWidth = 1
-        registerButton.layer.cornerRadius = 20
-        registerButton.tintColor = UIColor(named: "LIBROGColor")
-    }
-    
     @IBAction func goBackButtonDidTap(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -80,26 +84,30 @@ extension RegisterProfileViewController: UITableViewDelegate, UITableViewDataSou
     }
     //클릭 이벤트 처리
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // 앨범에서 선택
         if indexPath.row == 0 {
-            
-        }
-        else if indexPath.row == 1 {
-//            let librogVC = storyboard?.instantiateViewController(withIdentifier: "RegisterProfileLibrogBottomVC") as! RegisterProfileLibrogBottomViewController
-//            let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: librogVC)
-//            self.present(bottomSheet, animated: true, completion: nil)
-//
-//            // 아래로 드래그해도 안닫히게 하기
-//            bottomSheet.dismissOnDraggingDownSheet = false
-//            // 높이
-//            bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = 348
-//            // 뒤에 배경 컬러
-//            bottomSheet.scrimColor = UIColor(red: 0.25, green: 0.25, blue: 0.25, alpha: 0.54)
-        }
-        else if indexPath.row == 2 {
-            
+            self.dismiss(animated: true, completion: nil)
+            self.imagePickerController.sourceType = .photoLibrary
+            self.present(imagePickerController, animated: true, completion: nil)
         }
         
-        self.dismiss(animated: true, completion: nil)
+        
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+// MARK: - 프로필 이미지 선택 -> 앨범 선택 후
+extension RegisterProfileViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        self.selectedPhoto = UIImage()
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            self.selectedPhoto = image
+            profileImageView.image = self.selectedPhoto
+//            print(info)
+        }
+        if let imageUrl = info[UIImagePickerController.InfoKey.imageURL] as? URL{
+            let urlStr = imageUrl.absoluteString
+        }
+//        uploadTableView.reloadData()
+        self.dismiss(animated: true, completion: nil)
     }
 }

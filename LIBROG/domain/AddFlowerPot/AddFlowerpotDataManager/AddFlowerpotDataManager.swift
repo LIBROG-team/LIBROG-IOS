@@ -34,7 +34,7 @@ class AddFlowerpotDataManager {
                    method: .get,
                    parameters: nil)
             .validate()
-            .responseDecodable(of: AddFlowerpotModel.self) { response in
+            .responseDecodable(of: NotAchievedSearchFlowerpotModel.self) { response in
                 
             switch response.result {
             case .success(let result):
