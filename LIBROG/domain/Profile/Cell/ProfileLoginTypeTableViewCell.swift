@@ -14,7 +14,6 @@ class ProfileLoginTypeTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        kakaoLoginTypeButton.imageView?.tintColor = .lightGray
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
