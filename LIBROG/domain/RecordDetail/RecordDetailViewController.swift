@@ -62,5 +62,6 @@ extension RecordDetailViewController {
     func recordDetailSuccessAPI(_ result: RecordDetailResultModel) {
         self.recordData = result
         recordDetailTableView.reloadData()
+        self.recordDetailNB.topItem?.title = result.name!
     }
 }

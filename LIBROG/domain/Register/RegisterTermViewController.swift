@@ -60,7 +60,6 @@ class RegisterTermViewController: UIViewController {
         } else {
             goNextButton.layer.borderColor = UIColor.lightGray.cgColor
             goNextButton.tintColor = UIColor.lightGray
-            warningLabel.isHidden = false
         }
     }
 }
