@@ -27,6 +27,7 @@ class ModifyRecordTableViewCell: UITableViewCell {
         // Initialization code
         
         reportTextView.delegate = self
+        starRatingView.didTouchCosmos = didTouchCosmos
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -54,17 +55,29 @@ class ModifyRecordTableViewCell: UITableViewCell {
             bookImgView.kf.setImage(with: url, placeholder: UIImage(named: "logo22%"))
         }
     }
-    
+    // 별점 수정 method
+    func updateRating(_ requiredRating: Double?) {
+        var newRatingValue : Double = 0.0
+        
+        if let nonEmptyRequiredRating = requiredRating {
+            newRatingValue = nonEmptyRequiredRating
+        }
+        starRatingView.rating = newRatingValue
+        self.starRating = Int(newRatingValue)
+        starRatingLabel.text = String(Int(newRatingValue))
+    }
+
+    func didTouchCosmos(_ rating: Double) {
+        updateRating(rating)
+    }
+    // MARK: Actions
     @IBAction func quoteEditingChanged(_ sender: UITextField) {
         self.quote = sender.text!
     }
 }
 // MARK: - 독후감 TextView delegate
 extension ModifyRecordTableViewCell: UITextViewDelegate {
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        self.content = textView.text!
-    }
-    func textViewDidEndEditing(_ textView: UITextView) {
+    func textViewDidChange(_ textView: UITextView) {
         self.content = textView.text!
     }
 }
@@ -72,8 +85,11 @@ extension ModifyRecordTableViewCell: UITextViewDelegate {
 extension ModifyRecordTableViewCell {
     func postRecord(_ recordData: RecordDetailResultModel) {
         let idx = recordData.readingRecordIdx!
-        let starRating = Int(self.starRatingView.rating)
-        let modifyRecordInput = ModifyRecordInput(idx: idx, starRating: starRating, quote: self.quote, content: self.content)
+        let starRating = self.starRating!
+        let quote = self.quote!
+        let content = self.content!
+        
+        let modifyRecordInput = ModifyRecordInput(idx: idx, starRating: starRating, quote: quote, content: content)
         ModifyRecordDataManager().modifyRecordDataManager(modifyRecordInput, self)
     }
     func modifyRecordSuccessAPI(_ result: ModifyRecordModel) {
