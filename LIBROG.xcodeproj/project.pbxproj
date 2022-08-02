@@ -69,11 +69,7 @@
 		23A5B860287D7F81005413A3 /* NotAcheivedFlowerPotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A5B85E287D7F81005413A3 /* NotAcheivedFlowerPotTableViewCell.swift */; };
 		23A5B861287D7F81005413A3 /* NotAcheivedFlowerPotTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23A5B85F287D7F81005413A3 /* NotAcheivedFlowerPotTableViewCell.xib */; };
 		23A5B86E287D9D5D005413A3 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A5B868287D9D5D005413A3 /* ResultTableViewCell.swift */; };
-		23A5B86F287D9D5D005413A3 /* InputTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23A5B869287D9D5D005413A3 /* InputTableViewCell.xib */; };
-		23A5B870287D9D5D005413A3 /* NoResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A5B86A287D9D5D005413A3 /* NoResultTableViewCell.swift */; };
-		23A5B871287D9D5D005413A3 /* NoResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23A5B86B287D9D5D005413A3 /* NoResultTableViewCell.xib */; };
 		23A5B872287D9D5D005413A3 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23A5B86C287D9D5D005413A3 /* ResultTableViewCell.xib */; };
-		23A5B873287D9D5D005413A3 /* InputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A5B86D287D9D5D005413A3 /* InputTableViewCell.swift */; };
 		23AB709D288FFAD700503366 /* RecordDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23AB709C288FFAD700503366 /* RecordDetail.storyboard */; };
 		23AB70A0288FFAF000503366 /* RecordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB709F288FFAF000503366 /* RecordDetailViewController.swift */; };
 		23AB70A4288FFDBD00503366 /* RecordDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB70A2288FFDBD00503366 /* RecordDetailTableViewCell.swift */; };
@@ -219,11 +215,7 @@
 		23A5B85E287D7F81005413A3 /* NotAcheivedFlowerPotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotAcheivedFlowerPotTableViewCell.swift; sourceTree = "<group>"; };
 		23A5B85F287D7F81005413A3 /* NotAcheivedFlowerPotTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotAcheivedFlowerPotTableViewCell.xib; sourceTree = "<group>"; };
 		23A5B868287D9D5D005413A3 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
-		23A5B869287D9D5D005413A3 /* InputTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InputTableViewCell.xib; sourceTree = "<group>"; };
-		23A5B86A287D9D5D005413A3 /* NoResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoResultTableViewCell.swift; sourceTree = "<group>"; };
-		23A5B86B287D9D5D005413A3 /* NoResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoResultTableViewCell.xib; sourceTree = "<group>"; };
 		23A5B86C287D9D5D005413A3 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
-		23A5B86D287D9D5D005413A3 /* InputTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTableViewCell.swift; sourceTree = "<group>"; };
 		23AB709C288FFAD700503366 /* RecordDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecordDetail.storyboard; sourceTree = "<group>"; };
 		23AB709F288FFAF000503366 /* RecordDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailViewController.swift; sourceTree = "<group>"; };
 		23AB70A2288FFDBD00503366 /* RecordDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailTableViewCell.swift; sourceTree = "<group>"; };
@@ -853,10 +845,6 @@
 		D0DB05B82876CF580041CEEF /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				23A5B86D287D9D5D005413A3 /* InputTableViewCell.swift */,
-				23A5B869287D9D5D005413A3 /* InputTableViewCell.xib */,
-				23A5B86A287D9D5D005413A3 /* NoResultTableViewCell.swift */,
-				23A5B86B287D9D5D005413A3 /* NoResultTableViewCell.xib */,
 				23A5B868287D9D5D005413A3 /* ResultTableViewCell.swift */,
 				23A5B86C287D9D5D005413A3 /* ResultTableViewCell.xib */,
 			);
@@ -1000,9 +988,7 @@
 				23458ADC2896E4FF0003A669 /* ProfileStatisticTableViewCell.xib in Resources */,
 				23A5B85D287D7F73005413A3 /* AcheivedFlowerPotTableViewCell.xib in Resources */,
 				D0C2B058286DC9C000242E71 /* Assets.xcassets in Resources */,
-				23A5B86F287D9D5D005413A3 /* InputTableViewCell.xib in Resources */,
 				2355234C2881C48A00EDE3E1 /* FlowerPotDescriptionTableViewCell.xib in Resources */,
-				23A5B871287D9D5D005413A3 /* NoResultTableViewCell.xib in Resources */,
 				23ADA90D288468D50066D15A /* ReadingRecord.storyboard in Resources */,
 				23ADA91528846A2A0066D15A /* Profile.storyboard in Resources */,
 				23ADA90F2884693D0066D15A /* SelectBook.storyboard in Resources */,
@@ -1106,7 +1092,6 @@
 				23776E1B2892610E00351F3A /* RegisterProfileViewController.swift in Sources */,
 				230524BE287D5C060081933A /* FlowerPotDetailViewController.swift in Sources */,
 				234036002891992000C9AB4D /* ModifyRecordInput.swift in Sources */,
-				23A5B870287D9D5D005413A3 /* NoResultTableViewCell.swift in Sources */,
 				D047CB992892EF7C004652A3 /* RegisterProfileLibrogBottomViewController.swift in Sources */,
 				D0DB05B32876BC330041CEEF /* UploadViewController.swift in Sources */,
 				23ADA92828847B830066D15A /* FlowerPotSearchTabViewController.swift in Sources */,
@@ -1115,7 +1100,6 @@
 				23C8B4A6286EF2F300432141 /* PaddingLabel.swift in Sources */,
 				23AB70AD289009D500503366 /* ModifyRecordViewController.swift in Sources */,
 				239EF02F2892F2C8005BC364 /* SearchDataManager.swift in Sources */,
-				23A5B873287D9D5D005413A3 /* InputTableViewCell.swift in Sources */,
 				D0DB05C2287700650041CEEF /* BookData.swift in Sources */,
 				2355234B2881C48A00EDE3E1 /* FlowerPotDescriptionTableViewCell.swift in Sources */,
 				23C8B4B0286EF76F00432141 /* MainFlowerTableViewCell.swift in Sources */,
