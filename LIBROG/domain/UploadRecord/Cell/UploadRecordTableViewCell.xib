@@ -30,11 +30,12 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g33-hk-yTd">
-                                <rect key="frame" x="109" y="19" width="207" height="21"/>
+                                <rect key="frame" x="109" y="19" width="207" height="18"/>
                                 <attributedString key="attributedText">
                                     <fragment content="bookTitle">
                                         <attributes>
-                                            <font key="NSFont" size="17" name="AppleSDGothicNeo-SemiBold"/>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="15" name="AppleSDGothicNeo-SemiBold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -42,12 +43,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVE-1U-Mx8">
-                                <rect key="frame" x="109" y="45" width="207" height="17"/>
+                                <rect key="frame" x="109" y="42" width="207" height="17"/>
                                 <attributedString key="attributedText">
                                     <fragment content="bookAuthor">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="14" name="AppleSDGothicNeo-SemiBold"/>
+                                            <font key="NSFont" size="14" name="AppleSDGothicNeo-Medium"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -55,7 +56,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VjV-tR-mx8">
-                                <rect key="frame" x="109" y="72" width="207" height="14.5"/>
+                                <rect key="frame" x="109" y="69" width="207" height="14.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="bookExplanation">
                                         <attributes>
@@ -94,11 +95,12 @@
                         <rect key="frame" x="16" y="158" width="336" height="93"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shk-OK-Ub8">
-                                <rect key="frame" x="15" y="10" width="82.5" height="20.5"/>
+                                <rect key="frame" x="15" y="10" width="73" height="18"/>
                                 <attributedString key="attributedText">
                                     <fragment content="이 책의 별점">
                                         <attributes>
-                                            <font key="NSFont" size="17" name="AppleSDGothicNeo-Bold"/>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="15" name="AppleSDGothicNeo-SemiBold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -106,12 +108,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nE-R8-lGh">
-                                <rect key="frame" x="104.5" y="10" width="40" height="20.5"/>
+                                <rect key="frame" x="95" y="9.5" width="36" height="19.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="point">
                                         <attributes>
                                             <color key="NSColor" red="0.47843140360000003" green="0.73725497719999999" blue="0.49803921579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="17" name="AppleSDGothicNeo-Bold"/>
+                                            <font key="NSFont" size="16" name="AppleSDGothicNeo-SemiBold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -119,12 +121,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hd3-d0-Kok">
-                                <rect key="frame" x="144.5" y="10" width="24" height="21"/>
+                                <rect key="frame" x="131" y="9.5" width="22.5" height="19.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content=" / 5">
                                         <attributes>
                                             <color key="NSColor" red="0.47843140360000003" green="0.73725497719999999" blue="0.49803921579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="17" name="AppleSDGothicNeo-Bold"/>
+                                            <font key="NSFont" size="16" name="AppleSDGothicNeo-SemiBold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -132,7 +134,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m8g-Ps-e6w" customClass="CosmosView" customModule="Cosmos">
-                                <rect key="frame" x="60" y="46.5" width="216" height="21"/>
+                                <rect key="frame" x="60" y="44" width="216" height="21"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="VmH-rc-W9R"/>
@@ -172,11 +174,12 @@
                         <rect key="frame" x="16" y="258" width="336" height="93"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSR-8s-zyJ">
-                                <rect key="frame" x="15" y="10" width="102" height="20.5"/>
+                                <rect key="frame" x="15" y="10" width="90" height="18"/>
                                 <attributedString key="attributedText">
                                     <fragment content="인상 깊은 한 줄">
                                         <attributes>
-                                            <font key="NSFont" size="17" name="AppleSDGothicNeo-Bold"/>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="15" name="AppleSDGothicNeo-SemiBold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -184,7 +187,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="인상 깊은 한 줄을 써주세요." minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="pBt-0C-PIG">
-                                <rect key="frame" x="15" y="43.5" width="305" height="25"/>
+                                <rect key="frame" x="15" y="41" width="305" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="6Ql-gE-mcj"/>
                                 </constraints>
@@ -211,25 +214,32 @@
                         <rect key="frame" x="16" y="358" width="336" height="300"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWW-Ti-qTr">
-                                <rect key="frame" x="15" y="10" width="44.5" height="20.5"/>
+                                <rect key="frame" x="15" y="10" width="39" height="18"/>
                                 <attributedString key="attributedText">
                                     <fragment content="독후감">
                                         <attributes>
-                                            <font key="NSFont" size="17" name="AppleSDGothicNeo-Bold"/>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="15" name="AppleSDGothicNeo-SemiBold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="독후감을 입력해주세요." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Coc-6b-XQG">
-                                <rect key="frame" x="15" y="43.5" width="305" height="240"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Coc-6b-XQG">
+                                <rect key="frame" x="15" y="41" width="305" height="240"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="hcV-aZ-W0J"/>
                                 </constraints>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="독후감을 입력해주세요.">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="14" name="AppleSDGothicNeo-Regular"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
