@@ -109,6 +109,9 @@
 		23DFD3112878D9F4002AC8B0 /* UploadRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23DFD30F2878D9F4002AC8B0 /* UploadRecordTableViewCell.xib */; };
 		23F6107A288812C700575D81 /* ReadingRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F61079288812C700575D81 /* ReadingRecordModel.swift */; };
 		23F6107C2888134C00575D81 /* ReadingRecordDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F6107B2888134C00575D81 /* ReadingRecordDataManager.swift */; };
+		23F8483E2899A99400ED644B /* NoticeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F8483D2899A99400ED644B /* NoticeModel.swift */; };
+		23F848422899ADC100ED644B /* NoticeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F848402899ADC100ED644B /* NoticeCollectionViewCell.swift */; };
+		23F848432899ADC100ED644B /* NoticeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23F848412899ADC100ED644B /* NoticeCollectionViewCell.xib */; };
 		9BE303E45EECD6C4F3471E37 /* Pods_LIBROG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C934BB6A1545DC5476C41F4 /* Pods_LIBROG.framework */; };
 		D047CB992892EF7C004652A3 /* RegisterProfileLibrogBottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047CB982892EF7C004652A3 /* RegisterProfileLibrogBottomViewController.swift */; };
 		D061104B288FF09500F96B65 /* StatisticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D061104A288FF09500F96B65 /* StatisticModel.swift */; };
@@ -255,6 +258,9 @@
 		23DFD30F2878D9F4002AC8B0 /* UploadRecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UploadRecordTableViewCell.xib; sourceTree = "<group>"; };
 		23F61079288812C700575D81 /* ReadingRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingRecordModel.swift; sourceTree = "<group>"; };
 		23F6107B2888134C00575D81 /* ReadingRecordDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingRecordDataManager.swift; sourceTree = "<group>"; };
+		23F8483D2899A99400ED644B /* NoticeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeModel.swift; sourceTree = "<group>"; };
+		23F848402899ADC100ED644B /* NoticeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeCollectionViewCell.swift; sourceTree = "<group>"; };
+		23F848412899ADC100ED644B /* NoticeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeCollectionViewCell.xib; sourceTree = "<group>"; };
 		4213D3509CD3CBE5B946C6E3 /* Pods-LIBROG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LIBROG.release.xcconfig"; path = "Target Support Files/Pods-LIBROG/Pods-LIBROG.release.xcconfig"; sourceTree = "<group>"; };
 		6C934BB6A1545DC5476C41F4 /* Pods_LIBROG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LIBROG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80874FB74B3F63648D20C05C /* Pods-LIBROG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LIBROG.debug.xcconfig"; path = "Target Support Files/Pods-LIBROG/Pods-LIBROG.debug.xcconfig"; sourceTree = "<group>"; };
@@ -611,6 +617,7 @@
 				23ADA92A28847FC80066D15A /* FlowerpotModel.swift */,
 				23ADA92C288481080066D15A /* MainPageDataManager.swift */,
 				23A41EA8289436B10008437B /* RecentBookModel.swift */,
+				23F8483D2899A99400ED644B /* NoticeModel.swift */,
 			);
 			path = MainPageDataManager;
 			sourceTree = "<group>";
@@ -675,6 +682,8 @@
 				23C8B4B7286EF78600432141 /* RecentBookCollectionViewCell.xib */,
 				238DE01A28819AF0007901E6 /* TodaySuggestCollectionViewCell.swift */,
 				238DE01B28819AF0007901E6 /* TodaySuggestCollectionViewCell.xib */,
+				23F848402899ADC100ED644B /* NoticeCollectionViewCell.swift */,
+				23F848412899ADC100ED644B /* NoticeCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -991,6 +1000,7 @@
 				2355234C2881C48A00EDE3E1 /* FlowerPotDescriptionTableViewCell.xib in Resources */,
 				23ADA90D288468D50066D15A /* ReadingRecord.storyboard in Resources */,
 				23ADA91528846A2A0066D15A /* Profile.storyboard in Resources */,
+				23F848432899ADC100ED644B /* NoticeCollectionViewCell.xib in Resources */,
 				23ADA90F2884693D0066D15A /* SelectBook.storyboard in Resources */,
 				2379DEE82897A29800F946DD /* ProfileLoginTypeTableViewCell.xib in Resources */,
 				23A5B872287D9D5D005413A3 /* ResultTableViewCell.xib in Resources */,
@@ -1120,6 +1130,8 @@
 				23DFD30D2878D9B1002AC8B0 /* UploadRecordViewController.swift in Sources */,
 				23ADA922288478FD0066D15A /* AchievedFlowerPotViewController.swift in Sources */,
 				D0C2B04F286DC9BE00242E71 /* AppDelegate.swift in Sources */,
+				23F848422899ADC100ED644B /* NoticeCollectionViewCell.swift in Sources */,
+				23F8483E2899A99400ED644B /* NoticeModel.swift in Sources */,
 				232973622887F86600954AA0 /* FlowerpotBookRecordModel.swift in Sources */,
 				2339DA0A2885948500A3DBC4 /* HeaderManager.swift in Sources */,
 				23458AD52896E0C30003A669 /* ProfileIntroTableViewCell.swift in Sources */,
