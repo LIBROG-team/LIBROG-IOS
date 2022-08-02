@@ -40,7 +40,7 @@ class RegisterProfileViewController: UIViewController {
         // 아래로 드래그해도 안닫히게 하기
         bottomSheet.dismissOnDraggingDownSheet = false
         // 높이
-        bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = 197
+        bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = 177
         // 뒤에 배경 컬러
         bottomSheet.scrimColor = UIColor(red: 0.25, green: 0.25, blue: 0.25, alpha: 0.54)
     }
@@ -64,7 +64,7 @@ extension RegisterProfileViewController: MDCBottomSheetControllerDelegate {
     }
 }
 
-// MARK: - 독서기록 정렬 메뉴 Table view data source
+// MARK: - 이미지 종류 메뉴 Table view data source
 extension RegisterProfileViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
