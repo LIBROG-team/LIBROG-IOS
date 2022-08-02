@@ -25,6 +25,7 @@ class RegisterProfileViewController: UIViewController {
     // 앨범 선택 image picker
     let imagePickerController = UIImagePickerController()
     var selectedPhoto: UIImage!
+    var userNameText: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,8 @@ class RegisterProfileViewController: UIViewController {
         registerButton.tintColor = UIColor(named: "LIBROGColor")
         
         imagePickerController.delegate = self
+        
+        userNameLabel.text = userNameText
     }
     @IBAction func cameraDidTapButton(_ sender: UIButton) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "RegisterProfileBottomVC") as! RegisterProfileBottomViewController

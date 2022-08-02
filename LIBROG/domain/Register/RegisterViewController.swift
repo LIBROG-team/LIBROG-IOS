@@ -86,6 +86,13 @@ class RegisterViewController: UIViewController {
         
         let registerInput = RegisterInput(email: email, password: password, name: nickname)
         RegisterDataManager().registerDataManager(registerInput, self)
+        
+//        guard let profileVC = self.storyboard?.instantiateViewController(withIdentifier: "RegisterProfileVC") as? "RegisterProfileViewController" else {
+//            return
+//        }
+        guard let profileVC = UIStoryboard(name: "Register", bundle: nil).instantiateViewController(identifier: "RegisterProfileVC") as? RegisterProfileViewController else {return}
+        profileVC.userNameText = nickname
+        self.present(profileVC, animated: true, completion: nil)
     }
 }
 
