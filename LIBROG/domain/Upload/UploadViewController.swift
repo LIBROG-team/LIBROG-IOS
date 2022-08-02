@@ -52,6 +52,7 @@ class UploadViewController: UITableViewController {
             if searchController.searchBar.searchTextField.text != "" {
                 cell.textLabel?.text = "검색 결과가 없습니다."
             }
+            cell.textLabel?.font = UIFont(name: "Apple SD Gothic Neo", size: 14)
             cell.textLabel?.textColor = UIColor.gray
             cell.textLabel?.textAlignment = .center
             cell.selectionStyle = .none
@@ -82,6 +83,8 @@ class UploadViewController: UITableViewController {
             } else if (indexPath.row == dataArray.count-1) {
                 cell.layer.cornerRadius = 15
                 cell.layer.maskedCorners = CACornerMask(arrayLiteral: .layerMinXMaxYCorner, .layerMaxXMaxYCorner)
+            } else {
+                cell.layer.cornerRadius = 0
             }
             return cell
         }
