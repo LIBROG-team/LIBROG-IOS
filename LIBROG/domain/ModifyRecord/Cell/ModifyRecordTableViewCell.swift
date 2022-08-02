@@ -21,6 +21,7 @@ class ModifyRecordTableViewCell: UITableViewCell {
     var starRating: Int!
     var quote: String!
     var content: String!
+    var isEdited: Bool = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -55,12 +56,9 @@ class ModifyRecordTableViewCell: UITableViewCell {
             bookImgView.kf.setImage(with: url, placeholder: UIImage(named: "logo22%"))
         }
         
-        setInitial()
-    }
-    func setInitial() {
-        self.starRating = Int(starRatingView.rating)
-        self.quote = quoteTextField.text!
-        self.content = reportTextView.text!
+        self.starRating = star
+        self.quote = quote
+        self.content = content
     }
     // 별점 수정 method
     func updateRating(_ requiredRating: Double?) {
@@ -71,6 +69,7 @@ class ModifyRecordTableViewCell: UITableViewCell {
         }
         starRatingView.rating = newRatingValue
         self.starRating = Int(newRatingValue)
+        isEdited = true
         starRatingLabel.text = String(Int(newRatingValue))
     }
 
@@ -80,24 +79,37 @@ class ModifyRecordTableViewCell: UITableViewCell {
     // MARK: Actions
     @IBAction func quoteEditingChanged(_ sender: UITextField) {
         self.quote = sender.text!
+//        print("quote...", self.quote)
+        isEdited = true
     }
 }
 // MARK: - 독후감 TextView delegate
 extension ModifyRecordTableViewCell: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         self.content = textView.text!
+//        print("content...", self.content)
+        isEdited = true
     }
 }
 //MARK: - 수정 버튼 클릭 func & success API
 extension ModifyRecordTableViewCell {
     func postRecord(_ recordData: RecordDetailResultModel) {
         let idx = recordData.readingRecordIdx!
-        let starRating = self.starRating!
-        let quote = self.quote!
-        let content = self.content!
         
-        let modifyRecordInput = ModifyRecordInput(idx: idx, starRating: starRating, quote: quote, content: content)
-        ModifyRecordDataManager().modifyRecordDataManager(modifyRecordInput, self)
+//        print("star...", self.starRating)
+//        print("quote...", self.quote)
+//        print("content...", self.content)
+        
+        if isEdited == true {
+            starRating = self.starRating!
+            quote = self.quote!
+            content = self.content!
+            
+            let modifyRecordInput = ModifyRecordInput(idx: idx, starRating: starRating, quote: quote, content: content)
+            ModifyRecordDataManager().modifyRecordDataManager(modifyRecordInput, self)
+        } else {
+            print("수정 해주세요")
+        }
     }
     func modifyRecordSuccessAPI(_ result: ModifyRecordModel) {
         print("MODIFY SUCCESS: ", result)
