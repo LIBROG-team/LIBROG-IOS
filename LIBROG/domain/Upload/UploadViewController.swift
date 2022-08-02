@@ -142,7 +142,7 @@ extension UploadViewController: UISearchControllerDelegate, UISearchResultsUpdat
         //placeholder 커스텀
         searchController.searchBar.placeholder = "책 검색하기"
         let attributedString = NSMutableAttributedString(string: "책 검색하기", attributes: [
-                NSAttributedString.Key.font: UIFont(name: "Apple SD Gothic Neo", size: 16) as Any
+                NSAttributedString.Key.font: UIFont(name: "Apple SD Gothic Neo", size: 15) as Any
             ])
         searchController.searchBar.searchTextField.attributedPlaceholder = attributedString
         
