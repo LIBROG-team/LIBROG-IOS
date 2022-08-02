@@ -31,8 +31,8 @@ class RegisterTermViewController: UIViewController {
         
         privacyRadioButton.isMultipleSelectionEnabled = true
         serviceRadioButton.isMultipleSelectionEnabled = true
-        privacyRadioButton.tintColor = UIColor(named: "LIBROGColor")
-        serviceRadioButton.tintColor = UIColor(named: "LIBROGColor")
+        privacyRadioButton.tintColor = UIColor.white
+        serviceRadioButton.tintColor = UIColor.white
     }
     //MARK: Actions
     @IBAction func privacyRadioButtonDidTap(_ sender: DLRadioButton) {isRadioButtonsSelected()}
