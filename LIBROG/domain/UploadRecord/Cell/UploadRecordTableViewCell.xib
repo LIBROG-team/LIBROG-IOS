@@ -95,7 +95,7 @@
                         <rect key="frame" x="16" y="158" width="336" height="93"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shk-OK-Ub8">
-                                <rect key="frame" x="15" y="10" width="73" height="18"/>
+                                <rect key="frame" x="16" y="14" width="73" height="18"/>
                                 <attributedString key="attributedText">
                                     <fragment content="이 책의 별점">
                                         <attributes>
@@ -108,7 +108,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nE-R8-lGh">
-                                <rect key="frame" x="95" y="9.5" width="36" height="19.5"/>
+                                <rect key="frame" x="96" y="13.5" width="36" height="19.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="point">
                                         <attributes>
@@ -121,7 +121,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hd3-d0-Kok">
-                                <rect key="frame" x="131" y="9.5" width="22.5" height="19.5"/>
+                                <rect key="frame" x="132" y="13.5" width="22.5" height="19.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content=" / 5">
                                         <attributes>
@@ -134,7 +134,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m8g-Ps-e6w" customClass="CosmosView" customModule="Cosmos">
-                                <rect key="frame" x="60" y="44" width="216" height="21"/>
+                                <rect key="frame" x="60" y="48" width="216" height="21"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="VmH-rc-W9R"/>
@@ -157,11 +157,11 @@
                             <constraint firstAttribute="height" constant="93" id="92J-DW-syB"/>
                             <constraint firstItem="0nE-R8-lGh" firstAttribute="leading" secondItem="Shk-OK-Ub8" secondAttribute="trailing" constant="7" id="DVu-3r-o3S"/>
                             <constraint firstItem="m8g-Ps-e6w" firstAttribute="top" secondItem="Shk-OK-Ub8" secondAttribute="bottom" constant="16" id="Dtd-7p-5Ch"/>
-                            <constraint firstItem="Shk-OK-Ub8" firstAttribute="top" secondItem="7Z0-Oj-zAj" secondAttribute="top" constant="10" id="L2V-4v-awM"/>
+                            <constraint firstItem="Shk-OK-Ub8" firstAttribute="top" secondItem="7Z0-Oj-zAj" secondAttribute="top" constant="14" id="L2V-4v-awM"/>
                             <constraint firstItem="m8g-Ps-e6w" firstAttribute="leading" secondItem="7Z0-Oj-zAj" secondAttribute="leading" constant="60" id="RMw-2m-FcF"/>
                             <constraint firstItem="0nE-R8-lGh" firstAttribute="centerY" secondItem="Shk-OK-Ub8" secondAttribute="centerY" id="b4Y-TB-SLS"/>
                             <constraint firstItem="m8g-Ps-e6w" firstAttribute="centerX" secondItem="7Z0-Oj-zAj" secondAttribute="centerX" id="jXT-UX-8kg"/>
-                            <constraint firstItem="Shk-OK-Ub8" firstAttribute="leading" secondItem="7Z0-Oj-zAj" secondAttribute="leading" constant="15" id="mZ7-qN-KPh"/>
+                            <constraint firstItem="Shk-OK-Ub8" firstAttribute="leading" secondItem="7Z0-Oj-zAj" secondAttribute="leading" constant="16" id="mZ7-qN-KPh"/>
                             <constraint firstItem="Hd3-d0-Kok" firstAttribute="centerY" secondItem="0nE-R8-lGh" secondAttribute="centerY" id="tHo-di-NpX"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -174,7 +174,7 @@
                         <rect key="frame" x="16" y="258" width="336" height="93"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSR-8s-zyJ">
-                                <rect key="frame" x="15" y="10" width="90" height="18"/>
+                                <rect key="frame" x="16" y="14" width="90" height="18"/>
                                 <attributedString key="attributedText">
                                     <fragment content="인상 깊은 한 줄">
                                         <attributes>
@@ -187,7 +187,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="인상 깊은 한 줄을 써주세요." minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="pBt-0C-PIG">
-                                <rect key="frame" x="15" y="41" width="305" height="25"/>
+                                <rect key="frame" x="16" y="45" width="304" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="6Ql-gE-mcj"/>
                                 </constraints>
@@ -197,11 +197,11 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gSR-8s-zyJ" firstAttribute="leading" secondItem="s72-21-BgN" secondAttribute="leading" constant="15" id="8M0-j1-dop"/>
+                            <constraint firstItem="gSR-8s-zyJ" firstAttribute="leading" secondItem="s72-21-BgN" secondAttribute="leading" constant="16" id="8M0-j1-dop"/>
                             <constraint firstItem="pBt-0C-PIG" firstAttribute="leading" secondItem="gSR-8s-zyJ" secondAttribute="leading" id="AGT-GT-Ov3"/>
                             <constraint firstAttribute="height" constant="93" id="BNT-5D-bG6"/>
                             <constraint firstItem="pBt-0C-PIG" firstAttribute="top" secondItem="gSR-8s-zyJ" secondAttribute="bottom" constant="13" id="fgd-Ov-Yqs"/>
-                            <constraint firstItem="gSR-8s-zyJ" firstAttribute="top" secondItem="s72-21-BgN" secondAttribute="top" constant="10" id="sDE-uM-738"/>
+                            <constraint firstItem="gSR-8s-zyJ" firstAttribute="top" secondItem="s72-21-BgN" secondAttribute="top" constant="14" id="sDE-uM-738"/>
                             <constraint firstAttribute="trailing" secondItem="pBt-0C-PIG" secondAttribute="trailing" constant="16" id="zuN-nZ-Bgp"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -214,7 +214,7 @@
                         <rect key="frame" x="16" y="358" width="336" height="300"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWW-Ti-qTr">
-                                <rect key="frame" x="15" y="10" width="39" height="18"/>
+                                <rect key="frame" x="16" y="14" width="39" height="18"/>
                                 <attributedString key="attributedText">
                                     <fragment content="독후감">
                                         <attributes>
@@ -227,7 +227,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Coc-6b-XQG">
-                                <rect key="frame" x="15" y="41" width="305" height="240"/>
+                                <rect key="frame" x="16" y="45" width="304" height="240"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="hcV-aZ-W0J"/>
@@ -245,8 +245,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="LWW-Ti-qTr" firstAttribute="top" secondItem="pJc-WM-f46" secondAttribute="top" constant="10" id="0KP-eD-IoD"/>
-                            <constraint firstItem="LWW-Ti-qTr" firstAttribute="leading" secondItem="pJc-WM-f46" secondAttribute="leading" constant="15" id="8Kt-t2-VlA"/>
+                            <constraint firstItem="LWW-Ti-qTr" firstAttribute="top" secondItem="pJc-WM-f46" secondAttribute="top" constant="14" id="0KP-eD-IoD"/>
+                            <constraint firstItem="LWW-Ti-qTr" firstAttribute="leading" secondItem="pJc-WM-f46" secondAttribute="leading" constant="16" id="8Kt-t2-VlA"/>
                             <constraint firstItem="Coc-6b-XQG" firstAttribute="leading" secondItem="LWW-Ti-qTr" secondAttribute="leading" id="CiA-Lp-g5I"/>
                             <constraint firstItem="Coc-6b-XQG" firstAttribute="top" secondItem="LWW-Ti-qTr" secondAttribute="bottom" constant="13" id="bRw-87-Yxl"/>
                             <constraint firstAttribute="trailing" secondItem="Coc-6b-XQG" secondAttribute="trailing" constant="16" id="csg-h9-HTk"/>
