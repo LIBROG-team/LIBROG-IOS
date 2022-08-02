@@ -15,6 +15,12 @@ class RegisterProfileViewController: UIViewController {
     @IBOutlet weak var cameraButton: UIButton!
     @IBOutlet weak var profileImageView: UIImageView!
     
+    @IBAction func registerBtnDidTap(_ sender: UIButton) {
+        guard let LoginVC = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(identifier: "LoginVC") as? LoginViewController else {return}
+        LoginVC.modalPresentationStyle = .fullScreen
+        self.present(LoginVC, animated: true, completion: nil)
+    }
+    
     let selectArray = ["앨범에서 사진/동영상 선택", "리브로그 프로필로 설정", "기본 이미지로 변경"]
     // 앨범 선택 image picker
     let imagePickerController = UIImagePickerController()
