@@ -40,7 +40,7 @@
                                 <color key="tintColor" name="LIBROGColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="선택하기">
-                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="15"/>
                                     <color key="baseBackgroundColor" name="LIBROGColor"/>
                                 </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>

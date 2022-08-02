@@ -42,6 +42,7 @@ extension NotAchievedFlowerPotSearchViewController: UITableViewDelegate, UITable
             if searchBar.text == "" {
                 let cell = UITableViewCell()
                 cell.textLabel?.text = "검색창에 화분 이름을 입력해주세요"
+                cell.textLabel?.font = UIFont(name: "Apple SD Gothic Neo", size: 14)
                 cell.textLabel?.textColor = UIColor.gray
                 cell.textLabel?.textAlignment = .center
                 cell.selectionStyle = .none
@@ -49,6 +50,7 @@ extension NotAchievedFlowerPotSearchViewController: UITableViewDelegate, UITable
             } else {
                 let cell = UITableViewCell()
                 cell.textLabel?.text = "검색 결과가 없습니다."
+                cell.textLabel?.font = UIFont(name: "Apple SD Gothic Neo", size: 14)
                 cell.textLabel?.textColor = UIColor.gray
                 cell.textLabel?.textAlignment = .center
                 cell.selectionStyle = .none
