@@ -226,7 +226,7 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="독후감을 입력해주세요." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Jau-BQ-2me">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="독후감을 입력해주세요." translatesAutoresizingMaskIntoConstraints="NO" id="Jau-BQ-2me">
                                 <rect key="frame" x="16" y="44" width="304" height="240"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
