@@ -93,6 +93,7 @@ extension RegisterViewController {
     func RegisterSuccessAPI(_ result: RegisterModel) {
         if result.isSuccess! {
             guard let registerProfileVC = UIStoryboard(name: "Register", bundle: nil).instantiateViewController(identifier: "RegisterProfileVC") as? RegisterProfileViewController else {return}
+            registerProfileVC.userNameText = nickname
             registerProfileVC.modalPresentationStyle = .fullScreen
             self.present(registerProfileVC, animated: true, completion: nil)
         }
