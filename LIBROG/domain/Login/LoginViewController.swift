@@ -74,7 +74,7 @@ class LoginViewController: UIViewController {
     @IBAction func pwTextFieldEditingChanged(_ sender: UITextField) {
         let text = sender.text ?? ""
         self.password = text
-        // 이메일 형식에 알맞게 & 30자 미만
+        // 비밀번호 형식 8자 ~ 20자
         self.isValidPw = (text.count >= 8) && (text.count <= 20)
         pwWarningLabel.isHidden = self.isValidPw ? true : false
         pwWarningLabel.text = self.isValidPw ? "" : "비밀번호는 8~20자리를 입력해주세요."
