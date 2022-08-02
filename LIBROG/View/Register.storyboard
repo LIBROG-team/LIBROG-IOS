@@ -74,22 +74,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호를 입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="774-n1-bXX">
-                                <rect key="frame" x="34" y="302.5" width="346" height="18.5"/>
+                                <rect key="frame" x="34" y="302.5" width="346" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <connections>
                                     <action selector="passwordTextFieldEditingChanged:" destination="Y6W-OH-hqX" eventType="editingChanged" id="0Kf-e2-7J5"/>
                                 </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jb5-7p-COH">
-                                <rect key="frame" x="34" y="326" width="346" height="1"/>
+                                <rect key="frame" x="34" y="324.5" width="346" height="1"/>
                                 <color key="backgroundColor" name="LIBROGColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="cmH-WV-QiU"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEI-1i-VSD">
-                                <rect key="frame" x="34" y="367" width="39" height="18"/>
+                                <rect key="frame" x="34" y="365.5" width="39" height="18"/>
                                 <attributedString key="attributedText">
                                     <fragment content="닉네임">
                                         <attributes>
@@ -102,7 +102,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="닉네임을 입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gVu-9u-rvt">
-                                <rect key="frame" x="34" y="403" width="346" height="18.5"/>
+                                <rect key="frame" x="34" y="401.5" width="346" height="18.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -110,7 +110,7 @@
                                 </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0BN-EK-5gX">
-                                <rect key="frame" x="34" y="426.5" width="346" height="1"/>
+                                <rect key="frame" x="34" y="425" width="346" height="1"/>
                                 <color key="backgroundColor" name="LIBROGColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="yxx-iN-Kc0"/>
@@ -136,13 +136,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="warning" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7i8-yC-2A5">
-                                <rect key="frame" x="34" y="333" width="43" height="13.5"/>
+                                <rect key="frame" x="34" y="331.5" width="43" height="13.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="warning" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcO-c1-tpc">
-                                <rect key="frame" x="34" y="433.5" width="43" height="13.5"/>
+                                <rect key="frame" x="34" y="432" width="43" height="13.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
