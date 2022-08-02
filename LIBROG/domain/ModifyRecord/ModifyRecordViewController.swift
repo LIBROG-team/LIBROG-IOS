@@ -41,7 +41,9 @@ extension ModifyRecordViewController: UITableViewDelegate, UITableViewDataSource
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ModifyRecordTableViewCell", for: indexPath) as? ModifyRecordTableViewCell else {
             return UITableViewCell()
         }
-        cell.setRecordData(self.recordData)
+        if isCompleteButtonTap == false {
+            cell.setRecordData(self.recordData)
+        }
         if isCompleteButtonTap == true {
             cell.postRecord(self.recordData)
             goMain()
