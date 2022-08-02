@@ -61,6 +61,7 @@ extension NotAchievedFlowerPotSearchViewController: UITableViewDelegate, UITable
                 // if data exists
                 cell.setNotAchievedFlowerpotData(flowerpot[itemIdx])
             }
+            cell.selectionStyle = .none
             return cell
         }
     }
