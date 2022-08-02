@@ -29,6 +29,8 @@ class ModifyRecordTableViewCell: UITableViewCell {
         
         reportTextView.delegate = self
         starRatingView.didTouchCosmos = didTouchCosmos
+        // 인상 깊은 한 줄 폰트 및 크기 설정
+        quoteTextField.font = UIFont(name: "Apple SD Gothic Neo", size: 14)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

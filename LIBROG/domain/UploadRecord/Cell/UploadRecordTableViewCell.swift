@@ -26,6 +26,8 @@ class UploadRecordTableViewCell: UITableViewCell {
         bookPointView.rating = 5
         bookPointLabel.text = "5"
         bookPointView.didTouchCosmos = didTouchCosmos
+        // 인상 깊은 한 줄 폰트 및 크기 설정
+        quoteTextField.font = UIFont(name: "Apple SD Gothic Neo", size: 14)
     }
 
     func setBookData(_ bookData: BookData) {

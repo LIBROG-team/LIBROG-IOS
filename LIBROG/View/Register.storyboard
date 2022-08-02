@@ -613,7 +613,7 @@
                                         <color key="value" systemColor="labelColor"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="image" keyPath="iconSelected">
-                                        <imageReference key="value" image="filled_star" symbolScale="medium"/>
+                                        <imageReference key="value" image="term_check" symbolScale="medium"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="marginWidth">
                                         <real key="value" value="8"/>
@@ -672,7 +672,7 @@
                                         <color key="value" systemColor="labelColor"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="image" keyPath="iconSelected">
-                                        <imageReference key="value" image="filled_star" symbolScale="medium"/>
+                                        <imageReference key="value" image="term_check" symbolScale="medium"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
                                         <real key="value" value="20"/>
@@ -760,7 +760,7 @@
     <resources>
         <image name="arrow-right" width="21" height="21"/>
         <image name="camera-button" width="36" height="36"/>
-        <image name="filled_star" width="24" height="24"/>
+        <image name="term_check" width="20" height="20"/>
         <namedColor name="LIBROGColor">
             <color red="0.3919999897480011" green="0.74500000476837158" blue="0.47099998593330383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

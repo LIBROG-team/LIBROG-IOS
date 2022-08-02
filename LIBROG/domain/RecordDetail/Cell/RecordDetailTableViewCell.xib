@@ -30,11 +30,11 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLk-1t-T7c">
-                                <rect key="frame" x="109" y="19" width="207" height="21"/>
+                                <rect key="frame" x="109" y="19" width="207" height="18"/>
                                 <attributedString key="attributedText">
                                     <fragment content="bookTitle">
                                         <attributes>
-                                            <font key="NSFont" size="17" name="AppleSDGothicNeo-SemiBold"/>
+                                            <font key="NSFont" size="15" name="AppleSDGothicNeo-Medium"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -42,12 +42,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7H-Is-LiK">
-                                <rect key="frame" x="109" y="45" width="207" height="17"/>
+                                <rect key="frame" x="109" y="42" width="207" height="17"/>
                                 <attributedString key="attributedText">
                                     <fragment content="bookAuthor">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="14" name="AppleSDGothicNeo-SemiBold"/>
+                                            <font key="NSFont" size="14" name="AppleSDGothicNeo-Medium"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -55,7 +55,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eta-do-IW5">
-                                <rect key="frame" x="109" y="72" width="207" height="14.5"/>
+                                <rect key="frame" x="109" y="69" width="207" height="14.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="bookExplanation">
                                         <attributes>
@@ -94,11 +94,11 @@
                         <rect key="frame" x="16" y="158" width="336" height="93"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRs-u0-jgc">
-                                <rect key="frame" x="15" y="10" width="82.5" height="20.5"/>
+                                <rect key="frame" x="16" y="13" width="73" height="18"/>
                                 <attributedString key="attributedText">
                                     <fragment content="이 책의 별점">
                                         <attributes>
-                                            <font key="NSFont" size="17" name="AppleSDGothicNeo-Bold"/>
+                                            <font key="NSFont" size="15" name="AppleSDGothicNeo-SemiBold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -106,12 +106,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAU-sJ-uZp">
-                                <rect key="frame" x="104.5" y="10" width="40" height="20.5"/>
+                                <rect key="frame" x="96" y="12.5" width="36" height="19.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="point">
                                         <attributes>
                                             <color key="NSColor" red="0.47843140360000003" green="0.73725497719999999" blue="0.49803921579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="17" name="AppleSDGothicNeo-Bold"/>
+                                            <font key="NSFont" size="16" name="AppleSDGothicNeo-SemiBold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -119,12 +119,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvx-bc-WAS">
-                                <rect key="frame" x="144.5" y="10" width="24" height="21"/>
+                                <rect key="frame" x="132" y="12.5" width="22.5" height="19.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content=" / 5">
                                         <attributes>
                                             <color key="NSColor" red="0.47843140360000003" green="0.73725497719999999" blue="0.49803921579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="17" name="AppleSDGothicNeo-Bold"/>
+                                            <font key="NSFont" size="16" name="AppleSDGothicNeo-SemiBold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -132,7 +132,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mjm-Gc-Qor" customClass="CosmosView" customModule="Cosmos">
-                                <rect key="frame" x="60" y="46.5" width="216" height="21"/>
+                                <rect key="frame" x="60" y="47" width="216" height="21"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="8OH-Qw-zfN"/>
@@ -154,13 +154,13 @@
                             <constraint firstAttribute="height" constant="93" id="0sA-Cm-Y8d"/>
                             <constraint firstItem="UAU-sJ-uZp" firstAttribute="centerY" secondItem="cRs-u0-jgc" secondAttribute="centerY" id="3bE-wA-XBE"/>
                             <constraint firstItem="mjm-Gc-Qor" firstAttribute="leading" secondItem="H9o-bc-OPu" secondAttribute="leading" constant="60" id="Bgk-ah-FbR"/>
-                            <constraint firstItem="cRs-u0-jgc" firstAttribute="top" secondItem="H9o-bc-OPu" secondAttribute="top" constant="10" id="O54-av-u85"/>
+                            <constraint firstItem="cRs-u0-jgc" firstAttribute="top" secondItem="H9o-bc-OPu" secondAttribute="top" constant="13" id="O54-av-u85"/>
                             <constraint firstItem="mjm-Gc-Qor" firstAttribute="centerX" secondItem="H9o-bc-OPu" secondAttribute="centerX" id="ONI-DU-Cf9"/>
                             <constraint firstItem="mjm-Gc-Qor" firstAttribute="top" secondItem="cRs-u0-jgc" secondAttribute="bottom" constant="16" id="Ro4-it-C2p"/>
                             <constraint firstItem="bvx-bc-WAS" firstAttribute="centerY" secondItem="UAU-sJ-uZp" secondAttribute="centerY" id="dQ0-ga-odA"/>
                             <constraint firstItem="bvx-bc-WAS" firstAttribute="leading" secondItem="UAU-sJ-uZp" secondAttribute="trailing" id="svA-VR-7YQ"/>
                             <constraint firstItem="UAU-sJ-uZp" firstAttribute="leading" secondItem="cRs-u0-jgc" secondAttribute="trailing" constant="7" id="ytN-Mj-2Ag"/>
-                            <constraint firstItem="cRs-u0-jgc" firstAttribute="leading" secondItem="H9o-bc-OPu" secondAttribute="leading" constant="15" id="zME-Kg-iGU"/>
+                            <constraint firstItem="cRs-u0-jgc" firstAttribute="leading" secondItem="H9o-bc-OPu" secondAttribute="leading" constant="16" id="zME-Kg-iGU"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -172,11 +172,12 @@
                         <rect key="frame" x="16" y="258" width="336" height="93"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpY-Ku-wJf">
-                                <rect key="frame" x="15" y="10" width="102" height="20.5"/>
+                                <rect key="frame" x="16" y="13" width="90" height="18"/>
                                 <attributedString key="attributedText">
                                     <fragment content="인상 깊은 한 줄">
                                         <attributes>
-                                            <font key="NSFont" size="17" name="AppleSDGothicNeo-Bold"/>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="15" name="AppleSDGothicNeo-SemiBold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -184,7 +185,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qlf-GX-o3x">
-                                <rect key="frame" x="15" y="47.5" width="84" height="17"/>
+                                <rect key="frame" x="16" y="48" width="84" height="17"/>
                                 <attributedString key="attributedText">
                                     <fragment content="인상 깊은 한 줄">
                                         <attributes>
@@ -199,9 +200,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Qlf-GX-o3x" firstAttribute="top" secondItem="wpY-Ku-wJf" secondAttribute="bottom" constant="17" id="BbW-nj-ZG4"/>
-                            <constraint firstItem="wpY-Ku-wJf" firstAttribute="top" secondItem="Xsr-t2-FkL" secondAttribute="top" constant="10" id="LEI-QK-XNI"/>
+                            <constraint firstItem="wpY-Ku-wJf" firstAttribute="top" secondItem="Xsr-t2-FkL" secondAttribute="top" constant="13" id="LEI-QK-XNI"/>
                             <constraint firstItem="Qlf-GX-o3x" firstAttribute="leading" secondItem="wpY-Ku-wJf" secondAttribute="leading" id="UpY-P0-l8V"/>
-                            <constraint firstItem="wpY-Ku-wJf" firstAttribute="leading" secondItem="Xsr-t2-FkL" secondAttribute="leading" constant="15" id="YSc-iX-s21"/>
+                            <constraint firstItem="wpY-Ku-wJf" firstAttribute="leading" secondItem="Xsr-t2-FkL" secondAttribute="leading" constant="16" id="YSc-iX-s21"/>
                             <constraint firstAttribute="height" constant="93" id="tKf-Fh-uEk"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -214,19 +215,19 @@
                         <rect key="frame" x="16" y="358" width="336" height="300"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGe-G3-QWY">
-                                <rect key="frame" x="15" y="10" width="44.5" height="20.5"/>
+                                <rect key="frame" x="16" y="13" width="39" height="18"/>
                                 <attributedString key="attributedText">
                                     <fragment content="독후감">
                                         <attributes>
-                                            <font key="NSFont" size="17" name="AppleSDGothicNeo-Bold"/>
+                                            <font key="NSFont" size="15" name="AppleSDGothicNeo-SemiBold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="독후감을 입력해주세요." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Jau-BQ-2me">
-                                <rect key="frame" x="15" y="43.5" width="305" height="240"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="독후감을 입력해주세요." translatesAutoresizingMaskIntoConstraints="NO" id="Jau-BQ-2me">
+                                <rect key="frame" x="16" y="44" width="304" height="240"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="Oor-Ma-3Vd"/>
@@ -238,11 +239,11 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="qGe-G3-QWY" firstAttribute="leading" secondItem="Qdh-oa-2pz" secondAttribute="leading" constant="15" id="6SK-Gl-vAd"/>
+                            <constraint firstItem="qGe-G3-QWY" firstAttribute="leading" secondItem="Qdh-oa-2pz" secondAttribute="leading" constant="16" id="6SK-Gl-vAd"/>
                             <constraint firstItem="Jau-BQ-2me" firstAttribute="leading" secondItem="qGe-G3-QWY" secondAttribute="leading" id="CFO-yO-F4b"/>
                             <constraint firstAttribute="trailing" secondItem="Jau-BQ-2me" secondAttribute="trailing" constant="16" id="ed1-p5-EKf"/>
                             <constraint firstItem="Jau-BQ-2me" firstAttribute="top" secondItem="qGe-G3-QWY" secondAttribute="bottom" constant="13" id="elA-18-PBz"/>
-                            <constraint firstItem="qGe-G3-QWY" firstAttribute="top" secondItem="Qdh-oa-2pz" secondAttribute="top" constant="10" id="hxD-i8-Ngo"/>
+                            <constraint firstItem="qGe-G3-QWY" firstAttribute="top" secondItem="Qdh-oa-2pz" secondAttribute="top" constant="13" id="hxD-i8-Ngo"/>
                             <constraint firstAttribute="height" constant="300" id="vjU-Bu-SoL"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
