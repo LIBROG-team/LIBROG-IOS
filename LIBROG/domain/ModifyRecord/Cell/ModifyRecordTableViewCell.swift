@@ -54,6 +54,13 @@ class ModifyRecordTableViewCell: UITableViewCell {
         if let url = URL(string: thumbnailURL) {
             bookImgView.kf.setImage(with: url, placeholder: UIImage(named: "logo22%"))
         }
+        
+        setInitial()
+    }
+    func setInitial() {
+        self.starRating = Int(starRatingView.rating)
+        self.quote = quoteTextField.text!
+        self.content = reportTextView.text!
     }
     // 별점 수정 method
     func updateRating(_ requiredRating: Double?) {
