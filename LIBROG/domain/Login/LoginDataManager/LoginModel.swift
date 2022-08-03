@@ -11,8 +11,9 @@ struct AppLoginModel: Decodable {
     let message: String?
     let result: AppLoginResultModel
 }
-struct AppLoginResultModel: Decodable {     //userId 추가되어야함
+struct AppLoginResultModel: Decodable {
     let jwt: String?
+    let userIdx: String?
 }
 //MARK: - 카카오 로그인 Model
 struct KakaoLoginModel: Decodable {

@@ -99,7 +99,10 @@ extension RegisterProfileViewController: UITableViewDelegate, UITableViewDataSou
             self.imagePickerController.sourceType = .photoLibrary
             self.present(imagePickerController, animated: true, completion: nil)
         }
-        
+        else if indexPath.row == 2 {
+            profileImageView.image = UIImage(named: "logo_profile")
+            self.dismiss(animated: true, completion: nil)
+        }
         
         tableView.deselectRow(at: indexPath, animated: true)
     }
