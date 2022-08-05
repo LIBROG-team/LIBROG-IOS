@@ -9,7 +9,7 @@ struct AppLoginModel: Decodable {
     let isSuccess: Bool?
     let code: Int?
     let message: String?
-    let result: AppLoginResultModel
+    let result: AppLoginResultModel?
 }
 struct AppLoginResultModel: Decodable {
     let jwt: String?
@@ -20,7 +20,7 @@ struct KakaoLoginModel: Decodable {
     let isSuccess: Bool?
     let code: Int?
     let message: String?
-    let result: KakaoLoginResultModel
+    let result: KakaoLoginResultModel?
 }
 struct KakaoLoginResultModel: Decodable {
     let message: String?
