@@ -90,7 +90,7 @@ class RegisterViewController: UIViewController {
 }
 
 extension RegisterViewController {
-    func RegisterSuccessAPI(_ result: RegisterModel) {
+    func RegisterSuccessAPI(_ result: APIModel<ResultModel>) {
         if result.isSuccess! {
             guard let registerProfileVC = UIStoryboard(name: "Register", bundle: nil).instantiateViewController(identifier: "RegisterProfileVC") as? RegisterProfileViewController else {return}
             registerProfileVC.userNameText = nickname

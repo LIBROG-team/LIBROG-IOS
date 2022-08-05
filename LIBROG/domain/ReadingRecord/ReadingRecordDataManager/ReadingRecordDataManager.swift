@@ -18,12 +18,12 @@ class ReadingRecordDataManager {
                    method: .get,
                    parameters: nil)
             .validate()
-            .responseDecodable(of: ReadingRecordModel.self) { response in
+            .responseDecodable(of: APIModel<[ReadingRecordData]>.self) { response in
                 
             switch response.result {
             case .success(let result):
 //                print("DEBUG: ", result.result)
-                viewcontroller.userReadingRecordSuccessAPI(result.result)
+                viewcontroller.userReadingRecordSuccessAPI(result.result!)
             case .failure(let error):
                 print(error.localizedDescription)
             }

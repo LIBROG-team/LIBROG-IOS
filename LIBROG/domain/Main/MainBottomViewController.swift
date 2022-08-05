@@ -15,7 +15,7 @@ class MainBottomViewController: UIViewController {
     @IBOutlet weak var noticeCollectionView: UICollectionView!
     
     var recentBookArray: [RecentBookModel]!
-    var noticeArray: [NoticeResultModel]!
+    var noticeArray: [NoticeModel]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -113,7 +113,7 @@ extension MainBottomViewController {
         recentBookCollectionView.reloadData()
     }
     // MARK: 활성화된 공지사항 api
-    func noticeSuccessAPI(_ result: [NoticeResultModel]) {
+    func noticeSuccessAPI(_ result: [NoticeModel]) {
         self.noticeArray = result
         noticeCollectionView.reloadData()
     }

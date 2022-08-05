@@ -36,12 +36,12 @@ class ProfileDataManager {
                    method: .get,
                    parameters: nil)
             .validate()
-            .responseDecodable(of: StatisticModel.self) { response in
+            .responseDecodable(of: APIModel<StatisticModel>.self) { response in
                 
             switch response.result {
             case .success(let result):
 //                print("DEBUG: ", result)
-                viewcontroller.statisticSuccessAPI(result.result)
+                viewcontroller.statisticSuccessAPI(result.result!)
             case .failure(let error):
                 print(error.localizedDescription)
             }

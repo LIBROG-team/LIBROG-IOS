@@ -17,12 +17,12 @@ class FlowerpotDescriptionDataManager {
                    method: .get,
                    parameters: nil)
             .validate()
-            .responseDecodable(of: FlowerpotDescriptionModel.self) { response in
+            .responseDecodable(of: APIModel<[FlowerpotDescriptionData]>.self) { response in
                 
             switch response.result {
             case .success(let result):
                 print("DEBUG: ", result.result)
-                viewcontroller.flowerpotDescriptionSuccessAPI(result.result[0])
+                viewcontroller.flowerpotDescriptionSuccessAPI(result.result![0])
             case .failure(let error):
                 print(error.localizedDescription)
             }

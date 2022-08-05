@@ -85,12 +85,12 @@ class LoginViewController: UIViewController {
 }
 //MARK: - login success API
 extension LoginViewController {
-    func loginSuccessAPI(_ result: KakaoLoginResultModel) {
+    func loginSuccessAPI(_ result: KakaoLoginModel) {
         guard let userId = result.idx else {return}
         UserDefaults.standard.set(userId, forKey: "userId")
         self.goMain()
     }
-    func loginSuccessAPI(_ result: AppLoginModel) {
+    func loginSuccessAPI(_ result: APIModel<AppLoginModel>) {
         guard let isSuccess = result.isSuccess else {return}
         // 앱 로그인 성공 시
         if isSuccess {

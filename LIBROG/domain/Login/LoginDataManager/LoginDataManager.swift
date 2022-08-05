@@ -20,7 +20,7 @@ class LoginDataManager {
                    encoder: JSONParameterEncoder.default,
                    headers: nil)
             .validate()
-            .responseDecodable(of: AppLoginModel.self) { response in
+            .responseDecodable(of: APIModel<AppLoginModel>.self) { response in
                 
             switch response.result {
             case .success(let result):
@@ -39,7 +39,7 @@ class LoginDataManager {
                    encoder: JSONParameterEncoder.default,
                    headers: nil)
             .validate()
-            .responseDecodable(of: KakaoLoginModel.self) { response in
+            .responseDecodable(of: APIModel<KakaoLoginModel>.self) { response in
                 
             switch response.result {
             case .success(let result):

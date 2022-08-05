@@ -12,7 +12,7 @@ class RecordDetailViewController: UIViewController {
     @IBOutlet weak var recordDetailTableView: UITableView!
     
     var recordIdx: Int!
-    var recordData: RecordDetailResultModel!
+    var recordData: RecordDetailModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,7 +59,7 @@ extension RecordDetailViewController: UITableViewDelegate, UITableViewDataSource
 }
 // MARK: - 독서 상세 기록 조회 api
 extension RecordDetailViewController {
-    func recordDetailSuccessAPI(_ result: RecordDetailResultModel) {
+    func recordDetailSuccessAPI(_ result: RecordDetailModel) {
         self.recordData = result
         recordDetailTableView.reloadData()
         self.recordDetailNB.topItem?.title = result.name!

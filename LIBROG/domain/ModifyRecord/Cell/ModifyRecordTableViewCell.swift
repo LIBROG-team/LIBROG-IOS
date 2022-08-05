@@ -38,7 +38,7 @@ class ModifyRecordTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func setRecordData(_ recordData: RecordDetailResultModel) {
+    func setRecordData(_ recordData: RecordDetailModel) {
         guard let title = recordData.name else {return}
         guard let author = recordData.author else {return}
         guard let instruction = recordData.bookInstruction else {return}
@@ -95,7 +95,7 @@ extension ModifyRecordTableViewCell: UITextViewDelegate {
 }
 //MARK: - 수정 버튼 클릭 func & success API
 extension ModifyRecordTableViewCell {
-    func postRecord(_ recordData: RecordDetailResultModel) {
+    func postRecord(_ recordData: RecordDetailModel) {
         let idx = recordData.readingRecordIdx!
         
 //        print("star...", self.starRating)
@@ -113,7 +113,7 @@ extension ModifyRecordTableViewCell {
             print("수정 해주세요")
         }
     }
-    func modifyRecordSuccessAPI(_ result: ModifyRecordModel) {
+    func modifyRecordSuccessAPI(_ result: APIModel<ResultModel>) {
         print("MODIFY SUCCESS: ", result)
     }
 }
