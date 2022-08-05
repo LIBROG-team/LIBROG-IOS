@@ -19,7 +19,7 @@ class ModifyRecordDataManager {
                    encoder: JSONParameterEncoder.default,
                    headers: nil)
             .validate()
-            .responseDecodable(of: ModifyRecordModel.self) { response in
+            .responseDecodable(of: APIModel<ResultModel>.self) { response in
                 
             switch response.result {
             case .success(let result):

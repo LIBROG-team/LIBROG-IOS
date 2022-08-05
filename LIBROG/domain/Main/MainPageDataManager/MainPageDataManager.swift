@@ -20,12 +20,12 @@ class MainPageDataManager{
                    method: .get,
                    parameters: nil)
             .validate()
-            .responseDecodable(of: FlowerpotModel.self) { response in
+            .responseDecodable(of: APIModel<[FlowerpotData]>.self) { response in
                 
             switch response.result {
             case .success(let result):
 //                print("DEBUG: ", result.result[1])
-                viewcontroller.userFlowerPotSuccessAPI(result.result)
+                viewcontroller.userFlowerPotSuccessAPI(result.result!)
             case .failure(let error):
                 print(error.localizedDescription)
             }
@@ -54,12 +54,12 @@ class MainPageDataManager{
                    method: .get,
                    parameters: nil)
             .validate()
-            .responseDecodable(of: NoticeModel.self) { response in
+            .responseDecodable(of: APIModel<[NoticeModel]>.self) { response in
                 
             switch response.result {
             case .success(let result):
 //                print("DEBUG: ", result)
-                viewcontroller.noticeSuccessAPI(result.result)
+                viewcontroller.noticeSuccessAPI(result.result!)
             case .failure(let error):
                 print(error.localizedDescription)
             }

@@ -19,7 +19,7 @@ class RegisterDataManager {
                    encoder: JSONParameterEncoder.default,
                    headers: nil)
             .validate()
-            .responseDecodable(of: RegisterModel.self) { response in
+            .responseDecodable(of: APIModel<ResultModel>.self) { response in
                 
             switch response.result {
             case .success(let result):

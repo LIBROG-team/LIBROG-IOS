@@ -17,12 +17,12 @@ class FlowerpotBookRecordDataManager {
                    method: .get,
                    parameters: nil)
             .validate()
-            .responseDecodable(of: FlowerpotBookRecordModel.self) { response in
+            .responseDecodable(of: APIModel<[ReadingRecordData]>.self) { response in
                 
             switch response.result {
             case .success(let result):
                 print("DEBUG: ", result.result)
-                viewcontroller.userFlowepotBookRecordSuccessAPI(result.result)
+                viewcontroller.userFlowepotBookRecordSuccessAPI(result.result!)
             case .failure(let error):
                 print(error.localizedDescription)
             }

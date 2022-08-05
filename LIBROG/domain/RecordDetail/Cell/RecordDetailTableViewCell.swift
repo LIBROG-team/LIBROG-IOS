@@ -28,7 +28,7 @@ class RecordDetailTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func setRecordData(_ recordData: RecordDetailResultModel) {
+    func setRecordData(_ recordData: RecordDetailModel) {
         guard let title = recordData.name else {return}
         guard let author = recordData.author else {return}
         guard let instruction = recordData.bookInstruction else {return}

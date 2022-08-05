@@ -16,7 +16,7 @@ class NoticeCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    func setNotice(_ result: NoticeResultModel) {
+    func setNotice(_ result: NoticeModel) {
         // 공지사항 이미지 출력
         guard let noticeImg = result.noticeImgUrl else {return}
         if let url = URL(string: noticeImg) {

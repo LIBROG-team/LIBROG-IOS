@@ -10,7 +10,7 @@ import UIKit
 class ModifyRecordViewController: UIViewController {
     @IBOutlet weak var modifyRecordTableView: UITableView!
     
-    var recordData: RecordDetailResultModel!
+    var recordData: RecordDetailModel!
     var isCompleteButtonTap = false
     
     override func viewDidLoad() {
