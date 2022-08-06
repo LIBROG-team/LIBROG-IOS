@@ -23,7 +23,8 @@ class ReadingRecordDataManager {
             switch response.result {
             case .success(let result):
 //                print("DEBUG: ", result.result)
-                viewcontroller.userReadingRecordSuccessAPI(result.result!)
+                guard let recordResult = result.result else {return}
+                viewcontroller.userReadingRecordSuccessAPI(recordResult)
             case .failure(let error):
                 print(error.localizedDescription)
             }
@@ -40,7 +41,8 @@ class ReadingRecordDataManager {
             switch response.result {
             case .success(let result):
 //                print("DEBUG: ", result.result)
-                viewcontroller.userReadingRecordFilterSuccessAPI(result.result!)
+                guard let recordResult = result.result else {return}
+                viewcontroller.userReadingRecordFilterSuccessAPI(recordResult)
             case .failure(let error):
                 print(error.localizedDescription)
             }
