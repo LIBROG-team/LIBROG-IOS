@@ -19,7 +19,7 @@ class UploadRecordDataManager {
                    encoder: JSONParameterEncoder.default,
                    headers: nil)
             .validate()
-            .responseDecodable(of: UploadRecordModel.self) { response in
+            .responseDecodable(of: APIModel<UploadRecordModel>.self) { response in
                 
             switch response.result {
             case .success(let result):

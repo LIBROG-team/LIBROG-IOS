@@ -148,6 +148,7 @@ extension UploadViewController: UISearchControllerDelegate, UISearchResultsUpdat
                 NSAttributedString.Key.font: UIFont(name: "Apple SD Gothic Neo", size: 15) as Any
             ])
         searchController.searchBar.searchTextField.attributedPlaceholder = attributedString
+        searchController.searchBar.searchTextField.font = UIFont(name: "Apple SD Gothic Neo", size: 15)
         
         //cancel button
         searchController.automaticallyShowsCancelButton = false

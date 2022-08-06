@@ -85,15 +85,29 @@ class LoginViewController: UIViewController {
 }
 //MARK: - login success API
 extension LoginViewController {
-    func loginSuccessAPI(_ result: KakaoLoginResultModel) {
+    func loginSuccessAPI(_ result: KakaoLoginModel) {
         guard let userId = result.idx else {return}
         UserDefaults.standard.set(userId, forKey: "userId")
         self.goMain()
     }
-    func loginSuccessAPI(_ result: AppLoginModel) {
-        guard let accessToken = result.result.jwt else {return}
-        UserDefaults.standard.set(accessToken, forKey: "accessToken")
-        self.goMain()
+    func loginSuccessAPI(_ result: APIModel<AppLoginModel>) {
+        guard let isSuccess = result.isSuccess else {return}
+        // 앱 로그인 성공 시
+        if isSuccess {
+            guard let accessToken = result.result?.jwt else {return}
+            guard let userId = result.result?.userIdx else {return}
+            UserDefaults.standard.set(accessToken, forKey: "accessToken")
+            UserDefaults.standard.set(userId, forKey: "userId")
+            self.goMain()
+        }
+        // 앱 로그인 실패 시 오류 창
+        else  {
+            guard let errorMessage = result.message else {return}
+            let alert = UIAlertController(title: errorMessage, message: "", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "확인", style: .cancel, handler: nil)
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     func goMain() {
         // 첫화면으로 전환

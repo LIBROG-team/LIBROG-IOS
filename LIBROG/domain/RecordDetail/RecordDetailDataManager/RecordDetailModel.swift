@@ -7,13 +7,7 @@
 
 import Foundation
 
-struct RecordDetailModel : Decodable {
-    let isSuccess: Bool?
-    let code: Int?
-    let message: String?
-    let result: RecordDetailResultModel
-}
-struct RecordDetailResultModel: Decodable {
+struct RecordDetailModel: Decodable {
     let readingRecordIdx: Int?
     let bookImgUrl: String?
     let name: String?

@@ -8,13 +8,6 @@
 import Foundation
 
 struct StatisticModel : Decodable {
-    let isSuccess: Bool?
-    let code: Int?
-    let message: String?
-    let result: StatisticResultModel
-}
-
-struct StatisticResultModel : Decodable {
     let userIdx: Int?
     let flowerCnt: Int?
     let readingCnt: Int?

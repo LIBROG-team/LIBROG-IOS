@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -136,18 +135,6 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jnh-nB-58Z">
-                                <rect key="frame" x="29" y="527" width="356" height="86"/>
-                                <color key="backgroundColor" name="backgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="86" id="xMy-6o-vVn"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="17"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xi8-I2-e28">
                                 <rect key="frame" x="182" y="54" width="50" height="3"/>
                                 <color key="backgroundColor" red="0.23921568627450979" green="0.23921568627450979" blue="0.23921568627450979" alpha="1" colorSpace="calibratedRGB"/>
@@ -161,19 +148,66 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Yu-DM-nZQ" customClass="PaddingLabel" customModule="LIBROG" customModuleProvider="target">
+                                <rect key="frame" x="29" y="498" width="52" height="18"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="공지사항">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="15" name="AppleSDGothicNeo-SemiBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RWM-kx-SHV">
+                                <rect key="frame" x="37" y="526" width="340" height="56"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="GKw-7G-ZST"/>
+                                    <constraint firstAttribute="width" constant="340" id="qmJ-je-1rF"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZJa-71-7zd">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hks-Sf-38n"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="xi8-I2-e28" firstAttribute="top" secondItem="hks-Sf-38n" secondAttribute="top" constant="10" id="1dF-kn-nQy"/>
                             <constraint firstItem="Ec9-fL-TrB" firstAttribute="leading" secondItem="hks-Sf-38n" secondAttribute="leading" constant="29" id="2QV-ct-eUv"/>
+                            <constraint firstItem="RWM-kx-SHV" firstAttribute="top" secondItem="1Yu-DM-nZQ" secondAttribute="bottom" constant="10" id="5Kl-QX-Fem"/>
+                            <constraint firstItem="RWM-kx-SHV" firstAttribute="centerX" secondItem="hks-Sf-38n" secondAttribute="centerX" id="6QB-lU-Qdo"/>
+                            <constraint firstItem="1Yu-DM-nZQ" firstAttribute="leading" secondItem="WBL-Me-82K" secondAttribute="leading" id="Ahx-qN-HXd"/>
                             <constraint firstItem="xi8-I2-e28" firstAttribute="centerX" secondItem="hks-Sf-38n" secondAttribute="centerX" id="EHU-fu-T4N"/>
+                            <constraint firstItem="RWM-kx-SHV" firstAttribute="centerX" secondItem="hks-Sf-38n" secondAttribute="centerX" id="Eh2-LX-CKr"/>
                             <constraint firstItem="wa8-7V-a6E" firstAttribute="leading" secondItem="hks-Sf-38n" secondAttribute="leading" constant="29" id="HYK-fR-BW9"/>
                             <constraint firstItem="skY-GP-1cR" firstAttribute="leading" secondItem="hks-Sf-38n" secondAttribute="leading" constant="29" id="Jih-Je-e9P"/>
+                            <constraint firstItem="1Yu-DM-nZQ" firstAttribute="top" secondItem="Ec9-fL-TrB" secondAttribute="bottom" constant="15" id="KE3-IL-JJo"/>
                             <constraint firstItem="WBL-Me-82K" firstAttribute="top" secondItem="wa8-7V-a6E" secondAttribute="bottom" constant="44" id="SIz-Ec-ARt"/>
-                            <constraint firstItem="jnh-nB-58Z" firstAttribute="leading" secondItem="WBL-Me-82K" secondAttribute="leading" id="YWh-bB-leA"/>
-                            <constraint firstItem="jnh-nB-58Z" firstAttribute="top" secondItem="Ec9-fL-TrB" secondAttribute="bottom" constant="44" id="Yi3-Jh-NxD"/>
-                            <constraint firstItem="hks-Sf-38n" firstAttribute="trailing" secondItem="jnh-nB-58Z" secondAttribute="trailing" constant="29" id="bQD-zW-peF"/>
                             <constraint firstItem="wa8-7V-a6E" firstAttribute="top" secondItem="skY-GP-1cR" secondAttribute="bottom" constant="17" id="ctN-2w-Z4x"/>
                             <constraint firstItem="Ec9-fL-TrB" firstAttribute="trailing" secondItem="hks-Sf-38n" secondAttribute="trailing" id="dB2-zO-BHH"/>
                             <constraint firstItem="skY-GP-1cR" firstAttribute="top" secondItem="hks-Sf-38n" secondAttribute="top" constant="16" id="eL3-Ff-OsZ"/>
@@ -183,7 +217,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="bottomBannerView" destination="jnh-nB-58Z" id="ggK-sU-Xlf"/>
+                        <outlet property="noticeCollectionView" destination="RWM-kx-SHV" id="gwD-Py-621"/>
                         <outlet property="recentBookCollectionView" destination="wa8-7V-a6E" id="slj-xh-8w6"/>
                         <outlet property="todaySuggestCollectionView" destination="Ec9-fL-TrB" id="ZNC-GT-68e"/>
                     </connections>
@@ -194,6 +228,9 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="1Yu-DM-nZQ">
+            <size key="intrinsicContentSize" width="52" height="18"/>
+        </designable>
         <designable name="WBL-Me-82K">
             <size key="intrinsicContentSize" width="69" height="18"/>
         </designable>
@@ -203,9 +240,6 @@
     </designables>
     <resources>
         <image name="home" width="28" height="28"/>
-        <namedColor name="backgroundColor">
-            <color red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

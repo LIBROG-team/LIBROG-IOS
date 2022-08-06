@@ -152,7 +152,7 @@ extension ProfileViewController {
         self.introData = result
         profileTableView.reloadData()
     }
-    func statisticSuccessAPI(_ result: StatisticResultModel) {
+    func statisticSuccessAPI(_ result: StatisticModel) {
         self.flowerPotCount = result.flowerCnt!
         self.readingBookCount = result.readingCnt!
         self.starRatingCount = result.starRatingCnt!
