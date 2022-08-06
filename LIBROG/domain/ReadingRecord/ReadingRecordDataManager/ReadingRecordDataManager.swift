@@ -29,9 +29,9 @@ class ReadingRecordDataManager {
             }
         }
     }
-    // MARK: 유저별 독서기록 조회 - 최근 순
-    func readingRecordRecentDataManager(_ viewcontroller: ReadingRecordViewController) {
-        AF.request(url! + "records/readingRecord/filter/recent/\(userId)",
+    // MARK: 독서기록 정렬필터 - 최근 순, 제목 순, 별점 순
+    func readingRecordFilterDataManager(_ urlStr: String, _ viewcontroller: ReadingRecordViewController) {
+        AF.request(url! + "records/readingRecord/filter/\(urlStr)/\(userId)",
                    method: .get,
                    parameters: nil)
             .validate()
@@ -40,44 +40,11 @@ class ReadingRecordDataManager {
             switch response.result {
             case .success(let result):
 //                print("DEBUG: ", result.result)
-                viewcontroller.userReadingRecordRecentSuccessAPI(result.result!)
+                viewcontroller.userReadingRecordFilterSuccessAPI(result.result!)
             case .failure(let error):
                 print(error.localizedDescription)
             }
         }
     }
-    // MARK: 유저별 독서기록 조회 - 제목 순
-    func readingRecordTitleDataManager(_ viewcontroller: ReadingRecordViewController) {
-        AF.request(url! + "records/readingRecord/filter/title/\(userId)",
-                   method: .get,
-                   parameters: nil)
-            .validate()
-            .responseDecodable(of: APIModel<[ReadingRecordData]>.self) { response in
-                
-            switch response.result {
-            case .success(let result):
-//                print("DEBUG: ", result.result)
-                viewcontroller.userReadingRecordTitleSuccessAPI(result.result!)
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
-    }
-    // MARK: 유저별 독서기록 조회 - 별점 순
-    func readingRecordRatingDataManager(_ viewcontroller: ReadingRecordViewController) {
-        AF.request(url! + "records/readingRecord/filter/rating/\(userId)",
-                   method: .get,
-                   parameters: nil)
-            .validate()
-            .responseDecodable(of: APIModel<[ReadingRecordData]>.self) { response in
-                
-            switch response.result {
-            case .success(let result):
-//                print("DEBUG: ", result.result)
-                viewcontroller.userReadingRecordRatingSuccessAPI(result.result!)
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
-    }
+    
 }

@@ -13,6 +13,7 @@ class ReadingRecordViewController: UIViewController {
     
     @IBOutlet weak var filterButton: UIButton!
     let filterArray = ["최근 기록 순", "별점 높은 순", "제목 순"]
+    let filterArrayUrl = ["recent", "rating", "title"]
     var bookArray: [ReadingRecordData]!
     
     @IBAction func scrollToTop_button(_ sender: Any) {
@@ -125,17 +126,17 @@ extension ReadingRecordViewController: UITableViewDelegate, UITableViewDataSourc
         //MARK: 최근 기록 순
         if indexPath.row == 0 {
             attText = AttributedString.init(filterArray[0])
-            ReadingRecordDataManager().readingRecordRecentDataManager(self)
+            ReadingRecordDataManager().readingRecordFilterDataManager(filterArrayUrl[0], self)
         }
         //MARK: 별점 높은 순
         else if indexPath.row == 1 {
             attText = AttributedString.init(filterArray[1])
-            ReadingRecordDataManager().readingRecordRatingDataManager(self)
+            ReadingRecordDataManager().readingRecordFilterDataManager(filterArrayUrl[1], self)
         }
         //MARK: 제목 순
         else if indexPath.row == 2 {
             attText = AttributedString.init(filterArray[2])
-            ReadingRecordDataManager().readingRecordTitleDataManager(self)
+            ReadingRecordDataManager().readingRecordFilterDataManager(filterArrayUrl[2], self)
         }
         
         // config font & image 설정
@@ -155,20 +156,8 @@ extension ReadingRecordViewController {
         self.bookArray = result
         readingRecordCollectionView.reloadData()
     }
-    //MARK: 최근 기록 순
-    func userReadingRecordRecentSuccessAPI(_ result: [ReadingRecordData]) {
-        self.bookArray.removeAll()
-        self.bookArray = result
-        readingRecordCollectionView.reloadData()
-    }
-    //MARK: 별점 높은 순
-    func userReadingRecordRatingSuccessAPI(_ result: [ReadingRecordData]) {
-        self.bookArray.removeAll()
-        self.bookArray = result
-        readingRecordCollectionView.reloadData()
-    }
-    //MARK: 제목 순
-    func userReadingRecordTitleSuccessAPI(_ result: [ReadingRecordData]) {
+    //MARK: 독서기록 필터 정렬 API
+    func userReadingRecordFilterSuccessAPI(_ result: [ReadingRecordData]) {
         self.bookArray.removeAll()
         self.bookArray = result
         readingRecordCollectionView.reloadData()
