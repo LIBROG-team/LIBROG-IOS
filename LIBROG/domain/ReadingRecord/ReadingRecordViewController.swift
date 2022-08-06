@@ -122,10 +122,21 @@ extension ReadingRecordViewController: UITableViewDelegate, UITableViewDataSourc
         // 버튼 config 추가
         var config = UIButton.Configuration.plain()
         var attText = AttributedString.init(filterArray[0])
-        
-        if indexPath.row == 0 { attText = AttributedString.init(filterArray[0])}
-        else if indexPath.row == 1 {attText = AttributedString.init(filterArray[1]) }
-        else if indexPath.row == 2 {attText = AttributedString.init(filterArray[2])}
+        //MARK: 최근 기록 순
+        if indexPath.row == 0 {
+            attText = AttributedString.init(filterArray[0])
+            ReadingRecordDataManager().readingRecordRecentDataManager(self)
+        }
+        //MARK: 별점 높은 순
+        else if indexPath.row == 1 {
+            attText = AttributedString.init(filterArray[1])
+            ReadingRecordDataManager().readingRecordRatingDataManager(self)
+        }
+        //MARK: 제목 순
+        else if indexPath.row == 2 {
+            attText = AttributedString.init(filterArray[2])
+            ReadingRecordDataManager().readingRecordTitleDataManager(self)
+        }
         
         // config font & image 설정
         attText.font = UIFont.systemFont(ofSize: 13.0, weight: .regular)
@@ -141,6 +152,24 @@ extension ReadingRecordViewController: UITableViewDelegate, UITableViewDataSourc
 }
 extension ReadingRecordViewController {
     func userReadingRecordSuccessAPI(_ result: [ReadingRecordData]) {
+        self.bookArray = result
+        readingRecordCollectionView.reloadData()
+    }
+    //MARK: 최근 기록 순
+    func userReadingRecordRecentSuccessAPI(_ result: [ReadingRecordData]) {
+        self.bookArray.removeAll()
+        self.bookArray = result
+        readingRecordCollectionView.reloadData()
+    }
+    //MARK: 별점 높은 순
+    func userReadingRecordRatingSuccessAPI(_ result: [ReadingRecordData]) {
+        self.bookArray.removeAll()
+        self.bookArray = result
+        readingRecordCollectionView.reloadData()
+    }
+    //MARK: 제목 순
+    func userReadingRecordTitleSuccessAPI(_ result: [ReadingRecordData]) {
+        self.bookArray.removeAll()
         self.bookArray = result
         readingRecordCollectionView.reloadData()
     }
