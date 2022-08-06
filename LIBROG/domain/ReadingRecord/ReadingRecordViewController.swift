@@ -123,21 +123,10 @@ extension ReadingRecordViewController: UITableViewDelegate, UITableViewDataSourc
         // 버튼 config 추가
         var config = UIButton.Configuration.plain()
         var attText = AttributedString.init(filterArray[0])
-        //MARK: 최근 기록 순
-        if indexPath.row == 0 {
-            attText = AttributedString.init(filterArray[0])
-            ReadingRecordDataManager().readingRecordFilterDataManager(filterArrayUrl[0], self)
-        }
-        //MARK: 별점 높은 순
-        else if indexPath.row == 1 {
-            attText = AttributedString.init(filterArray[1])
-            ReadingRecordDataManager().readingRecordFilterDataManager(filterArrayUrl[1], self)
-        }
-        //MARK: 제목 순
-        else if indexPath.row == 2 {
-            attText = AttributedString.init(filterArray[2])
-            ReadingRecordDataManager().readingRecordFilterDataManager(filterArrayUrl[2], self)
-        }
+        // 독서기록 정렬 필터
+        let tag = indexPath.row
+        attText = AttributedString.init(filterArray[tag])
+        ReadingRecordDataManager().readingRecordFilterDataManager(filterArrayUrl[tag], self)
         
         // config font & image 설정
         attText.font = UIFont.systemFont(ofSize: 13.0, weight: .regular)
