@@ -72,6 +72,19 @@ extension AchievedFlowerPotSearchViewController: UITableViewDelegate, UITableVie
         if count == 0 {return achievedTableView.frame.height}
         else {return 91}
     }
+    //클릭 이벤트 처리
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let flowerPotDescriptionVC = UIStoryboard(name: "FlowerPotDescription", bundle: nil).instantiateViewController(identifier: "FlowerPotDescriptionVC") as? FlowerPotDescriptionViewController else {return}
+        let itemIdx = indexPath.item
+        if let flowerData = self.achievedFlowerpotArray {
+            flowerPotDescriptionVC.flowerpotID = flowerData[itemIdx].flowerDataIdx
+            flowerPotDescriptionVC.flowerpotListId = flowerData[itemIdx].userFlowerListIdx
+        }
+        flowerPotDescriptionVC.modalPresentationStyle = .fullScreen
+        self.present(flowerPotDescriptionVC, animated: true, completion: nil)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 // MARK: - SearchBarDelegate
 extension AchievedFlowerPotSearchViewController: UISearchBarDelegate {
