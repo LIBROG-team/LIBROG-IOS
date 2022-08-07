@@ -122,10 +122,10 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ec9-fL-TrB">
-                                <rect key="frame" x="29" y="312" width="385" height="171"/>
+                                <rect key="frame" x="29" y="312" width="385" height="85"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="171" id="4rX-iq-UYV"/>
+                                    <constraint firstAttribute="height" constant="85" id="4rX-iq-UYV"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="13J-h7-4xn">
                                     <size key="itemSize" width="128" height="128"/>
@@ -149,7 +149,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Yu-DM-nZQ" customClass="PaddingLabel" customModule="LIBROG" customModuleProvider="target">
-                                <rect key="frame" x="29" y="498" width="52" height="18"/>
+                                <rect key="frame" x="29" y="412" width="52" height="18"/>
                                 <attributedString key="attributedText">
                                     <fragment content="공지사항">
                                         <attributes>
@@ -179,7 +179,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RWM-kx-SHV">
-                                <rect key="frame" x="37" y="526" width="340" height="56"/>
+                                <rect key="frame" x="37" y="440" width="340" height="56"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="GKw-7G-ZST"/>

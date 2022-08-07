@@ -20,6 +20,7 @@
 		231B8D462889221A006F44A3 /* SwipeRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B8D452889221A006F44A3 /* SwipeRecognizer.swift */; };
 		231B8D4A288936F6006F44A3 /* FlowerpotDescriptionDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B8D49288936F6006F44A3 /* FlowerpotDescriptionDataManager.swift */; };
 		231B8D4C28893701006F44A3 /* FlowerpotDescriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B8D4B28893701006F44A3 /* FlowerpotDescriptionModel.swift */; };
+		231E3E5A289F82130011A1D2 /* RecommendBookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231E3E59289F82130011A1D2 /* RecommendBookModel.swift */; };
 		2322AE5B2897F39300513E23 /* LoginInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2322AE5A2897F39300513E23 /* LoginInput.swift */; };
 		2322AE5D2897F3C400513E23 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2322AE5C2897F3C400513E23 /* LoginModel.swift */; };
 		232973642887F8FF00954AA0 /* FlowerpotBookRecordDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232973632887F8FF00954AA0 /* FlowerpotBookRecordDataManager.swift */; };
@@ -168,6 +169,7 @@
 		231B8D452889221A006F44A3 /* SwipeRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeRecognizer.swift; sourceTree = "<group>"; };
 		231B8D49288936F6006F44A3 /* FlowerpotDescriptionDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerpotDescriptionDataManager.swift; sourceTree = "<group>"; };
 		231B8D4B28893701006F44A3 /* FlowerpotDescriptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerpotDescriptionModel.swift; sourceTree = "<group>"; };
+		231E3E59289F82130011A1D2 /* RecommendBookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendBookModel.swift; sourceTree = "<group>"; };
 		2322AE5A2897F39300513E23 /* LoginInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInput.swift; sourceTree = "<group>"; };
 		2322AE5C2897F3C400513E23 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		232973632887F8FF00954AA0 /* FlowerpotBookRecordDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerpotBookRecordDataManager.swift; sourceTree = "<group>"; };
@@ -616,6 +618,7 @@
 				23ADA92C288481080066D15A /* MainPageDataManager.swift */,
 				23A41EA8289436B10008437B /* RecentBookModel.swift */,
 				23F8483D2899A99400ED644B /* NoticeModel.swift */,
+				231E3E59289F82130011A1D2 /* RecommendBookModel.swift */,
 			);
 			path = MainPageDataManager;
 			sourceTree = "<group>";
@@ -1104,6 +1107,7 @@
 				23ADA92828847B830066D15A /* FlowerPotSearchTabViewController.swift in Sources */,
 				23C8B4BB286EFF3900432141 /* CustomTabBarController.swift in Sources */,
 				2305E77628915FC000A9B6D5 /* LoginDataManager.swift in Sources */,
+				231E3E5A289F82130011A1D2 /* RecommendBookModel.swift in Sources */,
 				23C8B4A6286EF2F300432141 /* PaddingLabel.swift in Sources */,
 				23AB70AD289009D500503366 /* ModifyRecordViewController.swift in Sources */,
 				239EF02F2892F2C8005BC364 /* SearchDataManager.swift in Sources */,
