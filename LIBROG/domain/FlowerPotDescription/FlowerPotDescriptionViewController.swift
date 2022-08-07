@@ -12,6 +12,7 @@ class FlowerPotDescriptionViewController: UIViewController {
     @IBOutlet weak var flowerPotDetailTableView: UITableView!
     
     var flowerpotID: Int?
+    var flowerpotListId: Int!
     var flowerpotData: FlowerpotDescriptionData!
     
     override func viewDidLoad() {
@@ -27,6 +28,11 @@ class FlowerPotDescriptionViewController: UIViewController {
         flowerPotDetailTableView.register(flowerPotNib, forCellReuseIdentifier: "FlowerPotDescriptionTableViewCell")
         
         FlowerpotDescriptionDataManager().getFlowerpotDescriptionDataManager(self.flowerpotID!, self)
+    }
+    @IBAction func addAcqFlowerpotButtonDidTap(_ sender: UIButton) {
+        if let idx = self.flowerpotListId {
+            FlowerpotDescriptionDataManager().addAcqFlowerpotDataManager(idx, self)
+        }
     }
     @IBAction func goBackButtonDidTap(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
@@ -53,10 +59,16 @@ extension FlowerPotDescriptionViewController: UITableViewDelegate, UITableViewDa
         return view.frame.height
     }
 }
-// MARK: - 화분 상세 정보 조회 API success
+// MARK: - API success
 extension FlowerPotDescriptionViewController {
+    // MARK: 화분 상세 정보 조회 API
     func flowerpotDescriptionSuccessAPI(_ result : FlowerpotDescriptionData) {
         self.flowerpotData = result
         flowerPotDetailTableView.reloadData()
+    }
+    //MARK: 획득 화분에서 화분 추가 API
+    func addAcqFlowerpotSuccessAPI() {
+//        goMain()
+//        print("")
     }
 }
