@@ -53,7 +53,7 @@ extension UploadRecordViewController: UITableViewDelegate, UITableViewDataSource
         cell.setBookData(self.bookData)
         if isCompleteButtonTap == true {
             cell.postRecord(self.bookData)
-            goMain()
+            ScreenManager().goMain(self)
         }
         return cell
     }
@@ -64,13 +64,5 @@ extension UploadRecordViewController: UITableViewDelegate, UITableViewDataSource
         guard cell is MainFlowerTableViewCell else {
             return
         }
-    }
-}
-extension UploadRecordViewController {
-    func goMain() {
-        // 첫화면으로 전환
-        guard let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TabBarController") as? UITabBarController else {return}
-        tabBarController.modalPresentationStyle = .fullScreen
-        self.view.window?.windowScene?.keyWindow?.rootViewController = tabBarController
     }
 }

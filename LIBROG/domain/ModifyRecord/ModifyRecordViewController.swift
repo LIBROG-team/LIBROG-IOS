@@ -46,19 +46,11 @@ extension ModifyRecordViewController: UITableViewDelegate, UITableViewDataSource
         }
         if isCompleteButtonTap == true {
             cell.postRecord(self.recordData)
-            goMain()
+            ScreenManager().goMain(self)
         }
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 667
-    }
-}
-extension ModifyRecordViewController {
-    func goMain() {
-        // 첫화면으로 전환
-        guard let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TabBarController") as? UITabBarController else {return}
-        tabBarController.modalPresentationStyle = .fullScreen
-        self.view.window?.windowScene?.keyWindow?.rootViewController = tabBarController
     }
 }

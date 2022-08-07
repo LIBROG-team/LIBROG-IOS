@@ -88,7 +88,7 @@ extension LoginViewController {
     func loginSuccessAPI(_ result: KakaoLoginModel) {
         guard let userId = result.idx else {return}
         UserDefaults.standard.set(userId, forKey: "userId")
-        self.goMain()
+        ScreenManager().goMain(self)
     }
     func loginSuccessAPI(_ result: APIModel<AppLoginModel>) {
         guard let isSuccess = result.isSuccess else {return}
@@ -98,7 +98,7 @@ extension LoginViewController {
             guard let userId = result.result?.userIdx else {return}
             UserDefaults.standard.set(accessToken, forKey: "accessToken")
             UserDefaults.standard.set(userId, forKey: "userId")
-            self.goMain()
+            ScreenManager().goMain(self)
         }
         // 앱 로그인 실패 시 오류 창
         else  {
@@ -108,12 +108,6 @@ extension LoginViewController {
             alert.addAction(ok)
             self.present(alert, animated: true, completion: nil)
         }
-    }
-    func goMain() {
-        // 첫화면으로 전환
-        guard let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TabBarController") as? UITabBarController else {return}
-        tabBarController.modalPresentationStyle = .fullScreen
-        self.view.window?.windowScene?.keyWindow?.rootViewController = tabBarController
     }
 }
 extension String {
