@@ -111,6 +111,7 @@ extension AchievedFlowerPotSearchViewController: UISearchBarDelegate {
                 NSAttributedString.Key.font: UIFont(name: "Apple SD Gothic Neo", size: 15) as Any
             ])
         searchBar.searchTextField.attributedPlaceholder = attributedString
+        searchBar.searchTextField.font = UIFont(name: "Apple SD Gothic Neo", size: 15)
         
         //cancel button
         searchBar.showsCancelButton = false
