@@ -21,8 +21,9 @@ class FlowerpotBookRecordDataManager {
                 
             switch response.result {
             case .success(let result):
-                print("DEBUG: ", result.result)
-                viewcontroller.userFlowepotBookRecordSuccessAPI(result.result!)
+                if let recordData = result.result {
+                    viewcontroller.userFlowepotBookRecordSuccessAPI(recordData)
+                }
             case .failure(let error):
                 print(error.localizedDescription)
             }

@@ -40,6 +40,11 @@
 			</dict>
 			<key>dev.siejwkaodj.shop/</key>
 			<string></string>
+			<key>image.yes24.com</key>
+			<dict>
+				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
 			<key>k.kakaocdn.net</key>
 			<dict>
 				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>

@@ -65,4 +65,21 @@ class MainPageDataManager{
             }
         }
     }
+    // MARK: 추천 책
+    func recommendBookDataManager(_ viewcontroller : MainBottomViewController) {
+        AF.request(url! + "contents/recommendBooks/",
+                   method: .get,
+                   parameters: nil)
+            .validate()
+            .responseDecodable(of: APIModel<[RecommendBookModel]>.self) { response in
+                
+            switch response.result {
+            case .success(let result):
+//                print("DEBUG: ", result)
+                viewcontroller.recommendBookSuccessAPI(result.result!)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
 }

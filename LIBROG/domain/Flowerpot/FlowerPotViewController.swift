@@ -25,6 +25,9 @@ class FlowerPotViewController: UIViewController {
         FlowerpotDataManager().flowerpotDataManager(self)
         
     }
+    override func viewDidAppear(_ animated: Bool) {
+        FlowerpotDataManager().flowerpotDataManager(self)
+    }
     @IBAction func goToAddFlowerpotDidTap(_ sender: UIButton) {
         guard let addFlowerpotVC = UIStoryboard(name: "AddFlowerPot", bundle: nil).instantiateViewController(identifier: "AddFlowerPotVC") as? AddFlowerPotViewController else {return}
  

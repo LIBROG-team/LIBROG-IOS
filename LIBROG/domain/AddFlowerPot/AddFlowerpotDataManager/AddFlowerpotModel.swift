@@ -19,6 +19,7 @@ struct AddFlowerpotData: Decodable {
     let type: String?
     let bloomingPeriod: String?
     let flowerImgUrl: String?
+    let userFlowerListIdx: Int?
 }
 struct NotAchievedSearchFlowerpotModel : Decodable {
     let isSuccess: Bool?
