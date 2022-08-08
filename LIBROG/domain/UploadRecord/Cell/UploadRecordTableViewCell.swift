@@ -39,6 +39,8 @@ class UploadRecordTableViewCell: UITableViewCell {
         if let url = URL(string: thumbnailURL) {
             bookImageView.kf.setImage(with: url, placeholder: UIImage(named: "logo22%"))
         }
+        
+//        print(explanationLabel.countCurrentLines())
     }
     
     func updateRating(_ requiredRating: Double?) {

@@ -31,6 +31,9 @@ class UploadRecordViewController: UIViewController {
         
         let uploadRecordNib = UINib(nibName: "UploadRecordTableViewCell", bundle: nil)
         uploadRecordTableView.register(uploadRecordNib, forCellReuseIdentifier: "UploadRecordTableViewCell")
+        
+        uploadRecordTableView.estimatedRowHeight = 50
+        uploadRecordTableView.rowHeight = UITableView.automaticDimension
     }
     // MARK: - Actions
     @IBAction func goBackButtonDidTap(_ sender: UIBarButtonItem) {
@@ -53,24 +56,8 @@ extension UploadRecordViewController: UITableViewDelegate, UITableViewDataSource
         cell.setBookData(self.bookData)
         if isCompleteButtonTap == true {
             cell.postRecord(self.bookData)
-            goMain()
+            ScreenManager().goMain(self)
         }
         return cell
-    }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 667
-    }
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        guard cell is MainFlowerTableViewCell else {
-            return
-        }
-    }
-}
-extension UploadRecordViewController {
-    func goMain() {
-        // 첫화면으로 전환
-        guard let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TabBarController") as? UITabBarController else {return}
-        tabBarController.modalPresentationStyle = .fullScreen
-        self.view.window?.windowScene?.keyWindow?.rootViewController = tabBarController
     }
 }

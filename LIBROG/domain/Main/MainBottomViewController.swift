@@ -16,6 +16,7 @@ class MainBottomViewController: UIViewController {
     
     var recentBookArray: [RecentBookModel]!
     var noticeArray: [NoticeModel]!
+    var recommendArray: [RecommendBookModel]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +38,7 @@ class MainBottomViewController: UIViewController {
         
         MainPageDataManager().recentBookDataManager(self)
         MainPageDataManager().noticeDataManager(self)
+        MainPageDataManager().recommendBookDataManager(self)
     }
 }
 // MARK: - 메인페이지의 하단 collectionView delegate
@@ -46,7 +48,8 @@ extension MainBottomViewController : UICollectionViewDelegate, UICollectionViewD
             let count = recentBookArray?.count ?? 0
             return count
         } else if(collectionView == todaySuggestCollectionView) {
-            return 5
+            let count = recommendArray?.count ?? 0
+            return count
         } else if(collectionView == noticeCollectionView) {
             let count = noticeArray?.count ?? 0
             return count
@@ -69,7 +72,10 @@ extension MainBottomViewController : UICollectionViewDelegate, UICollectionViewD
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TodaySuggestCollectionViewCell", for: indexPath) as? TodaySuggestCollectionViewCell else {
                 return UICollectionViewCell()
             }
-            cell.roundCornersDiffernt(topLeft: 8, topRight: 17, bottomLeft: 17, bottomRight: 17)
+            let itemIdx = indexPath.item
+            if let cellData = self.recommendArray {
+                cell.setRecommendBook(cellData[itemIdx])
+            }
             return cell
         }
         // MARK: 공지사항 collectionView
@@ -90,7 +96,7 @@ extension MainBottomViewController : UICollectionViewDelegate, UICollectionViewD
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if(collectionView == recentBookCollectionView) { return CGSize(width: 193, height: 128) }
-        else if(collectionView == todaySuggestCollectionView) { return CGSize(width: 120, height: 171) }
+        else if(collectionView == todaySuggestCollectionView) { return CGSize(width: 120, height: 84) }
         else if(collectionView == noticeCollectionView) { return CGSize(width: 340, height: 56) }
         else  { return CGSize(width: 0, height: 0)}
     }
@@ -102,6 +108,13 @@ extension MainBottomViewController : UICollectionViewDelegate, UICollectionViewD
             let noticeUrl = NSURL(string: noticeUrlStr)
             let noticeView: SFSafariViewController = SFSafariViewController(url: noticeUrl as! URL)
             self.present(noticeView, animated: true, completion: nil)
+        }
+        if(collectionView == todaySuggestCollectionView) {
+            // 추천도서 링크 이동
+            let recommendUrlStr = recommendArray[indexPath.item].connectUrl!
+            let recommendUrl = NSURL(string: recommendUrlStr)
+            let recommendView: SFSafariViewController = SFSafariViewController(url: recommendUrl as! URL)
+            self.present(recommendView, animated: true, completion: nil)
         }
     }
 }
@@ -116,5 +129,10 @@ extension MainBottomViewController {
     func noticeSuccessAPI(_ result: [NoticeModel]) {
         self.noticeArray = result
         noticeCollectionView.reloadData()
+    }
+    // MARK: 추천 책 api
+    func recommendBookSuccessAPI(_ result: [RecommendBookModel]) {
+        self.recommendArray = result
+        todaySuggestCollectionView.reloadData()
     }
 }

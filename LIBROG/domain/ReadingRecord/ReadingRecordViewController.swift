@@ -13,6 +13,7 @@ class ReadingRecordViewController: UIViewController {
     
     @IBOutlet weak var filterButton: UIButton!
     let filterArray = ["최근 기록 순", "별점 높은 순", "제목 순"]
+    let filterArrayUrl = ["recent", "rating", "title"]
     var bookArray: [ReadingRecordData]!
     
     @IBAction func scrollToTop_button(_ sender: Any) {
@@ -122,10 +123,10 @@ extension ReadingRecordViewController: UITableViewDelegate, UITableViewDataSourc
         // 버튼 config 추가
         var config = UIButton.Configuration.plain()
         var attText = AttributedString.init(filterArray[0])
-        
-        if indexPath.row == 0 { attText = AttributedString.init(filterArray[0])}
-        else if indexPath.row == 1 {attText = AttributedString.init(filterArray[1]) }
-        else if indexPath.row == 2 {attText = AttributedString.init(filterArray[2])}
+        // 독서기록 정렬 필터
+        let tag = indexPath.row
+        attText = AttributedString.init(filterArray[tag])
+        ReadingRecordDataManager().readingRecordFilterDataManager(filterArrayUrl[tag], self)
         
         // config font & image 설정
         attText.font = UIFont.systemFont(ofSize: 13.0, weight: .regular)
@@ -141,6 +142,12 @@ extension ReadingRecordViewController: UITableViewDelegate, UITableViewDataSourc
 }
 extension ReadingRecordViewController {
     func userReadingRecordSuccessAPI(_ result: [ReadingRecordData]) {
+        self.bookArray = result
+        readingRecordCollectionView.reloadData()
+    }
+    //MARK: 독서기록 필터 정렬 API
+    func userReadingRecordFilterSuccessAPI(_ result: [ReadingRecordData]) {
+        self.bookArray.removeAll()
         self.bookArray = result
         readingRecordCollectionView.reloadData()
     }

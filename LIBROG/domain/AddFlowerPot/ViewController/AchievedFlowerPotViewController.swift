@@ -50,7 +50,11 @@ extension AchievedFlowerPotViewController: UITableViewDelegate, UITableViewDataS
     //클릭 이벤트 처리
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let flowerPotDescriptionVC = UIStoryboard(name: "FlowerPotDescription", bundle: nil).instantiateViewController(identifier: "FlowerPotDescriptionVC") as? FlowerPotDescriptionViewController else {return}
-        flowerPotDescriptionVC.flowerpotID = achievedFlowerpotArray[indexPath.item].flowerDataIdx
+        let itemIdx = indexPath.item
+        if let flowerData = self.achievedFlowerpotArray {
+            flowerPotDescriptionVC.flowerpotID = flowerData[itemIdx].flowerDataIdx
+            flowerPotDescriptionVC.flowerpotListId = flowerData[itemIdx].userFlowerListIdx
+        }
         flowerPotDescriptionVC.modalPresentationStyle = .fullScreen
         self.present(flowerPotDescriptionVC, animated: true, completion: nil)
         
