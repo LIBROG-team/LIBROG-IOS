@@ -23,6 +23,16 @@ class ResultTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    // MARK: 테이블뷰의 셀이 재사용되기 전 호출되는 함수
+    // 여기서 property들을 초기화해준다.
+    override func prepareForReuse() {
+        super.prepareForReuse()
+
+        bookImageView.image = UIImage(named: "logo22%")
+        bookTitleLabel.text = nil
+        authorLabel.text = nil
+        bookExplanationLabel.text = nil
+    }
     func kakaoBookData(_ bookData: BookData) {
         bookTitleLabel.text = bookData.bookTitle
         authorLabel.text = String(bookData.author.joined(separator: " ") )
