@@ -15,6 +15,7 @@
 		2305E773289159A000A9B6D5 /* KakaoLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2305E772289159A000A9B6D5 /* KakaoLoginManager.swift */; };
 		2305E77628915FC000A9B6D5 /* LoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2305E77528915FC000A9B6D5 /* LoginDataManager.swift */; };
 		23091F832886B69E008EC8D2 /* FlowerpotDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23091F822886B69E008EC8D2 /* FlowerpotDataManager.swift */; };
+		2312074328A155E900A34A05 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2312074228A155E900A34A05 /* UILabelExtension.swift */; };
 		231B8D4228891787006F44A3 /* AddFlowerpotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B8D4128891787006F44A3 /* AddFlowerpotModel.swift */; };
 		231B8D442889189D006F44A3 /* AddFlowerpotDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B8D432889189D006F44A3 /* AddFlowerpotDataManager.swift */; };
 		231B8D462889221A006F44A3 /* SwipeRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B8D452889221A006F44A3 /* SwipeRecognizer.swift */; };
@@ -164,6 +165,7 @@
 		2305E772289159A000A9B6D5 /* KakaoLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginManager.swift; sourceTree = "<group>"; };
 		2305E77528915FC000A9B6D5 /* LoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataManager.swift; sourceTree = "<group>"; };
 		23091F822886B69E008EC8D2 /* FlowerpotDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerpotDataManager.swift; sourceTree = "<group>"; };
+		2312074228A155E900A34A05 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		231B8D4128891787006F44A3 /* AddFlowerpotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFlowerpotModel.swift; sourceTree = "<group>"; };
 		231B8D432889189D006F44A3 /* AddFlowerpotDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFlowerpotDataManager.swift; sourceTree = "<group>"; };
 		231B8D452889221A006F44A3 /* SwipeRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeRecognizer.swift; sourceTree = "<group>"; };
@@ -651,6 +653,7 @@
 				D0C2B088286E1FD600242E71 /* UIViewExtension.swift */,
 				23C8B4BA286EFF3900432141 /* CustomTabBarController.swift */,
 				23766E7D2870330D005EEA8E /* UIBezierPath.swift */,
+				2312074228A155E900A34A05 /* UILabelExtension.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -1149,6 +1152,7 @@
 				D0C2B086286DF28800242E71 /* FlowerpotTableViewCell.swift in Sources */,
 				231B8D4A288936F6006F44A3 /* FlowerpotDescriptionDataManager.swift in Sources */,
 				23458ADB2896E4FF0003A669 /* ProfileStatisticTableViewCell.swift in Sources */,
+				2312074328A155E900A34A05 /* UILabelExtension.swift in Sources */,
 				D07E7EC028927AC70077287A /* RegisterDataManager.swift in Sources */,
 				23ADA92B28847FC80066D15A /* FlowerpotModel.swift in Sources */,
 				D0C2B080286DEBD600242E71 /* FlowerPotViewController.swift in Sources */,

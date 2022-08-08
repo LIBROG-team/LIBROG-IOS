@@ -25,11 +25,11 @@
                                 <rect key="frame" x="16" y="13" width="77" height="111"/>
                                 <color key="backgroundColor" name="backgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="111" id="X2M-l6-lWg"/>
+                                    <constraint firstAttribute="height" constant="111" id="UOz-dI-eVg"/>
                                     <constraint firstAttribute="width" constant="77" id="q7F-DY-Vya"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g33-hk-yTd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g33-hk-yTd">
                                 <rect key="frame" x="109" y="19" width="207" height="18"/>
                                 <attributedString key="attributedText">
                                     <fragment content="bookTitle">
@@ -42,7 +42,7 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVE-1U-Mx8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVE-1U-Mx8">
                                 <rect key="frame" x="109" y="42" width="207" height="17"/>
                                 <attributedString key="attributedText">
                                     <fragment content="bookAuthor">
@@ -55,14 +55,17 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VjV-tR-mx8">
-                                <rect key="frame" x="109" y="69" width="207" height="14.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VjV-tR-mx8">
+                                <rect key="frame" x="109" y="69" width="207" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="53" id="FeD-qy-1RB"/>
+                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="bookExplanation">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="12" name="AppleSDGothicNeo-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -72,15 +75,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="XVE-1U-Mx8" firstAttribute="leading" secondItem="g33-hk-yTd" secondAttribute="leading" id="0HT-Sn-V7X"/>
-                            <constraint firstAttribute="bottom" secondItem="quo-kq-W7z" secondAttribute="bottom" constant="13" id="3JM-G7-JQx"/>
-                            <constraint firstAttribute="height" constant="137" id="3dd-68-SaA"/>
+                            <constraint firstAttribute="bottom" secondItem="VjV-tR-mx8" secondAttribute="bottom" constant="15" id="3Ry-Q7-Nkp"/>
                             <constraint firstItem="g33-hk-yTd" firstAttribute="leading" secondItem="quo-kq-W7z" secondAttribute="trailing" constant="16" id="9k9-Gl-gLg"/>
                             <constraint firstItem="quo-kq-W7z" firstAttribute="leading" secondItem="6c5-ge-8qK" secondAttribute="leading" constant="16" id="CnG-no-swK"/>
                             <constraint firstItem="VjV-tR-mx8" firstAttribute="leading" secondItem="XVE-1U-Mx8" secondAttribute="leading" id="D99-0e-5pA"/>
                             <constraint firstAttribute="trailing" secondItem="VjV-tR-mx8" secondAttribute="trailing" constant="20" id="PzL-DE-BcA"/>
                             <constraint firstItem="XVE-1U-Mx8" firstAttribute="top" secondItem="g33-hk-yTd" secondAttribute="bottom" constant="5" id="f9l-81-t2Y"/>
                             <constraint firstItem="VjV-tR-mx8" firstAttribute="top" secondItem="XVE-1U-Mx8" secondAttribute="bottom" constant="10" id="fAC-yi-yUI"/>
-                            <constraint firstItem="quo-kq-W7z" firstAttribute="top" secondItem="6c5-ge-8qK" secondAttribute="top" constant="13" id="hfk-Ex-TBn"/>
+                            <constraint firstItem="quo-kq-W7z" firstAttribute="centerY" secondItem="6c5-ge-8qK" secondAttribute="centerY" id="hVm-Cb-6gK"/>
                             <constraint firstAttribute="trailing" secondItem="XVE-1U-Mx8" secondAttribute="trailing" constant="20" id="nrA-Ve-XKg"/>
                             <constraint firstAttribute="trailing" secondItem="g33-hk-yTd" secondAttribute="trailing" constant="20" id="rEb-fs-nrA"/>
                             <constraint firstItem="g33-hk-yTd" firstAttribute="top" secondItem="6c5-ge-8qK" secondAttribute="top" constant="19" id="wBg-IS-Hix"/>
@@ -264,6 +266,7 @@
                     <constraint firstItem="6c5-ge-8qK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="20A-pR-dSZ"/>
                     <constraint firstAttribute="trailing" secondItem="pJc-WM-f46" secondAttribute="trailing" constant="16" id="3uG-IY-iLV"/>
                     <constraint firstItem="7Z0-Oj-zAj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="64v-VE-FTr"/>
+                    <constraint firstAttribute="bottom" secondItem="pJc-WM-f46" secondAttribute="bottom" constant="15" id="6Ka-ol-gF0"/>
                     <constraint firstItem="7Z0-Oj-zAj" firstAttribute="top" secondItem="6c5-ge-8qK" secondAttribute="bottom" constant="7" id="Ibc-AQ-HUb"/>
                     <constraint firstAttribute="trailing" secondItem="s72-21-BgN" secondAttribute="trailing" constant="16" id="LG0-g5-2Ra"/>
                     <constraint firstItem="pJc-WM-f46" firstAttribute="top" secondItem="s72-21-BgN" secondAttribute="bottom" constant="7" id="NzF-Cd-qvm"/>
@@ -287,7 +290,7 @@
                 <outlet property="explanationLabel" destination="VjV-tR-mx8" id="fZL-ah-kWX"/>
                 <outlet property="quoteTextField" destination="pBt-0C-PIG" id="a72-0Z-niX"/>
             </connections>
-            <point key="canvasLocation" x="165.21739130434784" y="292.29910714285711"/>
+            <point key="canvasLocation" x="165.21739130434784" y="291.62946428571428"/>
         </tableViewCell>
     </objects>
     <designables>

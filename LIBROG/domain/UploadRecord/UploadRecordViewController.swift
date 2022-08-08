@@ -31,6 +31,9 @@ class UploadRecordViewController: UIViewController {
         
         let uploadRecordNib = UINib(nibName: "UploadRecordTableViewCell", bundle: nil)
         uploadRecordTableView.register(uploadRecordNib, forCellReuseIdentifier: "UploadRecordTableViewCell")
+        
+        uploadRecordTableView.estimatedRowHeight = 50
+        uploadRecordTableView.rowHeight = UITableView.automaticDimension
     }
     // MARK: - Actions
     @IBAction func goBackButtonDidTap(_ sender: UIBarButtonItem) {
@@ -56,13 +59,5 @@ extension UploadRecordViewController: UITableViewDelegate, UITableViewDataSource
             ScreenManager().goMain(self)
         }
         return cell
-    }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 667
-    }
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        guard cell is MainFlowerTableViewCell else {
-            return
-        }
     }
 }
