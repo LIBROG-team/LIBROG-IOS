@@ -84,18 +84,17 @@ class RegisterViewController: UIViewController {
         let password = self.password
         let nickname = self.nickname
         
-        let registerInput = RegisterInput(email: email, password: password, name: nickname)
-        RegisterDataManager().registerDataManager(registerInput, self)
-    }
-}
-
-extension RegisterViewController {
-    func RegisterSuccessAPI(_ result: APIModel<ResultModel>) {
-        if result.isSuccess! {
-            guard let registerProfileVC = UIStoryboard(name: "Register", bundle: nil).instantiateViewController(identifier: "RegisterProfileVC") as? RegisterProfileViewController else {return}
-            registerProfileVC.userNameText = nickname
-            registerProfileVC.modalPresentationStyle = .fullScreen
-            self.present(registerProfileVC, animated: true, completion: nil)
-        }
+        guard let registerProfileVC = UIStoryboard(name: "Register", bundle: nil).instantiateViewController(identifier: "RegisterProfileVC") as? RegisterProfileViewController else {return}
+        
+        registerProfileVC.userNameText = nickname
+        registerProfileVC.email = email
+        registerProfileVC.password = password
+        registerProfileVC.nickName = nickname
+        
+        registerProfileVC.modalPresentationStyle = .fullScreen
+        self.present(registerProfileVC, animated: true, completion: nil)
+        
+//        let registerInput = RegisterInput(email: email, password: password, name: nickname)
+//        RegisterDataManager().registerDataManager(registerInput, self)
     }
 }
