@@ -53,9 +53,9 @@ class ProfileViewController: UIViewController {
     }
     // 식물도감 페이지로 이동
     @objc func goFlowerpotPage() {
-        guard let flowerpotVC = UIStoryboard(name: "FlowerPot", bundle: nil).instantiateViewController(identifier: "FlowerPotVC") as? FlowerPotViewController else {return}
-        flowerpotVC.modalPresentationStyle = .fullScreen
-        self.present(flowerpotVC, animated: true, completion: nil)
+        guard let AddFlowerPotVC = UIStoryboard(name: "AddFlowerPot", bundle: nil).instantiateViewController(identifier: "AddFlowerPotVC") as? AddFlowerPotViewController else {return}
+        AddFlowerPotVC.modalPresentationStyle = .fullScreen
+        self.present(AddFlowerPotVC, animated: true, completion: nil)
     }
     // 로그아웃
     @objc func logout() {
