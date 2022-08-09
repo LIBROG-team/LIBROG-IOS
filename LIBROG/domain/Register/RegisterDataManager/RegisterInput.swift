@@ -11,4 +11,6 @@ struct RegisterInput: Encodable {
     let email: String?
     let password: String?
     let name: String?
+    let profileImgUrl: String?  // 임시
+    let introduction: String?
 }

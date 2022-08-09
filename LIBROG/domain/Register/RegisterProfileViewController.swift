@@ -15,17 +15,16 @@ class RegisterProfileViewController: UIViewController {
     @IBOutlet weak var cameraButton: UIButton!
     @IBOutlet weak var profileImageView: UIImageView!
     
-    @IBAction func registerBtnDidTap(_ sender: UIButton) {
-        guard let LoginVC = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(identifier: "LoginVC") as? LoginViewController else {return}
-        LoginVC.modalPresentationStyle = .fullScreen
-        self.present(LoginVC, animated: true, completion: nil)
-    }
-    
     let selectArray = ["앨범에서 사진/동영상 선택", "리브로그 프로필로 설정", "기본 이미지로 변경"]
     // 앨범 선택 image picker
     let imagePickerController = UIImagePickerController()
     var selectedPhoto: UIImage!
     var userNameText: String!
+    var email: String!
+    var password: String!
+    var nickName: String!
+    var profileImgUrl: String!
+    var introduction: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +39,8 @@ class RegisterProfileViewController: UIViewController {
         
         userNameLabel.text = userNameText
     }
+    // MARK: - Actions
+    // MARK: 카메라 버튼 클릭
     @IBAction func cameraDidTapButton(_ sender: UIButton) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "RegisterProfileBottomVC") as! RegisterProfileBottomViewController
         let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: vc)
@@ -53,11 +54,16 @@ class RegisterProfileViewController: UIViewController {
         // 뒤에 배경 컬러
         bottomSheet.scrimColor = UIColor(red: 0.25, green: 0.25, blue: 0.25, alpha: 0.54)
     }
+    @IBAction func introductionTextFieldEditingChanged(_ sender: UITextField) {
+        let text = sender.text ?? ""
+        self.introduction = text
+    }
     @IBAction func goBackButtonDidTap(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
-
-    @IBAction func registerButtonDidTap(_ sender: UIButton) {
+    // MARK: '리브로그 시작하기' 버튼 클릭
+    @IBAction func registerBtnDidTap(_ sender: UIButton) {
+//        RegisterDataManager().registerMultipartDataManager(self.email, self.password, self.nickName, self.selectedPhoto, self.introduction, self)
     }
 }
 
@@ -119,7 +125,16 @@ extension RegisterProfileViewController : UIImagePickerControllerDelegate, UINav
         if let imageUrl = info[UIImagePickerController.InfoKey.imageURL] as? URL{
             let urlStr = imageUrl.absoluteString
         }
-//        uploadTableView.reloadData()
         self.dismiss(animated: true, completion: nil)
+    }
+}
+// MARK: 회원가입 성공 api
+extension RegisterProfileViewController {
+    func RegisterSuccessAPI() {
+//        if result.isSuccess! {
+//            guard let LoginVC = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(identifier: "LoginVC") as? LoginViewController else {return}
+//            LoginVC.modalPresentationStyle = .fullScreen
+//            self.present(LoginVC, animated: true, completion: nil)
+//        }
     }
 }
