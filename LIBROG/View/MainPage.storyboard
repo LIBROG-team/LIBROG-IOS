@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -49,7 +49,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skY-GP-1cR" customClass="PaddingLabel" customModule="LIBROG" customModuleProvider="target">
-                                <rect key="frame" x="29" y="60" width="73" height="18"/>
+                                <rect key="frame" x="25" y="60" width="73" height="18"/>
                                 <attributedString key="attributedText">
                                     <fragment content="최근 읽은 책">
                                         <attributes>
@@ -92,9 +92,9 @@
                                 <cells/>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBL-Me-82K" customClass="PaddingLabel" customModule="LIBROG" customModuleProvider="target">
-                                <rect key="frame" x="29" y="277" width="69" height="18"/>
+                                <rect key="frame" x="25" y="411" width="52" height="18"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="오늘의 추천">
+                                    <fragment content="추천도서">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <font key="NSFont" size="15" name="AppleSDGothicNeo-SemiBold"/>
@@ -122,10 +122,10 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ec9-fL-TrB">
-                                <rect key="frame" x="29" y="312" width="385" height="85"/>
+                                <rect key="frame" x="29" y="443" width="356" height="84"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="85" id="4rX-iq-UYV"/>
+                                    <constraint firstAttribute="height" constant="84" id="dgD-os-zTl"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="13J-h7-4xn">
                                     <size key="itemSize" width="128" height="128"/>
@@ -149,7 +149,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Yu-DM-nZQ" customClass="PaddingLabel" customModule="LIBROG" customModuleProvider="target">
-                                <rect key="frame" x="29" y="412" width="52" height="18"/>
+                                <rect key="frame" x="25" y="278" width="52" height="18"/>
                                 <attributedString key="attributedText">
                                     <fragment content="공지사항">
                                         <attributes>
@@ -179,11 +179,10 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RWM-kx-SHV">
-                                <rect key="frame" x="37" y="440" width="340" height="56"/>
+                                <rect key="frame" x="25" y="310" width="364" height="56"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="GKw-7G-ZST"/>
-                                    <constraint firstAttribute="width" constant="340" id="qmJ-je-1rF"/>
+                                    <constraint firstAttribute="height" constant="56" id="udZ-w3-uUV"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZJa-71-7zd">
                                     <size key="itemSize" width="128" height="128"/>
@@ -193,27 +192,58 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IfX-SK-XMn">
+                                <rect key="frame" x="25" y="255" width="364" height="1"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="2H1-C3-Ur2"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W62-cf-IMO">
+                                <rect key="frame" x="25" y="388" width="364" height="1"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="4an-iV-FKL"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tZ6-yz-fK6">
+                                <rect key="frame" x="25" y="577" width="364" height="56"/>
+                                <color key="backgroundColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="eYA-dA-vIk"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hks-Sf-38n"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="xi8-I2-e28" firstAttribute="top" secondItem="hks-Sf-38n" secondAttribute="top" constant="10" id="1dF-kn-nQy"/>
-                            <constraint firstItem="Ec9-fL-TrB" firstAttribute="leading" secondItem="hks-Sf-38n" secondAttribute="leading" constant="29" id="2QV-ct-eUv"/>
-                            <constraint firstItem="RWM-kx-SHV" firstAttribute="top" secondItem="1Yu-DM-nZQ" secondAttribute="bottom" constant="10" id="5Kl-QX-Fem"/>
-                            <constraint firstItem="RWM-kx-SHV" firstAttribute="centerX" secondItem="hks-Sf-38n" secondAttribute="centerX" id="6QB-lU-Qdo"/>
-                            <constraint firstItem="1Yu-DM-nZQ" firstAttribute="leading" secondItem="WBL-Me-82K" secondAttribute="leading" id="Ahx-qN-HXd"/>
+                            <constraint firstItem="WBL-Me-82K" firstAttribute="leading" secondItem="1Yu-DM-nZQ" secondAttribute="leading" id="5Jz-6G-l0u"/>
+                            <constraint firstItem="RWM-kx-SHV" firstAttribute="leading" secondItem="1Yu-DM-nZQ" secondAttribute="leading" id="8oq-hp-9bg"/>
+                            <constraint firstItem="1Yu-DM-nZQ" firstAttribute="top" secondItem="IfX-SK-XMn" secondAttribute="bottom" constant="22" id="B5B-cd-jN1"/>
                             <constraint firstItem="xi8-I2-e28" firstAttribute="centerX" secondItem="hks-Sf-38n" secondAttribute="centerX" id="EHU-fu-T4N"/>
-                            <constraint firstItem="RWM-kx-SHV" firstAttribute="centerX" secondItem="hks-Sf-38n" secondAttribute="centerX" id="Eh2-LX-CKr"/>
+                            <constraint firstItem="hks-Sf-38n" firstAttribute="trailing" secondItem="IfX-SK-XMn" secondAttribute="trailing" constant="25" id="G5M-T6-goB"/>
                             <constraint firstItem="wa8-7V-a6E" firstAttribute="leading" secondItem="hks-Sf-38n" secondAttribute="leading" constant="29" id="HYK-fR-BW9"/>
-                            <constraint firstItem="skY-GP-1cR" firstAttribute="leading" secondItem="hks-Sf-38n" secondAttribute="leading" constant="29" id="Jih-Je-e9P"/>
-                            <constraint firstItem="1Yu-DM-nZQ" firstAttribute="top" secondItem="Ec9-fL-TrB" secondAttribute="bottom" constant="15" id="KE3-IL-JJo"/>
-                            <constraint firstItem="WBL-Me-82K" firstAttribute="top" secondItem="wa8-7V-a6E" secondAttribute="bottom" constant="44" id="SIz-Ec-ARt"/>
+                            <constraint firstItem="skY-GP-1cR" firstAttribute="leading" secondItem="hks-Sf-38n" secondAttribute="leading" constant="25" id="Jih-Je-e9P"/>
+                            <constraint firstItem="1Yu-DM-nZQ" firstAttribute="leading" secondItem="skY-GP-1cR" secondAttribute="leading" id="Kza-DJ-bCo"/>
+                            <constraint firstItem="RWM-kx-SHV" firstAttribute="leading" secondItem="hks-Sf-38n" secondAttribute="leading" constant="25" id="LKR-8g-AIr"/>
+                            <constraint firstItem="tZ6-yz-fK6" firstAttribute="top" secondItem="Ec9-fL-TrB" secondAttribute="bottom" constant="50" id="OTS-4p-ojV"/>
+                            <constraint firstItem="tZ6-yz-fK6" firstAttribute="leading" secondItem="hks-Sf-38n" secondAttribute="leading" constant="25" id="VHb-i1-sLd"/>
+                            <constraint firstItem="W62-cf-IMO" firstAttribute="trailing" secondItem="RWM-kx-SHV" secondAttribute="trailing" id="YTm-64-dXm"/>
+                            <constraint firstItem="W62-cf-IMO" firstAttribute="top" secondItem="RWM-kx-SHV" secondAttribute="bottom" constant="22" id="bAO-sX-wJD"/>
+                            <constraint firstItem="RWM-kx-SHV" firstAttribute="top" secondItem="1Yu-DM-nZQ" secondAttribute="bottom" constant="14" id="cTx-wl-qFt"/>
+                            <constraint firstItem="IfX-SK-XMn" firstAttribute="top" secondItem="wa8-7V-a6E" secondAttribute="bottom" constant="22" id="cgl-NL-02O"/>
                             <constraint firstItem="wa8-7V-a6E" firstAttribute="top" secondItem="skY-GP-1cR" secondAttribute="bottom" constant="17" id="ctN-2w-Z4x"/>
-                            <constraint firstItem="Ec9-fL-TrB" firstAttribute="trailing" secondItem="hks-Sf-38n" secondAttribute="trailing" id="dB2-zO-BHH"/>
                             <constraint firstItem="skY-GP-1cR" firstAttribute="top" secondItem="hks-Sf-38n" secondAttribute="top" constant="16" id="eL3-Ff-OsZ"/>
-                            <constraint firstItem="Ec9-fL-TrB" firstAttribute="top" secondItem="WBL-Me-82K" secondAttribute="bottom" constant="17" id="inn-6g-sRB"/>
+                            <constraint firstItem="hks-Sf-38n" firstAttribute="trailing" secondItem="Ec9-fL-TrB" secondAttribute="trailing" constant="29" id="eht-Fw-hec"/>
+                            <constraint firstItem="W62-cf-IMO" firstAttribute="leading" secondItem="WBL-Me-82K" secondAttribute="leading" id="exn-51-3Tk"/>
+                            <constraint firstItem="hks-Sf-38n" firstAttribute="trailing" secondItem="RWM-kx-SHV" secondAttribute="trailing" constant="25" id="feM-Ol-BjL"/>
                             <constraint firstItem="hks-Sf-38n" firstAttribute="trailing" secondItem="wa8-7V-a6E" secondAttribute="trailing" id="nZC-IE-yzk"/>
-                            <constraint firstItem="WBL-Me-82K" firstAttribute="leading" secondItem="skY-GP-1cR" secondAttribute="leading" id="rpD-L4-2Hs"/>
+                            <constraint firstItem="IfX-SK-XMn" firstAttribute="leading" secondItem="hks-Sf-38n" secondAttribute="leading" constant="25" id="rRs-2Z-lQy"/>
+                            <constraint firstItem="Ec9-fL-TrB" firstAttribute="top" secondItem="WBL-Me-82K" secondAttribute="bottom" constant="14" id="sbi-3y-wxf"/>
+                            <constraint firstItem="WBL-Me-82K" firstAttribute="top" secondItem="W62-cf-IMO" secondAttribute="bottom" constant="22" id="tjX-Xn-gCp"/>
+                            <constraint firstItem="hks-Sf-38n" firstAttribute="trailing" secondItem="tZ6-yz-fK6" secondAttribute="trailing" constant="25" id="tjf-8m-B7U"/>
+                            <constraint firstItem="Ec9-fL-TrB" firstAttribute="leading" secondItem="hks-Sf-38n" secondAttribute="leading" constant="29" id="wPb-Bm-A9e"/>
                         </constraints>
                     </view>
                     <connections>
@@ -232,7 +262,7 @@
             <size key="intrinsicContentSize" width="52" height="18"/>
         </designable>
         <designable name="WBL-Me-82K">
-            <size key="intrinsicContentSize" width="69" height="18"/>
+            <size key="intrinsicContentSize" width="52" height="18"/>
         </designable>
         <designable name="skY-GP-1cR">
             <size key="intrinsicContentSize" width="73" height="18"/>
@@ -240,6 +270,9 @@
     </designables>
     <resources>
         <image name="home" width="28" height="28"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

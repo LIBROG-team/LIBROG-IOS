@@ -122,7 +122,7 @@ class MyFloatingPanelLayout: FloatingPanelLayout {
 
     var anchors: [FloatingPanelState: FloatingPanelLayoutAnchoring] { // 가능한 floating panel: 현재 full, half만 가능하게 설정
         return [
-            .full: FloatingPanelLayoutAnchor(absoluteInset: 111.0, edge: .top, referenceGuide: .safeArea),
+            .full: FloatingPanelLayoutAnchor(absoluteInset: 100.0, edge: .top, referenceGuide: .safeArea),
             .half: FloatingPanelLayoutAnchor(absoluteInset: 190, edge: .bottom, referenceGuide: .safeArea),
         ]
     }
