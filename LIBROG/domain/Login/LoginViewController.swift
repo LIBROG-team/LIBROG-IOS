@@ -43,6 +43,11 @@ class LoginViewController: UIViewController {
         pwWarningLabel.isHidden = true
         isValidTf()
     }
+    // MARK: 자동 로그인 - userId의 값이 존재할 때
+    override func viewDidAppear(_ animated: Bool) {
+        let userId = UserDefaults.standard.integer(forKey: "userId")
+        if userId > 0 {ScreenManager().goMain(self)}
+    }
     func isValidTf() {
         self.loginButton.isEnabled = (self.isValidEmail && self.isValidPw) ? true : false
         self.loginButton.layer.borderColor = (self.isValidEmail && self.isValidPw) ? UIColor(named: "LIBROGColor")?.cgColor : UIColor.lightGray.cgColor
