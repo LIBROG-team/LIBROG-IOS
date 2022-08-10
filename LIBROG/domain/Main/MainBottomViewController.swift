@@ -13,6 +13,9 @@ class MainBottomViewController: UIViewController {
     @IBOutlet weak var recentBookCollectionView: UICollectionView!
     @IBOutlet weak var todaySuggestCollectionView: UICollectionView!
     @IBOutlet weak var noticeCollectionView: UICollectionView!
+    @IBOutlet weak var recentBookLabel: PaddingLabel!
+    @IBOutlet weak var firstSeparatorView: UIView!
+    @IBOutlet weak var recentBookAndNoticeHeight: NSLayoutConstraint!
     
     var recentBookArray: [RecentBookModel]!
     var noticeArray: [NoticeModel]!
@@ -123,6 +126,12 @@ extension MainBottomViewController {
     // MARK: 유저의 최근 읽은 책 api
     func recentBookSuccessAPI(_ result: [RecentBookModel]) {
         self.recentBookArray = result
+        if self.recentBookArray.count == 0 {
+            recentBookLabel.isHidden = true
+            recentBookCollectionView.isHidden = true
+            firstSeparatorView.isHidden = true
+            recentBookAndNoticeHeight.constant = 0 - 195
+        }
         recentBookCollectionView.reloadData()
     }
     // MARK: 활성화된 공지사항 api
