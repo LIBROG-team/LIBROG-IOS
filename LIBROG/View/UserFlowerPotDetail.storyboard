@@ -159,9 +159,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yj2-3q-aRn">
-                                <rect key="frame" x="188.5" y="256.5" width="40" height="20"/>
+                                <rect key="frame" x="188.5" y="256.5" width="27.5" height="20"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="point">
+                                    <fragment content="exp">
                                         <attributes>
                                             <color key="NSColor" red="0.47843140360000003" green="0.73725497719999999" blue="0.49803921579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <font key="NSFont" size="17" name="AppleSDGothicNeo-Bold"/>
@@ -172,9 +172,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03c-6t-Iws">
-                                <rect key="frame" x="228.5" y="256" width="68" height="21"/>
+                                <rect key="frame" x="216" y="256" width="15.5" height="21"/>
                                 <attributedString key="attributedText">
-                                    <fragment content=" / 20000">
+                                    <fragment content=" / ">
                                         <attributes>
                                             <color key="NSColor" red="0.47843140360000003" green="0.73725497719999999" blue="0.49803921579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <font key="NSFont" size="17" name="AppleSDGothicNeo-Bold"/>
@@ -218,6 +218,19 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DER-Ys-Kce">
+                                <rect key="frame" x="231.5" y="256" width="65" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="maxExp ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.47843140360000003" green="0.73725497719999999" blue="0.49803921579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="17" name="AppleSDGothicNeo-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KdW-KX-GxA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -229,6 +242,7 @@
                             <constraint firstItem="Shp-5F-cmK" firstAttribute="leading" secondItem="3fN-FQ-Cxt" secondAttribute="leading" id="8jt-za-hdS"/>
                             <constraint firstItem="Iaz-PN-OSg" firstAttribute="leading" secondItem="KdW-KX-GxA" secondAttribute="leading" constant="32" id="Bur-cf-S9h"/>
                             <constraint firstItem="yj2-3q-aRn" firstAttribute="centerY" secondItem="1dv-Iz-h6j" secondAttribute="centerY" id="FqV-h2-3A3"/>
+                            <constraint firstItem="DER-Ys-Kce" firstAttribute="leading" secondItem="03c-6t-Iws" secondAttribute="trailing" id="JsX-6a-ikU"/>
                             <constraint firstItem="Tp3-m4-Ehh" firstAttribute="top" secondItem="yj2-3q-aRn" secondAttribute="bottom" constant="16" id="Kmo-AH-eiL"/>
                             <constraint firstItem="4fd-jT-9FZ" firstAttribute="centerY" secondItem="dH3-l3-Amu" secondAttribute="centerY" id="Nsl-8m-FCG"/>
                             <constraint firstItem="3mu-yW-KWB" firstAttribute="top" secondItem="x1a-8C-k19" secondAttribute="bottom" constant="25" id="OBB-pJ-KaT"/>
@@ -249,6 +263,7 @@
                             <constraint firstItem="1dv-Iz-h6j" firstAttribute="leading" secondItem="3mu-yW-KWB" secondAttribute="trailing" id="dzi-KO-vxm"/>
                             <constraint firstItem="3mu-yW-KWB" firstAttribute="leading" secondItem="KdW-KX-GxA" secondAttribute="leading" constant="32" id="eo4-xe-cht"/>
                             <constraint firstItem="KdW-KX-GxA" firstAttribute="trailing" secondItem="gSf-ph-aYW" secondAttribute="trailing" constant="14" id="fSB-qt-EiO"/>
+                            <constraint firstItem="DER-Ys-Kce" firstAttribute="centerY" secondItem="03c-6t-Iws" secondAttribute="centerY" id="gNU-XL-lLS"/>
                             <constraint firstItem="o8d-rf-ZZ1" firstAttribute="leading" secondItem="2cs-3O-81F" secondAttribute="trailing" id="kNW-3B-cR2"/>
                             <constraint firstItem="03c-6t-Iws" firstAttribute="centerY" secondItem="yj2-3q-aRn" secondAttribute="centerY" id="l6Y-mv-Jmj"/>
                             <constraint firstItem="o8d-rf-ZZ1" firstAttribute="centerY" secondItem="2cs-3O-81F" secondAttribute="centerY" id="lBg-GE-X5v"/>
@@ -265,13 +280,14 @@
                     </view>
                     <connections>
                         <outlet property="bookCountLabel" destination="2cs-3O-81F" id="QkA-IL-FGY"/>
+                        <outlet property="expProgessView" destination="Tp3-m4-Ehh" id="epb-d1-HgI"/>
                         <outlet property="flowerPotEndDateLabel" destination="4fd-jT-9FZ" id="Po1-EM-21o"/>
                         <outlet property="flowerPotImageView" destination="x1a-8C-k19" id="R4Q-TT-3qy"/>
-                        <outlet property="flowerPotNameGrowthLabel" destination="3mu-yW-KWB" id="Gpn-ag-EIF"/>
+                        <outlet property="flowerPotNameExpLabel" destination="3mu-yW-KWB" id="Gpn-ag-EIF"/>
                         <outlet property="flowerPotNameLabel" destination="7UP-CS-vg3" id="bUT-MP-2Yz"/>
                         <outlet property="flowerPotStartDateLabel" destination="3fN-FQ-Cxt" id="EMN-HO-taQ"/>
-                        <outlet property="growthPointLabel" destination="yj2-3q-aRn" id="c3D-LV-E3g"/>
-                        <outlet property="growthProgessView" destination="Tp3-m4-Ehh" id="epb-d1-HgI"/>
+                        <outlet property="flowerpotExpLabel" destination="yj2-3q-aRn" id="c3D-LV-E3g"/>
+                        <outlet property="flowerpotMaxExpLabel" destination="DER-Ys-Kce" id="pp5-38-OHw"/>
                         <outlet property="recordBookCollectionView" destination="TRV-Tw-Jsj" id="8VQ-2o-rI1"/>
                     </connections>
                 </viewController>

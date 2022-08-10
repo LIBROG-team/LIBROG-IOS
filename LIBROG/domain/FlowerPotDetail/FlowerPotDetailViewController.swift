@@ -14,9 +14,10 @@ class FlowerPotDetailViewController: UIViewController {
     @IBOutlet weak var flowerPotStartDateLabel: UILabel!
     @IBOutlet weak var flowerPotEndDateLabel: UILabel!
     @IBOutlet weak var bookCountLabel: UILabel!
-    @IBOutlet weak var flowerPotNameGrowthLabel: UILabel!
-    @IBOutlet weak var growthPointLabel: UILabel!
-    @IBOutlet weak var growthProgessView: UIProgressView!
+    @IBOutlet weak var flowerPotNameExpLabel: UILabel!
+    @IBOutlet weak var flowerpotExpLabel: UILabel!
+    @IBOutlet weak var flowerpotMaxExpLabel: UILabel!
+    @IBOutlet weak var expProgessView: UIProgressView!
     @IBOutlet weak var recordBookCollectionView: UICollectionView!
     
     var flowerpotID: Int?
@@ -26,6 +27,7 @@ class FlowerPotDetailViewController: UIViewController {
     var flowerpotLastDate: String?
     var flowerpotReadCount: Int?
     var flowerpotExp: Int?
+    var flowerpotMaxExp: Int?
     
     var bookRecordArray: [ReadingRecordData]!
     
@@ -55,17 +57,21 @@ class FlowerPotDetailViewController: UIViewController {
     }
     func setFlowerpotData() {
         flowerPotNameLabel.text = self.flowerpotName!
-        flowerPotNameGrowthLabel.text = self.flowerpotName!
+        flowerPotNameExpLabel.text = self.flowerpotName!
         flowerPotStartDateLabel.text = String(self.flowerpotStartDate!.split(separator: "T")[0])
         flowerPotEndDateLabel.text = String(self.flowerpotLastDate!.split(separator: "T")[0])
         bookCountLabel.text = String(self.flowerpotReadCount!)
         
-        growthPointLabel.text = String(self.flowerpotExp!)
+        flowerpotExpLabel.text = String(self.flowerpotExp!)
         // 화분 성장치 progressView
-        let growth = Double(self.flowerpotExp!)
-        growthPointLabel.text = String(Int(growth))
+        let exp = Double(self.flowerpotExp!)
+        let maxExp = Double(self.flowerpotMaxExp!)
+        flowerpotExpLabel.text = String(Int(exp))
+        flowerpotMaxExpLabel.text = String(Int(maxExp))
         UIView.animate(withDuration: 2) {
-                    self.growthProgessView.setProgress(Float(growth * 0.0001), animated: true)
+            var bar = 0.0
+            if exp != 0 {bar = exp / maxExp}
+            self.expProgessView.setProgress(Float(bar), animated: true)
         }
         // 화분 이미지 출력
         if let url = URL(string: self.flowerpotImgUrl!) {
