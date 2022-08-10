@@ -7,7 +7,7 @@
 //MARK: - 앱 로그인 Model
 struct AppLoginModel: Decodable {
     let jwt: String?
-    let userIdx: String?
+    let userIdx: Int?
 }
 //MARK: - 카카오 로그인 Model
 struct KakaoLoginModel: Decodable {
