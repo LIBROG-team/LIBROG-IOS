@@ -67,6 +67,7 @@ extension FlowerPotViewController: UITableViewDelegate, UITableViewDataSource {
         userFlowerPotDetailVC.flowerpotLastDate = flowerpotArray[indexPath.item].lastDate
         userFlowerPotDetailVC.flowerpotReadCount = flowerpotArray[indexPath.item].recordCount
         userFlowerPotDetailVC.flowerpotExp = flowerpotArray[indexPath.item].exp
+        userFlowerPotDetailVC.flowerpotMaxExp = flowerpotArray[indexPath.item].maxExp
  
         userFlowerPotDetailVC.modalPresentationStyle = .fullScreen
         self.present(userFlowerPotDetailVC, animated: true, completion: nil)

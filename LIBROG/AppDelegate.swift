@@ -28,7 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UserDefaults.standard.set("https://dev.siejwkaodj.shop/", forKey: "url")
         UserDefaults.standard.set("", forKey: "accessToken")
         UserDefaults.standard.set("", forKey: "refreshToken")
-        UserDefaults.standard.set(1, forKey: "userId")  // 임시로 userID를 1로 설정
+        
+//        UserDefaults.standard.set(-1, forKey: "userId")  // 로그인되지 않은 상태의 userID를 -1로 설정
         
         KakaoSDK.initSDK(appKey: "61775cb2c32cd4a6566c35d7b463cb8f")
         
