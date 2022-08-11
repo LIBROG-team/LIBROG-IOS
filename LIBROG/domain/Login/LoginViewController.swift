@@ -54,13 +54,22 @@ class LoginViewController: UIViewController {
     }
     
     //MARK: Actions
+    //MARK: 카카오 로그인
     @IBAction func kakaoLoginButtonDidTap(_ sender: UIButton) {
         KakaoLoginManager().kakaoLogin(self)
     }
+    //MARK: 앱 로그인
     @IBAction func appLoginButtonDidTap(_ sender: UIButton) {
         let appLoginInput = AppLoginInput(email: self.email, password: self.password)
         LoginDataManager().appLoginDataManager(appLoginInput, self)
     }
+    //MARK: 비밀번호 찾기
+    @IBAction func findPasswordDidTap(_ sender: UIButton) {
+        guard let findPasswordVC = UIStoryboard(name: "FindPassword", bundle: nil).instantiateViewController(identifier: "FindPwVC") as? FindPasswordViewController else {return}
+        findPasswordVC.modalPresentationStyle = .fullScreen
+        self.present(findPasswordVC, animated: true, completion: nil)
+    }
+    //MARK: 회원가입
     @IBAction func goRegisterDidTap(_ sender: UIButton) {
         guard let registerTermVC = UIStoryboard(name: "Register", bundle: nil).instantiateViewController(identifier: "RegisterTermVC") as? RegisterTermViewController else {return}
         registerTermVC.modalPresentationStyle = .fullScreen
@@ -108,10 +117,7 @@ extension LoginViewController {
         // 앱 로그인 실패 시 오류 창
         else  {
             guard let errorMessage = result.message else {return}
-            let alert = UIAlertController(title: errorMessage, message: "", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "확인", style: .cancel, handler: nil)
-            alert.addAction(ok)
-            self.present(alert, animated: true, completion: nil)
+            ScreenManager().alertErrorDialog(errorMessage, self)
         }
     }
 }

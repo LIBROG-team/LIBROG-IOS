@@ -204,6 +204,9 @@
                                     </attributedString>
                                     <color key="baseForegroundColor" name="Nomal"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="findPasswordDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yhp-G3-Kzw"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJm-ZI-hcH">
                                 <rect key="frame" x="87.5" y="654.5" width="239.5" height="14.5"/>

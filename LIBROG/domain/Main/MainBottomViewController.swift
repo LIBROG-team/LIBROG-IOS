@@ -16,10 +16,12 @@ class MainBottomViewController: UIViewController {
     @IBOutlet weak var recentBookLabel: PaddingLabel!
     @IBOutlet weak var firstSeparatorView: UIView!
     @IBOutlet weak var recentBookAndNoticeHeight: NSLayoutConstraint!
+    @IBOutlet weak var noticePageControl: UIPageControl!
     
     var recentBookArray: [RecentBookModel]!
     var noticeArray: [NoticeModel]!
     var recommendArray: [RecommendBookModel]!
+    var currentPage = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,7 +90,7 @@ extension MainBottomViewController : UICollectionViewDelegate, UICollectionViewD
             }
             let itemIdx = indexPath.item
             cell.setNotice(noticeArray[itemIdx])
-//            print("NOTICE...",noticeArray[itemIdx])
+            
             return cell
         }
         else {
@@ -100,7 +102,10 @@ extension MainBottomViewController : UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if(collectionView == recentBookCollectionView) { return CGSize(width: 193, height: 128) }
         else if(collectionView == todaySuggestCollectionView) { return CGSize(width: 120, height: 84) }
-        else if(collectionView == noticeCollectionView) { return CGSize(width: 340, height: 56) }
+        else if(collectionView == noticeCollectionView) {
+            let width = noticeCollectionView.frame.width
+            return CGSize(width: width, height: 56)
+        }
         else  { return CGSize(width: 0, height: 0)}
     }
     // 셀 선택

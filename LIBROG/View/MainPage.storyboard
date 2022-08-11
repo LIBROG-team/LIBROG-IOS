@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -83,7 +83,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="138" id="hjV-hz-Xfy"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="z3t-gS-nhn">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="9" id="z3t-gS-nhn">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -131,7 +131,7 @@
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
@@ -184,7 +184,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="udZ-w3-uUV"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZJa-71-7zd">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="ZJa-71-7zd">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -206,25 +206,18 @@
                                     <constraint firstAttribute="height" constant="1" id="4an-iV-FKL"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tZ6-yz-fK6">
-                                <rect key="frame" x="25" y="581" width="364" height="56"/>
-                                <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="eYA-dA-vIk"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="I35-1s-iZq">
+                                <rect key="frame" x="149" y="354" width="116" height="26"/>
+                            </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hks-Sf-38n"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="xi8-I2-e28" firstAttribute="top" secondItem="hks-Sf-38n" secondAttribute="top" constant="10" id="1dF-kn-nQy"/>
                             <constraint firstItem="WBL-Me-82K" firstAttribute="leading" secondItem="1Yu-DM-nZQ" secondAttribute="leading" id="5Jz-6G-l0u"/>
+                            <constraint firstItem="W62-cf-IMO" firstAttribute="top" secondItem="I35-1s-iZq" secondAttribute="bottom" constant="27" id="65Y-Aw-Z0g"/>
                             <constraint firstItem="Ec9-fL-TrB" firstAttribute="leading" secondItem="WBL-Me-82K" secondAttribute="leading" id="77M-f3-iHa"/>
+                            <constraint firstItem="I35-1s-iZq" firstAttribute="centerX" secondItem="hks-Sf-38n" secondAttribute="centerX" id="7rK-kZ-HOQ"/>
                             <constraint firstItem="RWM-kx-SHV" firstAttribute="leading" secondItem="1Yu-DM-nZQ" secondAttribute="leading" id="8oq-hp-9bg"/>
                             <constraint firstItem="1Yu-DM-nZQ" firstAttribute="top" secondItem="IfX-SK-XMn" secondAttribute="bottom" constant="22" id="B5B-cd-jN1"/>
                             <constraint firstItem="xi8-I2-e28" firstAttribute="centerX" secondItem="hks-Sf-38n" secondAttribute="centerX" id="EHU-fu-T4N"/>
@@ -233,8 +226,6 @@
                             <constraint firstItem="skY-GP-1cR" firstAttribute="leading" secondItem="hks-Sf-38n" secondAttribute="leading" constant="25" id="Jih-Je-e9P"/>
                             <constraint firstItem="1Yu-DM-nZQ" firstAttribute="leading" secondItem="skY-GP-1cR" secondAttribute="leading" id="Kza-DJ-bCo"/>
                             <constraint firstItem="RWM-kx-SHV" firstAttribute="leading" secondItem="hks-Sf-38n" secondAttribute="leading" constant="25" id="LKR-8g-AIr"/>
-                            <constraint firstItem="tZ6-yz-fK6" firstAttribute="top" secondItem="Ec9-fL-TrB" secondAttribute="bottom" constant="35" id="OTS-4p-ojV"/>
-                            <constraint firstItem="tZ6-yz-fK6" firstAttribute="leading" secondItem="hks-Sf-38n" secondAttribute="leading" constant="25" id="VHb-i1-sLd"/>
                             <constraint firstItem="W62-cf-IMO" firstAttribute="trailing" secondItem="RWM-kx-SHV" secondAttribute="trailing" id="YTm-64-dXm"/>
                             <constraint firstItem="W62-cf-IMO" firstAttribute="top" secondItem="RWM-kx-SHV" secondAttribute="bottom" constant="22" id="bAO-sX-wJD"/>
                             <constraint firstItem="RWM-kx-SHV" firstAttribute="top" secondItem="1Yu-DM-nZQ" secondAttribute="bottom" constant="14" id="cTx-wl-qFt"/>
@@ -248,13 +239,13 @@
                             <constraint firstItem="IfX-SK-XMn" firstAttribute="leading" secondItem="hks-Sf-38n" secondAttribute="leading" constant="25" id="rRs-2Z-lQy"/>
                             <constraint firstItem="Ec9-fL-TrB" firstAttribute="top" secondItem="WBL-Me-82K" secondAttribute="bottom" constant="14" id="sbi-3y-wxf"/>
                             <constraint firstItem="WBL-Me-82K" firstAttribute="top" secondItem="W62-cf-IMO" secondAttribute="bottom" constant="22" id="tjX-Xn-gCp"/>
-                            <constraint firstItem="hks-Sf-38n" firstAttribute="trailing" secondItem="tZ6-yz-fK6" secondAttribute="trailing" constant="25" id="tjf-8m-B7U"/>
                             <constraint firstItem="Ec9-fL-TrB" firstAttribute="leading" secondItem="hks-Sf-38n" secondAttribute="leading" constant="25" id="wPb-Bm-A9e"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="firstSeparatorView" destination="IfX-SK-XMn" id="j5q-2x-8sc"/>
                         <outlet property="noticeCollectionView" destination="RWM-kx-SHV" id="gwD-Py-621"/>
+                        <outlet property="noticePageControl" destination="I35-1s-iZq" id="JSK-GT-6po"/>
                         <outlet property="recentBookAndNoticeHeight" destination="B5B-cd-jN1" id="Az1-Xi-uak"/>
                         <outlet property="recentBookCollectionView" destination="wa8-7V-a6E" id="slj-xh-8w6"/>
                         <outlet property="recentBookLabel" destination="skY-GP-1cR" id="hYF-WJ-GPC"/>
