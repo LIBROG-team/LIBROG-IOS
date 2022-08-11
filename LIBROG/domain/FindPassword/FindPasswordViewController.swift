@@ -21,7 +21,10 @@ class FindPasswordViewController: UIViewController {
         sendEmailButton.layer.cornerRadius = 20
         sendEmailButton.tintColor = UIColor(named: "LIBROGColor")
     }
-
+    //MARK: 화면 터치 시 키보드 내리기
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     @IBAction func sendEmailButtonDidTap(_ sender: UIButton) {
         guard let email = emailTextField.text else {return}
         let findPasswordInput = FindPasswordInput(email: email)

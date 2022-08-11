@@ -43,6 +43,10 @@ class LoginViewController: UIViewController {
         pwWarningLabel.isHidden = true
         isValidTf()
     }
+    //MARK: 화면 터치 시 키보드 내리기
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     // MARK: 자동 로그인 - userId의 값이 존재할 때
     override func viewDidAppear(_ animated: Bool) {
         let userId = UserDefaults.standard.integer(forKey: "userId")
