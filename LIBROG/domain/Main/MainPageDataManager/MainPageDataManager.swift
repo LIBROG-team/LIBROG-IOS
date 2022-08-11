@@ -37,12 +37,12 @@ class MainPageDataManager{
                    method: .get,
                    parameters: nil)
             .validate()
-            .responseDecodable(of: [RecentBookModel].self) { response in
+            .responseDecodable(of: APIModel<[RecentBookModel]>.self) { response in
                 
             switch response.result {
             case .success(let result):
 //                print("DEBUG: ", result)
-                viewcontroller.recentBookSuccessAPI(result)
+                viewcontroller.recentBookSuccessAPI(result.result!)
             case .failure(let error):
                 print(error.localizedDescription)
             }
