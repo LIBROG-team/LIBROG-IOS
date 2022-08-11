@@ -146,6 +146,18 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         else {return 72}
     }
     
+    // 클릭 이벤트 처리
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // 프로필 수정 페이지로 이동
+        if indexPath.row == 0 {
+            guard let ModifyProfileVC = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(identifier: "ModifyProfileVC") as? ModifyProfileViewController else {return}
+            ModifyProfileVC.userNameText = self.introData.name
+            ModifyProfileVC.modalPresentationStyle = .fullScreen
+            self.present(ModifyProfileVC, animated: true, completion: nil)
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
 }
 // MARK: - api success
 extension ProfileViewController {
