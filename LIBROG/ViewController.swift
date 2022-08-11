@@ -11,7 +11,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
+    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let tabBarVc = CustomTabBarController()

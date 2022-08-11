@@ -65,6 +65,9 @@
 		239DE3FB28A4CEC100386151 /* FindPasswordDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239DE3FA28A4CEC100386151 /* FindPasswordDataManager.swift */; };
 		239DE3FD28A4CF2900386151 /* FindPasswordInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239DE3FC28A4CF2900386151 /* FindPasswordInput.swift */; };
 		239DE40028A4D9CE00386151 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239DE3FF28A4D9CE00386151 /* SettingViewController.swift */; };
+		239DE40428A4E7B100386151 /* LoginTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239DE40228A4E7B100386151 /* LoginTableViewCell.swift */; };
+		239DE40528A4E7B100386151 /* LoginTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 239DE40328A4E7B100386151 /* LoginTableViewCell.xib */; };
+		239DE40728A4E86A00386151 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239DE40628A4E86A00386151 /* StringExtension.swift */; };
 		239EF02F2892F2C8005BC364 /* SearchDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239EF02E2892F2C8005BC364 /* SearchDataManager.swift */; };
 		23A41EA52894315D0008437B /* RecordDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A41EA42894315D0008437B /* RecordDetailModel.swift */; };
 		23A41EA7289431650008437B /* RecordDetailDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A41EA6289431650008437B /* RecordDetailDataManager.swift */; };
@@ -221,6 +224,9 @@
 		239DE3FA28A4CEC100386151 /* FindPasswordDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordDataManager.swift; sourceTree = "<group>"; };
 		239DE3FC28A4CF2900386151 /* FindPasswordInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordInput.swift; sourceTree = "<group>"; };
 		239DE3FF28A4D9CE00386151 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		239DE40228A4E7B100386151 /* LoginTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTableViewCell.swift; sourceTree = "<group>"; };
+		239DE40328A4E7B100386151 /* LoginTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginTableViewCell.xib; sourceTree = "<group>"; };
+		239DE40628A4E86A00386151 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		239EF02E2892F2C8005BC364 /* SearchDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataManager.swift; sourceTree = "<group>"; };
 		23A41EA42894315D0008437B /* RecordDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailModel.swift; sourceTree = "<group>"; };
 		23A41EA6289431650008437B /* RecordDetailDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailDataManager.swift; sourceTree = "<group>"; };
@@ -336,6 +342,7 @@
 		2303F2302889A9D300544AF6 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				239DE40128A4E78400386151 /* Cell */,
 				2305E7712891597400A9B6D5 /* LoginDataManager */,
 				2305E77428915A8900A9B6D5 /* LoginManager */,
 				2303F2312889A9EB00544AF6 /* LoginViewController.swift */,
@@ -494,6 +501,7 @@
 				231B8D452889221A006F44A3 /* SwipeRecognizer.swift */,
 				236CF5A5289D732F00E7A1F2 /* APIModel.swift */,
 				234E31B328A01B1D00DCD812 /* ScreenManager.swift */,
+				239DE40628A4E86A00386151 /* StringExtension.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -539,6 +547,15 @@
 				239DE3FF28A4D9CE00386151 /* SettingViewController.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		239DE40128A4E78400386151 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				239DE40228A4E7B100386151 /* LoginTableViewCell.swift */,
+				239DE40328A4E7B100386151 /* LoginTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		23A41EA12894313B0008437B /* RecordDetailDataManager */ = {
@@ -1055,6 +1072,7 @@
 				234036062891AD3D00C9AB4D /* Register.storyboard in Resources */,
 				D0C2B056286DC9BE00242E71 /* Main.storyboard in Resources */,
 				23ADA91D28846B240066D15A /* AcheivedFlowerPot.storyboard in Resources */,
+				239DE40528A4E7B100386151 /* LoginTableViewCell.xib in Resources */,
 				23ADA9112884698F0066D15A /* UploadRecord.storyboard in Resources */,
 				230524C2287D5C370081933A /* FlowerPotDetailCollectionViewCell.xib in Resources */,
 			);
@@ -1132,6 +1150,7 @@
 				23A5B860287D7F81005413A3 /* NotAcheivedFlowerPotTableViewCell.swift in Sources */,
 				23F6107C2888134C00575D81 /* ReadingRecordDataManager.swift in Sources */,
 				23A5B86E287D9D5D005413A3 /* ResultTableViewCell.swift in Sources */,
+				239DE40428A4E7B100386151 /* LoginTableViewCell.swift in Sources */,
 				23A5B857287D6B89005413A3 /* FlowerPotTabViewController.swift in Sources */,
 				23A41EA7289431650008437B /* RecordDetailDataManager.swift in Sources */,
 				2339DA08288592B100A3DBC4 /* KakaoBookModel.swift in Sources */,
@@ -1208,6 +1227,7 @@
 				2305E773289159A000A9B6D5 /* KakaoLoginManager.swift in Sources */,
 				D07E7EBE289279250077287A /* RegisterInput.swift in Sources */,
 				239DE40028A4D9CE00386151 /* SettingViewController.swift in Sources */,
+				239DE40728A4E86A00386151 /* StringExtension.swift in Sources */,
 				230524C1287D5C370081933A /* FlowerPotDetailCollectionViewCell.swift in Sources */,
 				236CF5A6289D732F00E7A1F2 /* APIModel.swift in Sources */,
 				23A5B85C287D7F73005413A3 /* AcheivedFlowerPotTableViewCell.swift in Sources */,
@@ -1394,7 +1414,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SB87AFXHM2;
+				DEVELOPMENT_TEAM = B974XY47GZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LIBROG/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1423,7 +1443,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SB87AFXHM2;
+				DEVELOPMENT_TEAM = B974XY47GZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LIBROG/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

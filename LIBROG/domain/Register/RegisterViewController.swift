@@ -41,6 +41,10 @@ class RegisterViewController: UIViewController {
         nicknameWarningLabel.isHidden = true
         isValidTf()
     }
+    //MARK: 화면 터치 시 키보드 내리기
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     func isValidTf() {
         self.nextButton.isEnabled = (self.isValidEmail && self.isValidPw && self.isValidName) ? true : false
         self.nextButton.layer.borderColor = (self.isValidEmail && self.isValidPw && self.isValidName) ? UIColor(named: "LIBROGColor")?.cgColor : UIColor.lightGray.cgColor

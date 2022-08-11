@@ -21,7 +21,10 @@ class FindPasswordViewController: UIViewController {
         sendEmailButton.layer.cornerRadius = 20
         sendEmailButton.tintColor = UIColor(named: "LIBROGColor")
     }
-
+    //MARK: 화면 터치 시 키보드 내리기
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     @IBAction func sendEmailButtonDidTap(_ sender: UIButton) {
         guard let email = emailTextField.text else {return}
         let findPasswordInput = FindPasswordInput(email: email)
@@ -36,7 +39,10 @@ extension FindPasswordViewController {
     func findPasswordSuccessAPI(_ result: APIModel<ResultModel>) {
         guard let isSuccess = result.isSuccess else {return}
         if isSuccess {
-            self.dismiss(animated: true, completion: nil)
+            ScreenManager().emailSendSuccessDialog("이메일 전송이 되었습니다.", "로그인 화면으로 이동합니다.", self)
+//            guard let loginVC = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(identifier: "LoginVC") as? LoginViewController else {return}
+//            loginVC.modalPresentationStyle = .fullScreen
+//            self.present(loginVC, animated: true, completion: nil)
         } else {
             guard let errorMessage = result.message else {return}
             ScreenManager().alertErrorDialog(errorMessage, self)
