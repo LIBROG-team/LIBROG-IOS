@@ -127,6 +127,7 @@
 		D07E7EBE289279250077287A /* RegisterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07E7EBD289279250077287A /* RegisterInput.swift */; };
 		D07E7EC028927AC70077287A /* RegisterDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07E7EBF28927AC70077287A /* RegisterDataManager.swift */; };
 		D096410B2886B40800E5989C /* ReadingRecordBottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096410A2886B40800E5989C /* ReadingRecordBottomViewController.swift */; };
+		D09E0E1128A4D4FF0036DB2D /* ModifyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09E0E1028A4D4FF0036DB2D /* ModifyProfileViewController.swift */; };
 		D0C2B04F286DC9BE00242E71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C2B04E286DC9BE00242E71 /* AppDelegate.swift */; };
 		D0C2B051286DC9BE00242E71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C2B050286DC9BE00242E71 /* SceneDelegate.swift */; };
 		D0C2B053286DC9BE00242E71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C2B052286DC9BE00242E71 /* ViewController.swift */; };
@@ -284,6 +285,7 @@
 		D07E7EBD289279250077287A /* RegisterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInput.swift; sourceTree = "<group>"; };
 		D07E7EBF28927AC70077287A /* RegisterDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterDataManager.swift; sourceTree = "<group>"; };
 		D096410A2886B40800E5989C /* ReadingRecordBottomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingRecordBottomViewController.swift; sourceTree = "<group>"; };
+		D09E0E1028A4D4FF0036DB2D /* ModifyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyProfileViewController.swift; sourceTree = "<group>"; };
 		D0C2B04B286DC9BE00242E71 /* LIBROG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LIBROG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C2B04E286DC9BE00242E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0C2B050286DC9BE00242E71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -479,6 +481,7 @@
 				D0611049288FF04F00F96B65 /* ProfileDataManager */,
 				237ECCE42885692E000D9A71 /* Cell */,
 				237ECCDF288556EE000D9A71 /* ProfileViewController.swift */,
+				D09E0E1028A4D4FF0036DB2D /* ModifyProfileViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -1192,6 +1195,7 @@
 				23CC78D9288FCE370064DA7E /* UploadRecordModel.swift in Sources */,
 				23AB70A4288FFDBD00503366 /* RecordDetailTableViewCell.swift in Sources */,
 				D0CF2B5D2885C83C00F78104 /* ReadingRecordCollectionViewCell.swift in Sources */,
+				D09E0E1128A4D4FF0036DB2D /* ModifyProfileViewController.swift in Sources */,
 				D0C2B086286DF28800242E71 /* FlowerpotTableViewCell.swift in Sources */,
 				231B8D4A288936F6006F44A3 /* FlowerpotDescriptionDataManager.swift in Sources */,
 				23458ADB2896E4FF0003A669 /* ProfileStatisticTableViewCell.swift in Sources */,
