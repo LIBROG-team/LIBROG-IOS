@@ -15,4 +15,10 @@ class ScreenManager {
         tabBarController.modalPresentationStyle = .fullScreen
         viewcontroller.view.window?.windowScene?.keyWindow?.rootViewController = tabBarController
     }
+    func alertErrorDialog(_ errorMessage: String, _ viewcontroller: UIViewController) {
+        let alert = UIAlertController(title: errorMessage, message: "", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "확인", style: .cancel, handler: nil)
+        alert.addAction(ok)
+        viewcontroller.present(alert, animated: true, completion: nil)
+    }
 }
