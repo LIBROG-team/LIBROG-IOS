@@ -35,6 +35,10 @@ class UploadRecordViewController: UIViewController {
         uploadRecordTableView.estimatedRowHeight = 50
         uploadRecordTableView.rowHeight = UITableView.automaticDimension
     }
+    //MARK: 화면 터치 시 키보드 내리기
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     // MARK: - Actions
     @IBAction func goBackButtonDidTap(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)

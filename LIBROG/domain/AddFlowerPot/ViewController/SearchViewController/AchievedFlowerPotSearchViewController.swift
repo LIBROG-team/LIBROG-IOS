@@ -27,6 +27,10 @@ class AchievedFlowerPotSearchViewController: UIViewController {
         SwipeRecognizer().swipeRecognizer(self)
         searchBarCustom()
     }
+    //MARK: 화면 터치 시 키보드 내리기
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }
 // MARK: - Table view data source
 extension AchievedFlowerPotSearchViewController: UITableViewDelegate, UITableViewDataSource {

@@ -39,6 +39,10 @@ class ModifyProfileViewController: UIViewController {
         
         userNameLabel.text = userNameText
     }
+    //MARK: 화면 터치 시 키보드 내리기
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     // MARK: - Actions
     // MARK: 카메라 버튼 클릭
     @IBAction func cameraButtonDidTap(_ sender: UIButton) {
