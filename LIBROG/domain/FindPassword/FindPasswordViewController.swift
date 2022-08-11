@@ -36,7 +36,10 @@ extension FindPasswordViewController {
     func findPasswordSuccessAPI(_ result: APIModel<ResultModel>) {
         guard let isSuccess = result.isSuccess else {return}
         if isSuccess {
-            self.dismiss(animated: true, completion: nil)
+            ScreenManager().emailSendSuccessDialog("이메일 전송이 되었습니다.", "로그인 화면으로 이동합니다.", self)
+//            guard let loginVC = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(identifier: "LoginVC") as? LoginViewController else {return}
+//            loginVC.modalPresentationStyle = .fullScreen
+//            self.present(loginVC, animated: true, completion: nil)
         } else {
             guard let errorMessage = result.message else {return}
             ScreenManager().alertErrorDialog(errorMessage, self)
