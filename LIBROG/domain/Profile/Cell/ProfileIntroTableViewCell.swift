@@ -24,10 +24,10 @@ class ProfileIntroTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     func setUpIntro(_ result: IntroModel) {
-        let name = result.name
-        let intro = result.introduction
-        let profileURL = result.profileImgUrl!
-        
+        guard let name = result.name else {return}
+        guard let intro = result.introduction else {return}
+        guard let profileURL = result.profileImgUrl else {return}
+
         userNameLabel.text = name
         introductionLabel.text = intro
         if let url = URL(string: profileURL) {

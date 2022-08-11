@@ -29,6 +29,7 @@ class UploadViewController: UITableViewController {
         searchController.searchResultsUpdater = self
         searchController.searchBar.delegate = self
         searchController.delegate = self
+        searchController.searchBar.searchTextField.delegate = self
         
         resultVC.tableView.delegate = self
         resultVC.tableView.dataSource = self
@@ -211,5 +212,11 @@ extension UploadViewController {
         
         self.tableView.backgroundView = backgroudView
 
+    }
+}
+extension UploadViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder() // TextField 비활성화
+        return true
     }
 }
