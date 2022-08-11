@@ -59,6 +59,9 @@
                             <constraint firstItem="fcq-OG-F38" firstAttribute="top" secondItem="1UF-XT-q4y" secondAttribute="top" id="zAI-18-a90"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="navigationBar" destination="fcq-OG-F38" id="vJN-Nf-PSO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pkw-KF-vxO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -124,6 +127,9 @@
                             <constraint firstItem="k88-sf-6SA" firstAttribute="top" secondItem="GL9-jR-Bja" secondAttribute="bottom" id="yKY-1V-hXm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="navigationBar" destination="GL9-jR-Bja" id="aEV-3a-fS0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zuw-hp-SNF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
