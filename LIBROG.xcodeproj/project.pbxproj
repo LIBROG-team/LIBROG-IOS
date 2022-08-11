@@ -114,6 +114,7 @@
 		23CC78D7288FCDAE0064DA7E /* UploadRecordInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CC78D6288FCDAE0064DA7E /* UploadRecordInput.swift */; };
 		23CC78D9288FCE370064DA7E /* UploadRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CC78D8288FCE370064DA7E /* UploadRecordModel.swift */; };
 		23CC78DB288FCEDE0064DA7E /* UploadRecordDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CC78DA288FCEDE0064DA7E /* UploadRecordDataManager.swift */; };
+		23DE9D6C28A56524009DF894 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DE9D6B28A56524009DF894 /* RegisterModel.swift */; };
 		23DFD30D2878D9B1002AC8B0 /* UploadRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFD30C2878D9B1002AC8B0 /* UploadRecordViewController.swift */; };
 		23DFD3102878D9F4002AC8B0 /* UploadRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFD30E2878D9F4002AC8B0 /* UploadRecordTableViewCell.swift */; };
 		23DFD3112878D9F4002AC8B0 /* UploadRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23DFD30F2878D9F4002AC8B0 /* UploadRecordTableViewCell.xib */; };
@@ -273,6 +274,7 @@
 		23CC78D6288FCDAE0064DA7E /* UploadRecordInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRecordInput.swift; sourceTree = "<group>"; };
 		23CC78D8288FCE370064DA7E /* UploadRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRecordModel.swift; sourceTree = "<group>"; };
 		23CC78DA288FCEDE0064DA7E /* UploadRecordDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRecordDataManager.swift; sourceTree = "<group>"; };
+		23DE9D6B28A56524009DF894 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		23DFD30C2878D9B1002AC8B0 /* UploadRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRecordViewController.swift; sourceTree = "<group>"; };
 		23DFD30E2878D9F4002AC8B0 /* UploadRecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRecordTableViewCell.swift; sourceTree = "<group>"; };
 		23DFD30F2878D9F4002AC8B0 /* UploadRecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UploadRecordTableViewCell.xib; sourceTree = "<group>"; };
@@ -814,6 +816,7 @@
 			children = (
 				D07E7EBD289279250077287A /* RegisterInput.swift */,
 				D07E7EBF28927AC70077287A /* RegisterDataManager.swift */,
+				23DE9D6B28A56524009DF894 /* RegisterModel.swift */,
 			);
 			path = RegisterDataManager;
 			sourceTree = "<group>";
@@ -1157,6 +1160,7 @@
 				2322AE5D2897F3C400513E23 /* LoginModel.swift in Sources */,
 				23776E1B2892610E00351F3A /* RegisterProfileViewController.swift in Sources */,
 				230524BE287D5C060081933A /* FlowerPotDetailViewController.swift in Sources */,
+				23DE9D6C28A56524009DF894 /* RegisterModel.swift in Sources */,
 				234036002891992000C9AB4D /* ModifyRecordInput.swift in Sources */,
 				D047CB992892EF7C004652A3 /* RegisterProfileLibrogBottomViewController.swift in Sources */,
 				D0DB05B32876BC330041CEEF /* UploadViewController.swift in Sources */,

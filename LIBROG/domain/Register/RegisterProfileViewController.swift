@@ -67,7 +67,7 @@ class RegisterProfileViewController: UIViewController {
     }
     // MARK: '리브로그 시작하기' 버튼 클릭
     @IBAction func registerBtnDidTap(_ sender: UIButton) {
-//        RegisterDataManager().registerMultipartDataManager(self.email, self.password, self.nickName, self.selectedPhoto, self.introduction, self)
+        RegisterDataManager().registerMultipartDataManager(self.email, self.password, self.nickName, self.selectedPhoto, self.introduction, self)
     }
 }
 
