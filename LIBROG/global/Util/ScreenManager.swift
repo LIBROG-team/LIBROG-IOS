@@ -15,4 +15,20 @@ class ScreenManager {
         tabBarController.modalPresentationStyle = .fullScreen
         viewcontroller.view.window?.windowScene?.keyWindow?.rootViewController = tabBarController
     }
+    func alertErrorDialog(_ errorMessage: String, _ viewcontroller: UIViewController) {
+        let alert = UIAlertController(title: errorMessage, message: "", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "확인", style: .cancel, handler: nil)
+        alert.addAction(ok)
+        viewcontroller.present(alert, animated: true, completion: nil)
+    }
+    func alertQuitDialog(_ dialogTitle: String, _ viewcontroller: UIViewController) {
+        let alert = UIAlertController(title: dialogTitle, message: "", preferredStyle: .alert)
+        let confirm = UIAlertAction(title: "네", style: .destructive) { action in
+            // 탈퇴 코드
+        }
+        let cancel = UIAlertAction(title: "아니요", style: .cancel, handler: nil)
+        alert.addAction(cancel)
+        alert.addAction(confirm)
+        viewcontroller.present(alert, animated: true, completion: nil)
+    }
 }
