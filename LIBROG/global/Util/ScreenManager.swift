@@ -21,4 +21,14 @@ class ScreenManager {
         alert.addAction(ok)
         viewcontroller.present(alert, animated: true, completion: nil)
     }
+    func alertQuitDialog(_ dialogTitle: String, _ viewcontroller: UIViewController) {
+        let alert = UIAlertController(title: dialogTitle, message: "", preferredStyle: .alert)
+        let confirm = UIAlertAction(title: "네", style: .destructive) { action in
+            // 탈퇴 코드
+        }
+        let cancel = UIAlertAction(title: "아니요", style: .cancel, handler: nil)
+        alert.addAction(cancel)
+        alert.addAction(confirm)
+        viewcontroller.present(alert, animated: true, completion: nil)
+    }
 }
