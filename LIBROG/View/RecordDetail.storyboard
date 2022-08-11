@@ -28,7 +28,7 @@
                                                 <action selector="goBackButtonDidTap:" destination="Y6W-OH-hqX" id="qFl-PL-lHZ"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Item" image="pencil" catalog="system" id="Tru-RZ-umb">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="pencil" id="Tru-RZ-umb">
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
                                                 <action selector="goModifyButtonDidTap:" destination="Y6W-OH-hqX" id="UZR-WN-nd5"/>
@@ -38,7 +38,7 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lHH-EC-pPd">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="16" y="89" width="382" height="773"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -48,10 +48,10 @@
                             <constraint firstItem="4Cp-Tx-iix" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="3GB-6z-Ie0"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="4Cp-Tx-iix" secondAttribute="trailing" id="7XH-3m-2VJ"/>
                             <constraint firstItem="4Cp-Tx-iix" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="D3k-Nv-jcE"/>
-                            <constraint firstItem="lHH-EC-pPd" firstAttribute="top" secondItem="4Cp-Tx-iix" secondAttribute="bottom" id="SgC-xE-0hZ"/>
+                            <constraint firstItem="lHH-EC-pPd" firstAttribute="top" secondItem="4Cp-Tx-iix" secondAttribute="bottom" constant="1" id="SgC-xE-0hZ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="lHH-EC-pPd" secondAttribute="bottom" id="Yx7-g2-KF6"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="lHH-EC-pPd" secondAttribute="trailing" id="rWW-MD-j75"/>
-                            <constraint firstItem="lHH-EC-pPd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="uEa-DA-kTq"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="lHH-EC-pPd" secondAttribute="trailing" constant="16" id="rWW-MD-j75"/>
+                            <constraint firstItem="lHH-EC-pPd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="uEa-DA-kTq"/>
                         </constraints>
                     </view>
                     <connections>
@@ -138,7 +138,7 @@
     <resources>
         <image name="arrow-right" width="21" height="21"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
-        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="pencil" width="19" height="19"/>
         <namedColor name="LIBROGColor">
             <color red="0.3919999897480011" green="0.74500000476837158" blue="0.47099998593330383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
