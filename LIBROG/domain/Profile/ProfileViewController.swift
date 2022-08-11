@@ -54,6 +54,7 @@ class ProfileViewController: UIViewController {
     // 식물도감 페이지로 이동
     @objc func goFlowerpotPage() {
         guard let AddFlowerPotVC = UIStoryboard(name: "AddFlowerPot", bundle: nil).instantiateViewController(identifier: "AddFlowerPotVC") as? AddFlowerPotViewController else {return}
+        AddFlowerPotVC.isAddFlowerpot = false
         AddFlowerPotVC.modalPresentationStyle = .fullScreen
         self.present(AddFlowerPotVC, animated: true, completion: nil)
     }

@@ -30,7 +30,8 @@ class FlowerPotViewController: UIViewController {
     }
     @IBAction func goToAddFlowerpotDidTap(_ sender: UIButton) {
         guard let addFlowerpotVC = UIStoryboard(name: "AddFlowerPot", bundle: nil).instantiateViewController(identifier: "AddFlowerPotVC") as? AddFlowerPotViewController else {return}
- 
+        addFlowerpotVC.isAddFlowerpot = true
+        
         addFlowerpotVC.modalPresentationStyle = .fullScreen
         self.present(addFlowerpotVC, animated: true, completion: nil)
     }

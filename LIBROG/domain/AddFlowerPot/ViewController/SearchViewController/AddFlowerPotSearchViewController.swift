@@ -9,12 +9,16 @@ import UIKit
 
 class AddFlowerPotSearchViewController: UIViewController {
 
+    @IBOutlet weak var navigationBar: UINavigationBar!
+    var isAddFlowerpot: Bool!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        if isAddFlowerpot {self.navigationItem.title = "화분추가"}
+        else {self.navigationBar.topItem?.title = "식물도감"}
+    }
     @IBAction func goBackButtonDidTap(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
