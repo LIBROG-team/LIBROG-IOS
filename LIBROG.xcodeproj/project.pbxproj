@@ -122,6 +122,8 @@
 		23DFD3112878D9F4002AC8B0 /* UploadRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23DFD30F2878D9F4002AC8B0 /* UploadRecordTableViewCell.xib */; };
 		23F6107A288812C700575D81 /* ReadingRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F61079288812C700575D81 /* ReadingRecordModel.swift */; };
 		23F6107C2888134C00575D81 /* ReadingRecordDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F6107B2888134C00575D81 /* ReadingRecordDataManager.swift */; };
+		23F7139428A6E3560058A57A /* RegisterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F7139228A6E3560058A57A /* RegisterTableViewCell.swift */; };
+		23F7139528A6E3560058A57A /* RegisterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23F7139328A6E3560058A57A /* RegisterTableViewCell.xib */; };
 		23F8483E2899A99400ED644B /* NoticeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F8483D2899A99400ED644B /* NoticeModel.swift */; };
 		23F848422899ADC100ED644B /* NoticeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F848402899ADC100ED644B /* NoticeCollectionViewCell.swift */; };
 		23F848432899ADC100ED644B /* NoticeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23F848412899ADC100ED644B /* NoticeCollectionViewCell.xib */; };
@@ -284,6 +286,8 @@
 		23DFD30F2878D9F4002AC8B0 /* UploadRecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UploadRecordTableViewCell.xib; sourceTree = "<group>"; };
 		23F61079288812C700575D81 /* ReadingRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingRecordModel.swift; sourceTree = "<group>"; };
 		23F6107B2888134C00575D81 /* ReadingRecordDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingRecordDataManager.swift; sourceTree = "<group>"; };
+		23F7139228A6E3560058A57A /* RegisterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTableViewCell.swift; sourceTree = "<group>"; };
+		23F7139328A6E3560058A57A /* RegisterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterTableViewCell.xib; sourceTree = "<group>"; };
 		23F8483D2899A99400ED644B /* NoticeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeModel.swift; sourceTree = "<group>"; };
 		23F848402899ADC100ED644B /* NoticeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeCollectionViewCell.swift; sourceTree = "<group>"; };
 		23F848412899ADC100ED644B /* NoticeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -416,6 +420,8 @@
 			children = (
 				2315AADA28A6BD2D00753418 /* RegisterTermTableViewCell.swift */,
 				2315AADB28A6BD2D00753418 /* RegisterTermTableViewCell.xib */,
+				23F7139228A6E3560058A57A /* RegisterTableViewCell.swift */,
+				23F7139328A6E3560058A57A /* RegisterTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1076,6 +1082,7 @@
 				23ADA90F2884693D0066D15A /* SelectBook.storyboard in Resources */,
 				239DE3F528A4CD2300386151 /* FindPassword.storyboard in Resources */,
 				2379DEE82897A29800F946DD /* ProfileLoginTypeTableViewCell.xib in Resources */,
+				23F7139528A6E3560058A57A /* RegisterTableViewCell.xib in Resources */,
 				23A5B872287D9D5D005413A3 /* ResultTableViewCell.xib in Resources */,
 				23ADA91928846AB10066D15A /* FlowerPotDescription.storyboard in Resources */,
 				23458AD62896E0C30003A669 /* ProfileIntroTableViewCell.xib in Resources */,
@@ -1241,6 +1248,7 @@
 				2312074328A155E900A34A05 /* UILabelExtension.swift in Sources */,
 				D07E7EC028927AC70077287A /* RegisterDataManager.swift in Sources */,
 				23ADA92B28847FC80066D15A /* FlowerpotModel.swift in Sources */,
+				23F7139428A6E3560058A57A /* RegisterTableViewCell.swift in Sources */,
 				D0C2B080286DEBD600242E71 /* FlowerPotViewController.swift in Sources */,
 				23A41EA9289436B10008437B /* RecentBookModel.swift in Sources */,
 				D07E7EB3289273140077287A /* RegisterProfileBottomViewController.swift in Sources */,
