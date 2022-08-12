@@ -15,7 +15,7 @@ class RegisterProfileViewController: UIViewController {
     @IBOutlet weak var cameraButton: UIButton!
     @IBOutlet weak var profileImageView: UIImageView!
     
-    let selectArray = ["앨범에서 사진/동영상 선택", "리브로그 프로필로 설정", "기본 이미지로 변경"]
+    let selectArray = ["앨범에서 사진/동영상 선택", "기본 이미지로 변경"]
     // 앨범 선택 image picker
     let imagePickerController = UIImagePickerController()
     var selectedPhoto: UIImage!
@@ -54,7 +54,7 @@ class RegisterProfileViewController: UIViewController {
         // 아래로 드래그해도 안닫히게 하기
         bottomSheet.dismissOnDraggingDownSheet = false
         // 높이
-        bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = 177
+        bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = 127
         // 뒤에 배경 컬러
         bottomSheet.scrimColor = UIColor(red: 0.25, green: 0.25, blue: 0.25, alpha: 0.54)
     }
@@ -86,7 +86,7 @@ extension RegisterProfileViewController: MDCBottomSheetControllerDelegate {
 // MARK: - 이미지 종류 메뉴 Table view data source
 extension RegisterProfileViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 2
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         tableView.contentInsetAdjustmentBehavior = .never
@@ -94,7 +94,6 @@ extension RegisterProfileViewController: UITableViewDelegate, UITableViewDataSou
         cell.textLabel?.font = UIFont(name: "Apple SD Gothic Neo", size: 14)
         if indexPath.row == 0 { cell.textLabel?.text = selectArray[0] }
         else if indexPath.row == 1 { cell.textLabel?.text = selectArray[1] }
-        else if indexPath.row == 2 { cell.textLabel?.text = selectArray[2] }
         return cell
     }
     //셀 세로 길이 조절
@@ -109,8 +108,9 @@ extension RegisterProfileViewController: UITableViewDelegate, UITableViewDataSou
             self.imagePickerController.sourceType = .photoLibrary
             self.present(imagePickerController, animated: true, completion: nil)
         }
-        else if indexPath.row == 2 {
+        else if indexPath.row == 1 {
             profileImageView.image = UIImage(named: "logo_profile")
+            self.selectedPhoto = UIImage(named: "logo_profile")
             self.dismiss(animated: true, completion: nil)
         }
         
