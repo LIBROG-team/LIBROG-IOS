@@ -9,57 +9,53 @@ import UIKit
 import DLRadioButton
 
 class RegisterTermViewController: UIViewController {
-    @IBOutlet weak var goNextButton: UIButton!
-    @IBOutlet weak var warningLabel: UILabel!
-    @IBOutlet weak var privacyRadioButton: DLRadioButton!
-    @IBOutlet weak var privacyTermTextView: UITextView!
-    @IBOutlet weak var serviceRadioButton: DLRadioButton!
-    @IBOutlet weak var serviceTextView: UITextView!
+    @IBOutlet weak var registerTermTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        warningLabel.isHidden = true
+        registerTermTableView.delegate = self
+        registerTermTableView.dataSource = self
         
-        goNextButton.layer.borderColor = UIColor.lightGray.cgColor
-        goNextButton.layer.borderWidth = 1
-        goNextButton.layer.cornerRadius = 20
-        goNextButton.tintColor = UIColor.lightGray
+        registerTermTableView.separatorStyle = .none
         
-        privacyTermTextView.cornerRadius = 5
-        serviceTextView.cornerRadius = 5
+        let termNib = UINib(nibName: "RegisterTermTableViewCell", bundle: nil)
+        registerTermTableView.register(termNib, forCellReuseIdentifier: "RegisterTermTableViewCell")
         
-        privacyRadioButton.isMultipleSelectionEnabled = true
-        serviceRadioButton.isMultipleSelectionEnabled = true
-        privacyRadioButton.tintColor = UIColor.white
-        serviceRadioButton.tintColor = UIColor.white
+        registerTermTableView.estimatedRowHeight = 500
+        registerTermTableView.rowHeight = UITableView.automaticDimension
     }
     //MARK: Actions
-    @IBAction func privacyRadioButtonDidTap(_ sender: DLRadioButton) {isRadioButtonsSelected()}
-    @IBAction func serviceRadioButtonDidTap(_ sender: DLRadioButton) {isRadioButtonsSelected()}
-    
-    // [다음] 버튼
-    @IBAction func goNextButtonDidTap(_ sender: UIButton) {
-        if privacyRadioButton.isSelected && serviceRadioButton.isSelected {
-            guard let registerVC = UIStoryboard(name: "Register", bundle: nil).instantiateViewController(identifier: "RegisterVC") as? RegisterViewController else {return}
-            registerVC.modalPresentationStyle = .fullScreen
-            self.present(registerVC, animated: true, completion: nil)
-        } else {
-            warningLabel.isHidden = false
-        }
+    @objc func goNextButtonDidTap(_ sender: UIButton) {
+        registerTermTableView.reloadData()
     }
     @IBAction func goBackButtonDidTap(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
+}
+// MARK: - 회원가입 약관 동의 페이지 tableView delegate
+extension RegisterTermViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
     
-    func isRadioButtonsSelected() {
-        if privacyRadioButton.isSelected && serviceRadioButton.isSelected {
-            goNextButton.layer.borderColor = UIColor(named: "LIBROGColor")?.cgColor
-            goNextButton.tintColor = UIColor(named: "LIBROGColor")
-            warningLabel.isHidden = true
-        } else {
-            goNextButton.layer.borderColor = UIColor.lightGray.cgColor
-            goNextButton.tintColor = UIColor.lightGray
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "RegisterTermTableViewCell", for: indexPath) as? RegisterTermTableViewCell else {
+            return UITableViewCell()
         }
+        cell.selectionStyle = .none
+        // MARK: add target
+        cell.goNextButton.addTarget(self, action: #selector(goNextButtonDidTap(_:)), for: .touchUpInside)
+        if cell.isEnable {
+            goNextPage()
+        }
+        return cell
+    }
+}
+extension RegisterTermViewController {
+    func goNextPage() {
+        guard let registerVC = UIStoryboard(name: "Register", bundle: nil).instantiateViewController(identifier: "RegisterVC") as? RegisterViewController else {return}
+        registerVC.modalPresentationStyle = .fullScreen
+        self.present(registerVC, animated: true, completion: nil)
     }
 }
