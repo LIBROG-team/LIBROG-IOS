@@ -152,6 +152,8 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == 0 {
             guard let ModifyProfileVC = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(identifier: "ModifyProfileVC") as? ModifyProfileViewController else {return}
             ModifyProfileVC.userNameText = self.introData.name
+            ModifyProfileVC.profileImgUrl = self.introData.profileImgUrl
+            
             ModifyProfileVC.modalPresentationStyle = .fullScreen
             self.present(ModifyProfileVC, animated: true, completion: nil)
         }
