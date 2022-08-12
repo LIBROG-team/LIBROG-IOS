@@ -150,12 +150,20 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // 프로필 수정 페이지로 이동
         if indexPath.row == 0 {
-            guard let ModifyProfileVC = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(identifier: "ModifyProfileVC") as? ModifyProfileViewController else {return}
-            ModifyProfileVC.userNameText = self.introData.name
-            ModifyProfileVC.profileImgUrl = self.introData.profileImgUrl
-            
-            ModifyProfileVC.modalPresentationStyle = .fullScreen
-            self.present(ModifyProfileVC, animated: true, completion: nil)
+            let loginType = self.introData.type
+            // 앱 로그인일 때 (loginType == nil)
+            if loginType == nil {
+                guard let ModifyProfileVC = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(identifier: "ModifyProfileVC") as? ModifyProfileViewController else {return}
+                ModifyProfileVC.userNameText = self.introData.name
+                ModifyProfileVC.profileImgUrl = self.introData.profileImgUrl
+                
+                ModifyProfileVC.modalPresentationStyle = .fullScreen
+                self.present(ModifyProfileVC, animated: true, completion: nil)
+            }
+            // 소셜 로그인일 때 수정 페이지 진입 불가
+            else {
+                ScreenManager().alertErrorDialog("\(loginType!)로 로그인한 계정은\n프로필 수정을 할 수 없습니다.", self)
+            }
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }
