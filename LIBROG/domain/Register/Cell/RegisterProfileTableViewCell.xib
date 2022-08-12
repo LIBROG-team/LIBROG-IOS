@@ -141,7 +141,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="cameraButton" destination="93C-4c-vEJ" id="Co4-aa-SEU"/>
-                <outlet property="introTextField" destination="Jj0-zj-jWE" id="HkY-fU-n9n"/>
+                <outlet property="introTextField" destination="Jj0-zj-jWE" id="88C-Fh-aae"/>
                 <outlet property="profileImageView" destination="g8l-iQ-Akb" id="aW3-XC-CnR"/>
                 <outlet property="registerButton" destination="fjy-hh-3gp" id="V4c-Jm-QpG"/>
                 <outlet property="userNameLabel" destination="5TC-Zo-IFf" id="HWp-17-tws"/>

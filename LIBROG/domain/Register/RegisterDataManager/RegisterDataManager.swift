@@ -44,7 +44,11 @@ class RegisterDataManager {
                         let decoder = JSONDecoder()
                         let result = try decoder.decode(APIModel<RegisterModel>.self, from: data)
                         print(result)
-                        viewcontroller.RegisterSuccessAPI(result.result!)
+                        if result.isSuccess! {
+                            viewcontroller.RegisterSuccessAPI(result.result!)
+                        } else {
+                            print("error", result.message)
+                        }
                     } catch {
                         print("error")
                     }

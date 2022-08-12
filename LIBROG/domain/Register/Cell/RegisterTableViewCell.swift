@@ -27,7 +27,12 @@ class RegisterTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        ScreenManager().setLibrogButton(nextButton)
+        // 다음 버튼 Custom
+        nextButton.layer.borderColor = UIColor(named: "LIBROGColor")?.cgColor
+        nextButton.layer.borderWidth = 1
+        nextButton.layer.cornerRadius = 20
+        nextButton.tintColor = UIColor(named: "LIBROGColor")
+        
         emailWarningLabel.isHidden = true
         pwWarningLabel.isHidden = true
         nicknameWarningLabel.isHidden = true

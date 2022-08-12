@@ -13,14 +13,17 @@ class RegisterProfileTableViewCell: UITableViewCell {
     @IBOutlet weak var cameraButton: UIButton!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var introTextField: UITextField!
-    
     var nickName: String!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         
         // 리브로그 시작하기 버튼 Custom
-        ScreenManager().setLibrogButton(registerButton)
+        registerButton.layer.borderColor = UIColor(named: "LIBROGColor")?.cgColor
+        registerButton.layer.borderWidth = 1
+        registerButton.layer.cornerRadius = 20
+        registerButton.tintColor = UIColor(named: "LIBROGColor")
+        
         userNameLabel.text = nickName
     }
 
