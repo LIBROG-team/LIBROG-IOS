@@ -20,11 +20,7 @@ class RegisterProfileTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         // 리브로그 시작하기 버튼 Custom
-        registerButton.layer.borderColor = UIColor(named: "LIBROGColor")?.cgColor
-        registerButton.layer.borderWidth = 1
-        registerButton.layer.cornerRadius = 20
-        registerButton.tintColor = UIColor(named: "LIBROGColor")
-        
+        ScreenManager().setLibrogButton(registerButton)
         userNameLabel.text = nickName
     }
 

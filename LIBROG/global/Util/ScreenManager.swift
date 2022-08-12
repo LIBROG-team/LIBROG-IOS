@@ -41,4 +41,10 @@ class ScreenManager {
         alert.addAction(confirm)
         viewcontroller.present(alert, animated: true, completion: nil)
     }
+    func setLibrogButton(_ button: UIButton) {
+        button.layer.borderColor = UIColor.lightGray.cgColor
+        button.layer.borderWidth = 1
+        button.layer.cornerRadius = 20
+        button.tintColor = UIColor.lightGray
+    }
 }

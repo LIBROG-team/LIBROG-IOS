@@ -20,11 +20,7 @@ class RegisterTermTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         warningLabel.isHidden = true
-        
-        goNextButton.layer.borderColor = UIColor.lightGray.cgColor
-        goNextButton.layer.borderWidth = 1
-        goNextButton.layer.cornerRadius = 20
-        goNextButton.tintColor = UIColor.lightGray
+        ScreenManager().setLibrogButton(goNextButton)
     
         privacyRadioButton.isMultipleSelectionEnabled = true
         serviceRadioButton.isMultipleSelectionEnabled = true
