@@ -24,14 +24,12 @@ class ProfileIntroTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     func setUpIntro(_ result: IntroModel) {
-        guard let name = result.name else {return}
-        guard let intro = result.introduction else {return}
-        guard let profileURL = result.profileImgUrl else {return}
-
-        userNameLabel.text = name
-        introductionLabel.text = intro
-        if let url = URL(string: profileURL) {
-            profileImageView.kf.setImage(with: url, placeholder: UIImage(named: "logo_green"))
+        if let name = result.name {userNameLabel.text = name}
+        if let intro = result.introduction {introductionLabel.text = intro}
+        if let profileURL = result.profileImgUrl {
+            if let url = URL(string: profileURL) {
+                profileImageView.kf.setImage(with: url, placeholder: UIImage(named: "logo_green"))
+            }
         }
     }
 }
