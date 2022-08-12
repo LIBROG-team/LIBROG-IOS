@@ -126,19 +126,14 @@ extension RegisterProfileViewController : UIImagePickerControllerDelegate, UINav
             profileImageView.image = self.selectedPhoto
 //            print(info)
         }
-        if let imageUrl = info[UIImagePickerController.InfoKey.imageURL] as? URL{
-            let urlStr = imageUrl.absoluteString
-        }
         self.dismiss(animated: true, completion: nil)
     }
 }
 // MARK: 회원가입 성공 api
 extension RegisterProfileViewController {
-    func RegisterSuccessAPI() {
-//        if result.isSuccess! {
-//            guard let LoginVC = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(identifier: "LoginVC") as? LoginViewController else {return}
-//            LoginVC.modalPresentationStyle = .fullScreen
-//            self.present(LoginVC, animated: true, completion: nil)
-//        }
+    func RegisterSuccessAPI(_ result: RegisterModel) {
+        guard let userId = result.createdUserIdx else {return}
+        UserDefaults.standard.set(userId, forKey: "userId")
+        ScreenManager().goMain(self)
     }
 }
