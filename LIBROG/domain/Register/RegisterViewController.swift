@@ -53,7 +53,7 @@ class RegisterViewController: UIViewController {
         
         guard let registerProfileVC = UIStoryboard(name: "Register", bundle: nil).instantiateViewController(identifier: "RegisterProfileVC") as? RegisterProfileViewController else {return}
         
-        registerProfileVC.userNameText = nickname
+        registerProfileVC.nickName = nickname
         registerProfileVC.email = email
         registerProfileVC.password = password
         registerProfileVC.nickName = nickname
@@ -83,8 +83,5 @@ extension RegisterViewController: UITableViewDelegate, UITableViewDataSource {
         cell.nextButton.addTarget(self, action: #selector(goNextButtonDidTap(_:)), for: .touchUpInside)
         
         return cell
-    }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 844
     }
 }

@@ -8,7 +8,9 @@
 import UIKit
 
 class RegisterProfileBottomViewController: UIViewController {
-    @IBOutlet weak var menuTableView: UITableView!
+    
+    @IBOutlet weak var goAlbumButton: UIButton!
+    @IBOutlet weak var setDefaultImgButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,10 +20,5 @@ class RegisterProfileBottomViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-    }
-    
-    func setTableViewDataSourceDelegate(dataSourceDelegate: UITableViewDataSource & UITableViewDelegate) {
-        menuTableView.delegate = dataSourceDelegate
-        menuTableView.dataSource = dataSourceDelegate
     }
 }

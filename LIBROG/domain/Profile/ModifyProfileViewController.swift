@@ -52,7 +52,6 @@ class ModifyProfileViewController: UIViewController {
         guard let ProfileBottomVC = UIStoryboard(name: "Register", bundle: nil).instantiateViewController(identifier: "RegisterProfileBottomVC") as? RegisterProfileBottomViewController else {return}
         let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: ProfileBottomVC)
         self.present(bottomSheet, animated: true, completion: nil)
-        ProfileBottomVC.setTableViewDataSourceDelegate(dataSourceDelegate: self)
 
         // 아래로 드래그해도 안닫히게 하기
         bottomSheet.dismissOnDraggingDownSheet = false
@@ -90,43 +89,6 @@ extension ModifyProfileViewController: MDCBottomSheetControllerDelegate {
         print(yOffset)
     }
 }
-
-// MARK: - 이미지 종류 메뉴 Table view data source
-
-extension ModifyProfileViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.contentInsetAdjustmentBehavior = .never
-        let cell = UITableViewCell()
-        cell.textLabel?.font = UIFont(name: "Apple SD Gothic Neo", size: 14)
-        if indexPath.row == 0 { cell.textLabel?.text = selectArray[0] }
-        else if indexPath.row == 1 { cell.textLabel?.text = selectArray[1] }
-        return cell
-    }
-    //셀 세로 길이 조절
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
-    }
-    //클릭 이벤트 처리
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // 앨범에서 선택
-        if indexPath.row == 0 {
-            self.dismiss(animated: true, completion: nil)
-            self.imagePickerController.sourceType = .photoLibrary
-            self.present(imagePickerController, animated: true, completion: nil)
-        }
-        else if indexPath.row == 1 {
-            profileImageView.image = UIImage(named: "logo_profile")
-            self.selectedPhoto = UIImage(named: "logo_profile")
-            self.dismiss(animated: true, completion: nil)
-        }
-
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-}
- 
 // MARK: - 프로필 이미지 선택 -> 앨범 선택 후
 extension ModifyProfileViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
