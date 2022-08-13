@@ -154,7 +154,6 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             // 앱 로그인일 때 (loginType == nil)
             if loginType == nil {
                 guard let ModifyProfileVC = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(identifier: "ModifyProfileVC") as? ModifyProfileViewController else {return}
-                ModifyProfileVC.userNameText = self.introData.name
                 ModifyProfileVC.profileImgUrl = self.introData.profileImgUrl
                 
                 ModifyProfileVC.modalPresentationStyle = .fullScreen
