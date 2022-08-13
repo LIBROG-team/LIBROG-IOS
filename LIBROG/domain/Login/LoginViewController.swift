@@ -122,7 +122,7 @@ extension LoginViewController {
         // 앱 로그인 실패 시 오류 창
         else  {
             guard let errorMessage = result.message else {return}
-            ScreenManager().alertErrorDialog(errorMessage, self)
+            DialogManager().alertErrorDialog(errorMessage, self)
         }
     }
 }

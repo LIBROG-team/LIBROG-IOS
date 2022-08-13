@@ -67,10 +67,10 @@ extension FindPasswordViewController {
     func findPasswordSuccessAPI(_ result: APIModel<ResultModel>) {
         guard let isSuccess = result.isSuccess else {return}
         if isSuccess {
-            ScreenManager().emailSendSuccessDialog("이메일 전송이 되었습니다.", "로그인 화면으로 이동합니다.", self)
+            DialogManager().emailSendSuccessDialog("이메일 전송이 되었습니다.", "로그인 화면으로 이동합니다.", self)
         } else {
             guard let errorMessage = result.message else {return}
-            ScreenManager().alertErrorDialog(errorMessage, self)
+            DialogManager().alertErrorDialog(errorMessage, self)
         }
     }
 }

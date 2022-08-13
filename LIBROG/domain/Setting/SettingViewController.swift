@@ -41,8 +41,14 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // MARK: 더보기 버튼 클릭
         if indexPath.row == 0 {
-            ScreenManager().alertQuitDialog("탈퇴하시겠습니까?", self)
+            DialogManager().alertQuitDialog("탈퇴하시겠습니까?", self)
         }
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+//MARK: - 유저 탈퇴 api
+extension SettingViewController {
+    func userDeleteSuccessAPI(_ result: APIModel<APIModel<DeleteUserModel>>) {
+        DialogManager().emailSendSuccessDialog("탈퇴되었습니다.", "로그인창으로 이동합니다.", self)
     }
 }

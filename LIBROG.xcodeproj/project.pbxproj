@@ -60,6 +60,9 @@
 		2379DEE82897A29800F946DD /* ProfileLoginTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2379DEE62897A29800F946DD /* ProfileLoginTypeTableViewCell.xib */; };
 		237CF45628A7FC9B0043CFC6 /* ModifyProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237CF45428A7FC9B0043CFC6 /* ModifyProfileTableViewCell.swift */; };
 		237CF45728A7FC9B0043CFC6 /* ModifyProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 237CF45528A7FC9B0043CFC6 /* ModifyProfileTableViewCell.xib */; };
+		237CF45928A80A140043CFC6 /* DialogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237CF45828A80A140043CFC6 /* DialogManager.swift */; };
+		237CF45E28A80AF70043CFC6 /* SettingDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237CF45D28A80AF70043CFC6 /* SettingDataManager.swift */; };
+		237CF46028A80BD60043CFC6 /* DeleteUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237CF45F28A80BD60043CFC6 /* DeleteUserModel.swift */; };
 		237ECCE0288556EE000D9A71 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237ECCDF288556EE000D9A71 /* ProfileViewController.swift */; };
 		237ECCE328856454000D9A71 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237ECCE228856454000D9A71 /* DateFormatter.swift */; };
 		237ECCEA28857544000D9A71 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 237ECCE928857544000D9A71 /* Setting.storyboard */; };
@@ -230,6 +233,9 @@
 		2379DEE62897A29800F946DD /* ProfileLoginTypeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileLoginTypeTableViewCell.xib; sourceTree = "<group>"; };
 		237CF45428A7FC9B0043CFC6 /* ModifyProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyProfileTableViewCell.swift; sourceTree = "<group>"; };
 		237CF45528A7FC9B0043CFC6 /* ModifyProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModifyProfileTableViewCell.xib; sourceTree = "<group>"; };
+		237CF45828A80A140043CFC6 /* DialogManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogManager.swift; sourceTree = "<group>"; };
+		237CF45D28A80AF70043CFC6 /* SettingDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingDataManager.swift; sourceTree = "<group>"; };
+		237CF45F28A80BD60043CFC6 /* DeleteUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteUserModel.swift; sourceTree = "<group>"; };
 		237ECCDF288556EE000D9A71 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		237ECCE228856454000D9A71 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		237ECCE928857544000D9A71 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
@@ -553,6 +559,15 @@
 			path = ModifyProfileCell;
 			sourceTree = "<group>";
 		};
+		237CF45C28A80AEA0043CFC6 /* SettingDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				237CF45D28A80AF70043CFC6 /* SettingDataManager.swift */,
+				237CF45F28A80BD60043CFC6 /* DeleteUserModel.swift */,
+			);
+			path = SettingDataManager;
+			sourceTree = "<group>";
+		};
 		237ECCDE288556E1000D9A71 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -573,6 +588,7 @@
 				236CF5A5289D732F00E7A1F2 /* APIModel.swift */,
 				234E31B328A01B1D00DCD812 /* ScreenManager.swift */,
 				239DE40628A4E86A00386151 /* StringExtension.swift */,
+				237CF45828A80A140043CFC6 /* DialogManager.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -608,6 +624,7 @@
 		239DE3FE28A4D9C200386151 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				237CF45C28A80AEA0043CFC6 /* SettingDataManager */,
 				239DE3FF28A4D9CE00386151 /* SettingViewController.swift */,
 			);
 			path = Setting;
@@ -1244,6 +1261,7 @@
 				2355234B2881C48A00EDE3E1 /* FlowerPotDescriptionTableViewCell.swift in Sources */,
 				23C8B4B0286EF76F00432141 /* MainFlowerTableViewCell.swift in Sources */,
 				23ADA92628847A8D0066D15A /* AddFlowerPotSearchViewController.swift in Sources */,
+				237CF45928A80A140043CFC6 /* DialogManager.swift in Sources */,
 				231B8D4228891787006F44A3 /* AddFlowerpotModel.swift in Sources */,
 				234AB652288A6A36009FBB59 /* NotAchievedFlowerPotSearchViewController.swift in Sources */,
 				231B8D442889189D006F44A3 /* AddFlowerpotDataManager.swift in Sources */,
@@ -1301,6 +1319,7 @@
 				23A41EA9289436B10008437B /* RecentBookModel.swift in Sources */,
 				D07E7EB3289273140077287A /* RegisterProfileBottomViewController.swift in Sources */,
 				2305E773289159A000A9B6D5 /* KakaoLoginManager.swift in Sources */,
+				237CF46028A80BD60043CFC6 /* DeleteUserModel.swift in Sources */,
 				D07E7EBE289279250077287A /* RegisterInput.swift in Sources */,
 				239DE40028A4D9CE00386151 /* SettingViewController.swift in Sources */,
 				239DE40728A4E86A00386151 /* StringExtension.swift in Sources */,
@@ -1312,6 +1331,7 @@
 				23CC78DB288FCEDE0064DA7E /* UploadRecordDataManager.swift in Sources */,
 				237ECCE0288556EE000D9A71 /* ProfileViewController.swift in Sources */,
 				231B8D462889221A006F44A3 /* SwipeRecognizer.swift in Sources */,
+				237CF45E28A80AF70043CFC6 /* SettingDataManager.swift in Sources */,
 				238DE01F28819C00007901E6 /* MainBottomViewController.swift in Sources */,
 				23CC78D7288FCDAE0064DA7E /* UploadRecordInput.swift in Sources */,
 				D0CF2B602885C99C00F78104 /* ReadingRecordViewController.swift in Sources */,
