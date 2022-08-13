@@ -45,6 +45,8 @@
 		23458AE62896F35A0003A669 /* IntroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23458AE52896F35A0003A669 /* IntroModel.swift */; };
 		234AB650288A633D009FBB59 /* AchievedFlowerPotSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AB64F288A633D009FBB59 /* AchievedFlowerPotSearchViewController.swift */; };
 		234AB652288A6A36009FBB59 /* NotAchievedFlowerPotSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AB651288A6A36009FBB59 /* NotAchievedFlowerPotSearchViewController.swift */; };
+		234B37F828A79C5F00D7FFD3 /* FindPasswordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234B37F628A79C5F00D7FFD3 /* FindPasswordTableViewCell.swift */; };
+		234B37F928A79C5F00D7FFD3 /* FindPasswordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 234B37F728A79C5F00D7FFD3 /* FindPasswordTableViewCell.xib */; };
 		234E31B428A01B1E00DCD812 /* ScreenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234E31B328A01B1D00DCD812 /* ScreenManager.swift */; };
 		235523472881C47200EDE3E1 /* FlowerPotDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235523462881C47200EDE3E1 /* FlowerPotDescriptionViewController.swift */; };
 		2355234B2881C48A00EDE3E1 /* FlowerPotDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235523492881C48A00EDE3E1 /* FlowerPotDescriptionTableViewCell.swift */; };
@@ -211,6 +213,8 @@
 		23458AE52896F35A0003A669 /* IntroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroModel.swift; sourceTree = "<group>"; };
 		234AB64F288A633D009FBB59 /* AchievedFlowerPotSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievedFlowerPotSearchViewController.swift; sourceTree = "<group>"; };
 		234AB651288A6A36009FBB59 /* NotAchievedFlowerPotSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotAchievedFlowerPotSearchViewController.swift; sourceTree = "<group>"; };
+		234B37F628A79C5F00D7FFD3 /* FindPasswordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordTableViewCell.swift; sourceTree = "<group>"; };
+		234B37F728A79C5F00D7FFD3 /* FindPasswordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FindPasswordTableViewCell.xib; sourceTree = "<group>"; };
 		234E31B328A01B1D00DCD812 /* ScreenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenManager.swift; sourceTree = "<group>"; };
 		235523462881C47200EDE3E1 /* FlowerPotDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerPotDescriptionViewController.swift; sourceTree = "<group>"; };
 		235523492881C48A00EDE3E1 /* FlowerPotDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerPotDescriptionTableViewCell.swift; sourceTree = "<group>"; };
@@ -468,6 +472,15 @@
 			path = ModifyRecordDataManager;
 			sourceTree = "<group>";
 		};
+		234B37F528A79C4900D7FFD3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				234B37F628A79C5F00D7FFD3 /* FindPasswordTableViewCell.swift */,
+				234B37F728A79C5F00D7FFD3 /* FindPasswordTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		235523422881B88800EDE3E1 /* AddFlowerpotDataManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -554,6 +567,7 @@
 		239DE3F628A4CD2F00386151 /* FindPassword */ = {
 			isa = PBXGroup;
 			children = (
+				234B37F528A79C4900D7FFD3 /* Cell */,
 				239DE3F928A4CEA900386151 /* FindPasswordDataManager */,
 				239DE3F728A4CD4800386151 /* FindPasswordViewController.swift */,
 			);
@@ -1105,6 +1119,7 @@
 				D0C2B056286DC9BE00242E71 /* Main.storyboard in Resources */,
 				23ADA91D28846B240066D15A /* AcheivedFlowerPot.storyboard in Resources */,
 				239DE40528A4E7B100386151 /* LoginTableViewCell.xib in Resources */,
+				234B37F928A79C5F00D7FFD3 /* FindPasswordTableViewCell.xib in Resources */,
 				23ADA9112884698F0066D15A /* UploadRecord.storyboard in Resources */,
 				230524C2287D5C370081933A /* FlowerPotDetailCollectionViewCell.xib in Resources */,
 			);
@@ -1198,6 +1213,7 @@
 				23C8B4BB286EFF3900432141 /* CustomTabBarController.swift in Sources */,
 				2305E77628915FC000A9B6D5 /* LoginDataManager.swift in Sources */,
 				231E3E5A289F82130011A1D2 /* RecommendBookModel.swift in Sources */,
+				234B37F828A79C5F00D7FFD3 /* FindPasswordTableViewCell.swift in Sources */,
 				23C8B4A6286EF2F300432141 /* PaddingLabel.swift in Sources */,
 				23AB70AD289009D500503366 /* ModifyRecordViewController.swift in Sources */,
 				239EF02F2892F2C8005BC364 /* SearchDataManager.swift in Sources */,

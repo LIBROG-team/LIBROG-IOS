@@ -8,30 +8,58 @@
 import UIKit
 
 class FindPasswordViewController: UIViewController {
-
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var sendEmailButton: UIButton!
+    @IBOutlet weak var findPasswordTableView: UITableView!
+    
+    var email: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // 이메일 전송 버튼 Custom
-        sendEmailButton.layer.borderColor = UIColor(named: "LIBROGColor")?.cgColor
-        sendEmailButton.layer.borderWidth = 1
-        sendEmailButton.layer.cornerRadius = 20
-        sendEmailButton.tintColor = UIColor(named: "LIBROGColor")
+        findPasswordTableView.delegate = self
+        findPasswordTableView.dataSource = self
+        
+        findPasswordTableView.separatorStyle = .none
+        
+        let findPwNib = UINib(nibName: "FindPasswordTableViewCell", bundle: nil)
+        findPasswordTableView.register(findPwNib, forCellReuseIdentifier: "FindPasswordTableViewCell")
+        
+        findPasswordTableView.estimatedRowHeight = 800
+        findPasswordTableView.rowHeight = UITableView.automaticDimension
     }
     //MARK: 화면 터치 시 키보드 내리기
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    @IBAction func sendEmailButtonDidTap(_ sender: UIButton) {
-        guard let email = emailTextField.text else {return}
+    //MARK: Actions
+    @objc func emailTextFieldEditingChanged(_ sender: UITextField) {
+        let text = sender.text ?? ""
+        self.email = text
+    }
+    @objc func sendEmailButtonDidTap(_ sender: UIButton) {
+        guard let email = self.email else {return}
         let findPasswordInput = FindPasswordInput(email: email)
         FindPasswordDataManager().findPasswordDataManager(findPasswordInput, self)
     }
     @IBAction func goBackButtonDidTap(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
+    }
+}
+// MARK: - 비밀번호 찾기 페이지 tableView delegate
+extension FindPasswordViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FindPasswordTableViewCell", for: indexPath) as? FindPasswordTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.selectionStyle = .none
+        // MARK: add target
+        cell.emailTextField.addTarget(self, action: #selector(emailTextFieldEditingChanged(_:)), for: .editingChanged)
+        cell.sendEmailButton.addTarget(self, action: #selector(sendEmailButtonDidTap(_:)), for: .touchUpInside)
+        
+        return cell
     }
 }
 // MARK: - 비밀번호 찾기 api success
@@ -40,9 +68,6 @@ extension FindPasswordViewController {
         guard let isSuccess = result.isSuccess else {return}
         if isSuccess {
             ScreenManager().emailSendSuccessDialog("이메일 전송이 되었습니다.", "로그인 화면으로 이동합니다.", self)
-//            guard let loginVC = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(identifier: "LoginVC") as? LoginViewController else {return}
-//            loginVC.modalPresentationStyle = .fullScreen
-//            self.present(loginVC, animated: true, completion: nil)
         } else {
             guard let errorMessage = result.message else {return}
             ScreenManager().alertErrorDialog(errorMessage, self)
