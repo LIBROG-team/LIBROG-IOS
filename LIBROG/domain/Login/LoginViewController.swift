@@ -11,14 +11,8 @@ import KakaoSDKAuth
 import KakaoSDKCommon
 
 class LoginViewController: UIViewController {
-
-    @IBOutlet weak var loginTitleLabel: UILabel!
-    @IBOutlet weak var loginButton: UIButton!
     
-    @IBOutlet weak var emailUnderlineView: UIView!
-    @IBOutlet weak var passwordUnderlineView: UIView!
-    @IBOutlet weak var emailWarningLabel: UILabel!
-    @IBOutlet weak var pwWarningLabel: UILabel!
+    @IBOutlet weak var loginTableView: UITableView!
     
     var email: String!
     var password: String!
@@ -27,21 +21,21 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // '더 편한 전자책 리브로그에 오신 것을 환영합니다'
-        guard let text = self.loginTitleLabel.text else { return }
-        let attributeString = NSMutableAttributedString(string: text)
-        attributeString.addAttribute(.foregroundColor, value: UIColor(named: "LIBROGColor")!, range: (text as NSString).range(of: "리브로그"))
-        self.loginTitleLabel.attributedText = attributeString
-        // 로그인 버튼 Custom
-        loginButton.layer.borderColor = UIColor.lightGray.cgColor
-        loginButton.layer.borderWidth = 1
-        loginButton.layer.cornerRadius = 20
-        loginButton.tintColor = UIColor(named: "LIBROGColor")
         
-        emailWarningLabel.isHidden = true
-        pwWarningLabel.isHidden = true
-        isValidTf()
+//        emailWarningLabel.isHidden = true
+//        pwWarningLabel.isHidden = true
+//        isValidTf()
+        
+        loginTableView.delegate = self
+        loginTableView.dataSource = self
+        
+        loginTableView.separatorStyle = .none
+        
+        let loginNib = UINib(nibName: "LoginTableViewCell", bundle: nil)
+        loginTableView.register(loginNib, forCellReuseIdentifier: "LoginTableViewCell")
+        
+        loginTableView.estimatedRowHeight = 800
+        loginTableView.rowHeight = UITableView.automaticDimension
     }
     //MARK: 화면 터치 시 키보드 내리기
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -52,54 +46,61 @@ class LoginViewController: UIViewController {
         let userId = UserDefaults.standard.integer(forKey: "userId")
         if userId > 0 {ScreenManager().goMain(self)}
     }
-    func isValidTf() {
-        self.loginButton.isEnabled = (self.isValidEmail && self.isValidPw) ? true : false
-        self.loginButton.layer.borderColor = (self.isValidEmail && self.isValidPw) ? UIColor(named: "LIBROGColor")?.cgColor : UIColor.lightGray.cgColor
-    }
-    
     //MARK: Actions
     //MARK: 카카오 로그인
-    @IBAction func kakaoLoginButtonDidTap(_ sender: UIButton) {
+    @objc func kakaoLoginButtonDidTap(_ sender: UIButton) {
         KakaoLoginManager().kakaoLogin(self)
     }
     //MARK: 앱 로그인
-    @IBAction func appLoginButtonDidTap(_ sender: UIButton) {
+    @objc func appLoginButtonDidTap(_ sender: UIButton) {
         let appLoginInput = AppLoginInput(email: self.email, password: self.password)
         LoginDataManager().appLoginDataManager(appLoginInput, self)
     }
     //MARK: 비밀번호 찾기
-    @IBAction func findPasswordDidTap(_ sender: UIButton) {
+    @objc func findPasswordDidTap(_ sender: UIButton) {
         guard let findPasswordVC = UIStoryboard(name: "FindPassword", bundle: nil).instantiateViewController(identifier: "FindPwVC") as? FindPasswordViewController else {return}
         findPasswordVC.modalPresentationStyle = .fullScreen
         self.present(findPasswordVC, animated: true, completion: nil)
     }
     //MARK: 회원가입
-    @IBAction func goRegisterDidTap(_ sender: UIButton) {
+    @objc func goRegisterDidTap(_ sender: UIButton) {
         guard let registerTermVC = UIStoryboard(name: "Register", bundle: nil).instantiateViewController(identifier: "RegisterTermVC") as? RegisterTermViewController else {return}
         registerTermVC.modalPresentationStyle = .fullScreen
         self.present(registerTermVC, animated: true, completion: nil)
     }
-    @IBAction func emailTextFieldEditingChanged(_ sender: UITextField) {
+    @objc func emailTextFieldEditingChanged(_ sender: UITextField) {
         let text = sender.text ?? ""
         self.email = text
-        // 이메일 형식에 알맞게 & 30자 미만
-        self.isValidEmail = (text.checkEmail(str: text)) && (text.count < 30)
-        emailWarningLabel.isHidden = self.isValidEmail ? true : false
-        emailWarningLabel.text = self.isValidEmail ? "" : "이메일 형식이 유효하지 않습니다. (30자 미만)"
-        emailUnderlineView.backgroundColor = self.isValidEmail ? UIColor(named: "LIBROGColor") : .red
-        isValidTf()
     }
-    @IBAction func pwTextFieldEditingChanged(_ sender: UITextField) {
+    @objc func passwordTextFieldEditingChanged(_ sender: UITextField) {
         let text = sender.text ?? ""
         self.password = text
-        // 비밀번호 형식 8자 ~ 20자
-        self.isValidPw = (text.count >= 8) && (text.count <= 20)
-        pwWarningLabel.isHidden = self.isValidPw ? true : false
-        pwWarningLabel.text = self.isValidPw ? "" : "비밀번호는 8~20자리를 입력해주세요."
-        passwordUnderlineView.backgroundColor = self.isValidPw ? UIColor(named: "LIBROGColor") : .red
-        isValidTf()
+    }
+}
+// MARK: - 로그인 페이지 tableView delegate
+extension LoginViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "LoginTableViewCell", for: indexPath) as? LoginTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.selectionStyle = .none
+        // MARK: add target
+        cell.goRegisterButton.addTarget(self, action: #selector(goRegisterDidTap(_:)), for: .touchUpInside)
+        cell.findPasswordButton.addTarget(self, action: #selector(findPasswordDidTap(_:)), for: .touchUpInside)
+        cell.kakaoLoginButton.addTarget(self, action: #selector(kakaoLoginButtonDidTap(_:)), for: .touchUpInside)
+        cell.loginButton.addTarget(self, action: #selector(appLoginButtonDidTap(_:)), for: .touchUpInside)
+        cell.emailTextField.addTarget(self, action: #selector(emailTextFieldEditingChanged(_:)), for: .editingChanged)
+        cell.passwordTextField.addTarget(self, action: #selector(passwordTextFieldEditingChanged(_:)), for: .editingChanged)
+        
+        return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 844
+    }
 }
 //MARK: - login success API
 extension LoginViewController {
@@ -121,7 +122,7 @@ extension LoginViewController {
         // 앱 로그인 실패 시 오류 창
         else  {
             guard let errorMessage = result.message else {return}
-            ScreenManager().alertErrorDialog(errorMessage, self)
+            DialogManager().alertErrorDialog(errorMessage, self)
         }
     }
 }

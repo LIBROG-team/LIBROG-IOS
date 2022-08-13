@@ -11,7 +11,7 @@ struct AddFlowerpotModel : Decodable {
     let isSuccess: Bool?
     let code: Int?
     let message: String?
-    let result: [AddFlowerpotData]
+    let result: [AddFlowerpotData]?
 }
 struct AddFlowerpotData: Decodable {
     let flowerDataIdx: Int?
@@ -25,7 +25,7 @@ struct NotAchievedSearchFlowerpotModel : Decodable {
     let isSuccess: Bool?
     let code: Int?
     let message: String?
-    let result: [NotAchievedSearchFlowerpotData]
+    let result: [NotAchievedSearchFlowerpotData]?
 }
 struct NotAchievedSearchFlowerpotData: Decodable {
     let flowerDataIdx: Int?

@@ -10,16 +10,13 @@ import MaterialComponents.MaterialBottomSheet
 
 class RegisterProfileViewController: UIViewController {
 
-    @IBOutlet weak var userNameLabel: UILabel!
-    @IBOutlet weak var registerButton: UIButton!
-    @IBOutlet weak var cameraButton: UIButton!
-    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var reigsterProfileTableView: UITableView!
     
-    let selectArray = ["앨범에서 사진/동영상 선택", "기본 이미지로 변경"]
+    
     // 앨범 선택 image picker
     let imagePickerController = UIImagePickerController()
-    var selectedPhoto: UIImage!
-    var userNameText: String!
+    var selectedPhoto: UIImage = UIImage(named: "logo_profile")!
+    
     var email: String!
     var password: String!
     var nickName: String!
@@ -28,28 +25,43 @@ class RegisterProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // 리브로그 시작하기 버튼 Custom
-        registerButton.layer.borderColor = UIColor(named: "LIBROGColor")?.cgColor
-        registerButton.layer.borderWidth = 1
-        registerButton.layer.cornerRadius = 20
-        registerButton.tintColor = UIColor(named: "LIBROGColor")
         
         imagePickerController.delegate = self
+        reigsterProfileTableView.delegate = self
+        reigsterProfileTableView.dataSource = self
         
-        userNameLabel.text = userNameText
+        reigsterProfileTableView.separatorStyle = .none
+        
+        let profileNib = UINib(nibName: "RegisterProfileTableViewCell", bundle: nil)
+        reigsterProfileTableView.register(profileNib, forCellReuseIdentifier: "RegisterProfileTableViewCell")
+        
+        reigsterProfileTableView.estimatedRowHeight = 500
+        reigsterProfileTableView.rowHeight = UITableView.automaticDimension
     }
     //MARK: 화면 터치 시 키보드 내리기
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
     // MARK: - Actions
+    // 앨범에서 사진/동영상 선택
+    @objc func goAlbumButtonDidTap(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+        self.imagePickerController.sourceType = .photoLibrary
+        self.present(imagePickerController, animated: true, completion: nil)
+    }
+    // 기본 이미지로 변경
+    @objc func setDefaultImgButtonDidTap(_ sender: UIButton) {
+        self.selectedPhoto = UIImage(named: "logo_profile")!
+        self.dismiss(animated: true, completion: nil)
+        reigsterProfileTableView.reloadData()
+    }
     // MARK: 카메라 버튼 클릭
-    @IBAction func cameraDidTapButton(_ sender: UIButton) {
+    @objc func cameraDidTapButton(_ sender: UIButton) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "RegisterProfileBottomVC") as! RegisterProfileBottomViewController
         let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: vc)
         self.present(bottomSheet, animated: true, completion: nil)
-        vc.setTableViewDataSourceDelegate(dataSourceDelegate: self)
+        vc.goAlbumButton.addTarget(self, action: #selector(goAlbumButtonDidTap(_:)), for: .touchUpInside)
+        vc.setDefaultImgButton.addTarget(self, action: #selector(setDefaultImgButtonDidTap(_:)), for: .touchUpInside)
 
         // 아래로 드래그해도 안닫히게 하기
         bottomSheet.dismissOnDraggingDownSheet = false
@@ -58,15 +70,17 @@ class RegisterProfileViewController: UIViewController {
         // 뒤에 배경 컬러
         bottomSheet.scrimColor = UIColor(red: 0.25, green: 0.25, blue: 0.25, alpha: 0.54)
     }
-    @IBAction func introductionTextFieldEditingChanged(_ sender: UITextField) {
+    // 자기소개
+    @objc func introductionTextFieldEditingChanged(_ sender: UITextField) {
         let text = sender.text ?? ""
         self.introduction = text
     }
+    // 뒤로가기
     @IBAction func goBackButtonDidTap(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
     // MARK: '리브로그 시작하기' 버튼 클릭
-    @IBAction func registerBtnDidTap(_ sender: UIButton) {
+    @objc func registerBtnDidTap(_ sender: UIButton) {
         RegisterDataManager().registerMultipartDataManager(self.email, self.password, self.nickName, self.selectedPhoto, self.introduction, self)
     }
 }
@@ -83,38 +97,25 @@ extension RegisterProfileViewController: MDCBottomSheetControllerDelegate {
     }
 }
 
-// MARK: - 이미지 종류 메뉴 Table view data source
+// MARK: - 회원가입 프로필 사진/자기소개 입력 페이지 tableView delegate
 extension RegisterProfileViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 1
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.contentInsetAdjustmentBehavior = .never
-        let cell = UITableViewCell()
-        cell.textLabel?.font = UIFont(name: "Apple SD Gothic Neo", size: 14)
-        if indexPath.row == 0 { cell.textLabel?.text = selectArray[0] }
-        else if indexPath.row == 1 { cell.textLabel?.text = selectArray[1] }
-        return cell
-    }
-    //셀 세로 길이 조절
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
-    }
-    //클릭 이벤트 처리
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // 앨범에서 선택
-        if indexPath.row == 0 {
-            self.dismiss(animated: true, completion: nil)
-            self.imagePickerController.sourceType = .photoLibrary
-            self.present(imagePickerController, animated: true, completion: nil)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "RegisterProfileTableViewCell", for: indexPath) as? RegisterProfileTableViewCell else {
+            return UITableViewCell()
         }
-        else if indexPath.row == 1 {
-            profileImageView.image = UIImage(named: "logo_profile")
-            self.selectedPhoto = UIImage(named: "logo_profile")
-            self.dismiss(animated: true, completion: nil)
-        }
+        cell.selectionStyle = .none
+        cell.profileImageView.image = self.selectedPhoto
+        cell.userNameLabel.text = self.nickName
+        // MARK: add target
+        cell.introTextField.addTarget(self, action: #selector(introductionTextFieldEditingChanged(_:)), for: .editingChanged)
+        cell.registerButton.addTarget(self, action: #selector(registerBtnDidTap(_:)), for: .touchUpInside)
+        cell.cameraButton.addTarget(self, action: #selector(cameraDidTapButton(_:)), for: .touchUpInside)
         
-        tableView.deselectRow(at: indexPath, animated: true)
+        return cell
     }
 }
 // MARK: - 프로필 이미지 선택 -> 앨범 선택 후
@@ -123,13 +124,12 @@ extension RegisterProfileViewController : UIImagePickerControllerDelegate, UINav
         self.selectedPhoto = UIImage()
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             self.selectedPhoto = image
-            profileImageView.image = self.selectedPhoto
-//            print(info)
+            reigsterProfileTableView.reloadData()
         }
         self.dismiss(animated: true, completion: nil)
     }
 }
-// MARK: 회원가입 성공 api
+// MARK: - 회원가입 성공 api
 extension RegisterProfileViewController {
     func RegisterSuccessAPI(_ result: RegisterModel) {
         guard let userId = result.createdUserIdx else {return}

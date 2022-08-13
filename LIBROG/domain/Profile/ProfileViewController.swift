@@ -154,7 +154,6 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             // 앱 로그인일 때 (loginType == nil)
             if loginType == nil {
                 guard let ModifyProfileVC = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(identifier: "ModifyProfileVC") as? ModifyProfileViewController else {return}
-                ModifyProfileVC.userNameText = self.introData.name
                 ModifyProfileVC.profileImgUrl = self.introData.profileImgUrl
                 
                 ModifyProfileVC.modalPresentationStyle = .fullScreen
@@ -162,7 +161,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             }
             // 소셜 로그인일 때 수정 페이지 진입 불가
             else {
-                ScreenManager().alertErrorDialog("\(loginType!)로 로그인한 계정은\n프로필 수정을 할 수 없습니다.", self)
+                DialogManager().alertErrorDialog("\(loginType!)로 로그인한 계정은\n프로필 수정을 할 수 없습니다.", self)
             }
         }
         tableView.deselectRow(at: indexPath, animated: true)
