@@ -79,7 +79,7 @@ class ModifyProfileViewController: UIViewController {
     }
     // MARK: 수정 완료 버튼 클릭
     @objc func modifyButtonDidTap(_ sender: UIButton) {
-        //TODO: 프로필 수정 api 호출
+        // 프로필 수정 api 호출
         guard let name = self.nickName else {return}
         guard let selectedPhoto = self.selectedPhoto else {return}
         guard let introduction = self.introduction else {return}

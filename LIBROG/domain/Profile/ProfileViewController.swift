@@ -44,6 +44,10 @@ class ProfileViewController: UIViewController {
         ProfileDataManager().statisticDataManager(self)
         ProfileDataManager().introDataManager(self)
     }
+    override func viewDidAppear(_ animated: Bool) {
+        ProfileDataManager().introDataManager(self)
+        ProfileDataManager().statisticDataManager(self)
+    }
     //MARK: Actions
     // 환경설정 페이지로 이동
     @IBAction func settingButtonDidTap(_ sender: UIButton) {
