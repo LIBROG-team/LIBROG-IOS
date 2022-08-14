@@ -33,10 +33,6 @@ class DialogManager {
         let confirm = UIAlertAction(title: "네", style: .destructive) { action in
             // 탈퇴 코드
             SettingDataManager().userDeleteDataManager(viewcontroller as! SettingViewController)
-            // 로그인 창으로 이동
-            guard let loginVC = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(identifier: "LoginVC") as? LoginViewController else {return}
-            loginVC.modalPresentationStyle = .fullScreen
-            viewcontroller.view.window?.windowScene?.keyWindow?.rootViewController = loginVC
         }
         let cancel = UIAlertAction(title: "아니요", style: .cancel, handler: nil)
         

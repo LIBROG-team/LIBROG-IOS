@@ -22,10 +22,6 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        emailWarningLabel.isHidden = true
-//        pwWarningLabel.isHidden = true
-//        isValidTf()
-        
         loginTableView.delegate = self
         loginTableView.dataSource = self
         
