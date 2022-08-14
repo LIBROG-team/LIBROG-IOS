@@ -34,6 +34,7 @@
 		234036022891992800C9AB4D /* ModifyRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234036012891992800C9AB4D /* ModifyRecordModel.swift */; };
 		234036042891993500C9AB4D /* ModifyRecordDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234036032891993500C9AB4D /* ModifyRecordDataManager.swift */; };
 		234036062891AD3D00C9AB4D /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 234036052891AD3D00C9AB4D /* Register.storyboard */; };
+		23448E8028A972550020CF63 /* ModifyProfileInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23448E7F28A972550020CF63 /* ModifyProfileInput.swift */; };
 		23458AD52896E0C30003A669 /* ProfileIntroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23458AD32896E0C30003A669 /* ProfileIntroTableViewCell.swift */; };
 		23458AD62896E0C30003A669 /* ProfileIntroTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23458AD42896E0C30003A669 /* ProfileIntroTableViewCell.xib */; };
 		23458ADB2896E4FF0003A669 /* ProfileStatisticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23458AD92896E4FF0003A669 /* ProfileStatisticTableViewCell.swift */; };
@@ -207,6 +208,7 @@
 		234036012891992800C9AB4D /* ModifyRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyRecordModel.swift; sourceTree = "<group>"; };
 		234036032891993500C9AB4D /* ModifyRecordDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyRecordDataManager.swift; sourceTree = "<group>"; };
 		234036052891AD3D00C9AB4D /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		23448E7F28A972550020CF63 /* ModifyProfileInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyProfileInput.swift; sourceTree = "<group>"; };
 		23458AD32896E0C30003A669 /* ProfileIntroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileIntroTableViewCell.swift; sourceTree = "<group>"; };
 		23458AD42896E0C30003A669 /* ProfileIntroTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileIntroTableViewCell.xib; sourceTree = "<group>"; };
 		23458AD92896E4FF0003A669 /* ProfileStatisticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStatisticTableViewCell.swift; sourceTree = "<group>"; };
@@ -886,6 +888,7 @@
 				D061104A288FF09500F96B65 /* StatisticModel.swift */,
 				D061104C288FF1ED00F96B65 /* ProfileDataManager.swift */,
 				23458AE52896F35A0003A669 /* IntroModel.swift */,
+				23448E7F28A972550020CF63 /* ModifyProfileInput.swift */,
 			);
 			path = ProfileDataManager;
 			sourceTree = "<group>";
@@ -1326,6 +1329,7 @@
 				230524C1287D5C370081933A /* FlowerPotDetailCollectionViewCell.swift in Sources */,
 				236CF5A6289D732F00E7A1F2 /* APIModel.swift in Sources */,
 				23A5B85C287D7F73005413A3 /* AcheivedFlowerPotTableViewCell.swift in Sources */,
+				23448E8028A972550020CF63 /* ModifyProfileInput.swift in Sources */,
 				23A5B855287D6754005413A3 /* AddFlowerPotViewController.swift in Sources */,
 				D061104D288FF1ED00F96B65 /* ProfileDataManager.swift in Sources */,
 				23CC78DB288FCEDE0064DA7E /* UploadRecordDataManager.swift in Sources */,

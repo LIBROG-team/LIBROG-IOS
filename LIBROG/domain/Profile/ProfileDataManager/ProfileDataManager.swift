@@ -47,7 +47,8 @@ class ProfileDataManager {
             }
         }
     }
-    // MARK: 유저의 프로필 수정
+    // MARK: - 유저의 프로필 수정
+    // MARK: 사진 선택 시
     //multipart 업로드
     //HTTP 헤더
     let headers: HTTPHeaders = [
@@ -87,6 +88,25 @@ class ProfileDataManager {
                     }
                 case let .failure(error): // 요청 x
                     print(error)
+            }
+        }
+    }
+    // MARK: 사진 미선택 (url string)
+    func modifyProfileDataManager(_ parameter: ModifyProfileInput, _ viewcontroller: ModifyProfileViewController) {
+        AF.request(url! + "users/profile/edit",
+                   method: .patch,
+                   parameters: parameter,
+                   encoder: JSONParameterEncoder.default,
+                   headers: nil)
+            .validate()
+            .responseDecodable(of: APIModel<ResultModel>.self) { response in
+                
+            switch response.result {
+            case .success(let result):
+                print("DEBUG: ", result)
+                viewcontroller.modifyProfileSuccessAPI()
+            case .failure(let error):
+                print(error.localizedDescription)
             }
         }
     }
