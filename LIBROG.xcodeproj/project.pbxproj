@@ -16,6 +16,8 @@
 		2305E77628915FC000A9B6D5 /* LoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2305E77528915FC000A9B6D5 /* LoginDataManager.swift */; };
 		23091F832886B69E008EC8D2 /* FlowerpotDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23091F822886B69E008EC8D2 /* FlowerpotDataManager.swift */; };
 		2312074328A155E900A34A05 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2312074228A155E900A34A05 /* UILabelExtension.swift */; };
+		2315AADC28A6BD2D00753418 /* RegisterTermTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2315AADA28A6BD2D00753418 /* RegisterTermTableViewCell.swift */; };
+		2315AADD28A6BD2D00753418 /* RegisterTermTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2315AADB28A6BD2D00753418 /* RegisterTermTableViewCell.xib */; };
 		231B8D4228891787006F44A3 /* AddFlowerpotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B8D4128891787006F44A3 /* AddFlowerpotModel.swift */; };
 		231B8D442889189D006F44A3 /* AddFlowerpotDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B8D432889189D006F44A3 /* AddFlowerpotDataManager.swift */; };
 		231B8D462889221A006F44A3 /* SwipeRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B8D452889221A006F44A3 /* SwipeRecognizer.swift */; };
@@ -43,6 +45,8 @@
 		23458AE62896F35A0003A669 /* IntroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23458AE52896F35A0003A669 /* IntroModel.swift */; };
 		234AB650288A633D009FBB59 /* AchievedFlowerPotSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AB64F288A633D009FBB59 /* AchievedFlowerPotSearchViewController.swift */; };
 		234AB652288A6A36009FBB59 /* NotAchievedFlowerPotSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AB651288A6A36009FBB59 /* NotAchievedFlowerPotSearchViewController.swift */; };
+		234B37F828A79C5F00D7FFD3 /* FindPasswordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234B37F628A79C5F00D7FFD3 /* FindPasswordTableViewCell.swift */; };
+		234B37F928A79C5F00D7FFD3 /* FindPasswordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 234B37F728A79C5F00D7FFD3 /* FindPasswordTableViewCell.xib */; };
 		234E31B428A01B1E00DCD812 /* ScreenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234E31B328A01B1D00DCD812 /* ScreenManager.swift */; };
 		235523472881C47200EDE3E1 /* FlowerPotDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235523462881C47200EDE3E1 /* FlowerPotDescriptionViewController.swift */; };
 		2355234B2881C48A00EDE3E1 /* FlowerPotDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235523492881C48A00EDE3E1 /* FlowerPotDescriptionTableViewCell.swift */; };
@@ -54,6 +58,11 @@
 		23776E1D2892644800351F3A /* RegisterTermViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23776E1C2892644800351F3A /* RegisterTermViewController.swift */; };
 		2379DEE72897A29800F946DD /* ProfileLoginTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2379DEE52897A29800F946DD /* ProfileLoginTypeTableViewCell.swift */; };
 		2379DEE82897A29800F946DD /* ProfileLoginTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2379DEE62897A29800F946DD /* ProfileLoginTypeTableViewCell.xib */; };
+		237CF45628A7FC9B0043CFC6 /* ModifyProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237CF45428A7FC9B0043CFC6 /* ModifyProfileTableViewCell.swift */; };
+		237CF45728A7FC9B0043CFC6 /* ModifyProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 237CF45528A7FC9B0043CFC6 /* ModifyProfileTableViewCell.xib */; };
+		237CF45928A80A140043CFC6 /* DialogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237CF45828A80A140043CFC6 /* DialogManager.swift */; };
+		237CF45E28A80AF70043CFC6 /* SettingDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237CF45D28A80AF70043CFC6 /* SettingDataManager.swift */; };
+		237CF46028A80BD60043CFC6 /* DeleteUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237CF45F28A80BD60043CFC6 /* DeleteUserModel.swift */; };
 		237ECCE0288556EE000D9A71 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237ECCDF288556EE000D9A71 /* ProfileViewController.swift */; };
 		237ECCE328856454000D9A71 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237ECCE228856454000D9A71 /* DateFormatter.swift */; };
 		237ECCEA28857544000D9A71 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 237ECCE928857544000D9A71 /* Setting.storyboard */; };
@@ -120,6 +129,10 @@
 		23DFD3112878D9F4002AC8B0 /* UploadRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23DFD30F2878D9F4002AC8B0 /* UploadRecordTableViewCell.xib */; };
 		23F6107A288812C700575D81 /* ReadingRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F61079288812C700575D81 /* ReadingRecordModel.swift */; };
 		23F6107C2888134C00575D81 /* ReadingRecordDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F6107B2888134C00575D81 /* ReadingRecordDataManager.swift */; };
+		23F7139428A6E3560058A57A /* RegisterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F7139228A6E3560058A57A /* RegisterTableViewCell.swift */; };
+		23F7139528A6E3560058A57A /* RegisterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23F7139328A6E3560058A57A /* RegisterTableViewCell.xib */; };
+		23F7139828A6E9A90058A57A /* RegisterProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F7139628A6E9A90058A57A /* RegisterProfileTableViewCell.swift */; };
+		23F7139928A6E9A90058A57A /* RegisterProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23F7139728A6E9A90058A57A /* RegisterProfileTableViewCell.xib */; };
 		23F8483E2899A99400ED644B /* NoticeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F8483D2899A99400ED644B /* NoticeModel.swift */; };
 		23F848422899ADC100ED644B /* NoticeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F848402899ADC100ED644B /* NoticeCollectionViewCell.swift */; };
 		23F848432899ADC100ED644B /* NoticeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23F848412899ADC100ED644B /* NoticeCollectionViewCell.xib */; };
@@ -176,6 +189,8 @@
 		2305E77528915FC000A9B6D5 /* LoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataManager.swift; sourceTree = "<group>"; };
 		23091F822886B69E008EC8D2 /* FlowerpotDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerpotDataManager.swift; sourceTree = "<group>"; };
 		2312074228A155E900A34A05 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		2315AADA28A6BD2D00753418 /* RegisterTermTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTermTableViewCell.swift; sourceTree = "<group>"; };
+		2315AADB28A6BD2D00753418 /* RegisterTermTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterTermTableViewCell.xib; sourceTree = "<group>"; };
 		231B8D4128891787006F44A3 /* AddFlowerpotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFlowerpotModel.swift; sourceTree = "<group>"; };
 		231B8D432889189D006F44A3 /* AddFlowerpotDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFlowerpotDataManager.swift; sourceTree = "<group>"; };
 		231B8D452889221A006F44A3 /* SwipeRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeRecognizer.swift; sourceTree = "<group>"; };
@@ -203,6 +218,8 @@
 		23458AE52896F35A0003A669 /* IntroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroModel.swift; sourceTree = "<group>"; };
 		234AB64F288A633D009FBB59 /* AchievedFlowerPotSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievedFlowerPotSearchViewController.swift; sourceTree = "<group>"; };
 		234AB651288A6A36009FBB59 /* NotAchievedFlowerPotSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotAchievedFlowerPotSearchViewController.swift; sourceTree = "<group>"; };
+		234B37F628A79C5F00D7FFD3 /* FindPasswordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordTableViewCell.swift; sourceTree = "<group>"; };
+		234B37F728A79C5F00D7FFD3 /* FindPasswordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FindPasswordTableViewCell.xib; sourceTree = "<group>"; };
 		234E31B328A01B1D00DCD812 /* ScreenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenManager.swift; sourceTree = "<group>"; };
 		235523462881C47200EDE3E1 /* FlowerPotDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerPotDescriptionViewController.swift; sourceTree = "<group>"; };
 		235523492881C48A00EDE3E1 /* FlowerPotDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerPotDescriptionTableViewCell.swift; sourceTree = "<group>"; };
@@ -214,6 +231,11 @@
 		23776E1C2892644800351F3A /* RegisterTermViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTermViewController.swift; sourceTree = "<group>"; };
 		2379DEE52897A29800F946DD /* ProfileLoginTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLoginTypeTableViewCell.swift; sourceTree = "<group>"; };
 		2379DEE62897A29800F946DD /* ProfileLoginTypeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileLoginTypeTableViewCell.xib; sourceTree = "<group>"; };
+		237CF45428A7FC9B0043CFC6 /* ModifyProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyProfileTableViewCell.swift; sourceTree = "<group>"; };
+		237CF45528A7FC9B0043CFC6 /* ModifyProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModifyProfileTableViewCell.xib; sourceTree = "<group>"; };
+		237CF45828A80A140043CFC6 /* DialogManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogManager.swift; sourceTree = "<group>"; };
+		237CF45D28A80AF70043CFC6 /* SettingDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingDataManager.swift; sourceTree = "<group>"; };
+		237CF45F28A80BD60043CFC6 /* DeleteUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteUserModel.swift; sourceTree = "<group>"; };
 		237ECCDF288556EE000D9A71 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		237ECCE228856454000D9A71 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		237ECCE928857544000D9A71 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
@@ -280,6 +302,10 @@
 		23DFD30F2878D9F4002AC8B0 /* UploadRecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UploadRecordTableViewCell.xib; sourceTree = "<group>"; };
 		23F61079288812C700575D81 /* ReadingRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingRecordModel.swift; sourceTree = "<group>"; };
 		23F6107B2888134C00575D81 /* ReadingRecordDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingRecordDataManager.swift; sourceTree = "<group>"; };
+		23F7139228A6E3560058A57A /* RegisterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTableViewCell.swift; sourceTree = "<group>"; };
+		23F7139328A6E3560058A57A /* RegisterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterTableViewCell.xib; sourceTree = "<group>"; };
+		23F7139628A6E9A90058A57A /* RegisterProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProfileTableViewCell.swift; sourceTree = "<group>"; };
+		23F7139728A6E9A90058A57A /* RegisterProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterProfileTableViewCell.xib; sourceTree = "<group>"; };
 		23F8483D2899A99400ED644B /* NoticeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeModel.swift; sourceTree = "<group>"; };
 		23F848402899ADC100ED644B /* NoticeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeCollectionViewCell.swift; sourceTree = "<group>"; };
 		23F848412899ADC100ED644B /* NoticeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -407,6 +433,19 @@
 			path = FlowerpotDataManager;
 			sourceTree = "<group>";
 		};
+		2315AAD928A6BD1F00753418 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2315AADA28A6BD2D00753418 /* RegisterTermTableViewCell.swift */,
+				2315AADB28A6BD2D00753418 /* RegisterTermTableViewCell.xib */,
+				23F7139228A6E3560058A57A /* RegisterTableViewCell.swift */,
+				23F7139328A6E3560058A57A /* RegisterTableViewCell.xib */,
+				23F7139628A6E9A90058A57A /* RegisterProfileTableViewCell.swift */,
+				23F7139728A6E9A90058A57A /* RegisterProfileTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		231B8D48288936DF006F44A3 /* FlowerpotDescriptionDataManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -443,6 +482,15 @@
 			path = ModifyRecordDataManager;
 			sourceTree = "<group>";
 		};
+		234B37F528A79C4900D7FFD3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				234B37F628A79C5F00D7FFD3 /* FindPasswordTableViewCell.swift */,
+				234B37F728A79C5F00D7FFD3 /* FindPasswordTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		235523422881B88800EDE3E1 /* AddFlowerpotDataManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -475,6 +523,7 @@
 		23776E1728925FDD00351F3A /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				2315AAD928A6BD1F00753418 /* Cell */,
 				D07E7EBA289278E30077287A /* RegisterDataManager */,
 				23776E1C2892644800351F3A /* RegisterTermViewController.swift */,
 				23776E1828925FFF00351F3A /* RegisterViewController.swift */,
@@ -482,6 +531,41 @@
 				D047CB972892EF40004652A3 /* RegisterBottomVC */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		237CF45228A7FC590043CFC6 /* ProfileCell */ = {
+			isa = PBXGroup;
+			children = (
+				23458AD32896E0C30003A669 /* ProfileIntroTableViewCell.swift */,
+				23458AD42896E0C30003A669 /* ProfileIntroTableViewCell.xib */,
+				23458AD92896E4FF0003A669 /* ProfileStatisticTableViewCell.swift */,
+				23458ADA2896E4FF0003A669 /* ProfileStatisticTableViewCell.xib */,
+				23458ADD2896E8B00003A669 /* ProfileFlowerpotTableViewCell.swift */,
+				23458ADE2896E8B00003A669 /* ProfileFlowerpotTableViewCell.xib */,
+				23458AE12896F16D0003A669 /* LogoutTableViewCell.swift */,
+				23458AE22896F16D0003A669 /* LogoutTableViewCell.xib */,
+				2379DEE52897A29800F946DD /* ProfileLoginTypeTableViewCell.swift */,
+				2379DEE62897A29800F946DD /* ProfileLoginTypeTableViewCell.xib */,
+			);
+			path = ProfileCell;
+			sourceTree = "<group>";
+		};
+		237CF45328A7FC680043CFC6 /* ModifyProfileCell */ = {
+			isa = PBXGroup;
+			children = (
+				237CF45428A7FC9B0043CFC6 /* ModifyProfileTableViewCell.swift */,
+				237CF45528A7FC9B0043CFC6 /* ModifyProfileTableViewCell.xib */,
+			);
+			path = ModifyProfileCell;
+			sourceTree = "<group>";
+		};
+		237CF45C28A80AEA0043CFC6 /* SettingDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				237CF45D28A80AF70043CFC6 /* SettingDataManager.swift */,
+				237CF45F28A80BD60043CFC6 /* DeleteUserModel.swift */,
+			);
+			path = SettingDataManager;
 			sourceTree = "<group>";
 		};
 		237ECCDE288556E1000D9A71 /* Profile */ = {
@@ -504,6 +588,7 @@
 				236CF5A5289D732F00E7A1F2 /* APIModel.swift */,
 				234E31B328A01B1D00DCD812 /* ScreenManager.swift */,
 				239DE40628A4E86A00386151 /* StringExtension.swift */,
+				237CF45828A80A140043CFC6 /* DialogManager.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -511,16 +596,8 @@
 		237ECCE42885692E000D9A71 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				23458AD32896E0C30003A669 /* ProfileIntroTableViewCell.swift */,
-				23458AD42896E0C30003A669 /* ProfileIntroTableViewCell.xib */,
-				23458AD92896E4FF0003A669 /* ProfileStatisticTableViewCell.swift */,
-				23458ADA2896E4FF0003A669 /* ProfileStatisticTableViewCell.xib */,
-				23458ADD2896E8B00003A669 /* ProfileFlowerpotTableViewCell.swift */,
-				23458ADE2896E8B00003A669 /* ProfileFlowerpotTableViewCell.xib */,
-				23458AE12896F16D0003A669 /* LogoutTableViewCell.swift */,
-				23458AE22896F16D0003A669 /* LogoutTableViewCell.xib */,
-				2379DEE52897A29800F946DD /* ProfileLoginTypeTableViewCell.swift */,
-				2379DEE62897A29800F946DD /* ProfileLoginTypeTableViewCell.xib */,
+				237CF45328A7FC680043CFC6 /* ModifyProfileCell */,
+				237CF45228A7FC590043CFC6 /* ProfileCell */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -528,6 +605,7 @@
 		239DE3F628A4CD2F00386151 /* FindPassword */ = {
 			isa = PBXGroup;
 			children = (
+				234B37F528A79C4900D7FFD3 /* Cell */,
 				239DE3F928A4CEA900386151 /* FindPasswordDataManager */,
 				239DE3F728A4CD4800386151 /* FindPasswordViewController.swift */,
 			);
@@ -546,6 +624,7 @@
 		239DE3FE28A4D9C200386151 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				237CF45C28A80AEA0043CFC6 /* SettingDataManager */,
 				239DE3FF28A4D9CE00386151 /* SettingViewController.swift */,
 			);
 			path = Setting;
@@ -1045,7 +1124,9 @@
 				23ADA913288469E90066D15A /* FlowerPot.storyboard in Resources */,
 				23AB70A5288FFDBD00503366 /* RecordDetailTableViewCell.xib in Resources */,
 				238DE01D28819AF0007901E6 /* TodaySuggestCollectionViewCell.xib in Resources */,
+				2315AADD28A6BD2D00753418 /* RegisterTermTableViewCell.xib in Resources */,
 				23ADA91728846A870066D15A /* UserFlowerPotDetail.storyboard in Resources */,
+				23F7139928A6E9A90058A57A /* RegisterProfileTableViewCell.xib in Resources */,
 				D0C2B05B286DC9C000242E71 /* LaunchScreen.storyboard in Resources */,
 				23458AE42896F16E0003A669 /* LogoutTableViewCell.xib in Resources */,
 				23A5B861287D7F81005413A3 /* NotAcheivedFlowerPotTableViewCell.xib in Resources */,
@@ -1061,6 +1142,7 @@
 				23ADA90F2884693D0066D15A /* SelectBook.storyboard in Resources */,
 				239DE3F528A4CD2300386151 /* FindPassword.storyboard in Resources */,
 				2379DEE82897A29800F946DD /* ProfileLoginTypeTableViewCell.xib in Resources */,
+				23F7139528A6E3560058A57A /* RegisterTableViewCell.xib in Resources */,
 				23A5B872287D9D5D005413A3 /* ResultTableViewCell.xib in Resources */,
 				23ADA91928846AB10066D15A /* FlowerPotDescription.storyboard in Resources */,
 				23458AD62896E0C30003A669 /* ProfileIntroTableViewCell.xib in Resources */,
@@ -1075,7 +1157,9 @@
 				234036062891AD3D00C9AB4D /* Register.storyboard in Resources */,
 				D0C2B056286DC9BE00242E71 /* Main.storyboard in Resources */,
 				23ADA91D28846B240066D15A /* AcheivedFlowerPot.storyboard in Resources */,
+				237CF45728A7FC9B0043CFC6 /* ModifyProfileTableViewCell.xib in Resources */,
 				239DE40528A4E7B100386151 /* LoginTableViewCell.xib in Resources */,
+				234B37F928A79C5F00D7FFD3 /* FindPasswordTableViewCell.xib in Resources */,
 				23ADA9112884698F0066D15A /* UploadRecord.storyboard in Resources */,
 				230524C2287D5C370081933A /* FlowerPotDetailCollectionViewCell.xib in Resources */,
 			);
@@ -1145,6 +1229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23AB70A0288FFAF000503366 /* RecordDetailViewController.swift in Sources */,
+				2315AADC28A6BD2D00753418 /* RegisterTermTableViewCell.swift in Sources */,
 				23F6107A288812C700575D81 /* ReadingRecordModel.swift in Sources */,
 				23776E1D2892644800351F3A /* RegisterTermViewController.swift in Sources */,
 				231B8D4C28893701006F44A3 /* FlowerpotDescriptionModel.swift in Sources */,
@@ -1168,6 +1253,7 @@
 				23C8B4BB286EFF3900432141 /* CustomTabBarController.swift in Sources */,
 				2305E77628915FC000A9B6D5 /* LoginDataManager.swift in Sources */,
 				231E3E5A289F82130011A1D2 /* RecommendBookModel.swift in Sources */,
+				234B37F828A79C5F00D7FFD3 /* FindPasswordTableViewCell.swift in Sources */,
 				23C8B4A6286EF2F300432141 /* PaddingLabel.swift in Sources */,
 				23AB70AD289009D500503366 /* ModifyRecordViewController.swift in Sources */,
 				239EF02F2892F2C8005BC364 /* SearchDataManager.swift in Sources */,
@@ -1175,6 +1261,7 @@
 				2355234B2881C48A00EDE3E1 /* FlowerPotDescriptionTableViewCell.swift in Sources */,
 				23C8B4B0286EF76F00432141 /* MainFlowerTableViewCell.swift in Sources */,
 				23ADA92628847A8D0066D15A /* AddFlowerPotSearchViewController.swift in Sources */,
+				237CF45928A80A140043CFC6 /* DialogManager.swift in Sources */,
 				231B8D4228891787006F44A3 /* AddFlowerpotModel.swift in Sources */,
 				234AB652288A6A36009FBB59 /* NotAchievedFlowerPotSearchViewController.swift in Sources */,
 				231B8D442889189D006F44A3 /* AddFlowerpotDataManager.swift in Sources */,
@@ -1199,6 +1286,7 @@
 				234036022891992800C9AB4D /* ModifyRecordModel.swift in Sources */,
 				237ECCE328856454000D9A71 /* DateFormatter.swift in Sources */,
 				232973642887F8FF00954AA0 /* FlowerpotBookRecordDataManager.swift in Sources */,
+				23F7139828A6E9A90058A57A /* RegisterProfileTableViewCell.swift in Sources */,
 				239DE3FB28A4CEC100386151 /* FindPasswordDataManager.swift in Sources */,
 				D0C2B051286DC9BE00242E71 /* SceneDelegate.swift in Sources */,
 				D061104B288FF09500F96B65 /* StatisticModel.swift in Sources */,
@@ -1207,6 +1295,7 @@
 				234E31B428A01B1E00DCD812 /* ScreenManager.swift in Sources */,
 				23458AE62896F35A0003A669 /* IntroModel.swift in Sources */,
 				2339DA06288591D600A3DBC4 /* SearchBookManager.swift in Sources */,
+				237CF45628A7FC9B0043CFC6 /* ModifyProfileTableViewCell.swift in Sources */,
 				234036042891993500C9AB4D /* ModifyRecordDataManager.swift in Sources */,
 				23458AE32896F16E0003A669 /* LogoutTableViewCell.swift in Sources */,
 				23091F832886B69E008EC8D2 /* FlowerpotDataManager.swift in Sources */,
@@ -1225,10 +1314,12 @@
 				2312074328A155E900A34A05 /* UILabelExtension.swift in Sources */,
 				D07E7EC028927AC70077287A /* RegisterDataManager.swift in Sources */,
 				23ADA92B28847FC80066D15A /* FlowerpotModel.swift in Sources */,
+				23F7139428A6E3560058A57A /* RegisterTableViewCell.swift in Sources */,
 				D0C2B080286DEBD600242E71 /* FlowerPotViewController.swift in Sources */,
 				23A41EA9289436B10008437B /* RecentBookModel.swift in Sources */,
 				D07E7EB3289273140077287A /* RegisterProfileBottomViewController.swift in Sources */,
 				2305E773289159A000A9B6D5 /* KakaoLoginManager.swift in Sources */,
+				237CF46028A80BD60043CFC6 /* DeleteUserModel.swift in Sources */,
 				D07E7EBE289279250077287A /* RegisterInput.swift in Sources */,
 				239DE40028A4D9CE00386151 /* SettingViewController.swift in Sources */,
 				239DE40728A4E86A00386151 /* StringExtension.swift in Sources */,
@@ -1240,6 +1331,7 @@
 				23CC78DB288FCEDE0064DA7E /* UploadRecordDataManager.swift in Sources */,
 				237ECCE0288556EE000D9A71 /* ProfileViewController.swift in Sources */,
 				231B8D462889221A006F44A3 /* SwipeRecognizer.swift in Sources */,
+				237CF45E28A80AF70043CFC6 /* SettingDataManager.swift in Sources */,
 				238DE01F28819C00007901E6 /* MainBottomViewController.swift in Sources */,
 				23CC78D7288FCDAE0064DA7E /* UploadRecordInput.swift in Sources */,
 				D0CF2B602885C99C00F78104 /* ReadingRecordViewController.swift in Sources */,
@@ -1424,7 +1516,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1453,7 +1545,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

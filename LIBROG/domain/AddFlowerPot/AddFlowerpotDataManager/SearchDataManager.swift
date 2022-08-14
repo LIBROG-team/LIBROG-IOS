@@ -24,7 +24,7 @@ class SearchDataManager {
             switch response.result {
             case .success(let result):
                 print("DEBUG: ", result)
-                viewcontroller.searchSuccessAPI(result.result)
+                viewcontroller.searchSuccessAPI(result.result!)
             case .failure(let error):
                 print(error.localizedDescription)
                 viewcontroller.searchFailAPI()
@@ -44,7 +44,7 @@ class SearchDataManager {
             switch response.result {
             case .success(let result):
                 print("DEBUG: ", result)
-                viewcontroller.searchSuccessAPI(result.result)
+                viewcontroller.searchSuccessAPI(result.result!)
             case .failure(let error):
                 print(error.localizedDescription)
                 viewcontroller.searchFailAPI()

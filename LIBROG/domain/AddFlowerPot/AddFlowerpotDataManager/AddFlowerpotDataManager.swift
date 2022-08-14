@@ -23,7 +23,7 @@ class AddFlowerpotDataManager {
             switch response.result {
             case .success(let result):
 //                print("DEBUG: ", result.result)
-                viewcontroller.addFlowerpotAchievedSuccessAPI(result.result)
+                viewcontroller.addFlowerpotAchievedSuccessAPI(result.result!)
             case .failure(let error):
                 print(error.localizedDescription)
             }
@@ -39,7 +39,7 @@ class AddFlowerpotDataManager {
             switch response.result {
             case .success(let result):
 //                print("DEBUG: ", result.result)
-                viewcontroller.addFlowerpotNotAchievedSuccessAPI(result.result)
+                viewcontroller.addFlowerpotNotAchievedSuccessAPI(result.result!)
             case .failure(let error):
                 print(error.localizedDescription)
             }
