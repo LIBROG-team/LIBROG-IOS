@@ -80,9 +80,10 @@ class ModifyProfileViewController: UIViewController {
     // MARK: 수정 완료 버튼 클릭
     @objc func modifyButtonDidTap(_ sender: UIButton) {
         //TODO: 프로필 수정 api 호출
-        guard let ProfileVC = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(identifier: "ProfileVC") as? ProfileViewController else {return}
-        ProfileVC.modalPresentationStyle = .fullScreen
-        self.present(ProfileVC, animated: true, completion: nil)
+        guard let name = self.nickName else {return}
+        guard let selectedPhoto = self.selectedPhoto else {return}
+        guard let introduction = self.introduction else {return}
+        ProfileDataManager().modifyProfileDataManager(name, selectedPhoto, introduction, self)
     }
     @IBAction func goBackButtonDidTap(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
@@ -146,5 +147,13 @@ extension ModifyProfileViewController : UIImagePickerControllerDelegate, UINavig
             let urlStr = imageUrl.absoluteString
         }
         self.dismiss(animated: true, completion: nil)
+    }
+}
+//MARK: - 프로필 수정 api
+extension ModifyProfileViewController {
+    func modifyProfileSuccessAPI() {
+        guard let ProfileVC = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(identifier: "ProfileVC") as? ProfileViewController else {return}
+        ProfileVC.modalPresentationStyle = .fullScreen
+        self.present(ProfileVC, animated: true, completion: nil)
     }
 }
