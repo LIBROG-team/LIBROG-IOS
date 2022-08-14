@@ -81,7 +81,7 @@ class ProfileDataManager {
                     do {
                         let decoder = JSONDecoder()
                         let result = try decoder.decode(APIModel<ResultModel>.self, from: data)
-                        viewcontroller.modifyProfileSuccessAPI()
+                        viewcontroller.modifyProfileSuccessAPI(result)
                         print(result)
                     } catch {
                         print("error", data)
@@ -104,7 +104,7 @@ class ProfileDataManager {
             switch response.result {
             case .success(let result):
                 print("DEBUG: ", result)
-                viewcontroller.modifyProfileSuccessAPI()
+                viewcontroller.modifyProfileSuccessAPI(result)
             case .failure(let error):
                 print(error.localizedDescription)
             }

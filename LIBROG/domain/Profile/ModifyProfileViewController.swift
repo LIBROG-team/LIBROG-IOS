@@ -162,7 +162,12 @@ extension ModifyProfileViewController : UIImagePickerControllerDelegate, UINavig
 }
 //MARK: - 프로필 수정 api
 extension ModifyProfileViewController {
-    func modifyProfileSuccessAPI() {
-        self.dismiss(animated: true, completion: nil)
+    func modifyProfileSuccessAPI(_ result: APIModel<ResultModel>) {
+        if result.isSuccess! {
+            self.dismiss(animated: true, completion: nil)
+        } else {
+            guard let errorMessage = result.message else {return}
+            DialogManager().alertErrorDialog(errorMessage, self)
+        }
     }
 }
