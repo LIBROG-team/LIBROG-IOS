@@ -21,7 +21,7 @@ class RegisterProfileViewController: UIViewController {
     var password: String!
     var nickName: String!
     var profileImgUrl: String!
-    var introduction: String!
+    var introduction: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -129,11 +129,18 @@ extension RegisterProfileViewController : UIImagePickerControllerDelegate, UINav
         self.dismiss(animated: true, completion: nil)
     }
 }
-// MARK: - 회원가입 성공 api
+// MARK: - 회원가입 api
 extension RegisterProfileViewController {
-    func RegisterSuccessAPI(_ result: RegisterModel) {
-        guard let userId = result.createdUserIdx else {return}
-        UserDefaults.standard.set(userId, forKey: "userId")
-        ScreenManager().goMain(self)
+    func RegisterSuccessAPI(_ result: APIModel<RegisterModel>) {
+        if result.isSuccess! {
+            guard let userId = result.result?.createdUserIdx else {return}
+            UserDefaults.standard.set(userId, forKey: "userId")
+            ScreenManager().goMain(self)
+        } else {
+            if let errorMessage = result.message {
+                DialogManager().alertErrorDialog(errorMessage, self)
+            }
+        }
+        
     }
 }
