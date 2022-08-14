@@ -54,12 +54,12 @@ class ProfileDataManager {
                 "Content-type": "multipart/form-data"
                 ]
     func modifyProfileDataManager(_ nickname: String, _ photo: UIImage, _ introduction: String, _ viewcontroller: ModifyProfileViewController) {
-        let modifyUrl = url! + "users/introduce/edit"
+        let modifyUrl = url! + "users/profile/edit"
         let body : Parameters = [
                         "idx" : userId,
                         "name" : nickname,
                         "introduction" : introduction,
-                    ]    //POST 함수로 전달할 String 데이터, 이미지 데이터는 제외하고 구성
+                    ]    //PATCH 함수로 전달할 String 데이터, 이미지 데이터는 제외하고 구성
 
         AF.upload(multipartFormData: { (multipart) in
             if let imageData = photo.jpegData(compressionQuality: 0.2) {
@@ -72,7 +72,7 @@ class ProfileDataManager {
             }
         }
         ,to: URL(string: modifyUrl)!    //전달할 url
-        ,method: .post        //전달 방식
+        ,method: .patch        //전달 방식
         ,headers: headers) //헤더
         .responseData { response in
             switch response.result {
@@ -80,10 +80,10 @@ class ProfileDataManager {
                     do {
                         let decoder = JSONDecoder()
                         let result = try decoder.decode(APIModel<ResultModel>.self, from: data)
-//                        viewcontroller.RegisterSuccessAPI(result)
+                        viewcontroller.modifyProfileSuccessAPI()
                         print(result)
                     } catch {
-                        print("error")
+                        print("error", data)
                     }
                 case let .failure(error): // 요청 x
                     print(error)

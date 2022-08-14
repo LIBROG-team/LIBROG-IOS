@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         sleep(2)
         
         UserDefaults.standard.set("e9e63756ebc5c4ceeac89815995e2fd8", forKey: "KAKAO_REST_API_KEY")
-        UserDefaults.standard.set("https://dev.siejwkaodj.shop/", forKey: "url")
+        UserDefaults.standard.set("https://dev.librog.shop/", forKey: "url")
         UserDefaults.standard.set("", forKey: "accessToken")
         UserDefaults.standard.set("", forKey: "refreshToken")
         
