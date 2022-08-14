@@ -101,7 +101,8 @@ extension ModifyProfileViewController: UITableViewDelegate, UITableViewDataSourc
         }
         cell.selectionStyle = .none
         if isInit {
-            if let url = URL(string: self.profileImgUrl) {
+            if let imgUrl = self.profileImgUrl {
+                let url = URL(string: imgUrl)
                 cell.profileImageView.kf.setImage(with: url, placeholder: UIImage(named: "logo22%"))
             }
             isInit = false

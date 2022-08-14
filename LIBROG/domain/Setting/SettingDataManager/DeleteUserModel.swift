@@ -6,5 +6,5 @@
 //
 
 struct DeleteUserModel: Decodable {
-    let deletedUserIdx: Int?
+    let deletedUserIdx: String?
 }
