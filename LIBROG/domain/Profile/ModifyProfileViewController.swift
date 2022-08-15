@@ -23,17 +23,18 @@ class ModifyProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        imagePickerController.delegate = self
         
+        // imagePicker delegate
+        imagePickerController.delegate = self
+        // tableview delegate
         modifyProfileTableView.delegate = self
         modifyProfileTableView.dataSource = self
-        
+        // tableview separatorStyle
         modifyProfileTableView.separatorStyle = .none
-        
+        // tableview register nib
         let modifyNib = UINib(nibName: "ModifyProfileTableViewCell", bundle: nil)
         modifyProfileTableView.register(modifyNib, forCellReuseIdentifier: "ModifyProfileTableViewCell")
-        
+        // tableview row height
         modifyProfileTableView.estimatedRowHeight = 800
         modifyProfileTableView.rowHeight = UITableView.automaticDimension
     }
@@ -118,6 +119,8 @@ extension ModifyProfileViewController: UITableViewDelegate, UITableViewDataSourc
                 let url = URL(string: imgUrl)
                 cell.profileImageView.kf.setImage(with: url, placeholder: UIImage(named: "logo22%"))
             }
+            if let name = self.nickName { cell.nickNameTextField.text = name }
+            if let intro = self.introduction {cell.introTextField.text = intro}
         } else {
             if let photo = self.selectedPhoto {
                 cell.profileImageView.image = photo
