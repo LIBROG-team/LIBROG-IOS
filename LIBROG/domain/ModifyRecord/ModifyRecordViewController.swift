@@ -50,7 +50,7 @@ extension ModifyRecordViewController: UITableViewDelegate, UITableViewDataSource
         }
         if isCompleteButtonTap == true {
             cell.postRecord(self.recordData)
-            ScreenManager().goMain(self)
+            self.dismiss(animated: true, completion: nil)
         }
         return cell
     }

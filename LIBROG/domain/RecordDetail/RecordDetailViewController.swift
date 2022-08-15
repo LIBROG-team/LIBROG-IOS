@@ -27,7 +27,9 @@ class RecordDetailViewController: UIViewController {
         
         RecordDetailDataManager().recordDetailDataManager(self.recordIdx, self)
     }
-
+    override func viewDidAppear(_ animated: Bool) {
+        RecordDetailDataManager().recordDetailDataManager(self.recordIdx, self)
+    }
     @IBAction func goBackButtonDidTap(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
