@@ -60,6 +60,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4DC-n2-mc3" secondAttribute="bottom" constant="120" id="Afa-PL-S08"/>
                             <constraint firstItem="Bz4-01-IyN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="N1d-9N-OJK"/>
                             <constraint firstItem="Bz4-01-IyN" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="RU3-EP-W5M"/>
+                            <constraint firstItem="4DC-n2-mc3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Bz4-01-IyN" secondAttribute="bottom" constant="140" id="hr0-3k-9Hs"/>
                         </constraints>
                     </view>
                 </viewController>
