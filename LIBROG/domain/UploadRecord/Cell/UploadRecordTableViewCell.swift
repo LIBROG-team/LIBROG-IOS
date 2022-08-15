@@ -19,6 +19,8 @@ class UploadRecordTableViewCell: UITableViewCell {
     @IBOutlet weak var quoteTextField: UITextField!
     @IBOutlet weak var bookReportTextView: UITextView!
     
+    let textViewPlaceHolder = "독후감을 입력하세요"
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -28,6 +30,11 @@ class UploadRecordTableViewCell: UITableViewCell {
         bookPointView.didTouchCosmos = didTouchCosmos
         // 인상 깊은 한 줄 폰트 및 크기 설정
         quoteTextField.font = UIFont(name: "Apple SD Gothic Neo", size: 14)
+        // 독후감 TextView
+        bookReportTextView.font = UIFont(name: "Apple SD Gothic Neo", size: 14)
+        bookReportTextView.text = textViewPlaceHolder
+        bookReportTextView.textColor = .placeholderText
+        bookReportTextView.delegate = self
     }
 
     func setBookData(_ bookData: BookData) {
@@ -64,6 +71,22 @@ class UploadRecordTableViewCell: UITableViewCell {
     }
     
 }
+// MARK: - 독후감 TextView delegate
+extension UploadRecordTableViewCell : UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.text == textViewPlaceHolder {
+            textView.text = nil
+            textView.textColor = .black
+        }
+    }
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            textView.text = textViewPlaceHolder
+            textView.textColor = .placeholderText
+        }
+    }
+}
+// MARK: - 기록 추가 api 호출
 extension UploadRecordTableViewCell {
     func postRecord(_ bookData: BookData) {
         let userId = UserDefaults.standard.integer(forKey: "userId")
