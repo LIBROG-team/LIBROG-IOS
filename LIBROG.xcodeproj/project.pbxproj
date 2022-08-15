@@ -486,6 +486,90 @@
 			path = ModifyRecordDataManager;
 			sourceTree = "<group>";
 		};
+		234A4EBA28AAB50000105B61 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				239DE3F628A4CD2F00386151 /* FindPassword */,
+				2303F2302889A9D300544AF6 /* Login */,
+				23776E1728925FDD00351F3A /* Register */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		234A4EBB28AAB53900105B61 /* Flowerpot */ = {
+			isa = PBXGroup;
+			children = (
+				230524C3287D64820081933A /* AddFlowerPot */,
+				235523452881C45600EDE3E1 /* FlowerPotDescription */,
+				230524BB287D5BEE0081933A /* FlowerPotDetail */,
+				D0C2B07E286DEB9500242E71 /* UserFlowerpot */,
+			);
+			path = Flowerpot;
+			sourceTree = "<group>";
+		};
+		234A4EBC28AAB55400105B61 /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				D0DB05B12876AAB00041CEEF /* Upload */,
+				23DFD30B2878D98D002AC8B0 /* UploadRecord */,
+				D0CF2B572885C7F500F78104 /* ReadingRecord */,
+				23AB709E288FFAE100503366 /* RecordDetail */,
+				23AB70AB289009BB00503366 /* ModifyRecord */,
+			);
+			path = Record;
+			sourceTree = "<group>";
+		};
+		234A4EBE28AAB59000105B61 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				23ADA90A288467850066D15A /* MainPage.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		234A4EBF28AAB59700105B61 /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				23AB709C288FFAD700503366 /* RecordDetail.storyboard */,
+				23ADA90E2884693D0066D15A /* SelectBook.storyboard */,
+				23ADA9102884698F0066D15A /* UploadRecord.storyboard */,
+				23ADA90C288468D50066D15A /* ReadingRecord.storyboard */,
+			);
+			path = Record;
+			sourceTree = "<group>";
+		};
+		234A4EC028AAB5A500105B61 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				239DE3F428A4CD2300386151 /* FindPassword.storyboard */,
+				234036052891AD3D00C9AB4D /* Register.storyboard */,
+				2303F22E2889A9CD00544AF6 /* Login.storyboard */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		234A4EC128AAB5AF00105B61 /* Flowerpot */ = {
+			isa = PBXGroup;
+			children = (
+				23ADA91E28846B440066D15A /* NotAcheivedFlowerPot.storyboard */,
+				23ADA91C28846B240066D15A /* AcheivedFlowerPot.storyboard */,
+				23ADA91A28846ACE0066D15A /* AddFlowerPot.storyboard */,
+				23ADA91828846AB10066D15A /* FlowerPotDescription.storyboard */,
+				23ADA91628846A870066D15A /* UserFlowerPotDetail.storyboard */,
+				23ADA912288469E90066D15A /* FlowerPot.storyboard */,
+			);
+			path = Flowerpot;
+			sourceTree = "<group>";
+		};
+		234A4EC228AAB5CA00105B61 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				237ECCE928857544000D9A71 /* Setting.storyboard */,
+				23ADA91428846A2A0066D15A /* Profile.storyboard */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		234B37F528A79C4900D7FFD3 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -575,6 +659,7 @@
 		237ECCDE288556E1000D9A71 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				239DE3FE28A4D9C200386151 /* Setting */,
 				D0611049288FF04F00F96B65 /* ProfileDataManager */,
 				237ECCE42885692E000D9A71 /* Cell */,
 				237ECCDF288556EE000D9A71 /* ProfileViewController.swift */,
@@ -717,22 +802,11 @@
 		23ADA909288467680066D15A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				23ADA90A288467850066D15A /* MainPage.storyboard */,
-				23ADA90C288468D50066D15A /* ReadingRecord.storyboard */,
-				23ADA90E2884693D0066D15A /* SelectBook.storyboard */,
-				23ADA9102884698F0066D15A /* UploadRecord.storyboard */,
-				23ADA912288469E90066D15A /* FlowerPot.storyboard */,
-				23ADA91428846A2A0066D15A /* Profile.storyboard */,
-				23ADA91628846A870066D15A /* UserFlowerPotDetail.storyboard */,
-				23ADA91828846AB10066D15A /* FlowerPotDescription.storyboard */,
-				23ADA91A28846ACE0066D15A /* AddFlowerPot.storyboard */,
-				23ADA91C28846B240066D15A /* AcheivedFlowerPot.storyboard */,
-				23ADA91E28846B440066D15A /* NotAcheivedFlowerPot.storyboard */,
-				237ECCE928857544000D9A71 /* Setting.storyboard */,
-				2303F22E2889A9CD00544AF6 /* Login.storyboard */,
-				23AB709C288FFAD700503366 /* RecordDetail.storyboard */,
-				234036052891AD3D00C9AB4D /* Register.storyboard */,
-				239DE3F428A4CD2300386151 /* FindPassword.storyboard */,
+				234A4EC228AAB5CA00105B61 /* Profile */,
+				234A4EC128AAB5AF00105B61 /* Flowerpot */,
+				234A4EC028AAB5A500105B61 /* Authentication */,
+				234A4EBF28AAB59700105B61 /* Record */,
+				234A4EBE28AAB59000105B61 /* Main */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -763,21 +837,11 @@
 		23C8B4A7286EF39000432141 /* domain */ = {
 			isa = PBXGroup;
 			children = (
-				239DE3FE28A4D9C200386151 /* Setting */,
-				239DE3F628A4CD2F00386151 /* FindPassword */,
-				23776E1728925FDD00351F3A /* Register */,
-				23AB70AB289009BB00503366 /* ModifyRecord */,
-				23AB709E288FFAE100503366 /* RecordDetail */,
-				2303F2302889A9D300544AF6 /* Login */,
-				D0CF2B572885C7F500F78104 /* ReadingRecord */,
+				234A4EBC28AAB55400105B61 /* Record */,
+				234A4EBB28AAB53900105B61 /* Flowerpot */,
+				234A4EBA28AAB50000105B61 /* Authentication */,
 				237ECCDE288556E1000D9A71 /* Profile */,
-				235523452881C45600EDE3E1 /* FlowerPotDescription */,
-				230524BB287D5BEE0081933A /* FlowerPotDetail */,
-				230524C3287D64820081933A /* AddFlowerPot */,
-				23DFD30B2878D98D002AC8B0 /* UploadRecord */,
-				D0DB05B12876AAB00041CEEF /* Upload */,
-				23C8B4AA286EF3B200432141 /* Main */,
-				D0C2B07E286DEB9500242E71 /* Flowerpot */,
+				23C8B4AA286EF3B200432141 /* MainPage */,
 			);
 			path = domain;
 			sourceTree = "<group>";
@@ -803,7 +867,7 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		23C8B4AA286EF3B200432141 /* Main */ = {
+		23C8B4AA286EF3B200432141 /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
 				23ADA92928847FB60066D15A /* MainPageDataManager */,
@@ -811,7 +875,7 @@
 				23C8B4AB286EF41400432141 /* MainViewController.swift */,
 				238DE01E28819C00007901E6 /* MainBottomViewController.swift */,
 			);
-			path = Main;
+			path = MainPage;
 			sourceTree = "<group>";
 		};
 		23C8B4AD286EF75800432141 /* Cell */ = {
@@ -943,14 +1007,14 @@
 			path = LIBROG;
 			sourceTree = "<group>";
 		};
-		D0C2B07E286DEB9500242E71 /* Flowerpot */ = {
+		D0C2B07E286DEB9500242E71 /* UserFlowerpot */ = {
 			isa = PBXGroup;
 			children = (
 				23091F812886B666008EC8D2 /* FlowerpotDataManager */,
 				D0C2B081286DF22300242E71 /* Cell */,
 				D0C2B07F286DEBD600242E71 /* FlowerPotViewController.swift */,
 			);
-			path = Flowerpot;
+			path = UserFlowerpot;
 			sourceTree = "<group>";
 		};
 		D0C2B081286DF22300242E71 /* Cell */ = {
