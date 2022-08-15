@@ -27,6 +27,7 @@
 		2322AE5B2897F39300513E23 /* LoginInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2322AE5A2897F39300513E23 /* LoginInput.swift */; };
 		2322AE5D2897F3C400513E23 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2322AE5C2897F3C400513E23 /* LoginModel.swift */; };
 		232973642887F8FF00954AA0 /* FlowerpotBookRecordDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232973632887F8FF00954AA0 /* FlowerpotBookRecordDataManager.swift */; };
+		2339796B28AA7484009CF5D0 /* DeleteRecordInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339796A28AA7484009CF5D0 /* DeleteRecordInput.swift */; };
 		2339DA06288591D600A3DBC4 /* SearchBookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339DA05288591D600A3DBC4 /* SearchBookManager.swift */; };
 		2339DA08288592B100A3DBC4 /* KakaoBookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339DA07288592B100A3DBC4 /* KakaoBookModel.swift */; };
 		2339DA0A2885948500A3DBC4 /* HeaderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339DA092885948500A3DBC4 /* HeaderManager.swift */; };
@@ -201,6 +202,7 @@
 		2322AE5A2897F39300513E23 /* LoginInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInput.swift; sourceTree = "<group>"; };
 		2322AE5C2897F3C400513E23 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		232973632887F8FF00954AA0 /* FlowerpotBookRecordDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerpotBookRecordDataManager.swift; sourceTree = "<group>"; };
+		2339796A28AA7484009CF5D0 /* DeleteRecordInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteRecordInput.swift; sourceTree = "<group>"; };
 		2339DA05288591D600A3DBC4 /* SearchBookManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBookManager.swift; sourceTree = "<group>"; };
 		2339DA07288592B100A3DBC4 /* KakaoBookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoBookModel.swift; sourceTree = "<group>"; };
 		2339DA092885948500A3DBC4 /* HeaderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderManager.swift; sourceTree = "<group>"; };
@@ -646,6 +648,7 @@
 			children = (
 				23A41EA42894315D0008437B /* RecordDetailModel.swift */,
 				23A41EA6289431650008437B /* RecordDetailDataManager.swift */,
+				2339796A28AA7484009CF5D0 /* DeleteRecordInput.swift */,
 			);
 			path = RecordDetailDataManager;
 			sourceTree = "<group>";
@@ -1255,6 +1258,7 @@
 				23ADA92828847B830066D15A /* FlowerPotSearchTabViewController.swift in Sources */,
 				23C8B4BB286EFF3900432141 /* CustomTabBarController.swift in Sources */,
 				2305E77628915FC000A9B6D5 /* LoginDataManager.swift in Sources */,
+				2339796B28AA7484009CF5D0 /* DeleteRecordInput.swift in Sources */,
 				231E3E5A289F82130011A1D2 /* RecommendBookModel.swift in Sources */,
 				234B37F828A79C5F00D7FFD3 /* FindPasswordTableViewCell.swift in Sources */,
 				23C8B4A6286EF2F300432141 /* PaddingLabel.swift in Sources */,

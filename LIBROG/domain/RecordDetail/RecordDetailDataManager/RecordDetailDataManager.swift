@@ -27,4 +27,22 @@ class RecordDetailDataManager {
             }
         }
     }
+    func deleteRecordDataManager(_ parameter:DeleteRecordInput, _ recordId: Int, _ viewcontroller: RecordDetailViewController) {
+        AF.request(url! + "records/removal",
+                   method: .delete,
+                   parameters: parameter,
+                   encoder: JSONParameterEncoder.default,
+                   headers: nil)
+            .validate()
+            .responseDecodable(of: APIModel<ResultModel>.self) { response in
+                
+            switch response.result {
+            case .success(let result):
+                print("DEBUG: ", result)
+                if result.isSuccess! {viewcontroller.deleteRecordSuccessAPI()}
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
 }

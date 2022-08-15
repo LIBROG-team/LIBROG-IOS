@@ -59,11 +59,16 @@ extension RecordDetailViewController: UITableViewDelegate, UITableViewDataSource
         return 667
     }
 }
-// MARK: - 독서 상세 기록 조회 api
+// MARK: - 독서기록 api
 extension RecordDetailViewController {
+    // MARK: 독서기록 상세 조회 api
     func recordDetailSuccessAPI(_ result: RecordDetailModel) {
         self.recordData = result
         recordDetailTableView.reloadData()
         self.recordDetailNB.topItem?.title = result.name!
+    }
+    // MARK: 독서기록 삭제 api
+    func deleteRecordSuccessAPI() {
+        self.dismiss(animated: true, completion: nil)
     }
 }
