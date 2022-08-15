@@ -23,17 +23,18 @@ class ModifyProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        imagePickerController.delegate = self
         
+        // imagePicker delegate
+        imagePickerController.delegate = self
+        // tableview delegate
         modifyProfileTableView.delegate = self
         modifyProfileTableView.dataSource = self
-        
+        // tableview separatorStyle
         modifyProfileTableView.separatorStyle = .none
-        
+        // tableview register nib
         let modifyNib = UINib(nibName: "ModifyProfileTableViewCell", bundle: nil)
         modifyProfileTableView.register(modifyNib, forCellReuseIdentifier: "ModifyProfileTableViewCell")
-        
+        // tableview row height
         modifyProfileTableView.estimatedRowHeight = 800
         modifyProfileTableView.rowHeight = UITableView.automaticDimension
     }
@@ -65,6 +66,7 @@ class ModifyProfileViewController: UIViewController {
     }
     // 기본 이미지로 변경
     @objc func setDefaultImgButtonDidTap(_ sender: UIButton) {
+        isInit = false
         self.selectedPhoto = UIImage(named: "logo_profile")!
         self.dismiss(animated: true, completion: nil)
         modifyProfileTableView.reloadData()
@@ -79,10 +81,22 @@ class ModifyProfileViewController: UIViewController {
     }
     // MARK: 수정 완료 버튼 클릭
     @objc func modifyButtonDidTap(_ sender: UIButton) {
-        //TODO: 프로필 수정 api 호출
-        guard let ProfileVC = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(identifier: "ProfileVC") as? ProfileViewController else {return}
-        ProfileVC.modalPresentationStyle = .fullScreen
-        self.present(ProfileVC, animated: true, completion: nil)
+        // 프로필 수정 api 호출
+        if isInit {
+            // 프로필 사진 그대로 (string)
+            let userId = UserDefaults.standard.integer(forKey: "userId")
+            guard let name = self.nickName else {return}
+            guard let profileImgUrl = self.profileImgUrl else {return}
+            guard let introduction = self.introduction else {return}
+            let modifyProfileInput = ModifyProfileInput(idx: userId, name: name, introduction: introduction, profileImg: profileImgUrl)
+            ProfileDataManager().modifyProfileDataManager(modifyProfileInput,self)
+        } else {
+            // 프로필 사진 수정
+            guard let name = self.nickName else {return}
+            guard let selectedPhoto = self.selectedPhoto else {return}
+            guard let introduction = self.introduction else {return}
+            ProfileDataManager().modifyProfileDataManager(name, selectedPhoto, introduction, self)
+        }
     }
     @IBAction func goBackButtonDidTap(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
@@ -101,10 +115,12 @@ extension ModifyProfileViewController: UITableViewDelegate, UITableViewDataSourc
         }
         cell.selectionStyle = .none
         if isInit {
-            if let url = URL(string: self.profileImgUrl) {
+            if let imgUrl = self.profileImgUrl {
+                let url = URL(string: imgUrl)
                 cell.profileImageView.kf.setImage(with: url, placeholder: UIImage(named: "logo22%"))
             }
-            isInit = false
+            if let name = self.nickName { cell.nickNameTextField.text = name }
+            if let intro = self.introduction {cell.introTextField.text = intro}
         } else {
             if let photo = self.selectedPhoto {
                 cell.profileImageView.image = photo
@@ -136,6 +152,7 @@ extension ModifyProfileViewController: MDCBottomSheetControllerDelegate {
 // MARK: - 프로필 이미지 선택 -> 앨범 선택 후
 extension ModifyProfileViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        isInit = false
         self.selectedPhoto = UIImage()
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             self.selectedPhoto = image
@@ -145,5 +162,16 @@ extension ModifyProfileViewController : UIImagePickerControllerDelegate, UINavig
             let urlStr = imageUrl.absoluteString
         }
         self.dismiss(animated: true, completion: nil)
+    }
+}
+//MARK: - 프로필 수정 api
+extension ModifyProfileViewController {
+    func modifyProfileSuccessAPI(_ result: APIModel<ResultModel>) {
+        if result.isSuccess! {
+            self.dismiss(animated: true, completion: nil)
+        } else {
+            guard let errorMessage = result.message else {return}
+            DialogManager().alertErrorDialog(errorMessage, self)
+        }
     }
 }

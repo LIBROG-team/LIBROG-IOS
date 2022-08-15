@@ -44,6 +44,10 @@ class ProfileViewController: UIViewController {
         ProfileDataManager().statisticDataManager(self)
         ProfileDataManager().introDataManager(self)
     }
+    override func viewDidAppear(_ animated: Bool) {
+        ProfileDataManager().introDataManager(self)
+        ProfileDataManager().statisticDataManager(self)
+    }
     //MARK: Actions
     // 환경설정 페이지로 이동
     @IBAction func settingButtonDidTap(_ sender: UIButton) {
@@ -155,6 +159,8 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             if loginType == nil {
                 guard let ModifyProfileVC = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(identifier: "ModifyProfileVC") as? ModifyProfileViewController else {return}
                 ModifyProfileVC.profileImgUrl = self.introData.profileImgUrl
+                ModifyProfileVC.nickName = self.introData.name
+                ModifyProfileVC.introduction = self.introData.introduction
                 
                 ModifyProfileVC.modalPresentationStyle = .fullScreen
                 self.present(ModifyProfileVC, animated: true, completion: nil)

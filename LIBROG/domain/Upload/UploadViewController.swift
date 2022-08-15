@@ -45,9 +45,17 @@ class UploadViewController: UITableViewController {
     }
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // 총 검색결과가 0이라면 '검색 결과가 없습니다'
         if self.searchCount == 0 {return 1}
+        // 총 검색결과가 20개보다 적다면 검색결과만
         else if self.searchCount <= 20 {return dataArray.count}
-        else {return dataArray.count + 1}
+        // 총 검색결과가 20개보다 많다면 마지막에 '더보기'버튼
+        else {
+            // 총 검색결과가 20개 보다 많지만 검색결과가 다 보여졌을 때
+            if (self.searchCount <= dataArray.count) {return dataArray.count}
+            // 검색결과가 덜 보여졌을 땐 마지막에 '더보기'버튼
+            else {return dataArray.count + 1}
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

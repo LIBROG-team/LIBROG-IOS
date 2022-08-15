@@ -67,7 +67,12 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
 }
 //MARK: - 유저 탈퇴 api
 extension SettingViewController {
-    func userDeleteSuccessAPI(_ result: APIModel<APIModel<DeleteUserModel>>) {
+    func userDeleteSuccessAPI() {
+        // 앱 내 user data 삭제
+        UserDefaults.standard.set("", forKey: "accessToken")
+        UserDefaults.standard.set("", forKey: "refreshToken")
+        UserDefaults.standard.set(-1, forKey: "userId")
+        
         DialogManager().emailSendSuccessDialog("탈퇴되었습니다.", "로그인창으로 이동합니다.", self)
     }
 }

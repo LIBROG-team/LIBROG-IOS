@@ -23,7 +23,9 @@ class SettingDataManager {
             switch response.result {
             case .success(let result):
                 print("DEBUG: ", result)
-                viewcontroller.userDeleteSuccessAPI(result)
+                if (result.result?.isSuccess)! {
+                    viewcontroller.userDeleteSuccessAPI()
+                }
             case .failure(let error):
                 print(error.localizedDescription)
             }
