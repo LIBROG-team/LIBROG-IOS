@@ -52,6 +52,9 @@ class FlowerPotDetailViewController: UIViewController {
         setFlowerpotData()
         FlowerpotBookRecordDataManager().getFlowerpotBookRecord(flowerpotID!, self)
     }
+    override func viewDidAppear(_ animated: Bool) {
+        FlowerpotBookRecordDataManager().getFlowerpotBookRecord(self.flowerpotID!, self)
+    }
     // MARK: - Actions
     @IBAction func menuButtonDidTap(_ sender: UIBarButtonItem) {
         showActionSheet()

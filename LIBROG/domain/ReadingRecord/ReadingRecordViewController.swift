@@ -54,7 +54,7 @@ class ReadingRecordViewController: UIViewController {
         ReadingRecordDataManager().readingRecordDataManager(self)
     }
     override func viewDidAppear(_ animated: Bool) {
-        readingRecordCollectionView.reloadData()
+        ReadingRecordDataManager().readingRecordDataManager(self)
     }
 
 }
@@ -140,7 +140,9 @@ extension ReadingRecordViewController: UITableViewDelegate, UITableViewDataSourc
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
+// MARK: - 독서기록 api success
 extension ReadingRecordViewController {
+    // MARK: 유저의 모든 독서기록 조회
     func userReadingRecordSuccessAPI(_ result: [ReadingRecordData]) {
         self.bookArray = result
         readingRecordCollectionView.reloadData()

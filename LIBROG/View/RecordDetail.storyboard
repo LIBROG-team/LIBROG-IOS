@@ -28,7 +28,7 @@
                                                 <action selector="goBackButtonDidTap:" destination="Y6W-OH-hqX" id="qFl-PL-lHZ"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Item" image="pencil" id="Tru-RZ-umb">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="list" id="Tru-RZ-umb">
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
                                                 <action selector="goModifyButtonDidTap:" destination="Y6W-OH-hqX" id="UZR-WN-nd5"/>
@@ -138,7 +138,7 @@
     <resources>
         <image name="arrow-right" width="21" height="21"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
-        <image name="pencil" width="19" height="19"/>
+        <image name="list" width="21" height="20"/>
         <namedColor name="LIBROGColor">
             <color red="0.3919999897480011" green="0.74500000476837158" blue="0.47099998593330383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

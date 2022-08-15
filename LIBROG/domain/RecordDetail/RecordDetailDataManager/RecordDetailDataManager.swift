@@ -27,7 +27,7 @@ class RecordDetailDataManager {
             }
         }
     }
-    func deleteRecordDataManager(_ parameter:DeleteRecordInput, _ recordId: Int, _ viewcontroller: RecordDetailViewController) {
+    func deleteRecordDataManager(_ parameter:DeleteRecordInput, _ viewcontroller: RecordDetailViewController) {
         AF.request(url! + "records/removal",
                    method: .delete,
                    parameters: parameter,
