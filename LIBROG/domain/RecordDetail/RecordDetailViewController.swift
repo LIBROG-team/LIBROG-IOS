@@ -34,7 +34,7 @@ class RecordDetailViewController: UIViewController {
     @IBAction func goBackButtonDidTap(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
-    // 수정하러 가는 버튼
+    // 메뉴 버튼 클릭
     @IBAction func goModifyButtonDidTap(_ sender: UIBarButtonItem) {
         showActionSheet()
     }

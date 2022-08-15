@@ -29,23 +29,16 @@ class RecordDetailTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     func setRecordData(_ recordData: RecordDetailModel) {
-        guard let title = recordData.name else {return}
-        guard let author = recordData.author else {return}
-        guard let instruction = recordData.bookInstruction else {return}
-        guard let star = recordData.starRating else {return}
-        guard let quote = recordData.quote else {return}
-        guard let content = recordData.content else {return}
-        guard let thumbnailURL = recordData.bookImgUrl else {return}
-        
-        bookTitleLabel.text = title
-        authorLabel.text = String(author.joined(separator: " ") )
-        bookExplanationLabel.text = instruction
-        starRatingLabel.text = String(star)
-        starRatingView.rating = Double(star)
-        quoteLabel.text = quote
-        reportTextView.text = content
-        if let url = URL(string: thumbnailURL) {
-            bookImgView.kf.setImage(with: url, placeholder: UIImage(named: "logo22%"))
+        if let title = recordData.name {bookTitleLabel.text = title}
+        if let author = recordData.author {authorLabel.text = String(author.joined(separator: " ") )}
+        if let instruction = recordData.bookInstruction {bookExplanationLabel.text = instruction}
+        if let star = recordData.starRating {
+            starRatingLabel.text = String(star)
+            starRatingView.rating = Double(star)
+        }
+        if let quote = recordData.quote {quoteLabel.text = quote}
+        if let thumbnailURL = recordData.bookImgUrl {
+            bookImgView.kf.setImage(with: URL(string: thumbnailURL), placeholder: UIImage(named: "logo22%"))
         }
     }
 }

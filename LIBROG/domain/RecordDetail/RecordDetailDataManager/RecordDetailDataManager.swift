@@ -20,7 +20,7 @@ class RecordDetailDataManager {
                 
             switch response.result {
             case .success(let result):
-//                print("DEBUG: ", result.resblt)
+                print("독서 상세 조회: ", result)
                 viewcontroller.recordDetailSuccessAPI(result.result!)
             case .failure(let error):
                 print(error.localizedDescription)
