@@ -29,4 +29,20 @@ class FlowerpotBookRecordDataManager {
             }
         }
     }
+    func deleteFlowerpotDataManager(_ flowerpotId: Int, _ viewcontroller: FlowerPotDetailViewController) {
+        AF.request(url! + "flowerpots/flowerpotDelete/\(flowerpotId)",
+                   method: .delete,
+                   parameters: nil)
+            .validate()
+            .responseDecodable(of: APIModel<APIModel<ResultModel>>.self) { response in
+                
+            switch response.result {
+            case .success(let result):
+                print("DEBUG: ", result)
+                if (result.result?.isSuccess)! {viewcontroller.deleteFlowerpotSuccessAPI()}
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
 }

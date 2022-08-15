@@ -34,7 +34,7 @@ class FlowerPotDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // 최근 읽은 책 collectionView
+        // 유저의 화분에 기록된 책 collectionView
         recordBookCollectionView.delegate = self
         recordBookCollectionView.dataSource = self
         
@@ -52,8 +52,25 @@ class FlowerPotDetailViewController: UIViewController {
         setFlowerpotData()
         FlowerpotBookRecordDataManager().getFlowerpotBookRecord(flowerpotID!, self)
     }
+    // MARK: - Actions
+    @IBAction func menuButtonDidTap(_ sender: UIBarButtonItem) {
+        showActionSheet()
+    }
     @IBAction func goBackButtonDidTap(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
+    }
+    // MARK: - Functions
+    func showActionSheet() {
+        let actionSheet = UIAlertController(title: "화분 메뉴", message: "메뉴를 선택해주세요", preferredStyle: .actionSheet)
+        let deleteFlowerpot = UIAlertAction(title: "삭제", style: .destructive) { action in
+            // 화분 삭제 api 호출
+            FlowerpotBookRecordDataManager().deleteFlowerpotDataManager(self.flowerpotID!, self)
+        }
+        let actionCancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        
+        actionSheet.addAction(deleteFlowerpot)
+        actionSheet.addAction(actionCancel)
+        self.present(actionSheet, animated: true, completion: nil)
     }
     func setFlowerpotData() {
         flowerPotNameLabel.text = self.flowerpotName!
@@ -109,10 +126,15 @@ extension FlowerPotDetailViewController : UICollectionViewDelegate, UICollection
         self.present(recordDetailVC, animated: true, completion: nil)
     }
 }
-// MARK: - 유저의 화분에 기록된 책 정보 가져오기 API success
+// MARK: - 유저의 화분 API success
 extension FlowerPotDetailViewController {
+    // MARK: 유저의 화분에 기록된 책 정보 가져오기 API
     func userFlowepotBookRecordSuccessAPI(_ result : [ReadingRecordData]) {
         self.bookRecordArray = result
         recordBookCollectionView.reloadData()
+    }
+    // MARK: 화분 삭제 API
+    func deleteFlowerpotSuccessAPI() {
+        self.dismiss(animated: true, completion: nil)
     }
 }
