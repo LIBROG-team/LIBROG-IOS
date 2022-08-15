@@ -65,6 +65,7 @@ class ModifyProfileViewController: UIViewController {
     }
     // 기본 이미지로 변경
     @objc func setDefaultImgButtonDidTap(_ sender: UIButton) {
+        isInit = false
         self.selectedPhoto = UIImage(named: "logo_profile")!
         self.dismiss(animated: true, completion: nil)
         modifyProfileTableView.reloadData()
