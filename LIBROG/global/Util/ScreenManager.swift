@@ -15,6 +15,12 @@ class ScreenManager {
         tabBarController.modalPresentationStyle = .fullScreen
         viewcontroller.view.window?.windowScene?.keyWindow?.rootViewController = tabBarController
     }
+    func goMainPages(_ index: Int, _ viewcontroller: UIViewController) {
+        guard let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TabBarController") as? UITabBarController else {return}
+        tabBarController.selectedIndex = index
+        tabBarController.modalPresentationStyle = .fullScreen
+        viewcontroller.view.window?.windowScene?.keyWindow?.rootViewController = tabBarController
+    }
     func setLibrogButton(_ button: UIButton) {
         button.layer.borderColor = UIColor.lightGray.cgColor
         button.layer.borderWidth = 1

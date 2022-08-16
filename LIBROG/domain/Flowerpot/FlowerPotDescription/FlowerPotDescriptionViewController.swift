@@ -68,6 +68,6 @@ extension FlowerPotDescriptionViewController {
     }
     //MARK: 획득 화분에서 화분 추가 API
     func addAcqFlowerpotSuccessAPI() {
-        ScreenManager().goMain(self)
+        ScreenManager().goMainPages(3, self)
     }
 }
