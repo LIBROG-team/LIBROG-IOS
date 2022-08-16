@@ -37,6 +37,7 @@ class RecordDetailTableViewCell: UITableViewCell {
             starRatingView.rating = Double(star)
         }
         if let quote = recordData.quote {quoteLabel.text = quote}
+        if let content = recordData.content {reportTextView.text = content}
         if let thumbnailURL = recordData.bookImgUrl {
             bookImgView.kf.setImage(with: URL(string: thumbnailURL), placeholder: UIImage(named: "logo22%"))
         }
