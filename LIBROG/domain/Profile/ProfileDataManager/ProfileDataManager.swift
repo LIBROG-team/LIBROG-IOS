@@ -19,12 +19,12 @@ class ProfileDataManager {
                    method: .get,
                    parameters: nil)
             .validate()
-            .responseDecodable(of: IntroModel.self) { response in
+            .responseDecodable(of: APIModel<IntroModel>.self) { response in
                 
             switch response.result {
             case .success(let result):
                 print("DEBUG: ", result)
-                viewcontroller.introSuccessAPI(result)
+                if result.isSuccess! {viewcontroller.introSuccessAPI(result.result!)}
             case .failure(let error):
                 print(error.localizedDescription)
             }
