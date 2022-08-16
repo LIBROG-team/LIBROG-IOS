@@ -15,17 +15,16 @@ class MainPageDataManager{
     let userId = UserDefaults.standard.integer(forKey: "userId")
     
     //MARK: 메인페이지 화분 조회
-    func mainPageFlowerpotDataManager(_ userIdx: Int, _ viewcontroller : MainViewController) {
-        AF.request(url! + "flowerpots/\(userIdx)",
+    func mainPageFlowerpotDataManager( _ viewcontroller : MainViewController) {
+        AF.request(url! + "flowerpots/flowerpotMain/\(userId)",
                    method: .get,
                    parameters: nil)
             .validate()
-            .responseDecodable(of: APIModel<[FlowerpotData]>.self) { response in
+            .responseDecodable(of: APIModel<FlowerpotData>.self) { response in
                 
             switch response.result {
             case .success(let result):
-//                print("DEBUG: ", result.result[1])
-                viewcontroller.userFlowerPotSuccessAPI(result.result!)
+                if result.isSuccess! { viewcontroller.userFlowerPotSuccessAPI(result.result!) }
             case .failure(let error):
                 print(error.localizedDescription)
             }

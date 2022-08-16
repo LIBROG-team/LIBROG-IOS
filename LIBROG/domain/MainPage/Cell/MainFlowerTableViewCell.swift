@@ -23,27 +23,22 @@ class MainFlowerTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    public func setUpData(_ cellData: FlowerpotData) {
-//            let imgBaseURL = "https://hup-bucket.s3.ap-northeast-2.amazonaws.com/"
-        
-        guard let startDateStr = cellData.startDate else {return}
-        guard let flowerpotName = cellData.name else {return}
-        guard let imgUrlStr = cellData.flowerImgUrl else {return}
-         
-        flowerNameLabel.text = flowerpotName // 꽃 이름
-        // 꽃 이미지 출력
-        if let url = URL(string: imgUrlStr) {
-            flowerImageView.kf.setImage(with: url, placeholder: UIImage(named: "logo22%"))
+    public func setUpMainFlowerpotData(_ cellData: FlowerpotData) {
+        if let flowerpotName = cellData.name {flowerNameLabel.text = flowerpotName}
+        if let imgUrlStr = cellData.flowerImgUrl {
+            flowerImageView.kf.setImage(with: URL(string: imgUrlStr), placeholder: UIImage(named: "logo_launchScreen_white"))
         }
-        // 날짜 계산 (독서 00일차)
-//        let startDateStrWithNoT = startDateStr.replacingOccurrences(of: "T", with: " ")
-        let startDateStrWithNoT = String(startDateStr.split(separator: "T")[0])
-        let startDate = startDateStrWithNoT.toDate()
-        let offsetComps = Calendar.current.dateComponents([.year,.month,.day], from: startDate!, to: Date())
-        if case let (y?, m?, d?) = (offsetComps.year, offsetComps.month, offsetComps.day) {
-            print("\(y)년 \(m)월 \(d)일 만큼 차이남")
-            bookDateLabel.text = "독서 \(d)일차"
-        }
+//        // 날짜 계산 (독서 00일차)
+////        let startDateStrWithNoT = startDateStr.replacingOccurrences(of: "T", with: " ")
+//        let startDateStrWithNoT = String(startDateStr.split(separator: "T")[0])
+//        let startDate = startDateStrWithNoT.toDate()
+//        let offsetComps = Calendar.current.dateComponents([.year,.month,.day], from: startDate!, to: Date())
+//        if case let (y?, m?, d?) = (offsetComps.year, offsetComps.month, offsetComps.day) {
+//            print("\(y)년 \(m)월 \(d)일 만큼 차이남")
+//            bookDateLabel.text = "독서 \(d)일차"
+//        }
     }
-    
+    public func setUpMainPageLabelData() {
+        
+    }
 }

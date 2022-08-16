@@ -29,10 +29,11 @@ class MainViewController: UIViewController {
         let flowerNib = UINib(nibName: "MainFlowerTableViewCell", bundle: nil)
         MainTableView.register(flowerNib, forCellReuseIdentifier: "MainFlowerTableViewCell")
         
-        let userId = UserDefaults.standard.integer(forKey: "userId")
-        MainPageDataManager().mainPageFlowerpotDataManager(userId, self)
+        MainPageDataManager().mainPageFlowerpotDataManager(self)
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        MainPageDataManager().mainPageFlowerpotDataManager(self)
+    }
     private func setupView() {
         mainBottomVC = storyboard?.instantiateViewController(identifier: "MainBottomVC", creator: { (coder) -> MainBottomViewController? in
             return MainBottomViewController(coder: coder)
@@ -59,7 +60,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         cell.selectionStyle = .none
         if let cellData = self.flowerpotData {
             // if data exists
-            cell.setUpData(cellData)
+            cell.setUpMainFlowerpotData(cellData)
         }
         return cell
     }
@@ -75,8 +76,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 // MARK: - API success
 extension MainViewController {
     //MARK: 유저의 화분 정보 가져오기 API success
-    func userFlowerPotSuccessAPI(_ result : [FlowerpotData]) {
-        if result.count != 0 {self.flowerpotData = result[0]}
+    func userFlowerPotSuccessAPI(_ result : FlowerpotData) {
+        self.flowerpotData = result
         MainTableView.reloadData()
     }
 }
