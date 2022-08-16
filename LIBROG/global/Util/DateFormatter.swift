@@ -10,7 +10,7 @@ import Foundation
 extension String {
     func toDate() -> Date? { //"yyyy-MM-dd HH:mm:ss"
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd 00:00:00.000Z"
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         dateFormatter.timeZone = TimeZone(identifier: "UTC")
         if let date = dateFormatter.date(from: self) {
             return date

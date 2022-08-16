@@ -36,9 +36,10 @@ class MainFlowerTableViewCell: UITableViewCell {
             flowerImageView.kf.setImage(with: url, placeholder: UIImage(named: "logo22%"))
         }
         // 날짜 계산 (독서 00일차)
-        let startDateStrWithNoT = startDateStr.replacingOccurrences(of: "T", with: " ")
-        let startDate = startDateStrWithNoT.toDate()!
-        let offsetComps = Calendar.current.dateComponents([.year,.month,.day], from: startDate, to: Date())
+//        let startDateStrWithNoT = startDateStr.replacingOccurrences(of: "T", with: " ")
+        let startDateStrWithNoT = String(startDateStr.split(separator: "T")[0])
+        let startDate = startDateStrWithNoT.toDate()
+        let offsetComps = Calendar.current.dateComponents([.year,.month,.day], from: startDate!, to: Date())
         if case let (y?, m?, d?) = (offsetComps.year, offsetComps.month, offsetComps.day) {
             print("\(y)년 \(m)월 \(d)일 만큼 차이남")
             bookDateLabel.text = "독서 \(d)일차"

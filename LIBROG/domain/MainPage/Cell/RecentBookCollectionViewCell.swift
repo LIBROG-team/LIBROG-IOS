@@ -18,18 +18,22 @@ class RecentBookCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    // MARK: 테이블뷰의 셀이 재사용되기 전 호출되는 함수
+    // 여기서 property들을 초기화해준다.
+    override func prepareForReuse() {
+        super.prepareForReuse()
+
+        bookTitleLabel.text = nil
+        authorLabel.text = nil
+        dateLabel.text = nil
+        bookImageView.image = UIImage()
+    }
     func setRecentBookData(_ bookData: RecentBookModel) {
-        guard let title = bookData.bookName else {return}
-        guard let author = bookData.author else {return}
-        guard let date = bookData.recordedDate else {return}
-        guard let bookImg = bookData.bookImgUrl else {return}
-        
-        bookTitleLabel.text = title
-        authorLabel.text = String(author.joined(separator: " ") )
-        dateLabel.text = String(date.split(separator: "T")[0])
-        // 최근 읽은 책 이미지 출력
-        if let url = URL(string: bookImg) {
-            bookImageView.kf.setImage(with: url, placeholder: UIImage(named: "logo_launchScreen_white"))
+        if let title = bookData.bookName { bookTitleLabel.text = title }
+        if let author = bookData.author { authorLabel.text = String(author.joined(separator: " ") ) }
+        if let date = bookData.recordedDate { dateLabel.text = String(date.split(separator: "T")[0]) }
+        if let bookImg = bookData.bookImgUrl {
+            bookImageView.kf.setImage(with: URL(string: bookImg), placeholder: UIImage(named: "logo_launchScreen_white"))
         }
     }
 }

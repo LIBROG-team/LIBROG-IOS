@@ -54,6 +54,12 @@ class MainBottomViewController: UIViewController {
             $0.bottom.equalTo(noticeCollectionView.snp.bottom).offset(0)
         }
     }
+    override func viewDidAppear(_ animated: Bool) {
+        // API
+        MainPageDataManager().recentBookDataManager(self)
+        MainPageDataManager().noticeDataManager(self)
+        MainPageDataManager().recommendBookDataManager(self)
+    }
 }
 // MARK: - 메인페이지의 하단 collectionView delegate
 extension MainBottomViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

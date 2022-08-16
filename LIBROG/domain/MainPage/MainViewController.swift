@@ -30,7 +30,7 @@ class MainViewController: UIViewController {
         MainTableView.register(flowerNib, forCellReuseIdentifier: "MainFlowerTableViewCell")
         
         let userId = UserDefaults.standard.integer(forKey: "userId")
-//        MainPageDataManager().mainPageFlowerpotDataManager(userId, self)
+        MainPageDataManager().mainPageFlowerpotDataManager(userId, self)
     }
     
     private func setupView() {
