@@ -16,12 +16,12 @@ class MainBottomViewController: UIViewController {
     @IBOutlet weak var recentBookLabel: PaddingLabel!
     @IBOutlet weak var firstSeparatorView: UIView!
     @IBOutlet weak var recentBookAndNoticeHeight: NSLayoutConstraint!
-    @IBOutlet weak var noticePageControl: UIPageControl!
     
     var recentBookArray: [RecentBookModel]!
     var noticeArray: [NoticeModel]!
     var recommendArray: [RecommendBookModel]!
-    var currentPage = 0
+    
+    private let pageControl = UIPageControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,17 +33,26 @@ class MainBottomViewController: UIViewController {
         todaySuggestCollectionView.dataSource = self
         noticeCollectionView.delegate = self
         noticeCollectionView.dataSource = self
-        
+        // collectionView nibs
         let recentBookNib = UINib(nibName: "RecentBookCollectionViewCell", bundle: nil)
         recentBookCollectionView.register(recentBookNib, forCellWithReuseIdentifier: RecentBookCollectionViewCell.identifier)
         let todaySuggestionNib = UINib(nibName: "TodaySuggestCollectionViewCell", bundle: nil)
         todaySuggestCollectionView.register(todaySuggestionNib, forCellWithReuseIdentifier: TodaySuggestCollectionViewCell.identifier)
         let noticeNib = UINib(nibName: "NoticeCollectionViewCell", bundle: nil)
         noticeCollectionView.register(noticeNib, forCellWithReuseIdentifier: NoticeCollectionViewCell.identifier)
-        
+        // API
         MainPageDataManager().recentBookDataManager(self)
         MainPageDataManager().noticeDataManager(self)
         MainPageDataManager().recommendBookDataManager(self)
+        // notice collectionView PageControl
+        view.addSubview(pageControl)
+        pageControl.hidesForSinglePage = true
+        pageControl.numberOfPages = noticeArray?.count ?? 0
+        pageControl.pageIndicatorTintColor = .darkGray
+        pageControl.snp.makeConstraints {
+            $0.centerX.equalTo(noticeCollectionView)
+            $0.bottom.equalTo(noticeCollectionView.snp.bottom).offset(0)
+        }
     }
 }
 // MARK: - 메인페이지의 하단 collectionView delegate
@@ -108,6 +117,13 @@ extension MainBottomViewController : UICollectionViewDelegate, UICollectionViewD
         }
         else  { return CGSize(width: 0, height: 0)}
     }
+    // MARK: 공지사항 collectionView의 pageControl
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        if(scrollView == noticeCollectionView) {
+            let page = Int(targetContentOffset.pointee.x / scrollView.frame.width)
+            self.pageControl.currentPage = page
+        }
+      }
     // 셀 선택
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if(collectionView == noticeCollectionView) {
@@ -142,6 +158,7 @@ extension MainBottomViewController {
     // MARK: 활성화된 공지사항 api
     func noticeSuccessAPI(_ result: [NoticeModel]) {
         self.noticeArray = result
+        pageControl.numberOfPages = noticeArray?.count ?? 0
         noticeCollectionView.reloadData()
     }
     // MARK: 추천 책 api
