@@ -27,7 +27,16 @@ class FlowerpotTableViewCell: UITableViewCell {
         
         // Configure the view for the selected state
     }
-    
+    // MARK: 테이블뷰의 셀이 재사용되기 전 호출되는 함수
+    // 여기서 property들을 초기화해준다.
+    override func prepareForReuse() {
+        super.prepareForReuse()
+
+        imageViewFlowerpot.image = UIImage()
+        labelFlowerName.text = nil
+        labelDate.text = nil
+        labelBookNum.text = nil
+    }
     override func layoutSubviews() {
         // 테이블 뷰 셀 사이의 간격
         super.layoutSubviews()
