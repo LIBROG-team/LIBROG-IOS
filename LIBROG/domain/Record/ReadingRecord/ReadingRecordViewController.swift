@@ -10,28 +10,11 @@ import MaterialComponents.MaterialBottomSheet
 
 class ReadingRecordViewController: UIViewController {
     @IBOutlet weak var readingRecordCollectionView: UICollectionView!
-    
     @IBOutlet weak var filterButton: UIButton!
+    
     let filterArray = ["최근 기록 순", "별점 높은 순", "제목 순"]
     let filterArrayUrl = ["recent", "rating", "title"]
     var bookArray: [ReadingRecordData]!
-    
-    @IBAction func scrollToTop_button(_ sender: Any) {
-        readingRecordCollectionView.scrollToItem(at: IndexPath(item: -1, section: 0), at: .init(rawValue: 0), animated: true)
-    }
-    @IBAction func sorting_button(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "ReadingRecordBottomVC") as! ReadingRecordBottomViewController
-        let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: vc)
-        self.present(bottomSheet, animated: true, completion: nil)
-        vc.setTableViewDataSourceDelegate(dataSourceDelegate: self)
-
-        // 아래로 드래그해도 안닫히게 하기
-        bottomSheet.dismissOnDraggingDownSheet = false
-        // 높이 
-        bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = 177
-        // 뒤에 배경 컬러
-        bottomSheet.scrimColor = UIColor(red: 0.25, green: 0.25, blue: 0.25, alpha: 0.54)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,13 +33,34 @@ class ReadingRecordViewController: UIViewController {
         
         readingRecordCollectionView.collectionViewLayout = flowLayout
         readingRecordCollectionView.reloadData()
-        
-        ReadingRecordDataManager().readingRecordDataManager(self)
+        // 초기 화면은 '최근 기록 순' 정렬
+        ReadingRecordDataManager().readingRecordFilterDataManager(filterArrayUrl[0], self)
     }
     override func viewDidAppear(_ animated: Bool) {
-        ReadingRecordDataManager().readingRecordDataManager(self)
+        // 선택된 정렬 필터에 따른 독서기록 보이기
+        let filterStr = filterButton.titleLabel?.text
+        for i in 0...2 {
+            if filterStr! == filterArray[i] {ReadingRecordDataManager().readingRecordFilterDataManager(filterArrayUrl[i], self)}
+        }
     }
+    // MARK: - Actions
+    @IBAction func scrollToTop_button(_ sender: Any) {
+        readingRecordCollectionView.scrollToItem(at: IndexPath(item: -1, section: 0), at: .init(rawValue: 0), animated: true)
+    }
+    @IBAction func sorting_button(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ReadingRecordBottomVC") as! ReadingRecordBottomViewController
+        let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: vc)
+        self.present(bottomSheet, animated: true, completion: nil)
+        vc.setTableViewDataSourceDelegate(dataSourceDelegate: self)
 
+        // 아래로 드래그해도 안닫히게 하기
+        bottomSheet.dismissOnDraggingDownSheet = false
+        // 높이 
+        bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = 177
+        // 뒤에 배경 컬러
+        bottomSheet.scrimColor = UIColor(red: 0.25, green: 0.25, blue: 0.25, alpha: 0.54)
+    }
+    
 }
 // MARK: -  독서기록 CollectionView delegate
 extension ReadingRecordViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -149,7 +153,7 @@ extension ReadingRecordViewController {
     }
     //MARK: 독서기록 필터 정렬 API
     func userReadingRecordFilterSuccessAPI(_ result: [ReadingRecordData]) {
-        self.bookArray.removeAll()
+        if var bookArray = self.bookArray { bookArray.removeAll() }
         self.bookArray = result
         readingRecordCollectionView.reloadData()
     }
