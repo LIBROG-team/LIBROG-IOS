@@ -28,7 +28,7 @@
                                                 <action selector="goBackButtonDidTap:" destination="Y6W-OH-hqX" id="qFl-PL-lHZ"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Item" image="list" id="Tru-RZ-umb">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="pencil" id="Tru-RZ-umb">
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
                                                 <action selector="goModifyButtonDidTap:" destination="Y6W-OH-hqX" id="UZR-WN-nd5"/>
@@ -80,6 +80,12 @@
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
                                                 <action selector="goBackButtonDidTap:" destination="38b-Ua-tRB" id="ESK-pA-NDi"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="trash" id="mKP-fS-3Az">
+                                            <color key="tintColor" systemColor="labelColor"/>
+                                            <connections>
+                                                <action selector="deleteRecordButtonDidTap:" destination="38b-Ua-tRB" id="fob-Nn-kmd"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -138,10 +144,14 @@
     <resources>
         <image name="arrow-right" width="21" height="21"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
-        <image name="list" width="21" height="20"/>
+        <image name="pencil" width="19" height="19"/>
+        <image name="trash" width="24" height="24"/>
         <namedColor name="LIBROGColor">
             <color red="0.3919999897480011" green="0.74500000476837158" blue="0.47099998593330383" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

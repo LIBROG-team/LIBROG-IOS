@@ -21,25 +21,7 @@ class RecordDetailDataManager {
             switch response.result {
             case .success(let result):
                 print("독서 상세 조회: ", result)
-                viewcontroller.recordDetailSuccessAPI(result.result!)
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
-    }
-    func deleteRecordDataManager(_ parameter:DeleteRecordInput, _ viewcontroller: RecordDetailViewController) {
-        AF.request(url! + "records/removal",
-                   method: .delete,
-                   parameters: parameter,
-                   encoder: JSONParameterEncoder.default,
-                   headers: nil)
-            .validate()
-            .responseDecodable(of: APIModel<ResultModel>.self) { response in
-                
-            switch response.result {
-            case .success(let result):
-                print("DEBUG: ", result)
-                if result.isSuccess! {viewcontroller.deleteRecordSuccessAPI()}
+                if result.isSuccess! {viewcontroller.recordDetailSuccessAPI(result.result!)}
             case .failure(let error):
                 print(error.localizedDescription)
             }

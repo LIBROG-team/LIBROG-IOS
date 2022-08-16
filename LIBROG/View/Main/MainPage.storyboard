@@ -78,7 +78,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wa8-7V-a6E">
-                                <rect key="frame" x="29" y="114" width="385" height="138"/>
+                                <rect key="frame" x="25" y="114" width="389" height="138"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="138" id="hjV-hz-Xfy"/>
@@ -217,11 +217,11 @@
                             <constraint firstItem="1Yu-DM-nZQ" firstAttribute="top" secondItem="IfX-SK-XMn" secondAttribute="bottom" constant="22" id="B5B-cd-jN1"/>
                             <constraint firstItem="xi8-I2-e28" firstAttribute="centerX" secondItem="hks-Sf-38n" secondAttribute="centerX" id="EHU-fu-T4N"/>
                             <constraint firstItem="hks-Sf-38n" firstAttribute="trailing" secondItem="IfX-SK-XMn" secondAttribute="trailing" constant="25" id="G5M-T6-goB"/>
-                            <constraint firstItem="wa8-7V-a6E" firstAttribute="leading" secondItem="hks-Sf-38n" secondAttribute="leading" constant="29" id="HYK-fR-BW9"/>
                             <constraint firstItem="skY-GP-1cR" firstAttribute="leading" secondItem="hks-Sf-38n" secondAttribute="leading" constant="25" id="Jih-Je-e9P"/>
                             <constraint firstItem="1Yu-DM-nZQ" firstAttribute="leading" secondItem="skY-GP-1cR" secondAttribute="leading" id="Kza-DJ-bCo"/>
                             <constraint firstItem="RWM-kx-SHV" firstAttribute="leading" secondItem="hks-Sf-38n" secondAttribute="leading" constant="25" id="LKR-8g-AIr"/>
                             <constraint firstItem="W62-cf-IMO" firstAttribute="trailing" secondItem="RWM-kx-SHV" secondAttribute="trailing" id="YTm-64-dXm"/>
+                            <constraint firstItem="wa8-7V-a6E" firstAttribute="leading" secondItem="skY-GP-1cR" secondAttribute="leading" id="b3s-di-pDc"/>
                             <constraint firstItem="W62-cf-IMO" firstAttribute="top" secondItem="RWM-kx-SHV" secondAttribute="bottom" constant="22" id="bAO-sX-wJD"/>
                             <constraint firstItem="RWM-kx-SHV" firstAttribute="top" secondItem="1Yu-DM-nZQ" secondAttribute="bottom" constant="14" id="cTx-wl-qFt"/>
                             <constraint firstItem="IfX-SK-XMn" firstAttribute="top" secondItem="wa8-7V-a6E" secondAttribute="bottom" constant="22" id="cgl-NL-02O"/>
