@@ -20,11 +20,14 @@ class MainPageDataManager{
                    method: .get,
                    parameters: nil)
             .validate()
-            .responseDecodable(of: APIModel<FlowerpotData>.self) { response in
+            .responseDecodable(of: APIModel<MainPageFlowerpot>.self) { response in
                 
             switch response.result {
             case .success(let result):
-                if result.isSuccess! { viewcontroller.userFlowerPotSuccessAPI(result.result!) }
+                if result.isSuccess! {
+                    viewcontroller.userFlowerPotSuccessAPI(result.result!)
+//                    print("메인페이지 화분 조회: ", result)
+                }
             case .failure(let error):
                 print(error.localizedDescription)
             }

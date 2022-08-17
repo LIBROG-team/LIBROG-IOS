@@ -26,8 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UserDefaults.standard.set("e9e63756ebc5c4ceeac89815995e2fd8", forKey: "KAKAO_REST_API_KEY")
         UserDefaults.standard.set("https://dev.librog.shop/", forKey: "url")
-        UserDefaults.standard.set("", forKey: "accessToken")
-        UserDefaults.standard.set("", forKey: "refreshToken")
+//        UserDefaults.standard.set("", forKey: "accessToken")
+//        UserDefaults.standard.set("", forKey: "refreshToken")
         
 //        UserDefaults.standard.set(-1, forKey: "userId")  // 로그인되지 않은 상태의 userID를 -1로 설정
         

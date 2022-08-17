@@ -24,7 +24,7 @@ class ProfileDataManager {
             switch response.result {
             case .success(let result):
                 print("DEBUG: ", result)
-                if result.isSuccess! {viewcontroller.introSuccessAPI(result.result!)}
+//                if result.isSuccess! {viewcontroller.introSuccessAPI(result.result!)}
             case .failure(let error):
                 print(error.localizedDescription)
             }

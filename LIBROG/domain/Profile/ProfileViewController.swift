@@ -70,9 +70,9 @@ class ProfileViewController: UIViewController {
             else {}
         }
         // 앱 내 user data 삭제
-        UserDefaults.standard.set("", forKey: "accessToken")
-        UserDefaults.standard.set("", forKey: "refreshToken")
-        UserDefaults.standard.set(-1, forKey: "userId")
+        UserDefaults.standard.removeObject(forKey: "accessToken")
+        UserDefaults.standard.removeObject(forKey: "refreshToken")
+        UserDefaults.standard.removeObject(forKey: "userId")
         // 로그인 페이지로 전환
         guard let loginVC = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(identifier: "LoginVC") as? LoginViewController else {return}
         loginVC.modalPresentationStyle = .fullScreen

@@ -33,6 +33,7 @@ class FlowerpotTableViewCell: UITableViewCell {
         super.prepareForReuse()
 
         imageViewFlowerpot.image = UIImage()
+        imageViewFlowerpot.backgroundColor = nil
         labelFlowerName.text = nil
         labelDate.text = nil
         labelBookNum.text = nil
@@ -52,5 +53,6 @@ class FlowerpotTableViewCell: UITableViewCell {
         if let url = URL(string: data.flowerImgUrl!) {
             imageViewFlowerpot.kf.setImage(with: url, placeholder: UIImage(named: "logo22%"))
         }
+        if let backgroundColor = data.backgroundColor {imageViewFlowerpot.backgroundColor = UIColor(hex: backgroundColor)}
     }
 }

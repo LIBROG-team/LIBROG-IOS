@@ -115,6 +115,7 @@
 		23ADA92828847B830066D15A /* FlowerPotSearchTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ADA92728847B830066D15A /* FlowerPotSearchTabViewController.swift */; };
 		23ADA92B28847FC80066D15A /* FlowerpotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ADA92A28847FC80066D15A /* FlowerpotModel.swift */; };
 		23ADA92D288481080066D15A /* MainPageDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ADA92C288481080066D15A /* MainPageDataManager.swift */; };
+		23C7087628ACBA26000BD542 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C7087528ACBA26000BD542 /* UIColorExtension.swift */; };
 		23C8B4A6286EF2F300432141 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C8B4A5286EF2F300432141 /* PaddingLabel.swift */; };
 		23C8B4AC286EF41400432141 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C8B4AB286EF41400432141 /* MainViewController.swift */; };
 		23C8B4B0286EF76F00432141 /* MainFlowerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C8B4AE286EF76F00432141 /* MainFlowerTableViewCell.swift */; };
@@ -290,6 +291,7 @@
 		23ADA92728847B830066D15A /* FlowerPotSearchTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerPotSearchTabViewController.swift; sourceTree = "<group>"; };
 		23ADA92A28847FC80066D15A /* FlowerpotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerpotModel.swift; sourceTree = "<group>"; };
 		23ADA92C288481080066D15A /* MainPageDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageDataManager.swift; sourceTree = "<group>"; };
+		23C7087528ACBA26000BD542 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		23C8B4A5286EF2F300432141 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		23C8B4AB286EF41400432141 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		23C8B4AE286EF76F00432141 /* MainFlowerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlowerTableViewCell.swift; sourceTree = "<group>"; };
@@ -863,6 +865,7 @@
 				23C8B4BA286EFF3900432141 /* CustomTabBarController.swift */,
 				23766E7D2870330D005EEA8E /* UIBezierPath.swift */,
 				2312074228A155E900A34A05 /* UILabelExtension.swift */,
+				23C7087528ACBA26000BD542 /* UIColorExtension.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -1306,6 +1309,7 @@
 				D0C2B089286E1FD600242E71 /* UIViewExtension.swift in Sources */,
 				23AB70B128900A9A00503366 /* ModifyRecordTableViewCell.swift in Sources */,
 				23A5B860287D7F81005413A3 /* NotAcheivedFlowerPotTableViewCell.swift in Sources */,
+				23C7087628ACBA26000BD542 /* UIColorExtension.swift in Sources */,
 				23F6107C2888134C00575D81 /* ReadingRecordDataManager.swift in Sources */,
 				23A5B86E287D9D5D005413A3 /* ResultTableViewCell.swift in Sources */,
 				239DE40428A4E7B100386151 /* LoginTableViewCell.swift in Sources */,

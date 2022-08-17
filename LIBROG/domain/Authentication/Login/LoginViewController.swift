@@ -40,6 +40,7 @@ class LoginViewController: UIViewController {
     // MARK: 자동 로그인 - userId의 값이 존재할 때
     override func viewDidAppear(_ animated: Bool) {
         let userId = UserDefaults.standard.integer(forKey: "userId")
+        print("userID::", userId)
         if userId > 0 {ScreenManager().goMain(self)}
     }
     //MARK: Actions

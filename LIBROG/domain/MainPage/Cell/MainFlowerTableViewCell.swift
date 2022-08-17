@@ -23,11 +23,12 @@ class MainFlowerTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    public func setUpMainFlowerpotData(_ cellData: FlowerpotData) {
+    public func setUpMainFlowerpotData(_ cellData: MainPageFlowerpot) {
         if let flowerpotName = cellData.name {flowerNameLabel.text = flowerpotName}
         if let imgUrlStr = cellData.flowerImgUrl {
             flowerImageView.kf.setImage(with: URL(string: imgUrlStr), placeholder: UIImage(named: "logo_launchScreen_white"))
         }
+        if let backgroundColor = cellData.backgroundColor {flowerImageView.backgroundColor = UIColor(hex: backgroundColor)}
 //        // 날짜 계산 (독서 00일차)
 ////        let startDateStrWithNoT = startDateStr.replacingOccurrences(of: "T", with: " ")
 //        let startDateStrWithNoT = String(startDateStr.split(separator: "T")[0])

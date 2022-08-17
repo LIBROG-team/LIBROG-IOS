@@ -15,7 +15,7 @@ class MainViewController: UIViewController {
     var fpc: FloatingPanelController!
     var mainBottomVC: MainBottomViewController! // 띄울 VC
     
-    var flowerpotData: FlowerpotData?
+    var flowerpotData: MainPageFlowerpot?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,7 +76,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 // MARK: - API success
 extension MainViewController {
     //MARK: 유저의 화분 정보 가져오기 API success
-    func userFlowerPotSuccessAPI(_ result : FlowerpotData) {
+    func userFlowerPotSuccessAPI(_ result : MainPageFlowerpot) {
         self.flowerpotData = result
         MainTableView.reloadData()
     }
