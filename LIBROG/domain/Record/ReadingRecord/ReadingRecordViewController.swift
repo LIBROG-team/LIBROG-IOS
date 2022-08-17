@@ -89,6 +89,7 @@ extension ReadingRecordViewController : UICollectionViewDelegate, UICollectionVi
         guard let recordDetailVC = UIStoryboard(name: "RecordDetail", bundle: nil).instantiateViewController(identifier: "RecordDetailVC") as? RecordDetailViewController else {return}
         let recordIdx = bookArray[indexPath.item].readingRecordIdx
         recordDetailVC.recordIdx = recordIdx
+        
         recordDetailVC.modalPresentationStyle = .fullScreen
         self.present(recordDetailVC, animated: true, completion: nil)
     }

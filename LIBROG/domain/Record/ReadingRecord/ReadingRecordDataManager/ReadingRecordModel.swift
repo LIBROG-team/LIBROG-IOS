@@ -6,7 +6,7 @@
 //
 
 struct ReadingRecordData: Decodable {
-    let readingRecordIdx:  Int?
+    let readingRecordIdx: Int?
     let bookIdx: Int?
     let flowerPotIdx: Int?
     let date: String?
