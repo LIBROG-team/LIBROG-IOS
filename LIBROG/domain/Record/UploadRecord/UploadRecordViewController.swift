@@ -57,10 +57,12 @@ extension UploadRecordViewController: UITableViewDelegate, UITableViewDataSource
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "UploadRecordTableViewCell", for: indexPath) as? UploadRecordTableViewCell else {
             return UITableViewCell()
         }
-        cell.setBookData(self.bookData)
+        if let bookData = self.bookData {cell.setBookData(bookData)}
         if isCompleteButtonTap == true {
-            cell.postRecord(self.bookData)
-            ScreenManager().goMain(self)
+            if let bookData = self.bookData {
+                cell.postRecord(bookData)
+                ScreenManager().goMain(self)
+            }
         }
         return cell
     }
