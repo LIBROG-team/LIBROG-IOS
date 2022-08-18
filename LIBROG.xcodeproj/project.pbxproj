@@ -302,6 +302,7 @@
 		23CC78D6288FCDAE0064DA7E /* UploadRecordInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRecordInput.swift; sourceTree = "<group>"; };
 		23CC78D8288FCE370064DA7E /* UploadRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRecordModel.swift; sourceTree = "<group>"; };
 		23CC78DA288FCEDE0064DA7E /* UploadRecordDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRecordDataManager.swift; sourceTree = "<group>"; };
+		23D0301628AE8EDB000CDB36 /* LIBROG.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LIBROG.entitlements; sourceTree = "<group>"; };
 		23DE9D6B28A56524009DF894 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		23DFD30C2878D9B1002AC8B0 /* UploadRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRecordViewController.swift; sourceTree = "<group>"; };
 		23DFD30E2878D9F4002AC8B0 /* UploadRecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRecordTableViewCell.swift; sourceTree = "<group>"; };
@@ -996,6 +997,7 @@
 		D0C2B04D286DC9BE00242E71 /* LIBROG */ = {
 			isa = PBXGroup;
 			children = (
+				23D0301628AE8EDB000CDB36 /* LIBROG.entitlements */,
 				23ADA909288467680066D15A /* View */,
 				23C8B4A8286EF39900432141 /* global */,
 				23C8B4A7286EF39000432141 /* domain */,
@@ -1584,9 +1586,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LIBROG/LIBROG.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B974XY47GZ;
+				DEVELOPMENT_TEAM = 69F5355JYF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LIBROG/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1613,9 +1616,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LIBROG/LIBROG.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B974XY47GZ;
+				DEVELOPMENT_TEAM = 69F5355JYF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LIBROG/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

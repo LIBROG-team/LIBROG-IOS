@@ -12,7 +12,6 @@ class RecordDetailDataManager {
     let url = UserDefaults.standard.string(forKey: "url")
     
     func recordDetailDataManager(_ recordId: Int, _ viewcontroller: RecordDetailViewController) {
-        print("record:", recordId)
         AF.request(url! + "records/\(recordId)",
                    method: .get,
                    parameters: nil)

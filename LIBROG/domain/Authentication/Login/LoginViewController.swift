@@ -9,6 +9,7 @@ import UIKit
 import KakaoSDKUser
 import KakaoSDKAuth
 import KakaoSDKCommon
+import AuthenticationServices
 
 class LoginViewController: UIViewController {
     
@@ -47,6 +48,16 @@ class LoginViewController: UIViewController {
     //MARK: 카카오 로그인
     @objc func kakaoLoginButtonDidTap(_ sender: UIButton) {
         KakaoLoginManager().kakaoLogin(self)
+    }
+    //MARK: 애플 로그인
+    @objc func appleLoginButtonDidTap(_ sender: UIButton) {
+        let request = ASAuthorizationAppleIDProvider().createRequest()
+        request.requestedScopes = [.fullName, .email]
+        
+        let controller = ASAuthorizationController(authorizationRequests: [request])
+        controller.delegate = self
+        controller.presentationContextProvider = self as? ASAuthorizationControllerPresentationContextProviding
+        controller.performRequests()
     }
     //MARK: 앱 로그인
     @objc func appLoginButtonDidTap(_ sender: UIButton) {
@@ -89,6 +100,7 @@ extension LoginViewController: UITableViewDelegate, UITableViewDataSource {
         cell.goRegisterButton.addTarget(self, action: #selector(goRegisterDidTap(_:)), for: .touchUpInside)
         cell.findPasswordButton.addTarget(self, action: #selector(findPasswordDidTap(_:)), for: .touchUpInside)
         cell.kakaoLoginButton.addTarget(self, action: #selector(kakaoLoginButtonDidTap(_:)), for: .touchUpInside)
+        cell.appleLoginButton.addTarget(self, action: #selector(appleLoginButtonDidTap(_:)), for: .touchUpInside)
         cell.loginButton.addTarget(self, action: #selector(appLoginButtonDidTap(_:)), for: .touchUpInside)
         cell.emailTextField.addTarget(self, action: #selector(emailTextFieldEditingChanged(_:)), for: .editingChanged)
         cell.passwordTextField.addTarget(self, action: #selector(passwordTextFieldEditingChanged(_:)), for: .editingChanged)
@@ -97,6 +109,22 @@ extension LoginViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 844
+    }
+}
+//MARK: - 애플 로그인 delegate
+extension LoginViewController : ASAuthorizationControllerDelegate  {
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        if let credential = authorization.credential as? ASAuthorizationAppleIDCredential {
+            let user = credential.user
+            print("👨‍🍳 \(user)")
+            if let email = credential.email {
+                print("✉️ \(email)")
+            }
+        }
+    }
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        print("error \(error)")
     }
 }
 //MARK: - login success API
