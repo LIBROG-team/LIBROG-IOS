@@ -33,6 +33,24 @@ class MainPageDataManager{
             }
         }
     }
+    //MARK: 메인페이지 문구 & 독서일차
+    func mainPageDayCountDataManager( _ viewcontroller : MainViewController) {
+        AF.request(url! + "records/mainpage/\(userId)",
+                   method: .get,
+                   parameters: nil)
+            .validate()
+            .responseDecodable(of: APIModel<MainPageDayCountModel>.self) { response in
+                
+            switch response.result {
+            case .success(let result):
+                if result.isSuccess! {
+                    viewcontroller.userDayCountSuccessAPI(result.result!)
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
     // MARK: 최근 읽은 책 조회
     func recentBookDataManager(_ viewcontroller : MainBottomViewController) {
         AF.request(url! + "records/bookRecords/\(userId)",

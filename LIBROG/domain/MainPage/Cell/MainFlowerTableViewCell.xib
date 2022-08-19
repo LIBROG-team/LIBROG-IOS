@@ -82,6 +82,7 @@
                 <outlet property="bookDateLabel" destination="YBu-kX-5hC" id="Oka-ho-tby"/>
                 <outlet property="flowerImageView" destination="LV9-kH-CYh" id="u7K-JF-lHM"/>
                 <outlet property="flowerNameLabel" destination="HZE-4U-iRU" id="zoq-wb-YR7"/>
+                <outlet property="mainMessageLabel" destination="pka-PM-gr7" id="8ly-54-94j"/>
             </connections>
             <point key="canvasLocation" x="208" y="233"/>
         </tableViewCell>

@@ -16,6 +16,8 @@ class MainViewController: UIViewController {
     var mainBottomVC: MainBottomViewController! // 띄울 VC
     
     var flowerpotData: MainPageFlowerpot?
+    var dayCnt: Int?
+    var mainMessage: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +64,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             // if data exists
             cell.setUpMainFlowerpotData(cellData)
         }
+        if let dayCnt = self.dayCnt {cell.dayCnt = dayCnt}
+        if let message = self.mainMessage {cell.mainMessage = message}
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -78,6 +82,12 @@ extension MainViewController {
     //MARK: 유저의 화분 정보 가져오기 API success
     func userFlowerPotSuccessAPI(_ result : MainPageFlowerpot) {
         self.flowerpotData = result
+        MainTableView.reloadData()
+    }
+    //MARK: 독서일차 & 문구 API success
+    func userDayCountSuccessAPI(_ result : MainPageDayCountModel) {
+        if let dayCnt = result.daycnt {self.dayCnt = dayCnt}
+        if let message = result.content {self.mainMessage = message}
         MainTableView.reloadData()
     }
 }

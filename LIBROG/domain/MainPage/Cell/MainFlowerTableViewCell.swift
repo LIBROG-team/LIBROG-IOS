@@ -8,11 +8,14 @@
 import UIKit
 
 class MainFlowerTableViewCell: UITableViewCell {
-
     @IBOutlet weak var bookDateLabel: UILabel!
+    @IBOutlet weak var mainMessageLabel: UILabel!
     @IBOutlet weak var flowerImageView: UIImageView!
-    
     @IBOutlet weak var flowerNameLabel: UILabel!
+    
+    var dayCnt: Int?
+    var mainMessage: String?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -29,15 +32,8 @@ class MainFlowerTableViewCell: UITableViewCell {
             flowerImageView.kf.setImage(with: URL(string: imgUrlStr), placeholder: UIImage(named: "logo_launchScreen_white"))
         }
         if let backgroundColor = cellData.backgroundColor {flowerImageView.backgroundColor = UIColor(hex: backgroundColor)}
-//        // 날짜 계산 (독서 00일차)
-////        let startDateStrWithNoT = startDateStr.replacingOccurrences(of: "T", with: " ")
-//        let startDateStrWithNoT = String(startDateStr.split(separator: "T")[0])
-//        let startDate = startDateStrWithNoT.toDate()
-//        let offsetComps = Calendar.current.dateComponents([.year,.month,.day], from: startDate!, to: Date())
-//        if case let (y?, m?, d?) = (offsetComps.year, offsetComps.month, offsetComps.day) {
-//            print("\(y)년 \(m)월 \(d)일 만큼 차이남")
-//            bookDateLabel.text = "독서 \(d)일차"
-//        }
+        if let dayCnt = self.dayCnt {bookDateLabel.text = "독서 \(dayCnt)일차"}
+        mainMessageLabel.text = self.mainMessage
     }
     public func setUpMainPageLabelData() {
         

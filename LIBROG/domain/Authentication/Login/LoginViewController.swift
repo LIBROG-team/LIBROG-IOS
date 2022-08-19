@@ -44,7 +44,7 @@ class LoginViewController: UIViewController {
         print("userID::", userId)
         if userId > 0 {ScreenManager().goMain(self)}
     }
-    //MARK: Actions
+    //MARK: - Actions
     //MARK: 카카오 로그인
     @objc func kakaoLoginButtonDidTap(_ sender: UIButton) {
         KakaoLoginManager().kakaoLogin(self)
