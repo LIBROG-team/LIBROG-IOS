@@ -129,11 +129,13 @@ extension LoginViewController : ASAuthorizationControllerDelegate  {
 }
 //MARK: - login success API
 extension LoginViewController {
+    // MARK: kakao login
     func loginSuccessAPI(_ result: KakaoLoginModel) {
         guard let userId = result.idx else {return}
         UserDefaults.standard.set(userId, forKey: "userId")
         ScreenManager().goMain(self)
     }
+    // MARK: app login
     func loginSuccessAPI(_ result: APIModel<AppLoginModel>) {
         guard let isSuccess = result.isSuccess else {return}
         // 앱 로그인 성공 시

@@ -129,18 +129,37 @@ extension RegisterProfileViewController : UIImagePickerControllerDelegate, UINav
         self.dismiss(animated: true, completion: nil)
     }
 }
-// MARK: - 회원가입 api
+// MARK: - 회원가입 api success
 extension RegisterProfileViewController {
     func RegisterSuccessAPI(_ result: APIModel<RegisterModel>) {
         if result.isSuccess! {
             guard let userId = result.result?.createdUserIdx else {return}
             UserDefaults.standard.set(userId, forKey: "userId")
-            ScreenManager().goMain(self)
+            // 앱 로그인 호출
+            let appLoginInput = AppLoginInput(email: self.email, password: self.password)
+            LoginDataManager().appLoginDataManager(appLoginInput, self)
         } else {
             if let errorMessage = result.message {
                 DialogManager().alertErrorDialog(errorMessage, self)
             }
         }
         
+    }
+    // MARK: app login
+    func loginSuccessAPI(_ result: APIModel<AppLoginModel>) {
+        guard let isSuccess = result.isSuccess else {return}
+        // 앱 로그인 성공 시
+        if isSuccess {
+            guard let accessToken = result.result?.jwt else {return}
+            guard let userId = result.result?.userIdx else {return}
+            UserDefaults.standard.set(accessToken, forKey: "accessToken")
+            UserDefaults.standard.set(userId, forKey: "userId")
+            ScreenManager().goMain(self)
+        }
+        // 앱 로그인 실패 시 오류 창
+        else  {
+            guard let errorMessage = result.message else {return}
+            DialogManager().alertErrorDialog(errorMessage, self)
+        }
     }
 }
