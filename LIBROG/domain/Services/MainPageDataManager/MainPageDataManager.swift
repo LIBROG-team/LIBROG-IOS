@@ -43,9 +43,10 @@ class MainPageDataManager{
                 
             switch response.result {
             case .success(let result):
-                if result.isSuccess! {
-                    viewcontroller.userDayCountSuccessAPI(result.result!)
-                }
+                print("DEBUG: ", result)
+//                if result.isSuccess! {
+//                    viewcontroller.userDayCountSuccessAPI(result.result!)
+//                }
             case .failure(let error):
                 print(error.localizedDescription)
             }
