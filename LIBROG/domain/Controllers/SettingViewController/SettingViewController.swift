@@ -58,9 +58,16 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
     }
     //클릭 이벤트 처리
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // MARK: 탈퇴하기 버튼 클릭
+        // MARK: 탈퇴하기 클릭
         if indexPath.row == 6 {
             DialogManager().alertQuitDialog("탈퇴하시겠습니까?", self)
+        }
+        // MARK: 비밀번호 변경 클릭
+        else if indexPath.row == 4 {
+            guard let changePwVC = UIStoryboard(name: "Password", bundle: nil).instantiateViewController(identifier: "ChangePwVC") as? ChangePasswordViewController else {return}
+            
+            changePwVC.modalPresentationStyle = .fullScreen
+            self.present(changePwVC, animated: true, completion: nil)
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }

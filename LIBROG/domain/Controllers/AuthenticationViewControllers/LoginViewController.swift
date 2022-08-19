@@ -66,7 +66,7 @@ class LoginViewController: UIViewController {
     }
     //MARK: 비밀번호 찾기
     @objc func findPasswordDidTap(_ sender: UIButton) {
-        guard let findPasswordVC = UIStoryboard(name: "FindPassword", bundle: nil).instantiateViewController(identifier: "FindPwVC") as? FindPasswordViewController else {return}
+        guard let findPasswordVC = UIStoryboard(name: "Password", bundle: nil).instantiateViewController(identifier: "FindPwVC") as? FindPasswordViewController else {return}
         findPasswordVC.modalPresentationStyle = .fullScreen
         self.present(findPasswordVC, animated: true, completion: nil)
     }
