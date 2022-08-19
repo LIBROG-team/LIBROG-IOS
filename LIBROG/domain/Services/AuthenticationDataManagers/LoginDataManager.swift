@@ -25,7 +25,7 @@ class LoginDataManager {
             switch response.result {
             case .success(let result):
                 print("DEBUG: ", result)
-                viewcontroller.loginSuccessAPI(result)
+                if result.isSuccess! {viewcontroller.loginSuccessAPI(result)}
             case .failure(let error):
                 print(error.localizedDescription)
             }
@@ -44,7 +44,7 @@ class LoginDataManager {
             switch response.result {
             case .success(let result):
                 print("DEBUG: ", result)
-                viewcontroller.loginSuccessAPI(result)
+                if result.isSuccess! {viewcontroller.loginSuccessAPI(result)}
             case .failure(let error):
                 print(error.localizedDescription)
             }
@@ -63,7 +63,26 @@ class LoginDataManager {
             switch response.result {
             case .success(let result):
                 print("DEBUG: ", result.result)
-                viewcontroller.loginSuccessAPI(result.result!)
+                if result.isSuccess! {viewcontroller.loginSuccessAPI(result.result!)}
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    //MARK: Apple 로그인
+    func appleLoginDataManager(_ parameter: AppleLoginInput, _ viewcontroller: LoginViewController) {
+        AF.request(url! + "users/apple/certificate/",
+                   method: .post,
+                   parameters: parameter,
+                   encoder: JSONParameterEncoder.default,
+                   headers: nil)
+            .validate()
+            .responseDecodable(of: APIModel<AppleLoginModel>.self) { response in
+                
+            switch response.result {
+            case .success(let result):
+                print("DEBUG: ", result.result)
+                if result.isSuccess! {viewcontroller.loginSuccessAPI(result.result!)}
             case .failure(let error):
                 print(error.localizedDescription)
             }

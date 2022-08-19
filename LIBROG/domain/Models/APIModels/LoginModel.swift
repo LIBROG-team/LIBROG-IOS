@@ -18,3 +18,12 @@ struct KakaoLoginModel: Decodable {
     let profileImgUrl: String?
     let loginType: String?
 }
+//MARK: - 애플 로그인 Model
+struct AppleLoginModel: Decodable {
+    let message: String?
+    let idx: Int?
+    let eamil: String?
+    let name: String?
+    let profileImgUrl: String?
+    let loginType: String?
+}

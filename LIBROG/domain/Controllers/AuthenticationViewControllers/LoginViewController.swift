@@ -114,12 +114,42 @@ extension LoginViewController: UITableViewDelegate, UITableViewDataSource {
 //MARK: - 애플 로그인 delegate
 extension LoginViewController : ASAuthorizationControllerDelegate  {
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
-        if let credential = authorization.credential as? ASAuthorizationAppleIDCredential {
-            let user = credential.user
-            print("👨‍🍳 \(user)")
-            if let email = credential.email {
-                print("✉️ \(email)")
-            }
+        switch authorization.credential {
+            case let appleIDCredential as ASAuthorizationAppleIDCredential:
+                // Create an account in your system.
+                let userIdentifier = appleIDCredential.user
+                let fullName = appleIDCredential.fullName
+                let email = appleIDCredential.email
+                
+                if  let authorizationCode = appleIDCredential.authorizationCode,
+                    let identityToken = appleIDCredential.identityToken,
+                    // authString: authorizationCode를 String으로 변환
+                    let authString = String(data: authorizationCode, encoding: .utf8),
+                    let tokenString = String(data: identityToken, encoding: .utf8) {
+                    print("authorizationCode: \(authorizationCode)")
+                    print("identityToken: \(identityToken)")
+                    print("authString: \(authString)")
+                    print("tokenString: \(tokenString)")
+                    
+                    //MARK: 리브로그 애플 로그인 api 호출
+                    let appleLoginInput = AppleLoginInput(code: authString)
+                    LoginDataManager().appleLoginDataManager(appleLoginInput, self)
+                }
+                
+                print("useridentifier: \(userIdentifier)")
+                print("fullName: \(fullName)")
+                print("✉️ email: \(email)")
+                
+            case let passwordCredential as ASPasswordCredential:
+                // Sign in using an existing iCloud Keychain credential.
+                let username = passwordCredential.user
+                let password = passwordCredential.password
+                
+                print("👨‍🍳 username: \(username)")
+                print("password: \(password)")
+                
+            default:
+                break
         }
     }
     
@@ -131,6 +161,12 @@ extension LoginViewController : ASAuthorizationControllerDelegate  {
 extension LoginViewController {
     // MARK: kakao login
     func loginSuccessAPI(_ result: KakaoLoginModel) {
+        guard let userId = result.idx else {return}
+        UserDefaults.standard.set(userId, forKey: "userId")
+        ScreenManager().goMain(self)
+    }
+    // MARK: Apple login
+    func loginSuccessAPI(_ result: AppleLoginModel) {
         guard let userId = result.idx else {return}
         UserDefaults.standard.set(userId, forKey: "userId")
         ScreenManager().goMain(self)

@@ -14,3 +14,7 @@ struct AppLoginInput: Encodable {
 struct KakaoLoginInput: Encodable {
     let accessToken: String?
 }
+//MARK: - 애플 로그인 Input
+struct AppleLoginInput: Encodable {
+    let code: String?
+}
