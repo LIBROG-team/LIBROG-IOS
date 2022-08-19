@@ -12,6 +12,7 @@ class SettingViewController: UIViewController {
     @IBOutlet weak var settingTableView: UITableView!
     
     let settingMenuArray = ["프로필 설정", "홈페이지 방문", "개인정보취급방침", "문의하기", "비밀번호 변경", "프로모션 코드 입력", "탈퇴하기"]
+    var loginType: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,10 +65,14 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         }
         // MARK: 비밀번호 변경 클릭
         else if indexPath.row == 4 {
-            guard let changePwVC = UIStoryboard(name: "Password", bundle: nil).instantiateViewController(identifier: "ChangePwVC") as? ChangePasswordViewController else {return}
-            
-            changePwVC.modalPresentationStyle = .fullScreen
-            self.present(changePwVC, animated: true, completion: nil)
+            if let loginType = self.loginType {
+                DialogManager().alertErrorDialog("\(self.loginType!)로 로그인한 계정은\n비밀번호 변경을 할 수 없습니다.", self)
+            } else {
+                guard let changePwVC = UIStoryboard(name: "Password", bundle: nil).instantiateViewController(identifier: "ChangePwVC") as? ChangePasswordViewController else {return}
+                
+                changePwVC.modalPresentationStyle = .fullScreen
+                self.present(changePwVC, animated: true, completion: nil)
+            }
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }
