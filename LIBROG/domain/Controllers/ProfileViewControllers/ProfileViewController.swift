@@ -52,8 +52,8 @@ class ProfileViewController: UIViewController {
     // 환경설정 페이지로 이동
     @IBAction func settingButtonDidTap(_ sender: UIButton) {
         guard let settingVC = UIStoryboard(name: "Setting", bundle: nil).instantiateViewController(identifier: "SettingVC") as? SettingViewController else {return}
-        settingVC.loginType = self.introData.type
-        
+        guard let VCintroData = self.introData else {return}
+        settingVC.introData = VCintroData
         settingVC.modalPresentationStyle = .fullScreen
         self.present(settingVC, animated: true, completion: nil)
     }
