@@ -71,7 +71,6 @@ extension ModifyRecordViewController: UITableViewDelegate, UITableViewDataSource
         }
         if isCompleteButtonTap == true {
             cell.postRecord(self.recordData, self)
-            self.dismiss(animated: true, completion: nil)
         }
         return cell
     }
