@@ -88,16 +88,18 @@ extension UploadRecordTableViewCell : UITextViewDelegate {
 }
 // MARK: - 기록 추가 api 호출
 extension UploadRecordTableViewCell {
-    func postRecord(_ bookData: BookData) {
+    func postRecord(_ bookData: BookData, _ viewcontroller: UploadRecordViewController) {
         let userId = UserDefaults.standard.integer(forKey: "userId")
         let starRating = Int(self.bookPointView.rating)
         let quote = quoteTextField.text!
         let content = bookReportTextView.text!
         
         let uploadRecordInput = UploadRecordInput(bookName: bookData.bookTitle, authorArr: bookData.author, publisher: bookData.publisher, publishedDate: bookData.publishedDate, bookInstruction: bookData.introduction, bookImgUrl: bookData.thumbnailURL, userIdx: userId, starRating: starRating, quote: quote, content: content)
-        UploadRecordDataManager().uploadRecordDataManager(uploadRecordInput, self)
+        UploadRecordDataManager().uploadRecordDataManager(uploadRecordInput, viewcontroller)
     }
-    func uploadRecordSuccessAPI(_ result: APIModel<UploadRecordModel>) {
-        print("POST SUCCESS: ", result)
-    }
+//    func uploadRecordSuccessAPI(_ result: APIModel<UploadRecordModel>) {
+//        if !(result.isSuccess!) {
+//            
+//        }
+//    }
 }

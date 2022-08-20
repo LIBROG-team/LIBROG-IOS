@@ -20,6 +20,7 @@ class UploadRecordViewController: UIViewController {
     var content: String!
     
     var isCompleteButtonTap = false
+    var isSuccess: Bool?
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +49,7 @@ class UploadRecordViewController: UIViewController {
         uploadRecordTableView.reloadData()
     }
 }
+// MARK: - 기록 추가 tableView delegate
 extension UploadRecordViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -60,10 +62,15 @@ extension UploadRecordViewController: UITableViewDelegate, UITableViewDataSource
         if let bookData = self.bookData {cell.setBookData(bookData)}
         if isCompleteButtonTap == true {
             if let bookData = self.bookData {
-                cell.postRecord(bookData)
-                ScreenManager().goMain(self)
+                cell.postRecord(bookData, self)
             }
         }
         return cell
+    }
+}
+extension UploadRecordViewController {
+    func uploadRecordSuccessAPI(_ result: APIModel<UploadRecordModel>) {
+        if result.isSuccess! {ScreenManager().goMain(self)}
+        else {DialogManager().alertErrorDialog(result.message!, self)}
     }
 }
