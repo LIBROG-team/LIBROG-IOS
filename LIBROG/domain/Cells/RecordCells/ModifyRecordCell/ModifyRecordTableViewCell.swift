@@ -92,12 +92,8 @@ extension ModifyRecordTableViewCell: UITextViewDelegate {
 }
 //MARK: - 수정 버튼 클릭 func & success API
 extension ModifyRecordTableViewCell {
-    func postRecord(_ recordData: RecordDetailModel) {
+    func postRecord(_ recordData: RecordDetailModel, _ viewcontroller: ModifyRecordViewController) {
         let idx = recordData.readingRecordIdx!
-        
-//        print("star...", self.starRating)
-//        print("quote...", self.quote)
-//        print("content...", self.content)
         
         if isEdited == true {
             starRating = self.starRating!
@@ -105,12 +101,9 @@ extension ModifyRecordTableViewCell {
             content = self.content!
             
             let modifyRecordInput = ModifyRecordInput(idx: idx, starRating: starRating, quote: quote, content: content)
-            ModifyRecordDataManager().modifyRecordDataManager(modifyRecordInput, self)
+            ModifyRecordDataManager().modifyRecordDataManager(modifyRecordInput, viewcontroller)
         } else {
-            print("수정 해주세요")
+            DialogManager().alertErrorDialog("수정을 해주세요.", viewcontroller)
         }
-    }
-    func modifyRecordSuccessAPI(_ result: APIModel<ResultModel>) {
-        print("MODIFY SUCCESS: ", result)
     }
 }

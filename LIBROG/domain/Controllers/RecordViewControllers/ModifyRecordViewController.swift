@@ -70,7 +70,7 @@ extension ModifyRecordViewController: UITableViewDelegate, UITableViewDataSource
             cell.setRecordData(self.recordData)
         }
         if isCompleteButtonTap == true {
-            cell.postRecord(self.recordData)
+            cell.postRecord(self.recordData, self)
             self.dismiss(animated: true, completion: nil)
         }
         return cell
@@ -88,5 +88,9 @@ extension ModifyRecordViewController {
         }
         alert.addAction(ok)
         self.present(alert, animated: true, completion: nil)
+    }
+    func modifyRecordSuccessAPI(_ result: APIModel<ResultModel>) {
+        if result.isSuccess! {ScreenManager().goMainPages(1, self)}
+        else {DialogManager().alertErrorDialog(result.message!, self)}
     }
 }
