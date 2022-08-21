@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--화분관리-->
+        <scene sceneID="Yon-rq-otG">
+            <objects>
+                <viewController storyboardIdentifier="FlowerPotVC" id="5uk-Eq-hFh" customClass="FlowerPotViewController" customModule="LIBROG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="80q-8e-WwA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PSz-DZ-t59">
+                                <rect key="frame" x="16" y="166.5" width="382" height="695.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="화분 관리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Om-qG-6nP">
+                                <rect key="frame" x="22" y="75" width="101" height="32.5"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총 0건" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZh-JG-6R1">
+                                <rect key="frame" x="22" y="112.5" width="53" height="24"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyZ-YX-Pfo">
+                                <rect key="frame" x="353" y="74.5" width="45" height="34"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="list">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goToAddFlowerpotDidTap:" destination="5uk-Eq-hFh" eventType="touchUpInside" id="XVJ-py-J2o"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="54c-Bd-hoA">
+                                <rect key="frame" x="1" y="165.5" width="412" height="1"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="XIK-62-Evi"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jLF-2v-5LO"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="54c-Bd-hoA" firstAttribute="top" secondItem="rZh-JG-6R1" secondAttribute="bottom" constant="29" id="8Ob-Po-8El"/>
+                            <constraint firstItem="jLF-2v-5LO" firstAttribute="trailing" secondItem="eyZ-YX-Pfo" secondAttribute="trailing" constant="16" id="DXE-GT-W9f"/>
+                            <constraint firstItem="2Om-qG-6nP" firstAttribute="top" secondItem="80q-8e-WwA" secondAttribute="top" constant="75" id="N6R-9E-n6B"/>
+                            <constraint firstItem="jLF-2v-5LO" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2Om-qG-6nP" secondAttribute="trailing" symbolic="YES" id="RoD-Ed-I9A"/>
+                            <constraint firstItem="2Om-qG-6nP" firstAttribute="leading" secondItem="jLF-2v-5LO" secondAttribute="leading" constant="22" id="VI5-YW-Roh"/>
+                            <constraint firstItem="PSz-DZ-t59" firstAttribute="top" secondItem="54c-Bd-hoA" secondAttribute="bottom" id="Vhz-bt-iNg"/>
+                            <constraint firstItem="PSz-DZ-t59" firstAttribute="leading" secondItem="jLF-2v-5LO" secondAttribute="leading" constant="16" id="WN5-j1-fdA"/>
+                            <constraint firstItem="PSz-DZ-t59" firstAttribute="bottom" secondItem="jLF-2v-5LO" secondAttribute="bottom" id="ayQ-Bu-fRk"/>
+                            <constraint firstItem="rZh-JG-6R1" firstAttribute="top" secondItem="2Om-qG-6nP" secondAttribute="bottom" constant="5" id="baJ-kc-xYx"/>
+                            <constraint firstItem="2Om-qG-6nP" firstAttribute="leading" secondItem="rZh-JG-6R1" secondAttribute="leading" id="dd9-0D-Sql"/>
+                            <constraint firstItem="jLF-2v-5LO" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rZh-JG-6R1" secondAttribute="trailing" symbolic="YES" id="lRg-Ih-Agh"/>
+                            <constraint firstItem="jLF-2v-5LO" firstAttribute="trailing" secondItem="PSz-DZ-t59" secondAttribute="trailing" constant="16" id="mNv-Qd-DAu"/>
+                            <constraint firstItem="eyZ-YX-Pfo" firstAttribute="centerY" secondItem="2Om-qG-6nP" secondAttribute="centerY" id="pKO-lS-lDN"/>
+                            <constraint firstItem="54c-Bd-hoA" firstAttribute="leading" secondItem="80q-8e-WwA" secondAttribute="leading" constant="1" id="qY5-If-kkH"/>
+                            <constraint firstAttribute="trailing" secondItem="54c-Bd-hoA" secondAttribute="trailing" constant="1" id="rhr-4w-jmA"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="화분관리" image="forest" id="Sny-4X-q91"/>
+                    <connections>
+                        <outlet property="flowerpotCountLabel" destination="rZh-JG-6R1" id="KBZ-Gi-fOb"/>
+                        <outlet property="flowerpotTableView" destination="PSz-DZ-t59" id="KRQ-vA-Ecl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ITS-HZ-qH9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="770.76923076923072" y="834.59715639810418"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="forest" width="28" height="28"/>
+        <image name="list" width="21" height="20"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -27,6 +27,7 @@
 		2322AE5B2897F39300513E23 /* LoginInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2322AE5A2897F39300513E23 /* LoginInput.swift */; };
 		2322AE5D2897F3C400513E23 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2322AE5C2897F3C400513E23 /* LoginModel.swift */; };
 		232973642887F8FF00954AA0 /* FlowerpotBookRecordDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232973632887F8FF00954AA0 /* FlowerpotBookRecordDataManager.swift */; };
+		2339796B28AA7484009CF5D0 /* DeleteRecordInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339796A28AA7484009CF5D0 /* DeleteRecordInput.swift */; };
 		2339DA06288591D600A3DBC4 /* SearchBookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339DA05288591D600A3DBC4 /* SearchBookManager.swift */; };
 		2339DA08288592B100A3DBC4 /* KakaoBookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339DA07288592B100A3DBC4 /* KakaoBookModel.swift */; };
 		2339DA0A2885948500A3DBC4 /* HeaderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2339DA092885948500A3DBC4 /* HeaderManager.swift */; };
@@ -59,6 +60,7 @@
 		23776E1D2892644800351F3A /* RegisterTermViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23776E1C2892644800351F3A /* RegisterTermViewController.swift */; };
 		2379DEE72897A29800F946DD /* ProfileLoginTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2379DEE52897A29800F946DD /* ProfileLoginTypeTableViewCell.swift */; };
 		2379DEE82897A29800F946DD /* ProfileLoginTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2379DEE62897A29800F946DD /* ProfileLoginTypeTableViewCell.xib */; };
+		237B20C728AF72E000CB0429 /* MainPageDayCountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B20C628AF72E000CB0429 /* MainPageDayCountModel.swift */; };
 		237CF45628A7FC9B0043CFC6 /* ModifyProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237CF45428A7FC9B0043CFC6 /* ModifyProfileTableViewCell.swift */; };
 		237CF45728A7FC9B0043CFC6 /* ModifyProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 237CF45528A7FC9B0043CFC6 /* ModifyProfileTableViewCell.xib */; };
 		237CF45928A80A140043CFC6 /* DialogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237CF45828A80A140043CFC6 /* DialogManager.swift */; };
@@ -70,7 +72,7 @@
 		238DE01C28819AF0007901E6 /* TodaySuggestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238DE01A28819AF0007901E6 /* TodaySuggestCollectionViewCell.swift */; };
 		238DE01D28819AF0007901E6 /* TodaySuggestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 238DE01B28819AF0007901E6 /* TodaySuggestCollectionViewCell.xib */; };
 		238DE01F28819C00007901E6 /* MainBottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238DE01E28819C00007901E6 /* MainBottomViewController.swift */; };
-		239DE3F528A4CD2300386151 /* FindPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 239DE3F428A4CD2300386151 /* FindPassword.storyboard */; };
+		239DE3F528A4CD2300386151 /* Password.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 239DE3F428A4CD2300386151 /* Password.storyboard */; };
 		239DE3F828A4CD4800386151 /* FindPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239DE3F728A4CD4800386151 /* FindPasswordViewController.swift */; };
 		239DE3FB28A4CEC100386151 /* FindPasswordDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239DE3FA28A4CEC100386151 /* FindPasswordDataManager.swift */; };
 		239DE3FD28A4CF2900386151 /* FindPasswordInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239DE3FC28A4CF2900386151 /* FindPasswordInput.swift */; };
@@ -114,6 +116,7 @@
 		23ADA92828847B830066D15A /* FlowerPotSearchTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ADA92728847B830066D15A /* FlowerPotSearchTabViewController.swift */; };
 		23ADA92B28847FC80066D15A /* FlowerpotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ADA92A28847FC80066D15A /* FlowerpotModel.swift */; };
 		23ADA92D288481080066D15A /* MainPageDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ADA92C288481080066D15A /* MainPageDataManager.swift */; };
+		23C7087628ACBA26000BD542 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C7087528ACBA26000BD542 /* UIColorExtension.swift */; };
 		23C8B4A6286EF2F300432141 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C8B4A5286EF2F300432141 /* PaddingLabel.swift */; };
 		23C8B4AC286EF41400432141 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C8B4AB286EF41400432141 /* MainViewController.swift */; };
 		23C8B4B0286EF76F00432141 /* MainFlowerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C8B4AE286EF76F00432141 /* MainFlowerTableViewCell.swift */; };
@@ -128,6 +131,12 @@
 		23DFD30D2878D9B1002AC8B0 /* UploadRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFD30C2878D9B1002AC8B0 /* UploadRecordViewController.swift */; };
 		23DFD3102878D9F4002AC8B0 /* UploadRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFD30E2878D9F4002AC8B0 /* UploadRecordTableViewCell.swift */; };
 		23DFD3112878D9F4002AC8B0 /* UploadRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23DFD30F2878D9F4002AC8B0 /* UploadRecordTableViewCell.xib */; };
+		23ECA8E728AFAC2700497CA3 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ECA8E628AFAC2700497CA3 /* ChangePasswordViewController.swift */; };
+		23ECA8EC28AFAD5000497CA3 /* ChangePasswordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ECA8EA28AFAD5000497CA3 /* ChangePasswordTableViewCell.swift */; };
+		23ECA8ED28AFAD5000497CA3 /* ChangePasswordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23ECA8EB28AFAD5000497CA3 /* ChangePasswordTableViewCell.xib */; };
+		23ECA8EF28AFAFA900497CA3 /* ChangePasswordInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ECA8EE28AFAFA900497CA3 /* ChangePasswordInput.swift */; };
+		23ECA8F128AFAFE000497CA3 /* ChangePasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ECA8F028AFAFE000497CA3 /* ChangePasswordModel.swift */; };
+		23ECA8F328AFB01600497CA3 /* ChangePasswordDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ECA8F228AFB01600497CA3 /* ChangePasswordDataManager.swift */; };
 		23F6107A288812C700575D81 /* ReadingRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F61079288812C700575D81 /* ReadingRecordModel.swift */; };
 		23F6107C2888134C00575D81 /* ReadingRecordDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F6107B2888134C00575D81 /* ReadingRecordDataManager.swift */; };
 		23F7139428A6E3560058A57A /* RegisterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F7139228A6E3560058A57A /* RegisterTableViewCell.swift */; };
@@ -148,7 +157,6 @@
 		D09E0E1128A4D4FF0036DB2D /* ModifyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09E0E1028A4D4FF0036DB2D /* ModifyProfileViewController.swift */; };
 		D0C2B04F286DC9BE00242E71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C2B04E286DC9BE00242E71 /* AppDelegate.swift */; };
 		D0C2B051286DC9BE00242E71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C2B050286DC9BE00242E71 /* SceneDelegate.swift */; };
-		D0C2B053286DC9BE00242E71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C2B052286DC9BE00242E71 /* ViewController.swift */; };
 		D0C2B056286DC9BE00242E71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C2B054286DC9BE00242E71 /* Main.storyboard */; };
 		D0C2B058286DC9C000242E71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0C2B057286DC9C000242E71 /* Assets.xcassets */; };
 		D0C2B05B286DC9C000242E71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C2B059286DC9C000242E71 /* LaunchScreen.storyboard */; };
@@ -201,6 +209,7 @@
 		2322AE5A2897F39300513E23 /* LoginInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInput.swift; sourceTree = "<group>"; };
 		2322AE5C2897F3C400513E23 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		232973632887F8FF00954AA0 /* FlowerpotBookRecordDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerpotBookRecordDataManager.swift; sourceTree = "<group>"; };
+		2339796A28AA7484009CF5D0 /* DeleteRecordInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteRecordInput.swift; sourceTree = "<group>"; };
 		2339DA05288591D600A3DBC4 /* SearchBookManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBookManager.swift; sourceTree = "<group>"; };
 		2339DA07288592B100A3DBC4 /* KakaoBookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoBookModel.swift; sourceTree = "<group>"; };
 		2339DA092885948500A3DBC4 /* HeaderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderManager.swift; sourceTree = "<group>"; };
@@ -233,6 +242,7 @@
 		23776E1C2892644800351F3A /* RegisterTermViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTermViewController.swift; sourceTree = "<group>"; };
 		2379DEE52897A29800F946DD /* ProfileLoginTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLoginTypeTableViewCell.swift; sourceTree = "<group>"; };
 		2379DEE62897A29800F946DD /* ProfileLoginTypeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileLoginTypeTableViewCell.xib; sourceTree = "<group>"; };
+		237B20C628AF72E000CB0429 /* MainPageDayCountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageDayCountModel.swift; sourceTree = "<group>"; };
 		237CF45428A7FC9B0043CFC6 /* ModifyProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyProfileTableViewCell.swift; sourceTree = "<group>"; };
 		237CF45528A7FC9B0043CFC6 /* ModifyProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModifyProfileTableViewCell.xib; sourceTree = "<group>"; };
 		237CF45828A80A140043CFC6 /* DialogManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogManager.swift; sourceTree = "<group>"; };
@@ -244,7 +254,7 @@
 		238DE01A28819AF0007901E6 /* TodaySuggestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaySuggestCollectionViewCell.swift; sourceTree = "<group>"; };
 		238DE01B28819AF0007901E6 /* TodaySuggestCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodaySuggestCollectionViewCell.xib; sourceTree = "<group>"; };
 		238DE01E28819C00007901E6 /* MainBottomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBottomViewController.swift; sourceTree = "<group>"; };
-		239DE3F428A4CD2300386151 /* FindPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FindPassword.storyboard; sourceTree = "<group>"; };
+		239DE3F428A4CD2300386151 /* Password.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Password.storyboard; sourceTree = "<group>"; };
 		239DE3F728A4CD4800386151 /* FindPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordViewController.swift; sourceTree = "<group>"; };
 		239DE3FA28A4CEC100386151 /* FindPasswordDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordDataManager.swift; sourceTree = "<group>"; };
 		239DE3FC28A4CF2900386151 /* FindPasswordInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPasswordInput.swift; sourceTree = "<group>"; };
@@ -288,6 +298,7 @@
 		23ADA92728847B830066D15A /* FlowerPotSearchTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerPotSearchTabViewController.swift; sourceTree = "<group>"; };
 		23ADA92A28847FC80066D15A /* FlowerpotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerpotModel.swift; sourceTree = "<group>"; };
 		23ADA92C288481080066D15A /* MainPageDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageDataManager.swift; sourceTree = "<group>"; };
+		23C7087528ACBA26000BD542 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		23C8B4A5286EF2F300432141 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		23C8B4AB286EF41400432141 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		23C8B4AE286EF76F00432141 /* MainFlowerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlowerTableViewCell.swift; sourceTree = "<group>"; };
@@ -298,10 +309,17 @@
 		23CC78D6288FCDAE0064DA7E /* UploadRecordInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRecordInput.swift; sourceTree = "<group>"; };
 		23CC78D8288FCE370064DA7E /* UploadRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRecordModel.swift; sourceTree = "<group>"; };
 		23CC78DA288FCEDE0064DA7E /* UploadRecordDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRecordDataManager.swift; sourceTree = "<group>"; };
+		23D0301628AE8EDB000CDB36 /* LIBROG.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LIBROG.entitlements; sourceTree = "<group>"; };
 		23DE9D6B28A56524009DF894 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		23DFD30C2878D9B1002AC8B0 /* UploadRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRecordViewController.swift; sourceTree = "<group>"; };
 		23DFD30E2878D9F4002AC8B0 /* UploadRecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRecordTableViewCell.swift; sourceTree = "<group>"; };
 		23DFD30F2878D9F4002AC8B0 /* UploadRecordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UploadRecordTableViewCell.xib; sourceTree = "<group>"; };
+		23ECA8E628AFAC2700497CA3 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		23ECA8EA28AFAD5000497CA3 /* ChangePasswordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordTableViewCell.swift; sourceTree = "<group>"; };
+		23ECA8EB28AFAD5000497CA3 /* ChangePasswordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangePasswordTableViewCell.xib; sourceTree = "<group>"; };
+		23ECA8EE28AFAFA900497CA3 /* ChangePasswordInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordInput.swift; sourceTree = "<group>"; };
+		23ECA8F028AFAFE000497CA3 /* ChangePasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordModel.swift; sourceTree = "<group>"; };
+		23ECA8F228AFB01600497CA3 /* ChangePasswordDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordDataManager.swift; sourceTree = "<group>"; };
 		23F61079288812C700575D81 /* ReadingRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingRecordModel.swift; sourceTree = "<group>"; };
 		23F6107B2888134C00575D81 /* ReadingRecordDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingRecordDataManager.swift; sourceTree = "<group>"; };
 		23F7139228A6E3560058A57A /* RegisterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTableViewCell.swift; sourceTree = "<group>"; };
@@ -325,7 +343,6 @@
 		D0C2B04B286DC9BE00242E71 /* LIBROG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LIBROG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C2B04E286DC9BE00242E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0C2B050286DC9BE00242E71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D0C2B052286DC9BE00242E71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D0C2B055286DC9BE00242E71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0C2B057286DC9C000242E71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0C2B05A286DC9C000242E71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -369,73 +386,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2303F2302889A9D300544AF6 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				239DE40128A4E78400386151 /* Cell */,
-				2305E7712891597400A9B6D5 /* LoginDataManager */,
-				2305E77428915A8900A9B6D5 /* LoginManager */,
-				2303F2312889A9EB00544AF6 /* LoginViewController.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		230524BB287D5BEE0081933A /* FlowerPotDetail */ = {
-			isa = PBXGroup;
-			children = (
-				232973602887F83300954AA0 /* FlowerPotDetailDataManager */,
-				230524BC287D5BF90081933A /* Cell */,
-				230524BD287D5C060081933A /* FlowerPotDetailViewController.swift */,
-			);
-			path = FlowerPotDetail;
-			sourceTree = "<group>";
-		};
-		230524BC287D5BF90081933A /* Cell */ = {
+		230524BC287D5BF90081933A /* FlowerpotDetailCell */ = {
 			isa = PBXGroup;
 			children = (
 				230524BF287D5C370081933A /* FlowerPotDetailCollectionViewCell.swift */,
 				230524C0287D5C370081933A /* FlowerPotDetailCollectionViewCell.xib */,
 			);
-			path = Cell;
+			path = FlowerpotDetailCell;
 			sourceTree = "<group>";
 		};
-		230524C3287D64820081933A /* AddFlowerPot */ = {
-			isa = PBXGroup;
-			children = (
-				235523422881B88800EDE3E1 /* AddFlowerpotDataManager */,
-				23A5B859287D7ED3005413A3 /* Cell */,
-				23A5B858287D7ECA005413A3 /* ViewController */,
-			);
-			path = AddFlowerPot;
-			sourceTree = "<group>";
-		};
-		2305E7712891597400A9B6D5 /* LoginDataManager */ = {
-			isa = PBXGroup;
-			children = (
-				2305E77528915FC000A9B6D5 /* LoginDataManager.swift */,
-				2322AE5A2897F39300513E23 /* LoginInput.swift */,
-				2322AE5C2897F3C400513E23 /* LoginModel.swift */,
-			);
-			path = LoginDataManager;
-			sourceTree = "<group>";
-		};
-		2305E77428915A8900A9B6D5 /* LoginManager */ = {
-			isa = PBXGroup;
-			children = (
-				2305E772289159A000A9B6D5 /* KakaoLoginManager.swift */,
-			);
-			path = LoginManager;
-			sourceTree = "<group>";
-		};
-		23091F812886B666008EC8D2 /* FlowerpotDataManager */ = {
-			isa = PBXGroup;
-			children = (
-				23091F822886B69E008EC8D2 /* FlowerpotDataManager.swift */,
-			);
-			path = FlowerpotDataManager;
-			sourceTree = "<group>";
-		};
-		2315AAD928A6BD1F00753418 /* Cell */ = {
+		2315AAD928A6BD1F00753418 /* RegisterCell */ = {
 			isa = PBXGroup;
 			children = (
 				2315AADA28A6BD2D00753418 /* RegisterTermTableViewCell.swift */,
@@ -445,94 +405,377 @@
 				23F7139628A6E9A90058A57A /* RegisterProfileTableViewCell.swift */,
 				23F7139728A6E9A90058A57A /* RegisterProfileTableViewCell.xib */,
 			);
-			path = Cell;
+			path = RegisterCell;
 			sourceTree = "<group>";
 		};
-		231B8D48288936DF006F44A3 /* FlowerpotDescriptionDataManager */ = {
+		234A4EBE28AAB59000105B61 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				231B8D4B28893701006F44A3 /* FlowerpotDescriptionModel.swift */,
-				231B8D49288936F6006F44A3 /* FlowerpotDescriptionDataManager.swift */,
+				23ADA90A288467850066D15A /* MainPage.storyboard */,
 			);
-			path = FlowerpotDescriptionDataManager;
+			path = Main;
 			sourceTree = "<group>";
 		};
-		232973602887F83300954AA0 /* FlowerPotDetailDataManager */ = {
+		234A4EBF28AAB59700105B61 /* Record */ = {
 			isa = PBXGroup;
 			children = (
-				232973632887F8FF00954AA0 /* FlowerpotBookRecordDataManager.swift */,
+				23AB709C288FFAD700503366 /* RecordDetail.storyboard */,
+				23ADA90E2884693D0066D15A /* SelectBook.storyboard */,
+				23ADA9102884698F0066D15A /* UploadRecord.storyboard */,
+				23ADA90C288468D50066D15A /* ReadingRecord.storyboard */,
 			);
-			path = FlowerPotDetailDataManager;
+			path = Record;
 			sourceTree = "<group>";
 		};
-		2339DA04288591BE00A3DBC4 /* SearchBookManager */ = {
+		234A4EC028AAB5A500105B61 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				2339DA05288591D600A3DBC4 /* SearchBookManager.swift */,
-				2339DA07288592B100A3DBC4 /* KakaoBookModel.swift */,
+				239DE3F428A4CD2300386151 /* Password.storyboard */,
+				234036052891AD3D00C9AB4D /* Register.storyboard */,
+				2303F22E2889A9CD00544AF6 /* Login.storyboard */,
 			);
-			path = SearchBookManager;
+			path = Authentication;
 			sourceTree = "<group>";
 		};
-		234035FE2891991000C9AB4D /* ModifyRecordDataManager */ = {
+		234A4EC128AAB5AF00105B61 /* Flowerpot */ = {
 			isa = PBXGroup;
 			children = (
-				234035FF2891992000C9AB4D /* ModifyRecordInput.swift */,
-				234036012891992800C9AB4D /* ModifyRecordModel.swift */,
-				234036032891993500C9AB4D /* ModifyRecordDataManager.swift */,
+				23ADA91E28846B440066D15A /* NotAcheivedFlowerPot.storyboard */,
+				23ADA91C28846B240066D15A /* AcheivedFlowerPot.storyboard */,
+				23ADA91A28846ACE0066D15A /* AddFlowerPot.storyboard */,
+				23ADA91828846AB10066D15A /* FlowerPotDescription.storyboard */,
+				23ADA91628846A870066D15A /* UserFlowerPotDetail.storyboard */,
+				23ADA912288469E90066D15A /* FlowerPot.storyboard */,
 			);
-			path = ModifyRecordDataManager;
+			path = Flowerpot;
 			sourceTree = "<group>";
 		};
-		234B37F528A79C4900D7FFD3 /* Cell */ = {
+		234A4EC228AAB5CA00105B61 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				237ECCE928857544000D9A71 /* Setting.storyboard */,
+				23ADA91428846A2A0066D15A /* Profile.storyboard */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		234B37F528A79C4900D7FFD3 /* PasswordCells */ = {
 			isa = PBXGroup;
 			children = (
 				234B37F628A79C5F00D7FFD3 /* FindPasswordTableViewCell.swift */,
 				234B37F728A79C5F00D7FFD3 /* FindPasswordTableViewCell.xib */,
+				23ECA8EA28AFAD5000497CA3 /* ChangePasswordTableViewCell.swift */,
+				23ECA8EB28AFAD5000497CA3 /* ChangePasswordTableViewCell.xib */,
 			);
-			path = Cell;
+			path = PasswordCells;
 			sourceTree = "<group>";
 		};
 		235523422881B88800EDE3E1 /* AddFlowerpotDataManager */ = {
 			isa = PBXGroup;
 			children = (
 				239EF02E2892F2C8005BC364 /* SearchDataManager.swift */,
-				231B8D4128891787006F44A3 /* AddFlowerpotModel.swift */,
 				231B8D432889189D006F44A3 /* AddFlowerpotDataManager.swift */,
 			);
 			path = AddFlowerpotDataManager;
 			sourceTree = "<group>";
 		};
-		235523452881C45600EDE3E1 /* FlowerPotDescription */ = {
-			isa = PBXGroup;
-			children = (
-				231B8D48288936DF006F44A3 /* FlowerpotDescriptionDataManager */,
-				235523482881C47800EDE3E1 /* Cell */,
-				235523462881C47200EDE3E1 /* FlowerPotDescriptionViewController.swift */,
-			);
-			path = FlowerPotDescription;
-			sourceTree = "<group>";
-		};
-		235523482881C47800EDE3E1 /* Cell */ = {
+		235523482881C47800EDE3E1 /* FlowerpotDescriptionCell */ = {
 			isa = PBXGroup;
 			children = (
 				235523492881C48A00EDE3E1 /* FlowerPotDescriptionTableViewCell.swift */,
 				2355234A2881C48A00EDE3E1 /* FlowerPotDescriptionTableViewCell.xib */,
 			);
-			path = Cell;
+			path = FlowerpotDescriptionCell;
 			sourceTree = "<group>";
 		};
-		23776E1728925FDD00351F3A /* Register */ = {
+		237B20C828AF78AC00CB0429 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2315AAD928A6BD1F00753418 /* Cell */,
-				D07E7EBA289278E30077287A /* RegisterDataManager */,
+				237B20CD28AF7A9000CB0429 /* APIModels */,
+				237B20CC28AF79D800CB0429 /* APIInputs */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		237B20CA28AF791D00CB0429 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				237B20D128AF7CA300CB0429 /* MainPageViewControllers */,
+				237B20D728AF7D4800CB0429 /* SearchBookViewController */,
+				237B20D628AF7D1B00CB0429 /* FlowerpotViewControllers */,
+				237B20D528AF7D0D00CB0429 /* SettingViewController */,
+				237B20D428AF7CE400CB0429 /* AuthenticationViewControllers */,
+				237B20D328AF7CCD00CB0429 /* RecordViewControllers */,
+				237B20D228AF7CBB00CB0429 /* ProfileViewControllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		237B20CB28AF792C00CB0429 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				D0C2B050286DC9BE00242E71 /* SceneDelegate.swift */,
+				D0C2B04E286DC9BE00242E71 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		237B20CC28AF79D800CB0429 /* APIInputs */ = {
+			isa = PBXGroup;
+			children = (
+				23448E7F28A972550020CF63 /* ModifyProfileInput.swift */,
+				D07E7EBD289279250077287A /* RegisterInput.swift */,
+				2322AE5A2897F39300513E23 /* LoginInput.swift */,
+				239DE3FC28A4CF2900386151 /* FindPasswordInput.swift */,
+				234035FF2891992000C9AB4D /* ModifyRecordInput.swift */,
+				2339796A28AA7484009CF5D0 /* DeleteRecordInput.swift */,
+				23CC78D6288FCDAE0064DA7E /* UploadRecordInput.swift */,
+				23ECA8EE28AFAFA900497CA3 /* ChangePasswordInput.swift */,
+			);
+			path = APIInputs;
+			sourceTree = "<group>";
+		};
+		237B20CD28AF7A9000CB0429 /* APIModels */ = {
+			isa = PBXGroup;
+			children = (
+				2339DA07288592B100A3DBC4 /* KakaoBookModel.swift */,
+				23ADA92A28847FC80066D15A /* FlowerpotModel.swift */,
+				23A41EA8289436B10008437B /* RecentBookModel.swift */,
+				23F8483D2899A99400ED644B /* NoticeModel.swift */,
+				231E3E59289F82130011A1D2 /* RecommendBookModel.swift */,
+				237B20C628AF72E000CB0429 /* MainPageDayCountModel.swift */,
+				237CF45F28A80BD60043CFC6 /* DeleteUserModel.swift */,
+				23458AE52896F35A0003A669 /* IntroModel.swift */,
+				D061104A288FF09500F96B65 /* StatisticModel.swift */,
+				23DE9D6B28A56524009DF894 /* RegisterModel.swift */,
+				2322AE5C2897F3C400513E23 /* LoginModel.swift */,
+				231B8D4B28893701006F44A3 /* FlowerpotDescriptionModel.swift */,
+				231B8D4128891787006F44A3 /* AddFlowerpotModel.swift */,
+				234036012891992800C9AB4D /* ModifyRecordModel.swift */,
+				23A41EA42894315D0008437B /* RecordDetailModel.swift */,
+				23CC78D8288FCE370064DA7E /* UploadRecordModel.swift */,
+				D0DB05C1287700650041CEEF /* BookData.swift */,
+				23F61079288812C700575D81 /* ReadingRecordModel.swift */,
+				23ECA8F028AFAFE000497CA3 /* ChangePasswordModel.swift */,
+			);
+			path = APIModels;
+			sourceTree = "<group>";
+		};
+		237B20CE28AF7B9700CB0429 /* FlowerpotSearchViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				23ADA92528847A8D0066D15A /* AddFlowerPotSearchViewController.swift */,
+				23ADA92728847B830066D15A /* FlowerPotSearchTabViewController.swift */,
+				234AB64F288A633D009FBB59 /* AchievedFlowerPotSearchViewController.swift */,
+				234AB651288A6A36009FBB59 /* NotAchievedFlowerPotSearchViewController.swift */,
+			);
+			path = FlowerpotSearchViewControllers;
+			sourceTree = "<group>";
+		};
+		237B20CF28AF7BA800CB0429 /* AddFlowerpotViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				23A5B854287D6754005413A3 /* AddFlowerPotViewController.swift */,
+				23A5B856287D6B89005413A3 /* FlowerPotTabViewController.swift */,
+				23ADA921288478FD0066D15A /* AchievedFlowerPotViewController.swift */,
+				23ADA9232884790C0066D15A /* NotAchievedFlowerPotViewController.swift */,
+			);
+			path = AddFlowerpotViewControllers;
+			sourceTree = "<group>";
+		};
+		237B20D028AF7BF900CB0429 /* RegisterViewControllers */ = {
+			isa = PBXGroup;
+			children = (
 				23776E1C2892644800351F3A /* RegisterTermViewController.swift */,
 				23776E1828925FFF00351F3A /* RegisterViewController.swift */,
 				23776E1A2892610E00351F3A /* RegisterProfileViewController.swift */,
 				D047CB972892EF40004652A3 /* RegisterBottomVC */,
 			);
-			path = Register;
+			path = RegisterViewControllers;
+			sourceTree = "<group>";
+		};
+		237B20D128AF7CA300CB0429 /* MainPageViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				23C8B4AB286EF41400432141 /* MainViewController.swift */,
+				238DE01E28819C00007901E6 /* MainBottomViewController.swift */,
+			);
+			path = MainPageViewControllers;
+			sourceTree = "<group>";
+		};
+		237B20D228AF7CBB00CB0429 /* ProfileViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D09E0E1028A4D4FF0036DB2D /* ModifyProfileViewController.swift */,
+				237ECCDF288556EE000D9A71 /* ProfileViewController.swift */,
+			);
+			path = ProfileViewControllers;
+			sourceTree = "<group>";
+		};
+		237B20D328AF7CCD00CB0429 /* RecordViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				23AB709F288FFAF000503366 /* RecordDetailViewController.swift */,
+				23DFD30C2878D9B1002AC8B0 /* UploadRecordViewController.swift */,
+				23AB70AC289009D500503366 /* ModifyRecordViewController.swift */,
+				D096410A2886B40800E5989C /* ReadingRecordBottomViewController.swift */,
+				D0CF2B5F2885C99C00F78104 /* ReadingRecordViewController.swift */,
+			);
+			path = RecordViewControllers;
+			sourceTree = "<group>";
+		};
+		237B20D428AF7CE400CB0429 /* AuthenticationViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				237B20D028AF7BF900CB0429 /* RegisterViewControllers */,
+				239DE3F728A4CD4800386151 /* FindPasswordViewController.swift */,
+				2303F2312889A9EB00544AF6 /* LoginViewController.swift */,
+				23ECA8E628AFAC2700497CA3 /* ChangePasswordViewController.swift */,
+			);
+			path = AuthenticationViewControllers;
+			sourceTree = "<group>";
+		};
+		237B20D528AF7D0D00CB0429 /* SettingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				239DE3FF28A4D9CE00386151 /* SettingViewController.swift */,
+			);
+			path = SettingViewController;
+			sourceTree = "<group>";
+		};
+		237B20D628AF7D1B00CB0429 /* FlowerpotViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				230524BD287D5C060081933A /* FlowerPotDetailViewController.swift */,
+				235523462881C47200EDE3E1 /* FlowerPotDescriptionViewController.swift */,
+				D0C2B07F286DEBD600242E71 /* FlowerPotViewController.swift */,
+				237B20CE28AF7B9700CB0429 /* FlowerpotSearchViewControllers */,
+				237B20CF28AF7BA800CB0429 /* AddFlowerpotViewControllers */,
+			);
+			path = FlowerpotViewControllers;
+			sourceTree = "<group>";
+		};
+		237B20D728AF7D4800CB0429 /* SearchBookViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D0DB05B22876BC330041CEEF /* UploadViewController.swift */,
+			);
+			path = SearchBookViewController;
+			sourceTree = "<group>";
+		};
+		237B20D828AF7D7E00CB0429 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				237B20DC28AF7E9800CB0429 /* RecordDataManagers */,
+				237B20DB28AF7E6B00CB0429 /* AuthenticationDataManagers */,
+				237B20DA28AF7E3F00CB0429 /* FlowerpotDataManagers */,
+				23ADA92928847FB60066D15A /* MainPageDataManager */,
+				D0611049288FF04F00F96B65 /* ProfileDataManager */,
+				237CF45C28A80AEA0043CFC6 /* SettingDataManager */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		237B20DA28AF7E3F00CB0429 /* FlowerpotDataManagers */ = {
+			isa = PBXGroup;
+			children = (
+				235523422881B88800EDE3E1 /* AddFlowerpotDataManager */,
+				232973632887F8FF00954AA0 /* FlowerpotBookRecordDataManager.swift */,
+				23091F822886B69E008EC8D2 /* FlowerpotDataManager.swift */,
+				231B8D49288936F6006F44A3 /* FlowerpotDescriptionDataManager.swift */,
+			);
+			path = FlowerpotDataManagers;
+			sourceTree = "<group>";
+		};
+		237B20DB28AF7E6B00CB0429 /* AuthenticationDataManagers */ = {
+			isa = PBXGroup;
+			children = (
+				2305E772289159A000A9B6D5 /* KakaoLoginManager.swift */,
+				D07E7EBF28927AC70077287A /* RegisterDataManager.swift */,
+				239DE3FA28A4CEC100386151 /* FindPasswordDataManager.swift */,
+				2305E77528915FC000A9B6D5 /* LoginDataManager.swift */,
+				23ECA8F228AFB01600497CA3 /* ChangePasswordDataManager.swift */,
+			);
+			path = AuthenticationDataManagers;
+			sourceTree = "<group>";
+		};
+		237B20DC28AF7E9800CB0429 /* RecordDataManagers */ = {
+			isa = PBXGroup;
+			children = (
+				2339DA05288591D600A3DBC4 /* SearchBookManager.swift */,
+				23CC78DA288FCEDE0064DA7E /* UploadRecordDataManager.swift */,
+				23F6107B2888134C00575D81 /* ReadingRecordDataManager.swift */,
+				23A41EA6289431650008437B /* RecordDetailDataManager.swift */,
+				234036032891993500C9AB4D /* ModifyRecordDataManager.swift */,
+			);
+			path = RecordDataManagers;
+			sourceTree = "<group>";
+		};
+		237B20DD28AF7F0400CB0429 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				23C8B4AD286EF75800432141 /* MainPageCells */,
+				237B20E228AF802D00CB0429 /* AuthenticationCells */,
+				237B20E128AF801700CB0429 /* ProfileCells */,
+				237B20E028AF7FD900CB0429 /* FlowerpotCells */,
+				237B20DF28AF7FCF00CB0429 /* RecordCells */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		237B20DF28AF7FCF00CB0429 /* RecordCells */ = {
+			isa = PBXGroup;
+			children = (
+				23AB70AE28900A8A00503366 /* ModifyRecordCell */,
+				23AB70A1288FFDA600503366 /* RecordDetailCell */,
+				D0CF2B582885C80300F78104 /* ReadingRecordCell */,
+				23DFD3122878D9F7002AC8B0 /* UploadRecordCell */,
+				D0DB05B82876CF580041CEEF /* UploadCell */,
+			);
+			path = RecordCells;
+			sourceTree = "<group>";
+		};
+		237B20E028AF7FD900CB0429 /* FlowerpotCells */ = {
+			isa = PBXGroup;
+			children = (
+				D0C2B081286DF22300242E71 /* UserFlowerpotCell */,
+				230524BC287D5BF90081933A /* FlowerpotDetailCell */,
+				235523482881C47800EDE3E1 /* FlowerpotDescriptionCell */,
+				23A5B859287D7ED3005413A3 /* AddFlowerpotCells */,
+			);
+			path = FlowerpotCells;
+			sourceTree = "<group>";
+		};
+		237B20E128AF801700CB0429 /* ProfileCells */ = {
+			isa = PBXGroup;
+			children = (
+				237CF45228A7FC590043CFC6 /* ProfileCell */,
+				237CF45328A7FC680043CFC6 /* ModifyProfileCell */,
+			);
+			path = ProfileCells;
+			sourceTree = "<group>";
+		};
+		237B20E228AF802D00CB0429 /* AuthenticationCells */ = {
+			isa = PBXGroup;
+			children = (
+				2315AAD928A6BD1F00753418 /* RegisterCell */,
+				239DE40128A4E78400386151 /* LoginCell */,
+				234B37F528A79C4900D7FFD3 /* PasswordCells */,
+			);
+			path = AuthenticationCells;
+			sourceTree = "<group>";
+		};
+		237B20E328AF809400CB0429 /* MainPageBottomSheetCells */ = {
+			isa = PBXGroup;
+			children = (
+				23C8B4B6286EF78600432141 /* RecentBookCollectionViewCell.swift */,
+				23C8B4B7286EF78600432141 /* RecentBookCollectionViewCell.xib */,
+				238DE01A28819AF0007901E6 /* TodaySuggestCollectionViewCell.swift */,
+				238DE01B28819AF0007901E6 /* TodaySuggestCollectionViewCell.xib */,
+				23F848402899ADC100ED644B /* NoticeCollectionViewCell.swift */,
+				23F848412899ADC100ED644B /* NoticeCollectionViewCell.xib */,
+			);
+			path = MainPageBottomSheetCells;
 			sourceTree = "<group>";
 		};
 		237CF45228A7FC590043CFC6 /* ProfileCell */ = {
@@ -565,20 +808,8 @@
 			isa = PBXGroup;
 			children = (
 				237CF45D28A80AF70043CFC6 /* SettingDataManager.swift */,
-				237CF45F28A80BD60043CFC6 /* DeleteUserModel.swift */,
 			);
 			path = SettingDataManager;
-			sourceTree = "<group>";
-		};
-		237ECCDE288556E1000D9A71 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				D0611049288FF04F00F96B65 /* ProfileDataManager */,
-				237ECCE42885692E000D9A71 /* Cell */,
-				237ECCDF288556EE000D9A71 /* ProfileViewController.swift */,
-				D09E0E1028A4D4FF0036DB2D /* ModifyProfileViewController.swift */,
-			);
-			path = Profile;
 			sourceTree = "<group>";
 		};
 		237ECCE12885643F000D9A71 /* Util */ = {
@@ -595,74 +826,16 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
-		237ECCE42885692E000D9A71 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				237CF45328A7FC680043CFC6 /* ModifyProfileCell */,
-				237CF45228A7FC590043CFC6 /* ProfileCell */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
-		239DE3F628A4CD2F00386151 /* FindPassword */ = {
-			isa = PBXGroup;
-			children = (
-				234B37F528A79C4900D7FFD3 /* Cell */,
-				239DE3F928A4CEA900386151 /* FindPasswordDataManager */,
-				239DE3F728A4CD4800386151 /* FindPasswordViewController.swift */,
-			);
-			path = FindPassword;
-			sourceTree = "<group>";
-		};
-		239DE3F928A4CEA900386151 /* FindPasswordDataManager */ = {
-			isa = PBXGroup;
-			children = (
-				239DE3FA28A4CEC100386151 /* FindPasswordDataManager.swift */,
-				239DE3FC28A4CF2900386151 /* FindPasswordInput.swift */,
-			);
-			path = FindPasswordDataManager;
-			sourceTree = "<group>";
-		};
-		239DE3FE28A4D9C200386151 /* Setting */ = {
-			isa = PBXGroup;
-			children = (
-				237CF45C28A80AEA0043CFC6 /* SettingDataManager */,
-				239DE3FF28A4D9CE00386151 /* SettingViewController.swift */,
-			);
-			path = Setting;
-			sourceTree = "<group>";
-		};
-		239DE40128A4E78400386151 /* Cell */ = {
+		239DE40128A4E78400386151 /* LoginCell */ = {
 			isa = PBXGroup;
 			children = (
 				239DE40228A4E7B100386151 /* LoginTableViewCell.swift */,
 				239DE40328A4E7B100386151 /* LoginTableViewCell.xib */,
 			);
-			path = Cell;
+			path = LoginCell;
 			sourceTree = "<group>";
 		};
-		23A41EA12894313B0008437B /* RecordDetailDataManager */ = {
-			isa = PBXGroup;
-			children = (
-				23A41EA42894315D0008437B /* RecordDetailModel.swift */,
-				23A41EA6289431650008437B /* RecordDetailDataManager.swift */,
-			);
-			path = RecordDetailDataManager;
-			sourceTree = "<group>";
-		};
-		23A5B858287D7ECA005413A3 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				23ADA920288478DC0066D15A /* SearchViewController */,
-				23A5B854287D6754005413A3 /* AddFlowerPotViewController.swift */,
-				23A5B856287D6B89005413A3 /* FlowerPotTabViewController.swift */,
-				23ADA921288478FD0066D15A /* AchievedFlowerPotViewController.swift */,
-				23ADA9232884790C0066D15A /* NotAchievedFlowerPotViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		23A5B859287D7ED3005413A3 /* Cell */ = {
+		23A5B859287D7ED3005413A3 /* AddFlowerpotCells */ = {
 			isa = PBXGroup;
 			children = (
 				23A5B85A287D7F73005413A3 /* AcheivedFlowerPotTableViewCell.swift */,
@@ -670,89 +843,45 @@
 				23A5B85E287D7F81005413A3 /* NotAcheivedFlowerPotTableViewCell.swift */,
 				23A5B85F287D7F81005413A3 /* NotAcheivedFlowerPotTableViewCell.xib */,
 			);
-			path = Cell;
+			path = AddFlowerpotCells;
 			sourceTree = "<group>";
 		};
-		23AB709E288FFAE100503366 /* RecordDetail */ = {
-			isa = PBXGroup;
-			children = (
-				23A41EA12894313B0008437B /* RecordDetailDataManager */,
-				23AB70A1288FFDA600503366 /* Cell */,
-				23AB709F288FFAF000503366 /* RecordDetailViewController.swift */,
-			);
-			path = RecordDetail;
-			sourceTree = "<group>";
-		};
-		23AB70A1288FFDA600503366 /* Cell */ = {
+		23AB70A1288FFDA600503366 /* RecordDetailCell */ = {
 			isa = PBXGroup;
 			children = (
 				23AB70A2288FFDBD00503366 /* RecordDetailTableViewCell.swift */,
 				23AB70A3288FFDBD00503366 /* RecordDetailTableViewCell.xib */,
 			);
-			path = Cell;
+			path = RecordDetailCell;
 			sourceTree = "<group>";
 		};
-		23AB70AB289009BB00503366 /* ModifyRecord */ = {
-			isa = PBXGroup;
-			children = (
-				234035FE2891991000C9AB4D /* ModifyRecordDataManager */,
-				23AB70AE28900A8A00503366 /* Cell */,
-				23AB70AC289009D500503366 /* ModifyRecordViewController.swift */,
-			);
-			path = ModifyRecord;
-			sourceTree = "<group>";
-		};
-		23AB70AE28900A8A00503366 /* Cell */ = {
+		23AB70AE28900A8A00503366 /* ModifyRecordCell */ = {
 			isa = PBXGroup;
 			children = (
 				23AB70AF28900A9A00503366 /* ModifyRecordTableViewCell.swift */,
 				23AB70B028900A9A00503366 /* ModifyRecordTableViewCell.xib */,
 			);
-			path = Cell;
+			path = ModifyRecordCell;
 			sourceTree = "<group>";
 		};
-		23ADA909288467680066D15A /* View */ = {
+		23ADA909288467680066D15A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				23ADA90A288467850066D15A /* MainPage.storyboard */,
-				23ADA90C288468D50066D15A /* ReadingRecord.storyboard */,
-				23ADA90E2884693D0066D15A /* SelectBook.storyboard */,
-				23ADA9102884698F0066D15A /* UploadRecord.storyboard */,
-				23ADA912288469E90066D15A /* FlowerPot.storyboard */,
-				23ADA91428846A2A0066D15A /* Profile.storyboard */,
-				23ADA91628846A870066D15A /* UserFlowerPotDetail.storyboard */,
-				23ADA91828846AB10066D15A /* FlowerPotDescription.storyboard */,
-				23ADA91A28846ACE0066D15A /* AddFlowerPot.storyboard */,
-				23ADA91C28846B240066D15A /* AcheivedFlowerPot.storyboard */,
-				23ADA91E28846B440066D15A /* NotAcheivedFlowerPot.storyboard */,
-				237ECCE928857544000D9A71 /* Setting.storyboard */,
-				2303F22E2889A9CD00544AF6 /* Login.storyboard */,
-				23AB709C288FFAD700503366 /* RecordDetail.storyboard */,
-				234036052891AD3D00C9AB4D /* Register.storyboard */,
-				239DE3F428A4CD2300386151 /* FindPassword.storyboard */,
+				D0C2B059286DC9C000242E71 /* LaunchScreen.storyboard */,
+				D0C2B054286DC9BE00242E71 /* Main.storyboard */,
+				234A4EC228AAB5CA00105B61 /* Profile */,
+				234A4EC128AAB5AF00105B61 /* Flowerpot */,
+				234A4EC028AAB5A500105B61 /* Authentication */,
+				234A4EBF28AAB59700105B61 /* Record */,
+				234A4EBE28AAB59000105B61 /* Main */,
 			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		23ADA920288478DC0066D15A /* SearchViewController */ = {
-			isa = PBXGroup;
-			children = (
-				23ADA92528847A8D0066D15A /* AddFlowerPotSearchViewController.swift */,
-				23ADA92728847B830066D15A /* FlowerPotSearchTabViewController.swift */,
-				234AB64F288A633D009FBB59 /* AchievedFlowerPotSearchViewController.swift */,
-				234AB651288A6A36009FBB59 /* NotAchievedFlowerPotSearchViewController.swift */,
-			);
-			path = SearchViewController;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		23ADA92928847FB60066D15A /* MainPageDataManager */ = {
 			isa = PBXGroup;
 			children = (
-				23ADA92A28847FC80066D15A /* FlowerpotModel.swift */,
 				23ADA92C288481080066D15A /* MainPageDataManager.swift */,
-				23A41EA8289436B10008437B /* RecentBookModel.swift */,
-				23F8483D2899A99400ED644B /* NoticeModel.swift */,
-				231E3E59289F82130011A1D2 /* RecommendBookModel.swift */,
 			);
 			path = MainPageDataManager;
 			sourceTree = "<group>";
@@ -760,21 +889,11 @@
 		23C8B4A7286EF39000432141 /* domain */ = {
 			isa = PBXGroup;
 			children = (
-				239DE3FE28A4D9C200386151 /* Setting */,
-				239DE3F628A4CD2F00386151 /* FindPassword */,
-				23776E1728925FDD00351F3A /* Register */,
-				23AB70AB289009BB00503366 /* ModifyRecord */,
-				23AB709E288FFAE100503366 /* RecordDetail */,
-				2303F2302889A9D300544AF6 /* Login */,
-				D0CF2B572885C7F500F78104 /* ReadingRecord */,
-				237ECCDE288556E1000D9A71 /* Profile */,
-				235523452881C45600EDE3E1 /* FlowerPotDescription */,
-				230524BB287D5BEE0081933A /* FlowerPotDetail */,
-				230524C3287D64820081933A /* AddFlowerPot */,
-				23DFD30B2878D98D002AC8B0 /* UploadRecord */,
-				D0DB05B12876AAB00041CEEF /* Upload */,
-				23C8B4AA286EF3B200432141 /* Main */,
-				D0C2B07E286DEB9500242E71 /* Flowerpot */,
+				237B20C828AF78AC00CB0429 /* Models */,
+				23ADA909288467680066D15A /* Views */,
+				237B20CA28AF791D00CB0429 /* Controllers */,
+				237B20D828AF7D7E00CB0429 /* Services */,
+				237B20DD28AF7F0400CB0429 /* Cells */,
 			);
 			path = domain;
 			sourceTree = "<group>";
@@ -796,72 +915,28 @@
 				23C8B4BA286EFF3900432141 /* CustomTabBarController.swift */,
 				23766E7D2870330D005EEA8E /* UIBezierPath.swift */,
 				2312074228A155E900A34A05 /* UILabelExtension.swift */,
+				23C7087528ACBA26000BD542 /* UIColorExtension.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
 		};
-		23C8B4AA286EF3B200432141 /* Main */ = {
+		23C8B4AD286EF75800432141 /* MainPageCells */ = {
 			isa = PBXGroup;
 			children = (
-				23ADA92928847FB60066D15A /* MainPageDataManager */,
-				23C8B4AD286EF75800432141 /* Cell */,
-				23C8B4AB286EF41400432141 /* MainViewController.swift */,
-				238DE01E28819C00007901E6 /* MainBottomViewController.swift */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		23C8B4AD286EF75800432141 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
+				237B20E328AF809400CB0429 /* MainPageBottomSheetCells */,
 				23C8B4AE286EF76F00432141 /* MainFlowerTableViewCell.swift */,
 				23C8B4AF286EF76F00432141 /* MainFlowerTableViewCell.xib */,
-				23C8B4B6286EF78600432141 /* RecentBookCollectionViewCell.swift */,
-				23C8B4B7286EF78600432141 /* RecentBookCollectionViewCell.xib */,
-				238DE01A28819AF0007901E6 /* TodaySuggestCollectionViewCell.swift */,
-				238DE01B28819AF0007901E6 /* TodaySuggestCollectionViewCell.xib */,
-				23F848402899ADC100ED644B /* NoticeCollectionViewCell.swift */,
-				23F848412899ADC100ED644B /* NoticeCollectionViewCell.xib */,
 			);
-			path = Cell;
+			path = MainPageCells;
 			sourceTree = "<group>";
 		};
-		23CC78D5288FCD9B0064DA7E /* UploadRecordDataManager */ = {
-			isa = PBXGroup;
-			children = (
-				23CC78D6288FCDAE0064DA7E /* UploadRecordInput.swift */,
-				23CC78D8288FCE370064DA7E /* UploadRecordModel.swift */,
-				23CC78DA288FCEDE0064DA7E /* UploadRecordDataManager.swift */,
-			);
-			path = UploadRecordDataManager;
-			sourceTree = "<group>";
-		};
-		23DFD30B2878D98D002AC8B0 /* UploadRecord */ = {
-			isa = PBXGroup;
-			children = (
-				23CC78D5288FCD9B0064DA7E /* UploadRecordDataManager */,
-				23DFD3122878D9F7002AC8B0 /* Cell */,
-				23DFD30C2878D9B1002AC8B0 /* UploadRecordViewController.swift */,
-			);
-			path = UploadRecord;
-			sourceTree = "<group>";
-		};
-		23DFD3122878D9F7002AC8B0 /* Cell */ = {
+		23DFD3122878D9F7002AC8B0 /* UploadRecordCell */ = {
 			isa = PBXGroup;
 			children = (
 				23DFD30E2878D9F4002AC8B0 /* UploadRecordTableViewCell.swift */,
 				23DFD30F2878D9F4002AC8B0 /* UploadRecordTableViewCell.xib */,
 			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
-		23F61078288812B700575D81 /* ReadingRecordDataManager */ = {
-			isa = PBXGroup;
-			children = (
-				23F61079288812C700575D81 /* ReadingRecordModel.swift */,
-				23F6107B2888134C00575D81 /* ReadingRecordDataManager.swift */,
-			);
-			path = ReadingRecordDataManager;
+			path = UploadRecordCell;
 			sourceTree = "<group>";
 		};
 		329CFF90FF7C282BE262C8CF /* Pods */ = {
@@ -885,22 +960,9 @@
 		D0611049288FF04F00F96B65 /* ProfileDataManager */ = {
 			isa = PBXGroup;
 			children = (
-				D061104A288FF09500F96B65 /* StatisticModel.swift */,
 				D061104C288FF1ED00F96B65 /* ProfileDataManager.swift */,
-				23458AE52896F35A0003A669 /* IntroModel.swift */,
-				23448E7F28A972550020CF63 /* ModifyProfileInput.swift */,
 			);
 			path = ProfileDataManager;
-			sourceTree = "<group>";
-		};
-		D07E7EBA289278E30077287A /* RegisterDataManager */ = {
-			isa = PBXGroup;
-			children = (
-				D07E7EBD289279250077287A /* RegisterInput.swift */,
-				D07E7EBF28927AC70077287A /* RegisterDataManager.swift */,
-				23DE9D6B28A56524009DF894 /* RegisterModel.swift */,
-			);
-			path = RegisterDataManager;
 			sourceTree = "<group>";
 		};
 		D0C2B042286DC9BE00242E71 = {
@@ -926,85 +988,41 @@
 		D0C2B04D286DC9BE00242E71 /* LIBROG */ = {
 			isa = PBXGroup;
 			children = (
-				23ADA909288467680066D15A /* View */,
+				237B20CB28AF792C00CB0429 /* AppDelegate */,
+				23D0301628AE8EDB000CDB36 /* LIBROG.entitlements */,
 				23C8B4A8286EF39900432141 /* global */,
 				23C8B4A7286EF39000432141 /* domain */,
-				D0C2B04E286DC9BE00242E71 /* AppDelegate.swift */,
-				D0C2B050286DC9BE00242E71 /* SceneDelegate.swift */,
-				D0C2B052286DC9BE00242E71 /* ViewController.swift */,
-				D0C2B054286DC9BE00242E71 /* Main.storyboard */,
 				D0C2B057286DC9C000242E71 /* Assets.xcassets */,
-				D0C2B059286DC9C000242E71 /* LaunchScreen.storyboard */,
 				D0C2B05C286DC9C000242E71 /* Info.plist */,
 			);
 			path = LIBROG;
 			sourceTree = "<group>";
 		};
-		D0C2B07E286DEB9500242E71 /* Flowerpot */ = {
-			isa = PBXGroup;
-			children = (
-				23091F812886B666008EC8D2 /* FlowerpotDataManager */,
-				D0C2B081286DF22300242E71 /* Cell */,
-				D0C2B07F286DEBD600242E71 /* FlowerPotViewController.swift */,
-			);
-			path = Flowerpot;
-			sourceTree = "<group>";
-		};
-		D0C2B081286DF22300242E71 /* Cell */ = {
+		D0C2B081286DF22300242E71 /* UserFlowerpotCell */ = {
 			isa = PBXGroup;
 			children = (
 				D0C2B084286DF28800242E71 /* FlowerpotTableViewCell.swift */,
 				D0C2B085286DF28800242E71 /* FlowerpotTableViewCell.xib */,
 			);
-			path = Cell;
+			path = UserFlowerpotCell;
 			sourceTree = "<group>";
 		};
-		D0CF2B572885C7F500F78104 /* ReadingRecord */ = {
-			isa = PBXGroup;
-			children = (
-				23F61078288812B700575D81 /* ReadingRecordDataManager */,
-				D0CF2B582885C80300F78104 /* Cell */,
-				D0CF2B5F2885C99C00F78104 /* ReadingRecordViewController.swift */,
-				D096410A2886B40800E5989C /* ReadingRecordBottomViewController.swift */,
-			);
-			path = ReadingRecord;
-			sourceTree = "<group>";
-		};
-		D0CF2B582885C80300F78104 /* Cell */ = {
+		D0CF2B582885C80300F78104 /* ReadingRecordCell */ = {
 			isa = PBXGroup;
 			children = (
 				D0CF2B5B2885C83C00F78104 /* ReadingRecordCollectionViewCell.swift */,
 				D0CF2B5C2885C83C00F78104 /* ReadingRecordCollectionViewCell.xib */,
 			);
-			path = Cell;
+			path = ReadingRecordCell;
 			sourceTree = "<group>";
 		};
-		D0DB05B12876AAB00041CEEF /* Upload */ = {
-			isa = PBXGroup;
-			children = (
-				2339DA04288591BE00A3DBC4 /* SearchBookManager */,
-				D0DB05C02877004D0041CEEF /* Model */,
-				D0DB05B82876CF580041CEEF /* Cell */,
-				D0DB05B22876BC330041CEEF /* UploadViewController.swift */,
-			);
-			path = Upload;
-			sourceTree = "<group>";
-		};
-		D0DB05B82876CF580041CEEF /* Cell */ = {
+		D0DB05B82876CF580041CEEF /* UploadCell */ = {
 			isa = PBXGroup;
 			children = (
 				23A5B868287D9D5D005413A3 /* ResultTableViewCell.swift */,
 				23A5B86C287D9D5D005413A3 /* ResultTableViewCell.xib */,
 			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
-		D0DB05C02877004D0041CEEF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				D0DB05C1287700650041CEEF /* BookData.swift */,
-			);
-			path = Model;
+			path = UploadCell;
 			sourceTree = "<group>";
 		};
 		E76887DEF1096ADA5257CEDE /* Frameworks */ = {
@@ -1127,6 +1145,7 @@
 				23ADA913288469E90066D15A /* FlowerPot.storyboard in Resources */,
 				23AB70A5288FFDBD00503366 /* RecordDetailTableViewCell.xib in Resources */,
 				238DE01D28819AF0007901E6 /* TodaySuggestCollectionViewCell.xib in Resources */,
+				23ECA8ED28AFAD5000497CA3 /* ChangePasswordTableViewCell.xib in Resources */,
 				2315AADD28A6BD2D00753418 /* RegisterTermTableViewCell.xib in Resources */,
 				23ADA91728846A870066D15A /* UserFlowerPotDetail.storyboard in Resources */,
 				23F7139928A6E9A90058A57A /* RegisterProfileTableViewCell.xib in Resources */,
@@ -1143,7 +1162,7 @@
 				23ADA91528846A2A0066D15A /* Profile.storyboard in Resources */,
 				23F848432899ADC100ED644B /* NoticeCollectionViewCell.xib in Resources */,
 				23ADA90F2884693D0066D15A /* SelectBook.storyboard in Resources */,
-				239DE3F528A4CD2300386151 /* FindPassword.storyboard in Resources */,
+				239DE3F528A4CD2300386151 /* Password.storyboard in Resources */,
 				2379DEE82897A29800F946DD /* ProfileLoginTypeTableViewCell.xib in Resources */,
 				23F7139528A6E3560058A57A /* RegisterTableViewCell.xib in Resources */,
 				23A5B872287D9D5D005413A3 /* ResultTableViewCell.xib in Resources */,
@@ -1239,6 +1258,7 @@
 				D0C2B089286E1FD600242E71 /* UIViewExtension.swift in Sources */,
 				23AB70B128900A9A00503366 /* ModifyRecordTableViewCell.swift in Sources */,
 				23A5B860287D7F81005413A3 /* NotAcheivedFlowerPotTableViewCell.swift in Sources */,
+				23C7087628ACBA26000BD542 /* UIColorExtension.swift in Sources */,
 				23F6107C2888134C00575D81 /* ReadingRecordDataManager.swift in Sources */,
 				23A5B86E287D9D5D005413A3 /* ResultTableViewCell.swift in Sources */,
 				239DE40428A4E7B100386151 /* LoginTableViewCell.swift in Sources */,
@@ -1255,6 +1275,8 @@
 				23ADA92828847B830066D15A /* FlowerPotSearchTabViewController.swift in Sources */,
 				23C8B4BB286EFF3900432141 /* CustomTabBarController.swift in Sources */,
 				2305E77628915FC000A9B6D5 /* LoginDataManager.swift in Sources */,
+				23ECA8EF28AFAFA900497CA3 /* ChangePasswordInput.swift in Sources */,
+				2339796B28AA7484009CF5D0 /* DeleteRecordInput.swift in Sources */,
 				231E3E5A289F82130011A1D2 /* RecommendBookModel.swift in Sources */,
 				234B37F828A79C5F00D7FFD3 /* FindPasswordTableViewCell.swift in Sources */,
 				23C8B4A6286EF2F300432141 /* PaddingLabel.swift in Sources */,
@@ -1269,7 +1291,6 @@
 				234AB652288A6A36009FBB59 /* NotAchievedFlowerPotSearchViewController.swift in Sources */,
 				231B8D442889189D006F44A3 /* AddFlowerpotDataManager.swift in Sources */,
 				234AB650288A633D009FBB59 /* AchievedFlowerPotSearchViewController.swift in Sources */,
-				D0C2B053286DC9BE00242E71 /* ViewController.swift in Sources */,
 				23A41EA52894315D0008437B /* RecordDetailModel.swift in Sources */,
 				2322AE5B2897F39300513E23 /* LoginInput.swift in Sources */,
 				235523472881C47200EDE3E1 /* FlowerPotDescriptionViewController.swift in Sources */,
@@ -1293,6 +1314,7 @@
 				239DE3FB28A4CEC100386151 /* FindPasswordDataManager.swift in Sources */,
 				D0C2B051286DC9BE00242E71 /* SceneDelegate.swift in Sources */,
 				D061104B288FF09500F96B65 /* StatisticModel.swift in Sources */,
+				237B20C728AF72E000CB0429 /* MainPageDayCountModel.swift in Sources */,
 				23458ADF2896E8B00003A669 /* ProfileFlowerpotTableViewCell.swift in Sources */,
 				23C8B4B8286EF78600432141 /* RecentBookCollectionViewCell.swift in Sources */,
 				234E31B428A01B1E00DCD812 /* ScreenManager.swift in Sources */,
@@ -1304,12 +1326,14 @@
 				23091F832886B69E008EC8D2 /* FlowerpotDataManager.swift in Sources */,
 				23ADA9242884790C0066D15A /* NotAchievedFlowerPotViewController.swift in Sources */,
 				239DE3FD28A4CF2900386151 /* FindPasswordInput.swift in Sources */,
+				23ECA8F328AFB01600497CA3 /* ChangePasswordDataManager.swift in Sources */,
 				23ADA92D288481080066D15A /* MainPageDataManager.swift in Sources */,
 				23776E1928925FFF00351F3A /* RegisterViewController.swift in Sources */,
 				2303F2322889A9EB00544AF6 /* LoginViewController.swift in Sources */,
 				23CC78D9288FCE370064DA7E /* UploadRecordModel.swift in Sources */,
 				23AB70A4288FFDBD00503366 /* RecordDetailTableViewCell.swift in Sources */,
 				D0CF2B5D2885C83C00F78104 /* ReadingRecordCollectionViewCell.swift in Sources */,
+				23ECA8E728AFAC2700497CA3 /* ChangePasswordViewController.swift in Sources */,
 				D09E0E1128A4D4FF0036DB2D /* ModifyProfileViewController.swift in Sources */,
 				D0C2B086286DF28800242E71 /* FlowerpotTableViewCell.swift in Sources */,
 				231B8D4A288936F6006F44A3 /* FlowerpotDescriptionDataManager.swift in Sources */,
@@ -1321,6 +1345,7 @@
 				D0C2B080286DEBD600242E71 /* FlowerPotViewController.swift in Sources */,
 				23A41EA9289436B10008437B /* RecentBookModel.swift in Sources */,
 				D07E7EB3289273140077287A /* RegisterProfileBottomViewController.swift in Sources */,
+				23ECA8F128AFAFE000497CA3 /* ChangePasswordModel.swift in Sources */,
 				2305E773289159A000A9B6D5 /* KakaoLoginManager.swift in Sources */,
 				237CF46028A80BD60043CFC6 /* DeleteUserModel.swift in Sources */,
 				D07E7EBE289279250077287A /* RegisterInput.swift in Sources */,
@@ -1340,6 +1365,7 @@
 				23CC78D7288FCDAE0064DA7E /* UploadRecordInput.swift in Sources */,
 				D0CF2B602885C99C00F78104 /* ReadingRecordViewController.swift in Sources */,
 				23C8B4AC286EF41400432141 /* MainViewController.swift in Sources */,
+				23ECA8EC28AFAD5000497CA3 /* ChangePasswordTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1512,15 +1538,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LIBROG/LIBROG.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B974XY47GZ;
+				DEVELOPMENT_TEAM = 69F5355JYF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LIBROG/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1541,15 +1568,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LIBROG/LIBROG.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B974XY47GZ;
+				DEVELOPMENT_TEAM = 69F5355JYF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LIBROG/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
