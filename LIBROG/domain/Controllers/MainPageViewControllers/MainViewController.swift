@@ -15,8 +15,9 @@ class MainViewController: UIViewController {
     var fpc: FloatingPanelController!
     var mainBottomVC: MainBottomViewController! // 띄울 VC
     
-    private var flowerpotVM: MainFlowerpotViewModel!
-    private var dayCntVM: MainDayCntViewModel!
+    var flowerpotData: MainPageFlowerpot?
+    var dayCnt: Int?
+    var mainMessage: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,11 +32,9 @@ class MainViewController: UIViewController {
         MainTableView.register(flowerNib, forCellReuseIdentifier: "MainFlowerTableViewCell")
         
         MainPageDataManager().mainPageFlowerpotDataManager(self)
-        MainPageDataManager().mainPageDayCountDataManager(self)
     }
     override func viewDidAppear(_ animated: Bool) {
         MainPageDataManager().mainPageFlowerpotDataManager(self)
-        MainPageDataManager().mainPageDayCountDataManager(self)
     }
     private func setupView() {
         mainBottomVC = storyboard?.instantiateViewController(identifier: "MainBottomVC", creator: { (coder) -> MainBottomViewController? in
@@ -53,7 +52,7 @@ class MainViewController: UIViewController {
 // MARK: - 메인페이지 tableView delegate
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.flowerpotVM == nil ? 0 : self.flowerpotVM.numberOfRowsInSection(section)
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -61,35 +60,34 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         cell.selectionStyle = .none
-        // MARK: 유저의 최근 화분
-        if let cellData = self.flowerpotVM {
+        if let cellData = self.flowerpotData {
             // if data exists
-            let flowerpotData = cellData.flowerpotData
-            cell.setUpMainFlowerpotData(flowerpotData)
+            cell.setUpMainFlowerpotData(cellData)
         }
-        // MARK: 독서 일차 & 문구
-        if let mainContentData = self.dayCntVM {
-            // if data exists
-            let data = mainContentData.cntAndContent
-            cell.dayCnt = data.daycnt
-            cell.mainMessage = data.content
-        }
+        if let dayCnt = self.dayCnt {cell.dayCnt = dayCnt}
+        if let message = self.mainMessage {cell.mainMessage = message}
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return tableView.frame.height
+        return 510
+    }
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard cell is MainFlowerTableViewCell else {
+            return
+        }
     }
 }
 // MARK: - API success
 extension MainViewController {
     //MARK: 유저의 화분 정보 가져오기 API success
     func userFlowerPotSuccessAPI(_ result : MainPageFlowerpot) {
-        self.flowerpotVM = MainFlowerpotViewModel(result)
+        self.flowerpotData = result
         MainTableView.reloadData()
     }
     //MARK: 독서일차 & 문구 API success
     func userDayCountSuccessAPI(_ result : MainPageDayCountModel) {
-        self.dayCntVM = MainDayCntViewModel(result)
+        if let dayCnt = result.daycnt {self.dayCnt = dayCnt}
+        if let message = result.content {self.mainMessage = message}
         MainTableView.reloadData()
     }
 }
@@ -136,7 +134,7 @@ class MyFloatingPanelLayout: FloatingPanelLayout {
     var anchors: [FloatingPanelState: FloatingPanelLayoutAnchoring] { // 가능한 floating panel: 현재 full, half만 가능하게 설정
         return [
             .full: FloatingPanelLayoutAnchor(absoluteInset: 150.0, edge: .top, referenceGuide: .safeArea),
-            .half: FloatingPanelLayoutAnchor(absoluteInset: 200, edge: .bottom, referenceGuide: .safeArea),
+            .half: FloatingPanelLayoutAnchor(absoluteInset: 220, edge: .bottom, referenceGuide: .safeArea),
         ]
     }
 }
