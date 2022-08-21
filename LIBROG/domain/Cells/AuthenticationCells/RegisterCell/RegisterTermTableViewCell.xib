@@ -12,15 +12,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="816" id="KGk-i7-Jjw" customClass="RegisterTermTableViewCell" customModule="LIBROG" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="535" height="816"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="759" id="KGk-i7-Jjw" customClass="RegisterTermTableViewCell" customModule="LIBROG" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="497" height="759"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="535" height="816"/>
+                <rect key="frame" x="0.0" y="0.0" width="497" height="759"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWR-Am-QfH">
-                        <rect key="frame" x="34" y="727" width="461" height="40"/>
+                        <rect key="frame" x="34" y="681" width="423" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="yoa-AQ-BM2"/>
                         </constraints>
@@ -33,7 +33,7 @@
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpE-se-nLh">
-                        <rect key="frame" x="34" y="45" width="74.5" height="24"/>
+                        <rect key="frame" x="34" y="44" width="74.5" height="24"/>
                         <attributedString key="attributedText">
                             <fragment content="약관 동의">
                                 <attributes>
@@ -46,7 +46,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gu4-Me-h4o">
-                        <rect key="frame" x="34" y="79" width="267.5" height="18"/>
+                        <rect key="frame" x="34" y="77" width="267.5" height="18"/>
                         <attributedString key="attributedText">
                             <fragment content="아래 약관에 동의하신 후 [다음]을 눌러주세요.">
                                 <attributes>
@@ -59,7 +59,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Jn-ZL-Ush" customClass="DLRadioButton">
-                        <rect key="frame" x="20" y="150" width="186.5" height="100"/>
+                        <rect key="frame" x="20" y="140" width="186.5" height="110"/>
                         <color key="tintColor" systemColor="labelColor"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain">
@@ -95,22 +95,22 @@
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" * 필수 동의 내용에 동의하지 않으시면 서비스 이용이 불가합니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYU-D2-gDQ">
-                        <rect key="frame" x="34" y="136" width="284" height="14"/>
+                        <rect key="frame" x="34" y="126" width="284" height="14"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
                         <color key="textColor" systemColor="systemRedColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(필수)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJq-jj-xbE">
-                        <rect key="frame" x="206.5" y="191" width="37" height="18"/>
+                        <rect key="frame" x="206.5" y="186" width="37" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" name="LIBROGColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbL-xZ-snP">
-                        <rect key="frame" x="34" y="259" width="461" height="156"/>
+                        <rect key="frame" x="34" y="251" width="423" height="145"/>
                         <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="156" id="Q5r-dx-tOl"/>
+                            <constraint firstAttribute="height" constant="145" id="Q5r-dx-tOl"/>
                         </constraints>
                         <string key="text">소리다.이것은 그와 이것을 방황하여도, 같지 싶이 어디 우리는 것이다. 그들의 그것은 충분히 청춘의 무엇을 속에서 눈에 그리하였는가? 힘차게 무엇을 거선의 목숨이 창공에 운다. 이상의 설레는 피고, 들어 보배를 뼈 불어 그들은 위하여서. 고행을 아니한 그들은 우리는 얼마나 무엇을 있는 때문이다. 만물은 우리의 가지에 피어나는 얼마나 전인 말이다. 꽃 위하여 평화스러운 풀이 인간에 부패뿐이다. 광야에서 귀는 못할 스며들어 바이며, 우리의 풀밭에 새가 일월과 쓸쓸하랴? 같이, 두기 우리 아름답고 것이다. 같이, 원대하고, 현저하게 것이다. 풍부하게 있는 위하여 커다란 피다.소리다.이것은 그와 이것을 방황하여도, 같지 싶이 어디 우리는 것이다. 그들의 그것은 충분히 청춘의 무엇을 속에서 눈에 그리하였는가? 힘차게 무엇을 거선의 목숨이 창공에 운다. 이상의 설레는 피고, 들어 보배를 뼈 불어 그들은 위하여서. 고행을 아니한 그들은 우리는 얼마나 무엇을 있는 때문이다. 만물은 우리의 가지에 피어나는 얼마나 전인 말이다. 꽃 위하여 평화스러운 풀이 인간에 부패뿐이다. 광야에서 귀는 못할 스며들어 바이며, 우리의 풀밭에 새가 일월과 쓸쓸하랴? 같이, 두기 우리 아름답고 것이다. 같이, 원대하고, 현저하게 것이다. 풍부하게 있는 위하여 커다란 피다.</string>
                         <color key="textColor" systemColor="labelColor"/>
@@ -123,7 +123,7 @@
                         </userDefinedRuntimeAttributes>
                     </textView>
                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="122-LM-NoT" customClass="DLRadioButton">
-                        <rect key="frame" x="20" y="453" width="131" height="32"/>
+                        <rect key="frame" x="20" y="426" width="131" height="32"/>
                         <color key="tintColor" systemColor="labelColor"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain">
@@ -159,18 +159,25 @@
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(필수)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SIH-eu-0fx">
-                        <rect key="frame" x="143" y="460" width="37" height="18"/>
+                        <rect key="frame" x="143" y="433" width="37" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" name="LIBROGColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ga-40-jZZ">
-                        <rect key="frame" x="34" y="494" width="461" height="156"/>
+                        <rect key="frame" x="34" y="459" width="423" height="145"/>
                         <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="156" id="L9e-ln-E37"/>
+                            <constraint firstAttribute="height" constant="145" id="L9e-ln-E37"/>
                         </constraints>
-                        <string key="text">소리다.이것은 그와 이것을 방황하여도, 같지 싶이 어디 우리는 것이다. 그들의 그것은 충분히 청춘의 무엇을 속에서 눈에 그리하였는가? 힘차게 무엇을 거선의 목숨이 창공에 운다. 이상의 설레는 피고, 들어 보배를 뼈 불어 그들은 위하여서. 고행을 아니한 그들은 우리는 얼마나 무엇을 있는 때문이다. 만물은 우리의 가지에 피어나는 얼마나 전인 말이다. 꽃 위하여 평화스러운 풀이 인간에 부패뿐이다. 광야에서 귀는 못할 스며들어 바이며, 우리의 풀밭에 새가 일월과 쓸쓸하랴? 같이, 두기 우리 아름답고 것이다. 같이, 원대하고, 현저하게 것이다. 풍부하게 있는 위하여 커다란 피다.소리다.이것은 그와 이것을 방황하여도, 같지 싶이 어디 우리는 것이다. 그들의 그것은 충분히 청춘의 무엇을 속에서 눈에 그리하였는가? 힘차게 무엇을 거선의 목숨이 창공에 운다. 이상의 설레는 피고, 들어 보배를 뼈 불어 그들은 위하여서. 고행을 아니한 그들은 우리는 얼마나 무엇을 있는 때문이다. 만물은 우리의 가지에 피어나는 얼마나 전인 말이다. 꽃 위하여 평화스러운 풀이 인간에 부패뿐이다. 광야에서 귀는 못할 스며들어 바이며, 우리의 풀밭에 새가 일월과 쓸쓸하랴? 같이, 두기 우리 아름답고 것이다. 같이, 원대하고, 현저하게 것이다. 풍부하게 있는 위하여 커다란 피다.</string>
+                        <string key="text">개인정보 수집 및 이용 동의
+리브로그에서는 아래 목적으로 개인정보를 수집 및 이용하며, 회원의 
+개인정보를 안전하게 취급하는데 최선을 다하겠습니다.
+목적 : 사용자 식별 및 서비스 이용에 필요한 정보 조회
+수집항목 : 이메일 주소
+보유기간 : 회원 탈퇴시 지체없이 파기
+위 개인정보 수집에 대한 동의를 거부할 권리가 있으며, 거부시에는
+서비스 이용이 제한될 수 있습니다.</string>
                         <color key="textColor" systemColor="labelColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -182,18 +189,18 @@
                     </textView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="3Jn-ZL-Ush" firstAttribute="top" secondItem="Gu4-Me-h4o" secondAttribute="bottom" constant="53" id="1e3-tu-wzE"/>
+                    <constraint firstItem="3Jn-ZL-Ush" firstAttribute="top" secondItem="Gu4-Me-h4o" secondAttribute="bottom" constant="45" id="1e3-tu-wzE"/>
                     <constraint firstAttribute="trailingMargin" secondItem="UbL-xZ-snP" secondAttribute="trailing" constant="20" id="5nG-XK-q28"/>
                     <constraint firstItem="3Jn-ZL-Ush" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="CwH-CT-DLL"/>
                     <constraint firstItem="SIH-eu-0fx" firstAttribute="centerY" secondItem="122-LM-NoT" secondAttribute="centerY" id="D9o-2t-IWu"/>
-                    <constraint firstItem="9ga-40-jZZ" firstAttribute="top" secondItem="122-LM-NoT" secondAttribute="bottom" constant="9" id="Dcc-op-jx1"/>
+                    <constraint firstItem="9ga-40-jZZ" firstAttribute="top" secondItem="122-LM-NoT" secondAttribute="bottom" constant="1" id="Dcc-op-jx1"/>
                     <constraint firstItem="122-LM-NoT" firstAttribute="leading" secondItem="3Jn-ZL-Ush" secondAttribute="leading" id="IEY-v5-p7z"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="SWR-Am-QfH" secondAttribute="bottom" constant="38" id="MpM-mp-eqk"/>
-                    <constraint firstItem="vpE-se-nLh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="34" id="NYW-1F-96z"/>
+                    <constraint firstAttribute="bottom" secondItem="SWR-Am-QfH" secondAttribute="bottom" constant="38" id="MpM-mp-eqk"/>
+                    <constraint firstItem="vpE-se-nLh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="33" id="NYW-1F-96z"/>
                     <constraint firstItem="UJq-jj-xbE" firstAttribute="centerY" secondItem="3Jn-ZL-Ush" secondAttribute="centerY" id="RF4-xz-p7G"/>
                     <constraint firstItem="3Jn-ZL-Ush" firstAttribute="top" secondItem="aYU-D2-gDQ" secondAttribute="bottom" id="TVK-Dx-u0F"/>
                     <constraint firstItem="SWR-Am-QfH" firstAttribute="top" secondItem="9ga-40-jZZ" secondAttribute="bottom" constant="77" id="ZJv-Po-Iiv"/>
-                    <constraint firstItem="Gu4-Me-h4o" firstAttribute="top" secondItem="vpE-se-nLh" secondAttribute="bottom" constant="10" id="dg9-eH-jTc"/>
+                    <constraint firstItem="Gu4-Me-h4o" firstAttribute="top" secondItem="vpE-se-nLh" secondAttribute="bottom" constant="9" id="dg9-eH-jTc"/>
                     <constraint firstItem="UJq-jj-xbE" firstAttribute="leading" secondItem="3Jn-ZL-Ush" secondAttribute="trailing" id="ebe-6u-icH"/>
                     <constraint firstItem="UbL-xZ-snP" firstAttribute="leading" secondItem="Gu4-Me-h4o" secondAttribute="leading" id="esu-1g-qbq"/>
                     <constraint firstItem="SWR-Am-QfH" firstAttribute="leading" secondItem="9ga-40-jZZ" secondAttribute="leading" id="i5N-Jk-7rm"/>
@@ -203,9 +210,9 @@
                     <constraint firstItem="aYU-D2-gDQ" firstAttribute="leading" secondItem="Gu4-Me-h4o" secondAttribute="leading" id="r3P-cd-Jib"/>
                     <constraint firstItem="9ga-40-jZZ" firstAttribute="trailing" secondItem="UbL-xZ-snP" secondAttribute="trailing" id="rVD-uG-oXy"/>
                     <constraint firstItem="9ga-40-jZZ" firstAttribute="leading" secondItem="UbL-xZ-snP" secondAttribute="leading" id="sjL-rT-SX3"/>
-                    <constraint firstItem="UbL-xZ-snP" firstAttribute="top" secondItem="3Jn-ZL-Ush" secondAttribute="bottom" constant="9" id="uTu-Z1-ctn"/>
+                    <constraint firstItem="UbL-xZ-snP" firstAttribute="top" secondItem="3Jn-ZL-Ush" secondAttribute="bottom" constant="1" id="uTu-Z1-ctn"/>
                     <constraint firstItem="Gu4-Me-h4o" firstAttribute="leading" secondItem="vpE-se-nLh" secondAttribute="leading" id="xNZ-5N-mVR"/>
-                    <constraint firstItem="122-LM-NoT" firstAttribute="top" secondItem="UbL-xZ-snP" secondAttribute="bottom" constant="38" id="xiF-Lv-cF0"/>
+                    <constraint firstItem="122-LM-NoT" firstAttribute="top" secondItem="UbL-xZ-snP" secondAttribute="bottom" constant="30" id="xiF-Lv-cF0"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -215,7 +222,7 @@
                 <outlet property="serviceRadioButton" destination="122-LM-NoT" id="3qn-83-4EU"/>
                 <outlet property="warningLabel" destination="aYU-D2-gDQ" id="89Y-mf-weH"/>
             </connections>
-            <point key="canvasLocation" x="286.23188405797106" y="339.50892857142856"/>
+            <point key="canvasLocation" x="57.24637681159421" y="290.29017857142856"/>
         </tableViewCell>
     </objects>
     <resources>
