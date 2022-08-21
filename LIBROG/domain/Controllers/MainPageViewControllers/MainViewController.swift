@@ -32,9 +32,11 @@ class MainViewController: UIViewController {
         MainTableView.register(flowerNib, forCellReuseIdentifier: "MainFlowerTableViewCell")
         
         MainPageDataManager().mainPageFlowerpotDataManager(self)
+        MainPageDataManager().mainPageDayCountDataManager(self)
     }
     override func viewDidAppear(_ animated: Bool) {
         MainPageDataManager().mainPageFlowerpotDataManager(self)
+        MainPageDataManager().mainPageDayCountDataManager(self)
     }
     private func setupView() {
         mainBottomVC = storyboard?.instantiateViewController(identifier: "MainBottomVC", creator: { (coder) -> MainBottomViewController? in
