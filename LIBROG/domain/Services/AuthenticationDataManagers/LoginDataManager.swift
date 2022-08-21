@@ -26,6 +26,7 @@ class LoginDataManager {
             case .success(let result):
                 print("DEBUG: ", result)
                 if result.isSuccess! {viewcontroller.loginSuccessAPI(result)}
+                else {DialogManager().alertErrorDialog(result.message!, viewcontroller)}
             case .failure(let error):
                 print(error.localizedDescription)
             }
@@ -45,6 +46,7 @@ class LoginDataManager {
             case .success(let result):
                 print("DEBUG: ", result)
                 if result.isSuccess! {viewcontroller.loginSuccessAPI(result)}
+                else {DialogManager().alertErrorDialog(result.message!, viewcontroller)}
             case .failure(let error):
                 print(error.localizedDescription)
             }
@@ -64,6 +66,7 @@ class LoginDataManager {
             case .success(let result):
                 print("DEBUG: ", result.result)
                 if result.isSuccess! {viewcontroller.loginSuccessAPI(result.result!)}
+                else {DialogManager().alertErrorDialog(result.message!, viewcontroller)}
             case .failure(let error):
                 print(error.localizedDescription)
             }

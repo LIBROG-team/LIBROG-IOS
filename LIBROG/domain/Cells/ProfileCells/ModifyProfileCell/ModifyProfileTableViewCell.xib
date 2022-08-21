@@ -89,7 +89,7 @@
                         </constraints>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2P-0i-pC1">
-                        <rect key="frame" x="34" y="639" width="265" height="40"/>
+                        <rect key="frame" x="34" y="651" width="265" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="yEy-3s-6tg"/>
                         </constraints>
@@ -115,13 +115,14 @@
                     <constraint firstItem="T2P-0i-pC1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="34" id="UUi-vb-Znb"/>
                     <constraint firstItem="rEG-1g-JCl" firstAttribute="trailing" secondItem="Xvw-cF-5HY" secondAttribute="trailing" id="VTM-Tr-PBT"/>
                     <constraint firstItem="sie-nF-Nrs" firstAttribute="leading" secondItem="dpG-z1-AcF" secondAttribute="trailing" constant="-30" id="ZdC-ST-RS5"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="T2P-0i-pC1" secondAttribute="bottom" constant="58" id="Zhw-AI-m0U"/>
                     <constraint firstItem="GTW-jc-wrd" firstAttribute="trailing" secondItem="rEG-1g-JCl" secondAttribute="trailing" id="cBJ-ia-MMC"/>
                     <constraint firstItem="B6r-6y-qXV" firstAttribute="leading" secondItem="m09-p3-aP6" secondAttribute="leading" id="d0u-rk-chq"/>
                     <constraint firstItem="m09-p3-aP6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="34" id="e5o-YJ-mzp"/>
                     <constraint firstAttribute="trailing" secondItem="T2P-0i-pC1" secondAttribute="trailing" constant="34" id="i4p-eH-2dO"/>
                     <constraint firstItem="GTW-jc-wrd" firstAttribute="leading" secondItem="rEG-1g-JCl" secondAttribute="leading" id="pVD-gK-CUo"/>
                     <constraint firstItem="m09-p3-aP6" firstAttribute="top" secondItem="dpG-z1-AcF" secondAttribute="bottom" constant="83" id="v38-CO-wbB"/>
-                    <constraint firstItem="T2P-0i-pC1" firstAttribute="top" secondItem="GTW-jc-wrd" secondAttribute="bottom" constant="223" id="wce-mW-4Vi"/>
+                    <constraint firstItem="T2P-0i-pC1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="GTW-jc-wrd" secondAttribute="bottom" constant="223" id="wce-mW-4Vi"/>
                     <constraint firstItem="Sc5-xr-6tt" firstAttribute="top" secondItem="Xvw-cF-5HY" secondAttribute="bottom" constant="5" id="znt-pA-zh0"/>
                 </constraints>
             </tableViewCellContentView>
