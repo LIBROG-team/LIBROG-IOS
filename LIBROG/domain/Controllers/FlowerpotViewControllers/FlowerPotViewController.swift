@@ -80,7 +80,7 @@ extension FlowerPotViewController: UITableViewDelegate, UITableViewDataSource {
 extension FlowerPotViewController {
     func userFlowerPotSuccessAPI(_ result : [FlowerpotData]) {
         self.flowerpotArray = result
-        flowerpotCountLabel.text = "총 " + String(flowerpotArray.count) + "권"
+        flowerpotCountLabel.text = "총 " + String(flowerpotArray.count) + "개"
         flowerpotTableView.reloadData()
     }
 }
