@@ -92,14 +92,10 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         }
         // MARK: 비밀번호 변경
         else if indexPath.row == 4 {
-            if let loginType = self.introData.type {
-                DialogManager().alertErrorDialog("\(loginType)로 로그인한 계정은\n비밀번호 변경을 할 수 없습니다.", self)
-            } else {
-                guard let changePwVC = UIStoryboard(name: "Password", bundle: nil).instantiateViewController(identifier: "ChangePwVC") as? ChangePasswordViewController else {return}
-                
-                changePwVC.modalPresentationStyle = .fullScreen
-                self.present(changePwVC, animated: true, completion: nil)
-            }
+            guard let changePwVC = UIStoryboard(name: "Password", bundle: nil).instantiateViewController(identifier: "ChangePwVC") as? ChangePasswordViewController else {return}
+            
+            changePwVC.modalPresentationStyle = .fullScreen
+            self.present(changePwVC, animated: true, completion: nil)
         }
         // MARK: 쿠폰입력하기
         else if indexPath.row == 5 {

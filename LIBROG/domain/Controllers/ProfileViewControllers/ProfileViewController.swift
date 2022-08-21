@@ -66,11 +66,6 @@ class ProfileViewController: UIViewController {
     }
     // 로그아웃
     @objc func logout() {
-        if let userData = self.introData {
-            if userData.type == "kakao" {KakaoLoginManager().kakaoLogout()}
-            else if userData.type == "apple" {}
-            else {}
-        }
         // 앱 내 user data 삭제
         UserDefaults.standard.removeObject(forKey: "accessToken")
         UserDefaults.standard.removeObject(forKey: "refreshToken")
@@ -85,7 +80,7 @@ class ProfileViewController: UIViewController {
 // MARK: - 프로필 페이지 tableView delegate
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 9
+        return 8
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -109,19 +104,19 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             cell.selectionStyle = .none
             return cell
         }
-        // social login type
-        else if indexPath.row == 2 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileLoginTypeTableViewCell", for: indexPath) as? ProfileLoginTypeTableViewCell else {
-                return UITableViewCell()
-            }
-            if let loginType = self.introData {
-                cell.setLoginType(loginType)
-            }
-            cell.selectionStyle = .none
-            return cell
-        }
+//        // social login type
+//        else if indexPath.row == 2 {
+//            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileLoginTypeTableViewCell", for: indexPath) as? ProfileLoginTypeTableViewCell else {
+//                return UITableViewCell()
+//            }
+//            if let loginType = self.introData {
+//                cell.setLoginType(loginType)
+//            }
+//            cell.selectionStyle = .none
+//            return cell
+//        }
         // logout
-        else if indexPath.row == 8 {
+        else if indexPath.row == 7 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "LogoutTableViewCell", for: indexPath) as? LogoutTableViewCell else {
                 return UITableViewCell()
             }
@@ -135,11 +130,11 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
                 return UITableViewCell()
             }
             cell.selectionStyle = .none
-            if indexPath.row == 3 {cell.setProfileMenu("Leaf", "화분", self.flowerPotCount, "개")}
-            else if indexPath.row == 4 { cell.setProfileMenu("BookBookmark", "읽은 책", self.readingBookCount, "권") }
-            else if indexPath.row == 5 { cell.setProfileMenu("Star", "별점", self.starRatingCount, "개") }
-            else if indexPath.row == 6 { cell.setProfileMenu("PencilSimpleLine", "한 줄 기록", self.quoteCount, "개") }
-            else if indexPath.row == 7 { cell.setProfileMenu("NotePencil", "독서록", self.bookReportCount, "개") }
+            if indexPath.row == 2 {cell.setProfileMenu("Leaf", "화분", self.flowerPotCount, "개")}
+            else if indexPath.row == 3 { cell.setProfileMenu("BookBookmark", "읽은 책", self.readingBookCount, "권") }
+            else if indexPath.row == 4 { cell.setProfileMenu("Star", "별점", self.starRatingCount, "개") }
+            else if indexPath.row == 5 { cell.setProfileMenu("PencilSimpleLine", "한 줄 기록", self.quoteCount, "개") }
+            else if indexPath.row == 6 { cell.setProfileMenu("NotePencil", "독서록", self.bookReportCount, "개") }
             
             return cell
         }
@@ -147,7 +142,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {return 128}
         else if indexPath.row == 1 {return 120}
-        else if indexPath.row == 2 {return 152}
+//        else if indexPath.row == 2 {return 152}
         else if indexPath.row == 8 {return 80}
         else {return 72}
     }
@@ -156,21 +151,14 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // 프로필 수정 페이지로 이동
         if indexPath.row == 0 {
+            guard let ModifyProfileVC = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(identifier: "ModifyProfileVC") as? ModifyProfileViewController else {return}
+            ModifyProfileVC.profileImgUrl = self.introData.profileImgUrl
+            ModifyProfileVC.nickName = self.introData.name
+            ModifyProfileVC.introduction = self.introData.introduction
+            
+            ModifyProfileVC.modalPresentationStyle = .fullScreen
+            self.present(ModifyProfileVC, animated: true, completion: nil)
             let loginType = self.introData.type
-            // 앱 로그인일 때 (loginType == nil)
-            if loginType == nil {
-                guard let ModifyProfileVC = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(identifier: "ModifyProfileVC") as? ModifyProfileViewController else {return}
-                ModifyProfileVC.profileImgUrl = self.introData.profileImgUrl
-                ModifyProfileVC.nickName = self.introData.name
-                ModifyProfileVC.introduction = self.introData.introduction
-                
-                ModifyProfileVC.modalPresentationStyle = .fullScreen
-                self.present(ModifyProfileVC, animated: true, completion: nil)
-            }
-            // 소셜 로그인일 때 수정 페이지 진입 불가
-            else {
-                DialogManager().alertErrorDialog("\(loginType!)로 로그인한 계정은\n프로필 수정을 할 수 없습니다.", self)
-            }
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }

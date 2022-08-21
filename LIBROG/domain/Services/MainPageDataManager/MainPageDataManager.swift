@@ -63,7 +63,7 @@ class MainPageDataManager{
             switch response.result {
             case .success(let result):
 //                print("DEBUG: ", result)
-                viewcontroller.recentBookSuccessAPI(result.result!)
+                if result.isSuccess! {viewcontroller.recentBookSuccessAPI(result.result!)}
             case .failure(let error):
                 print(error.localizedDescription)
             }
@@ -80,7 +80,7 @@ class MainPageDataManager{
             switch response.result {
             case .success(let result):
 //                print("DEBUG: ", result)
-                viewcontroller.noticeSuccessAPI(result.result!)
+                if result.isSuccess! {viewcontroller.noticeSuccessAPI(result.result!)}
             case .failure(let error):
                 print(error.localizedDescription)
             }
@@ -97,7 +97,7 @@ class MainPageDataManager{
             switch response.result {
             case .success(let result):
 //                print("DEBUG: ", result)
-                viewcontroller.recommendBookSuccessAPI(result.result!)
+                if result.isSuccess! {viewcontroller.recommendBookSuccessAPI(result.result!)}
             case .failure(let error):
                 print(error.localizedDescription)
             }

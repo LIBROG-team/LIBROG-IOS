@@ -26,11 +26,11 @@ class AcheivedFlowerPotTableViewCell: UITableViewCell {
     }
     
     func setAchievedFlowerpotData(_ cellData: AddFlowerpotData) {
-        flowerPotNameLabel.text = cellData.name!
-        flowerPotDateLabel.text = "예상 " + cellData.bloomingPeriod!
-        flowerTypeLabel.text = cellData.type!
-        if let url = URL(string: cellData.flowerImgUrl!) {
-            flowerPotImageView.kf.setImage(with: url, placeholder: UIImage(named: "logo_launchScreen_white"))
+        if let flowerpotName = cellData.name {flowerPotNameLabel.text = flowerpotName}
+        if let flowerpotDate = cellData.bloomingPeriod { flowerPotDateLabel.text = "예상 " + flowerpotDate }
+        if let flowerpotType = cellData.type { flowerTypeLabel.text = flowerpotType }
+        if let flowerpotImgUrl = cellData.flowerImgUrl {
+            flowerPotImageView.kf.setImage(with: URL(string: flowerpotImgUrl), placeholder: UIImage(named: "logo_launchScreen_white"))
         }
     }
 }
