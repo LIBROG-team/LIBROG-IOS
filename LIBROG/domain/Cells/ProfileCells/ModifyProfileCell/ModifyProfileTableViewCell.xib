@@ -10,11 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="760" id="KGk-i7-Jjw" customClass="ModifyProfileTableViewCell" customModule="LIBROG" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="333" height="760"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="773" id="KGk-i7-Jjw" customClass="ModifyProfileTableViewCell" customModule="LIBROG" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="381" height="773"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="333" height="760"/>
+                <rect key="frame" x="0.0" y="0.0" width="381" height="773"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m09-p3-aP6">
@@ -31,19 +31,19 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="닉네임을 입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xvw-cF-5HY">
-                        <rect key="frame" x="34" y="301" width="245" height="18.5"/>
+                        <rect key="frame" x="34" y="301" width="293" height="18.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sc5-xr-6tt">
-                        <rect key="frame" x="34" y="324.5" width="245" height="1"/>
+                        <rect key="frame" x="34" y="324.5" width="293" height="1"/>
                         <color key="backgroundColor" name="LIBROGColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="q9q-l1-Qzq"/>
                         </constraints>
                     </view>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_profile" translatesAutoresizingMaskIntoConstraints="NO" id="dpG-z1-AcF">
-                        <rect key="frame" x="108" y="65" width="117" height="117"/>
+                        <rect key="frame" x="132" y="65" width="117" height="117"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="117" id="9JR-ek-V60"/>
                             <constraint firstAttribute="width" constant="117" id="Cft-sU-Xq2"/>
@@ -55,7 +55,7 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sie-nF-Nrs">
-                        <rect key="frame" x="195" y="152" width="36" height="36"/>
+                        <rect key="frame" x="219" y="152" width="36" height="36"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="36" id="KxT-ai-gqD"/>
                             <constraint firstAttribute="width" constant="36" id="xcS-0n-RLP"/>
@@ -77,24 +77,24 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="자기소개를 입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rEG-1g-JCl">
-                        <rect key="frame" x="34" y="391.5" width="245" height="18.5"/>
+                        <rect key="frame" x="34" y="391.5" width="293" height="18.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GTW-jc-wrd">
-                        <rect key="frame" x="34" y="415" width="245" height="1"/>
+                        <rect key="frame" x="34" y="415" width="293" height="1"/>
                         <color key="backgroundColor" name="LIBROGColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="zsz-og-HR6"/>
                         </constraints>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2P-0i-pC1">
-                        <rect key="frame" x="34" y="651" width="265" height="40"/>
+                        <rect key="frame" x="34" y="664" width="313" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="yEy-3s-6tg"/>
                         </constraints>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" title="수정완료">
+                        <buttonConfiguration key="configuration" style="plain" title="수정 완료">
                             <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="15"/>
                         </buttonConfiguration>
                     </button>
@@ -122,7 +122,7 @@
                     <constraint firstAttribute="trailing" secondItem="T2P-0i-pC1" secondAttribute="trailing" constant="34" id="i4p-eH-2dO"/>
                     <constraint firstItem="GTW-jc-wrd" firstAttribute="leading" secondItem="rEG-1g-JCl" secondAttribute="leading" id="pVD-gK-CUo"/>
                     <constraint firstItem="m09-p3-aP6" firstAttribute="top" secondItem="dpG-z1-AcF" secondAttribute="bottom" constant="83" id="v38-CO-wbB"/>
-                    <constraint firstItem="T2P-0i-pC1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="GTW-jc-wrd" secondAttribute="bottom" constant="223" id="wce-mW-4Vi"/>
+                    <constraint firstItem="T2P-0i-pC1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="GTW-jc-wrd" secondAttribute="bottom" constant="200" id="wce-mW-4Vi"/>
                     <constraint firstItem="Sc5-xr-6tt" firstAttribute="top" secondItem="Xvw-cF-5HY" secondAttribute="bottom" constant="5" id="znt-pA-zh0"/>
                 </constraints>
             </tableViewCellContentView>
@@ -134,7 +134,7 @@
                 <outlet property="nickNameTextField" destination="Xvw-cF-5HY" id="Mu0-hO-RgB"/>
                 <outlet property="profileImageView" destination="dpG-z1-AcF" id="sWU-Dd-zPw"/>
             </connections>
-            <point key="canvasLocation" x="2.1739130434782612" y="275.22321428571428"/>
+            <point key="canvasLocation" x="36.956521739130437" y="273.54910714285711"/>
         </tableViewCell>
     </objects>
     <resources>
