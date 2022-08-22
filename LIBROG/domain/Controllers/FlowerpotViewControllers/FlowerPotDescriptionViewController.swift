@@ -55,9 +55,6 @@ extension FlowerPotDescriptionViewController: UITableViewDelegate, UITableViewDa
         cell.selectionStyle = .none
         return cell
     }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return view.frame.height
-    }
 }
 // MARK: - API success
 extension FlowerPotDescriptionViewController {
