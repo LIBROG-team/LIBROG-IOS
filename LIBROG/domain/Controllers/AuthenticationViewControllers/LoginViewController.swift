@@ -107,9 +107,6 @@ extension LoginViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 844
-    }
 }
 ////MARK: - 애플 로그인 delegate
 //extension LoginViewController : ASAuthorizationControllerDelegate  {
