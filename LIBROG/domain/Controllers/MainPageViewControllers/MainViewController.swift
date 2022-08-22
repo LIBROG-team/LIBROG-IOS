@@ -18,10 +18,10 @@ class MainViewController: UIViewController {
     var flowerpotData: MainPageFlowerpot?
     var dayCnt: Int?
     var mainMessage: String?
+    var floatingPanelHeight: CGFloat?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
 
         MainTableView.delegate = self
         MainTableView.dataSource = self
@@ -33,10 +33,15 @@ class MainViewController: UIViewController {
         
         MainPageDataManager().mainPageFlowerpotDataManager(self)
         MainPageDataManager().mainPageDayCountDataManager(self)
+        
+        setupView()
+        fpc.invalidateLayout()
     }
     override func viewDidAppear(_ animated: Bool) {
         MainPageDataManager().mainPageFlowerpotDataManager(self)
         MainPageDataManager().mainPageDayCountDataManager(self)
+        
+        fpc.invalidateLayout() // if needed
     }
     private func setupView() {
         mainBottomVC = storyboard?.instantiateViewController(identifier: "MainBottomVC", creator: { (coder) -> MainBottomViewController? in
@@ -47,7 +52,8 @@ class MainViewController: UIViewController {
         fpc.delegate = self
         fpc.set(contentViewController: mainBottomVC) // floating panel에 삽입할 것
         fpc.addPanel(toParent: self) // fpc를 관리하는 UIViewController
-        fpc.layout = MyFloatingPanelLayout()
+        guard let height = self.floatingPanelHeight else {return}
+        fpc.layout = MyFloatingPanelLayout(height: height)
         fpc.invalidateLayout() // if needed
     }
 }
@@ -68,10 +74,11 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         }
         if let dayCnt = self.dayCnt {cell.dayCnt = dayCnt}
         if let message = self.mainMessage {cell.mainMessage = message}
+        // floating panel 높이 설정
+        self.floatingPanelHeight = cell.flowerNameLabel.frame.origin.y + cell.flowerNameLabel.frame.height + CGFloat(13)
+        fpc.layout = MyFloatingPanelLayout(height: self.floatingPanelHeight!)
+        fpc.invalidateLayout()
         return cell
-    }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 510
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard cell is MainFlowerTableViewCell else {
@@ -124,7 +131,12 @@ extension MainViewController: FloatingPanelControllerDelegate {
 }
 // MARK: - Set floatingPanel state position
 class MyFloatingPanelLayout: FloatingPanelLayout {
-
+    private let height: CGFloat?
+    
+    init(height: CGFloat) {
+        self.height = height
+    }
+    
     var position: FloatingPanelPosition {
         return .bottom
     }
@@ -136,7 +148,7 @@ class MyFloatingPanelLayout: FloatingPanelLayout {
     var anchors: [FloatingPanelState: FloatingPanelLayoutAnchoring] { // 가능한 floating panel: 현재 full, half만 가능하게 설정
         return [
             .full: FloatingPanelLayoutAnchor(absoluteInset: 150.0, edge: .top, referenceGuide: .safeArea),
-            .half: FloatingPanelLayoutAnchor(absoluteInset: 220, edge: .bottom, referenceGuide: .safeArea),
+            .half: FloatingPanelLayoutAnchor(absoluteInset: self.height!, edge: .top, referenceGuide: .safeArea),
         ]
     }
 }
