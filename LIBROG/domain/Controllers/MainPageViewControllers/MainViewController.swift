@@ -34,13 +34,18 @@ class MainViewController: UIViewController {
         MainPageDataManager().mainPageFlowerpotDataManager(self)
         MainPageDataManager().mainPageDayCountDataManager(self)
         
+        // floating panel 설정
         setupView()
+        guard let height = self.floatingPanelHeight else {return}
+        fpc.layout = MyFloatingPanelLayout(height: height)
         fpc.invalidateLayout()
     }
     override func viewDidAppear(_ animated: Bool) {
         MainPageDataManager().mainPageFlowerpotDataManager(self)
         MainPageDataManager().mainPageDayCountDataManager(self)
-        
+        // floating panel 설정
+        guard let height = self.floatingPanelHeight else {return}
+        fpc.layout = MyFloatingPanelLayout(height: height)
         fpc.invalidateLayout() // if needed
     }
     private func setupView() {
