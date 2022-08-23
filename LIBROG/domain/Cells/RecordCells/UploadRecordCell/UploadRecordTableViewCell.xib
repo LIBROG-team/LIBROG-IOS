@@ -232,7 +232,7 @@
                                 <rect key="frame" x="16" y="45" width="304" height="240"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="hcV-aZ-W0J"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="240" id="frU-0t-23g"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="독후감을 입력해주세요.">
@@ -250,9 +250,9 @@
                             <constraint firstItem="LWW-Ti-qTr" firstAttribute="top" secondItem="pJc-WM-f46" secondAttribute="top" constant="14" id="0KP-eD-IoD"/>
                             <constraint firstItem="LWW-Ti-qTr" firstAttribute="leading" secondItem="pJc-WM-f46" secondAttribute="leading" constant="16" id="8Kt-t2-VlA"/>
                             <constraint firstItem="Coc-6b-XQG" firstAttribute="leading" secondItem="LWW-Ti-qTr" secondAttribute="leading" id="CiA-Lp-g5I"/>
+                            <constraint firstAttribute="bottom" secondItem="Coc-6b-XQG" secondAttribute="bottom" constant="15" id="MCJ-S3-5sP"/>
                             <constraint firstItem="Coc-6b-XQG" firstAttribute="top" secondItem="LWW-Ti-qTr" secondAttribute="bottom" constant="13" id="bRw-87-Yxl"/>
                             <constraint firstAttribute="trailing" secondItem="Coc-6b-XQG" secondAttribute="trailing" constant="16" id="csg-h9-HTk"/>
-                            <constraint firstAttribute="height" constant="300" id="wWH-pT-EDx"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
