@@ -68,9 +68,18 @@ extension UploadRecordViewController: UITableViewDelegate, UITableViewDataSource
         return cell
     }
 }
+// MARK: API success
 extension UploadRecordViewController {
+    // MARK: 독서기록 추가 success
     func uploadRecordSuccessAPI(_ result: APIModel<UploadRecordModel>) {
-        if result.isSuccess! {ScreenManager().goMain(self)}
+        if result.isSuccess! {
+            FlowerpotDataManager().addNewFlowerpotDataManager(self)
+            ScreenManager().goMain(self)
+        }
         else {DialogManager().alertErrorDialog(result.message!, self)}
+    }
+    // MARK: 조건에 맞는 화분 추가 api 호출 success
+    func addNewFlowerpotSuccessAPI(_ result: APIModel<NewFlowerpotModel>) {
+        print("조건에 맞는 화분 추가", result)
     }
 }

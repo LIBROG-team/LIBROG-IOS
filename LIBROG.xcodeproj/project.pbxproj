@@ -137,6 +137,7 @@
 		23ECA8EF28AFAFA900497CA3 /* ChangePasswordInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ECA8EE28AFAFA900497CA3 /* ChangePasswordInput.swift */; };
 		23ECA8F128AFAFE000497CA3 /* ChangePasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ECA8F028AFAFE000497CA3 /* ChangePasswordModel.swift */; };
 		23ECA8F328AFB01600497CA3 /* ChangePasswordDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ECA8F228AFB01600497CA3 /* ChangePasswordDataManager.swift */; };
+		23F037F728B612E2006CFDA9 /* NewFlowerpotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F037F628B612E2006CFDA9 /* NewFlowerpotModel.swift */; };
 		23F6107A288812C700575D81 /* ReadingRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F61079288812C700575D81 /* ReadingRecordModel.swift */; };
 		23F6107C2888134C00575D81 /* ReadingRecordDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F6107B2888134C00575D81 /* ReadingRecordDataManager.swift */; };
 		23F7139428A6E3560058A57A /* RegisterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F7139228A6E3560058A57A /* RegisterTableViewCell.swift */; };
@@ -320,6 +321,7 @@
 		23ECA8EE28AFAFA900497CA3 /* ChangePasswordInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordInput.swift; sourceTree = "<group>"; };
 		23ECA8F028AFAFE000497CA3 /* ChangePasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordModel.swift; sourceTree = "<group>"; };
 		23ECA8F228AFB01600497CA3 /* ChangePasswordDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordDataManager.swift; sourceTree = "<group>"; };
+		23F037F628B612E2006CFDA9 /* NewFlowerpotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFlowerpotModel.swift; sourceTree = "<group>"; };
 		23F61079288812C700575D81 /* ReadingRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingRecordModel.swift; sourceTree = "<group>"; };
 		23F6107B2888134C00575D81 /* ReadingRecordDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingRecordDataManager.swift; sourceTree = "<group>"; };
 		23F7139228A6E3560058A57A /* RegisterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTableViewCell.swift; sourceTree = "<group>"; };
@@ -557,6 +559,7 @@
 				D0DB05C1287700650041CEEF /* BookData.swift */,
 				23F61079288812C700575D81 /* ReadingRecordModel.swift */,
 				23ECA8F028AFAFE000497CA3 /* ChangePasswordModel.swift */,
+				23F037F628B612E2006CFDA9 /* NewFlowerpotModel.swift */,
 			);
 			path = APIModels;
 			sourceTree = "<group>";
@@ -1344,6 +1347,7 @@
 				23F7139428A6E3560058A57A /* RegisterTableViewCell.swift in Sources */,
 				D0C2B080286DEBD600242E71 /* FlowerPotViewController.swift in Sources */,
 				23A41EA9289436B10008437B /* RecentBookModel.swift in Sources */,
+				23F037F728B612E2006CFDA9 /* NewFlowerpotModel.swift in Sources */,
 				D07E7EB3289273140077287A /* RegisterProfileBottomViewController.swift in Sources */,
 				23ECA8F128AFAFE000497CA3 /* ChangePasswordModel.swift in Sources */,
 				2305E773289159A000A9B6D5 /* KakaoLoginManager.swift in Sources */,
