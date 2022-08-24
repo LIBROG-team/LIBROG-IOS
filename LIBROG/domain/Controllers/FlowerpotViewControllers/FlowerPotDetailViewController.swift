@@ -73,7 +73,18 @@ class FlowerPotDetailViewController: UIViewController {
         
         actionSheet.addAction(deleteFlowerpot)
         actionSheet.addAction(actionCancel)
-        self.present(actionSheet, animated: true, completion: nil)
+        //디바이스 타입이 iPad일때
+        if UIDevice.current.userInterfaceIdiom == .pad {
+          if let popoverController = actionSheet.popoverPresentationController {
+              // ActionSheet가 표현되는 위치를 저장해줍니다.
+              popoverController.sourceView = self.view
+              popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+              popoverController.permittedArrowDirections = []
+              self.present(actionSheet, animated: true, completion: nil)
+          }
+        } else {
+            self.present(actionSheet, animated: true, completion: nil)
+        }
     }
     func setFlowerpotData() {
         flowerPotNameLabel.text = self.flowerpotName!

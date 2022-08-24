@@ -55,9 +55,6 @@ extension FlowerPotDescriptionViewController: UITableViewDelegate, UITableViewDa
         cell.selectionStyle = .none
         return cell
     }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return view.frame.height
-    }
 }
 // MARK: - API success
 extension FlowerPotDescriptionViewController {
@@ -68,6 +65,11 @@ extension FlowerPotDescriptionViewController {
     }
     //MARK: 획득 화분에서 화분 추가 API
     func addAcqFlowerpotSuccessAPI() {
+        FlowerpotDataManager().addNewFlowerpotDataManager(self)
         ScreenManager().goMainPages(3, self)
+    }
+    // MARK: 조건에 맞는 화분 추가 api 호출 success
+    func addNewFlowerpotSuccessAPI(_ result: APIModel<NewFlowerpotModel>) {
+        print("조건에 맞는 화분 추가", result)
     }
 }

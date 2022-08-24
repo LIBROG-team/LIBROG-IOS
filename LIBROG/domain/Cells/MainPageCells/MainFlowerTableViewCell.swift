@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MainFlowerTableViewCell: UITableViewCell {
     @IBOutlet weak var bookDateLabel: UILabel!
@@ -25,6 +26,20 @@ class MainFlowerTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    // MARK: 테이블뷰의 셀이 재사용되기 전 호출되는 함수
+    // 여기서 property들을 초기화해준다.
+    override func prepareForReuse() {
+        super.prepareForReuse()
+
+        flowerNameLabel.text = nil
+        mainMessageLabel.text = nil
+        bookDateLabel.text = nil
+        flowerImageView.image = UIImage()
+        
+        let cache = ImageCache.default
+        cache.clearMemoryCache()
+        cache.clearDiskCache()
     }
     public func setUpMainFlowerpotData(_ cellData: MainPageFlowerpot) {
         if let flowerpotName = cellData.name {flowerNameLabel.text = flowerpotName}

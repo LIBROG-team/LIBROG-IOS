@@ -24,11 +24,11 @@ class FlowerPotDescriptionTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     func setFlowerpotData(_ data: FlowerpotDescriptionData) {
-        flowerNameLabel.text = data.name!
-        flowerNameEnglishLabel.text = data.engName!
-        flowerDescriptionLabel.text = data.content!
-        if let url = URL(string: data.flowerImgUrl!) {
-            flowerImageView.kf.setImage(with: url, placeholder: UIImage(named: "logo_launchScreen_white"))
+        if let flowerName = data.name {flowerNameLabel.text = flowerName}
+        if let flowerNameEng = data.engName {flowerNameEnglishLabel.text = flowerNameEng}
+        if let flowerDescription = data.content {flowerDescriptionLabel.text = flowerDescription}
+        if let url = data.flowerImgUrl {
+            flowerImageView.kf.setImage(with: URL(string: url), placeholder: UIImage(named: "logo_launchScreen_white"))
         }
     }
 }

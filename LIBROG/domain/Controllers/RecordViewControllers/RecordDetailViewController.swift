@@ -26,6 +26,9 @@ class RecordDetailViewController: UIViewController {
         recordDetailTableView.register(recordDetailNib, forCellReuseIdentifier: "RecordDetailTableViewCell")
         
         RecordDetailDataManager().recordDetailDataManager(self.recordIdx, self)
+        
+        recordDetailTableView.estimatedRowHeight = 600
+        recordDetailTableView.rowHeight = UITableView.automaticDimension
     }
     override func viewDidAppear(_ animated: Bool) {
         RecordDetailDataManager().recordDetailDataManager(self.recordIdx, self)
@@ -57,9 +60,6 @@ extension RecordDetailViewController: UITableViewDelegate, UITableViewDataSource
             cell.setRecordData(data)
         }
         return cell
-    }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 667
     }
 }
 // MARK: - 독서기록 api

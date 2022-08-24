@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,9 +18,8 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B84-wC-em9">
-                        <rect key="frame" x="42.5" y="38" width="314" height="60"/>
+                        <rect key="frame" x="38" y="38" width="323" height="60"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="314" id="cec-2V-XLe"/>
                             <constraint firstAttribute="height" constant="60" id="o8T-zt-4uY"/>
                         </constraints>
                         <state key="normal" title="Button"/>
@@ -45,8 +44,10 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="7u0-i8-sSb" secondAttribute="trailing" id="4j8-D8-jlu"/>
+                    <constraint firstItem="B84-wC-em9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="38" id="81H-EA-EoH"/>
                     <constraint firstItem="7u0-i8-sSb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="MJX-f6-7Do"/>
                     <constraint firstItem="B84-wC-em9" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="W0J-Lm-moX"/>
+                    <constraint firstAttribute="trailing" secondItem="B84-wC-em9" secondAttribute="trailing" constant="38" id="fE2-X1-CAX"/>
                     <constraint firstAttribute="bottom" secondItem="7u0-i8-sSb" secondAttribute="bottom" id="g33-VH-qUp"/>
                     <constraint firstItem="B84-wC-em9" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="udS-EG-j6W"/>
                 </constraints>

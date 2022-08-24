@@ -26,7 +26,7 @@ class MainPageDataManager{
             case .success(let result):
                 if result.isSuccess! {
                     viewcontroller.userFlowerPotSuccessAPI(result.result!)
-//                    print("메인페이지 화분 조회: ", result)
+                    print("메인페이지 화분 조회: ", result)
                 }
             case .failure(let error):
                 print(error.localizedDescription)

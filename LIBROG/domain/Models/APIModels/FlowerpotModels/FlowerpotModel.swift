@@ -21,13 +21,3 @@ struct FlowerpotData: Decodable {
     let recordCount: Int?
     let backgroundColor: String?
 }
-
-struct MainPageFlowerpot: Decodable {
-    let name: String?
-    let engName: String?
-    let flowerImgUrl: String?
-    let type: String?
-    let backgroundColor: String?
-    let startDate: String?
-    let lastDate: String?
-}

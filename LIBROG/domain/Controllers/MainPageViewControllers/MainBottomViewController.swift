@@ -104,8 +104,9 @@ extension MainBottomViewController : UICollectionViewDelegate, UICollectionViewD
                 return UICollectionViewCell()
             }
             let itemIdx = indexPath.item
-            cell.setNotice(noticeArray[itemIdx])
-            
+            if let cellData = self.noticeArray {
+                cell.setNotice(cellData[itemIdx])
+            }
             return cell
         }
         else {
@@ -118,7 +119,7 @@ extension MainBottomViewController : UICollectionViewDelegate, UICollectionViewD
         if(collectionView == recentBookCollectionView) { return CGSize(width: 193, height: 128) }
         else if(collectionView == todaySuggestCollectionView) { return CGSize(width: 120, height: 84) }
         else if(collectionView == noticeCollectionView) {
-            let width = noticeCollectionView.frame.width
+            let width = noticeCollectionView.bounds.size.width
             return CGSize(width: width, height: 56)
         }
         else  { return CGSize(width: 0, height: 0)}
