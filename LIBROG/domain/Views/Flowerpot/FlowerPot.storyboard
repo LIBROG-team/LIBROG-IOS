@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -25,6 +25,10 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zss-Qr-eSC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="166.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="화분 관리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Om-qG-6nP">
                                 <rect key="frame" x="22" y="75" width="101" height="32.5"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="27"/>
@@ -59,7 +63,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="54c-Bd-hoA" firstAttribute="top" secondItem="rZh-JG-6R1" secondAttribute="bottom" constant="29" id="8Ob-Po-8El"/>
+                            <constraint firstItem="zss-Qr-eSC" firstAttribute="top" secondItem="80q-8e-WwA" secondAttribute="top" id="9Cr-yH-UPr"/>
                             <constraint firstItem="jLF-2v-5LO" firstAttribute="trailing" secondItem="eyZ-YX-Pfo" secondAttribute="trailing" constant="16" id="DXE-GT-W9f"/>
+                            <constraint firstAttribute="trailing" secondItem="zss-Qr-eSC" secondAttribute="trailing" id="LLk-fq-uBH"/>
                             <constraint firstItem="2Om-qG-6nP" firstAttribute="top" secondItem="80q-8e-WwA" secondAttribute="top" constant="75" id="N6R-9E-n6B"/>
                             <constraint firstItem="jLF-2v-5LO" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2Om-qG-6nP" secondAttribute="trailing" symbolic="YES" id="RoD-Ed-I9A"/>
                             <constraint firstItem="2Om-qG-6nP" firstAttribute="leading" secondItem="jLF-2v-5LO" secondAttribute="leading" constant="22" id="VI5-YW-Roh"/>
@@ -68,11 +74,13 @@
                             <constraint firstItem="PSz-DZ-t59" firstAttribute="bottom" secondItem="jLF-2v-5LO" secondAttribute="bottom" id="ayQ-Bu-fRk"/>
                             <constraint firstItem="rZh-JG-6R1" firstAttribute="top" secondItem="2Om-qG-6nP" secondAttribute="bottom" constant="5" id="baJ-kc-xYx"/>
                             <constraint firstItem="2Om-qG-6nP" firstAttribute="leading" secondItem="rZh-JG-6R1" secondAttribute="leading" id="dd9-0D-Sql"/>
+                            <constraint firstItem="zss-Qr-eSC" firstAttribute="leading" secondItem="80q-8e-WwA" secondAttribute="leading" id="hTM-v5-22c"/>
                             <constraint firstItem="jLF-2v-5LO" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rZh-JG-6R1" secondAttribute="trailing" symbolic="YES" id="lRg-Ih-Agh"/>
                             <constraint firstItem="jLF-2v-5LO" firstAttribute="trailing" secondItem="PSz-DZ-t59" secondAttribute="trailing" constant="16" id="mNv-Qd-DAu"/>
                             <constraint firstItem="eyZ-YX-Pfo" firstAttribute="centerY" secondItem="2Om-qG-6nP" secondAttribute="centerY" id="pKO-lS-lDN"/>
                             <constraint firstItem="54c-Bd-hoA" firstAttribute="leading" secondItem="80q-8e-WwA" secondAttribute="leading" constant="1" id="qY5-If-kkH"/>
                             <constraint firstAttribute="trailing" secondItem="54c-Bd-hoA" secondAttribute="trailing" constant="1" id="rhr-4w-jmA"/>
+                            <constraint firstItem="PSz-DZ-t59" firstAttribute="top" secondItem="zss-Qr-eSC" secondAttribute="bottom" id="sVx-qe-eXM"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="화분관리" image="forest" id="Sny-4X-q91"/>
