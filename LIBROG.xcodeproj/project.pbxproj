@@ -503,12 +503,12 @@
 			isa = PBXGroup;
 			children = (
 				237B20D128AF7CA300CB0429 /* MainPageViewControllers */,
+				237B20D428AF7CE400CB0429 /* AuthenticationViewControllers */,
 				237B20D728AF7D4800CB0429 /* SearchBookViewController */,
 				237B20D628AF7D1B00CB0429 /* FlowerpotViewControllers */,
-				237B20D528AF7D0D00CB0429 /* SettingViewController */,
-				237B20D428AF7CE400CB0429 /* AuthenticationViewControllers */,
 				237B20D328AF7CCD00CB0429 /* RecordViewControllers */,
 				237B20D228AF7CBB00CB0429 /* ProfileViewControllers */,
+				237B20D528AF7D0D00CB0429 /* SettingViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -540,26 +540,11 @@
 		237B20CD28AF7A9000CB0429 /* APIModels */ = {
 			isa = PBXGroup;
 			children = (
-				2339DA07288592B100A3DBC4 /* KakaoBookModel.swift */,
-				23ADA92A28847FC80066D15A /* FlowerpotModel.swift */,
-				23A41EA8289436B10008437B /* RecentBookModel.swift */,
-				23F8483D2899A99400ED644B /* NoticeModel.swift */,
-				231E3E59289F82130011A1D2 /* RecommendBookModel.swift */,
-				237B20C628AF72E000CB0429 /* MainPageDayCountModel.swift */,
-				237CF45F28A80BD60043CFC6 /* DeleteUserModel.swift */,
-				23458AE52896F35A0003A669 /* IntroModel.swift */,
-				D061104A288FF09500F96B65 /* StatisticModel.swift */,
-				23DE9D6B28A56524009DF894 /* RegisterModel.swift */,
-				2322AE5C2897F3C400513E23 /* LoginModel.swift */,
-				231B8D4B28893701006F44A3 /* FlowerpotDescriptionModel.swift */,
-				231B8D4128891787006F44A3 /* AddFlowerpotModel.swift */,
-				234036012891992800C9AB4D /* ModifyRecordModel.swift */,
-				23A41EA42894315D0008437B /* RecordDetailModel.swift */,
-				23CC78D8288FCE370064DA7E /* UploadRecordModel.swift */,
-				D0DB05C1287700650041CEEF /* BookData.swift */,
-				23F61079288812C700575D81 /* ReadingRecordModel.swift */,
-				23ECA8F028AFAFE000497CA3 /* ChangePasswordModel.swift */,
-				23F037F628B612E2006CFDA9 /* NewFlowerpotModel.swift */,
+				23F037FA28B6176E006CFDA9 /* AuthenticationModels */,
+				23F037FB28B6177D006CFDA9 /* MainpageModels */,
+				23F037F828B6175F006CFDA9 /* RecordModels */,
+				23F037F928B61768006CFDA9 /* FlowerpotModels */,
+				23F037FC28B61796006CFDA9 /* ProfileModels */,
 			);
 			path = APIModels;
 			sourceTree = "<group>";
@@ -669,10 +654,10 @@
 		237B20D828AF7D7E00CB0429 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				237B20DC28AF7E9800CB0429 /* RecordDataManagers */,
-				237B20DB28AF7E6B00CB0429 /* AuthenticationDataManagers */,
-				237B20DA28AF7E3F00CB0429 /* FlowerpotDataManagers */,
 				23ADA92928847FB60066D15A /* MainPageDataManager */,
+				237B20DB28AF7E6B00CB0429 /* AuthenticationDataManagers */,
+				237B20DC28AF7E9800CB0429 /* RecordDataManagers */,
+				237B20DA28AF7E3F00CB0429 /* FlowerpotDataManagers */,
 				D0611049288FF04F00F96B65 /* ProfileDataManager */,
 				237CF45C28A80AEA0043CFC6 /* SettingDataManager */,
 			);
@@ -719,9 +704,9 @@
 			children = (
 				23C8B4AD286EF75800432141 /* MainPageCells */,
 				237B20E228AF802D00CB0429 /* AuthenticationCells */,
-				237B20E128AF801700CB0429 /* ProfileCells */,
 				237B20E028AF7FD900CB0429 /* FlowerpotCells */,
 				237B20DF28AF7FCF00CB0429 /* RecordCells */,
+				237B20E128AF801700CB0429 /* ProfileCells */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -872,11 +857,11 @@
 			children = (
 				D0C2B059286DC9C000242E71 /* LaunchScreen.storyboard */,
 				D0C2B054286DC9BE00242E71 /* Main.storyboard */,
-				234A4EC228AAB5CA00105B61 /* Profile */,
-				234A4EC128AAB5AF00105B61 /* Flowerpot */,
-				234A4EC028AAB5A500105B61 /* Authentication */,
-				234A4EBF28AAB59700105B61 /* Record */,
 				234A4EBE28AAB59000105B61 /* Main */,
+				234A4EC028AAB5A500105B61 /* Authentication */,
+				234A4EC128AAB5AF00105B61 /* Flowerpot */,
+				234A4EBF28AAB59700105B61 /* Record */,
+				234A4EC228AAB5CA00105B61 /* Profile */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -940,6 +925,61 @@
 				23DFD30F2878D9F4002AC8B0 /* UploadRecordTableViewCell.xib */,
 			);
 			path = UploadRecordCell;
+			sourceTree = "<group>";
+		};
+		23F037F828B6175F006CFDA9 /* RecordModels */ = {
+			isa = PBXGroup;
+			children = (
+				23F61079288812C700575D81 /* ReadingRecordModel.swift */,
+				D0DB05C1287700650041CEEF /* BookData.swift */,
+				23CC78D8288FCE370064DA7E /* UploadRecordModel.swift */,
+				23A41EA42894315D0008437B /* RecordDetailModel.swift */,
+				234036012891992800C9AB4D /* ModifyRecordModel.swift */,
+				2339DA07288592B100A3DBC4 /* KakaoBookModel.swift */,
+			);
+			path = RecordModels;
+			sourceTree = "<group>";
+		};
+		23F037F928B61768006CFDA9 /* FlowerpotModels */ = {
+			isa = PBXGroup;
+			children = (
+				23F037F628B612E2006CFDA9 /* NewFlowerpotModel.swift */,
+				23ADA92A28847FC80066D15A /* FlowerpotModel.swift */,
+				231B8D4B28893701006F44A3 /* FlowerpotDescriptionModel.swift */,
+				231B8D4128891787006F44A3 /* AddFlowerpotModel.swift */,
+			);
+			path = FlowerpotModels;
+			sourceTree = "<group>";
+		};
+		23F037FA28B6176E006CFDA9 /* AuthenticationModels */ = {
+			isa = PBXGroup;
+			children = (
+				237CF45F28A80BD60043CFC6 /* DeleteUserModel.swift */,
+				23DE9D6B28A56524009DF894 /* RegisterModel.swift */,
+				23ECA8F028AFAFE000497CA3 /* ChangePasswordModel.swift */,
+				2322AE5C2897F3C400513E23 /* LoginModel.swift */,
+			);
+			path = AuthenticationModels;
+			sourceTree = "<group>";
+		};
+		23F037FB28B6177D006CFDA9 /* MainpageModels */ = {
+			isa = PBXGroup;
+			children = (
+				237B20C628AF72E000CB0429 /* MainPageDayCountModel.swift */,
+				231E3E59289F82130011A1D2 /* RecommendBookModel.swift */,
+				23F8483D2899A99400ED644B /* NoticeModel.swift */,
+				23A41EA8289436B10008437B /* RecentBookModel.swift */,
+			);
+			path = MainpageModels;
+			sourceTree = "<group>";
+		};
+		23F037FC28B61796006CFDA9 /* ProfileModels */ = {
+			isa = PBXGroup;
+			children = (
+				D061104A288FF09500F96B65 /* StatisticModel.swift */,
+				23458AE52896F35A0003A669 /* IntroModel.swift */,
+			);
+			path = ProfileModels;
 			sourceTree = "<group>";
 		};
 		329CFF90FF7C282BE262C8CF /* Pods */ = {
