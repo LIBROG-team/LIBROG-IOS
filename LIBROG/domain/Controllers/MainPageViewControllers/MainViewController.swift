@@ -36,17 +36,13 @@ class MainViewController: UIViewController {
         
         // floating panel 설정
         setupView()
-        guard let height = self.floatingPanelHeight else {return}
-        fpc.layout = MyFloatingPanelLayout(height: height)
-        fpc.invalidateLayout()
+        setFloatingPanelHeight()
     }
     override func viewDidAppear(_ animated: Bool) {
         MainPageDataManager().mainPageFlowerpotDataManager(self)
         MainPageDataManager().mainPageDayCountDataManager(self)
         // floating panel 설정
-        guard let height = self.floatingPanelHeight else {return}
-        fpc.layout = MyFloatingPanelLayout(height: height)
-        fpc.invalidateLayout() // if needed
+        setFloatingPanelHeight()
     }
     private func setupView() {
         mainBottomVC = storyboard?.instantiateViewController(identifier: "MainBottomVC", creator: { (coder) -> MainBottomViewController? in
@@ -57,9 +53,14 @@ class MainViewController: UIViewController {
         fpc.delegate = self
         fpc.set(contentViewController: mainBottomVC) // floating panel에 삽입할 것
         fpc.addPanel(toParent: self) // fpc를 관리하는 UIViewController
-        guard let height = self.floatingPanelHeight else {return}
-        fpc.layout = MyFloatingPanelLayout(height: height)
-        fpc.invalidateLayout() // if needed
+        
+        setFloatingPanelHeight()
+    }
+    func setFloatingPanelHeight() {
+        if let height = self.floatingPanelHeight {
+            fpc.layout = MyFloatingPanelLayout(height: height)
+            fpc.invalidateLayout()
+        }
     }
 }
 // MARK: - 메인페이지 tableView delegate
@@ -79,10 +80,9 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         }
         if let dayCnt = self.dayCnt {cell.dayCnt = dayCnt}
         if let message = self.mainMessage {cell.mainMessage = message}
-        // floating panel 높이 설정
+        // MARK: floating panel 높이 설정
         self.floatingPanelHeight = cell.flowerNameLabel.frame.origin.y + cell.flowerNameLabel.frame.height + CGFloat(13)
-        fpc.layout = MyFloatingPanelLayout(height: self.floatingPanelHeight!)
-        fpc.invalidateLayout()
+        setFloatingPanelHeight()
         return cell
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -97,12 +97,16 @@ extension MainViewController {
     func userFlowerPotSuccessAPI(_ result : MainPageFlowerpot) {
         self.flowerpotData = result
         MainTableView.reloadData()
+        
+        setFloatingPanelHeight()
     }
     //MARK: 독서일차 & 문구 API success
     func userDayCountSuccessAPI(_ result : MainPageDayCountModel) {
         if let dayCnt = result.daycnt {self.dayCnt = dayCnt}
         if let message = result.content {self.mainMessage = message}
         MainTableView.reloadData()
+        
+        setFloatingPanelHeight()
     }
 }
 // MARK: - FloatingPanelController extension
