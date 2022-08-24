@@ -69,6 +69,7 @@
 		237ECCE0288556EE000D9A71 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237ECCDF288556EE000D9A71 /* ProfileViewController.swift */; };
 		237ECCE328856454000D9A71 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237ECCE228856454000D9A71 /* DateFormatter.swift */; };
 		237ECCEA28857544000D9A71 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 237ECCE928857544000D9A71 /* Setting.storyboard */; };
+		238AFF8328B64444004C0F35 /* MainFlowerpotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238AFF8228B64444004C0F35 /* MainFlowerpotModel.swift */; };
 		238DE01C28819AF0007901E6 /* TodaySuggestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238DE01A28819AF0007901E6 /* TodaySuggestCollectionViewCell.swift */; };
 		238DE01D28819AF0007901E6 /* TodaySuggestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 238DE01B28819AF0007901E6 /* TodaySuggestCollectionViewCell.xib */; };
 		238DE01F28819C00007901E6 /* MainBottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238DE01E28819C00007901E6 /* MainBottomViewController.swift */; };
@@ -252,6 +253,7 @@
 		237ECCDF288556EE000D9A71 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		237ECCE228856454000D9A71 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		237ECCE928857544000D9A71 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		238AFF8228B64444004C0F35 /* MainFlowerpotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlowerpotModel.swift; sourceTree = "<group>"; };
 		238DE01A28819AF0007901E6 /* TodaySuggestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaySuggestCollectionViewCell.swift; sourceTree = "<group>"; };
 		238DE01B28819AF0007901E6 /* TodaySuggestCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodaySuggestCollectionViewCell.xib; sourceTree = "<group>"; };
 		238DE01E28819C00007901E6 /* MainBottomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBottomViewController.swift; sourceTree = "<group>"; };
@@ -969,6 +971,7 @@
 				231E3E59289F82130011A1D2 /* RecommendBookModel.swift */,
 				23F8483D2899A99400ED644B /* NoticeModel.swift */,
 				23A41EA8289436B10008437B /* RecentBookModel.swift */,
+				238AFF8228B64444004C0F35 /* MainFlowerpotModel.swift */,
 			);
 			path = MainpageModels;
 			sourceTree = "<group>";
@@ -1392,6 +1395,7 @@
 				23ECA8F128AFAFE000497CA3 /* ChangePasswordModel.swift in Sources */,
 				2305E773289159A000A9B6D5 /* KakaoLoginManager.swift in Sources */,
 				237CF46028A80BD60043CFC6 /* DeleteUserModel.swift in Sources */,
+				238AFF8328B64444004C0F35 /* MainFlowerpotModel.swift in Sources */,
 				D07E7EBE289279250077287A /* RegisterInput.swift in Sources */,
 				239DE40028A4D9CE00386151 /* SettingViewController.swift in Sources */,
 				239DE40728A4E86A00386151 /* StringExtension.swift in Sources */,
