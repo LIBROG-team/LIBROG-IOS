@@ -33,7 +33,7 @@ class UploadRecordViewController: UIViewController {
         let uploadRecordNib = UINib(nibName: "UploadRecordTableViewCell", bundle: nil)
         uploadRecordTableView.register(uploadRecordNib, forCellReuseIdentifier: "UploadRecordTableViewCell")
         
-        uploadRecordTableView.estimatedRowHeight = 50
+        uploadRecordTableView.estimatedRowHeight = 500
         uploadRecordTableView.rowHeight = UITableView.automaticDimension
     }
     //MARK: 화면 터치 시 키보드 내리기
@@ -67,6 +67,9 @@ extension UploadRecordViewController: UITableViewDelegate, UITableViewDataSource
         }
         return cell
     }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return tableView.frame.height
+//    }
 }
 // MARK: API success
 extension UploadRecordViewController {

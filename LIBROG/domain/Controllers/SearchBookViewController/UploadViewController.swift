@@ -206,14 +206,12 @@ extension UploadViewController {
         imageView.snp.makeConstraints { make in
             make.leading.equalToSuperview().inset(113.0)
             make.trailing.equalToSuperview().inset(97.0)
-            make.top.equalToSuperview().inset(219.0)
-            make.bottom.equalTo(messageLabel.snp.top).offset(-25.0)
+            make.centerY.equalTo(self.tableView.center)
         }
         imageView.setContentHuggingPriority(.defaultHigh, for: .vertical)
         
-        
         messageLabel.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().inset(198.0).priority(.low)
+            make.top.equalTo(imageView.snp.bottom).offset(40)
             make.centerX.equalToSuperview()
         }
         
