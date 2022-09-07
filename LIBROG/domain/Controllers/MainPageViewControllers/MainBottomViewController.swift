@@ -57,7 +57,7 @@ class MainBottomViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         // API
         MainPageDataManager().recentBookDataManager(self)
-        MainPageDataManager().noticeDataManager(self)
+//        MainPageDataManager().noticeDataManager(self)
         MainPageDataManager().recommendBookDataManager(self)
     }
 }
@@ -119,8 +119,8 @@ extension MainBottomViewController : UICollectionViewDelegate, UICollectionViewD
         if(collectionView == recentBookCollectionView) { return CGSize(width: 193, height: 128) }
         else if(collectionView == todaySuggestCollectionView) { return CGSize(width: 120, height: 84) }
         else if(collectionView == noticeCollectionView) {
-            let width = noticeCollectionView.bounds.size.width
-            return CGSize(width: width, height: 56)
+            let w = noticeCollectionView.frame.width
+            return CGSize(width: w, height: 56)
         }
         else  { return CGSize(width: 0, height: 0)}
     }
