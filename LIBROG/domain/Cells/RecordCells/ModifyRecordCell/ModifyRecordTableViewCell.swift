@@ -97,7 +97,7 @@ extension ModifyRecordTableViewCell {
         
         if isEdited == true {
             starRating = self.starRating!
-            quote = self.quote!
+            if let quote = self.quote {self.quote = quote}
             content = self.content!
             
             let modifyRecordInput = ModifyRecordInput(idx: idx, starRating: starRating, quote: quote, content: content)
